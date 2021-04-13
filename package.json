@@ -20,7 +20,6 @@
     "react-native": "0.64.0",
     "react-native-elements": "^3.3.2",
     "react-native-gesture-handler": "^1.10.3",
-    "react-native-material-kit": "^0.6.0-beta.1",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-splash-screen": "^3.2.0",
     "react-native-sqlite-storage": "^5.0.0",
