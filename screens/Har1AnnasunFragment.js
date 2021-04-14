@@ -50,7 +50,7 @@ export default class Har1AnnasunFragment extends Component {
 
   let parsed = JSON.parse(pageNumber);
 
-  pageNo = parsed;
+  pageNo = +(parsed);
 
   console.log("Page Numner :  " + pageNo);
 

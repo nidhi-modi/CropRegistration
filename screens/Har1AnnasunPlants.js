@@ -39,7 +39,7 @@ export default class Har1AnnasunPlants extends Component {
 
   sendDataPlant2 = () => {
 
-    AsyncStorage.setItem('page', 1); 
+    AsyncStorage.setItem('page', '1'); 
     this.props.navigation.navigate('Har1AnnasunFragment')
 
   }
