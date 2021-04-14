@@ -27,19 +27,19 @@ export default class ScreenNavigator extends React.Component {
 
         if (houseSelected === 'GER') {
 
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('HarHome');
 
         }else if(houseSelected === 'HAR'){
 
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('HarHome');
 
         }else if(houseSelected === 'OHA'){
 
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('HarHome');
 
         }else if(houseSelected === 'REP'){
 
-            this.props.navigation.navigate('Home');
+            this.props.navigation.navigate('HarHome');
 
         }
 
