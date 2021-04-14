@@ -9,6 +9,8 @@ import {
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 export default class Har1AnnasunPlants extends Component {
 
@@ -35,6 +37,12 @@ export default class Har1AnnasunPlants extends Component {
     this.setState({weekNumber: completeWeekNumber})
   }
 
+  sendDataPlant2 = () => {
+
+    AsyncStorage.setItem('page', 1); 
+    this.props.navigation.navigate('Har1AnnasunFragment')
+
+  }
 
 
   render() {
@@ -83,7 +91,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
+              onPress={() => this.sendDataPlant2()}>
               <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 

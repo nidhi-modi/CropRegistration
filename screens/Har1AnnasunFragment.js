@@ -13,6 +13,7 @@ import Har1AnnasunPlant2 from '../screens/Har1AnnasunPlant2'
 import Har1AnnasunPlant3 from '../screens/Har1AnnasunPlant3'
 import Har1AnnasunPlant4 from '../screens/Har1AnnasunPlant4'
 import Har1AnnasunPlant5 from '../screens/Har1AnnasunPlant5'
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 const { width, height } = Dimensions.get('window');
@@ -33,92 +34,98 @@ export default class Har1AnnasunFragment extends Component {
   }
 
 
-  componentDidMount() {
+  async componentDidMount() {
 
-    /*if (this.props.route.params.page !== undefined) {
-      var page = this.props.route.params.page;
-      var stringPageNo = JSON.stringify(page)
-      pageNo = +(stringPageNo)
-      this.setState({ pageNumber: pageNo })
+  /*if (this.props.route.params.page !== undefined) {
+    var page = this.props.route.params.page;
+    var stringPageNo = JSON.stringify(page)
+    pageNo = +(stringPageNo)
+    this.setState({ pageNumber: pageNo })
 
-    } else {
+  } else {
 
-    }*/
+  }*/
 
-    console.log("Page Numner :  " + pageNo);
+  let pageNumber = await AsyncStorage.getItem('page'); 
 
-    LogBox.ignoreLogs(['componentWillReceiveProps']);
-    const _console = _.clone(console);
-    console.warn = message => {
-      if (message.indexOf('componentWillReceiveProps') <= -1) {
-        _console.warn(message);
-      }
-    };
+  let parsed = JSON.parse(pageNumber);
 
-  }
+  pageNo = parsed;
+
+  console.log("Page Numner :  " + pageNo);
+
+  LogBox.ignoreLogs(['componentWillReceiveProps']);
+  const _console = _.clone(console);
+  console.warn = message => {
+    if (message.indexOf('componentWillReceiveProps') <= -1) {
+      _console.warn(message);
+    }
+  };
+
+}
 
 
-  _onLayoutDidChange = (e) => {
-    const layout = e.nativeEvent.layout;
-    this.setState({ size: { width: layout.width, height: layout.height } });
-  }
+_onLayoutDidChange = (e) => {
+  const layout = e.nativeEvent.layout;
+  this.setState({ size: { width: layout.width, height: layout.height } });
+}
 
 
-  render() {
-    return (
+render() {
+  return (
 
-      <View style={styles.screenScrolling} onLayout={this._onLayoutDidChange}>
-        <Carousel
+    <View style={styles.screenScrolling} onLayout={this._onLayoutDidChange}>
+      <Carousel
 
-          style={this.state.size}
-          autoplay={false}
-          pageInfo={true}
-          arrow={true}
-          currentPage={0}
-         
-        >
+        style={this.state.size}
+        autoplay={false}
+        pageInfo={true}
+        arrow={true}
+        currentPage={pageNo}
 
-          <View style={[this.state.size]}>
+      >
 
-            <Har1AnnasunPlant1
-              navigation={this.props.navigation} />
+        <View style={[this.state.size]}>
 
-          </View>
+          <Har1AnnasunPlant1
+            navigation={this.props.navigation} />
 
-          <View style={[this.state.size]}>
+        </View>
 
-            <Har1AnnasunPlant2
-              navigation={this.props.navigation} />
+        <View style={[this.state.size]}>
 
-          </View>
+          <Har1AnnasunPlant2
+            navigation={this.props.navigation} />
 
-          <View style={[this.state.size]}>
+        </View>
 
-            <Har1AnnasunPlant3
-              navigation={this.props.navigation} />
+        <View style={[this.state.size]}>
 
-          </View>
+          <Har1AnnasunPlant3
+            navigation={this.props.navigation} />
 
-          <View style={[this.state.size]}>
+        </View>
 
-            <Har1AnnasunPlant4
-              navigation={this.props.navigation} />
+        <View style={[this.state.size]}>
 
-          </View>
+          <Har1AnnasunPlant4
+            navigation={this.props.navigation} />
 
-          <View style={[this.state.size]}>
+        </View>
 
-            <Har1AnnasunPlant5
-              navigation={this.props.navigation} />
+        <View style={[this.state.size]}>
 
-          </View>
+          <Har1AnnasunPlant5
+            navigation={this.props.navigation} />
 
-        </Carousel>
+        </View>
 
-      </View>
+      </Carousel>
 
-    );
-  }
+    </View>
+
+  );
+}
 }
 
 const styles = StyleSheet.create({
