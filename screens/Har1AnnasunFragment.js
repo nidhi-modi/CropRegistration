@@ -34,7 +34,7 @@ export default class Har1AnnasunFragment extends Component {
   }
 
 
-  async componentDidMount() {
+  componentDidMount() {
 
   /*if (this.props.route.params.page !== undefined) {
     var page = this.props.route.params.page;
@@ -46,13 +46,6 @@ export default class Har1AnnasunFragment extends Component {
 
   }*/
 
-  let pageNumber = await AsyncStorage.getItem('page'); 
-
-  let parsed = JSON.parse(pageNumber);
-
-  pageNo = +(parsed);
-
-  console.log("Page Numner :  " + pageNo);
 
   LogBox.ignoreLogs(['componentWillReceiveProps']);
   const _console = _.clone(console);
