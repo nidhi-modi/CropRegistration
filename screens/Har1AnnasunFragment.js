@@ -74,6 +74,7 @@ export default class Har1AnnasunFragment extends Component {
           autoplay={false}
           pageInfo={true}
           arrow={true}
+          currentPage={0}
          
         >
 

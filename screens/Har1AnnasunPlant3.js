@@ -911,7 +911,8 @@ export default class Har1AnnasunPlant3 extends Component {
 
 
         <ScrollView
-          keyboardShouldPersistTaps='handled'>
+          keyboardShouldPersistTaps='handled'
+          scrollEventThrottle={16}>
 
           <View style={styles.formContainer}>
 
