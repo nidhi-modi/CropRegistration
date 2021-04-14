@@ -75,7 +75,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment',{page: 0})}>
+              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -83,7 +83,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment',{page: 1})}>
+              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -91,7 +91,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment',{page: 2})}>
+              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -99,7 +99,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment',{page: 3})}>
+              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -107,7 +107,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment',{page: 4})}>
+              onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 

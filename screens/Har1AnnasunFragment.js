@@ -35,7 +35,7 @@ export default class Har1AnnasunFragment extends Component {
 
   componentDidMount() {
 
-    if (this.props.route.params.page !== undefined) {
+    /*if (this.props.route.params.page !== undefined) {
       var page = this.props.route.params.page;
       var stringPageNo = JSON.stringify(page)
       pageNo = +(stringPageNo)
@@ -43,7 +43,7 @@ export default class Har1AnnasunFragment extends Component {
 
     } else {
 
-    }
+    }*/
 
     console.log("Page Numner :  " + pageNo);
 
@@ -74,7 +74,7 @@ export default class Har1AnnasunFragment extends Component {
           autoplay={false}
           pageInfo={true}
           arrow={true}
-          currentPage={pageNo}
+         
         >
 
           <View style={[this.state.size]}>
