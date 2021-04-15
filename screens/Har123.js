@@ -28,8 +28,8 @@ export default class Har123 extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity  onPress={() => this.props.navigation.navigate('HarHome')} >
-            <Image source={require('../assets/back.png')}/>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('HarHome')} >
+              <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
           </View>
@@ -37,7 +37,7 @@ export default class Har123 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/header_image.png')} />
+            <Image source={require('../assets/fresh.png')} />
 
           </View>
 
@@ -47,7 +47,7 @@ export default class Har123 extends Component {
 
         </View>
 
-        <ScrollView  keyboardShouldPersistTaps='handled'>
+        <ScrollView keyboardShouldPersistTaps='handled'>
 
           <View style={styles.marginDimensionTop}></View>
 
@@ -112,7 +112,22 @@ export default class Har123 extends Component {
               <Text style={styles.buttonText}>HAR 3 - Angelle</Text>
             </TouchableOpacity>
 
+            <View style={styles.marginDimensionTop}></View>
+
+
+            <View style={styles.headerImage2}>
+
+              <Image source={require('../assets/submit.png')} />
+
+            </View>
+
+            <View style={styles.textContainer}>
+            <Text style={styles.textBottom}>Press submit button only when all the above varieties are completed.</Text>
+            </View>
           </View>
+
+          <View style={styles.marginSmallDimensionTop}></View>
+
 
         </ScrollView>
       </View>
@@ -156,6 +171,27 @@ const styles = StyleSheet.create({
 
   },
 
+  textBottom: {
+
+    fontSize: 24,
+    width: 450,
+    color: '#2C3E50',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
+
+
+
+  },
+
+  textContainer: {
+
+    flexShrink:1
+
+  },
 
 
   marginDimensionTop: {
