@@ -37,7 +37,7 @@ export default class Har123 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh.png')} />
+            <Image source={require('../assets/fresh2.png')} />
 
           </View>
 

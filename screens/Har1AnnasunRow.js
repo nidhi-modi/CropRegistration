@@ -37,7 +37,7 @@ export default class Har1AnnasunRow extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/header_image.png')} />
+            <Image source={require('../assets/fresh2.png')} />
 
           </View>
 

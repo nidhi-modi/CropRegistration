@@ -30,11 +30,11 @@ export default class Har1AnnasunPlants extends Component {
     var toText = yearNumber.toString(); //convert to string
     var lastChar = toText.slice(-2); //gets last character
     var lastDigit = +(lastChar); //convert last character to number
-    var weekNumberText = lastDigit+ '00';
+    var weekNumberText = lastDigit + '00';
     var convertWeekNumber = +(weekNumberText)
     var completeWeekNumber = convertWeekNumber + weekNumber;
 
-    this.setState({weekNumber: completeWeekNumber})
+    this.setState({ weekNumber: completeWeekNumber })
   }
 
 
@@ -56,7 +56,7 @@ export default class Har1AnnasunPlants extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/header_image.png')} />
+            <Image source={require('../assets/fresh2.png')} />
 
           </View>
 
@@ -108,9 +108,10 @@ export default class Har1AnnasunPlants extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}
+              style={styles.buttonContainerImage}
               onPress={() => this.props.navigation.navigate('Har1AnnasunFragment')}>
               <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
 
 
@@ -157,6 +158,18 @@ const styles = StyleSheet.create({
 
   },
 
+  textPlants: {
+    margin: 6,
+    margin: 20,
+    fontSize: 32,
+    color: '#ff0000',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textDecorationLine: 'underline',
+
+  },
+
+
   marginSmallDimensionTop: {
 
     marginTop: 18,
@@ -181,6 +194,18 @@ const styles = StyleSheet.create({
 
   },
 
+  buttonContainerImage: {
+    backgroundColor: '#2C3E50',
+    borderRadius: 8,
+    padding: 10,
+    margin: 20,
+    height: 70,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+
+  },
+
   text: {
     margin: 6,
     margin: 20,
@@ -191,6 +216,12 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
 
 
+  },
+
+  FloatingButtonStyle2: {
+
+    resizeMode: 'contain',
+    marginLeft: 15
   },
 
   buttonText: {

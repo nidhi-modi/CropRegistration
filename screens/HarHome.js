@@ -52,7 +52,7 @@ export default class HarHome extends Component {
 
         <View style={styles.headerImage}>
 
-          <Image source={require('../assets/header_image.png')} />
+          <Image source={require('../assets/fresh2.png')} />
 
         </View>
 

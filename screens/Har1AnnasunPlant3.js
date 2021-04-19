@@ -16,6 +16,7 @@ import moment from 'moment'
 const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 export default class Har1AnnasunPlant3 extends Component {
@@ -27,7 +28,7 @@ export default class Har1AnnasunPlant3 extends Component {
 
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onSubmitLeavesPerPlant = this.onSubmitLeavesPerPlant.bind(this);
+    this.onSubmitleavesPerPlantHar1AnnasunPlant3 = this.onSubmitleavesPerPlantHar1AnnasunPlant3.bind(this);
     this.onSubmitFullysetTruss = this.onSubmitFullysetTruss.bind(this);
     this.onSubmitTrussLength = this.onSubmitTrussLength.bind(this);
     this.onSubmitWeeklyGrowth = this.onSubmitWeeklyGrowth.bind(this);
@@ -39,7 +40,7 @@ export default class Har1AnnasunPlant3 extends Component {
     this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
 
-    this.leavesPerPlantRef = this.updateRef.bind(this, 'LeavesPerPlant');
+    this.leavesPerPlantHar1AnnasunPlant3Ref = this.updateRef.bind(this, 'leavesPerPlantHar1AnnasunPlant3');
     this.fullysetTrussRef = this.updateRef.bind(this, 'FullysetTruss');
     this.trussLengthRef = this.updateRef.bind(this, 'TrussLength');
     this.weeklyGrowthRef = this.updateRef.bind(this, 'WeeklyGrowth');
@@ -59,90 +60,90 @@ export default class Har1AnnasunPlant3 extends Component {
       plantRow: '',
       plantName: '',
       plantWeek: '',
-      leavesPerPlant: '',
-      fullySetTruss: '',
-      setTrussLength: '',
-      weeklyGrowth: '',
-      floweringTrussHeight: '',
-      leafLength: '',
-      leafWidth: '',
-      stmDiameter: '',
-      lastWeekStmDiameter: '',
+      leavesPerPlantHar1AnnasunPlant3: '',
+      fullySetTrussHar1AnnasunPlant3: '',
+      setTrussLengthHar1AnnasunPlant3: '',
+      weeklyGrowthHar1AnnasunPlant3: '',
+      floweringTrussHeightHar1AnnasunPlant3: '',
+      leafLengthHar1AnnasunPlant3: '',
+      leafWidthHar1AnnasunPlant3: '',
+      stmDiameterHar1AnnasunPlant3: '',
+      lastWeekStmDiameterHar1AnnasunPlant3: '',
       isLoading: false,
       errors: false,
 
       //Truss
-      trussNumber: '',
-      setFruits: '',
-      setFlowers: '',
-      pruningNumber: '',
-      fruitDiameter: '',
+      trussNumberHar1AnnasunPlant3: '',
+      setFruitsHar1AnnasunPlant3: '',
+      setFlowersHar1AnnasunPlant3: '',
+      pruningNumberHar1AnnasunPlant3: '',
+      fruitDiameterHar1AnnasunPlant3: '',
 
-      trussNumber1: '',
-      setFruits1: '',
-      setFlowers1: '',
-      pruningNumber1: '',
-      fruitDiameter1: '',
+      trussNumber1Har1AnnasunPlant3: '',
+      setFruits1Har1AnnasunPlant3: '',
+      setFlowers1Har1AnnasunPlant3: '',
+      pruningNumber1Har1AnnasunPlant3: '',
+      fruitDiameter1Har1AnnasunPlant3: '',
 
-      trussNumber2: '',
-      setFruits2: '',
-      setFlowers2: '',
-      pruningNumber2: '',
-      fruitDiameter2: '',
+      trussNumber2Har1AnnasunPlant3: '',
+      setFruits2Har1AnnasunPlant3: '',
+      setFlowers2Har1AnnasunPlant3: '',
+      pruningNumber2Har1AnnasunPlant3: '',
+      fruitDiameter2Har1AnnasunPlant3: '',
 
-      trussNumber3: '',
-      setFruits3: '',
-      setFlowers3: '',
-      pruningNumber3: '',
-      fruitDiameter3: '',
+      trussNumber3Har1AnnasunPlant3: '',
+      setFruits3Har1AnnasunPlant3: '',
+      setFlowers3Har1AnnasunPlant3: '',
+      pruningNumber3Har1AnnasunPlant3: '',
+      fruitDiameter3Har1AnnasunPlant3: '',
 
-      trussNumber4: '',
-      setFruits4: '',
-      setFlowers4: '',
-      pruningNumber4: '',
-      fruitDiameter4: '',
+      trussNumber4Har1AnnasunPlant3: '',
+      setFruits4Har1AnnasunPlant3: '',
+      setFlowers4Har1AnnasunPlant3: '',
+      pruningNumber4Har1AnnasunPlant3: '',
+      fruitDiameter4Har1AnnasunPlant3: '',
 
-      trussNumber5: '',
-      setFruits5: '',
-      setFlowers5: '',
-      pruningNumber5: '',
-      fruitDiameter5: '',
+      trussNumber5Har1AnnasunPlant3: '',
+      setFruits5Har1AnnasunPlant3: '',
+      setFlowers5Har1AnnasunPlant3: '',
+      pruningNumber5Har1AnnasunPlant3: '',
+      fruitDiameter5Har1AnnasunPlant3: '',
 
-      trussNumber6: '',
-      setFruits6: '',
-      setFlowers6: '',
-      pruningNumber6: '',
-      fruitDiameter6: '',
+      trussNumber6Har1AnnasunPlant3: '',
+      setFruits6Har1AnnasunPlant3: '',
+      setFlowers6Har1AnnasunPlant3: '',
+      pruningNumber6Har1AnnasunPlant3: '',
+      fruitDiameter6Har1AnnasunPlant3: '',
 
-      trussNumber7: '',
-      setFruits7: '',
-      setFlowers7: '',
-      pruningNumber7: '',
-      fruitDiameter7: '',
+      trussNumber7Har1AnnasunPlant3: '',
+      setFruits7Har1AnnasunPlant3: '',
+      setFlowers7Har1AnnasunPlant3: '',
+      pruningNumber7Har1AnnasunPlant3: '',
+      fruitDiameter7Har1AnnasunPlant3: '',
 
-      trussNumber8: '',
-      setFruits8: '',
-      setFlowers8: '',
-      pruningNumber8: '',
-      fruitDiameter8: '',
+      trussNumber8Har1AnnasunPlant3: '',
+      setFruits8Har1AnnasunPlant3: '',
+      setFlowers8Har1AnnasunPlant3: '',
+      pruningNumber8Har1AnnasunPlant3: '',
+      fruitDiameter8Har1AnnasunPlant3: '',
 
-      trussNumber9: '',
-      setFruits9: '',
-      setFlowers9: '',
-      pruningNumber9: '',
-      fruitDiameter9: '',
+      trussNumber9Har1AnnasunPlant3: '',
+      setFruits9Har1AnnasunPlant3: '',
+      setFlowers9Har1AnnasunPlant3: '',
+      pruningNumber9Har1AnnasunPlant3: '',
+      fruitDiameter9Har1AnnasunPlant3: '',
 
-      fruitLoad: '',
-      harvestTruss: '',
-      pruningHar: '',
-      settingTrussNumber: '',
-      prunSetting: '',
-      pruneFlowering: '',
+      fruitLoadHar1AnnasunPlant3: '',
+      harvestTrussHar1AnnasunPlant3: '',
+      pruningHarHar1AnnasunPlant3: '',
+      settingTrussNumberHar1AnnasunPlant3: '',
+      prunSettingHar1AnnasunPlant3: '',
+      pruneFloweringHar1AnnasunPlant3: '',
 
-      floweringTrussNumber: '',
-      settingTruss: '',
-      settingTruss2: '',
-      floweringTrussss: '',
+      floweringTrussNumberHar1AnnasunPlant3: '',
+      settingTrussHar1AnnasunPlant3: '',
+      settingTruss2Har1AnnasunPlant3: '',
+      floweringTrussssHar1AnnasunPlant3: '',
 
     }
   }
@@ -159,7 +160,124 @@ export default class Har1AnnasunPlant3 extends Component {
     var completeWeekNumber = convertWeekNumber + weekNumber;
 
     this.setState({ weekNumber: completeWeekNumber })
+
+  
+      this.getAsysncValues();
+
+    
   }
+
+  //ASYNC METHOD
+
+  async setItem(myKey, value) {
+    try {
+      this.setState({
+        isDataSend: false,
+
+      });
+
+
+      return await AsyncStorage.setItem(myKey, JSON.stringify(value));
+    } catch (error) {
+      // console.error('AsyncStorage#setItem error: ' + error.message);
+    }
+  }
+
+  //
+
+  getAsysncValues() {
+
+
+    try {
+      AsyncStorage.getItem('leavesPerPlantHar1AnnasunPlant3').then((text1Value) => {
+        this.setState({ leavesPerPlantHar1AnnasunPlant3: JSON.parse(text1Value) });
+        console.log(this.state.leavesPerPlantHar1AnnasunPlant3)
+
+
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fullySetTrussHar1AnnasunPlant3').then((text2Value) => {
+        this.setState({ fullySetTrussHar1AnnasunPlant3: JSON.parse(text2Value) });
+        console.log(this.state.fullySetTrussHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setTrussLengthHar1AnnasunPlant3').then((text3Value) => {
+        this.setState({ setTrussLengthHar1AnnasunPlant3: JSON.parse(text3Value) });
+        console.log(this.state.setTrussLengthHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('weeklyGrowthHar1AnnasunPlant3').then((text4Value) => {
+        this.setState({ weeklyGrowthHar1AnnasunPlant3: JSON.parse(text4Value) });
+        console.log(this.state.weeklyGrowthHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    } try {
+      AsyncStorage.getItem('floweringTrussHeightHar1AnnasunPlant3').then((text5Value) => {
+        this.setState({ floweringTrussHeightHar1AnnasunPlant3: JSON.parse(text5Value) });
+        console.log(this.state.floweringTrussHeightHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('leafLengthHar1AnnasunPlant3').then((text6Value) => {
+        this.setState({ leafLengthHar1AnnasunPlant3: JSON.parse(text6Value) });
+        console.log(this.state.leafLengthHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    } try {
+      AsyncStorage.getItem('leafWidthHar1AnnasunPlant3').then((text7Value) => {
+        this.setState({ leafWidthHar1AnnasunPlant3: JSON.parse(text7Value) });
+        console.log(this.state.leafWidthHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('stmDiameterHar1AnnasunPlant3').then((text8Value) => {
+        this.setState({ stmDiameterHar1AnnasunPlant3: JSON.parse(text8Value) });
+        console.log(this.state.stmDiameterHar1AnnasunPlant3)
+
+
+      }).done();
+    } catch (error) {
+    } try {
+      AsyncStorage.getItem('lastWeekStmDiameterHar1AnnasunPlant3').then((text9Value) => {
+        this.setState({ lastWeekStmDiameterHar1AnnasunPlant3: JSON.parse(text9Value) });
+        console.log(this.state.lastWeekStmDiameterHar1AnnasunPlant3)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+  }
+
 
   _onLayoutDidChange = (e) => {
     const layout = e.nativeEvent.layout;
@@ -168,6 +286,7 @@ export default class Har1AnnasunPlant3 extends Component {
 
   updatePlantsTextInput = (text, field) => {
 
+    this.setItem(field, text)
     const state = this.state
     state[field] = text;
     this.setState(state);
@@ -175,8 +294,8 @@ export default class Har1AnnasunPlant3 extends Component {
   }
 
   updateTextInput = (text, field) => {
-    //this.setItem(field, text)
 
+    this.setItem(field, text)
     const state = this.state
     state[field] = text;
     this.setState(state)
@@ -190,24 +309,24 @@ export default class Har1AnnasunPlant3 extends Component {
   }
 
   updateTextInput22 = (text, field) => {
-    //this.setItem(field, text)
 
+    this.setItem(field, text)
     const state = this.state
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1: parseInt(this.state.trussNumber) + 1 })
-    this.setState({ trussNumber2: parseInt(this.state.trussNumber) + 2 })
-    this.setState({ trussNumber3: parseInt(this.state.trussNumber) + 3 })
-    this.setState({ trussNumber4: parseInt(this.state.trussNumber) + 4 })
-    this.setState({ trussNumber5: parseInt(this.state.trussNumber) + 5 })
-    this.setState({ trussNumber6: parseInt(this.state.trussNumber) + 6 })
-    this.setState({ trussNumber7: parseInt(this.state.trussNumber) + 7 })
-    this.setState({ trussNumber8: parseInt(this.state.trussNumber) + 8 })
-    this.setState({ trussNumber9: parseInt(this.state.trussNumber) + 9 })
+    this.setState({ trussNumber1: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 1 })
+    this.setState({ trussNumber2: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 2 })
+    this.setState({ trussNumber3: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 3 })
+    this.setState({ trussNumber4: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 4 })
+    this.setState({ trussNumber5: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 5 })
+    this.setState({ trussNumber6: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 6 })
+    this.setState({ trussNumber7: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 7 })
+    this.setState({ trussNumber8: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 8 })
+    this.setState({ trussNumber9: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 9 })
 
 
-    if (this.state.trussNumber !== "") {
+    if (this.state.trussNumberHar1AnnasunPlant3 !== "") {
 
       this.calculateSettingTruss2();
       this.calculateFloweringTruss2();
@@ -224,7 +343,7 @@ export default class Har1AnnasunPlant3 extends Component {
   calculateFruitLoad = () => {
 
     var sum = 0;
-    sum = ((parseInt(this.state.setFruits) ? parseInt(this.state.setFruits) : 0) + (parseInt(this.state.setFruits1) ? parseInt(this.state.setFruits1) : 0) + (parseInt(this.state.setFruits2) ? parseInt(this.state.setFruits2) : 0) + (parseInt(this.state.setFruits3) ? parseInt(this.state.setFruits3) : 0) + (parseInt(this.state.setFruits4) ? parseInt(this.state.setFruits4) : 0) + (parseInt(this.state.setFruits5) ? parseInt(this.state.setFruits5) : 0) + (parseInt(this.state.setFruits6) ? parseInt(this.state.setFruits6) : 0) + (parseInt(this.state.setFruits7) ? parseInt(this.state.setFruits7) : 0) + (parseInt(this.state.setFruits8) ? parseInt(this.state.setFruits8) : 0) + (parseInt(this.state.setFruits9) ? parseInt(this.state.setFruits9) : 0));
+    sum = ((parseInt(this.state.setFruitsHar1AnnasunPlant3) ? parseInt(this.state.setFruitsHar1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits1Har1AnnasunPlant3) ? parseInt(this.state.setFruits1Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits2Har1AnnasunPlant3) ? parseInt(this.state.setFruits2Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits3Har1AnnasunPlant3) ? parseInt(this.state.setFruits3Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits4Har1AnnasunPlant3) ? parseInt(this.state.setFruits4Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits5Har1AnnasunPlant3) ? parseInt(this.state.setFruits5Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits6Har1AnnasunPlant3) ? parseInt(this.state.setFruits6Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits7Har1AnnasunPlant3) ? parseInt(this.state.setFruits7Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits8Har1AnnasunPlant3) ? parseInt(this.state.setFruits8Har1AnnasunPlant3) : 0) + (parseInt(this.state.setFruits9Har1AnnasunPlant3) ? parseInt(this.state.setFruits9Har1AnnasunPlant3) : 0));
     this.setState({
       fruitLoad: sum,
     });
@@ -240,13 +359,13 @@ export default class Har1AnnasunPlant3 extends Component {
     var add = 0;
     var prunNum = 0;
 
-    if (this.state.setFlowers === "") {
+    if (this.state.setFlowersHar1AnnasunPlant3 === "") {
 
-      prunNum = parseInt(this.state.pruningNumber)
+      prunNum = parseInt(this.state.pruningNumberHar1AnnasunPlant3)
 
-      div = (parseInt((this.state.setFruits) ? (this.state.setFruits) : 0) / parseFloat((this.state.pruningNumber) ? (this.state.pruningNumber) : 0))
+      div = (parseInt((this.state.setFruitsHar1AnnasunPlant3) ? (this.state.setFruitsHar1AnnasunPlant3) : 0) / parseFloat((this.state.pruningNumberHar1AnnasunPlant3) ? (this.state.pruningNumberHar1AnnasunPlant3) : 0))
       sub = (1 - div);
-      add = (((parseInt(this.state.trussNumber) ? parseInt(this.state.trussNumber) : 0) + sub).toFixed(2))
+      add = (((parseInt(this.state.trussNumberHar1AnnasunPlant3) ? parseInt(this.state.trussNumberHar1AnnasunPlant3) : 0) + sub).toFixed(2))
       this.setState({
         harvestTruss: add,
         pruningHar: prunNum,
@@ -254,8 +373,8 @@ export default class Har1AnnasunPlant3 extends Component {
 
     } else {
 
-      prunNum = parseInt(this.state.pruningNumber)
-      var num = this.state.trussNumber
+      prunNum = parseInt(this.state.pruningNumberHar1AnnasunPlant3)
+      var num = this.state.trussNumberHar1AnnasunPlant3
 
       this.setState({
         harvestTruss: num,
@@ -278,34 +397,34 @@ export default class Har1AnnasunPlant3 extends Component {
     var settingFruit = 0;
     var trussNum = 0;
 
-    console.log("Setting truss called : " + this.state.setFruits2);
+    console.log("Setting truss called : " + this.state.setFruits2Har1AnnasunPlant3);
 
-    if (this.state.setFruits9 === "") {
+    if (this.state.setFruits9Har1AnnasunPlant3 === "") {
 
-      if (this.state.setFruits8 === "") {
+      if (this.state.setFruits8Har1AnnasunPlant3 === "") {
 
-        if (this.state.setFruits7 === "") {
+        if (this.state.setFruits7Har1AnnasunPlant3 === "") {
 
-          if (this.state.setFruits6 === "") {
+          if (this.state.setFruits6Har1AnnasunPlant3 === "") {
 
-            if (this.state.setFruits5 === "") {
+            if (this.state.setFruits5Har1AnnasunPlant3 === "") {
 
-              if (this.state.setFruits4 === "") {
+              if (this.state.setFruits4Har1AnnasunPlant3 === "") {
 
-                if (this.state.setFruits3 === "") {
+                if (this.state.setFruits3Har1AnnasunPlant3 === "") {
 
-                  if (this.state.setFruits2 === "") {
+                  if (this.state.setFruits2Har1AnnasunPlant3 === "") {
 
-                    if (this.state.setFruits1 === "") {
+                    if (this.state.setFruits1Har1AnnasunPlant3 === "") {
 
-                      if (this.state.setFruits === "") {
+                      if (this.state.setFruitsHar1AnnasunPlant3 === "") {
 
 
                       } else {
 
-                        pruningSet = parseInt(this.state.pruningNumber);
-                        trussNum = parseInt(this.state.trussNumber);
-                        settingFruit = parseInt(this.state.setFruits);
+                        pruningSet = parseInt(this.state.pruningNumberHar1AnnasunPlant3);
+                        trussNum = parseInt(this.state.trussNumberHar1AnnasunPlant3);
+                        settingFruit = parseInt(this.state.setFruitsHar1AnnasunPlant3);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number : " + settingTruss);
                         this.setState({
@@ -319,11 +438,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
                     } else {
 
-                      var number = (parseInt(this.state.trussNumber) + 1)
+                      var number = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 1)
 
-                      pruningSet = parseInt(this.state.pruningNumber1);
+                      pruningSet = parseInt(this.state.pruningNumber1Har1AnnasunPlant3);
                       trussNum = parseInt(number);
-                      settingFruit = parseInt(this.state.setFruits1);
+                      settingFruit = parseInt(this.state.setFruits1Har1AnnasunPlant3);
                       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                       console.log("Setting Truss Number 1 : " + settingTruss);
                       this.setState({
@@ -337,11 +456,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
                   } else {
 
-                    var number2 = (parseInt(this.state.trussNumber) + 2)
+                    var number2 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 2)
 
-                    pruningSet = parseInt(this.state.pruningNumber2);
+                    pruningSet = parseInt(this.state.pruningNumber2Har1AnnasunPlant3);
                     trussNum = parseInt(number2);
-                    settingFruit = parseInt(this.state.setFruits2);
+                    settingFruit = parseInt(this.state.setFruits2Har1AnnasunPlant3);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 2 : " + settingTruss);
                     this.setState({
@@ -355,11 +474,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
                 } else {
 
-                  var number3 = (parseInt(this.state.trussNumber) + 3)
+                  var number3 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 3)
 
-                  pruningSet = parseInt(this.state.pruningNumber3);
+                  pruningSet = parseInt(this.state.pruningNumber3Har1AnnasunPlant3);
                   trussNum = parseInt(number3);
-                  settingFruit = parseInt(this.state.setFruits3);
+                  settingFruit = parseInt(this.state.setFruits3Har1AnnasunPlant3);
                   settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                   console.log("Setting Truss Number 3 : " + settingTruss);
                   this.setState({
@@ -373,11 +492,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
               } else {
 
-                var number4 = (parseInt(this.state.trussNumber) + 4)
+                var number4 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 4)
 
-                pruningSet = parseInt(this.state.pruningNumber4);
+                pruningSet = parseInt(this.state.pruningNumber4Har1AnnasunPlant3);
                 trussNum = parseInt(number4);
-                settingFruit = parseInt(this.state.setFruits4);
+                settingFruit = parseInt(this.state.setFruits4Har1AnnasunPlant3);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 4 : " + settingTruss);
                 this.setState({
@@ -391,11 +510,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
             } else {
 
-              var number5 = (parseInt(this.state.trussNumber) + 5)
+              var number5 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 5)
 
-              pruningSet = parseInt(this.state.pruningNumber5);
+              pruningSet = parseInt(this.state.pruningNumber5Har1AnnasunPlant3);
               trussNum = parseInt(number5);
-              settingFruit = parseInt(this.state.setFruits5);
+              settingFruit = parseInt(this.state.setFruits5Har1AnnasunPlant3);
               settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
               console.log("Setting Truss Number 5 : " + settingTruss);
               this.setState({
@@ -410,11 +529,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
           } else {
 
-            var number6 = (parseInt(this.state.trussNumber) + 6)
+            var number6 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 6)
 
-            pruningSet = parseInt(this.state.pruningNumber6);
+            pruningSet = parseInt(this.state.pruningNumber6Har1AnnasunPlant3);
             trussNum = parseInt(number6);
-            settingFruit = parseInt(this.state.setFruits6);
+            settingFruit = parseInt(this.state.setFruits6Har1AnnasunPlant3);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 6 : " + settingTruss);
             this.setState({
@@ -428,11 +547,11 @@ export default class Har1AnnasunPlant3 extends Component {
           }
 
         } else {
-          var number7 = (parseInt(this.state.trussNumber) + 7)
+          var number7 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 7)
 
-          pruningSet = parseInt(this.state.pruningNumber7);
+          pruningSet = parseInt(this.state.pruningNumber7Har1AnnasunPlant3);
           trussNum = parseInt(number7);
-          settingFruit = parseInt(this.state.setFruits7);
+          settingFruit = parseInt(this.state.setFruits7Har1AnnasunPlant3);
           settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
           console.log("Setting Truss Number 7 : " + settingTruss);
           this.setState({
@@ -445,11 +564,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
       } else {
 
-        var number8 = (parseInt(this.state.trussNumber) + 8)
+        var number8 = (parseInt(this.state.trussNumberHar1AnnasunPlant3) + 8)
 
-        pruningSet = parseInt(this.state.pruningNumber8);
+        pruningSet = parseInt(this.state.pruningNumber8Har1AnnasunPlant3);
         trussNum = parseInt(number8);
-        settingFruit = parseInt(this.state.setFruits8);
+        settingFruit = parseInt(this.state.setFruits8Har1AnnasunPlant3);
         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
         console.log("Setting Truss Number 8 : " + settingTruss);
         this.setState({
@@ -463,11 +582,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
     } else {
 
-      var number9 = (ParseInt(this.state.trussNumber) + 9)
+      var number9 = (ParseInt(this.state.trussNumberHar1AnnasunPlant3) + 9)
 
-      pruningSet = parseInt(this.state.pruningNumber9);
+      pruningSet = parseInt(this.state.pruningNumber9Har1AnnasunPlant3);
       trussNum = parseInt(number9);
-      settingFruit = parseInt(this.state.setFruits9);
+      settingFruit = parseInt(this.state.setFruits9Har1AnnasunPlant3);
       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
       console.log("Setting Truss Number 9 : " + settingTruss);
       this.setState({
@@ -490,38 +609,38 @@ export default class Har1AnnasunPlant3 extends Component {
     var floweringTruss = 0;
     var trussNum = 0;
 
-    console.log("Flowering truss called : " + this.state.setFlowers2);
+    console.log("Flowering truss called : " + this.state.setFlowers2Har1AnnasunPlant3);
 
 
-    if (this.state.setFlowers9 === "") {
+    if (this.state.setFlowers9Har1AnnasunPlant3 === "") {
 
-      if (this.state.setFlowers8 === "") {
+      if (this.state.setFlowers8Har1AnnasunPlant3 === "") {
 
-        if (this.state.setFlowers7 === "") {
+        if (this.state.setFlowers7Har1AnnasunPlant3 === "") {
 
-          if (this.state.setFlowers6 === "") {
+          if (this.state.setFlowers6Har1AnnasunPlant3 === "") {
 
-            if (this.state.setFlowers5 === "") {
+            if (this.state.setFlowers5Har1AnnasunPlant3 === "") {
 
-              if (this.state.setFlowers4 === "") {
+              if (this.state.setFlowers4Har1AnnasunPlant3 === "") {
 
-                if (this.state.setFlowers3 === "") {
+                if (this.state.setFlowers3Har1AnnasunPlant3 === "") {
 
-                  if (this.state.setFlowers2 === "") {
+                  if (this.state.setFlowers2Har1AnnasunPlant3 === "") {
 
-                    if (this.state.setFlowers1 === "") {
+                    if (this.state.setFlowers1Har1AnnasunPlant3 === "") {
 
-                      if (this.state.setFlowers === "") {
+                      if (this.state.setFlowersHar1AnnasunPlant3 === "") {
 
 
                       } else {
 
-                        var number01 = this.state.trussNumber
+                        var number01 = this.state.trussNumberHar1AnnasunPlant3
 
 
-                        flowerPruningNumner = parseInt(this.state.pruningNumber);
-                        flowering = parseInt(this.state.setFlowers);
-                        flowerSetFruits = parseInt(this.state.setFruits);
+                        flowerPruningNumner = parseInt(this.state.pruningNumberHar1AnnasunPlant3);
+                        flowering = parseInt(this.state.setFlowersHar1AnnasunPlant3);
+                        flowerSetFruits = parseInt(this.state.setFruitsHar1AnnasunPlant3);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                         floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
@@ -534,12 +653,12 @@ export default class Har1AnnasunPlant3 extends Component {
 
                     } else {
 
-                      var number11 = + (this.state.trussNumber) + 1
+                      var number11 = + (this.state.trussNumberHar1AnnasunPlant3) + 1
 
                       console.log("oooooooooooooooooooooooooooooo : " + number11);
-                      flowerPruningNumner = parseInt(this.state.pruningNumber1);
-                      flowering = parseInt(this.state.setFlowers1);
-                      flowerSetFruits = parseInt(this.state.setFruits1);
+                      flowerPruningNumner = parseInt(this.state.pruningNumber1Har1AnnasunPlant3);
+                      flowering = parseInt(this.state.setFlowers1Har1AnnasunPlant3);
+                      flowerSetFruits = parseInt(this.state.setFruits1Har1AnnasunPlant3);
                       trussNum = number11
                       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                       floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
@@ -556,11 +675,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
                   } else {
 
-                    var number21 = + (this.state.trussNumber) + 2
+                    var number21 = + (this.state.trussNumberHar1AnnasunPlant3) + 2
 
-                    flowerPruningNumner = parseInt(this.state.pruningNumber2);
-                    flowering = parseInt(this.state.setFlowers2);
-                    flowerSetFruits = parseInt(this.state.setFruits2);
+                    flowerPruningNumner = parseInt(this.state.pruningNumber2Har1AnnasunPlant3);
+                    flowering = parseInt(this.state.setFlowers2Har1AnnasunPlant3);
+                    flowerSetFruits = parseInt(this.state.setFruits2Har1AnnasunPlant3);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                     floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
@@ -575,11 +694,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
                 } else {
 
-                  var number31 = + (this.state.trussNumber) + 3
+                  var number31 = + (this.state.trussNumberHar1AnnasunPlant3) + 3
 
-                  flowerPruningNumner = parseInt(this.state.pruningNumber3);
-                  flowering = parseInt(this.state.setFlowers3);
-                  flowerSetFruits = parseInt(this.state.setFruits3);
+                  flowerPruningNumner = parseInt(this.state.pruningNumber3Har1AnnasunPlant3);
+                  flowering = parseInt(this.state.setFlowers3Har1AnnasunPlant3);
+                  flowerSetFruits = parseInt(this.state.setFruits3Har1AnnasunPlant3);
                   summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                   floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                   console.log("Flowering Truss Value : " + floweringTruss);
@@ -595,11 +714,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
               } else {
 
-                var number41 = + (this.state.trussNumber) + 4
+                var number41 = + (this.state.trussNumberHar1AnnasunPlant3) + 4
 
-                flowerPruningNumner = parseInt(this.state.pruningNumber4);
-                flowering = parseInt(this.state.setFlowers4);
-                flowerSetFruits = parseInt(this.state.setFruits4);
+                flowerPruningNumner = parseInt(this.state.pruningNumber4Har1AnnasunPlant3);
+                flowering = parseInt(this.state.setFlowers4Har1AnnasunPlant3);
+                flowerSetFruits = parseInt(this.state.setFruits4Har1AnnasunPlant3);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                 floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
@@ -615,11 +734,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
             } else {
 
-              var number51 = + (this.state.trussNumber) + 5
+              var number51 = + (this.state.trussNumberHar1AnnasunPlant3) + 5
 
-              flowerPruningNumner = parseInt(this.state.pruningNumber5);
-              flowering = parseInt(this.state.setFlowers5);
-              flowerSetFruits = parseInt(this.state.setFruits5);
+              flowerPruningNumner = parseInt(this.state.pruningNumber5Har1AnnasunPlant3);
+              flowering = parseInt(this.state.setFlowers5Har1AnnasunPlant3);
+              flowerSetFruits = parseInt(this.state.setFruits5Har1AnnasunPlant3);
               summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
               floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
               console.log("Flowering Truss Value : " + floweringTruss);
@@ -634,11 +753,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
           } else {
 
-            var number61 = + (this.state.trussNumber) + 6
+            var number61 = + (this.state.trussNumberHar1AnnasunPlant3) + 6
 
-            flowerPruningNumner = parseInt(this.state.pruningNumber6);
-            flowering = parseInt(this.state.setFlowers6);
-            flowerSetFruits = parseInt(this.state.setFruits6);
+            flowerPruningNumner = parseInt(this.state.pruningNumber6Har1AnnasunPlant3);
+            flowering = parseInt(this.state.setFlowers6Har1AnnasunPlant3);
+            flowerSetFruits = parseInt(this.state.setFruits6Har1AnnasunPlant3);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
             floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
@@ -653,11 +772,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
         } else {
 
-          var number71 = + (this.state.trussNumber) + 7
+          var number71 = + (this.state.trussNumberHar1AnnasunPlant3) + 7
 
-          flowerPruningNumner = parseInt(this.state.pruningNumber7);
-          flowering = parseInt(this.state.setFlowers7);
-          flowerSetFruits = parseInt(this.state.setFruits7);
+          flowerPruningNumner = parseInt(this.state.pruningNumber7Har1AnnasunPlant3);
+          flowering = parseInt(this.state.setFlowers7Har1AnnasunPlant3);
+          flowerSetFruits = parseInt(this.state.setFruits7Har1AnnasunPlant3);
           summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
           floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
           console.log("Flowering Truss Value : " + floweringTruss);
@@ -671,11 +790,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
 
       } else {
-        var number81 = + (this.state.trussNumber) + 8
+        var number81 = + (this.state.trussNumberHar1AnnasunPlant3) + 8
 
-        flowerPruningNumner = parseInt(this.state.pruningNumber8);
-        flowering = parseInt(this.state.setFlowers8);
-        flowerSetFruits = parseInt(this.state.setFruits8);
+        flowerPruningNumner = parseInt(this.state.pruningNumber8Har1AnnasunPlant3);
+        flowering = parseInt(this.state.setFlowers8Har1AnnasunPlant3);
+        flowerSetFruits = parseInt(this.state.setFruits8Har1AnnasunPlant3);
         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
         floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
         console.log("Flowering Truss Value : " + floweringTruss);
@@ -690,11 +809,11 @@ export default class Har1AnnasunPlant3 extends Component {
 
     } else {
 
-      var number91 = + (this.state.trussNumber) + 9
+      var number91 = + (this.state.trussNumberHar1AnnasunPlant3) + 9
 
-      flowerPruningNumner = parseInt(this.state.pruningNumber9);
-      flowering = parseInt(this.state.setFlowers9);
-      flowerSetFruits = parseInt(this.state.setFruits9);
+      flowerPruningNumner = parseInt(this.state.pruningNumber9Har1AnnasunPlant3);
+      flowering = parseInt(this.state.setFlowers9Har1AnnasunPlant3);
+      flowerSetFruits = parseInt(this.state.setFruits9Har1AnnasunPlant3);
       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
       floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
       console.log("Flowering Truss Value : " + floweringTruss);
@@ -819,8 +938,8 @@ export default class Har1AnnasunPlant3 extends Component {
     this.LastWeekStmDiameter.focus();
   }
 
-  onSubmitLeavesPerPlant() {
-    this.LeavesPerPlant.focus();
+  onSubmitleavesPerPlantHar1AnnasunPlant3() {
+    this.leavesPerPlantHar1AnnasunPlant3.focus();
   }
   //
 
@@ -846,7 +965,7 @@ export default class Har1AnnasunPlant3 extends Component {
   onSubmit() {
     let errors = {};
 
-    ['LeavesPerPlant', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
+    ['leavesPerPlantHar1AnnasunPlant3', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
       .forEach((name) => {
         let value = this[name].value();
 
@@ -895,7 +1014,7 @@ export default class Har1AnnasunPlant3 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/header_image.png')} />
+            <Image source={require('../assets/fresh2.png')} />
 
           </View>
 
@@ -907,12 +1026,13 @@ export default class Har1AnnasunPlant3 extends Component {
 
         <Text style={styles.text}>HAR 1 - Annasun</Text>
 
-        <Text style={styles.text2}>Plant 3/ Row No. 105/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 3</Text>/ Row No. 105/ Week No. {this.state.weekNumber}</Text>
 
 
         <ScrollView
           keyboardShouldPersistTaps='handled'
-          scrollEventThrottle={16}>
+          scrollEventThrottle={16}
+        >
 
           <View style={styles.formContainer}>
 
@@ -940,8 +1060,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
                     onFocus={this.onFocus}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlant')}
-                    value={this.state.leavesPerPlant}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantHar1AnnasunPlant3')}
+                    value={this.state.leavesPerPlantHar1AnnasunPlant3}
                     onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
 
                   />
@@ -981,8 +1101,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTruss')}
-                    value={this.state.fullySetTruss}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussHar1AnnasunPlant3')}
+                    value={this.state.fullySetTrussHar1AnnasunPlant3}
                     ref={(input) => { this.fullySetTrussTextInput = input; }}
                     onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1022,8 +1142,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLength')}
-                    value={this.state.setTrussLength}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthHar1AnnasunPlant3')}
+                    value={this.state.setTrussLengthHar1AnnasunPlant3}
                     ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
                     onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1063,8 +1183,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowth')}
-                    value={this.state.weeklyGrowth}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthHar1AnnasunPlant3')}
+                    value={this.state.weeklyGrowthHar1AnnasunPlant3}
                     ref={(input) => { this.weeklyGrowthTextInput = input; }}
                     onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1105,8 +1225,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeight')}
-                    value={this.state.floweringTrussHeight}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightHar1AnnasunPlant3')}
+                    value={this.state.floweringTrussHeightHar1AnnasunPlant3}
                     ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
                     onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1146,8 +1266,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLength')}
-                    value={this.state.leafLength}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthHar1AnnasunPlant3')}
+                    value={this.state.leafLengthHar1AnnasunPlant3}
                     ref={(input) => { this.leafLengthTextInput = input; }}
                     onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1187,8 +1307,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidth')}
-                    value={this.state.leafWidth}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthHar1AnnasunPlant3')}
+                    value={this.state.leafWidthHar1AnnasunPlant3}
                     ref={(input) => { this.leafWidthTextInput = input; }}
                     onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1228,8 +1348,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameter')}
-                    value={this.state.stmDiameter}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterHar1AnnasunPlant3')}
+                    value={this.state.stmDiameterHar1AnnasunPlant3}
                     ref={(input) => { this.stmDiameterTextInput = input; }}
                     onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1269,8 +1389,8 @@ export default class Har1AnnasunPlant3 extends Component {
                     returnKeyType={"done"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameter')}
-                    value={this.state.lastWeekStmDiameter}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterHar1AnnasunPlant3')}
+                    value={this.state.lastWeekStmDiameterHar1AnnasunPlant3}
                     ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
                     onFocus={this.onFocus}
                   />
@@ -1288,6 +1408,8 @@ export default class Har1AnnasunPlant3 extends Component {
             <View style={styles.marginDimensionTop}></View>
 
             <Text style={styles.text2}>Truss Details</Text>
+
+
 
             <View style={styles.marginDimensionTop}></View>
 
@@ -1467,9 +1589,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumberHar1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber.toString()}
+                value={this.state.trussNumberHar1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1493,9 +1615,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruitsHar1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits.toString()}
+                value={this.state.setFruitsHar1AnnasunPlant3.toString()}
               />
 
 
@@ -1519,8 +1641,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers')}
-                value={this.state.setFlowers.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowersHar1AnnasunPlant3')}
+                value={this.state.setFlowersHar1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1540,8 +1662,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber')}
-                value={this.state.pruningNumber.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumberHar1AnnasunPlant3')}
+                value={this.state.pruningNumberHar1AnnasunPlant3.toString()}
               />
 
 
@@ -1562,7 +1684,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterHar1AnnasunPlant3')}
               />
 
               <View
@@ -1607,9 +1729,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber1.toString()}
+                value={this.state.trussNumber1Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -1630,9 +1752,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits1')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits1Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits1.toString()}
+                value={this.state.setFruits1Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1654,8 +1776,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1')}
-                value={this.state.setFlowers1.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1Har1AnnasunPlant3')}
+                value={this.state.setFlowers1Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1676,8 +1798,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1')}
-                value={this.state.pruningNumber1.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1Har1AnnasunPlant3')}
+                value={this.state.pruningNumber1Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1698,7 +1820,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1Har1AnnasunPlant3')}
               />
 
               <View
@@ -1741,9 +1863,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 onChangeText={this.onChangeText}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber2.toString()}
+                value={this.state.trussNumber2Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -1764,9 +1886,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits2Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits2.toString()}
+                value={this.state.setFruits2Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1788,8 +1910,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2')}
-                value={this.state.setFlowers2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2Har1AnnasunPlant3')}
+                value={this.state.setFlowers2Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -1810,8 +1932,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2')}
-                value={this.state.pruningNumber2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2Har1AnnasunPlant3')}
+                value={this.state.pruningNumber2Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -1830,7 +1952,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2Har1AnnasunPlant3')}
               />
 
               <View
@@ -1872,9 +1994,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber3.toString()}
+                value={this.state.trussNumber3Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -1895,9 +2017,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits3')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits3Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits3.toString()} />
+                value={this.state.setFruits3Har1AnnasunPlant3.toString()} />
 
               <View
                 style={{
@@ -1918,8 +2040,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3')}
-                value={this.state.setFlowers3.toString()} />
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3Har1AnnasunPlant3')}
+                value={this.state.setFlowers3Har1AnnasunPlant3.toString()} />
 
               <View
                 style={{
@@ -1938,8 +2060,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3')}
-                value={this.state.pruningNumber3.toString()} />
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3Har1AnnasunPlant3')}
+                value={this.state.pruningNumber3Har1AnnasunPlant3.toString()} />
 
 
               <View
@@ -1958,7 +2080,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3Har1AnnasunPlant3')}
               />
 
               <View
@@ -2000,9 +2122,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber4.toString()}
+                value={this.state.trussNumber4Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2023,9 +2145,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits4')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits4Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits4.toString()}
+                value={this.state.setFruits4Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2047,8 +2169,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4')}
-                value={this.state.setFlowers4.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4Har1AnnasunPlant3')}
+                value={this.state.setFlowers4Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2069,8 +2191,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4')}
-                value={this.state.pruningNumber4.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4Har1AnnasunPlant3')}
+                value={this.state.pruningNumber4Har1AnnasunPlant3.toString()}
               />
 
 
@@ -2091,7 +2213,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4Har1AnnasunPlant3')}
               />
 
               <View
@@ -2133,9 +2255,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber5.toString()}
+                value={this.state.trussNumber5Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2156,9 +2278,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits5')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits5Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits5.toString()}
+                value={this.state.setFruits5Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2180,8 +2302,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5')}
-                value={this.state.setFlowers5.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5Har1AnnasunPlant3')}
+                value={this.state.setFlowers5Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2202,8 +2324,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5')}
-                value={this.state.pruningNumber5.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5Har1AnnasunPlant3')}
+                value={this.state.pruningNumber5Har1AnnasunPlant3.toString()}
               />
 
 
@@ -2224,7 +2346,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5Har1AnnasunPlant3')}
               />
 
               <View
@@ -2266,9 +2388,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber6.toString()}
+                value={this.state.trussNumber6Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2289,9 +2411,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits6')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits6Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits6.toString()}
+                value={this.state.setFruits6Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2313,8 +2435,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6')}
-                value={this.state.setFlowers6.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6Har1AnnasunPlant3')}
+                value={this.state.setFlowers6Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2335,8 +2457,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6')}
-                value={this.state.pruningNumber6.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6Har1AnnasunPlant3')}
+                value={this.state.pruningNumber6Har1AnnasunPlant3.toString()}
               />
 
 
@@ -2357,7 +2479,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6Har1AnnasunPlant3')}
               />
 
               <View
@@ -2399,9 +2521,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber7.toString()}
+                value={this.state.trussNumber7Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2422,9 +2544,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits7')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits7Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits7.toString()}
+                value={this.state.setFruits7Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2446,8 +2568,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7')}
-                value={this.state.setFlowers7.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7Har1AnnasunPlant3')}
+                value={this.state.setFlowers7Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2468,8 +2590,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7')}
-                value={this.state.pruningNumber7.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7Har1AnnasunPlant3')}
+                value={this.state.pruningNumber7Har1AnnasunPlant3.toString()}
 
               />
 
@@ -2490,7 +2612,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7Har1AnnasunPlant3')}
               />
 
               <View
@@ -2532,9 +2654,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber8.toString()}
+                value={this.state.trussNumber8Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2555,9 +2677,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits8')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits8Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits8.toString()}
+                value={this.state.setFruits8Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2579,8 +2701,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8')}
-                value={this.state.setFlowers8.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8Har1AnnasunPlant3')}
+                value={this.state.setFlowers8Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2601,8 +2723,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8')}
-                value={this.state.pruningNumber8.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8Har1AnnasunPlant3')}
+                value={this.state.pruningNumber8Har1AnnasunPlant3.toString()}
               />
 
 
@@ -2623,7 +2745,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8Har1AnnasunPlant3')}
               />
 
               <View
@@ -2667,9 +2789,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9')}
+                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber9.toString()}
+                value={this.state.trussNumber9Har1AnnasunPlant3.toString()}
               />
               <View
                 style={{
@@ -2690,9 +2812,9 @@ export default class Har1AnnasunPlant3 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits9')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits9Har1AnnasunPlant3')}
                 blurOnSubmit={false}
-                value={this.state.setFruits9.toString()}
+                value={this.state.setFruits9Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2714,8 +2836,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9')}
-                value={this.state.setFlowers9.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9Har1AnnasunPlant3')}
+                value={this.state.setFlowers9Har1AnnasunPlant3.toString()}
               />
 
               <View
@@ -2736,8 +2858,8 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9')}
-                value={this.state.pruningNumber9.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9Har1AnnasunPlant3')}
+                value={this.state.pruningNumber9Har1AnnasunPlant3.toString()}
               />
 
 
@@ -2758,7 +2880,7 @@ export default class Har1AnnasunPlant3 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9Har1AnnasunPlant3')}
               />
 
               <View
@@ -2789,7 +2911,7 @@ export default class Har1AnnasunPlant3 extends Component {
 
             <View style={styles.borderEditTruss}>
 
-              <View style={[(this.state.fruitLoad <= 22 || this.state.fruitLoad >= 40) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.fruitLoadHar1AnnasunPlant3 <= 22 || this.state.fruitLoadHar1AnnasunPlant3 >= 40) ? styles.borderErrorColor : null]}>
 
                 <View
                   style={{
@@ -2799,7 +2921,7 @@ export default class Har1AnnasunPlant3 extends Component {
 
                 <View style={styles.row}>
                   <Text style={styles.text4}>Fruit Load</Text>
-                  <Text style={styles.text5}>{this.state.fruitLoad}</Text>
+                  <Text style={styles.text5}>{this.state.fruitLoadHar1AnnasunPlant3}</Text>
                 </View>
 
                 <View
@@ -2810,10 +2932,10 @@ export default class Har1AnnasunPlant3 extends Component {
 
               </View>
 
-              <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.floweringTrussssHar1AnnasunPlant3 <= 0 || this.state.floweringTrussssHar1AnnasunPlant3 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Flowering Truss</Text>
-                  <Text style={styles.text5}>{this.state.floweringTrussss}</Text>
+                  <Text style={styles.text5}>{this.state.floweringTrussssHar1AnnasunPlant3}</Text>
                 </View>
 
 
@@ -2824,10 +2946,10 @@ export default class Har1AnnasunPlant3 extends Component {
                 />
               </View>
 
-              <View style={[(this.state.settingTrussNumber <= 1 || this.state.settingTrussNumber >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.settingTrussNumberHar1AnnasunPlant3 <= 1 || this.state.settingTrussNumberHar1AnnasunPlant3 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Setting Truss</Text>
-                  <Text style={styles.text5}>{this.state.settingTrussNumber}</Text>
+                  <Text style={styles.text5}>{this.state.settingTrussNumberHar1AnnasunPlant3}</Text>
                 </View>
                 <View
                   style={{
@@ -2836,10 +2958,10 @@ export default class Har1AnnasunPlant3 extends Component {
                 />
               </View>
 
-              <View style={[(this.state.floweringTrussss <= 0 || this.state.floweringTrussss >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.floweringTrussssHar1AnnasunPlant3 <= 0 || this.state.floweringTrussssHar1AnnasunPlant3 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Harvest Truss</Text>
-                  <Text style={styles.text5}>{this.state.harvestTruss}</Text>
+                  <Text style={styles.text5}>{this.state.harvestTrussHar1AnnasunPlant3}</Text>
                 </View>
                 <View
                   style={{
@@ -2890,7 +3012,7 @@ const styles = StyleSheet.create({
 
     backgroundColor: 'rgba(255,0,0,0.3)',
 
-},
+  },
 
   text5: {
     color: 'black',
@@ -3123,6 +3245,17 @@ const styles = StyleSheet.create({
     margin: 20,
     fontSize: 28,
     color: '#2C3E50',
+    fontWeight: 'bold',
+    alignSelf: 'center',
+    textDecorationLine: 'underline',
+
+  },
+
+  textPlants: {
+    margin: 6,
+    margin: 20,
+    fontSize: 32,
+    color: '#ff0000',
     fontWeight: 'bold',
     alignSelf: 'center',
     textDecorationLine: 'underline',

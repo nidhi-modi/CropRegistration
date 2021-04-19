@@ -4,7 +4,7 @@ import {
   Text,
   View,
   LogBox,
-  Dimensions
+  Dimensions, ScrollView
 } from 'react-native';
 import _ from 'lodash';
 import Carousel from 'react-native-looped-carousel';
@@ -20,6 +20,8 @@ const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
 let pageNo;
+var deviceWidth = Dimensions.get('window').width;
+
 
 export default class Har1AnnasunFragment extends Component {
 
@@ -36,126 +38,131 @@ export default class Har1AnnasunFragment extends Component {
 
   componentDidMount() {
 
-  /*if (this.props.route.params.page !== undefined) {
-    var page = this.props.route.params.page;
-    var stringPageNo = JSON.stringify(page)
-    pageNo = +(stringPageNo)
-    this.setState({ pageNumber: pageNo })
-
-  } else {
-
-  }*/
-
-
-  LogBox.ignoreLogs(['componentWillReceiveProps']);
-  const _console = _.clone(console);
-  console.warn = message => {
-    if (message.indexOf('componentWillReceiveProps') <= -1) {
-      _console.warn(message);
-    }
-  };
-
-}
+    /*if (this.props.route.params.page !== undefined) {
+      var page = this.props.route.params.page;
+      var stringPageNo = JSON.stringify(page)
+      pageNo = +(stringPageNo)
+      this.setState({ pageNumber: pageNo })
+  
+    } else {
+  
+    }*/
 
 
-_onLayoutDidChange = (e) => {
-  const layout = e.nativeEvent.layout;
-  this.setState({ size: { width: layout.width, height: layout.height } });
-}
+    LogBox.ignoreLogs(['componentWillReceiveProps']);
+    const _console = _.clone(console);
+    console.warn = message => {
+      if (message.indexOf('componentWillReceiveProps') <= -1) {
+        _console.warn(message);
+      }
+    };
+
+  }
 
 
-render() {
-  return (
+  _onLayoutDidChange = (e) => {
+    const layout = e.nativeEvent.layout;
+    this.setState({ size: { width: layout.width, height: layout.height } });
+  }
 
-    <View style={styles.screenScrolling} onLayout={this._onLayoutDidChange}>
-      <Carousel
 
-        style={this.state.size}
-        autoplay={false}
-        pageInfo={true}
-        arrow={true}
-        currentPage={pageNo}
+  render() {
+    return (
 
-      >
+      <View style={styles.container}>
+        <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true}>
+          <View style={styles.firstView}>
 
-        <View style={[this.state.size]}>
+            <Har1AnnasunPlant1
+              navigation={this.props.navigation} />
 
-          <Har1AnnasunPlant1
-            navigation={this.props.navigation} />
+          </View>
 
-        </View>
+          <View style={styles.secondView}>
 
-        <View style={[this.state.size]}>
+            <Har1AnnasunPlant2
+              navigation={this.props.navigation} />
 
-          <Har1AnnasunPlant2
-            navigation={this.props.navigation} />
+          </View>
 
-        </View>
+          <View style={styles.thirdView}>
 
-        <View style={[this.state.size]}>
+            <Har1AnnasunPlant3
+              navigation={this.props.navigation} />
 
-          <Har1AnnasunPlant3
-            navigation={this.props.navigation} />
+          </View>
 
-        </View>
+          <View style={styles.forthView}>
 
-        <View style={[this.state.size]}>
+            <Har1AnnasunPlant4
+              navigation={this.props.navigation} />
 
-          <Har1AnnasunPlant4
-            navigation={this.props.navigation} />
+          </View>
 
-        </View>
+          <View style={styles.fifthView}>
 
-        <View style={[this.state.size]}>
+            <Har1AnnasunPlant5
+              navigation={this.props.navigation} />
 
-          <Har1AnnasunPlant5
-            navigation={this.props.navigation} />
+          </View>
 
-        </View>
+        </ScrollView>
 
-      </Carousel>
+      </View>
 
-    </View>
-
-  );
-}
+    );
+  }
 }
 
 const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF'
+    backgroundColor: '#F3F9FF',
+    justifyContent: "center",
+    alignItems: "center"
   },
 
-  headerImage1: {
-
-    resizeMode: 'cover',
+  headerText: {
+    fontSize: 30,
+    textAlign: "center",
+    margin: 10,
+    color: 'white',
+    fontWeight: "bold"
+  },
+  firstView: {
+    width: deviceWidth,
     justifyContent: 'center',
-    alignContent: 'center',
     alignItems: 'center',
-
+    flexDirection: 'row'
   },
 
-  headerImage2: {
-
-    resizeMode: 'cover',
+  secondView: {
+    width: deviceWidth,
     justifyContent: 'center',
-    alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
-
+    flexDirection: 'row'
   },
 
+  thirdView: {
+    width: deviceWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
 
+  forthView: {
+    width: deviceWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
 
-  screenScrolling: {
-
-    flex: 1,
-    width: screenWidth,
-    backgroundColor: '#F3F9FF'
-
-
+  fifthView: {
+    width: deviceWidth,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row'
   },
 
 });  
