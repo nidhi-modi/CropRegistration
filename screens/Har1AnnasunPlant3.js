@@ -315,15 +315,15 @@ export default class Har1AnnasunPlant3 extends Component {
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 1 })
-    this.setState({ trussNumber2: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 2 })
-    this.setState({ trussNumber3: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 3 })
-    this.setState({ trussNumber4: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 4 })
-    this.setState({ trussNumber5: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 5 })
-    this.setState({ trussNumber6: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 6 })
-    this.setState({ trussNumber7: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 7 })
-    this.setState({ trussNumber8: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 8 })
-    this.setState({ trussNumber9: parseInt(this.state.trussNumberHar1AnnasunPlant3) + 9 })
+    this.setState({ trussNumber1Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 1 })
+    this.setState({ trussNumber2Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 2 })
+    this.setState({ trussNumber3Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 3 })
+    this.setState({ trussNumber4Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 4 })
+    this.setState({ trussNumber5Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 5 })
+    this.setState({ trussNumber6Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 6 })
+    this.setState({ trussNumber7Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 7 })
+    this.setState({ trussNumber8Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 8 })
+    this.setState({ trussNumber9Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 9 })
 
 
     if (this.state.trussNumberHar1AnnasunPlant3 !== "") {
