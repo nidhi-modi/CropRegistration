@@ -314,15 +314,15 @@ export default class Har1AnnasunPlant4 extends Component {
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 1 })
-    this.setState({ trussNumber2Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 2 })
-    this.setState({ trussNumber3Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 3 })
-    this.setState({ trussNumber4Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 4 })
-    this.setState({ trussNumber5Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 5 })
-    this.setState({ trussNumber6Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 6 })
-    this.setState({ trussNumber7Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 7 })
-    this.setState({ trussNumber8Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 8 })
-    this.setState({ trussNumber9Har1AnnasunPlant1: parseInt(this.state.trussNumberHar1AnnasunPlant1) + 9 })
+    this.setState({ trussNumber1Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 1 })
+    this.setState({ trussNumber2Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 2 })
+    this.setState({ trussNumber3Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 3 })
+    this.setState({ trussNumber4Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 4 })
+    this.setState({ trussNumber5Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 5 })
+    this.setState({ trussNumber6Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 6 })
+    this.setState({ trussNumber7Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 7 })
+    this.setState({ trussNumber8Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 8 })
+    this.setState({ trussNumber9Har1AnnasunPlant4: parseInt(this.state.trussNumberHar1AnnasunPlant4) + 9 })
 
     if (this.state.trussNumberHar1AnnasunPlant4 !== "") {
 
