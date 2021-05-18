@@ -23,7 +23,7 @@ let pageNo;
 var deviceWidth = Dimensions.get('window').width;
 
 
-export default class Har1AnnasunFragment extends Component {
+export default class Har1AnnasunFragment2 extends Component {
 
   constructor(props) {
     super(props);
@@ -73,35 +73,35 @@ export default class Har1AnnasunFragment extends Component {
         <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={true}>
           <View style={styles.firstView}>
 
-            <Har1AnnasunPlant1
+            <Har1AnnasunPlant2
               navigation={this.props.navigation} />
 
           </View>
 
           <View style={styles.secondView}>
 
-            <Har1AnnasunPlant2
+            <Har1AnnasunPlant3
               navigation={this.props.navigation} />
 
           </View>
 
           <View style={styles.thirdView}>
 
-            <Har1AnnasunPlant3
+            <Har1AnnasunPlant4
               navigation={this.props.navigation} />
 
           </View>
 
           <View style={styles.forthView}>
 
-            <Har1AnnasunPlant4
+            <Har1AnnasunPlant5
               navigation={this.props.navigation} />
 
           </View>
 
           <View style={styles.fifthView}>
 
-            <Har1AnnasunPlant5
+            <Har1AnnasunPlant1
               navigation={this.props.navigation} />
 
           </View>

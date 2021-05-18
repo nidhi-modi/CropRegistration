@@ -12,7 +12,7 @@ import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
 
 
-export default class Har1AnnasunPlants extends Component {
+export default class RepBambelloPlantsRow1 extends Component {
 
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ export default class Har1AnnasunPlants extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1AnnasunRow')} >
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('RepBambelloRow')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -66,7 +66,7 @@ export default class Har1AnnasunPlants extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 1 - Annasun</Text>
+        <Text style={styles.text}>REP - Bambello / Row 807</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>
@@ -77,7 +77,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant1')}>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant1')}>
               <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -85,7 +85,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant2')}>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant2')}>
               <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -93,7 +93,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant3')}>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant3')}>
               <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -101,7 +101,7 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant4')}>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant4')}>
               <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -109,8 +109,53 @@ export default class Har1AnnasunPlants extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant5')}>
               <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant6')}>
+              <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant7')}>
+              <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant8')}>
+              <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant9')}>
+              <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlant10')}>
+              <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
 

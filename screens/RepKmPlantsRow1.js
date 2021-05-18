@@ -12,7 +12,7 @@ import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
 
 
-export default class Har1AnnasunPlants extends Component {
+export default class RepKmPlantsRow1 extends Component {
 
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ export default class Har1AnnasunPlants extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1AnnasunRow')} >
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('RepKmRow')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -66,7 +66,7 @@ export default class Har1AnnasunPlants extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 1 - Annasun</Text>
+        <Text style={styles.text}>REP - KM5512 / Row 232</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>
@@ -111,6 +111,51 @@ export default class Har1AnnasunPlants extends Component {
               style={styles.buttonContainerImage}
               onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
               <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
+              <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainerImage}
+              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
 
