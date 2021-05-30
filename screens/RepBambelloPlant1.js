@@ -147,6 +147,12 @@ export default class RepBambelloPlant1 extends Component {
     }
   }
 
+  goBack() {
+    const { navigation } = this.props
+    navigation.goBack()
+    navigation.state.params.onBack();  // Call onBack function of ScreenA
+  }
+
   componentDidMount() {
 
     var weekNumber = moment().week() - 2;
@@ -169,7 +175,7 @@ export default class RepBambelloPlant1 extends Component {
 
   //ASYNC METHOD
 
-  async setItem(myKey, value) { 
+  async setItem(myKey, value) {
     try {
       this.setState({
         isDataSend: false,
@@ -198,21 +204,21 @@ export default class RepBambelloPlant1 extends Component {
     try {
       AsyncStorage.getItem('fullySetTrussRepBambelloPlant1').then((text2Value) => {
         this.setState({ fullySetTrussRepBambelloPlant1: JSON.parse(text2Value) });
-      
+
       }).done();
     } catch (error) {
     }
     try {
       AsyncStorage.getItem('setTrussLengthRepBambelloPlant1').then((text3Value) => {
         this.setState({ setTrussLengthRepBambelloPlant1: JSON.parse(text3Value) });
-     
+
       }).done();
     } catch (error) {
     }
     try {
       AsyncStorage.getItem('weeklyGrowthRepBambelloPlant1').then((text4Value) => {
         this.setState({ weeklyGrowthRepBambelloPlant1: JSON.parse(text4Value) });
-     
+
 
 
       }).done();
@@ -220,7 +226,7 @@ export default class RepBambelloPlant1 extends Component {
     } try {
       AsyncStorage.getItem('floweringTrussHeightRepBambelloPlant1').then((text5Value) => {
         this.setState({ floweringTrussHeightRepBambelloPlant1: JSON.parse(text5Value) });
-     
+
 
       }).done();
     } catch (error) {
@@ -228,14 +234,14 @@ export default class RepBambelloPlant1 extends Component {
     try {
       AsyncStorage.getItem('leafLengthRepBambelloPlant1').then((text6Value) => {
         this.setState({ leafLengthRepBambelloPlant1: JSON.parse(text6Value) });
-     
+
 
       }).done();
     } catch (error) {
     } try {
       AsyncStorage.getItem('leafWidthRepBambelloPlant1').then((text7Value) => {
         this.setState({ leafWidthRepBambelloPlant1: JSON.parse(text7Value) });
-       
+
 
       }).done();
     } catch (error) {
@@ -247,7 +253,7 @@ export default class RepBambelloPlant1 extends Component {
 
       }).done();
     } catch (error) {
-    } 
+    }
     try {
       AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant1').then((text9Value) => {
         this.setState({ lastWeekStmDiameterRepBambelloPlant1: JSON.parse(text9Value) });
@@ -256,6 +262,556 @@ export default class RepBambelloPlant1 extends Component {
       }).done();
     } catch (error) {
     }
+    try {
+      AsyncStorage.getItem('trussNumberRepBambelloPlant1').then((text10Value) => {
+
+        if (text10Value !== null) {
+          this.setState({ trussNumberRepBambelloPlant1: JSON.parse(text10Value) });
+
+          this.setState({ trussNumber1RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 1 })
+          this.setState({ trussNumber2RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 2 })
+          this.setState({ trussNumber3RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 3 })
+          this.setState({ trussNumber4RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 4 })
+          this.setState({ trussNumber5RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 5 })
+          this.setState({ trussNumber6RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 6 })
+          this.setState({ trussNumber7RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 7 })
+          this.setState({ trussNumber8RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 8 })
+          this.setState({ trussNumber9RepBambelloPlant1: parseInt(this.state.trussNumberRepBambelloPlant1) + 9 })
+
+        }
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFruitsRepBambelloPlant1').then((text11Value) => {
+        if (text11Value !== null) {
+
+          this.setState({ setFruitsRepBambelloPlant1: JSON.parse(text11Value) });
+
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    try {
+      AsyncStorage.getItem('setFlowersRepBambelloPlant1').then((text12Value) => {
+
+        if (text12Value !== null) {
+
+          this.setState({ setFlowersRepBambelloPlant1: JSON.parse(text12Value) });
+
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumberRepBambelloPlant1').then((text13Value) => {
+        if (text13Value !== null) {
+          this.setState({ pruningNumberRepBambelloPlant1: JSON.parse(text13Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameterRepBambelloPlant1').then((text14Value) => {
+
+        if (text14Value !== null) {
+          this.setState({ fruitDiameterRepBambelloPlant1: JSON.parse(text14Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 1---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits1RepBambelloPlant1').then((text16Value) => {
+
+        if (text16Value !== null) {
+          this.setState({ setFruits1RepBambelloPlant1: JSON.parse(text16Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers1RepBambelloPlant1').then((text17Value) => {
+
+        if (text17Value !== null) {
+          this.setState({ setFlowers1RepBambelloPlant1: JSON.parse(text17Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber1RepBambelloPlant1').then((text18Value) => {
+
+        if (text18Value !== null) {
+          this.setState({ pruningNumber1RepBambelloPlant1: JSON.parse(text18Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter1RepBambelloPlant1').then((text19Value) => {
+
+        if (text19Value !== null) {
+          this.setState({ fruitDiameter1RepBambelloPlant1: JSON.parse(text19Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 2---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits2RepBambelloPlant1').then((text17Value) => {
+
+        if (text17Value !== null) {
+          this.setState({ setFruits2RepBambelloPlant1: JSON.parse(text17Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers2RepBambelloPlant1').then((text18Value) => {
+
+        if (text18Value !== null) {
+          this.setState({ setFlowers2RepBambelloPlant1: JSON.parse(text18Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber2RepBambelloPlant1').then((text19Value) => {
+
+        if (text19Value !== null) {
+          this.setState({ pruningNumber2RepBambelloPlant1: JSON.parse(text19Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter2RepBambelloPlant1').then((text20Value) => {
+
+        if (text20Value !== null) {
+          this.setState({ fruitDiameter2RepBambelloPlant1: JSON.parse(text20Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 3---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits3RepBambelloPlant1').then((text21Value) => {
+
+        if (text21Value !== null) {
+          this.setState({ setFruits3RepBambelloPlant1: JSON.parse(text21Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers3RepBambelloPlant1').then((text22Value) => {
+
+        if (text22Value !== null) {
+          this.setState({ setFlowers3RepBambelloPlant1: JSON.parse(text22Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber3RepBambelloPlant1').then((text23Value) => {
+
+        if (text23Value !== null) {
+          this.setState({ pruningNumber3RepBambelloPlant1: JSON.parse(text23Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter3RepBambelloPlant1').then((text24Value) => {
+
+        if (text24Value !== null) {
+          this.setState({ fruitDiameter3RepBambelloPlant1: JSON.parse(text24Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 4---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits4RepBambelloPlant1').then((text25Value) => {
+
+        if (text25Value !== null) {
+          this.setState({ setFruits4RepBambelloPlant1: JSON.parse(text25Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers4RepBambelloPlant1').then((text26Value) => {
+
+        if (text26Value !== null) {
+          this.setState({ setFlowers4RepBambelloPlant1: JSON.parse(text26Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber4RepBambelloPlant1').then((text27Value) => {
+
+        if (text27Value !== null) {
+          this.setState({ pruningNumber4RepBambelloPlant1: JSON.parse(text27Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter4RepBambelloPlant1').then((text28Value) => {
+
+        if (text28Value !== null) {
+          this.setState({ fruitDiameter4RepBambelloPlant1: JSON.parse(text28Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 5---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits5RepBambelloPlant1').then((text29Value) => {
+
+        if (text29Value !== null) {
+          this.setState({ setFruits5RepBambelloPlant1: JSON.parse(text29Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers5RepBambelloPlant1').then((text30Value) => {
+
+        if (text30Value !== null) {
+          this.setState({ setFlowers5RepBambelloPlant1: JSON.parse(text30Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber5RepBambelloPlant1').then((text31Value) => {
+
+        if (text31Value !== null) {
+          this.setState({ pruningNumber5RepBambelloPlant1: JSON.parse(text31Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+
+      AsyncStorage.getItem('fruitDiameter5RepBambelloPlant1').then((text32Value) => {
+        if (text32Value !== null) {
+          this.setState({ fruitDiameter5RepBambelloPlant1: JSON.parse(text32Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 6---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits6RepBambelloPlant1').then((text33Value) => {
+
+        if (text33Value !== null) {
+          this.setState({ setFruits6RepBambelloPlant1: JSON.parse(text33Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers6RepBambelloPlant1').then((text34Value) => {
+
+        if (text34Value !== null) {
+          this.setState({ setFlowers6RepBambelloPlant1: JSON.parse(text34Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber6RepBambelloPlant1').then((text35Value) => {
+
+        if (text35Value !== null) {
+          this.setState({ pruningNumber6RepBambelloPlant1: JSON.parse(text35Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter6RepBambelloPlant1').then((text36Value) => {
+
+        if (text36Value !== null) {
+          this.setState({ fruitDiameter6RepBambelloPlant1: JSON.parse(text36Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 7---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits7RepBambelloPlant1').then((text37Value) => {
+
+        if (text37Value !== null) {
+          this.setState({ setFruits7RepBambelloPlant1: JSON.parse(text37Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers7RepBambelloPlant1').then((text38Value) => {
+
+        if (text38Value !== null) {
+
+          this.setState({ setFlowers7RepBambelloPlant1: JSON.parse(text38Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber7RepBambelloPlant1').then((text39Value) => {
+
+        if (text39Value !== null) {
+          this.setState({ pruningNumber7RepBambelloPlant1: JSON.parse(text39Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter7RepBambelloPlant1').then((text40Value) => {
+
+        if (text40Value !== null) {
+          this.setState({ fruitDiameter7RepBambelloPlant1: JSON.parse(text40Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    //-------------------------Truss 8---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits8RepBambelloPlant1').then((text41Value) => {
+
+        if (text41Value !== null) {
+          this.setState({ setFruits8RepBambelloPlant1: JSON.parse(text41Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers8RepBambelloPlant1').then((text42Value) => {
+
+        if (text42Value !== null) {
+          this.setState({ setFlowers8RepBambelloPlant1: JSON.parse(text42Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber8RepBambelloPlant1').then((text43Value) => {
+
+        if (text43Value !== null) {
+          this.setState({ pruningNumber8RepBambelloPlant1: JSON.parse(text43Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter8RepBambelloPlant1').then((text44Value) => {
+
+        if (text44Value !== null) {
+          this.setState({ fruitDiameter8RepBambelloPlant1: JSON.parse(text44Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 9---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits9RepBambelloPlant1').then((text45Value) => {
+
+        if (text45Value !== null) {
+          this.setState({ setFruits9RepBambelloPlant1: JSON.parse(text45Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers9RepBambelloPlant1').then((text46Value) => {
+
+        if (text46Value !== null) {
+          this.setState({ setFlowers9RepBambelloPlant1: JSON.parse(text46Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber9RepBambelloPlant1').then((text47Value) => {
+
+        if (text47Value !== null) {
+          this.setState({ pruningNumber9RepBambelloPlant1: JSON.parse(text47Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter9RepBambelloPlant1').then((text48Value) => {
+
+        if (text48Value !== null) {
+          this.setState({ fruitDiameter9RepBambelloPlant1: JSON.parse(text48Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    //-------------------------Calculations---------------------------------//
+
+    try {
+      AsyncStorage.getItem('fruitLoadRepBambelloPlant1').then((text49Value) => {
+        if (text49Value !== null) {
+          this.setState({ fruitLoadRepBambelloPlant1: JSON.parse(text49Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('floweringTrussssRepBambelloPlant1').then((text50Value) => {
+
+        if (text50Value !== null) {
+          this.setState({ floweringTrussssRepBambelloPlant1: JSON.parse(text50Value) });
+        }
+
+        console.log("ttttttttttttttttttttttttttttt : "+this.state.floweringTrussssRepBambelloPlant1)
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('settingTrussNumberRepBambelloPlant1').then((text51Value) => {
+
+        if (text51Value !== null) {
+          this.setState({ settingTrussNumberRepBambelloPlant1: JSON.parse(text51Value) });
+        }
+
+        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy : "+this.state.settingTrussNumberRepBambelloPlant1)
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('harvestTrussRepBambelloPlant1').then((text52Value) => {
+
+        if (text52Value !== null) {
+          this.setState({ harvestTrussRepBambelloPlant1: JSON.parse(text52Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+
+
+
 
     /*try {
       AsyncStorage.getItem('trussNumberRepBambelloPlant1').then((text10Value) => {
@@ -514,10 +1070,14 @@ export default class RepBambelloPlant1 extends Component {
     var sum = 0;
     sum = ((parseInt(this.state.setFruitsRepBambelloPlant1) ? parseInt(this.state.setFruitsRepBambelloPlant1) : 0) + (parseInt(this.state.setFruits1RepBambelloPlant1) ? parseInt(this.state.setFruits1RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits2RepBambelloPlant1) ? parseInt(this.state.setFruits2RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits3RepBambelloPlant1) ? parseInt(this.state.setFruits3RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits4RepBambelloPlant1) ? parseInt(this.state.setFruits4RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits5RepBambelloPlant1) ? parseInt(this.state.setFruits5RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits6RepBambelloPlant1) ? parseInt(this.state.setFruits6RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits7RepBambelloPlant1) ? parseInt(this.state.setFruits7RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits8RepBambelloPlant1) ? parseInt(this.state.setFruits8RepBambelloPlant1) : 0) + (parseInt(this.state.setFruits9RepBambelloPlant1) ? parseInt(this.state.setFruits9RepBambelloPlant1) : 0));
     this.setState({
-      fruitLoad: sum,
+      fruitLoadRepBambelloPlant1: sum,
     });
 
+    this.setItem("fruitLoadRepBambelloPlant1", this.state.fruitLoadRepBambelloPlant1)
+
     console.log("Fruit Load : " + sum);
+
+
 
   }
 
@@ -536,7 +1096,7 @@ export default class RepBambelloPlant1 extends Component {
       sub = (1 - div);
       add = (((parseInt(this.state.trussNumberRepBambelloPlant1) ? parseInt(this.state.trussNumberRepBambelloPlant1) : 0) + sub).toFixed(2))
       this.setState({
-        harvestTruss: add,
+        harvestTrussRepBambelloPlant1: add,
         pruningHar: prunNum,
       });
 
@@ -546,12 +1106,15 @@ export default class RepBambelloPlant1 extends Component {
       var num = this.state.trussNumberRepBambelloPlant1
 
       this.setState({
-        harvestTruss: num,
+        harvestTrussRepBambelloPlant1: num,
         pruningHar: prunNum,
       });
     }
 
     console.log("Harvest Truss : " + add);
+
+    this.setItem("harvestTrussRepBambelloPlant1", this.state.harvestTrussRepBambelloPlant1)
+
 
 
   }
@@ -597,11 +1160,14 @@ export default class RepBambelloPlant1 extends Component {
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number : " + settingTruss);
                         this.setState({
-                          settingTrussNumber: settingTruss,
+                          settingTrussNumberRepBambelloPlant1: settingTruss,
                           settingTruss: trussNum,
                           prunSetting: pruningSet,
 
                         });
+
+                        this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
                       }
 
@@ -615,11 +1181,14 @@ export default class RepBambelloPlant1 extends Component {
                       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                       console.log("Setting Truss Number 1 : " + settingTruss);
                       this.setState({
-                        settingTrussNumber: settingTruss,
+                        settingTrussNumberRepBambelloPlant1: settingTruss,
                         settingTruss: trussNum,
                         prunSetting: pruningSet,
 
                       });
+
+                      this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
                     }
 
@@ -633,11 +1202,13 @@ export default class RepBambelloPlant1 extends Component {
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 2 : " + settingTruss);
                     this.setState({
-                      settingTrussNumber: settingTruss,
+                      settingTrussNumberRepBambelloPlant1: settingTruss,
                       settingTruss: trussNum,
                       prunSetting: pruningSet,
 
                     });
+                    this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
                   }
 
@@ -651,11 +1222,14 @@ export default class RepBambelloPlant1 extends Component {
                   settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                   console.log("Setting Truss Number 3 : " + settingTruss);
                   this.setState({
-                    settingTrussNumber: settingTruss,
+                    settingTrussNumberRepBambelloPlant1: settingTruss,
                     settingTruss: trussNum,
                     prunSetting: pruningSet,
 
                   });
+
+                  this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
                 }
 
@@ -669,11 +1243,14 @@ export default class RepBambelloPlant1 extends Component {
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 4 : " + settingTruss);
                 this.setState({
-                  settingTrussNumber: settingTruss,
+                  settingTrussNumberRepBambelloPlant1: settingTruss,
                   settingTruss: trussNum,
                   prunSetting: pruningSet,
 
                 });
+
+                this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
               }
 
@@ -687,11 +1264,14 @@ export default class RepBambelloPlant1 extends Component {
               settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
               console.log("Setting Truss Number 5 : " + settingTruss);
               this.setState({
-                settingTrussNumber: settingTruss,
+                settingTrussNumberRepBambelloPlant1: settingTruss,
                 settingTruss: trussNum,
                 prunSetting: pruningSet,
 
               });
+
+              this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
 
             }
@@ -706,11 +1286,13 @@ export default class RepBambelloPlant1 extends Component {
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 6 : " + settingTruss);
             this.setState({
-              settingTrussNumber: settingTruss,
+              settingTrussNumberRepBambelloPlant1: settingTruss,
               settingTruss: trussNum,
               prunSetting: pruningSet,
 
             });
+
+            this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
 
 
           }
@@ -724,11 +1306,14 @@ export default class RepBambelloPlant1 extends Component {
           settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
           console.log("Setting Truss Number 7 : " + settingTruss);
           this.setState({
-            settingTrussNumber: settingTruss,
+            settingTrussNumberRepBambelloPlant1: settingTruss,
             settingTruss: trussNum,
             prunSetting: pruningSet,
 
           });
+
+          this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
         }
 
       } else {
@@ -741,11 +1326,14 @@ export default class RepBambelloPlant1 extends Component {
         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
         console.log("Setting Truss Number 8 : " + settingTruss);
         this.setState({
-          settingTrussNumber: settingTruss,
+          settingTrussNumberRepBambelloPlant1: settingTruss,
           settingTruss: trussNum,
           prunSetting: pruningSet,
 
         });
+
+        this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
 
       }
 
@@ -759,12 +1347,17 @@ export default class RepBambelloPlant1 extends Component {
       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
       console.log("Setting Truss Number 9 : " + settingTruss);
       this.setState({
-        settingTrussNumber: settingTruss,
+        settingTrussNumberRepBambelloPlant1: settingTruss,
         settingTruss2: trussNum,
         prunSetting: pruningSet,
       });
 
+      this.setItem("settingTrussNumberRepBambelloPlant1", settingTruss)
+
+
     }
+
+
 
   }
 
@@ -814,9 +1407,11 @@ export default class RepBambelloPlant1 extends Component {
                         floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
-                          floweringTrussss: floweringTruss,
+                          floweringTrussssRepBambelloPlant1: floweringTruss,
                           pruneFlowering: flowerPruningNumner,
                         });
+                        this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
                       }
 
 
@@ -833,10 +1428,11 @@ export default class RepBambelloPlant1 extends Component {
                       floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                       console.log("Flowering Truss Value : " + floweringTruss);
                       this.setState({
-                        floweringTrussss: floweringTruss,
+                        floweringTrussssRepBambelloPlant1: floweringTruss,
                         pruneFlowering: flowerPruningNumner,
 
                       });
+                      this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
 
 
                     }
@@ -853,10 +1449,12 @@ export default class RepBambelloPlant1 extends Component {
                     floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
-                      floweringTrussss: floweringTruss,
+                      floweringTrussssRepBambelloPlant1: floweringTruss,
                       pruneFlowering: flowerPruningNumner,
 
                     });
+                    this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
 
                   }
 
@@ -872,11 +1470,12 @@ export default class RepBambelloPlant1 extends Component {
                   floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                   console.log("Flowering Truss Value : " + floweringTruss);
                   this.setState({
-                    floweringTrussss: floweringTruss,
+                    floweringTrussssRepBambelloPlant1: floweringTruss,
                     pruneFlowering: flowerPruningNumner,
 
                   });
 
+                  this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
 
                 }
 
@@ -892,10 +1491,12 @@ export default class RepBambelloPlant1 extends Component {
                 floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
-                  floweringTrussss: floweringTruss,
+                  floweringTrussssRepBambelloPlant1: floweringTruss,
                   pruneFlowering: flowerPruningNumner,
 
                 });
+
+                this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
 
 
               }
@@ -912,10 +1513,13 @@ export default class RepBambelloPlant1 extends Component {
               floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
               console.log("Flowering Truss Value : " + floweringTruss);
               this.setState({
-                floweringTrussss: floweringTruss,
+                floweringTrussssRepBambelloPlant1: floweringTruss,
                 pruneFlowering: flowerPruningNumner,
 
               });
+
+              this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
 
             }
 
@@ -931,10 +1535,13 @@ export default class RepBambelloPlant1 extends Component {
             floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
-              floweringTrussss: floweringTruss,
+              floweringTrussssRepBambelloPlant1: floweringTruss,
               pruneFlowering: flowerPruningNumner,
 
             });
+
+            this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
 
           }
 
@@ -950,10 +1557,13 @@ export default class RepBambelloPlant1 extends Component {
           floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
           console.log("Flowering Truss Value : " + floweringTruss);
           this.setState({
-            floweringTrussss: floweringTruss,
+            floweringTrussssRepBambelloPlant1: floweringTruss,
             pruneFlowering: flowerPruningNumner,
 
           });
+
+          this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
 
         }
 
@@ -968,10 +1578,13 @@ export default class RepBambelloPlant1 extends Component {
         floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
         console.log("Flowering Truss Value : " + floweringTruss);
         this.setState({
-          floweringTrussss: floweringTruss,
+          floweringTrussssRepBambelloPlant1: floweringTruss,
           pruneFlowering: flowerPruningNumner,
 
         });
+
+        this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
 
       }
 
@@ -987,12 +1600,19 @@ export default class RepBambelloPlant1 extends Component {
       floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
       console.log("Flowering Truss Value : " + floweringTruss);
       this.setState({
-        floweringTrussss: floweringTruss,
+        floweringTrussssRepBambelloPlant1: floweringTruss,
         pruneFlowering: flowerPruningNumner,
 
       });
 
+      this.setItem("floweringTrussssRepBambelloPlant1", floweringTruss)
+
+
     }
+
+
+
+
 
   }
   //
@@ -1017,7 +1637,7 @@ export default class RepBambelloPlant1 extends Component {
            console.log("Truss Details", this.state.truss);
 
            this.calculateFruitLoad();
-           this.calculateHarvestTruss();
+           this.calculateharvestTrussRepBambelloPlant1();
            this.calculateSettingTruss2();
            this.calculateFloweringTruss2();
 
@@ -1174,7 +1794,7 @@ export default class RepBambelloPlant1 extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')} >
+            <TouchableOpacity onPress={() => this.props.navigation.push('RepBambelloPlantsRow1')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -1760,7 +2380,7 @@ export default class RepBambelloPlant1 extends Component {
                 enablesReturnKeyAutomatically={true}
                 onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepBambelloPlant1')}
                 blurOnSubmit={false}
-                value={this.state.trussNumberRepBambelloPlant1.toString()}
+                value={this.state.trussNumberRepBambelloPlant1}
               />
 
               <View
