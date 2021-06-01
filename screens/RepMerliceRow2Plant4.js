@@ -6,18 +6,19 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
-  Platform, Dimensions
+  Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
+import AsyncStorage from '@react-native-community/async-storage';
+
 
 const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
-import AsyncStorage from '@react-native-community/async-storage';
 
 
-export default class Har1AnnasunPlant2 extends Component {
+export default class RepMerliceRow2Plant4 extends Component {
 
   constructor(props) {
     super(props);
@@ -26,7 +27,7 @@ export default class Har1AnnasunPlant2 extends Component {
 
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onSubmitleavesPerPlantHar1AnnasunPlant2 = this.onSubmitleavesPerPlantHar1AnnasunPlant2.bind(this);
+    this.onSubmitleavesPerPlantRepMerliceRow2Plant4 = this.onSubmitleavesPerPlantRepMerliceRow2Plant4.bind(this);
     this.onSubmitFullysetTruss = this.onSubmitFullysetTruss.bind(this);
     this.onSubmitTrussLength = this.onSubmitTrussLength.bind(this);
     this.onSubmitWeeklyGrowth = this.onSubmitWeeklyGrowth.bind(this);
@@ -38,7 +39,7 @@ export default class Har1AnnasunPlant2 extends Component {
     this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
 
-    this.leavesPerPlantHar1AnnasunPlant2Ref = this.updateRef.bind(this, 'leavesPerPlantHar1AnnasunPlant2');
+    this.leavesPerPlantRepMerliceRow2Plant4Ref = this.updateRef.bind(this, 'leavesPerPlantRepMerliceRow2Plant4');
     this.fullysetTrussRef = this.updateRef.bind(this, 'FullysetTruss');
     this.trussLengthRef = this.updateRef.bind(this, 'TrussLength');
     this.weeklyGrowthRef = this.updateRef.bind(this, 'WeeklyGrowth');
@@ -58,92 +59,98 @@ export default class Har1AnnasunPlant2 extends Component {
       plantRow: '',
       plantName: '',
       plantWeek: '',
-      leavesPerPlantHar1AnnasunPlant2: '',
-      fullySetTrussHar1AnnasunPlant2: '',
-      setTrussLengthHar1AnnasunPlant2: '',
-      weeklyGrowthHar1AnnasunPlant2: '',
-      floweringTrussHeightHar1AnnasunPlant2: '',
-      leafLengthHar1AnnasunPlant2: '',
-      leafWidthHar1AnnasunPlant2: '',
-      stmDiameterHar1AnnasunPlant2: '',
-      lastWeekStmDiameterHar1AnnasunPlant2: '',
+      leavesPerPlantRepMerliceRow2Plant4: '',
+      fullySetTrussRepMerliceRow2Plant4: '',
+      setTrussLengthRepMerliceRow2Plant4: '',
+      weeklyGrowthRepMerliceRow2Plant4: '',
+      floweringTrussHeightRepMerliceRow2Plant4: '',
+      leafLengthRepMerliceRow2Plant4: '',
+      leafWidthRepMerliceRow2Plant4: '',
+      stmDiameterRepMerliceRow2Plant4: '',
+      lastWeekStmDiameterRepMerliceRow2Plant4: '',
       isLoading: false,
       errors: false,
 
       //Truss
-      trussNumberHar1AnnasunPlant2: '',
-      setFruitsHar1AnnasunPlant2: '',
-      setFlowersHar1AnnasunPlant2: '',
-      pruningNumberHar1AnnasunPlant2: '',
-      fruitDiameterHar1AnnasunPlant2: '',
+      trussNumberRepMerliceRow2Plant4: '',
+      setFruitsRepMerliceRow2Plant4: '',
+      setFlowersRepMerliceRow2Plant4: '',
+      pruningNumberRepMerliceRow2Plant4: '',
+      fruitDiameterRepMerliceRow2Plant4: '',
 
-      trussNumber1Har1AnnasunPlant2: '',
-      setFruits1Har1AnnasunPlant2: '',
-      setFlowers1Har1AnnasunPlant2: '',
-      pruningNumber1Har1AnnasunPlant2: '',
-      fruitDiameter1Har1AnnasunPlant2: '',
+      trussNumber1RepMerliceRow2Plant4: '',
+      setFruits1RepMerliceRow2Plant4: '',
+      setFlowers1RepMerliceRow2Plant4: '',
+      pruningNumber1RepMerliceRow2Plant4: '',
+      fruitDiameter1RepMerliceRow2Plant4: '',
 
-      trussNumber2Har1AnnasunPlant2: '',
-      setFruits2Har1AnnasunPlant2: '',
-      setFlowers2Har1AnnasunPlant2: '',
-      pruningNumber2Har1AnnasunPlant2: '',
-      fruitDiameter2Har1AnnasunPlant2: '',
+      trussNumber2RepMerliceRow2Plant4: '',
+      setFruits2RepMerliceRow2Plant4: '',
+      setFlowers2RepMerliceRow2Plant4: '',
+      pruningNumber2RepMerliceRow2Plant4: '',
+      fruitDiameter2RepMerliceRow2Plant4: '',
 
-      trussNumber3Har1AnnasunPlant2: '',
-      setFruits3Har1AnnasunPlant2: '',
-      setFlowers3Har1AnnasunPlant2: '',
-      pruningNumber3Har1AnnasunPlant2: '',
-      fruitDiameter3Har1AnnasunPlant2: '',
+      trussNumber3RepMerliceRow2Plant4: '',
+      setFruits3RepMerliceRow2Plant4: '',
+      setFlowers3RepMerliceRow2Plant4: '',
+      pruningNumber3RepMerliceRow2Plant4: '',
+      fruitDiameter3RepMerliceRow2Plant4: '',
 
-      trussNumber4Har1AnnasunPlant2: '',
-      setFruits4Har1AnnasunPlant2: '',
-      setFlowers4Har1AnnasunPlant2: '',
-      pruningNumber4Har1AnnasunPlant2: '',
-      fruitDiameter4Har1AnnasunPlant2: '',
+      trussNumber4RepMerliceRow2Plant4: '',
+      setFruits4RepMerliceRow2Plant4: '',
+      setFlowers4RepMerliceRow2Plant4: '',
+      pruningNumber4RepMerliceRow2Plant4: '',
+      fruitDiameter4RepMerliceRow2Plant4: '',
 
-      trussNumber5Har1AnnasunPlant2: '',
-      setFruits5Har1AnnasunPlant2: '',
-      setFlowers5Har1AnnasunPlant2: '',
-      pruningNumber5Har1AnnasunPlant2: '',
-      fruitDiameter5Har1AnnasunPlant2: '',
+      trussNumber5RepMerliceRow2Plant4: '',
+      setFruits5RepMerliceRow2Plant4: '',
+      setFlowers5RepMerliceRow2Plant4: '',
+      pruningNumber5RepMerliceRow2Plant4: '',
+      fruitDiameter5RepMerliceRow2Plant4: '',
 
-      trussNumber6Har1AnnasunPlant2: '',
-      setFruits6Har1AnnasunPlant2: '',
-      setFlowers6Har1AnnasunPlant2: '',
-      pruningNumber6Har1AnnasunPlant2: '',
-      fruitDiameter6Har1AnnasunPlant2: '',
+      trussNumber6RepMerliceRow2Plant4: '',
+      setFruits6RepMerliceRow2Plant4: '',
+      setFlowers6RepMerliceRow2Plant4: '',
+      pruningNumber6RepMerliceRow2Plant4: '',
+      fruitDiameter6RepMerliceRow2Plant4: '',
 
-      trussNumber7Har1AnnasunPlant2: '',
-      setFruits7Har1AnnasunPlant2: '',
-      setFlowers7Har1AnnasunPlant2: '',
-      pruningNumber7Har1AnnasunPlant2: '',
-      fruitDiameter7Har1AnnasunPlant2: '',
+      trussNumber7RepMerliceRow2Plant4: '',
+      setFruits7RepMerliceRow2Plant4: '',
+      setFlowers7RepMerliceRow2Plant4: '',
+      pruningNumber7RepMerliceRow2Plant4: '',
+      fruitDiameter7RepMerliceRow2Plant4: '',
 
-      trussNumber8Har1AnnasunPlant2: '',
-      setFruits8Har1AnnasunPlant2: '',
-      setFlowers8Har1AnnasunPlant2: '',
-      pruningNumber8Har1AnnasunPlant2: '',
-      fruitDiameter8Har1AnnasunPlant2: '',
+      trussNumber8RepMerliceRow2Plant4: '',
+      setFruits8RepMerliceRow2Plant4: '',
+      setFlowers8RepMerliceRow2Plant4: '',
+      pruningNumber8RepMerliceRow2Plant4: '',
+      fruitDiameter8RepMerliceRow2Plant4: '',
 
-      trussNumber9Har1AnnasunPlant2: '',
-      setFruits9Har1AnnasunPlant2: '',
-      setFlowers9Har1AnnasunPlant2: '',
-      pruningNumber9Har1AnnasunPlant2: '',
-      fruitDiameter9Har1AnnasunPlant2: '',
+      trussNumber9RepMerliceRow2Plant4: '',
+      setFruits9RepMerliceRow2Plant4: '',
+      setFlowers9RepMerliceRow2Plant4: '',
+      pruningNumber9RepMerliceRow2Plant4: '',
+      fruitDiameter9RepMerliceRow2Plant4: '',
 
-      fruitLoadHar1AnnasunPlant2: '',
-      harvestTrussHar1AnnasunPlant2: '',
-      pruningHarHar1AnnasunPlant2: '',
-      settingTrussNumberHar1AnnasunPlant2: '',
-      prunSettingHar1AnnasunPlant2: '',
-      pruneFloweringHar1AnnasunPlant2: '',
+      fruitLoadRepMerliceRow2Plant4: '',
+      harvestTrussRepMerliceRow2Plant4: '',
+      pruningHarRepMerliceRow2Plant4: '',
+      settingTrussNumberRepMerliceRow2Plant4: '',
+      prunSettingRepMerliceRow2Plant4: '',
+      pruneFloweringRepMerliceRow2Plant4: '',
 
-      floweringTrussNumberHar1AnnasunPlant2: '',
-      settingTrussHar1AnnasunPlant2: '',
-      settingTruss2Har1AnnasunPlant2: '',
-      floweringTrussssHar1AnnasunPlant2: '',
+      floweringTrussNumberRepMerliceRow2Plant4: '',
+      settingTrussRepMerliceRow2Plant4: '',
+      settingTruss2RepMerliceRow2Plant4: '',
+      floweringTrussssRepMerliceRow2Plant4: '',
 
     }
+  }
+
+  goBack() {
+    const { navigation } = this.props
+    navigation.goBack()
+    navigation.state.params.onBack();  // Call onBack function of ScreenA
   }
 
   componentDidMount() {
@@ -159,10 +166,11 @@ export default class Har1AnnasunPlant2 extends Component {
 
     this.setState({ weekNumber: completeWeekNumber })
 
-  
-      this.getAsysncValues();
 
-    
+
+    this.getAsysncValues();
+
+
   }
 
   //ASYNC METHOD
@@ -174,7 +182,6 @@ export default class Har1AnnasunPlant2 extends Component {
 
       });
 
-
       return await AsyncStorage.setItem(myKey, JSON.stringify(value));
     } catch (error) {
       // console.error('AsyncStorage#setItem error: ' + error.message);
@@ -183,96 +190,816 @@ export default class Har1AnnasunPlant2 extends Component {
 
   //
 
-  getAsysncValues() {
+  getAsysncValues = async () => {
 
 
     try {
-      AsyncStorage.getItem('leavesPerPlantHar1AnnasunPlant2').then((text1Value) => {
-        this.setState({ leavesPerPlantHar1AnnasunPlant2: JSON.parse(text1Value) });
-        console.log(this.state.leavesPerPlantHar1AnnasunPlant2)
-
-
+      AsyncStorage.getItem('leavesPerPlantRepMerliceRow2Plant4').then((text1Value) => {
+        this.setState({ leavesPerPlantRepMerliceRow2Plant4: JSON.parse(text1Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fullySetTrussHar1AnnasunPlant2').then((text2Value) => {
-        this.setState({ fullySetTrussHar1AnnasunPlant2: JSON.parse(text2Value) });
-        console.log(this.state.fullySetTrussHar1AnnasunPlant2)
-
-
+      AsyncStorage.getItem('fullySetTrussRepMerliceRow2Plant4').then((text2Value) => {
+        this.setState({ fullySetTrussRepMerliceRow2Plant4: JSON.parse(text2Value) });
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setTrussLengthHar1AnnasunPlant2').then((text3Value) => {
-        this.setState({ setTrussLengthHar1AnnasunPlant2: JSON.parse(text3Value) });
-        console.log(this.state.setTrussLengthHar1AnnasunPlant2)
-
-
+      AsyncStorage.getItem('setTrussLengthRepMerliceRow2Plant4').then((text3Value) => {
+        this.setState({ setTrussLengthRepMerliceRow2Plant4: JSON.parse(text3Value) });
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('weeklyGrowthHar1AnnasunPlant2').then((text4Value) => {
-        this.setState({ weeklyGrowthHar1AnnasunPlant2: JSON.parse(text4Value) });
-        console.log(this.state.weeklyGrowthHar1AnnasunPlant2)
+      AsyncStorage.getItem('weeklyGrowthRepMerliceRow2Plant4').then((text4Value) => {
+        this.setState({ weeklyGrowthRepMerliceRow2Plant4: JSON.parse(text4Value) });
 
 
 
       }).done();
     } catch (error) {
     } try {
-      AsyncStorage.getItem('floweringTrussHeightHar1AnnasunPlant2').then((text5Value) => {
-        this.setState({ floweringTrussHeightHar1AnnasunPlant2: JSON.parse(text5Value) });
-        console.log(this.state.floweringTrussHeightHar1AnnasunPlant2)
-
-
-
-      }).done();
-    } catch (error) {
-    }
-    try {
-      AsyncStorage.getItem('leafLengthHar1AnnasunPlant2').then((text6Value) => {
-        this.setState({ leafLengthHar1AnnasunPlant2: JSON.parse(text6Value) });
-        console.log(this.state.leafLengthHar1AnnasunPlant2)
-
-
-
-      }).done();
-    } catch (error) {
-    } try {
-      AsyncStorage.getItem('leafWidthHar1AnnasunPlant2').then((text7Value) => {
-        this.setState({ leafWidthHar1AnnasunPlant2: JSON.parse(text7Value) });
-        console.log(this.state.leafWidthHar1AnnasunPlant2)
-
+      AsyncStorage.getItem('floweringTrussHeightRepMerliceRow2Plant4').then((text5Value) => {
+        this.setState({ floweringTrussHeightRepMerliceRow2Plant4: JSON.parse(text5Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('stmDiameterHar1AnnasunPlant2').then((text8Value) => {
-        this.setState({ stmDiameterHar1AnnasunPlant2: JSON.parse(text8Value) });
-        console.log(this.state.stmDiameterHar1AnnasunPlant2)
+      AsyncStorage.getItem('leafLengthRepMerliceRow2Plant4').then((text6Value) => {
+        this.setState({ leafLengthRepMerliceRow2Plant4: JSON.parse(text6Value) });
 
 
       }).done();
     } catch (error) {
     } try {
-      AsyncStorage.getItem('lastWeekStmDiameterHar1AnnasunPlant2').then((text9Value) => {
-        this.setState({ lastWeekStmDiameterHar1AnnasunPlant2: JSON.parse(text9Value) });
-        console.log(this.state.lastWeekStmDiameterHar1AnnasunPlant2)
+      AsyncStorage.getItem('leafWidthRepMerliceRow2Plant4').then((text7Value) => {
+        this.setState({ leafWidthRepMerliceRow2Plant4: JSON.parse(text7Value) });
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('stmDiameterRepMerliceRow2Plant4').then((text8Value) => {
+        this.setState({ stmDiameterRepMerliceRow2Plant4: JSON.parse(text8Value) });
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('lastWeekStmDiameterRepMerliceRow2Plant4').then((text9Value) => {
+        this.setState({ lastWeekStmDiameterRepMerliceRow2Plant4: JSON.parse(text9Value) });
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('trussNumberRepMerliceRow2Plant4').then((text10Value) => {
+
+        if (text10Value !== null) {
+          this.setState({ trussNumberRepMerliceRow2Plant4: JSON.parse(text10Value) });
+
+          this.setState({ trussNumber1RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 1 })
+          this.setState({ trussNumber2RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 2 })
+          this.setState({ trussNumber3RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 3 })
+          this.setState({ trussNumber4RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 4 })
+          this.setState({ trussNumber5RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 5 })
+          this.setState({ trussNumber6RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 6 })
+          this.setState({ trussNumber7RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 7 })
+          this.setState({ trussNumber8RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 8 })
+          this.setState({ trussNumber9RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 9 })
+
+        }
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFruitsRepMerliceRow2Plant4').then((text11Value) => {
+        if (text11Value !== null) {
+
+          this.setState({ setFruitsRepMerliceRow2Plant4: JSON.parse(text11Value) });
+
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    try {
+      AsyncStorage.getItem('setFlowersRepMerliceRow2Plant4').then((text12Value) => {
+
+        if (text12Value !== null) {
+
+          this.setState({ setFlowersRepMerliceRow2Plant4: JSON.parse(text12Value) });
+
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumberRepMerliceRow2Plant4').then((text13Value) => {
+        if (text13Value !== null) {
+          this.setState({ pruningNumberRepMerliceRow2Plant4: JSON.parse(text13Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameterRepMerliceRow2Plant4').then((text14Value) => {
+
+        if (text14Value !== null) {
+          this.setState({ fruitDiameterRepMerliceRow2Plant4: JSON.parse(text14Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 1---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits1RepMerliceRow2Plant4').then((text16Value) => {
+
+        if (text16Value !== null) {
+          this.setState({ setFruits1RepMerliceRow2Plant4: JSON.parse(text16Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers1RepMerliceRow2Plant4').then((text17Value) => {
+
+        if (text17Value !== null) {
+          this.setState({ setFlowers1RepMerliceRow2Plant4: JSON.parse(text17Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber1RepMerliceRow2Plant4').then((text18Value) => {
+
+        if (text18Value !== null) {
+          this.setState({ pruningNumber1RepMerliceRow2Plant4: JSON.parse(text18Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter1RepMerliceRow2Plant4').then((text19Value) => {
+
+        if (text19Value !== null) {
+          this.setState({ fruitDiameter1RepMerliceRow2Plant4: JSON.parse(text19Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 2---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits2RepMerliceRow2Plant4').then((text17Value) => {
+
+        if (text17Value !== null) {
+          this.setState({ setFruits2RepMerliceRow2Plant4: JSON.parse(text17Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers2RepMerliceRow2Plant4').then((text18Value) => {
+
+        if (text18Value !== null) {
+          this.setState({ setFlowers2RepMerliceRow2Plant4: JSON.parse(text18Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber2RepMerliceRow2Plant4').then((text19Value) => {
+
+        if (text19Value !== null) {
+          this.setState({ pruningNumber2RepMerliceRow2Plant4: JSON.parse(text19Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter2RepMerliceRow2Plant4').then((text20Value) => {
+
+        if (text20Value !== null) {
+          this.setState({ fruitDiameter2RepMerliceRow2Plant4: JSON.parse(text20Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 3---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits3RepMerliceRow2Plant4').then((text21Value) => {
+
+        if (text21Value !== null) {
+          this.setState({ setFruits3RepMerliceRow2Plant4: JSON.parse(text21Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers3RepMerliceRow2Plant4').then((text22Value) => {
+
+        if (text22Value !== null) {
+          this.setState({ setFlowers3RepMerliceRow2Plant4: JSON.parse(text22Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber3RepMerliceRow2Plant4').then((text23Value) => {
+
+        if (text23Value !== null) {
+          this.setState({ pruningNumber3RepMerliceRow2Plant4: JSON.parse(text23Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter3RepMerliceRow2Plant4').then((text24Value) => {
+
+        if (text24Value !== null) {
+          this.setState({ fruitDiameter3RepMerliceRow2Plant4: JSON.parse(text24Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 4---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits4RepMerliceRow2Plant4').then((text25Value) => {
+
+        if (text25Value !== null) {
+          this.setState({ setFruits4RepMerliceRow2Plant4: JSON.parse(text25Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers4RepMerliceRow2Plant4').then((text26Value) => {
+
+        if (text26Value !== null) {
+          this.setState({ setFlowers4RepMerliceRow2Plant4: JSON.parse(text26Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber4RepMerliceRow2Plant4').then((text27Value) => {
+
+        if (text27Value !== null) {
+          this.setState({ pruningNumber4RepMerliceRow2Plant4: JSON.parse(text27Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter4RepMerliceRow2Plant4').then((text28Value) => {
+
+        if (text28Value !== null) {
+          this.setState({ fruitDiameter4RepMerliceRow2Plant4: JSON.parse(text28Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 5---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits5RepMerliceRow2Plant4').then((text29Value) => {
+
+        if (text29Value !== null) {
+          this.setState({ setFruits5RepMerliceRow2Plant4: JSON.parse(text29Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers5RepMerliceRow2Plant4').then((text30Value) => {
+
+        if (text30Value !== null) {
+          this.setState({ setFlowers5RepMerliceRow2Plant4: JSON.parse(text30Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber5RepMerliceRow2Plant4').then((text31Value) => {
+
+        if (text31Value !== null) {
+          this.setState({ pruningNumber5RepMerliceRow2Plant4: JSON.parse(text31Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+
+      AsyncStorage.getItem('fruitDiameter5RepMerliceRow2Plant4').then((text32Value) => {
+        if (text32Value !== null) {
+          this.setState({ fruitDiameter5RepMerliceRow2Plant4: JSON.parse(text32Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 6---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits6RepMerliceRow2Plant4').then((text33Value) => {
+
+        if (text33Value !== null) {
+          this.setState({ setFruits6RepMerliceRow2Plant4: JSON.parse(text33Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers6RepMerliceRow2Plant4').then((text34Value) => {
+
+        if (text34Value !== null) {
+          this.setState({ setFlowers6RepMerliceRow2Plant4: JSON.parse(text34Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber6RepMerliceRow2Plant4').then((text35Value) => {
+
+        if (text35Value !== null) {
+          this.setState({ pruningNumber6RepMerliceRow2Plant4: JSON.parse(text35Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter6RepMerliceRow2Plant4').then((text36Value) => {
+
+        if (text36Value !== null) {
+          this.setState({ fruitDiameter6RepMerliceRow2Plant4: JSON.parse(text36Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 7---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits7RepMerliceRow2Plant4').then((text37Value) => {
+
+        if (text37Value !== null) {
+          this.setState({ setFruits7RepMerliceRow2Plant4: JSON.parse(text37Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers7RepMerliceRow2Plant4').then((text38Value) => {
+
+        if (text38Value !== null) {
+
+          this.setState({ setFlowers7RepMerliceRow2Plant4: JSON.parse(text38Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber7RepMerliceRow2Plant4').then((text39Value) => {
+
+        if (text39Value !== null) {
+          this.setState({ pruningNumber7RepMerliceRow2Plant4: JSON.parse(text39Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter7RepMerliceRow2Plant4').then((text40Value) => {
+
+        if (text40Value !== null) {
+          this.setState({ fruitDiameter7RepMerliceRow2Plant4: JSON.parse(text40Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    //-------------------------Truss 8---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits8RepMerliceRow2Plant4').then((text41Value) => {
+
+        if (text41Value !== null) {
+          this.setState({ setFruits8RepMerliceRow2Plant4: JSON.parse(text41Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers8RepMerliceRow2Plant4').then((text42Value) => {
+
+        if (text42Value !== null) {
+          this.setState({ setFlowers8RepMerliceRow2Plant4: JSON.parse(text42Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber8RepMerliceRow2Plant4').then((text43Value) => {
+
+        if (text43Value !== null) {
+          this.setState({ pruningNumber8RepMerliceRow2Plant4: JSON.parse(text43Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter8RepMerliceRow2Plant4').then((text44Value) => {
+
+        if (text44Value !== null) {
+          this.setState({ fruitDiameter8RepMerliceRow2Plant4: JSON.parse(text44Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //-------------------------Truss 9---------------------------------//
+
+    try {
+      AsyncStorage.getItem('setFruits9RepMerliceRow2Plant4').then((text45Value) => {
+
+        if (text45Value !== null) {
+          this.setState({ setFruits9RepMerliceRow2Plant4: JSON.parse(text45Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('setFlowers9RepMerliceRow2Plant4').then((text46Value) => {
+
+        if (text46Value !== null) {
+          this.setState({ setFlowers9RepMerliceRow2Plant4: JSON.parse(text46Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('pruningNumber9RepMerliceRow2Plant4').then((text47Value) => {
+
+        if (text47Value !== null) {
+          this.setState({ pruningNumber9RepMerliceRow2Plant4: JSON.parse(text47Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('fruitDiameter9RepMerliceRow2Plant4').then((text48Value) => {
+
+        if (text48Value !== null) {
+          this.setState({ fruitDiameter9RepMerliceRow2Plant4: JSON.parse(text48Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+    //-------------------------Calculations---------------------------------//
+
+    try {
+      AsyncStorage.getItem('fruitLoadRepMerliceRow2Plant4').then((text49Value) => {
+        if (text49Value !== null) {
+          this.setState({ fruitLoadRepMerliceRow2Plant4: JSON.parse(text49Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('floweringTrussssRepMerliceRow2Plant4').then((text50Value) => {
+
+        if (text50Value !== null) {
+          this.setState({ floweringTrussssRepMerliceRow2Plant4: JSON.parse(text50Value) });
+        }
+
+        console.log("ttttttttttttttttttttttttttttt : "+this.state.floweringTrussssRepMerliceRow2Plant4)
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('settingTrussNumberRepMerliceRow2Plant4').then((text51Value) => {
+
+        if (text51Value !== null) {
+          this.setState({ settingTrussNumberRepMerliceRow2Plant4: JSON.parse(text51Value) });
+        }
+
+        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy : "+this.state.settingTrussNumberRepMerliceRow2Plant4)
+
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('harvestTrussRepMerliceRow2Plant4').then((text52Value) => {
+
+        if (text52Value !== null) {
+          this.setState({ harvestTrussRepMerliceRow2Plant4: JSON.parse(text52Value) });
+        }
+
+
+      }).done();
+    } catch (error) {
+    }
+
+
+
+
+
+
+    /*try {
+      AsyncStorage.getItem('trussNumberRepMerliceRow2Plant4').then((text10Value) => {
+        this.setState({ trussNumberRepMerliceRow2Plant4: JSON.parse(text10Value) });
+        console.log(this.state.trussNumberRepMerliceRow2Plant4)
 
 
 
       }).done();
     } catch (error) {
     }
+
+    try {
+      AsyncStorage.getItem('setFruitsRepMerliceRow2Plant4').then((text11Value) => {
+        this.setState({ setFruitsRepMerliceRow2Plant4: JSON.parse(text11Value) });
+        console.log(this.state.setFruitsRepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFlowersRepMerliceRow2Plant4').then((text12Value) => {
+        this.setState({ setFlowersRepMerliceRow2Plant4: JSON.parse(text12Value) });
+        console.log(this.state.setFlowersRepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('pruningNumberRepMerliceRow2Plant4').then((text13Value) => {
+        this.setState({ pruningNumberRepMerliceRow2Plant4: JSON.parse(text13Value) });
+        console.log(this.state.pruningNumberRepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('fruitDiameterRepMerliceRow2Plant4').then((text14Value) => {
+        this.setState({ fruitDiameterRepMerliceRow2Plant4: JSON.parse(text14Value) });
+        console.log(this.state.fruitDiameterRepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFruits1RepMerliceRow2Plant4').then((text15Value) => {
+        this.setState({ setFruits1RepMerliceRow2Plant4: JSON.parse(text15Value) });
+        console.log(this.state.setFruits1RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFlowers1RepMerliceRow2Plant4').then((text16Value) => {
+        this.setState({ setFlowers1RepMerliceRow2Plant4: JSON.parse(text16Value) });
+        console.log(this.state.setFlowers1RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('pruningNumber1RepMerliceRow2Plant4').then((text17Value) => {
+        this.setState({ pruningNumber1RepMerliceRow2Plant4: JSON.parse(text17Value) });
+        console.log(this.state.pruningNumber1RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('fruitDiameter1RepMerliceRow2Plant4').then((text18Value) => {
+        this.setState({ fruitDiameter1RepMerliceRow2Plant4: JSON.parse(text18Value) });
+        console.log(this.state.fruitDiameter1RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFruits2RepMerliceRow2Plant4').then((text19Value) => {
+        this.setState({ setFruits2RepMerliceRow2Plant4: JSON.parse(text19Value) });
+        console.log(this.state.setFruits2RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFlowers2RepMerliceRow2Plant4').then((text20Value) => {
+        this.setState({ setFlowers2RepMerliceRow2Plant4: JSON.parse(text20Value) });
+        console.log(this.state.setFlowers2RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('pruningNumber2RepMerliceRow2Plant4').then((text21Value) => {
+        this.setState({ pruningNumber2RepMerliceRow2Plant4: JSON.parse(text21Value) });
+        console.log(this.state.pruningNumber2RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('fruitDiameter2RepMerliceRow2Plant4').then((text22Value) => {
+        this.setState({ fruitDiameter2RepMerliceRow2Plant4: JSON.parse(text22Value) });
+        console.log(this.state.fruitDiameter2RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFruits3RepMerliceRow2Plant4').then((text23Value) => {
+        this.setState({ setFruits3RepMerliceRow2Plant4: JSON.parse(text23Value) });
+        console.log(this.state.setFruits3RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('setFlowers3RepMerliceRow2Plant4').then((text24Value) => {
+        this.setState({ setFlowers3RepMerliceRow2Plant4: JSON.parse(text24Value) });
+        console.log(this.state.setFlowers3RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('pruningNumber3RepMerliceRow2Plant4').then((text25Value) => {
+        this.setState({ pruningNumber3RepMerliceRow2Plant4: JSON.parse(text25Value) });
+        console.log(this.state.pruningNumber3RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('fruitDiameter3RepMerliceRow2Plant4').then((text26Value) => {
+        this.setState({ fruitDiameter3RepMerliceRow2Plant4: JSON.parse(text26Value) });
+        console.log(this.state.fruitDiameter3RepMerliceRow2Plant4)
+
+
+
+      }).done();
+    } catch (error) {
+    }*/
+
 
   }
 
@@ -313,17 +1040,18 @@ export default class Har1AnnasunPlant2 extends Component {
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 1 })
-    this.setState({ trussNumber2Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 2 })
-    this.setState({ trussNumber3Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 3 })
-    this.setState({ trussNumber4Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 4 })
-    this.setState({ trussNumber5Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 5 })
-    this.setState({ trussNumber6Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 6 })
-    this.setState({ trussNumber7Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 7 })
-    this.setState({ trussNumber8Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 8 })
-    this.setState({ trussNumber9Har1AnnasunPlant2: parseInt(this.state.trussNumberHar1AnnasunPlant2) + 9 })
+    this.setState({ trussNumber1RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 1 })
+    this.setState({ trussNumber2RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 2 })
+    this.setState({ trussNumber3RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 3 })
+    this.setState({ trussNumber4RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 4 })
+    this.setState({ trussNumber5RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 5 })
+    this.setState({ trussNumber6RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 6 })
+    this.setState({ trussNumber7RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 7 })
+    this.setState({ trussNumber8RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 8 })
+    this.setState({ trussNumber9RepMerliceRow2Plant4: parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 9 })
 
-    if (this.state.trussNumberHar1AnnasunPlant2 !== "") {
+
+    if (this.state.trussNumberRepMerliceRow2Plant4 !== "") {
 
       this.calculateSettingTruss2();
       this.calculateFloweringTruss2();
@@ -340,12 +1068,16 @@ export default class Har1AnnasunPlant2 extends Component {
   calculateFruitLoad = () => {
 
     var sum = 0;
-    sum = ((parseInt(this.state.setFruitsHar1AnnasunPlant2) ? parseInt(this.state.setFruitsHar1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits1Har1AnnasunPlant2) ? parseInt(this.state.setFruits1Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits2Har1AnnasunPlant2) ? parseInt(this.state.setFruits2Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits3Har1AnnasunPlant2) ? parseInt(this.state.setFruits3Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits4Har1AnnasunPlant2) ? parseInt(this.state.setFruits4Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits5Har1AnnasunPlant2) ? parseInt(this.state.setFruits5Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits6Har1AnnasunPlant2) ? parseInt(this.state.setFruits6Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits7Har1AnnasunPlant2) ? parseInt(this.state.setFruits7Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits8Har1AnnasunPlant2) ? parseInt(this.state.setFruits8Har1AnnasunPlant2) : 0) + (parseInt(this.state.setFruits9Har1AnnasunPlant2) ? parseInt(this.state.setFruits9Har1AnnasunPlant2) : 0));
+    sum = ((parseInt(this.state.setFruitsRepMerliceRow2Plant4) ? parseInt(this.state.setFruitsRepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits1RepMerliceRow2Plant4) ? parseInt(this.state.setFruits1RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits2RepMerliceRow2Plant4) ? parseInt(this.state.setFruits2RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits3RepMerliceRow2Plant4) ? parseInt(this.state.setFruits3RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits4RepMerliceRow2Plant4) ? parseInt(this.state.setFruits4RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits5RepMerliceRow2Plant4) ? parseInt(this.state.setFruits5RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits6RepMerliceRow2Plant4) ? parseInt(this.state.setFruits6RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits7RepMerliceRow2Plant4) ? parseInt(this.state.setFruits7RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits8RepMerliceRow2Plant4) ? parseInt(this.state.setFruits8RepMerliceRow2Plant4) : 0) + (parseInt(this.state.setFruits9RepMerliceRow2Plant4) ? parseInt(this.state.setFruits9RepMerliceRow2Plant4) : 0));
     this.setState({
-      fruitLoad: sum,
+      fruitLoadRepMerliceRow2Plant4: sum,
     });
 
+    this.setItem("fruitLoadRepMerliceRow2Plant4", this.state.fruitLoadRepMerliceRow2Plant4)
+
     console.log("Fruit Load : " + sum);
+
+
 
   }
 
@@ -356,30 +1088,33 @@ export default class Har1AnnasunPlant2 extends Component {
     var add = 0;
     var prunNum = 0;
 
-    if (this.state.setFlowersHar1AnnasunPlant2 === "") {
+    if (this.state.setFlowersRepMerliceRow2Plant4 === "") {
 
-      prunNum = parseInt(this.state.pruningNumberHar1AnnasunPlant2)
+      prunNum = parseInt(this.state.pruningNumberRepMerliceRow2Plant4)
 
-      div = (parseInt((this.state.setFruitsHar1AnnasunPlant2) ? (this.state.setFruitsHar1AnnasunPlant2) : 0) / parseFloat((this.state.pruningNumberHar1AnnasunPlant2) ? (this.state.pruningNumberHar1AnnasunPlant2) : 0))
+      div = (parseInt((this.state.setFruitsRepMerliceRow2Plant4) ? (this.state.setFruitsRepMerliceRow2Plant4) : 0) / parseFloat((this.state.pruningNumberRepMerliceRow2Plant4) ? (this.state.pruningNumberRepMerliceRow2Plant4) : 0))
       sub = (1 - div);
-      add = (((parseInt(this.state.trussNumberHar1AnnasunPlant2) ? parseInt(this.state.trussNumberHar1AnnasunPlant2) : 0) + sub).toFixed(2))
+      add = (((parseInt(this.state.trussNumberRepMerliceRow2Plant4) ? parseInt(this.state.trussNumberRepMerliceRow2Plant4) : 0) + sub).toFixed(2))
       this.setState({
-        harvestTruss: add,
+        harvestTrussRepMerliceRow2Plant4: add,
         pruningHar: prunNum,
       });
 
     } else {
 
-      prunNum = parseInt(this.state.pruningNumberHar1AnnasunPlant2)
-      var num = this.state.trussNumberHar1AnnasunPlant2
+      prunNum = parseInt(this.state.pruningNumberRepMerliceRow2Plant4)
+      var num = this.state.trussNumberRepMerliceRow2Plant4
 
       this.setState({
-        harvestTruss: num,
+        harvestTrussRepMerliceRow2Plant4: num,
         pruningHar: prunNum,
       });
     }
 
     console.log("Harvest Truss : " + add);
+
+    this.setItem("harvestTrussRepMerliceRow2Plant4", this.state.harvestTrussRepMerliceRow2Plant4)
+
 
 
   }
@@ -394,205 +1129,235 @@ export default class Har1AnnasunPlant2 extends Component {
     var settingFruit = 0;
     var trussNum = 0;
 
-    console.log("Setting truss called : " + this.state.setFruits2Har1AnnasunPlant2);
+    console.log("Setting truss called : " + this.state.setFruits2RepMerliceRow2Plant4);
 
-    if (this.state.setFruits9Har1AnnasunPlant2 === "") {
+    if (this.state.setFruits9RepMerliceRow2Plant4 === "") {
 
-      if (this.state.setFruits8Har1AnnasunPlant2 === "") {
+      if (this.state.setFruits8RepMerliceRow2Plant4 === "") {
 
-        if (this.state.setFruits7Har1AnnasunPlant2 === "") {
+        if (this.state.setFruits7RepMerliceRow2Plant4 === "") {
 
-          if (this.state.setFruits6Har1AnnasunPlant2 === "") {
+          if (this.state.setFruits6RepMerliceRow2Plant4 === "") {
 
-            if (this.state.setFruits5Har1AnnasunPlant2 === "") {
+            if (this.state.setFruits5RepMerliceRow2Plant4 === "") {
 
-              if (this.state.setFruits4Har1AnnasunPlant2 === "") {
+              if (this.state.setFruits4RepMerliceRow2Plant4 === "") {
 
-                if (this.state.setFruits3Har1AnnasunPlant2 === "") {
+                if (this.state.setFruits3RepMerliceRow2Plant4 === "") {
 
-                  if (this.state.setFruits2Har1AnnasunPlant2 === "") {
+                  if (this.state.setFruits2RepMerliceRow2Plant4 === "") {
 
-                    if (this.state.setFruits1Har1AnnasunPlant2 === "") {
+                    if (this.state.setFruits1RepMerliceRow2Plant4 === "") {
 
-                      if (this.state.setFruitsHar1AnnasunPlant2 === "") {
+                      if (this.state.setFruitsRepMerliceRow2Plant4 === "") {
 
 
                       } else {
 
-                        pruningSet = parseInt(this.state.pruningNumberHar1AnnasunPlant2);
-                        trussNum = parseInt(this.state.trussNumberHar1AnnasunPlant2);
-                        settingFruit = parseInt(this.state.setFruitsHar1AnnasunPlant2);
+                        pruningSet = parseInt(this.state.pruningNumberRepMerliceRow2Plant4);
+                        trussNum = parseInt(this.state.trussNumberRepMerliceRow2Plant4);
+                        settingFruit = parseInt(this.state.setFruitsRepMerliceRow2Plant4);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number : " + settingTruss);
                         this.setState({
-                          settingTrussNumber: settingTruss,
+                          settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                           settingTruss: trussNum,
                           prunSetting: pruningSet,
 
                         });
 
+                        this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
                       }
 
                     } else {
 
-                      var number = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 1)
+                      var number = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 1)
 
-                      pruningSet = parseInt(this.state.pruningNumber1Har1AnnasunPlant2);
+                      pruningSet = parseInt(this.state.pruningNumber1RepMerliceRow2Plant4);
                       trussNum = parseInt(number);
-                      settingFruit = parseInt(this.state.setFruits1Har1AnnasunPlant2);
+                      settingFruit = parseInt(this.state.setFruits1RepMerliceRow2Plant4);
                       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                       console.log("Setting Truss Number 1 : " + settingTruss);
                       this.setState({
-                        settingTrussNumber: settingTruss,
+                        settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                         settingTruss: trussNum,
                         prunSetting: pruningSet,
 
                       });
 
+                      this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
                     }
 
                   } else {
 
-                    var number2 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 2)
+                    var number2 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 2)
 
-                    pruningSet = parseInt(this.state.pruningNumber2Har1AnnasunPlant2);
+                    pruningSet = parseInt(this.state.pruningNumber2RepMerliceRow2Plant4);
                     trussNum = parseInt(number2);
-                    settingFruit = parseInt(this.state.setFruits2Har1AnnasunPlant2);
+                    settingFruit = parseInt(this.state.setFruits2RepMerliceRow2Plant4);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 2 : " + settingTruss);
                     this.setState({
-                      settingTrussNumber: settingTruss,
+                      settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                       settingTruss: trussNum,
                       prunSetting: pruningSet,
 
                     });
+                    this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
 
                   }
 
                 } else {
 
-                  var number3 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 3)
+                  var number3 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 3)
 
-                  pruningSet = parseInt(this.state.pruningNumber3Har1AnnasunPlant2);
+                  pruningSet = parseInt(this.state.pruningNumber3RepMerliceRow2Plant4);
                   trussNum = parseInt(number3);
-                  settingFruit = parseInt(this.state.setFruits3Har1AnnasunPlant2);
+                  settingFruit = parseInt(this.state.setFruits3RepMerliceRow2Plant4);
                   settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                   console.log("Setting Truss Number 3 : " + settingTruss);
                   this.setState({
-                    settingTrussNumber: settingTruss,
+                    settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                     settingTruss: trussNum,
                     prunSetting: pruningSet,
 
                   });
 
+                  this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
                 }
 
               } else {
 
-                var number4 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 4)
+                var number4 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 4)
 
-                pruningSet = parseInt(this.state.pruningNumber4Har1AnnasunPlant2);
+                pruningSet = parseInt(this.state.pruningNumber4RepMerliceRow2Plant4);
                 trussNum = parseInt(number4);
-                settingFruit = parseInt(this.state.setFruits4Har1AnnasunPlant2);
+                settingFruit = parseInt(this.state.setFruits4RepMerliceRow2Plant4);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 4 : " + settingTruss);
                 this.setState({
-                  settingTrussNumber: settingTruss,
+                  settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                   settingTruss: trussNum,
                   prunSetting: pruningSet,
 
                 });
 
+                this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
               }
 
             } else {
 
-              var number5 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 5)
+              var number5 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 5)
 
-              pruningSet = parseInt(this.state.pruningNumber5Har1AnnasunPlant2);
+              pruningSet = parseInt(this.state.pruningNumber5RepMerliceRow2Plant4);
               trussNum = parseInt(number5);
-              settingFruit = parseInt(this.state.setFruits5Har1AnnasunPlant2);
+              settingFruit = parseInt(this.state.setFruits5RepMerliceRow2Plant4);
               settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
               console.log("Setting Truss Number 5 : " + settingTruss);
               this.setState({
-                settingTrussNumber: settingTruss,
+                settingTrussNumberRepMerliceRow2Plant4: settingTruss,
                 settingTruss: trussNum,
                 prunSetting: pruningSet,
 
               });
+
+              this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
 
 
             }
 
           } else {
 
-            var number6 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 6)
+            var number6 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 6)
 
-            pruningSet = parseInt(this.state.pruningNumber6Har1AnnasunPlant2);
+            pruningSet = parseInt(this.state.pruningNumber6RepMerliceRow2Plant4);
             trussNum = parseInt(number6);
-            settingFruit = parseInt(this.state.setFruits6Har1AnnasunPlant2);
+            settingFruit = parseInt(this.state.setFruits6RepMerliceRow2Plant4);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 6 : " + settingTruss);
             this.setState({
-              settingTrussNumber: settingTruss,
+              settingTrussNumberRepMerliceRow2Plant4: settingTruss,
               settingTruss: trussNum,
               prunSetting: pruningSet,
 
             });
 
+            this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
 
           }
 
         } else {
-          var number7 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 7)
+          var number7 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 7)
 
-          pruningSet = parseInt(this.state.pruningNumber7Har1AnnasunPlant2);
+          pruningSet = parseInt(this.state.pruningNumber7RepMerliceRow2Plant4);
           trussNum = parseInt(number7);
-          settingFruit = parseInt(this.state.setFruits7Har1AnnasunPlant2);
+          settingFruit = parseInt(this.state.setFruits7RepMerliceRow2Plant4);
           settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
           console.log("Setting Truss Number 7 : " + settingTruss);
           this.setState({
-            settingTrussNumber: settingTruss,
+            settingTrussNumberRepMerliceRow2Plant4: settingTruss,
             settingTruss: trussNum,
             prunSetting: pruningSet,
 
           });
+
+          this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
         }
 
       } else {
 
-        var number8 = (parseInt(this.state.trussNumberHar1AnnasunPlant2) + 8)
+        var number8 = (parseInt(this.state.trussNumberRepMerliceRow2Plant4) + 8)
 
-        pruningSet = parseInt(this.state.pruningNumber8Har1AnnasunPlant2);
+        pruningSet = parseInt(this.state.pruningNumber8RepMerliceRow2Plant4);
         trussNum = parseInt(number8);
-        settingFruit = parseInt(this.state.setFruits8Har1AnnasunPlant2);
+        settingFruit = parseInt(this.state.setFruits8RepMerliceRow2Plant4);
         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
         console.log("Setting Truss Number 8 : " + settingTruss);
         this.setState({
-          settingTrussNumber: settingTruss,
+          settingTrussNumberRepMerliceRow2Plant4: settingTruss,
           settingTruss: trussNum,
           prunSetting: pruningSet,
 
         });
 
+        this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
       }
 
     } else {
 
-      var number9 = (ParseInt(this.state.trussNumberHar1AnnasunPlant2) + 9)
+      var number9 = (ParseInt(this.state.trussNumberRepMerliceRow2Plant4) + 9)
 
-      pruningSet = parseInt(this.state.pruningNumber9Har1AnnasunPlant2);
+      pruningSet = parseInt(this.state.pruningNumber9RepMerliceRow2Plant4);
       trussNum = parseInt(number9);
-      settingFruit = parseInt(this.state.setFruits9Har1AnnasunPlant2);
+      settingFruit = parseInt(this.state.setFruits9RepMerliceRow2Plant4);
       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
       console.log("Setting Truss Number 9 : " + settingTruss);
       this.setState({
-        settingTrussNumber: settingTruss,
+        settingTrussNumberRepMerliceRow2Plant4: settingTruss,
         settingTruss2: trussNum,
         prunSetting: pruningSet,
       });
 
+      this.setItem("settingTrussNumberRepMerliceRow2Plant4", settingTruss)
+
+
     }
+
+
 
   }
 
@@ -606,65 +1371,68 @@ export default class Har1AnnasunPlant2 extends Component {
     var floweringTruss = 0;
     var trussNum = 0;
 
-    console.log("Flowering truss called : " + this.state.setFlowers2Har1AnnasunPlant2);
+    console.log("Flowering truss called : " + this.state.setFlowers2RepMerliceRow2Plant4);
 
 
-    if (this.state.setFlowers9Har1AnnasunPlant2 === "") {
+    if (this.state.setFlowers9RepMerliceRow2Plant4 === "") {
 
-      if (this.state.setFlowers8Har1AnnasunPlant2 === "") {
+      if (this.state.setFlowers8RepMerliceRow2Plant4 === "") {
 
-        if (this.state.setFlowers7Har1AnnasunPlant2 === "") {
+        if (this.state.setFlowers7RepMerliceRow2Plant4 === "") {
 
-          if (this.state.setFlowers6Har1AnnasunPlant2 === "") {
+          if (this.state.setFlowers6RepMerliceRow2Plant4 === "") {
 
-            if (this.state.setFlowers5Har1AnnasunPlant2 === "") {
+            if (this.state.setFlowers5RepMerliceRow2Plant4 === "") {
 
-              if (this.state.setFlowers4Har1AnnasunPlant2 === "") {
+              if (this.state.setFlowers4RepMerliceRow2Plant4 === "") {
 
-                if (this.state.setFlowers3Har1AnnasunPlant2 === "") {
+                if (this.state.setFlowers3RepMerliceRow2Plant4 === "") {
 
-                  if (this.state.setFlowers2Har1AnnasunPlant2 === "") {
+                  if (this.state.setFlowers2RepMerliceRow2Plant4 === "") {
 
-                    if (this.state.setFlowers1Har1AnnasunPlant2 === "") {
+                    if (this.state.setFlowers1RepMerliceRow2Plant4 === "") {
 
-                      if (this.state.setFlowersHar1AnnasunPlant2 === "") {
+                      if (this.state.setFlowersRepMerliceRow2Plant4 === "") {
 
 
                       } else {
 
-                        var number01 = this.state.trussNumberHar1AnnasunPlant2
+                        var number01 = this.state.trussNumberRepMerliceRow2Plant4
 
 
-                        flowerPruningNumner = parseInt(this.state.pruningNumberHar1AnnasunPlant2);
-                        flowering = parseInt(this.state.setFlowersHar1AnnasunPlant2);
-                        flowerSetFruits = parseInt(this.state.setFruitsHar1AnnasunPlant2);
+                        flowerPruningNumner = parseInt(this.state.pruningNumberRepMerliceRow2Plant4);
+                        flowering = parseInt(this.state.setFlowersRepMerliceRow2Plant4);
+                        flowerSetFruits = parseInt(this.state.setFruitsRepMerliceRow2Plant4);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                         floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
-                          floweringTrussss: floweringTruss,
+                          floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                           pruneFlowering: flowerPruningNumner,
                         });
+                        this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
                       }
 
 
                     } else {
 
-                      var number11 = + (this.state.trussNumberHar1AnnasunPlant2) + 1
+                      var number11 = + (this.state.trussNumberRepMerliceRow2Plant4) + 1
 
                       console.log("oooooooooooooooooooooooooooooo : " + number11);
-                      flowerPruningNumner = parseInt(this.state.pruningNumber1Har1AnnasunPlant2);
-                      flowering = parseInt(this.state.setFlowers1Har1AnnasunPlant2);
-                      flowerSetFruits = parseInt(this.state.setFruits1Har1AnnasunPlant2);
+                      flowerPruningNumner = parseInt(this.state.pruningNumber1RepMerliceRow2Plant4);
+                      flowering = parseInt(this.state.setFlowers1RepMerliceRow2Plant4);
+                      flowerSetFruits = parseInt(this.state.setFruits1RepMerliceRow2Plant4);
                       trussNum = number11
                       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                       floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                       console.log("Flowering Truss Value : " + floweringTruss);
                       this.setState({
-                        floweringTrussss: floweringTruss,
+                        floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                         pruneFlowering: flowerPruningNumner,
 
                       });
+                      this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
 
 
                     }
@@ -672,58 +1440,63 @@ export default class Har1AnnasunPlant2 extends Component {
 
                   } else {
 
-                    var number21 = + (this.state.trussNumberHar1AnnasunPlant2) + 2
+                    var number21 = + (this.state.trussNumberRepMerliceRow2Plant4) + 2
 
-                    flowerPruningNumner = parseInt(this.state.pruningNumber2Har1AnnasunPlant2);
-                    flowering = parseInt(this.state.setFlowers2Har1AnnasunPlant2);
-                    flowerSetFruits = parseInt(this.state.setFruits2Har1AnnasunPlant2);
+                    flowerPruningNumner = parseInt(this.state.pruningNumber2RepMerliceRow2Plant4);
+                    flowering = parseInt(this.state.setFlowers2RepMerliceRow2Plant4);
+                    flowerSetFruits = parseInt(this.state.setFruits2RepMerliceRow2Plant4);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                     floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
-                      floweringTrussss: floweringTruss,
+                      floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                       pruneFlowering: flowerPruningNumner,
 
                     });
+                    this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
 
                   }
 
 
                 } else {
 
-                  var number31 = + (this.state.trussNumberHar1AnnasunPlant2) + 3
+                  var number31 = + (this.state.trussNumberRepMerliceRow2Plant4) + 3
 
-                  flowerPruningNumner = parseInt(this.state.pruningNumber3Har1AnnasunPlant2);
-                  flowering = parseInt(this.state.setFlowers3Har1AnnasunPlant2);
-                  flowerSetFruits = parseInt(this.state.setFruits3Har1AnnasunPlant2);
+                  flowerPruningNumner = parseInt(this.state.pruningNumber3RepMerliceRow2Plant4);
+                  flowering = parseInt(this.state.setFlowers3RepMerliceRow2Plant4);
+                  flowerSetFruits = parseInt(this.state.setFruits3RepMerliceRow2Plant4);
                   summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                   floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                   console.log("Flowering Truss Value : " + floweringTruss);
                   this.setState({
-                    floweringTrussss: floweringTruss,
+                    floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                     pruneFlowering: flowerPruningNumner,
 
                   });
 
+                  this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
 
                 }
 
 
               } else {
 
-                var number41 = + (this.state.trussNumberHar1AnnasunPlant2) + 4
+                var number41 = + (this.state.trussNumberRepMerliceRow2Plant4) + 4
 
-                flowerPruningNumner = parseInt(this.state.pruningNumber4Har1AnnasunPlant2);
-                flowering = parseInt(this.state.setFlowers4Har1AnnasunPlant2);
-                flowerSetFruits = parseInt(this.state.setFruits4Har1AnnasunPlant2);
+                flowerPruningNumner = parseInt(this.state.pruningNumber4RepMerliceRow2Plant4);
+                flowering = parseInt(this.state.setFlowers4RepMerliceRow2Plant4);
+                flowerSetFruits = parseInt(this.state.setFruits4RepMerliceRow2Plant4);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                 floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
-                  floweringTrussss: floweringTruss,
+                  floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                   pruneFlowering: flowerPruningNumner,
 
                 });
+
+                this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
 
 
               }
@@ -731,96 +1504,115 @@ export default class Har1AnnasunPlant2 extends Component {
 
             } else {
 
-              var number51 = + (this.state.trussNumberHar1AnnasunPlant2) + 5
+              var number51 = + (this.state.trussNumberRepMerliceRow2Plant4) + 5
 
-              flowerPruningNumner = parseInt(this.state.pruningNumber5Har1AnnasunPlant2);
-              flowering = parseInt(this.state.setFlowers5Har1AnnasunPlant2);
-              flowerSetFruits = parseInt(this.state.setFruits5Har1AnnasunPlant2);
+              flowerPruningNumner = parseInt(this.state.pruningNumber5RepMerliceRow2Plant4);
+              flowering = parseInt(this.state.setFlowers5RepMerliceRow2Plant4);
+              flowerSetFruits = parseInt(this.state.setFruits5RepMerliceRow2Plant4);
               summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
               floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
               console.log("Flowering Truss Value : " + floweringTruss);
               this.setState({
-                floweringTrussss: floweringTruss,
+                floweringTrussssRepMerliceRow2Plant4: floweringTruss,
                 pruneFlowering: flowerPruningNumner,
 
               });
+
+              this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
 
             }
 
 
           } else {
 
-            var number61 = + (this.state.trussNumberHar1AnnasunPlant2) + 6
+            var number61 = + (this.state.trussNumberRepMerliceRow2Plant4) + 6
 
-            flowerPruningNumner = parseInt(this.state.pruningNumber6Har1AnnasunPlant2);
-            flowering = parseInt(this.state.setFlowers6Har1AnnasunPlant2);
-            flowerSetFruits = parseInt(this.state.setFruits6Har1AnnasunPlant2);
+            flowerPruningNumner = parseInt(this.state.pruningNumber6RepMerliceRow2Plant4);
+            flowering = parseInt(this.state.setFlowers6RepMerliceRow2Plant4);
+            flowerSetFruits = parseInt(this.state.setFruits6RepMerliceRow2Plant4);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
             floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
-              floweringTrussss: floweringTruss,
+              floweringTrussssRepMerliceRow2Plant4: floweringTruss,
               pruneFlowering: flowerPruningNumner,
 
             });
+
+            this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
 
           }
 
 
         } else {
 
-          var number71 = + (this.state.trussNumberHar1AnnasunPlant2) + 7
+          var number71 = + (this.state.trussNumberRepMerliceRow2Plant4) + 7
 
-          flowerPruningNumner = parseInt(this.state.pruningNumber7Har1AnnasunPlant2);
-          flowering = parseInt(this.state.setFlowers7Har1AnnasunPlant2);
-          flowerSetFruits = parseInt(this.state.setFruits7Har1AnnasunPlant2);
+          flowerPruningNumner = parseInt(this.state.pruningNumber7RepMerliceRow2Plant4);
+          flowering = parseInt(this.state.setFlowers7RepMerliceRow2Plant4);
+          flowerSetFruits = parseInt(this.state.setFruits7RepMerliceRow2Plant4);
           summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
           floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
           console.log("Flowering Truss Value : " + floweringTruss);
           this.setState({
-            floweringTrussss: floweringTruss,
+            floweringTrussssRepMerliceRow2Plant4: floweringTruss,
             pruneFlowering: flowerPruningNumner,
 
           });
+
+          this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
 
         }
 
 
       } else {
-        var number81 = + (this.state.trussNumberHar1AnnasunPlant2) + 8
+        var number81 = + (this.state.trussNumberRepMerliceRow2Plant4) + 8
 
-        flowerPruningNumner = parseInt(this.state.pruningNumber8Har1AnnasunPlant2);
-        flowering = parseInt(this.state.setFlowers8Har1AnnasunPlant2);
-        flowerSetFruits = parseInt(this.state.setFruits8Har1AnnasunPlant2);
+        flowerPruningNumner = parseInt(this.state.pruningNumber8RepMerliceRow2Plant4);
+        flowering = parseInt(this.state.setFlowers8RepMerliceRow2Plant4);
+        flowerSetFruits = parseInt(this.state.setFruits8RepMerliceRow2Plant4);
         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
         floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
         console.log("Flowering Truss Value : " + floweringTruss);
         this.setState({
-          floweringTrussss: floweringTruss,
+          floweringTrussssRepMerliceRow2Plant4: floweringTruss,
           pruneFlowering: flowerPruningNumner,
 
         });
+
+        this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
 
       }
 
 
     } else {
 
-      var number91 = + (this.state.trussNumberHar1AnnasunPlant2) + 9
+      var number91 = + (this.state.trussNumberRepMerliceRow2Plant4) + 9
 
-      flowerPruningNumner = parseInt(this.state.pruningNumber9Har1AnnasunPlant2);
-      flowering = parseInt(this.state.setFlowers9Har1AnnasunPlant2);
-      flowerSetFruits = parseInt(this.state.setFruits9Har1AnnasunPlant2);
+      flowerPruningNumner = parseInt(this.state.pruningNumber9RepMerliceRow2Plant4);
+      flowering = parseInt(this.state.setFlowers9RepMerliceRow2Plant4);
+      flowerSetFruits = parseInt(this.state.setFruits9RepMerliceRow2Plant4);
       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
       floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
       console.log("Flowering Truss Value : " + floweringTruss);
       this.setState({
-        floweringTrussss: floweringTruss,
+        floweringTrussssRepMerliceRow2Plant4: floweringTruss,
         pruneFlowering: flowerPruningNumner,
 
       });
 
+      this.setItem("floweringTrussssRepMerliceRow2Plant4", floweringTruss)
+
+
     }
+
+
+
+
 
   }
   //
@@ -845,7 +1637,7 @@ export default class Har1AnnasunPlant2 extends Component {
            console.log("Truss Details", this.state.truss);
 
            this.calculateFruitLoad();
-           this.calculateHarvestTruss();
+           this.calculateharvestTrussRepMerliceRow2Plant4();
            this.calculateSettingTruss2();
            this.calculateFloweringTruss2();
 
@@ -935,8 +1727,8 @@ export default class Har1AnnasunPlant2 extends Component {
     this.LastWeekStmDiameter.focus();
   }
 
-  onSubmitleavesPerPlantHar1AnnasunPlant2() {
-    this.leavesPerPlantHar1AnnasunPlant2.focus();
+  onSubmitleavesPerPlantRepMerliceRow2Plant4() {
+    this.leavesPerPlantRepMerliceRow2Plant4.focus();
   }
   //
 
@@ -962,7 +1754,7 @@ export default class Har1AnnasunPlant2 extends Component {
   onSubmit() {
     let errors = {};
 
-    ['leavesPerPlantHar1AnnasunPlant2', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
+    ['leavesPerPlantRepMerliceRow2Plant4', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
       .forEach((name) => {
         let value = this[name].value();
 
@@ -1002,7 +1794,7 @@ export default class Har1AnnasunPlant2 extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1AnnasunPlants')} >
+            <TouchableOpacity onPress={() => this.props.navigation.push('RepMerlicePlantsRow2')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -1021,9 +1813,9 @@ export default class Har1AnnasunPlant2 extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 1 - Annasun</Text>
+        <Text style={styles.text}>REP - Merlice</Text>
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 2</Text>/ Row No. 105/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 4</Text>/ Row No. 707/ Week No. {this.state.weekNumber}</Text>
 
 
         <ScrollView
@@ -1057,8 +1849,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
                     onFocus={this.onFocus}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantHar1AnnasunPlant2')}
-                    value={this.state.leavesPerPlantHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantRepMerliceRow2Plant4')}
+                    value={this.state.leavesPerPlantRepMerliceRow2Plant4}
                     onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
 
                   />
@@ -1098,8 +1890,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussHar1AnnasunPlant2')}
-                    value={this.state.fullySetTrussHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussRepMerliceRow2Plant4')}
+                    value={this.state.fullySetTrussRepMerliceRow2Plant4}
                     ref={(input) => { this.fullySetTrussTextInput = input; }}
                     onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1139,8 +1931,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthHar1AnnasunPlant2')}
-                    value={this.state.setTrussLengthHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthRepMerliceRow2Plant4')}
+                    value={this.state.setTrussLengthRepMerliceRow2Plant4}
                     ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
                     onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1180,8 +1972,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthHar1AnnasunPlant2')}
-                    value={this.state.weeklyGrowthHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthRepMerliceRow2Plant4')}
+                    value={this.state.weeklyGrowthRepMerliceRow2Plant4}
                     ref={(input) => { this.weeklyGrowthTextInput = input; }}
                     onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1222,8 +2014,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightHar1AnnasunPlant2')}
-                    value={this.state.floweringTrussHeightHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightRepMerliceRow2Plant4')}
+                    value={this.state.floweringTrussHeightRepMerliceRow2Plant4}
                     ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
                     onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1263,8 +2055,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthHar1AnnasunPlant2')}
-                    value={this.state.leafLengthHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthRepMerliceRow2Plant4')}
+                    value={this.state.leafLengthRepMerliceRow2Plant4}
                     ref={(input) => { this.leafLengthTextInput = input; }}
                     onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1304,8 +2096,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthHar1AnnasunPlant2')}
-                    value={this.state.leafWidthHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthRepMerliceRow2Plant4')}
+                    value={this.state.leafWidthRepMerliceRow2Plant4}
                     ref={(input) => { this.leafWidthTextInput = input; }}
                     onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1345,8 +2137,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"next"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterHar1AnnasunPlant2')}
-                    value={this.state.stmDiameterHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterRepMerliceRow2Plant4')}
+                    value={this.state.stmDiameterRepMerliceRow2Plant4}
                     ref={(input) => { this.stmDiameterTextInput = input; }}
                     onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
                     onFocus={this.onFocus}
@@ -1386,8 +2178,8 @@ export default class Har1AnnasunPlant2 extends Component {
                     returnKeyType={"done"}
                     keyboardType={'numeric'}
                     blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterHar1AnnasunPlant2')}
-                    value={this.state.lastWeekStmDiameterHar1AnnasunPlant2}
+                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepMerliceRow2Plant4')}
+                    value={this.state.lastWeekStmDiameterRepMerliceRow2Plant4}
                     ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
                     onFocus={this.onFocus}
                   />
@@ -1586,9 +2378,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumberHar1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumberHar1AnnasunPlant2.toString()}
+                value={this.state.trussNumberRepMerliceRow2Plant4}
               />
 
               <View
@@ -1612,9 +2404,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruitsHar1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruitsHar1AnnasunPlant2.toString()}
+                value={this.state.setFruitsRepMerliceRow2Plant4.toString()}
               />
 
 
@@ -1638,8 +2430,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowersHar1AnnasunPlant2')}
-                value={this.state.setFlowersHar1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepMerliceRow2Plant4')}
+                value={this.state.setFlowersRepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1659,8 +2451,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumberHar1AnnasunPlant2')}
-                value={this.state.pruningNumberHar1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepMerliceRow2Plant4')}
+                value={this.state.pruningNumberRepMerliceRow2Plant4.toString()}
               />
 
 
@@ -1681,7 +2473,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterHar1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterRepMerliceRow2Plant4')}
               />
 
               <View
@@ -1726,9 +2518,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber1Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber1RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -1749,9 +2541,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits1Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits1Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits1RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1773,8 +2565,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1Har1AnnasunPlant2')}
-                value={this.state.setFlowers1Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepMerliceRow2Plant4')}
+                value={this.state.setFlowers1RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1795,8 +2587,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1Har1AnnasunPlant2')}
-                value={this.state.pruningNumber1Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber1RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1817,7 +2609,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1RepMerliceRow2Plant4')}
               />
 
               <View
@@ -1860,9 +2652,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 onChangeText={this.onChangeText}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber2Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber2RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -1883,9 +2675,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits2Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits2Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits2RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1907,8 +2699,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2Har1AnnasunPlant2')}
-                value={this.state.setFlowers2Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepMerliceRow2Plant4')}
+                value={this.state.setFlowers2RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -1929,8 +2721,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2Har1AnnasunPlant2')}
-                value={this.state.pruningNumber2Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber2RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -1949,7 +2741,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2RepMerliceRow2Plant4')}
               />
 
               <View
@@ -1991,9 +2783,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber3Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber3RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2014,9 +2806,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits3Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits3Har1AnnasunPlant2.toString()} />
+                value={this.state.setFruits3RepMerliceRow2Plant4.toString()} />
 
               <View
                 style={{
@@ -2037,8 +2829,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3Har1AnnasunPlant2')}
-                value={this.state.setFlowers3Har1AnnasunPlant2.toString()} />
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepMerliceRow2Plant4')}
+                value={this.state.setFlowers3RepMerliceRow2Plant4.toString()} />
 
               <View
                 style={{
@@ -2057,8 +2849,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3Har1AnnasunPlant2')}
-                value={this.state.pruningNumber3Har1AnnasunPlant2.toString()} />
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber3RepMerliceRow2Plant4.toString()} />
 
 
               <View
@@ -2077,7 +2869,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2119,9 +2911,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber4Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber4RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2142,9 +2934,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits4Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits4Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits4RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2166,8 +2958,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4Har1AnnasunPlant2')}
-                value={this.state.setFlowers4Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepMerliceRow2Plant4')}
+                value={this.state.setFlowers4RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2188,8 +2980,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4Har1AnnasunPlant2')}
-                value={this.state.pruningNumber4Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber4RepMerliceRow2Plant4.toString()}
               />
 
 
@@ -2210,7 +3002,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2252,9 +3044,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber5Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber5RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2275,9 +3067,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits5Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits5Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits5RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2299,8 +3091,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5Har1AnnasunPlant2')}
-                value={this.state.setFlowers5Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepMerliceRow2Plant4')}
+                value={this.state.setFlowers5RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2321,8 +3113,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5Har1AnnasunPlant2')}
-                value={this.state.pruningNumber5Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber5RepMerliceRow2Plant4.toString()}
               />
 
 
@@ -2343,7 +3135,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2385,9 +3177,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber6Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber6RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2408,9 +3200,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits6Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits6Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits6RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2432,8 +3224,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6Har1AnnasunPlant2')}
-                value={this.state.setFlowers6Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepMerliceRow2Plant4')}
+                value={this.state.setFlowers6RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2454,8 +3246,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6Har1AnnasunPlant2')}
-                value={this.state.pruningNumber6Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber6RepMerliceRow2Plant4.toString()}
               />
 
 
@@ -2476,7 +3268,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2518,9 +3310,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber7Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber7RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2541,9 +3333,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits7Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits7Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits7RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2565,8 +3357,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7Har1AnnasunPlant2')}
-                value={this.state.setFlowers7Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepMerliceRow2Plant4')}
+                value={this.state.setFlowers7RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2587,8 +3379,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7Har1AnnasunPlant2')}
-                value={this.state.pruningNumber7Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber7RepMerliceRow2Plant4.toString()}
 
               />
 
@@ -2609,7 +3401,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2651,9 +3443,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber8Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber8RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2674,9 +3466,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits8Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits8Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits8RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2698,8 +3490,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8Har1AnnasunPlant2')}
-                value={this.state.setFlowers8Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepMerliceRow2Plant4')}
+                value={this.state.setFlowers8RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2720,8 +3512,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8Har1AnnasunPlant2')}
-                value={this.state.pruningNumber8Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber8RepMerliceRow2Plant4.toString()}
               />
 
 
@@ -2742,7 +3534,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2786,9 +3578,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.trussNumber9Har1AnnasunPlant2.toString()}
+                value={this.state.trussNumber9RepMerliceRow2Plant4.toString()}
               />
               <View
                 style={{
@@ -2809,9 +3601,9 @@ export default class Har1AnnasunPlant2 extends Component {
                 keyboardType={'numeric'}
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits9Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepMerliceRow2Plant4')}
                 blurOnSubmit={false}
-                value={this.state.setFruits9Har1AnnasunPlant2.toString()}
+                value={this.state.setFruits9RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2833,8 +3625,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 returnKeyType={"next"}
                 enablesReturnKeyAutomatically={true}
                 blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9Har1AnnasunPlant2')}
-                value={this.state.setFlowers9Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepMerliceRow2Plant4')}
+                value={this.state.setFlowers9RepMerliceRow2Plant4.toString()}
               />
 
               <View
@@ -2855,8 +3647,8 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9Har1AnnasunPlant2')}
-                value={this.state.pruningNumber9Har1AnnasunPlant2.toString()}
+                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepMerliceRow2Plant4')}
+                value={this.state.pruningNumber9RepMerliceRow2Plant4.toString()}
               />
 
 
@@ -2877,7 +3669,7 @@ export default class Har1AnnasunPlant2 extends Component {
                 autoCorrect={false}
                 enablesReturnKeyAutomatically={true}
                 returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9Har1AnnasunPlant2')}
+                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9RepMerliceRow2Plant4')}
               />
 
               <View
@@ -2908,7 +3700,7 @@ export default class Har1AnnasunPlant2 extends Component {
 
             <View style={styles.borderEditTruss}>
 
-              <View style={[(this.state.fruitLoadHar1AnnasunPlant2 <= 22 || this.state.fruitLoadHar1AnnasunPlant2 >= 40) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.fruitLoadRepMerliceRow2Plant4 <= 22 || this.state.fruitLoadRepMerliceRow2Plant4 >= 40) ? styles.borderErrorColor : null]}>
 
                 <View
                   style={{
@@ -2918,7 +3710,7 @@ export default class Har1AnnasunPlant2 extends Component {
 
                 <View style={styles.row}>
                   <Text style={styles.text4}>Fruit Load</Text>
-                  <Text style={styles.text5}>{this.state.fruitLoadHar1AnnasunPlant2}</Text>
+                  <Text style={styles.text5}>{this.state.fruitLoadRepMerliceRow2Plant4}</Text>
                 </View>
 
                 <View
@@ -2929,10 +3721,10 @@ export default class Har1AnnasunPlant2 extends Component {
 
               </View>
 
-              <View style={[(this.state.floweringTrussssHar1AnnasunPlant2 <= 0 || this.state.floweringTrussssHar1AnnasunPlant2 >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.floweringTrussssRepMerliceRow2Plant4 <= 0 || this.state.floweringTrussssRepMerliceRow2Plant4 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Flowering Truss</Text>
-                  <Text style={styles.text5}>{this.state.floweringTrussssHar1AnnasunPlant2}</Text>
+                  <Text style={styles.text5}>{this.state.floweringTrussssRepMerliceRow2Plant4}</Text>
                 </View>
 
 
@@ -2943,10 +3735,10 @@ export default class Har1AnnasunPlant2 extends Component {
                 />
               </View>
 
-              <View style={[(this.state.settingTrussNumberHar1AnnasunPlant2 <= 1 || this.state.settingTrussNumberHar1AnnasunPlant2 >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.settingTrussNumberRepMerliceRow2Plant4 <= 1 || this.state.settingTrussNumberRepMerliceRow2Plant4 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Setting Truss</Text>
-                  <Text style={styles.text5}>{this.state.settingTrussNumberHar1AnnasunPlant2}</Text>
+                  <Text style={styles.text5}>{this.state.settingTrussNumberRepMerliceRow2Plant4}</Text>
                 </View>
                 <View
                   style={{
@@ -2955,10 +3747,10 @@ export default class Har1AnnasunPlant2 extends Component {
                 />
               </View>
 
-              <View style={[(this.state.floweringTrussssHar1AnnasunPlant2 <= 0 || this.state.floweringTrussssHar1AnnasunPlant2 >= 45) ? styles.borderErrorColor : null]}>
+              <View style={[(this.state.floweringTrussssRepMerliceRow2Plant4 <= 0 || this.state.floweringTrussssRepMerliceRow2Plant4 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
                   <Text style={styles.text4}>Harvest Truss</Text>
-                  <Text style={styles.text5}>{this.state.harvestTrussHar1AnnasunPlant2}</Text>
+                  <Text style={styles.text5}>{this.state.harvestTrussRepMerliceRow2Plant4}</Text>
                 </View>
                 <View
                   style={{

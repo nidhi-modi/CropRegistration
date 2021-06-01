@@ -77,7 +77,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant1')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant1')}>
               <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -85,7 +85,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant2')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant2')}>
               <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -93,7 +93,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant3')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant3')}>
               <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -101,7 +101,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant4')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant4')}>
               <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
             </TouchableOpacity>
 
@@ -109,7 +109,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant5')}>
               <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
@@ -118,7 +118,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant6')}>
               <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
@@ -127,7 +127,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant7')}>
               <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
@@ -136,7 +136,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant8')}>
               <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
@@ -145,7 +145,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant9')}>
               <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
@@ -154,7 +154,7 @@ export default class RepAngellePlantsRow2 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainerImage}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlant5')}>
+              onPress={() => this.props.navigation.navigate('RepAngelleRow2Plant10')}>
               <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
               <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
             </TouchableOpacity>
