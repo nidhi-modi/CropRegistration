@@ -793,7 +793,6 @@ export default class RepBambelloPlant1 extends Component {
           this.setState({ floweringTrussssRepBambelloPlant1: JSON.parse(text50Value) });
         }
 
-        console.log("ttttttttttttttttttttttttttttt : " + this.state.floweringTrussssRepBambelloPlant1)
 
 
       }).done();
@@ -806,7 +805,6 @@ export default class RepBambelloPlant1 extends Component {
           this.setState({ settingTrussNumberRepBambelloPlant1: JSON.parse(text51Value) });
         }
 
-        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy : " + this.state.settingTrussNumberRepBambelloPlant1)
 
 
       }).done();
@@ -1717,13 +1715,13 @@ export default class RepBambelloPlant1 extends Component {
 
       this.setItem('bambelloPlant1Selected', vart2)
 
-      EventRegister.emit('myCustomEvent', vart2)
+      EventRegister.emit('bambelloEventPlant1', vart2)
 
     } else {
 
       this.setItem('bambelloPlant1Selected', vart)
 
-      EventRegister.emit('myCustomEvent', vart)
+      EventRegister.emit('bambelloEventPlant1', vart)
 
     }
 
@@ -1961,7 +1959,7 @@ export default class RepBambelloPlant1 extends Component {
 
 
       let data3 = {
-        trussNumber: (parseInt(this.state.trussNumber) + 3),
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant3) + 3),
         fruitDiameter: this.state.fruitDiameter3RepBambelloPlant1,
         setFruits: this.state.setFruits3RepBambelloPlant1,
         setFlowers: this.state.setFlowers3RepBambelloPlant1,

@@ -42,7 +42,6 @@ export default class Database {
                                     console.log("Truss Details Table created successfully");
                                 }).catch(error => {
                                     console.log(error);
-                                    this.errorCB(error);
                                 });
                             });
                             resolve(db);
@@ -89,7 +88,6 @@ export default class Database {
                                     console.log("Table created successfully");
                                 }).catch(error => {
                                     console.log(error);
-                                    this.errorCB(error);
                                 });
                             });
                             resolve(db);
@@ -121,7 +119,6 @@ export default class Database {
                 })
                 .catch(error => {
                     console.log(error);
-                    this.errorCB(error);
                 });
         } else {
             console.log("Database was not OPENED");
@@ -759,7 +756,7 @@ export default class Database {
                 console.log(err);
             });
         }
-        catch (err_1) {
+        catch(err_1) {
             console.log(err_1);
         }
     }

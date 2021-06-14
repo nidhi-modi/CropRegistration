@@ -13,17 +13,16 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { EventRegister } from 'react-native-event-listeners'
 
 
-var plant1FruitLoad, plant1StmDia;
-var plant2FruitLoad, plant2StmDia;
-var plant3FruitLoad, plant3StmDia;
-var plant4FruitLoad, plant4StmDia;
-var plant5FruitLoad, plant5StmDia;
-var plant6FruitLoad, plant6StmDia;
-var plant7FruitLoad, plant7StmDia;
-var plant8FruitLoad, plant8StmDia;
-var plant9FruitLoad, plant9StmDia;
-var plant10FruitLoad, plant10StmDia;
 var plant1Selected;
+var plant2Selected;
+var plant3Selected;
+var plant4Selected;
+var plant5Selected;
+var plant6Selected;
+var plant7Selected;
+var plant8Selected;
+var plant9Selected;
+var plant10Selected;
 
 
 
@@ -56,22 +55,33 @@ export default class RepBambelloPlantsRow1 extends Component {
 
 
 
-    this.loadData();
+    /*this.loadData();
 
     this.focusListener = this.props.navigation.addListener('didFocus', () => {
 
       this.loadData();
 
-    });
+    });*/
 
 
   }
 
   componentWillUnmount() {
 
-    this.focusListener();
+    //this.focusListener();
 
-    EventRegister.removeEventListener(this.listener)
+    EventRegister.removeEventListener(this.bambelloEventPlant1)
+    EventRegister.removeEventListener(this.bambelloEventPlant2)
+    EventRegister.removeEventListener(this.bambelloEventPlant3)
+    EventRegister.removeEventListener(this.bambelloEventPlant4)
+    EventRegister.removeEventListener(this.bambelloEventPlant5)
+    EventRegister.removeEventListener(this.bambelloEventPlant6)
+    EventRegister.removeEventListener(this.bambelloEventPlant7)
+    EventRegister.removeEventListener(this.bambelloEventPlant8)
+    EventRegister.removeEventListener(this.bambelloEventPlant9)
+    EventRegister.removeEventListener(this.bambelloEventPlant10)
+
+
 
 
   }
@@ -79,233 +89,27 @@ export default class RepBambelloPlantsRow1 extends Component {
 
   componentDidUpdate() {
 
-    this.loadData();
+     /*this.loadData();
 
     this.focusListener = this.props.navigation.addListener('didFocus', () => {
 
       this.loadData();
 
-    });
+    });*/
 
   }
 
 
-  loadData() {
 
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant1').then((text1Value) => {
 
-        plant1FruitLoad = JSON.parse(text1Value)
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant1').then((text2Value) => {
-
-        plant1StmDia = JSON.parse(text2Value)
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant2').then((text3Value) => {
-
-        plant2FruitLoad = JSON.parse(text3Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant2').then((text4Value) => {
-
-        plant2StmDia = JSON.parse(text4Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant3').then((text5Value) => {
-
-        plant3FruitLoad = JSON.parse(text5Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant3').then((text6Value) => {
-
-        plant3StmDia = JSON.parse(text6Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant4').then((text7Value) => {
-
-        plant4FruitLoad = JSON.parse(text7Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant4').then((text8Value) => {
-
-        plant4StmDia = JSON.parse(text8Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant5').then((text9Value) => {
-
-        plant5FruitLoad = JSON.parse(text9Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant5').then((text10Value) => {
-
-        plant5StmDia = JSON.parse(text10Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant6').then((text11Value) => {
-
-        plant6FruitLoad = JSON.parse(text11Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant6').then((text12Value) => {
-
-        plant6StmDia = JSON.parse(text12Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant7').then((text13Value) => {
-
-        plant7FruitLoad = JSON.parse(text13Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant7').then((text14Value) => {
-
-        plant7StmDia = JSON.parse(text14Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant8').then((text15Value) => {
-
-        plant8FruitLoad = JSON.parse(text15Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant8').then((text16Value) => {
-
-        plant8StmDia = JSON.parse(text16Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant9').then((text17Value) => {
-
-        plant9FruitLoad = JSON.parse(text17Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant9').then((text18Value) => {
-
-        plant9StmDia = JSON.parse(text18Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('fruitLoadRepBambelloPlant10').then((text19Value) => {
-
-        plant10FruitLoad = JSON.parse(text19Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-    try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant10').then((text20Value) => {
-
-        plant10StmDia = JSON.parse(text20Value)
-
-
-      }).done();
-    } catch (error) {
-    }
-
-  
-
-
-
-
-  }
 
   UNSAFE_componentWillMount() {
 
-    this.listener = EventRegister.addEventListener('myCustomEvent', (data) => {
-      plant1Selected = data;
+    //PLANT 1
+    this.bambelloEventPlant1 = EventRegister.addEventListener('bambelloEventPlant1', (data1) => {
+      plant1Selected = data1;
 
-      if (data == null || data == true || data != false) {
+      if (data1 == null || data1 == true || data1 != false) {
 
         console.log("Plant not done")
 
@@ -317,6 +121,163 @@ export default class RepBambelloPlantsRow1 extends Component {
       }
 
     })
+
+    //PLANT 2
+    this.bambelloEventPlant2 = EventRegister.addEventListener('bambelloEventPlant2', (data2) => {
+      plant2Selected = data2;
+
+      if (data2 == null || data2 == true || data2 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 3
+    this.bambelloEventPlant3 = EventRegister.addEventListener('bambelloEventPlant3', (data3) => {
+      plant3Selected = data3;
+
+      if (data3 == null || data3 == true || data3 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 4
+    this.bambelloEventPlant4 = EventRegister.addEventListener('bambelloEventPlant4', (data4) => {
+      plant4Selected = data4;
+
+      if (data4 == null || data4 == true || data4 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 5
+    this.bambelloEventPlant5 = EventRegister.addEventListener('bambelloEventPlant5', (data5) => {
+      plant5Selected = data5;
+
+      if (data5 == null || data5 == true || data5 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 6
+    this.bambelloEventPlant6 = EventRegister.addEventListener('bambelloEventPlant6', (data6) => {
+      plant6Selected = data6;
+
+      if (data6 == null || data6 == true || data6 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 7
+    this.bambelloEventPlant7 = EventRegister.addEventListener('bambelloEventPlant7', (data7) => {
+      plant7Selected = data7;
+
+      if (data7 == null || data7 == true || data7 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+     //PLANT 8
+     this.bambelloEventPlant8 = EventRegister.addEventListener('bambelloEventPlant8', (data8) => {
+      plant8Selected = data8;
+
+      if (data8 == null || data8 == true || data8 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+
+    //PLANT 9
+    this.bambelloEventPlant9 = EventRegister.addEventListener('bambelloEventPlant9', (data9) => {
+      plant9Selected = data9;
+
+      if (data9 == null || data9 == true || data9 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+    //PLANT 10
+    this.bambelloEventPlant10 = EventRegister.addEventListener('bambelloEventPlant10', (data10) => {
+      plant10Selected = data10;
+
+      if (data10 == null || data10 == true || data10 != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+
+
 
   }
 
@@ -353,7 +314,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement2() {
 
 
-    if (plant2FruitLoad != null && plant2StmDia != null) {
+    if (plant2Selected == null || plant2Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant2')}>
+        <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -361,14 +330,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant2')}>
         <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant2')}>
-        <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -378,7 +339,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement3() {
 
 
-    if (plant3FruitLoad != null && plant3StmDia != null) {
+    if (plant3Selected == null || plant3Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant3')}>
+        <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -386,14 +355,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant3')}>
         <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant3')}>
-        <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -403,7 +364,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement4() {
 
 
-    if (plant4FruitLoad != null && plant4StmDia != null) {
+    if (plant4Selected == null || plant4Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant4')}>
+        <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -411,14 +380,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant4')}>
         <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant4')}>
-        <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -429,8 +390,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement5() {
 
 
-    if (plant5FruitLoad != null && plant5StmDia != null) {
+    if (plant5Selected == null || plant5Selected == true) {
 
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant5')}>
+        <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -438,14 +406,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant5')}>
         <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant5')}>
-        <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -455,7 +415,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement6() {
 
 
-    if (plant6FruitLoad != null && plant6StmDia != null) {
+    if (plant6Selected == null || plant6Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant6')}>
+        <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -463,14 +431,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant6')}>
         <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant6')}>
-        <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -480,7 +440,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement7() {
 
 
-    if (plant7FruitLoad != null && plant7StmDia != null) {
+    if (plant7Selected == null || plant7Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant7')}>
+        <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -488,14 +456,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant7')}>
         <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant7')}>
-        <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -505,7 +465,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement8() {
 
 
-    if (plant8FruitLoad != null && plant8StmDia != null) {
+    if (plant8Selected == null || plant8Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant8')}>
+        <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -513,14 +481,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant8')}>
         <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant8')}>
-        <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -530,7 +490,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement9() {
 
 
-    if (plant9FruitLoad != null && plant9StmDia != null) {
+    if (plant9Selected == null || plant9Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant9')}>
+        <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -538,14 +506,6 @@ export default class RepBambelloPlantsRow1 extends Component {
         onPress={() => this.props.navigation.navigate('RepBambelloPlant9')}>
         <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
-      </TouchableOpacity>
-
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant9')}>
-        <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
     }
@@ -555,8 +515,15 @@ export default class RepBambelloPlantsRow1 extends Component {
   renderElement10() {
 
 
-    if (plant10FruitLoad != null && plant10StmDia != null) {
+    if (plant10Selected == null || plant10Selected == true) {
 
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant10')}>
+        <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
 
 
       return <TouchableOpacity
@@ -566,16 +533,7 @@ export default class RepBambelloPlantsRow1 extends Component {
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
 
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant10')}>
-        <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
-      </TouchableOpacity>
-
     }
-
   }
 
   render() {

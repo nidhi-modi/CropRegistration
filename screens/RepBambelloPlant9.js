@@ -11,12 +11,16 @@ import {
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
+import { CheckBox } from 'react-native-elements'
+import Database from './Database'
+import { LogBox } from 'react-native'
+import { EventRegister } from 'react-native-event-listeners'
 
 
 const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
-
+const db = new Database();
 
 export default class RepBambelloPlant9 extends Component {
 
@@ -144,6 +148,9 @@ export default class RepBambelloPlant9 extends Component {
       settingTruss2RepBambelloPlant9: '',
       floweringTrussssRepBambelloPlant9: '',
 
+      bambelloPlant9Selected: false,
+      checkboxStatus: '',
+
     }
   }
 
@@ -166,10 +173,9 @@ export default class RepBambelloPlant9 extends Component {
 
     this.setState({ weekNumber: completeWeekNumber })
 
-
+    LogBox.ignoreAllLogs(true)
 
     this.getAsysncValues();
-
 
   }
 
@@ -258,6 +264,16 @@ export default class RepBambelloPlant9 extends Component {
       AsyncStorage.getItem('lastWeekStmDiameterRepBambelloPlant9').then((text9Value) => {
         this.setState({ lastWeekStmDiameterRepBambelloPlant9: JSON.parse(text9Value) });
 
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('bambelloPlant9Selected').then((text99Value) => {
+        this.setState({ bambelloPlant9Selected: JSON.parse(text99Value) });
+
+        console.log(this.state.bambelloPlant9Selected)
 
       }).done();
     } catch (error) {
@@ -777,7 +793,6 @@ export default class RepBambelloPlant9 extends Component {
           this.setState({ floweringTrussssRepBambelloPlant9: JSON.parse(text50Value) });
         }
 
-        console.log("ttttttttttttttttttttttttttttt : "+this.state.floweringTrussssRepBambelloPlant9)
 
 
       }).done();
@@ -790,7 +805,6 @@ export default class RepBambelloPlant9 extends Component {
           this.setState({ settingTrussNumberRepBambelloPlant9: JSON.parse(text51Value) });
         }
 
-        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy : "+this.state.settingTrussNumberRepBambelloPlant9)
 
 
       }).done();
@@ -1167,7 +1181,6 @@ export default class RepBambelloPlant9 extends Component {
                         });
 
                         this.setItem("settingTrussNumberRepBambelloPlant9", settingTruss)
-
 
                       }
 
@@ -1690,6 +1703,668 @@ export default class RepBambelloPlant9 extends Component {
 
   //DEFINE FOCUS
 
+  changeCheckbox = () => {
+
+    this.setState({ bambelloPlant9Selected: !this.state.bambelloPlant9Selected })
+
+    const vart = this.state.bambelloPlant9Selected
+
+    const vart2 = false;
+
+    if (vart == null) {
+
+      this.setItem('bambelloPlant9Selected', vart2)
+
+      EventRegister.emit('bambelloEventPlant9', vart2)
+
+    } else {
+
+      this.setItem('bambelloPlant9Selected', vart)
+
+      EventRegister.emit('bambelloEventPlant9', vart)
+
+    }
+
+    this.checkStatus();
+
+  }
+
+  checkStatus = () => {
+
+    const vart = this.state.bambelloPlant9Selected
+
+    if (vart == null || vart == false) {
+
+      this.setState({ checkboxStatus: 'CHECKED' })
+
+
+      let data = {
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        leavesPerPlant: this.state.leavesPerPlantRepBambelloPlant9,
+        fullySetTruss: this.state.fullySetTrussRepBambelloPlant9,
+        setTrussLength: this.state.setTrussLengthRepBambelloPlant9,
+        weeklyGrowth: this.state.weeklyGrowthRepBambelloPlant9,
+        floweringTrussHeight: this.state.floweringTrussHeightRepBambelloPlant9,
+        leafLength: this.state.leafLengthRepBambelloPlant9,
+        leafWidth: this.state.leafWidthRepBambelloPlant9,
+        stmDiameter: this.state.stmDiameterRepBambelloPlant9,
+        lastWeekStmDiameter: this.state.lastWeekStmDiameterRepBambelloPlant9
+
+      }
+
+      db.addPlants(data).then((result) => {
+        console.log(result);
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+      this.saveTrussToDb();
+
+    } else {
+
+      this.setState({ checkboxStatus: 'UNCHECKED' })
+
+
+    }
+  }
+
+
+  saveTrussToDb = () => {
+
+    if (this.state.trussNumberRepBambelloPlant9 !== null && this.state.pruningNumberRepBambelloPlant9 !== null) {
+
+      let data = {
+        trussNumber: this.state.trussNumberRepBambelloPlant9,
+        fruitDiameter: this.state.fruitDiameterRepBambelloPlant9,
+        setFruits: this.state.setFruitsRepBambelloPlant9,
+        setFlowers: this.state.setFlowersRepBambelloPlant9,
+        pruningNumber: this.state.pruningNumberRepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+      }
+
+
+      db.addTrussDetails(data).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 1) !== null && this.state.pruningNumber1RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB1();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB1 = () => {
+
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 1) != null && this.state.pruningNumber1RepBambelloPlant9 !== null) {
+
+
+      let data1 = {
+
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 1),
+        fruitDiameter: this.state.fruitDiameter1RepBambelloPlant9,
+        setFruits: this.state.setFruits1RepBambelloPlant9,
+        setFlowers: this.state.setFlowers1RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber1RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+
+      }
+
+
+
+
+      db.addTrussDetails(data1).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 2) !== null && this.state.pruningNumber2RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB2();
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB2 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 2) != null && this.state.pruningNumber2RepBambelloPlant9 !== null) {
+
+
+      let data2 = {
+
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 2),
+        fruitDiameter: this.state.fruitDiameter2RepBambelloPlant9,
+        setFruits: this.state.setFruits2RepBambelloPlant9,
+        setFlowers: this.state.setFlowers2RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber2RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+      }
+
+
+
+
+      db.addTrussDetails(data2).then((result) => {
+        console.log(result);
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 3) !== null && this.state.pruningNumber3RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB3();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+
+    }
+
+  }
+
+  saveTrussToDB3 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 3) !== null && this.state.pruningNumber3RepBambelloPlant9 !== null) {
+
+
+      let data3 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 3),
+        fruitDiameter: this.state.fruitDiameter3RepBambelloPlant9,
+        setFruits: this.state.setFruits3RepBambelloPlant9,
+        setFlowers: this.state.setFlowers3RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber3RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+
+      }
+
+
+      db.addTrussDetails(data3).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 4) !== null && this.state.pruningNumber4RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB4();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB4 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 4) != null && this.state.pruningNumber4RepBambelloPlant9 !== null) {
+
+
+      let data4 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 4),
+        fruitDiameter: this.state.fruitDiameter4RepBambelloPlant9,
+        setFruits: this.state.setFruits4RepBambelloPlant9,
+        setFlowers: this.state.setFlowers4RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber4RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+
+      }
+
+
+
+      db.addTrussDetails(data4).then((result) => {
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 5) !== null && this.state.pruningNumber5RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB5();
+
+
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB5 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 5) != null && this.state.pruningNumber5RepBambelloPlant9 !== null) {
+
+
+      let data5 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 5),
+        fruitDiameter: this.state.fruitDiameter5RepBambelloPlant9,
+        setFruits: this.state.setFruits5RepBambelloPlant9,
+        setFlowers: this.state.setFlowers5RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber5RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+      }
+
+
+
+      db.addTrussDetails(data5).then((result) => {
+        console.log(result);
+        this.setState({
+          isLoading: false,
+          isDataSend: true,
+
+        });
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 6) !== null && this.state.pruningNumber6RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB6();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB6 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 6) != null && this.state.pruningNumber6RepBambelloPlant9 !== null) {
+
+
+      let data6 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 6),
+        fruitDiameter: this.state.fruitDiameter6RepBambelloPlant9,
+        setFruits: this.state.setFruits6RepBambelloPlant9,
+        setFlowers: this.state.setFlowers6RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber6RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+      }
+
+
+
+      db.addTrussDetails(data6).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 7) !== null && this.state.pruningNumber7RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB7();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB7 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 7) != null && this.state.pruningNumber7RepBambelloPlant9 !== null) {
+
+
+      let data7 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 7),
+        fruitDiameter: this.state.fruitDiameter7RepBambelloPlant9,
+        setFruits: this.state.setFruits7RepBambelloPlant9,
+        setFlowers: this.state.setFlowers7RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber7RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+      }
+
+
+
+      db.addTrussDetails(data7).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 8) !== null && this.state.pruningNumber8RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB8();
+
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB8 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 8) != null && this.state.pruningNumber8RepBambelloPlant9 !== null) {
+
+
+      let data8 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 8),
+        fruitDiameter: this.state.fruitDiameter8RepBambelloPlant9,
+        setFruits: this.state.setFruits8RepBambelloPlant9,
+        setFlowers: this.state.setFlowers8RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber8RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+      }
+
+
+
+      db.addTrussDetails(data8).then((result) => {
+
+        console.log(result);
+
+        if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 9) !== null && this.state.pruningNumber9RepBambelloPlant9 !== '') {
+
+          this.saveTrussToDB9();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+    }
+
+  }
+
+  saveTrussToDB9 = () => {
+
+    if ((parseInt(this.state.trussNumberRepBambelloPlant9) + 9) != null && this.state.pruningNumber9RepBambelloPlant9 !== null) {
+
+
+
+      let data9 = {
+        trussNumber: (parseInt(this.state.trussNumberRepBambelloPlant9) + 9),
+        fruitDiameter: this.state.fruitDiameter9RepBambelloPlant9,
+        setFruits: this.state.setFruits9RepBambelloPlant9,
+        setFlowers: this.state.setFlowers9RepBambelloPlant9,
+        pruningNumber: this.state.pruningNumber9RepBambelloPlant9,
+        plantRow: '807',
+        plantName: 'REP - Bambello',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 9,
+        fruitLoad: this.state.fruitLoadRepBambelloPlant9,
+        pruningFlower: this.state.pruneFloweringRepBambelloPlant9,
+        floweringTruss: this.state.floweringTrussssRepBambelloPlant9,
+        pruningSet: this.state.prunSettingRepBambelloPlant9,
+        settingTruss: this.state.settingTrussNumberRepBambelloPlant9,
+        pruningHarvest: this.state.pruningHarRepBambelloPlant9,
+        harvestTruss: this.state.harvestTrussRepBambelloPlant9
+
+
+
+      }
+
+
+      db.addTrussDetails(data9).then((result) => {
+
+        console.log(result);
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+    } else {
+
+
+    }
+
+
+
+  }
+
+
+
   onAccessoryPress() {
     this.setState(({ secureTextEntry }) => ({ secureTextEntry: !secureTextEntry }));
   }
@@ -1823,1948 +2498,1966 @@ export default class RepBambelloPlant9 extends Component {
           scrollEventThrottle={16}
         >
 
-          <View style={styles.formContainer}>
+          <View pointerEvents={this.state.bambelloPlant9Selected ? 'none' : 'auto'}>
 
-            <View style={styles.marginSmallDimensionTop}></View>
 
-            <View style={styles.backgroundColour}>
+            <View style={styles.formContainer}>
 
-              <View style={styles.row}>
+              <View style={styles.marginSmallDimensionTop}></View>
 
-                <Text style={styles.textTitle}>Leaves per plant</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onFocus={this.onFocus}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantRepBambelloPlant9')}
-                    value={this.state.leavesPerPlantRepBambelloPlant9}
-                    onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Fully set truss</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussRepBambelloPlant9')}
-                    value={this.state.fullySetTrussRepBambelloPlant9}
-                    ref={(input) => { this.fullySetTrussTextInput = input; }}
-                    onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Fully set truss length</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthRepBambelloPlant9')}
-                    value={this.state.setTrussLengthRepBambelloPlant9}
-                    ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
-                    onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Weekly growth</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthRepBambelloPlant9')}
-                    value={this.state.weeklyGrowthRepBambelloPlant9}
-                    ref={(input) => { this.weeklyGrowthTextInput = input; }}
-                    onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Flower truss height</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightRepBambelloPlant9')}
-                    value={this.state.floweringTrussHeightRepBambelloPlant9}
-                    ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
-                    onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Leaf Length</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthRepBambelloPlant9')}
-                    value={this.state.leafLengthRepBambelloPlant9}
-                    ref={(input) => { this.leafLengthTextInput = input; }}
-                    onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Leaf Width</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthRepBambelloPlant9')}
-                    value={this.state.leafWidthRepBambelloPlant9}
-                    ref={(input) => { this.leafWidthTextInput = input; }}
-                    onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Stem diameter</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterRepBambelloPlant9')}
-                    value={this.state.stmDiameterRepBambelloPlant9}
-                    ref={(input) => { this.stmDiameterTextInput = input; }}
-                    onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Last week stem diameter</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"done"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepBambelloPlant9')}
-                    value={this.state.lastWeekStmDiameterRepBambelloPlant9}
-                    ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
-                    onFocus={this.onFocus}
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <Text style={styles.text2}>Truss Details</Text>
-
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-              }}
-            />
-
-            {Platform.isPad ? (<View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>TrussNo</Text>
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <Text style={styles.text222}>Set Fruit</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Flowers</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Pruning</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <Text style={styles.text222}>Fruit Dia</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>) : (<View style={styles.rowContainer21}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>TrussNo</Text>
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <Text style={styles.text222}>Set Fruit</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Flowers</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Pruning</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <Text style={styles.text222}>Fruit Dia</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>)}
-
-
-
-
-            <View
-              style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }}
-            />
-
-
-            <View
-
-              style={{
-                margin: 8
-
-              }}
-            />
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-
-              }}
-            />
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-
-                }}
-              />
-
-
-
-
-              <TextInput
-                style={styles.textinputheight2}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                placeholderTextColor="#000000"
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumberRepBambelloPlant9}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-
-                }}
-              />
-
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruitsRepBambelloPlant9.toString()}
-              />
-
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepBambelloPlant9')}
-                value={this.state.setFlowersRepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepBambelloPlant9')}
-                value={this.state.pruningNumberRepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterRepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-            </View>
-
-
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber1RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits1RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepBambelloPlant9')}
-                value={this.state.setFlowers1RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepBambelloPlant9')}
-                value={this.state.pruningNumber1RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                // underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={this.onChangeText}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber2RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits2RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepBambelloPlant9')}
-                value={this.state.setFlowers2RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepBambelloPlant9')}
-                value={this.state.pruningNumber2RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                editable={false}
-                selectTextOnFocus={false}
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber3RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits3RepBambelloPlant9.toString()} />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepBambelloPlant9')}
-                value={this.state.setFlowers3RepBambelloPlant9.toString()} />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepBambelloPlant9')}
-                value={this.state.pruningNumber3RepBambelloPlant9.toString()} />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber4RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits4RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepBambelloPlant9')}
-                value={this.state.setFlowers4RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepBambelloPlant9')}
-                value={this.state.pruningNumber4RepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber5RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits5RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepBambelloPlant9')}
-                value={this.state.setFlowers5RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepBambelloPlant9')}
-                value={this.state.pruningNumber5RepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber6RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits6RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepBambelloPlant9')}
-                value={this.state.setFlowers6RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepBambelloPlant9')}
-                value={this.state.pruningNumber6RepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber7RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits7RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepBambelloPlant9')}
-                value={this.state.setFlowers7RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepBambelloPlant9')}
-                value={this.state.pruningNumber7RepBambelloPlant9.toString()}
-
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber8RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits8RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepBambelloPlant9')}
-                value={this.state.setFlowers8RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepBambelloPlant9')}
-                value={this.state.pruningNumber8RepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber9RepBambelloPlant9.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepBambelloPlant9')}
-                blurOnSubmit={false}
-                value={this.state.setFruits9RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepBambelloPlant9')}
-                value={this.state.setFlowers9RepBambelloPlant9.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepBambelloPlant9')}
-                value={this.state.pruningNumber9RepBambelloPlant9.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9RepBambelloPlant9')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }}
-            />
-
-
-
-            <View
-              style={{
-                marginBottom: 20
-              }}
-            />
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.borderEditTruss}>
-
-              <View style={[(this.state.fruitLoadRepBambelloPlant9 <= 22 || this.state.fruitLoadRepBambelloPlant9 >= 40) ? styles.borderErrorColor : null]}>
-
-                <View
-                  style={{
-                    marginTop: 1
-                  }}
-                />
+              <View style={styles.backgroundColour}>
 
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Fruit Load</Text>
-                  <Text style={styles.text5}>{this.state.fruitLoadRepBambelloPlant9}</Text>
+
+                  <Text style={styles.textTitle}>Leaves per plant</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
 
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
-
-              </View>
-
-              <View style={[(this.state.floweringTrussssRepBambelloPlant9 <= 0 || this.state.floweringTrussssRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Flowering Truss</Text>
-                  <Text style={styles.text5}>{this.state.floweringTrussssRepBambelloPlant9}</Text>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onFocus={this.onFocus}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantRepBambelloPlant9')}
+                      value={this.state.leavesPerPlantRepBambelloPlant9}
+                      onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
                 </View>
 
+                <View style={styles.marginXSmallDimensionTop}></View>
 
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
+
               </View>
 
-              <View style={[(this.state.settingTrussNumberRepBambelloPlant9 <= 1 || this.state.settingTrussNumberRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Setting Truss</Text>
-                  <Text style={styles.text5}>{this.state.settingTrussNumberRepBambelloPlant9}</Text>
+
+                  <Text style={styles.textTitle}>Fully set truss</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussRepBambelloPlant9')}
+                      value={this.state.fullySetTrussRepBambelloPlant9}
+                      ref={(input) => { this.fullySetTrussTextInput = input; }}
+                      onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
               </View>
 
-              <View style={[(this.state.floweringTrussssRepBambelloPlant9 <= 0 || this.state.floweringTrussssRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Harvest Truss</Text>
-                  <Text style={styles.text5}>{this.state.harvestTrussRepBambelloPlant9}</Text>
+
+                  <Text style={styles.textTitle}>Fully set truss length</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthRepBambelloPlant9')}
+                      value={this.state.setTrussLengthRepBambelloPlant9}
+                      ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
+                      onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Weekly growth</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthRepBambelloPlant9')}
+                      value={this.state.weeklyGrowthRepBambelloPlant9}
+                      ref={(input) => { this.weeklyGrowthTextInput = input; }}
+                      onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Flower truss height</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightRepBambelloPlant9')}
+                      value={this.state.floweringTrussHeightRepBambelloPlant9}
+                      ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
+                      onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Leaf Length</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthRepBambelloPlant9')}
+                      value={this.state.leafLengthRepBambelloPlant9}
+                      ref={(input) => { this.leafLengthTextInput = input; }}
+                      onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Leaf Width</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthRepBambelloPlant9')}
+                      value={this.state.leafWidthRepBambelloPlant9}
+                      ref={(input) => { this.leafWidthTextInput = input; }}
+                      onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Stem diameter</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterRepBambelloPlant9')}
+                      value={this.state.stmDiameterRepBambelloPlant9}
+                      ref={(input) => { this.stmDiameterTextInput = input; }}
+                      onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Last week stem diameter</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"done"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepBambelloPlant9')}
+                      value={this.state.lastWeekStmDiameterRepBambelloPlant9}
+                      ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+                      onFocus={this.onFocus}
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>19</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <Text style={styles.text2}>Truss Details</Text>
+
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+                }}
+              />
+
+              {Platform.isPad ? (<View style={styles.rowContainer222}>
+
                 <View
                   style={{
-                    marginBottom: 5
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
                   }}
                 />
+
+
+                <Text style={styles.text222}>TrussNo</Text>
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <Text style={styles.text222}>Set Fruit</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Flowers</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Pruning</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <Text style={styles.text222}>Fruit Dia</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>) : (<View style={styles.rowContainer21}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>TrussNo</Text>
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <Text style={styles.text222}>Set Fruit</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Flowers</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Pruning</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <Text style={styles.text222}>Fruit Dia</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>)}
+
+
+
+
+              <View
+                style={{
+                  borderBottomColor: 'black',
+                  borderBottomWidth: 1,
+                }}
+              />
+
+
+              <View
+
+                style={{
+                  margin: 8
+
+                }}
+              />
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+
+                }}
+              />
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+
+                  }}
+                />
+
+
+
+
+                <TextInput
+                  style={styles.textinputheight2}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  placeholderTextColor="#000000"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumberRepBambelloPlant9}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+
+                  }}
+                />
+
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruitsRepBambelloPlant9.toString()}
+                />
+
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepBambelloPlant9')}
+                  value={this.state.setFlowersRepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepBambelloPlant9')}
+                  value={this.state.pruningNumberRepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterRepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
               </View>
+
+
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber1RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits1RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepBambelloPlant9')}
+                  value={this.state.setFlowers1RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepBambelloPlant9')}
+                  value={this.state.pruningNumber1RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  // underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={this.onChangeText}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber2RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits2RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepBambelloPlant9')}
+                  value={this.state.setFlowers2RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepBambelloPlant9')}
+                  value={this.state.pruningNumber2RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  editable={false}
+                  selectTextOnFocus={false}
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber3RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits3RepBambelloPlant9.toString()} />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepBambelloPlant9')}
+                  value={this.state.setFlowers3RepBambelloPlant9.toString()} />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepBambelloPlant9')}
+                  value={this.state.pruningNumber3RepBambelloPlant9.toString()} />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber4RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits4RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepBambelloPlant9')}
+                  value={this.state.setFlowers4RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepBambelloPlant9')}
+                  value={this.state.pruningNumber4RepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber5RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits5RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepBambelloPlant9')}
+                  value={this.state.setFlowers5RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepBambelloPlant9')}
+                  value={this.state.pruningNumber5RepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber6RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits6RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepBambelloPlant9')}
+                  value={this.state.setFlowers6RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepBambelloPlant9')}
+                  value={this.state.pruningNumber6RepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber7RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits7RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepBambelloPlant9')}
+                  value={this.state.setFlowers7RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepBambelloPlant9')}
+                  value={this.state.pruningNumber7RepBambelloPlant9.toString()}
+
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber8RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits8RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepBambelloPlant9')}
+                  value={this.state.setFlowers8RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepBambelloPlant9')}
+                  value={this.state.pruningNumber8RepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'trussNumber9RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber9RepBambelloPlant9.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepBambelloPlant9')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits9RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepBambelloPlant9')}
+                  value={this.state.setFlowers9RepBambelloPlant9.toString()}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepBambelloPlant9')}
+                  value={this.state.pruningNumber9RepBambelloPlant9.toString()}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9RepBambelloPlant9')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderBottomColor: 'black',
+                  borderBottomWidth: 1,
+                }}
+              />
+
+
+
+              <View
+                style={{
+                  marginBottom: 20
+                }}
+              />
+
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.borderEditTruss}>
+
+                <View style={[(this.state.fruitLoadRepBambelloPlant9 <= 22 || this.state.fruitLoadRepBambelloPlant9 >= 40) ? styles.borderErrorColor : null]}>
+
+                  <View
+                    style={{
+                      marginTop: 1
+                    }}
+                  />
+
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Fruit Load</Text>
+                    <Text style={styles.text5}>{this.state.fruitLoadRepBambelloPlant9}</Text>
+                  </View>
+
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+
+                </View>
+
+                <View style={[(this.state.floweringTrussssRepBambelloPlant9 <= 0 || this.state.floweringTrussssRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Flowering Truss</Text>
+                    <Text style={styles.text5}>{this.state.floweringTrussssRepBambelloPlant9}</Text>
+                  </View>
+
+
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+
+                <View style={[(this.state.settingTrussNumberRepBambelloPlant9 <= 1 || this.state.settingTrussNumberRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Setting Truss</Text>
+                    <Text style={styles.text5}>{this.state.settingTrussNumberRepBambelloPlant9}</Text>
+                  </View>
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+
+                <View style={[(this.state.floweringTrussssRepBambelloPlant9 <= 0 || this.state.floweringTrussssRepBambelloPlant9 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Harvest Truss</Text>
+                    <Text style={styles.text5}>{this.state.harvestTrussRepBambelloPlant9}</Text>
+                  </View>
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+
+              <CheckBox style={styles.styleCheckbox}
+                size={40}
+                uncheckedColor='red'
+                checkedColor="green"
+                title="Bambello Plant 9 completed"
+                checked={this.state.bambelloPlant9Selected}
+                textStyle={{ fontSize: 22 }}
+                containerStyle={{ backgroundColor: 'transparent' }}
+                onPress={() => this.changeCheckbox()} />
+
             </View>
-
 
           </View>
 
         </ScrollView>
-
 
       </View >
     );
@@ -3773,9 +4466,17 @@ export default class RepBambelloPlant9 extends Component {
 
 const styles = StyleSheet.create({
 
+
+
   container: {
     flex: 1,
     backgroundColor: '#F3F9FF'
+  },
+
+  styleCheckBox: {
+
+    borderRadius: 3
+
   },
 
   borderEditTruss: {
@@ -4068,4 +4769,4 @@ const styles = StyleSheet.create({
 
   },
 
-});  
+});
