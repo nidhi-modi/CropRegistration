@@ -64,46 +64,49 @@ export default class RepHome extends Component {
 
         <ScrollView keyboardShouldPersistTaps='handled'>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('RepMerliceRow')}>
-            <Text style={styles.buttonText}>Merlice</Text>
-          </TouchableOpacity>
+          <View style={styles.containerView}>
 
-          <View style={styles.marginSmallDimensionTop}></View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepMerliceRow')}>
+              <Text style={styles.buttonText}>Merlice</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('RepAngelleRow')}>
-            <Text style={styles.buttonText}>Angelle</Text>
-          </TouchableOpacity>
+            <View style={styles.marginSmallDimensionTop}></View>
 
-          <View style={styles.marginSmallDimensionTop}></View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepAngelleRow')}>
+              <Text style={styles.buttonText}>Angelle</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('RepDuelleRow')}>
-            <Text style={styles.buttonText}>Duelle</Text>
-          </TouchableOpacity>
+            <View style={styles.marginSmallDimensionTop}></View>
 
-          <View style={styles.marginSmallDimensionTop}></View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepDuelleRow')}>
+              <Text style={styles.buttonText}>Duelle</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('RepKmRow')}>
-            <Text style={styles.buttonText}>KM5512</Text>
-          </TouchableOpacity>
+            <View style={styles.marginSmallDimensionTop}></View>
 
-          <View style={styles.marginSmallDimensionTop}></View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepKmRow')}>
+              <Text style={styles.buttonText}>KM5512</Text>
+            </TouchableOpacity>
 
-          <TouchableOpacity
-            style={styles.buttonContainer}
-            onPress={() => this.props.navigation.navigate('RepBambelloRow')}>
-            <Text style={styles.buttonText}>Bambello</Text>
-          </TouchableOpacity>
+            <View style={styles.marginSmallDimensionTop}></View>
 
-          <View style={styles.marginDimensionTop}></View>
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepBambelloRow')}>
+              <Text style={styles.buttonText}>Bambello</Text>
+            </TouchableOpacity>
 
+            <View style={styles.marginDimensionTop}></View>
+
+          </View>
 
           <View style={styles.headerImage2}>
 
@@ -222,4 +225,4 @@ const styles = StyleSheet.create({
 
   },
 
-});  
+});

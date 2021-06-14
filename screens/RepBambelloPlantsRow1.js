@@ -10,6 +10,8 @@ import {
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
+import { EventRegister } from 'react-native-event-listeners'
+
 
 var plant1FruitLoad, plant1StmDia;
 var plant2FruitLoad, plant2StmDia;
@@ -21,6 +23,7 @@ var plant7FruitLoad, plant7StmDia;
 var plant8FruitLoad, plant8StmDia;
 var plant9FruitLoad, plant9StmDia;
 var plant10FruitLoad, plant10StmDia;
+var plant1Selected;
 
 
 
@@ -31,7 +34,7 @@ export default class RepBambelloPlantsRow1 extends Component {
     super(props);
     this.state = {
 
-      weekNumber: ''
+      weekNumber: '',
 
     }
   }
@@ -51,7 +54,7 @@ export default class RepBambelloPlantsRow1 extends Component {
 
     this.setState({ weekNumber: completeWeekNumber })
 
-    
+
 
     this.loadData();
 
@@ -64,14 +67,17 @@ export default class RepBambelloPlantsRow1 extends Component {
 
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
 
     this.focusListener();
+
+    EventRegister.removeEventListener(this.listener)
+
 
   }
 
 
-  componentDidUpdate(){
+  componentDidUpdate() {
 
     this.loadData();
 
@@ -287,16 +293,48 @@ export default class RepBambelloPlantsRow1 extends Component {
     } catch (error) {
     }
 
+  
 
 
 
 
   }
 
+  UNSAFE_componentWillMount() {
+
+    this.listener = EventRegister.addEventListener('myCustomEvent', (data) => {
+      plant1Selected = data;
+
+      if (data == null || data == true || data != false) {
+
+        console.log("Plant not done")
+
+      } else {
+
+        console.log("Plant completed")
+
+
+      }
+
+    })
+
+  }
+
+
+
   renderElement1() {
 
 
-    if (plant1FruitLoad != null && plant1StmDia != null) {
+    if (plant1Selected == null || plant1Selected == true) {
+
+      return <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => this.props.navigation.navigate('RepBambelloPlant1')}>
+        <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
+      </TouchableOpacity>
+
+    } else {
+
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
@@ -305,19 +343,11 @@ export default class RepBambelloPlantsRow1 extends Component {
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
 
-    } else {
-
-      return <TouchableOpacity
-        style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('RepBambelloPlant1')}>
-        <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
-      </TouchableOpacity>
-
     }
 
   }
 
-  
+
 
 
   renderElement2() {
@@ -751,4 +781,4 @@ const styles = StyleSheet.create({
 
   },
 
-});  
+});
