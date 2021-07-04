@@ -20,8 +20,23 @@ import {
 import SplashScreen from 'react-native-splash-screen'
 import MainStackNavigator from './navigation/MainStackNavigator'
 import Database from '../CropRegistration/screens/Database'
+import { ApolloClient, InMemoryCache, ApolloProvider  } from '@apollo/client';
 
 const db = new Database();
+
+//hasura 
+
+const Uri = `https://secure-piranha-67.hasura.app/v1/graphql`;
+const Headers = {
+  "x-hasura-admin-secret": 'bDawOreH2YEaemnn5oCQ1eo85Db9pXoLTA7vFVEfO8y33ocutMavXQtqtQcZNKVu',
+};
+
+const client = new ApolloClient({
+  uri: Uri,
+  cache: new InMemoryCache(),
+  headers: Headers
+});
+
 
 export default class App extends Component {
 
@@ -80,7 +95,6 @@ export default class App extends Component {
       console.log("Calling database")
       listPlants = data;
       plants = data;
-
       this.setState({
         listPlants,
       });
@@ -113,15 +127,16 @@ export default class App extends Component {
       console.log(err);
 
     })
+ }
 
 
-  }
 
 
   render() {
     return (
-
-      <MainStackNavigator />
+      <ApolloProvider client={client}>
+       <MainStackNavigator />
+      </ApolloProvider>
 
     );
   }

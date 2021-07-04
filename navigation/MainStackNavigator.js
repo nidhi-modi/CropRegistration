@@ -108,6 +108,8 @@ import RepMerliceRow2Plant8 from '../screens/RepMerliceRow2Plant8'
 import RepMerliceRow2Plant9 from '../screens/RepMerliceRow2Plant9'
 import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10'
 
+import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
+
 
 
 
@@ -326,6 +328,9 @@ function MainStackNavigator() {
                 <Stack.Screen name='RepMerliceRow2Plant9' component={RepMerliceRow2Plant9} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='RepMerliceRow2Plant10' component={RepMerliceRow2Plant10} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='ViewPlantTrussDetails' component={ViewPlantTrussDetails} options={{ headerShown: false, title: 'T&G Global' }} />
+                
 
 
 

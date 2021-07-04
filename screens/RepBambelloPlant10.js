@@ -1757,6 +1757,7 @@ export default class RepBambelloPlant10 extends Component {
 
       db.addPlants(data).then((result) => {
         console.log(result);
+        this.props.navigation.navigate('ViewPlantTrussDetails')
 
       }).catch((err) => {
         console.log(err);
