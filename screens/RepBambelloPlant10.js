@@ -1421,7 +1421,7 @@ export default class RepBambelloPlant10 extends Component {
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
                           floweringTrussssRepBambelloPlant10: floweringTruss,
-                          pruneFlowering: flowerPruningNumner,
+                          pruneFloweringRepBambelloPlant10: flowerPruningNumner,
                         });
                         this.setItem("floweringTrussssRepBambelloPlant10", floweringTruss)
 
@@ -1442,7 +1442,7 @@ export default class RepBambelloPlant10 extends Component {
                       console.log("Flowering Truss Value : " + floweringTruss);
                       this.setState({
                         floweringTrussssRepBambelloPlant10: floweringTruss,
-                        pruneFlowering: flowerPruningNumner,
+                        pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
                       });
                       this.setItem("floweringTrussssRepBambelloPlant10", floweringTruss)
@@ -1463,7 +1463,7 @@ export default class RepBambelloPlant10 extends Component {
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
                       floweringTrussssRepBambelloPlant10: floweringTruss,
-                      pruneFlowering: flowerPruningNumner,
+                      pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
                     });
                     this.setItem("floweringTrussssRepBambelloPlant10", floweringTruss)
@@ -1484,7 +1484,7 @@ export default class RepBambelloPlant10 extends Component {
                   console.log("Flowering Truss Value : " + floweringTruss);
                   this.setState({
                     floweringTrussssRepBambelloPlant10: floweringTruss,
-                    pruneFlowering: flowerPruningNumner,
+                    pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
                   });
 
@@ -1505,7 +1505,7 @@ export default class RepBambelloPlant10 extends Component {
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
                   floweringTrussssRepBambelloPlant10: floweringTruss,
-                  pruneFlowering: flowerPruningNumner,
+                  pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
                 });
 
@@ -1527,7 +1527,7 @@ export default class RepBambelloPlant10 extends Component {
               console.log("Flowering Truss Value : " + floweringTruss);
               this.setState({
                 floweringTrussssRepBambelloPlant10: floweringTruss,
-                pruneFlowering: flowerPruningNumner,
+                pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
               });
 
@@ -1549,7 +1549,7 @@ export default class RepBambelloPlant10 extends Component {
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
               floweringTrussssRepBambelloPlant10: floweringTruss,
-              pruneFlowering: flowerPruningNumner,
+              pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
             });
 
@@ -1571,7 +1571,7 @@ export default class RepBambelloPlant10 extends Component {
           console.log("Flowering Truss Value : " + floweringTruss);
           this.setState({
             floweringTrussssRepBambelloPlant10: floweringTruss,
-            pruneFlowering: flowerPruningNumner,
+            pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
           });
 
@@ -1592,7 +1592,7 @@ export default class RepBambelloPlant10 extends Component {
         console.log("Flowering Truss Value : " + floweringTruss);
         this.setState({
           floweringTrussssRepBambelloPlant10: floweringTruss,
-          pruneFlowering: flowerPruningNumner,
+          pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
         });
 
@@ -1614,7 +1614,7 @@ export default class RepBambelloPlant10 extends Component {
       console.log("Flowering Truss Value : " + floweringTruss);
       this.setState({
         floweringTrussssRepBambelloPlant10: floweringTruss,
-        pruneFlowering: flowerPruningNumner,
+        pruneFloweringRepBambelloPlant10: flowerPruningNumner,
 
       });
 
@@ -1757,7 +1757,6 @@ export default class RepBambelloPlant10 extends Component {
 
       db.addPlants(data).then((result) => {
         console.log(result);
-        this.props.navigation.navigate('ViewPlantTrussDetails')
 
       }).catch((err) => {
         console.log(err);

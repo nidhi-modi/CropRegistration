@@ -108,11 +108,14 @@ export default class RepHome extends Component {
 
           </View>
 
-          <View style={styles.headerImage2}>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('ViewPlantTrussDetails')} >
+            <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/submit.png')} />
+              <Image source={require('../assets/submit.png')} />
 
-          </View>
+            </View>
+
+          </TouchableOpacity>
 
           <View style={styles.textContainer}>
             <Text style={styles.textBottom}>Press submit button only when all the above varieties are completed.</Text>
@@ -125,7 +128,7 @@ export default class RepHome extends Component {
 
         </ScrollView>
 
-      </View>
+      </View >
     );
   }
 }
