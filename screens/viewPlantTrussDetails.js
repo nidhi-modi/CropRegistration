@@ -105,6 +105,7 @@ export const ViewPlantTrussDetails = () => {
 
   const getPlantQuery = () => {
     getPlantDetails()
+    getTrussDetails()
   }
 
 

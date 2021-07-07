@@ -107,7 +107,6 @@ import RepMerliceRow2Plant7 from '../screens/RepMerliceRow2Plant7'
 import RepMerliceRow2Plant8 from '../screens/RepMerliceRow2Plant8'
 import RepMerliceRow2Plant9 from '../screens/RepMerliceRow2Plant9'
 import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10'
-
 import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
 
 
