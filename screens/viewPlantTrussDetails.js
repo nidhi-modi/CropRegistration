@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useMutation, useLazyQuery} from '@apollo/client/react';
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import {INSERT_PLANT_DETAILS, INSERT_TRUSS_DETAILS} from '../graphql/mutation';
+import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS} from '../graphql/queries';
 import Database from './Database';
 
 export const ViewPlantTrussDetails = () => {
@@ -12,6 +13,19 @@ export const ViewPlantTrussDetails = () => {
   const [trussDataAws, setTrussDataAws] = useState([]);
   const [insertPlantDetails] = useMutation(INSERT_PLANT_DETAILS);
   const [insertTrussDetails] = useMutation(INSERT_TRUSS_DETAILS);
+  const [getPlantDetails] = useLazyQuery(GET_PLANT_DETAILS, {
+    fetchPolicy: 'no-cache', 
+    onCompleted: data => {
+      setPlantDataAws(data?.plant_details)
+      getTrussDetails();
+    }
+  });
+  const [getTrussDetails] = useLazyQuery(GET_TRUSS_DETAILS, {
+    fetchPolicy: 'no-cache',
+    onCompleted: data => {
+      setTrussDataAws(data?.truss_details)
+    }
+  });
 
   useEffect(() => {
     db.listPlants()
@@ -44,7 +58,7 @@ export const ViewPlantTrussDetails = () => {
           },
         })
           .then(res => {
-            res?.data?.insert_plant_details?.returning?.length > 0 && setPlantDataAws(res?.data?.insert_plant_details?.returning)
+            // res?.data?.insert_plant_details?.returning?.length > 0 && setPlantDataAws(res?.data?.insert_plant_details?.returning)
             console.log('res in plant mutation', res);
             db.listTruss().then((data) => {
               console.log("truss data in local db")
@@ -80,13 +94,18 @@ export const ViewPlantTrussDetails = () => {
               objects: objs
             }
           }).then((res) => {
-            res?.data?.insert_truss_details?.returning?.length > 0 && setTrussDataAws(res?.data?.insert_truss_details?.returning)
+            // res?.data?.insert_truss_details?.returning?.length > 0 && setTrussDataAws(res?.data?.insert_truss_details?.returning)
             console.log("res in truss Detaaails", res) 
+            getPlantQuery();
           }).catch((e) => {
             console.log("error in truss mutation", e)
           })   
       } 
   }, [trussData])
+
+  const getPlantQuery = () => {
+    getPlantDetails()
+  }
 
 
   return (
