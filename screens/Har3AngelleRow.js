@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-export default class Har1AnnasunRow extends Component {
+export default class Har3AngelleRow extends Component {
 
   constructor(props) {
     super(props);
@@ -47,7 +47,7 @@ export default class Har1AnnasunRow extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 1 - Annasun</Text>
+        <Text style={styles.text}>HAR 3 - Angelle</Text>
 
 
         <ScrollView  keyboardShouldPersistTaps='handled'>
@@ -58,9 +58,17 @@ export default class Har1AnnasunRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AnnasunPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 105</Text>
+              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              <Text style={styles.buttonText}>Row 323</Text>
             </TouchableOpacity>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              <Text style={styles.buttonText}>Row 347</Text>
+            </TouchableOpacity>
+
+           
 
            
           </View>

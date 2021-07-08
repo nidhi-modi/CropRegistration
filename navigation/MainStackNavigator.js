@@ -13,14 +13,12 @@ import RepHome from '../screens/RepHome'
 
 import Har123 from '../screens/Har123'
 
-import Har1AnnasunRow from '../screens/Har1AnnasunRow'
 import RepMerliceRow from '../screens/RepMerliceRow'
 import RepAngelleRow from '../screens/RepAngelleRow'
 import RepDuelleRow from '../screens/RepDuelleRow'
 import RepKmRow from '../screens/RepKmRow'
 import RepBambelloRow from '../screens/RepBambelloRow'
 
-import Har1AnnasunPlants from '../screens/Har1AnnasunPlants'
 import RepMerlicePlantsRow1 from '../screens/RepMerlicePlantsRow1'
 import RepMerlicePlantsRow2 from '../screens/RepMerlicePlantsRow2'
 import RepAngellePlantsRow1 from '../screens/RepAngellePlantsRow1'
@@ -107,7 +105,23 @@ import RepMerliceRow2Plant7 from '../screens/RepMerliceRow2Plant7'
 import RepMerliceRow2Plant8 from '../screens/RepMerliceRow2Plant8'
 import RepMerliceRow2Plant9 from '../screens/RepMerliceRow2Plant9'
 import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10'
+
+
 import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
+
+import Har1AnnasunRow from '../screens/Har1AnnasunRow';
+import Har1AvalantinoRow from '../screens/Har1AvalantinoRow';
+import Har1HtlRow from '../screens/Har1HtlRow';
+import Har2AngelleRow from '../screens/Har2AngelleRow';
+import Har3BambelloRow from '../screens/Har3BambelloRow';
+import Har3Km5512Row from '../screens/Har3Km5512Row';
+import Har3AngelleRow from '../screens/Har3AngelleRow';
+
+import Har1AnnasunPlantsRow1 from '../screens/Har1AnnasunPlantsRow1';
+
+import Har1AnnasunPlant1 from '../screens/Har1AnnasunPlant1';
+
+
 
 
 
@@ -160,8 +174,6 @@ function MainStackNavigator() {
 
                 <Stack.Screen name='Har123' component={Har123} options={{ headerShown: false, title: 'T&G Global' }} />
 
-                <Stack.Screen name='Har1AnnasunRow' component={Har1AnnasunRow} options={{ Shown: false, title: 'T&G Global' }} />
-
                 <Stack.Screen name='RepMerliceRow' component={RepMerliceRow} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='RepAngelleRow' component={RepAngelleRow} options={{ headerShown: false, title: 'T&G Global' }} />
@@ -171,8 +183,6 @@ function MainStackNavigator() {
                 <Stack.Screen name='RepKmRow' component={RepKmRow} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='RepBambelloRow' component={RepBambelloRow} options={{ headerShown: false, title: 'T&G Global' }} />
-
-                <Stack.Screen name='Har1AnnasunPlants' component={Har1AnnasunPlants} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='RepMerlicePlantsRow1' component={RepMerlicePlantsRow1} options={{ headerShown: false, title: 'T&G Global' }} />
 
@@ -330,8 +340,23 @@ function MainStackNavigator() {
 
                 <Stack.Screen name='ViewPlantTrussDetails' component={ViewPlantTrussDetails} options={{ headerShown: false, title: 'T&G Global' }} />
                 
+                <Stack.Screen name='Har1AnnasunRow' component={Har1AnnasunRow} options={{ headerShown: false, title: 'T&G Global' }} />
 
+                <Stack.Screen name='Har1AvalantinoRow' component={Har1AvalantinoRow} options={{ headerShown: false, title: 'T&G Global' }} />
 
+                <Stack.Screen name='Har1HtlRow' component={Har1HtlRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har2AngelleRow' component={Har2AngelleRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har3BambelloRow' component={Har3BambelloRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har3Km5512Row' component={Har3Km5512Row} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har3AngelleRow' component={Har3AngelleRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har1AnnasunPlantsRow1' component={Har1AnnasunPlantsRow1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Har1AnnasunPlant1' component={Har1AnnasunPlant1} options={{ headerShown: false, title: 'T&G Global' }} />
 
 
             </Stack.Navigator>

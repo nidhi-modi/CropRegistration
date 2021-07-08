@@ -58,7 +58,7 @@ export default class Har123 extends Component {
 
 
             <TouchableOpacity
-              style={styles.buttonContainer}
+            style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har1AnnasunRow')}>
               <Text style={styles.buttonText}>HAR 1 - Annasun</Text>
             </TouchableOpacity>
@@ -66,49 +66,49 @@ export default class Har123 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har1HtlRow')}>
               <Text style={styles.buttonText}>HAR 1 - HTL1606242</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har1AvalantinoRow')}>
               <Text style={styles.buttonText}>HAR 1 - Avalantino</Text>
             </TouchableOpacity>
+
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
-              <Text style={styles.buttonText}>HAR 1 - Avalantino</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har2AngelleRow')}>
               <Text style={styles.buttonText}>HAR 2 - Angelle</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har3Km5512Row')}>
               <Text style={styles.buttonText}>HAR 3 - KM5512</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har3BambelloRow')}>
               <Text style={styles.buttonText}>HAR 3 - Bambello</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
-              style={styles.buttonContainer}>
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har3AngelleRow')}>
               <Text style={styles.buttonText}>HAR 3 - Angelle</Text>
             </TouchableOpacity>
 
