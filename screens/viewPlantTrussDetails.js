@@ -17,6 +17,8 @@ export const ViewPlantTrussDetails = () => {
     fetchPolicy: 'no-cache', 
     onCompleted: data => {
       setPlantDataAws(data?.plant_details)
+      console.log("Plant data from AWS : ", data)
+
       getTrussDetails();
     }
   });
@@ -24,6 +26,8 @@ export const ViewPlantTrussDetails = () => {
     fetchPolicy: 'no-cache',
     onCompleted: data => {
       setTrussDataAws(data?.truss_details)
+      console.log("Truss data from AWS : ", data)
+
     }
   });
 
@@ -105,7 +109,6 @@ export const ViewPlantTrussDetails = () => {
 
   const getPlantQuery = () => {
     getPlantDetails()
-    getTrussDetails()
   }
 
 

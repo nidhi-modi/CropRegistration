@@ -58,7 +58,7 @@ export default class Har1HtlRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har1HtlPlantsRow1')}>
               <Text style={styles.buttonText}>Row 125</Text>
             </TouchableOpacity>
 

@@ -58,7 +58,7 @@ export default class Har123 extends Component {
 
 
             <TouchableOpacity
-            style={styles.buttonContainer}
+              style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har1AnnasunRow')}>
               <Text style={styles.buttonText}>HAR 1 - Annasun</Text>
             </TouchableOpacity>
@@ -114,15 +114,18 @@ export default class Har123 extends Component {
 
             <View style={styles.marginDimensionTop}></View>
 
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('ViewPlantTrussDetails')} >
 
-            <View style={styles.headerImage2}>
+              <View style={styles.headerImage2}>
 
-              <Image source={require('../assets/submit.png')} />
+                <Image source={require('../assets/submit.png')} />
 
-            </View>
+              </View>
+
+            </TouchableOpacity>
 
             <View style={styles.textContainer}>
-            <Text style={styles.textBottom}>Press submit button only when all the above varieties are completed.</Text>
+              <Text style={styles.textBottom}>Press submit button only when there is internet connection.</Text>
             </View>
           </View>
 
@@ -189,7 +192,7 @@ const styles = StyleSheet.create({
 
   textContainer: {
 
-    flexShrink:1
+    flexShrink: 1
 
   },
 
@@ -232,4 +235,4 @@ const styles = StyleSheet.create({
 
   },
 
-});  
+});

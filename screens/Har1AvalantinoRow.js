@@ -58,19 +58,19 @@ export default class Har1AvalantinoRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har1AvalantinoPlantsRow1')}>
               <Text style={styles.buttonText}>Row 116</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har1AvalantinoPlantsRow2')}>
               <Text style={styles.buttonText}>Row 155</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har1AvalantinoPlantsRow3')}>
               <Text style={styles.buttonText}>Row 156</Text>
             </TouchableOpacity>
 
