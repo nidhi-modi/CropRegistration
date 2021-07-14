@@ -999,6 +999,8 @@ export default class Database {
             }).catch((err) => {
                 console.log(err);
             });
+        }).catch((err) => {
+            console.log(err);
         });
     }
 
@@ -1020,6 +1022,8 @@ export default class Database {
             }).catch((err) => {
                 console.log(err);
             });
+        }).catch((err) => {
+            console.log(err);
         });
     }
 
