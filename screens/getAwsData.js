@@ -1,40 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { useMutation, useLazyQuery } from '@apollo/client/react';
 import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
-import { INSERT_PLANT_DETAILS, INSERT_TRUSS_DETAILS } from '../graphql/mutation';
 import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
 import Database from './Database';
 import AsyncStorage from '@react-native-community/async-storage';
-import { EventRegister } from 'react-native-event-listeners'
 
-
-
-var loadingDone = '';
-
-var houseSelected;
 var loading = true;
 
+export const GetAwsData = (props) => {
 
-
-export const ViewPlantTrussDetails = (props) => {
   const db = new Database();
-
   const [plantData, setPlantData] = useState([]);
-  const [trussData, setTrussData] = useState([]);
+
   const [plantDataAws, setPlantDataAws] = useState([]);
   const [trussDataAws, setTrussDataAws] = useState([]);
-  const [insertPlantDetails] = useMutation(INSERT_PLANT_DETAILS);
-  const [insertTrussDetails] = useMutation(INSERT_TRUSS_DETAILS);
+
   const [getPlantDetails] = useLazyQuery(GET_PLANT_DETAILS, {
     fetchPolicy: 'no-cache',
     onCompleted: data => {
       setPlantDataAws(data?.plant_details)
       console.log("Plant data from AWS : ", data)
-
       try {
         AsyncStorage.setItem('@MySuperStore:plantKey', JSON.stringify(data));
-        console.log("saved plant data");
-
       } catch (error) {
         // Error saving data
         console.log(error)
@@ -52,167 +39,25 @@ export const ViewPlantTrussDetails = (props) => {
 
       try {
         AsyncStorage.setItem('@MySuperStore:trussKey', JSON.stringify(data));
-        console.log("saved truss data");
-
       } catch (error) {
         // Error saving data
         console.log(error)
 
       }
 
-
-      setTimeout(() => {
-        db.deleteAllPlants()
-          .then(data => {
-            console.log('Plant data deleted from local database');
-          })
-          .catch(err => {
-            console.log(err);
-          });
-
-      }, 200);
-
-      db.deleteAllTruss()
-        .then(data => {
-          console.log('Truss data deleted from local database');
-        })
-        .catch(err => {
-          console.log(err);
-        });
-
-        saveAsyncData();
-
-      
-      //navigating to previous screen
+      //Close this screen
       loading = false;
-      props.navigation.goBack(null);
-      loadingDone = 'yes'
-
-
-
-
+      props.navigation.navigate('SiteSelection')
     }
   });
 
-
-
   useEffect(() => {
-    db.listPlants()
-      .then(data => {
-        console.log('data from local database', data);
-
-        if(data.length !== 0){
-
-          setPlantData(data);
-
-        }else{
-
-          loading = false;
-          props.navigation.goBack(null);
-          alert("No data to submit")
-
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    getPlantQuery();
   }, []);
 
-  useEffect(() => {
-    let objs = [];
-    if (plantData?.length > 0) {
-      plantData?.map(obj => {
-        delete obj.plantId;
-        delete obj?.__typename;
-        delete obj?.id
-        objs.push(obj);
-        for (var key in obj) {
-          if (obj[key] == '' || obj[key] == "NaN") {
-            obj[key] = null
-          }
-        }
-        console.log("here objs in plant", objs)
-        insertPlantDetails({
-          variables: {
-            objects: objs,
-          },
-        })
-          .then(res => {
-            // res?.data?.insert_plant_details?.returning?.length > 0 && setPlantDataAws(res?.data?.insert_plant_details?.returning)
-            console.log('res in plant mutation', res);
-            getPlantQuery();
-            db.listTruss().then((data) => {
-              console.log("truss data in local db")
-              if(data.length !== 0){
-
-                setTrussData(data);
-      
-              }else{
-      
-                loading = false;
-                props.navigation.goBack(null);
-                alert("No data to submit")
-
-              }
-            }).catch((err) => {
-              console.log(err);
-            })
-          })
-          .catch(e => {
-            console.log('error in plant mutation', e);
-          });
-      });
-    }
-  }, [plantData]);
-
-  useEffect(() => {
-    let objs = []
-    if (trussData?.length > 0) {
-      trussData?.map(obj => {
-        delete obj.trussID
-        delete obj?.__typename;
-        delete obj?.id;
-        for (var key in obj) {
-          if (obj[key] == '' || obj[key] == "NaN") {
-            obj[key] = null
-          }
-        }
-        objs.push(obj);
-        console.log("here objs in truss", objs)
-      })
-      insertTrussDetails({
-        variables: {
-          objects: objs
-        }
-      }).then((res) => {
-        // res?.data?.insert_truss_details?.returning?.length > 0 && setTrussDataAws(res?.data?.insert_truss_details?.returning)
-        console.log("res in truss Detaaails", res)
-        AsyncStorage.clear();
-
-        getPlantQuery();
-      }).catch((e) => {
-        console.log("error in truss mutation", e)
-      })
-    }
-  }, [trussData])
-
+  //Use below query
   const getPlantQuery = () => {
     getPlantDetails()
-  }
-
- 
-
-  const saveAsyncData = () => {
-
-    try {
-      AsyncStorage.getItem('house').then((text1Value) => {
-        houseSelected = JSON.parse(text1Value);
-       
-      }).done();
-    } catch (error) {
-
-
-    }
   }
 
   return (
@@ -223,7 +68,7 @@ export const ViewPlantTrussDetails = (props) => {
         transparent={loading}
         animationType={'fade'}
         visible={loading}
-        onRequestClose={() => { console.log("Cannot close") }}>
+        onRequestClose={() => { console.log("Not allowed to close") }}>
         <View style={styles.modalBackground}>
           <View style={styles.activityIndicatorWrapper}>
             <ActivityIndicator
@@ -270,12 +115,11 @@ export const ViewPlantTrussDetails = (props) => {
         <View style={styles.marginSmallDimensionTop}></View>
 
         <Text
-          style={styles.textBottom}>Uploading data {'\n'} Please wait...</Text>
+          style={styles.textBottom}>Getting data from the server, please don't exit this page or close the app{'\n'} Please wait...</Text>
 
 
       </ScrollView>
     </View>
-
 
 
   );
@@ -320,7 +164,7 @@ const styles = StyleSheet.create({
   textBottom: {
 
     fontSize: 24,
-    paddingBottom: 20, 
+    paddingBottom: 20,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -394,6 +238,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-around'
   }
+
 });
 
-export default ViewPlantTrussDetails;
+export default GetAwsData;

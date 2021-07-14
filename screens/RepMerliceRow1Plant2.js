@@ -11,14 +11,19 @@ import {
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
+import { CheckBox } from 'react-native-elements'
+import Database from './Database'
+import { LogBox } from 'react-native'
+import { EventRegister } from 'react-native-event-listeners'
 
 
 const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
+const db = new Database();
 
 
-export default class RepMerliceRow1Plant1 extends Component {
+export default class RepMerliceRow1Plant2 extends Component {
 
   constructor(props) {
     super(props);
@@ -27,7 +32,7 @@ export default class RepMerliceRow1Plant1 extends Component {
 
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onSubmitleavesPerPlantRepMerliceRow1Plant1 = this.onSubmitleavesPerPlantRepMerliceRow1Plant1.bind(this);
+    this.onSubmitleavesPerPlantRepMerliceRow1Plant2 = this.onSubmitleavesPerPlantRepMerliceRow1Plant2.bind(this);
     this.onSubmitFullysetTruss = this.onSubmitFullysetTruss.bind(this);
     this.onSubmitTrussLength = this.onSubmitTrussLength.bind(this);
     this.onSubmitWeeklyGrowth = this.onSubmitWeeklyGrowth.bind(this);
@@ -39,7 +44,7 @@ export default class RepMerliceRow1Plant1 extends Component {
     this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
 
-    this.leavesPerPlantRepMerliceRow1Plant1Ref = this.updateRef.bind(this, 'leavesPerPlantRepMerliceRow1Plant1');
+    this.leavesPerPlantRepMerliceRow1Plant2Ref = this.updateRef.bind(this, 'leavesPerPlantRepMerliceRow1Plant2');
     this.fullysetTrussRef = this.updateRef.bind(this, 'FullysetTruss');
     this.trussLengthRef = this.updateRef.bind(this, 'TrussLength');
     this.weeklyGrowthRef = this.updateRef.bind(this, 'WeeklyGrowth');
@@ -59,90 +64,107 @@ export default class RepMerliceRow1Plant1 extends Component {
       plantRow: '',
       plantName: '',
       plantWeek: '',
-      leavesPerPlantRepMerliceRow1Plant1: '',
-      fullySetTrussRepMerliceRow1Plant1: '',
-      setTrussLengthRepMerliceRow1Plant1: '',
-      weeklyGrowthRepMerliceRow1Plant1: '',
-      floweringTrussHeightRepMerliceRow1Plant1: '',
-      leafLengthRepMerliceRow1Plant1: '',
-      leafWidthRepMerliceRow1Plant1: '',
-      stmDiameterRepMerliceRow1Plant1: '',
-      lastWeekStmDiameterRepMerliceRow1Plant1: '',
+      leavesPerPlantRepMerliceRow1Plant2: '',
+      fullySetTrussRepMerliceRow1Plant2: '',
+      setTrussLengthRepMerliceRow1Plant2: '',
+      weeklyGrowthRepMerliceRow1Plant2: '',
+      floweringTrussHeightRepMerliceRow1Plant2: '',
+      leafLengthRepMerliceRow1Plant2: '',
+      leafWidthRepMerliceRow1Plant2: '',
+      stmDiameterRepMerliceRow1Plant2: '',
+      lastWeekStmDiameterRepMerliceRow1Plant2: '',
       isLoading: false,
       errors: false,
 
       //Truss
-      trussNumberRepMerliceRow1Plant1: '',
-      setFruitsRepMerliceRow1Plant1: '',
-      setFlowersRepMerliceRow1Plant1: '',
-      pruningNumberRepMerliceRow1Plant1: '',
-      fruitDiameterRepMerliceRow1Plant1: '',
+      trussNumberRepMerliceRow1Plant2: '',
+      setFruitsRepMerliceRow1Plant2: '',
+      setFlowersRepMerliceRow1Plant2: '',
+      pruningNumberRepMerliceRow1Plant2: '',
+      fruitDiameterRepMerliceRow1Plant2: '',
 
-      trussNumber1RepMerliceRow1Plant1: '',
-      setFruits1RepMerliceRow1Plant1: '',
-      setFlowers1RepMerliceRow1Plant1: '',
-      pruningNumber1RepMerliceRow1Plant1: '',
-      fruitDiameter1RepMerliceRow1Plant1: '',
+      trussNumber1RepMerliceRow1Plant2: '',
+      setFruits1RepMerliceRow1Plant2: '',
+      setFlowers1RepMerliceRow1Plant2: '',
+      pruningNumber1RepMerliceRow1Plant2: '',
+      fruitDiameter1RepMerliceRow1Plant2: '',
 
-      trussNumber2RepMerliceRow1Plant1: '',
-      setFruits2RepMerliceRow1Plant1: '',
-      setFlowers2RepMerliceRow1Plant1: '',
-      pruningNumber2RepMerliceRow1Plant1: '',
-      fruitDiameter2RepMerliceRow1Plant1: '',
+      trussNumber2RepMerliceRow1Plant2: '',
+      setFruits2RepMerliceRow1Plant2: '',
+      setFlowers2RepMerliceRow1Plant2: '',
+      pruningNumber2RepMerliceRow1Plant2: '',
+      fruitDiameter2RepMerliceRow1Plant2: '',
 
-      trussNumber3RepMerliceRow1Plant1: '',
-      setFruits3RepMerliceRow1Plant1: '',
-      setFlowers3RepMerliceRow1Plant1: '',
-      pruningNumber3RepMerliceRow1Plant1: '',
-      fruitDiameter3RepMerliceRow1Plant1: '',
+      trussNumber3RepMerliceRow1Plant2: '',
+      setFruits3RepMerliceRow1Plant2: '',
+      setFlowers3RepMerliceRow1Plant2: '',
+      pruningNumber3RepMerliceRow1Plant2: '',
+      fruitDiameter3RepMerliceRow1Plant2: '',
 
-      trussNumber4RepMerliceRow1Plant1: '',
-      setFruits4RepMerliceRow1Plant1: '',
-      setFlowers4RepMerliceRow1Plant1: '',
-      pruningNumber4RepMerliceRow1Plant1: '',
-      fruitDiameter4RepMerliceRow1Plant1: '',
+      trussNumber4RepMerliceRow1Plant2: '',
+      setFruits4RepMerliceRow1Plant2: '',
+      setFlowers4RepMerliceRow1Plant2: '',
+      pruningNumber4RepMerliceRow1Plant2: '',
+      fruitDiameter4RepMerliceRow1Plant2: '',
 
-      trussNumber5RepMerliceRow1Plant1: '',
-      setFruits5RepMerliceRow1Plant1: '',
-      setFlowers5RepMerliceRow1Plant1: '',
-      pruningNumber5RepMerliceRow1Plant1: '',
-      fruitDiameter5RepMerliceRow1Plant1: '',
+      trussNumber5RepMerliceRow1Plant2: '',
+      setFruits5RepMerliceRow1Plant2: '',
+      setFlowers5RepMerliceRow1Plant2: '',
+      pruningNumber5RepMerliceRow1Plant2: '',
+      fruitDiameter5RepMerliceRow1Plant2: '',
 
-      trussNumber6RepMerliceRow1Plant1: '',
-      setFruits6RepMerliceRow1Plant1: '',
-      setFlowers6RepMerliceRow1Plant1: '',
-      pruningNumber6RepMerliceRow1Plant1: '',
-      fruitDiameter6RepMerliceRow1Plant1: '',
+      trussNumber6RepMerliceRow1Plant2: '',
+      setFruits6RepMerliceRow1Plant2: '',
+      setFlowers6RepMerliceRow1Plant2: '',
+      pruningNumber6RepMerliceRow1Plant2: '',
+      fruitDiameter6RepMerliceRow1Plant2: '',
 
-      trussNumber7RepMerliceRow1Plant1: '',
-      setFruits7RepMerliceRow1Plant1: '',
-      setFlowers7RepMerliceRow1Plant1: '',
-      pruningNumber7RepMerliceRow1Plant1: '',
-      fruitDiameter7RepMerliceRow1Plant1: '',
+      trussNumber7RepMerliceRow1Plant2: '',
+      setFruits7RepMerliceRow1Plant2: '',
+      setFlowers7RepMerliceRow1Plant2: '',
+      pruningNumber7RepMerliceRow1Plant2: '',
+      fruitDiameter7RepMerliceRow1Plant2: '',
 
-      trussNumber8RepMerliceRow1Plant1: '',
-      setFruits8RepMerliceRow1Plant1: '',
-      setFlowers8RepMerliceRow1Plant1: '',
-      pruningNumber8RepMerliceRow1Plant1: '',
-      fruitDiameter8RepMerliceRow1Plant1: '',
+      trussNumber8RepMerliceRow1Plant2: '',
+      setFruits8RepMerliceRow1Plant2: '',
+      setFlowers8RepMerliceRow1Plant2: '',
+      pruningNumber8RepMerliceRow1Plant2: '',
+      fruitDiameter8RepMerliceRow1Plant2: '',
 
-      trussNumber9RepMerliceRow1Plant1: '',
-      setFruits9RepMerliceRow1Plant1: '',
-      setFlowers9RepMerliceRow1Plant1: '',
-      pruningNumber9RepMerliceRow1Plant1: '',
-      fruitDiameter9RepMerliceRow1Plant1: '',
+      trussNumber9RepMerliceRow1Plant2: '',
+      setFruits9RepMerliceRow1Plant2: '',
+      setFlowers9RepMerliceRow1Plant2: '',
+      pruningNumber9RepMerliceRow1Plant2: '',
+      fruitDiameter9RepMerliceRow1Plant2: '',
 
-      fruitLoadRepMerliceRow1Plant1: '',
-      harvestTrussRepMerliceRow1Plant1: '',
-      pruningHarRepMerliceRow1Plant1: '',
-      settingTrussNumberRepMerliceRow1Plant1: '',
-      prunSettingRepMerliceRow1Plant1: '',
-      pruneFloweringRepMerliceRow1Plant1: '',
+      fruitLoadRepMerliceRow1Plant2: '',
+      harvestTrussRepMerliceRow1Plant2: '',
+      pruningHarRepMerliceRow1Plant2: '',
+      settingTrussNumberRepMerliceRow1Plant2: '',
+      prunSettingRepMerliceRow1Plant2: '',
+      pruneFloweringRepMerliceRow1Plant2: '',
 
-      floweringTrussNumberRepMerliceRow1Plant1: '',
-      settingTrussRepMerliceRow1Plant1: '',
-      settingTruss2RepMerliceRow1Plant1: '',
-      floweringTrussssRepMerliceRow1Plant1: '',
+      floweringTrussNumberRepMerliceRow1Plant2: '',
+      settingTrussRepMerliceRow1Plant2: '',
+      settingTruss2RepMerliceRow1Plant2: '',
+      floweringTrussssRepMerliceRow1Plant2: '',
+
+      MerliceRow1Plant2Selected: false,
+      checkboxStatus: '',
+
+
+      allTrussData: [],
+      allPlantData: [],
+
+      leavesPerPlantPreviousData: '',
+      fullySetTrussPreviousData: '',
+      fullySetTrussLengthPreviousData: '',
+      weeklyGrowthPreviousData: '',
+      flowerTrussHeightPreviousData: '',
+      leafLengthPreviousData: '',
+      leafWidthPreviousData: '',
+      stemDiPreviousData: '',
+      lastWeekStemDiaPreviousData: '',
 
     }
   }
@@ -166,10 +188,11 @@ export default class RepMerliceRow1Plant1 extends Component {
 
     this.setState({ weekNumber: completeWeekNumber })
 
+    LogBox.ignoreAllLogs(true)
 
+    this.renderEntryData();
 
     this.getAsysncValues();
-
 
   }
 
@@ -190,93 +213,345 @@ export default class RepMerliceRow1Plant1 extends Component {
 
   //
 
+  renderEntryData = () => {
+
+    //AWS data
+    try {
+      AsyncStorage.getItem('@MySuperStore:plantKey').then((plantValues) => {
+
+        const allPlant = JSON.parse(plantValues)
+
+        const filteredPlantWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowPlant = d => d.plantName === 'REP - Merlice' && d.plantNumber === 2 && d.plantRow === 123 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
+
+        this.setState({ allPlantData: filteredweekRowPlant })
+
+        this.setData();
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('@MySuperStore:trussKey').then((trussValues) => {
+
+        const allTruss = JSON.parse(trussValues)
+
+        const filteredTrussWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowTruss = d => d.plantName === 'REP - Merlice' && d.plantNumber === '2' && d.plantRow === 123 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
+
+        this.setState({ allTrussData: filteredweekRowTruss })
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //AWS DATA ENDS
+
+
+
+
+  }
+
+  setData = () => {
+
+   if (this.state.allPlantData.length !== 0) {
+
+   
+
+      if (JSON.stringify(this.state.allPlantData[0].leavesPerPlant) === 'null') {
+
+
+        this.setState({
+
+
+          leavesPerPlantPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leavesPerPlantPreviousData: JSON.stringify(this.state.allPlantData[0].leavesPerPlant)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].fullySetTruss) === 'null') {
+
+        this.setState({
+
+          fullySetTrussPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussPreviousData: JSON.stringify(this.state.allPlantData[0].fullySetTruss)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].setTrussLength) === 'null') {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: JSON.stringify(this.state.allPlantData[0].setTrussLength)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].weeklyGrowth) === 'null') {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: JSON.stringify(this.state.allPlantData[0].weeklyGrowth)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].floweringTrussHeight) === 'null') {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: JSON.stringify(this.state.allPlantData[0].floweringTrussHeight)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafLength) === 'null') {
+
+        this.setState({
+
+          leafLengthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leafLengthPreviousData: JSON.stringify(this.state.allPlantData[0].leafLength)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafWidth) === 'null') {
+
+        this.setState({
+
+          leafWidthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leafWidthPreviousData: JSON.stringify(this.state.allPlantData[0].leafWidth)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].stmDiameter) === 'null') {
+
+        this.setState({
+
+          stemDiPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          stemDiPreviousData: JSON.stringify(this.state.allPlantData[0].stmDiameter)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter) === 'null') {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter)
+
+        })
+
+
+      }
+
+    } else {
+
+      console.log("No data in the database")
+    }
+
+
+  }
+
+
   getAsysncValues = async () => {
 
 
     try {
-      AsyncStorage.getItem('leavesPerPlantRepMerliceRow1Plant1').then((text1Value) => {
-        this.setState({ leavesPerPlantRepMerliceRow1Plant1: JSON.parse(text1Value) });
+      AsyncStorage.getItem('leavesPerPlantRepMerliceRow1Plant2').then((text1Value) => {
+        this.setState({ leavesPerPlantRepMerliceRow1Plant2: JSON.parse(text1Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fullySetTrussRepMerliceRow1Plant1').then((text2Value) => {
-        this.setState({ fullySetTrussRepMerliceRow1Plant1: JSON.parse(text2Value) });
+      AsyncStorage.getItem('fullySetTrussRepMerliceRow1Plant2').then((text2Value) => {
+        this.setState({ fullySetTrussRepMerliceRow1Plant2: JSON.parse(text2Value) });
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setTrussLengthRepMerliceRow1Plant1').then((text3Value) => {
-        this.setState({ setTrussLengthRepMerliceRow1Plant1: JSON.parse(text3Value) });
+      AsyncStorage.getItem('setTrussLengthRepMerliceRow1Plant2').then((text3Value) => {
+        this.setState({ setTrussLengthRepMerliceRow1Plant2: JSON.parse(text3Value) });
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('weeklyGrowthRepMerliceRow1Plant1').then((text4Value) => {
-        this.setState({ weeklyGrowthRepMerliceRow1Plant1: JSON.parse(text4Value) });
+      AsyncStorage.getItem('weeklyGrowthRepMerliceRow1Plant2').then((text4Value) => {
+        this.setState({ weeklyGrowthRepMerliceRow1Plant2: JSON.parse(text4Value) });
 
 
 
       }).done();
     } catch (error) {
     } try {
-      AsyncStorage.getItem('floweringTrussHeightRepMerliceRow1Plant1').then((text5Value) => {
-        this.setState({ floweringTrussHeightRepMerliceRow1Plant1: JSON.parse(text5Value) });
+      AsyncStorage.getItem('floweringTrussHeightRepMerliceRow1Plant2').then((text5Value) => {
+        this.setState({ floweringTrussHeightRepMerliceRow1Plant2: JSON.parse(text5Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('leafLengthRepMerliceRow1Plant1').then((text6Value) => {
-        this.setState({ leafLengthRepMerliceRow1Plant1: JSON.parse(text6Value) });
+      AsyncStorage.getItem('leafLengthRepMerliceRow1Plant2').then((text6Value) => {
+        this.setState({ leafLengthRepMerliceRow1Plant2: JSON.parse(text6Value) });
 
 
       }).done();
     } catch (error) {
     } try {
-      AsyncStorage.getItem('leafWidthRepMerliceRow1Plant1').then((text7Value) => {
-        this.setState({ leafWidthRepMerliceRow1Plant1: JSON.parse(text7Value) });
+      AsyncStorage.getItem('leafWidthRepMerliceRow1Plant2').then((text7Value) => {
+        this.setState({ leafWidthRepMerliceRow1Plant2: JSON.parse(text7Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('stmDiameterRepMerliceRow1Plant1').then((text8Value) => {
-        this.setState({ stmDiameterRepMerliceRow1Plant1: JSON.parse(text8Value) });
+      AsyncStorage.getItem('stmDiameterRepMerliceRow1Plant2').then((text8Value) => {
+        this.setState({ stmDiameterRepMerliceRow1Plant2: JSON.parse(text8Value) });
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('lastWeekStmDiameterRepMerliceRow1Plant1').then((text9Value) => {
-        this.setState({ lastWeekStmDiameterRepMerliceRow1Plant1: JSON.parse(text9Value) });
+      AsyncStorage.getItem('lastWeekStmDiameterRepMerliceRow1Plant2').then((text9Value) => {
+        this.setState({ lastWeekStmDiameterRepMerliceRow1Plant2: JSON.parse(text9Value) });
 
 
       }).done();
     } catch (error) {
     }
+
     try {
-      AsyncStorage.getItem('trussNumberRepMerliceRow1Plant1').then((text10Value) => {
+      AsyncStorage.getItem('MerliceRow1Plant2Selected').then((text99Value) => {
+        this.setState({ MerliceRow1Plant2Selected: JSON.parse(text99Value) });
+
+        console.log(this.state.MerliceRow1Plant2Selected)
+
+      }).done();
+    } catch (error) {
+    }
+    try {
+      AsyncStorage.getItem('trussNumberRepMerliceRow1Plant2').then((text10Value) => {
 
         if (text10Value !== null) {
-          this.setState({ trussNumberRepMerliceRow1Plant1: JSON.parse(text10Value) });
+          this.setState({ trussNumberRepMerliceRow1Plant2: JSON.parse(text10Value) });
 
-          this.setState({ trussNumber1RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 1 })
-          this.setState({ trussNumber2RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 2 })
-          this.setState({ trussNumber3RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 3 })
-          this.setState({ trussNumber4RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 4 })
-          this.setState({ trussNumber5RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 5 })
-          this.setState({ trussNumber6RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 6 })
-          this.setState({ trussNumber7RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 7 })
-          this.setState({ trussNumber8RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 8 })
-          this.setState({ trussNumber9RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 9 })
+          this.setState({ trussNumber1RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1 })
+          this.setState({ trussNumber2RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2 })
+          this.setState({ trussNumber3RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3 })
+          this.setState({ trussNumber4RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4 })
+          this.setState({ trussNumber5RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5 })
+          this.setState({ trussNumber6RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6 })
+          this.setState({ trussNumber7RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7 })
+          this.setState({ trussNumber8RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8 })
+          this.setState({ trussNumber9RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9 })
 
         }
 
@@ -284,10 +559,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFruitsRepMerliceRow1Plant1').then((text11Value) => {
+      AsyncStorage.getItem('setFruitsRepMerliceRow1Plant2').then((text11Value) => {
         if (text11Value !== null) {
 
-          this.setState({ setFruitsRepMerliceRow1Plant1: JSON.parse(text11Value) });
+          this.setState({ setFruitsRepMerliceRow1Plant2: JSON.parse(text11Value) });
 
         }
 
@@ -298,11 +573,11 @@ export default class RepMerliceRow1Plant1 extends Component {
 
 
     try {
-      AsyncStorage.getItem('setFlowersRepMerliceRow1Plant1').then((text12Value) => {
+      AsyncStorage.getItem('setFlowersRepMerliceRow1Plant2').then((text12Value) => {
 
         if (text12Value !== null) {
 
-          this.setState({ setFlowersRepMerliceRow1Plant1: JSON.parse(text12Value) });
+          this.setState({ setFlowersRepMerliceRow1Plant2: JSON.parse(text12Value) });
 
         }
 
@@ -311,9 +586,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumberRepMerliceRow1Plant1').then((text13Value) => {
+      AsyncStorage.getItem('pruningNumberRepMerliceRow1Plant2').then((text13Value) => {
         if (text13Value !== null) {
-          this.setState({ pruningNumberRepMerliceRow1Plant1: JSON.parse(text13Value) });
+          this.setState({ pruningNumberRepMerliceRow1Plant2: JSON.parse(text13Value) });
         }
 
 
@@ -321,10 +596,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameterRepMerliceRow1Plant1').then((text14Value) => {
+      AsyncStorage.getItem('fruitDiameterRepMerliceRow1Plant2').then((text14Value) => {
 
         if (text14Value !== null) {
-          this.setState({ fruitDiameterRepMerliceRow1Plant1: JSON.parse(text14Value) });
+          this.setState({ fruitDiameterRepMerliceRow1Plant2: JSON.parse(text14Value) });
         }
 
 
@@ -335,10 +610,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 1---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits1RepMerliceRow1Plant1').then((text16Value) => {
+      AsyncStorage.getItem('setFruits1RepMerliceRow1Plant2').then((text16Value) => {
 
         if (text16Value !== null) {
-          this.setState({ setFruits1RepMerliceRow1Plant1: JSON.parse(text16Value) });
+          this.setState({ setFruits1RepMerliceRow1Plant2: JSON.parse(text16Value) });
         }
 
 
@@ -346,10 +621,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers1RepMerliceRow1Plant1').then((text17Value) => {
+      AsyncStorage.getItem('setFlowers1RepMerliceRow1Plant2').then((text17Value) => {
 
         if (text17Value !== null) {
-          this.setState({ setFlowers1RepMerliceRow1Plant1: JSON.parse(text17Value) });
+          this.setState({ setFlowers1RepMerliceRow1Plant2: JSON.parse(text17Value) });
         }
 
 
@@ -357,10 +632,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber1RepMerliceRow1Plant1').then((text18Value) => {
+      AsyncStorage.getItem('pruningNumber1RepMerliceRow1Plant2').then((text18Value) => {
 
         if (text18Value !== null) {
-          this.setState({ pruningNumber1RepMerliceRow1Plant1: JSON.parse(text18Value) });
+          this.setState({ pruningNumber1RepMerliceRow1Plant2: JSON.parse(text18Value) });
         }
 
 
@@ -368,10 +643,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter1RepMerliceRow1Plant1').then((text19Value) => {
+      AsyncStorage.getItem('fruitDiameter1RepMerliceRow1Plant2').then((text19Value) => {
 
         if (text19Value !== null) {
-          this.setState({ fruitDiameter1RepMerliceRow1Plant1: JSON.parse(text19Value) });
+          this.setState({ fruitDiameter1RepMerliceRow1Plant2: JSON.parse(text19Value) });
         }
 
 
@@ -382,10 +657,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 2---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits2RepMerliceRow1Plant1').then((text17Value) => {
+      AsyncStorage.getItem('setFruits2RepMerliceRow1Plant2').then((text17Value) => {
 
         if (text17Value !== null) {
-          this.setState({ setFruits2RepMerliceRow1Plant1: JSON.parse(text17Value) });
+          this.setState({ setFruits2RepMerliceRow1Plant2: JSON.parse(text17Value) });
         }
 
 
@@ -393,10 +668,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers2RepMerliceRow1Plant1').then((text18Value) => {
+      AsyncStorage.getItem('setFlowers2RepMerliceRow1Plant2').then((text18Value) => {
 
         if (text18Value !== null) {
-          this.setState({ setFlowers2RepMerliceRow1Plant1: JSON.parse(text18Value) });
+          this.setState({ setFlowers2RepMerliceRow1Plant2: JSON.parse(text18Value) });
         }
 
 
@@ -404,10 +679,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber2RepMerliceRow1Plant1').then((text19Value) => {
+      AsyncStorage.getItem('pruningNumber2RepMerliceRow1Plant2').then((text19Value) => {
 
         if (text19Value !== null) {
-          this.setState({ pruningNumber2RepMerliceRow1Plant1: JSON.parse(text19Value) });
+          this.setState({ pruningNumber2RepMerliceRow1Plant2: JSON.parse(text19Value) });
         }
 
 
@@ -415,10 +690,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter2RepMerliceRow1Plant1').then((text20Value) => {
+      AsyncStorage.getItem('fruitDiameter2RepMerliceRow1Plant2').then((text20Value) => {
 
         if (text20Value !== null) {
-          this.setState({ fruitDiameter2RepMerliceRow1Plant1: JSON.parse(text20Value) });
+          this.setState({ fruitDiameter2RepMerliceRow1Plant2: JSON.parse(text20Value) });
         }
 
 
@@ -429,10 +704,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 3---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits3RepMerliceRow1Plant1').then((text21Value) => {
+      AsyncStorage.getItem('setFruits3RepMerliceRow1Plant2').then((text21Value) => {
 
         if (text21Value !== null) {
-          this.setState({ setFruits3RepMerliceRow1Plant1: JSON.parse(text21Value) });
+          this.setState({ setFruits3RepMerliceRow1Plant2: JSON.parse(text21Value) });
         }
 
 
@@ -440,10 +715,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers3RepMerliceRow1Plant1').then((text22Value) => {
+      AsyncStorage.getItem('setFlowers3RepMerliceRow1Plant2').then((text22Value) => {
 
         if (text22Value !== null) {
-          this.setState({ setFlowers3RepMerliceRow1Plant1: JSON.parse(text22Value) });
+          this.setState({ setFlowers3RepMerliceRow1Plant2: JSON.parse(text22Value) });
         }
 
 
@@ -451,10 +726,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber3RepMerliceRow1Plant1').then((text23Value) => {
+      AsyncStorage.getItem('pruningNumber3RepMerliceRow1Plant2').then((text23Value) => {
 
         if (text23Value !== null) {
-          this.setState({ pruningNumber3RepMerliceRow1Plant1: JSON.parse(text23Value) });
+          this.setState({ pruningNumber3RepMerliceRow1Plant2: JSON.parse(text23Value) });
         }
 
 
@@ -462,10 +737,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter3RepMerliceRow1Plant1').then((text24Value) => {
+      AsyncStorage.getItem('fruitDiameter3RepMerliceRow1Plant2').then((text24Value) => {
 
         if (text24Value !== null) {
-          this.setState({ fruitDiameter3RepMerliceRow1Plant1: JSON.parse(text24Value) });
+          this.setState({ fruitDiameter3RepMerliceRow1Plant2: JSON.parse(text24Value) });
         }
 
 
@@ -476,10 +751,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 4---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits4RepMerliceRow1Plant1').then((text25Value) => {
+      AsyncStorage.getItem('setFruits4RepMerliceRow1Plant2').then((text25Value) => {
 
         if (text25Value !== null) {
-          this.setState({ setFruits4RepMerliceRow1Plant1: JSON.parse(text25Value) });
+          this.setState({ setFruits4RepMerliceRow1Plant2: JSON.parse(text25Value) });
         }
 
 
@@ -487,10 +762,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers4RepMerliceRow1Plant1').then((text26Value) => {
+      AsyncStorage.getItem('setFlowers4RepMerliceRow1Plant2').then((text26Value) => {
 
         if (text26Value !== null) {
-          this.setState({ setFlowers4RepMerliceRow1Plant1: JSON.parse(text26Value) });
+          this.setState({ setFlowers4RepMerliceRow1Plant2: JSON.parse(text26Value) });
         }
 
 
@@ -498,10 +773,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber4RepMerliceRow1Plant1').then((text27Value) => {
+      AsyncStorage.getItem('pruningNumber4RepMerliceRow1Plant2').then((text27Value) => {
 
         if (text27Value !== null) {
-          this.setState({ pruningNumber4RepMerliceRow1Plant1: JSON.parse(text27Value) });
+          this.setState({ pruningNumber4RepMerliceRow1Plant2: JSON.parse(text27Value) });
         }
 
 
@@ -509,10 +784,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter4RepMerliceRow1Plant1').then((text28Value) => {
+      AsyncStorage.getItem('fruitDiameter4RepMerliceRow1Plant2').then((text28Value) => {
 
         if (text28Value !== null) {
-          this.setState({ fruitDiameter4RepMerliceRow1Plant1: JSON.parse(text28Value) });
+          this.setState({ fruitDiameter4RepMerliceRow1Plant2: JSON.parse(text28Value) });
         }
 
 
@@ -523,10 +798,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 5---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits5RepMerliceRow1Plant1').then((text29Value) => {
+      AsyncStorage.getItem('setFruits5RepMerliceRow1Plant2').then((text29Value) => {
 
         if (text29Value !== null) {
-          this.setState({ setFruits5RepMerliceRow1Plant1: JSON.parse(text29Value) });
+          this.setState({ setFruits5RepMerliceRow1Plant2: JSON.parse(text29Value) });
         }
 
 
@@ -534,10 +809,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers5RepMerliceRow1Plant1').then((text30Value) => {
+      AsyncStorage.getItem('setFlowers5RepMerliceRow1Plant2').then((text30Value) => {
 
         if (text30Value !== null) {
-          this.setState({ setFlowers5RepMerliceRow1Plant1: JSON.parse(text30Value) });
+          this.setState({ setFlowers5RepMerliceRow1Plant2: JSON.parse(text30Value) });
         }
 
 
@@ -545,10 +820,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber5RepMerliceRow1Plant1').then((text31Value) => {
+      AsyncStorage.getItem('pruningNumber5RepMerliceRow1Plant2').then((text31Value) => {
 
         if (text31Value !== null) {
-          this.setState({ pruningNumber5RepMerliceRow1Plant1: JSON.parse(text31Value) });
+          this.setState({ pruningNumber5RepMerliceRow1Plant2: JSON.parse(text31Value) });
         }
 
 
@@ -557,9 +832,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
     try {
 
-      AsyncStorage.getItem('fruitDiameter5RepMerliceRow1Plant1').then((text32Value) => {
+      AsyncStorage.getItem('fruitDiameter5RepMerliceRow1Plant2').then((text32Value) => {
         if (text32Value !== null) {
-          this.setState({ fruitDiameter5RepMerliceRow1Plant1: JSON.parse(text32Value) });
+          this.setState({ fruitDiameter5RepMerliceRow1Plant2: JSON.parse(text32Value) });
         }
 
 
@@ -570,10 +845,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 6---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits6RepMerliceRow1Plant1').then((text33Value) => {
+      AsyncStorage.getItem('setFruits6RepMerliceRow1Plant2').then((text33Value) => {
 
         if (text33Value !== null) {
-          this.setState({ setFruits6RepMerliceRow1Plant1: JSON.parse(text33Value) });
+          this.setState({ setFruits6RepMerliceRow1Plant2: JSON.parse(text33Value) });
         }
 
 
@@ -581,10 +856,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers6RepMerliceRow1Plant1').then((text34Value) => {
+      AsyncStorage.getItem('setFlowers6RepMerliceRow1Plant2').then((text34Value) => {
 
         if (text34Value !== null) {
-          this.setState({ setFlowers6RepMerliceRow1Plant1: JSON.parse(text34Value) });
+          this.setState({ setFlowers6RepMerliceRow1Plant2: JSON.parse(text34Value) });
         }
 
 
@@ -592,10 +867,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber6RepMerliceRow1Plant1').then((text35Value) => {
+      AsyncStorage.getItem('pruningNumber6RepMerliceRow1Plant2').then((text35Value) => {
 
         if (text35Value !== null) {
-          this.setState({ pruningNumber6RepMerliceRow1Plant1: JSON.parse(text35Value) });
+          this.setState({ pruningNumber6RepMerliceRow1Plant2: JSON.parse(text35Value) });
         }
 
 
@@ -603,10 +878,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter6RepMerliceRow1Plant1').then((text36Value) => {
+      AsyncStorage.getItem('fruitDiameter6RepMerliceRow1Plant2').then((text36Value) => {
 
         if (text36Value !== null) {
-          this.setState({ fruitDiameter6RepMerliceRow1Plant1: JSON.parse(text36Value) });
+          this.setState({ fruitDiameter6RepMerliceRow1Plant2: JSON.parse(text36Value) });
         }
 
 
@@ -617,10 +892,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 7---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits7RepMerliceRow1Plant1').then((text37Value) => {
+      AsyncStorage.getItem('setFruits7RepMerliceRow1Plant2').then((text37Value) => {
 
         if (text37Value !== null) {
-          this.setState({ setFruits7RepMerliceRow1Plant1: JSON.parse(text37Value) });
+          this.setState({ setFruits7RepMerliceRow1Plant2: JSON.parse(text37Value) });
         }
 
 
@@ -628,11 +903,11 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers7RepMerliceRow1Plant1').then((text38Value) => {
+      AsyncStorage.getItem('setFlowers7RepMerliceRow1Plant2').then((text38Value) => {
 
         if (text38Value !== null) {
 
-          this.setState({ setFlowers7RepMerliceRow1Plant1: JSON.parse(text38Value) });
+          this.setState({ setFlowers7RepMerliceRow1Plant2: JSON.parse(text38Value) });
         }
 
 
@@ -640,10 +915,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber7RepMerliceRow1Plant1').then((text39Value) => {
+      AsyncStorage.getItem('pruningNumber7RepMerliceRow1Plant2').then((text39Value) => {
 
         if (text39Value !== null) {
-          this.setState({ pruningNumber7RepMerliceRow1Plant1: JSON.parse(text39Value) });
+          this.setState({ pruningNumber7RepMerliceRow1Plant2: JSON.parse(text39Value) });
         }
 
 
@@ -651,10 +926,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter7RepMerliceRow1Plant1').then((text40Value) => {
+      AsyncStorage.getItem('fruitDiameter7RepMerliceRow1Plant2').then((text40Value) => {
 
         if (text40Value !== null) {
-          this.setState({ fruitDiameter7RepMerliceRow1Plant1: JSON.parse(text40Value) });
+          this.setState({ fruitDiameter7RepMerliceRow1Plant2: JSON.parse(text40Value) });
         }
 
 
@@ -666,10 +941,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 8---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits8RepMerliceRow1Plant1').then((text41Value) => {
+      AsyncStorage.getItem('setFruits8RepMerliceRow1Plant2').then((text41Value) => {
 
         if (text41Value !== null) {
-          this.setState({ setFruits8RepMerliceRow1Plant1: JSON.parse(text41Value) });
+          this.setState({ setFruits8RepMerliceRow1Plant2: JSON.parse(text41Value) });
         }
 
 
@@ -677,10 +952,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers8RepMerliceRow1Plant1').then((text42Value) => {
+      AsyncStorage.getItem('setFlowers8RepMerliceRow1Plant2').then((text42Value) => {
 
         if (text42Value !== null) {
-          this.setState({ setFlowers8RepMerliceRow1Plant1: JSON.parse(text42Value) });
+          this.setState({ setFlowers8RepMerliceRow1Plant2: JSON.parse(text42Value) });
         }
 
 
@@ -688,10 +963,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber8RepMerliceRow1Plant1').then((text43Value) => {
+      AsyncStorage.getItem('pruningNumber8RepMerliceRow1Plant2').then((text43Value) => {
 
         if (text43Value !== null) {
-          this.setState({ pruningNumber8RepMerliceRow1Plant1: JSON.parse(text43Value) });
+          this.setState({ pruningNumber8RepMerliceRow1Plant2: JSON.parse(text43Value) });
         }
 
 
@@ -699,10 +974,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter8RepMerliceRow1Plant1').then((text44Value) => {
+      AsyncStorage.getItem('fruitDiameter8RepMerliceRow1Plant2').then((text44Value) => {
 
         if (text44Value !== null) {
-          this.setState({ fruitDiameter8RepMerliceRow1Plant1: JSON.parse(text44Value) });
+          this.setState({ fruitDiameter8RepMerliceRow1Plant2: JSON.parse(text44Value) });
         }
 
 
@@ -713,10 +988,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Truss 9---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits9RepMerliceRow1Plant1').then((text45Value) => {
+      AsyncStorage.getItem('setFruits9RepMerliceRow1Plant2').then((text45Value) => {
 
         if (text45Value !== null) {
-          this.setState({ setFruits9RepMerliceRow1Plant1: JSON.parse(text45Value) });
+          this.setState({ setFruits9RepMerliceRow1Plant2: JSON.parse(text45Value) });
         }
 
 
@@ -724,10 +999,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('setFlowers9RepMerliceRow1Plant1').then((text46Value) => {
+      AsyncStorage.getItem('setFlowers9RepMerliceRow1Plant2').then((text46Value) => {
 
         if (text46Value !== null) {
-          this.setState({ setFlowers9RepMerliceRow1Plant1: JSON.parse(text46Value) });
+          this.setState({ setFlowers9RepMerliceRow1Plant2: JSON.parse(text46Value) });
         }
 
 
@@ -735,10 +1010,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('pruningNumber9RepMerliceRow1Plant1').then((text47Value) => {
+      AsyncStorage.getItem('pruningNumber9RepMerliceRow1Plant2').then((text47Value) => {
 
         if (text47Value !== null) {
-          this.setState({ pruningNumber9RepMerliceRow1Plant1: JSON.parse(text47Value) });
+          this.setState({ pruningNumber9RepMerliceRow1Plant2: JSON.parse(text47Value) });
         }
 
 
@@ -746,10 +1021,10 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('fruitDiameter9RepMerliceRow1Plant1').then((text48Value) => {
+      AsyncStorage.getItem('fruitDiameter9RepMerliceRow1Plant2').then((text48Value) => {
 
         if (text48Value !== null) {
-          this.setState({ fruitDiameter9RepMerliceRow1Plant1: JSON.parse(text48Value) });
+          this.setState({ fruitDiameter9RepMerliceRow1Plant2: JSON.parse(text48Value) });
         }
 
 
@@ -761,9 +1036,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     //-------------------------Calculations---------------------------------//
 
     try {
-      AsyncStorage.getItem('fruitLoadRepMerliceRow1Plant1').then((text49Value) => {
+      AsyncStorage.getItem('fruitLoadRepMerliceRow1Plant2').then((text49Value) => {
         if (text49Value !== null) {
-          this.setState({ fruitLoadRepMerliceRow1Plant1: JSON.parse(text49Value) });
+          this.setState({ fruitLoadRepMerliceRow1Plant2: JSON.parse(text49Value) });
         }
 
 
@@ -771,36 +1046,34 @@ export default class RepMerliceRow1Plant1 extends Component {
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('floweringTrussssRepMerliceRow1Plant1').then((text50Value) => {
+      AsyncStorage.getItem('floweringTrussssRepMerliceRow1Plant2').then((text50Value) => {
 
         if (text50Value !== null) {
-          this.setState({ floweringTrussssRepMerliceRow1Plant1: JSON.parse(text50Value) });
+          this.setState({ floweringTrussssRepMerliceRow1Plant2: JSON.parse(text50Value) });
         }
 
-        console.log("ttttttttttttttttttttttttttttt : "+this.state.floweringTrussssRepMerliceRow1Plant1)
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('settingTrussNumberRepMerliceRow1Plant1').then((text51Value) => {
+      AsyncStorage.getItem('settingTrussNumberRepMerliceRow1Plant2').then((text51Value) => {
 
         if (text51Value !== null) {
-          this.setState({ settingTrussNumberRepMerliceRow1Plant1: JSON.parse(text51Value) });
+          this.setState({ settingTrussNumberRepMerliceRow1Plant2: JSON.parse(text51Value) });
         }
 
-        console.log("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy : "+this.state.settingTrussNumberRepMerliceRow1Plant1)
 
 
       }).done();
     } catch (error) {
     }
     try {
-      AsyncStorage.getItem('harvestTrussRepMerliceRow1Plant1').then((text52Value) => {
+      AsyncStorage.getItem('harvestTrussRepMerliceRow1Plant2').then((text52Value) => {
 
         if (text52Value !== null) {
-          this.setState({ harvestTrussRepMerliceRow1Plant1: JSON.parse(text52Value) });
+          this.setState({ harvestTrussRepMerliceRow1Plant2: JSON.parse(text52Value) });
         }
 
 
@@ -814,9 +1087,9 @@ export default class RepMerliceRow1Plant1 extends Component {
 
 
     /*try {
-      AsyncStorage.getItem('trussNumberRepMerliceRow1Plant1').then((text10Value) => {
-        this.setState({ trussNumberRepMerliceRow1Plant1: JSON.parse(text10Value) });
-        console.log(this.state.trussNumberRepMerliceRow1Plant1)
+      AsyncStorage.getItem('trussNumberRepMerliceRow1Plant2').then((text10Value) => {
+        this.setState({ trussNumberRepMerliceRow1Plant2: JSON.parse(text10Value) });
+        console.log(this.state.trussNumberRepMerliceRow1Plant2)
 
 
 
@@ -825,9 +1098,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruitsRepMerliceRow1Plant1').then((text11Value) => {
-        this.setState({ setFruitsRepMerliceRow1Plant1: JSON.parse(text11Value) });
-        console.log(this.state.setFruitsRepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFruitsRepMerliceRow1Plant2').then((text11Value) => {
+        this.setState({ setFruitsRepMerliceRow1Plant2: JSON.parse(text11Value) });
+        console.log(this.state.setFruitsRepMerliceRow1Plant2)
 
 
 
@@ -836,9 +1109,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowersRepMerliceRow1Plant1').then((text12Value) => {
-        this.setState({ setFlowersRepMerliceRow1Plant1: JSON.parse(text12Value) });
-        console.log(this.state.setFlowersRepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFlowersRepMerliceRow1Plant2').then((text12Value) => {
+        this.setState({ setFlowersRepMerliceRow1Plant2: JSON.parse(text12Value) });
+        console.log(this.state.setFlowersRepMerliceRow1Plant2)
 
 
 
@@ -847,9 +1120,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumberRepMerliceRow1Plant1').then((text13Value) => {
-        this.setState({ pruningNumberRepMerliceRow1Plant1: JSON.parse(text13Value) });
-        console.log(this.state.pruningNumberRepMerliceRow1Plant1)
+      AsyncStorage.getItem('pruningNumberRepMerliceRow1Plant2').then((text13Value) => {
+        this.setState({ pruningNumberRepMerliceRow1Plant2: JSON.parse(text13Value) });
+        console.log(this.state.pruningNumberRepMerliceRow1Plant2)
 
 
 
@@ -858,9 +1131,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameterRepMerliceRow1Plant1').then((text14Value) => {
-        this.setState({ fruitDiameterRepMerliceRow1Plant1: JSON.parse(text14Value) });
-        console.log(this.state.fruitDiameterRepMerliceRow1Plant1)
+      AsyncStorage.getItem('fruitDiameterRepMerliceRow1Plant2').then((text14Value) => {
+        this.setState({ fruitDiameterRepMerliceRow1Plant2: JSON.parse(text14Value) });
+        console.log(this.state.fruitDiameterRepMerliceRow1Plant2)
 
 
 
@@ -869,9 +1142,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits1RepMerliceRow1Plant1').then((text15Value) => {
-        this.setState({ setFruits1RepMerliceRow1Plant1: JSON.parse(text15Value) });
-        console.log(this.state.setFruits1RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFruits1RepMerliceRow1Plant2').then((text15Value) => {
+        this.setState({ setFruits1RepMerliceRow1Plant2: JSON.parse(text15Value) });
+        console.log(this.state.setFruits1RepMerliceRow1Plant2)
 
 
 
@@ -880,9 +1153,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers1RepMerliceRow1Plant1').then((text16Value) => {
-        this.setState({ setFlowers1RepMerliceRow1Plant1: JSON.parse(text16Value) });
-        console.log(this.state.setFlowers1RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFlowers1RepMerliceRow1Plant2').then((text16Value) => {
+        this.setState({ setFlowers1RepMerliceRow1Plant2: JSON.parse(text16Value) });
+        console.log(this.state.setFlowers1RepMerliceRow1Plant2)
 
 
 
@@ -891,9 +1164,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber1RepMerliceRow1Plant1').then((text17Value) => {
-        this.setState({ pruningNumber1RepMerliceRow1Plant1: JSON.parse(text17Value) });
-        console.log(this.state.pruningNumber1RepMerliceRow1Plant1)
+      AsyncStorage.getItem('pruningNumber1RepMerliceRow1Plant2').then((text17Value) => {
+        this.setState({ pruningNumber1RepMerliceRow1Plant2: JSON.parse(text17Value) });
+        console.log(this.state.pruningNumber1RepMerliceRow1Plant2)
 
 
 
@@ -902,9 +1175,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter1RepMerliceRow1Plant1').then((text18Value) => {
-        this.setState({ fruitDiameter1RepMerliceRow1Plant1: JSON.parse(text18Value) });
-        console.log(this.state.fruitDiameter1RepMerliceRow1Plant1)
+      AsyncStorage.getItem('fruitDiameter1RepMerliceRow1Plant2').then((text18Value) => {
+        this.setState({ fruitDiameter1RepMerliceRow1Plant2: JSON.parse(text18Value) });
+        console.log(this.state.fruitDiameter1RepMerliceRow1Plant2)
 
 
 
@@ -913,9 +1186,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits2RepMerliceRow1Plant1').then((text19Value) => {
-        this.setState({ setFruits2RepMerliceRow1Plant1: JSON.parse(text19Value) });
-        console.log(this.state.setFruits2RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFruits2RepMerliceRow1Plant2').then((text19Value) => {
+        this.setState({ setFruits2RepMerliceRow1Plant2: JSON.parse(text19Value) });
+        console.log(this.state.setFruits2RepMerliceRow1Plant2)
 
 
 
@@ -924,9 +1197,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers2RepMerliceRow1Plant1').then((text20Value) => {
-        this.setState({ setFlowers2RepMerliceRow1Plant1: JSON.parse(text20Value) });
-        console.log(this.state.setFlowers2RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFlowers2RepMerliceRow1Plant2').then((text20Value) => {
+        this.setState({ setFlowers2RepMerliceRow1Plant2: JSON.parse(text20Value) });
+        console.log(this.state.setFlowers2RepMerliceRow1Plant2)
 
 
 
@@ -935,9 +1208,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber2RepMerliceRow1Plant1').then((text21Value) => {
-        this.setState({ pruningNumber2RepMerliceRow1Plant1: JSON.parse(text21Value) });
-        console.log(this.state.pruningNumber2RepMerliceRow1Plant1)
+      AsyncStorage.getItem('pruningNumber2RepMerliceRow1Plant2').then((text21Value) => {
+        this.setState({ pruningNumber2RepMerliceRow1Plant2: JSON.parse(text21Value) });
+        console.log(this.state.pruningNumber2RepMerliceRow1Plant2)
 
 
 
@@ -946,9 +1219,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter2RepMerliceRow1Plant1').then((text22Value) => {
-        this.setState({ fruitDiameter2RepMerliceRow1Plant1: JSON.parse(text22Value) });
-        console.log(this.state.fruitDiameter2RepMerliceRow1Plant1)
+      AsyncStorage.getItem('fruitDiameter2RepMerliceRow1Plant2').then((text22Value) => {
+        this.setState({ fruitDiameter2RepMerliceRow1Plant2: JSON.parse(text22Value) });
+        console.log(this.state.fruitDiameter2RepMerliceRow1Plant2)
 
 
 
@@ -957,9 +1230,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits3RepMerliceRow1Plant1').then((text23Value) => {
-        this.setState({ setFruits3RepMerliceRow1Plant1: JSON.parse(text23Value) });
-        console.log(this.state.setFruits3RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFruits3RepMerliceRow1Plant2').then((text23Value) => {
+        this.setState({ setFruits3RepMerliceRow1Plant2: JSON.parse(text23Value) });
+        console.log(this.state.setFruits3RepMerliceRow1Plant2)
 
 
 
@@ -968,9 +1241,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers3RepMerliceRow1Plant1').then((text24Value) => {
-        this.setState({ setFlowers3RepMerliceRow1Plant1: JSON.parse(text24Value) });
-        console.log(this.state.setFlowers3RepMerliceRow1Plant1)
+      AsyncStorage.getItem('setFlowers3RepMerliceRow1Plant2').then((text24Value) => {
+        this.setState({ setFlowers3RepMerliceRow1Plant2: JSON.parse(text24Value) });
+        console.log(this.state.setFlowers3RepMerliceRow1Plant2)
 
 
 
@@ -979,9 +1252,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber3RepMerliceRow1Plant1').then((text25Value) => {
-        this.setState({ pruningNumber3RepMerliceRow1Plant1: JSON.parse(text25Value) });
-        console.log(this.state.pruningNumber3RepMerliceRow1Plant1)
+      AsyncStorage.getItem('pruningNumber3RepMerliceRow1Plant2').then((text25Value) => {
+        this.setState({ pruningNumber3RepMerliceRow1Plant2: JSON.parse(text25Value) });
+        console.log(this.state.pruningNumber3RepMerliceRow1Plant2)
 
 
 
@@ -990,9 +1263,9 @@ export default class RepMerliceRow1Plant1 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter3RepMerliceRow1Plant1').then((text26Value) => {
-        this.setState({ fruitDiameter3RepMerliceRow1Plant1: JSON.parse(text26Value) });
-        console.log(this.state.fruitDiameter3RepMerliceRow1Plant1)
+      AsyncStorage.getItem('fruitDiameter3RepMerliceRow1Plant2').then((text26Value) => {
+        this.setState({ fruitDiameter3RepMerliceRow1Plant2: JSON.parse(text26Value) });
+        console.log(this.state.fruitDiameter3RepMerliceRow1Plant2)
 
 
 
@@ -1040,18 +1313,18 @@ export default class RepMerliceRow1Plant1 extends Component {
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 1 })
-    this.setState({ trussNumber2RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 2 })
-    this.setState({ trussNumber3RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 3 })
-    this.setState({ trussNumber4RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 4 })
-    this.setState({ trussNumber5RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 5 })
-    this.setState({ trussNumber6RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 6 })
-    this.setState({ trussNumber7RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 7 })
-    this.setState({ trussNumber8RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 8 })
-    this.setState({ trussNumber9RepMerliceRow1Plant1: parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 9 })
+    this.setState({ trussNumber1RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1 })
+    this.setState({ trussNumber2RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2 })
+    this.setState({ trussNumber3RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3 })
+    this.setState({ trussNumber4RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4 })
+    this.setState({ trussNumber5RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5 })
+    this.setState({ trussNumber6RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6 })
+    this.setState({ trussNumber7RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7 })
+    this.setState({ trussNumber8RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8 })
+    this.setState({ trussNumber9RepMerliceRow1Plant2: parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9 })
 
 
-    if (this.state.trussNumberRepMerliceRow1Plant1 !== "") {
+    if (this.state.trussNumberRepMerliceRow1Plant2 !== "") {
 
       this.calculateSettingTruss2();
       this.calculateFloweringTruss2();
@@ -1068,12 +1341,13 @@ export default class RepMerliceRow1Plant1 extends Component {
   calculateFruitLoad = () => {
 
     var sum = 0;
-    sum = ((parseInt(this.state.setFruitsRepMerliceRow1Plant1) ? parseInt(this.state.setFruitsRepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits1RepMerliceRow1Plant1) ? parseInt(this.state.setFruits1RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits2RepMerliceRow1Plant1) ? parseInt(this.state.setFruits2RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits3RepMerliceRow1Plant1) ? parseInt(this.state.setFruits3RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits4RepMerliceRow1Plant1) ? parseInt(this.state.setFruits4RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits5RepMerliceRow1Plant1) ? parseInt(this.state.setFruits5RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits6RepMerliceRow1Plant1) ? parseInt(this.state.setFruits6RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits7RepMerliceRow1Plant1) ? parseInt(this.state.setFruits7RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits8RepMerliceRow1Plant1) ? parseInt(this.state.setFruits8RepMerliceRow1Plant1) : 0) + (parseInt(this.state.setFruits9RepMerliceRow1Plant1) ? parseInt(this.state.setFruits9RepMerliceRow1Plant1) : 0));
+
+    sum = ((parseInt(this.state.setFruitsRepMerliceRow1Plant2) ? parseInt(this.state.setFruitsRepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits1RepMerliceRow1Plant2) ? parseInt(this.state.setFruits1RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits2RepMerliceRow1Plant2) ? parseInt(this.state.setFruits2RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits3RepMerliceRow1Plant2) ? parseInt(this.state.setFruits3RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits4RepMerliceRow1Plant2) ? parseInt(this.state.setFruits4RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits5RepMerliceRow1Plant2) ? parseInt(this.state.setFruits5RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits6RepMerliceRow1Plant2) ? parseInt(this.state.setFruits6RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits7RepMerliceRow1Plant2) ? parseInt(this.state.setFruits7RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits8RepMerliceRow1Plant2) ? parseInt(this.state.setFruits8RepMerliceRow1Plant2) : 0) + (parseInt(this.state.setFruits9RepMerliceRow1Plant2) ? parseInt(this.state.setFruits9RepMerliceRow1Plant2) : 0));
     this.setState({
-      fruitLoadRepMerliceRow1Plant1: sum,
+      fruitLoadRepMerliceRow1Plant2: sum,
     });
 
-    this.setItem("fruitLoadRepMerliceRow1Plant1", this.state.fruitLoadRepMerliceRow1Plant1)
+    this.setItem("fruitLoadRepMerliceRow1Plant2", this.state.fruitLoadRepMerliceRow1Plant2)
 
     console.log("Fruit Load : " + sum);
 
@@ -1088,32 +1362,32 @@ export default class RepMerliceRow1Plant1 extends Component {
     var add = 0;
     var prunNum = 0;
 
-    if (this.state.setFlowersRepMerliceRow1Plant1 === "") {
+    if (this.state.setFlowersRepMerliceRow1Plant2 === "") {
 
-      prunNum = parseInt(this.state.pruningNumberRepMerliceRow1Plant1)
+      prunNum = parseInt(this.state.pruningNumberRepMerliceRow1Plant2)
 
-      div = (parseInt((this.state.setFruitsRepMerliceRow1Plant1) ? (this.state.setFruitsRepMerliceRow1Plant1) : 0) / parseFloat((this.state.pruningNumberRepMerliceRow1Plant1) ? (this.state.pruningNumberRepMerliceRow1Plant1) : 0))
+      div = (parseInt((this.state.setFruitsRepMerliceRow1Plant2) ? (this.state.setFruitsRepMerliceRow1Plant2) : 0) / parseFloat((this.state.pruningNumberRepMerliceRow1Plant2) ? (this.state.pruningNumberRepMerliceRow1Plant2) : 0))
       sub = (1 - div);
-      add = (((parseInt(this.state.trussNumberRepMerliceRow1Plant1) ? parseInt(this.state.trussNumberRepMerliceRow1Plant1) : 0) + sub).toFixed(2))
+      add = (((parseInt(this.state.trussNumberRepMerliceRow1Plant2) ? parseInt(this.state.trussNumberRepMerliceRow1Plant2) : 0) + sub).toFixed(2))
       this.setState({
-        harvestTrussRepMerliceRow1Plant1: add,
-        pruningHar: prunNum,
+        harvestTrussRepMerliceRow1Plant2: add,
+        pruningHarRepMerliceRow1Plant2: prunNum,
       });
 
     } else {
 
-      prunNum = parseInt(this.state.pruningNumberRepMerliceRow1Plant1)
-      var num = this.state.trussNumberRepMerliceRow1Plant1
+      prunNum = parseInt(this.state.pruningNumberRepMerliceRow1Plant2)
+      var num = this.state.trussNumberRepMerliceRow1Plant2
 
       this.setState({
-        harvestTrussRepMerliceRow1Plant1: num,
-        pruningHar: prunNum,
+        harvestTrussRepMerliceRow1Plant2: num,
+        pruningHarRepMerliceRow1Plant2: prunNum,
       });
     }
 
     console.log("Harvest Truss : " + add);
 
-    this.setItem("harvestTrussRepMerliceRow1Plant1", this.state.harvestTrussRepMerliceRow1Plant1)
+    this.setItem("harvestTrussRepMerliceRow1Plant2", this.state.harvestTrussRepMerliceRow1Plant2)
 
 
 
@@ -1129,148 +1403,147 @@ export default class RepMerliceRow1Plant1 extends Component {
     var settingFruit = 0;
     var trussNum = 0;
 
-    console.log("Setting truss called : " + this.state.setFruits2RepMerliceRow1Plant1);
+    console.log("Setting truss called : " + this.state.setFruits2RepMerliceRow1Plant2);
 
-    if (this.state.setFruits9RepMerliceRow1Plant1 === "") {
+    if (this.state.setFruits9RepMerliceRow1Plant2 === "") {
 
-      if (this.state.setFruits8RepMerliceRow1Plant1 === "") {
+      if (this.state.setFruits8RepMerliceRow1Plant2 === "") {
 
-        if (this.state.setFruits7RepMerliceRow1Plant1 === "") {
+        if (this.state.setFruits7RepMerliceRow1Plant2 === "") {
 
-          if (this.state.setFruits6RepMerliceRow1Plant1 === "") {
+          if (this.state.setFruits6RepMerliceRow1Plant2 === "") {
 
-            if (this.state.setFruits5RepMerliceRow1Plant1 === "") {
+            if (this.state.setFruits5RepMerliceRow1Plant2 === "") {
 
-              if (this.state.setFruits4RepMerliceRow1Plant1 === "") {
+              if (this.state.setFruits4RepMerliceRow1Plant2 === "") {
 
-                if (this.state.setFruits3RepMerliceRow1Plant1 === "") {
+                if (this.state.setFruits3RepMerliceRow1Plant2 === "") {
 
-                  if (this.state.setFruits2RepMerliceRow1Plant1 === "") {
+                  if (this.state.setFruits2RepMerliceRow1Plant2 === "") {
 
-                    if (this.state.setFruits1RepMerliceRow1Plant1 === "") {
+                    if (this.state.setFruits1RepMerliceRow1Plant2 === "") {
 
-                      if (this.state.setFruitsRepMerliceRow1Plant1 === "") {
+                      if (this.state.setFruitsRepMerliceRow1Plant2 === "") {
 
 
                       } else {
 
-                        pruningSet = parseInt(this.state.pruningNumberRepMerliceRow1Plant1);
-                        trussNum = parseInt(this.state.trussNumberRepMerliceRow1Plant1);
-                        settingFruit = parseInt(this.state.setFruitsRepMerliceRow1Plant1);
+                        pruningSet = parseInt(this.state.pruningNumberRepMerliceRow1Plant2);
+                        trussNum = parseInt(this.state.trussNumberRepMerliceRow1Plant2);
+                        settingFruit = parseInt(this.state.setFruitsRepMerliceRow1Plant2);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number : " + settingTruss);
                         this.setState({
-                          settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                          settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                           settingTruss: trussNum,
-                          prunSetting: pruningSet,
+                          prunSettingRepMerliceRow1Plant2: pruningSet,
 
                         });
 
-                        this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
-
+                        this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
                       }
 
                     } else {
 
-                      var number = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 1)
+                      var number = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1)
 
-                      pruningSet = parseInt(this.state.pruningNumber1RepMerliceRow1Plant1);
+                      pruningSet = parseInt(this.state.pruningNumber1RepMerliceRow1Plant2);
                       trussNum = parseInt(number);
-                      settingFruit = parseInt(this.state.setFruits1RepMerliceRow1Plant1);
+                      settingFruit = parseInt(this.state.setFruits1RepMerliceRow1Plant2);
                       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                       console.log("Setting Truss Number 1 : " + settingTruss);
                       this.setState({
-                        settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                        settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                         settingTruss: trussNum,
-                        prunSetting: pruningSet,
+                        prunSettingRepMerliceRow1Plant2: pruningSet,
 
                       });
 
-                      this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+                      this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
                     }
 
                   } else {
 
-                    var number2 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 2)
+                    var number2 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2)
 
-                    pruningSet = parseInt(this.state.pruningNumber2RepMerliceRow1Plant1);
+                    pruningSet = parseInt(this.state.pruningNumber2RepMerliceRow1Plant2);
                     trussNum = parseInt(number2);
-                    settingFruit = parseInt(this.state.setFruits2RepMerliceRow1Plant1);
+                    settingFruit = parseInt(this.state.setFruits2RepMerliceRow1Plant2);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 2 : " + settingTruss);
                     this.setState({
-                      settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                      settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                       settingTruss: trussNum,
-                      prunSetting: pruningSet,
+                      prunSettingRepMerliceRow1Plant2: pruningSet,
 
                     });
-                    this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+                    this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
                   }
 
                 } else {
 
-                  var number3 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 3)
+                  var number3 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3)
 
-                  pruningSet = parseInt(this.state.pruningNumber3RepMerliceRow1Plant1);
+                  pruningSet = parseInt(this.state.pruningNumber3RepMerliceRow1Plant2);
                   trussNum = parseInt(number3);
-                  settingFruit = parseInt(this.state.setFruits3RepMerliceRow1Plant1);
+                  settingFruit = parseInt(this.state.setFruits3RepMerliceRow1Plant2);
                   settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                   console.log("Setting Truss Number 3 : " + settingTruss);
                   this.setState({
-                    settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                    settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                     settingTruss: trussNum,
-                    prunSetting: pruningSet,
+                    prunSettingRepMerliceRow1Plant2: pruningSet,
 
                   });
 
-                  this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+                  this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
                 }
 
               } else {
 
-                var number4 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 4)
+                var number4 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4)
 
-                pruningSet = parseInt(this.state.pruningNumber4RepMerliceRow1Plant1);
+                pruningSet = parseInt(this.state.pruningNumber4RepMerliceRow1Plant2);
                 trussNum = parseInt(number4);
-                settingFruit = parseInt(this.state.setFruits4RepMerliceRow1Plant1);
+                settingFruit = parseInt(this.state.setFruits4RepMerliceRow1Plant2);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 4 : " + settingTruss);
                 this.setState({
-                  settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                  settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                   settingTruss: trussNum,
-                  prunSetting: pruningSet,
+                  prunSettingRepMerliceRow1Plant2: pruningSet,
 
                 });
 
-                this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+                this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
               }
 
             } else {
 
-              var number5 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 5)
+              var number5 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5)
 
-              pruningSet = parseInt(this.state.pruningNumber5RepMerliceRow1Plant1);
+              pruningSet = parseInt(this.state.pruningNumber5RepMerliceRow1Plant2);
               trussNum = parseInt(number5);
-              settingFruit = parseInt(this.state.setFruits5RepMerliceRow1Plant1);
+              settingFruit = parseInt(this.state.setFruits5RepMerliceRow1Plant2);
               settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
               console.log("Setting Truss Number 5 : " + settingTruss);
               this.setState({
-                settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+                settingTrussNumberRepMerliceRow1Plant2: settingTruss,
                 settingTruss: trussNum,
-                prunSetting: pruningSet,
+                prunSettingRepMerliceRow1Plant2: pruningSet,
 
               });
 
-              this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+              this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
 
@@ -1278,81 +1551,81 @@ export default class RepMerliceRow1Plant1 extends Component {
 
           } else {
 
-            var number6 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 6)
+            var number6 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6)
 
-            pruningSet = parseInt(this.state.pruningNumber6RepMerliceRow1Plant1);
+            pruningSet = parseInt(this.state.pruningNumber6RepMerliceRow1Plant2);
             trussNum = parseInt(number6);
-            settingFruit = parseInt(this.state.setFruits6RepMerliceRow1Plant1);
+            settingFruit = parseInt(this.state.setFruits6RepMerliceRow1Plant2);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 6 : " + settingTruss);
             this.setState({
-              settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+              settingTrussNumberRepMerliceRow1Plant2: settingTruss,
               settingTruss: trussNum,
-              prunSetting: pruningSet,
+              prunSettingRepMerliceRow1Plant2: pruningSet,
 
             });
 
-            this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+            this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
           }
 
         } else {
-          var number7 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 7)
+          var number7 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7)
 
-          pruningSet = parseInt(this.state.pruningNumber7RepMerliceRow1Plant1);
+          pruningSet = parseInt(this.state.pruningNumber7RepMerliceRow1Plant2);
           trussNum = parseInt(number7);
-          settingFruit = parseInt(this.state.setFruits7RepMerliceRow1Plant1);
+          settingFruit = parseInt(this.state.setFruits7RepMerliceRow1Plant2);
           settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
           console.log("Setting Truss Number 7 : " + settingTruss);
           this.setState({
-            settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+            settingTrussNumberRepMerliceRow1Plant2: settingTruss,
             settingTruss: trussNum,
-            prunSetting: pruningSet,
+            prunSettingRepMerliceRow1Plant2: pruningSet,
 
           });
 
-          this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+          this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
         }
 
       } else {
 
-        var number8 = (parseInt(this.state.trussNumberRepMerliceRow1Plant1) + 8)
+        var number8 = (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8)
 
-        pruningSet = parseInt(this.state.pruningNumber8RepMerliceRow1Plant1);
+        pruningSet = parseInt(this.state.pruningNumber8RepMerliceRow1Plant2);
         trussNum = parseInt(number8);
-        settingFruit = parseInt(this.state.setFruits8RepMerliceRow1Plant1);
+        settingFruit = parseInt(this.state.setFruits8RepMerliceRow1Plant2);
         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
         console.log("Setting Truss Number 8 : " + settingTruss);
         this.setState({
-          settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+          settingTrussNumberRepMerliceRow1Plant2: settingTruss,
           settingTruss: trussNum,
-          prunSetting: pruningSet,
+          prunSettingRepMerliceRow1Plant2: pruningSet,
 
         });
 
-        this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+        this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
       }
 
     } else {
 
-      var number9 = (ParseInt(this.state.trussNumberRepMerliceRow1Plant1) + 9)
+      var number9 = (ParseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9)
 
-      pruningSet = parseInt(this.state.pruningNumber9RepMerliceRow1Plant1);
+      pruningSet = parseInt(this.state.pruningNumber9RepMerliceRow1Plant2);
       trussNum = parseInt(number9);
-      settingFruit = parseInt(this.state.setFruits9RepMerliceRow1Plant1);
+      settingFruit = parseInt(this.state.setFruits9RepMerliceRow1Plant2);
       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
       console.log("Setting Truss Number 9 : " + settingTruss);
       this.setState({
-        settingTrussNumberRepMerliceRow1Plant1: settingTruss,
+        settingTrussNumberRepMerliceRow1Plant2: settingTruss,
         settingTruss2: trussNum,
-        prunSetting: pruningSet,
+        prunSettingRepMerliceRow1Plant2: pruningSet,
       });
 
-      this.setItem("settingTrussNumberRepMerliceRow1Plant1", settingTruss)
+      this.setItem("settingTrussNumberRepMerliceRow1Plant2", settingTruss)
 
 
     }
@@ -1371,68 +1644,68 @@ export default class RepMerliceRow1Plant1 extends Component {
     var floweringTruss = 0;
     var trussNum = 0;
 
-    console.log("Flowering truss called : " + this.state.setFlowers2RepMerliceRow1Plant1);
+    console.log("Flowering truss called : " + this.state.setFlowers2RepMerliceRow1Plant2);
 
 
-    if (this.state.setFlowers9RepMerliceRow1Plant1 === "") {
+    if (this.state.setFlowers9RepMerliceRow1Plant2 === "") {
 
-      if (this.state.setFlowers8RepMerliceRow1Plant1 === "") {
+      if (this.state.setFlowers8RepMerliceRow1Plant2 === "") {
 
-        if (this.state.setFlowers7RepMerliceRow1Plant1 === "") {
+        if (this.state.setFlowers7RepMerliceRow1Plant2 === "") {
 
-          if (this.state.setFlowers6RepMerliceRow1Plant1 === "") {
+          if (this.state.setFlowers6RepMerliceRow1Plant2 === "") {
 
-            if (this.state.setFlowers5RepMerliceRow1Plant1 === "") {
+            if (this.state.setFlowers5RepMerliceRow1Plant2 === "") {
 
-              if (this.state.setFlowers4RepMerliceRow1Plant1 === "") {
+              if (this.state.setFlowers4RepMerliceRow1Plant2 === "") {
 
-                if (this.state.setFlowers3RepMerliceRow1Plant1 === "") {
+                if (this.state.setFlowers3RepMerliceRow1Plant2 === "") {
 
-                  if (this.state.setFlowers2RepMerliceRow1Plant1 === "") {
+                  if (this.state.setFlowers2RepMerliceRow1Plant2 === "") {
 
-                    if (this.state.setFlowers1RepMerliceRow1Plant1 === "") {
+                    if (this.state.setFlowers1RepMerliceRow1Plant2 === "") {
 
-                      if (this.state.setFlowersRepMerliceRow1Plant1 === "") {
+                      if (this.state.setFlowersRepMerliceRow1Plant2 === "") {
 
 
                       } else {
 
-                        var number01 = this.state.trussNumberRepMerliceRow1Plant1
+                        var number01 = this.state.trussNumberRepMerliceRow1Plant2
 
 
-                        flowerPruningNumner = parseInt(this.state.pruningNumberRepMerliceRow1Plant1);
-                        flowering = parseInt(this.state.setFlowersRepMerliceRow1Plant1);
-                        flowerSetFruits = parseInt(this.state.setFruitsRepMerliceRow1Plant1);
+                        flowerPruningNumner = parseInt(this.state.pruningNumberRepMerliceRow1Plant2);
+                        flowering = parseInt(this.state.setFlowersRepMerliceRow1Plant2);
+                        flowerSetFruits = parseInt(this.state.setFruitsRepMerliceRow1Plant2);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                         floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
-                          floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                          pruneFlowering: flowerPruningNumner,
+                          floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                          pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
                         });
-                        this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+                        this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
                       }
 
 
                     } else {
 
-                      var number11 = + (this.state.trussNumberRepMerliceRow1Plant1) + 1
+                      var number11 = + (this.state.trussNumberRepMerliceRow1Plant2) + 1
 
                       console.log("oooooooooooooooooooooooooooooo : " + number11);
-                      flowerPruningNumner = parseInt(this.state.pruningNumber1RepMerliceRow1Plant1);
-                      flowering = parseInt(this.state.setFlowers1RepMerliceRow1Plant1);
-                      flowerSetFruits = parseInt(this.state.setFruits1RepMerliceRow1Plant1);
+                      flowerPruningNumner = parseInt(this.state.pruningNumber1RepMerliceRow1Plant2);
+                      flowering = parseInt(this.state.setFlowers1RepMerliceRow1Plant2);
+                      flowerSetFruits = parseInt(this.state.setFruits1RepMerliceRow1Plant2);
                       trussNum = number11
                       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                       floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                       console.log("Flowering Truss Value : " + floweringTruss);
                       this.setState({
-                        floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                        pruneFlowering: flowerPruningNumner,
+                        floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                        pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
                       });
-                      this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+                      this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
                     }
@@ -1440,20 +1713,20 @@ export default class RepMerliceRow1Plant1 extends Component {
 
                   } else {
 
-                    var number21 = + (this.state.trussNumberRepMerliceRow1Plant1) + 2
+                    var number21 = + (this.state.trussNumberRepMerliceRow1Plant2) + 2
 
-                    flowerPruningNumner = parseInt(this.state.pruningNumber2RepMerliceRow1Plant1);
-                    flowering = parseInt(this.state.setFlowers2RepMerliceRow1Plant1);
-                    flowerSetFruits = parseInt(this.state.setFruits2RepMerliceRow1Plant1);
+                    flowerPruningNumner = parseInt(this.state.pruningNumber2RepMerliceRow1Plant2);
+                    flowering = parseInt(this.state.setFlowers2RepMerliceRow1Plant2);
+                    flowerSetFruits = parseInt(this.state.setFruits2RepMerliceRow1Plant2);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                     floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
-                      floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                      pruneFlowering: flowerPruningNumner,
+                      floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                      pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
                     });
-                    this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+                    this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
                   }
@@ -1461,42 +1734,42 @@ export default class RepMerliceRow1Plant1 extends Component {
 
                 } else {
 
-                  var number31 = + (this.state.trussNumberRepMerliceRow1Plant1) + 3
+                  var number31 = + (this.state.trussNumberRepMerliceRow1Plant2) + 3
 
-                  flowerPruningNumner = parseInt(this.state.pruningNumber3RepMerliceRow1Plant1);
-                  flowering = parseInt(this.state.setFlowers3RepMerliceRow1Plant1);
-                  flowerSetFruits = parseInt(this.state.setFruits3RepMerliceRow1Plant1);
+                  flowerPruningNumner = parseInt(this.state.pruningNumber3RepMerliceRow1Plant2);
+                  flowering = parseInt(this.state.setFlowers3RepMerliceRow1Plant2);
+                  flowerSetFruits = parseInt(this.state.setFruits3RepMerliceRow1Plant2);
                   summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                   floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                   console.log("Flowering Truss Value : " + floweringTruss);
                   this.setState({
-                    floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                    pruneFlowering: flowerPruningNumner,
+                    floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                    pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
                   });
 
-                  this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+                  this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
                 }
 
 
               } else {
 
-                var number41 = + (this.state.trussNumberRepMerliceRow1Plant1) + 4
+                var number41 = + (this.state.trussNumberRepMerliceRow1Plant2) + 4
 
-                flowerPruningNumner = parseInt(this.state.pruningNumber4RepMerliceRow1Plant1);
-                flowering = parseInt(this.state.setFlowers4RepMerliceRow1Plant1);
-                flowerSetFruits = parseInt(this.state.setFruits4RepMerliceRow1Plant1);
+                flowerPruningNumner = parseInt(this.state.pruningNumber4RepMerliceRow1Plant2);
+                flowering = parseInt(this.state.setFlowers4RepMerliceRow1Plant2);
+                flowerSetFruits = parseInt(this.state.setFruits4RepMerliceRow1Plant2);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
                 floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
-                  floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                  pruneFlowering: flowerPruningNumner,
+                  floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                  pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
                 });
 
-                this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+                this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
               }
@@ -1504,21 +1777,21 @@ export default class RepMerliceRow1Plant1 extends Component {
 
             } else {
 
-              var number51 = + (this.state.trussNumberRepMerliceRow1Plant1) + 5
+              var number51 = + (this.state.trussNumberRepMerliceRow1Plant2) + 5
 
-              flowerPruningNumner = parseInt(this.state.pruningNumber5RepMerliceRow1Plant1);
-              flowering = parseInt(this.state.setFlowers5RepMerliceRow1Plant1);
-              flowerSetFruits = parseInt(this.state.setFruits5RepMerliceRow1Plant1);
+              flowerPruningNumner = parseInt(this.state.pruningNumber5RepMerliceRow1Plant2);
+              flowering = parseInt(this.state.setFlowers5RepMerliceRow1Plant2);
+              flowerSetFruits = parseInt(this.state.setFruits5RepMerliceRow1Plant2);
               summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
               floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
               console.log("Flowering Truss Value : " + floweringTruss);
               this.setState({
-                floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-                pruneFlowering: flowerPruningNumner,
+                floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+                pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
               });
 
-              this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+              this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
             }
@@ -1526,21 +1799,21 @@ export default class RepMerliceRow1Plant1 extends Component {
 
           } else {
 
-            var number61 = + (this.state.trussNumberRepMerliceRow1Plant1) + 6
+            var number61 = + (this.state.trussNumberRepMerliceRow1Plant2) + 6
 
-            flowerPruningNumner = parseInt(this.state.pruningNumber6RepMerliceRow1Plant1);
-            flowering = parseInt(this.state.setFlowers6RepMerliceRow1Plant1);
-            flowerSetFruits = parseInt(this.state.setFruits6RepMerliceRow1Plant1);
+            flowerPruningNumner = parseInt(this.state.pruningNumber6RepMerliceRow1Plant2);
+            flowering = parseInt(this.state.setFlowers6RepMerliceRow1Plant2);
+            flowerSetFruits = parseInt(this.state.setFruits6RepMerliceRow1Plant2);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
             floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
-              floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-              pruneFlowering: flowerPruningNumner,
+              floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+              pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
             });
 
-            this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+            this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
           }
@@ -1548,42 +1821,42 @@ export default class RepMerliceRow1Plant1 extends Component {
 
         } else {
 
-          var number71 = + (this.state.trussNumberRepMerliceRow1Plant1) + 7
+          var number71 = + (this.state.trussNumberRepMerliceRow1Plant2) + 7
 
-          flowerPruningNumner = parseInt(this.state.pruningNumber7RepMerliceRow1Plant1);
-          flowering = parseInt(this.state.setFlowers7RepMerliceRow1Plant1);
-          flowerSetFruits = parseInt(this.state.setFruits7RepMerliceRow1Plant1);
+          flowerPruningNumner = parseInt(this.state.pruningNumber7RepMerliceRow1Plant2);
+          flowering = parseInt(this.state.setFlowers7RepMerliceRow1Plant2);
+          flowerSetFruits = parseInt(this.state.setFruits7RepMerliceRow1Plant2);
           summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
           floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
           console.log("Flowering Truss Value : " + floweringTruss);
           this.setState({
-            floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-            pruneFlowering: flowerPruningNumner,
+            floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+            pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
           });
 
-          this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+          this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
         }
 
 
       } else {
-        var number81 = + (this.state.trussNumberRepMerliceRow1Plant1) + 8
+        var number81 = + (this.state.trussNumberRepMerliceRow1Plant2) + 8
 
-        flowerPruningNumner = parseInt(this.state.pruningNumber8RepMerliceRow1Plant1);
-        flowering = parseInt(this.state.setFlowers8RepMerliceRow1Plant1);
-        flowerSetFruits = parseInt(this.state.setFruits8RepMerliceRow1Plant1);
+        flowerPruningNumner = parseInt(this.state.pruningNumber8RepMerliceRow1Plant2);
+        flowering = parseInt(this.state.setFlowers8RepMerliceRow1Plant2);
+        flowerSetFruits = parseInt(this.state.setFruits8RepMerliceRow1Plant2);
         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
         floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
         console.log("Flowering Truss Value : " + floweringTruss);
         this.setState({
-          floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-          pruneFlowering: flowerPruningNumner,
+          floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+          pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
         });
 
-        this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+        this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
       }
@@ -1591,21 +1864,21 @@ export default class RepMerliceRow1Plant1 extends Component {
 
     } else {
 
-      var number91 = + (this.state.trussNumberRepMerliceRow1Plant1) + 9
+      var number91 = + (this.state.trussNumberRepMerliceRow1Plant2) + 9
 
-      flowerPruningNumner = parseInt(this.state.pruningNumber9RepMerliceRow1Plant1);
-      flowering = parseInt(this.state.setFlowers9RepMerliceRow1Plant1);
-      flowerSetFruits = parseInt(this.state.setFruits9RepMerliceRow1Plant1);
+      flowerPruningNumner = parseInt(this.state.pruningNumber9RepMerliceRow1Plant2);
+      flowering = parseInt(this.state.setFlowers9RepMerliceRow1Plant2);
+      flowerSetFruits = parseInt(this.state.setFruits9RepMerliceRow1Plant2);
       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
       floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
       console.log("Flowering Truss Value : " + floweringTruss);
       this.setState({
-        floweringTrussssRepMerliceRow1Plant1: floweringTruss,
-        pruneFlowering: flowerPruningNumner,
+        floweringTrussssRepMerliceRow1Plant2: floweringTruss,
+        pruneFloweringRepMerliceRow1Plant2: flowerPruningNumner,
 
       });
 
-      this.setItem("floweringTrussssRepMerliceRow1Plant1", floweringTruss)
+      this.setItem("floweringTrussssRepMerliceRow1Plant2", floweringTruss)
 
 
     }
@@ -1621,74 +1894,1631 @@ export default class RepMerliceRow1Plant1 extends Component {
 
   getTrussData = () => {
 
+    if (this.state.allTrussData.length != 0) {
 
-    /*if (this.state.trussNumber != null) {
+      //1st Truss
+      if (this.state.trussNumberRepMerliceRow1Plant2 != null) {
 
-       db.trussById(this.state.trussNumber, numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data) => {
-           console.log(data);
-           console.log("Calling database")
-           truss = data;
-           this.setState({
-               truss,
-               setFruits: data.setFruits,
-               setFlowers: data.setFlowers,
-               pruningNumber: data.pruningNumber,
-           });
-           console.log("Truss Details", this.state.truss);
+        //Change week number
+        const weekRowTruss1 = d => d.trussNumber === parseInt(this.state.trussNumberRepMerliceRow1Plant2);
 
-           this.calculateFruitLoad();
-           this.calculateharvestTrussRepMerliceRow1Plant1();
-           this.calculateSettingTruss2();
-           this.calculateFloweringTruss2();
+        const filteredweekRowTruss1 = this.state.allTrussData.filter(weekRowTruss1);
 
+        console.log("Truss 1 : " + JSON.stringify(filteredweekRowTruss1));
 
-       }).catch((err) => {
-           console.log(err);
+        if (filteredweekRowTruss1.length != 0) {
 
-       })
-   } else {
+          if (JSON.stringify(filteredweekRowTruss1[0].setFlowers) === 'null') {
 
+            this.setState({
 
-   }
-   
-   setTimeout(() => {
+              setFlowersRepMerliceRow1Plant2: "",
 
-           if ((parseInt(this.state.trussNumber) + 1) != null) {
+            })
 
-               db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data1) => {
-                   console.log(data1);
-                   console.log("Calling database")
-                   truss1 = data1;
-                   this.setState({
-                       truss1,
-                       setFruits1: data1.setFruits,
-                       setFlowers1: data1.setFlowers,
-                       pruningNumber1: data1.pruningNumber,
-                   });
-                   console.log("Truss Details", this.state.truss1);
+          } else {
 
-                   this.calculateFruitLoad();
-                   this.calculateHarvestTruss();
-                   this.calculateSettingTruss2();
-                   this.calculateFloweringTruss2();
+            this.setState({
+
+              setFlowersRepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss1[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].setFruits) === 'null') {
 
 
-               }).catch((err) => {
-                   console.log(err);
-
-               })
-           } else {
+            this.setState({
 
 
-           }
+              setFruitsRepMerliceRow1Plant2: "",
+
+            })
 
 
-       }, 1000); and so on....*/
+          } else {
 
+
+            this.setState({
+
+
+              setFruitsRepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss1[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumberRepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumberRepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss1[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+      //End
+
+
+      //2nd Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1) != null) {
+
+        //Change week number
+        const weekRowTruss2 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1);
+
+        const filteredweekRowTruss2 = this.state.allTrussData.filter(weekRowTruss2);
+
+        console.log("Truss 2 : " + JSON.stringify(filteredweekRowTruss2));
+
+        if (filteredweekRowTruss2.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers1RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers1RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss2[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits1RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits1RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss2[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber1RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber1RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss2[0].pruningNumber)
+
+            })
+
+          }
+
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //3rd Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2) != null) {
+
+        //Change week number
+        const weekRowTruss3 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2);
+
+        const filteredweekRowTruss3 = this.state.allTrussData.filter(weekRowTruss3);
+
+        console.log("Truss 3 : " + JSON.stringify(filteredweekRowTruss3));
+
+        if (filteredweekRowTruss3.length != 0) {
+
+
+          if (JSON.stringify(filteredweekRowTruss3[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers2RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers2RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss3[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss3[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits2RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits2RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss3[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss3[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber2RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber2RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss3[0].pruningNumber)
+
+            })
+
+
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //4th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3) != null) {
+
+        //Change week number
+        const weekRowTruss4 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3);
+
+        const filteredweekRowTruss4 = this.state.allTrussData.filter(weekRowTruss4);
+
+        console.log("Truss 4 : " + JSON.stringify(filteredweekRowTruss4));
+
+        if (filteredweekRowTruss4.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers3RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers3RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss4[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits3RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits3RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss4[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber3RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber3RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss4[0].pruningNumber)
+
+            })
+
+          }
+
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //5th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4) != null) {
+
+        //Change week number
+        const weekRowTruss5 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4);
+
+        const filteredweekRowTruss5 = this.state.allTrussData.filter(weekRowTruss5);
+
+        console.log("Truss 5 : " + JSON.stringify(filteredweekRowTruss5));
+
+        if (filteredweekRowTruss5.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers4RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers4RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss5[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits4RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits4RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss5[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber4RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber4RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss5[0].pruningNumber)
+
+            })
+
+          }
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //6th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5) != null) {
+
+        //Change week number
+        const weekRowTruss6 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5);
+
+        const filteredweekRowTruss6 = this.state.allTrussData.filter(weekRowTruss6);
+
+        console.log("Truss 6 : " + JSON.stringify(filteredweekRowTruss6));
+
+        if (filteredweekRowTruss6.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers5RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers5RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss6[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits5RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits5RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss6[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber5RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber5RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss6[0].pruningNumber)
+
+            })
+
+          }
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //7th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6) != null) {
+
+        //Change week number
+        const weekRowTruss7 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6);
+
+        const filteredweekRowTruss7 = this.state.allTrussData.filter(weekRowTruss7);
+
+        console.log("Truss 7 : " + JSON.stringify(filteredweekRowTruss7));
+
+        if (filteredweekRowTruss7.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers6RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers6RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss7[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits6RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits6RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss7[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber6RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber6RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss7[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //8th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7) != null) {
+
+        //Change week number
+        const weekRowTruss8 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7);
+
+        const filteredweekRowTruss8 = this.state.allTrussData.filter(weekRowTruss8);
+
+        console.log("Truss 8 : " + JSON.stringify(filteredweekRowTruss8));
+
+        if (filteredweekRowTruss8.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers7RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers7RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss8[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits7RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits7RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss8[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber7RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber7RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss8[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //9th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8) != null) {
+
+        //Change week number
+        const weekRowTruss9 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8);
+
+        const filteredweekRowTruss9 = this.state.allTrussData.filter(weekRowTruss9);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss9));
+
+        if (filteredweekRowTruss9.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers8RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers8RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss9[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits8RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits8RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss9[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber8RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber8RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss9[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //10th Truss
+      if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9) != null) {
+
+        //Change week number
+        const weekRowTruss10 = d => d.trussNumber === (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9);
+
+        const filteredweekRowTruss10 = this.state.allTrussData.filter(weekRowTruss10);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss10));
+
+        if (filteredweekRowTruss10.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers9RepMerliceRow1Plant2: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers9RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss10[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits9RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits9RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss10[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber9RepMerliceRow1Plant2: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber9RepMerliceRow1Plant2: JSON.stringify(filteredweekRowTruss10[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+    } else {
+
+      console.log("No data in the database")
+
+    }
   }
   //
 
   //DEFINE FOCUS
+
+  changeCheckbox = () => {
+
+    this.setState({ MerliceRow1Plant2Selected: !this.state.MerliceRow1Plant2Selected })
+
+    const vart = this.state.MerliceRow1Plant2Selected
+
+    const vart2 = false;
+
+    if (vart == null) {
+
+      this.setItem('MerliceRow1Plant2Selected', vart2)
+
+      EventRegister.emit('merliceRow1EventPlant2', vart2)
+
+    } else {
+
+      this.setItem('MerliceRow1Plant2Selected', vart)
+
+      EventRegister.emit('merliceRow1EventPlant2', vart)
+
+    }
+
+    this.checkStatus();
+
+  }
+
+  checkStatus = () => {
+
+    const vart = this.state.MerliceRow1Plant2Selected
+
+    if (vart == null || vart == false) {
+
+      this.setState({ checkboxStatus: 'CHECKED' })
+
+
+      let data = {
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        leavesPerPlant: this.state.leavesPerPlantRepMerliceRow1Plant2,
+        fullySetTruss: this.state.fullySetTrussRepMerliceRow1Plant2,
+        setTrussLength: this.state.setTrussLengthRepMerliceRow1Plant2,
+        weeklyGrowth: this.state.weeklyGrowthRepMerliceRow1Plant2,
+        floweringTrussHeight: this.state.floweringTrussHeightRepMerliceRow1Plant2,
+        leafLength: this.state.leafLengthRepMerliceRow1Plant2,
+        leafWidth: this.state.leafWidthRepMerliceRow1Plant2,
+        stmDiameter: this.state.stmDiameterRepMerliceRow1Plant2,
+        lastWeekStmDiameter: this.state.lastWeekStmDiameterRepMerliceRow1Plant2
+
+      }
+
+      db.addPlants(data).then((result) => {
+        console.log(result);
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+      this.saveTrussToDb();
+
+    } else {
+
+      this.setState({ checkboxStatus: 'UNCHECKED' })
+
+
+    }
+  }
+
+
+  saveTrussToDb = () => {
+
+    if (this.state.trussNumberRepMerliceRow1Plant2 !== null && this.state.pruningNumberRepMerliceRow1Plant2 !== null) {
+
+      let data = {
+        trussNumber: this.state.trussNumberRepMerliceRow1Plant2,
+        fruitDiameter: this.state.fruitDiameterRepMerliceRow1Plant2,
+        setFruits: this.state.setFruitsRepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowersRepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumberRepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+      }
+
+
+      db.addTrussDetails(data).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1) !== null && this.state.pruningNumber1RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB1();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB1 = () => {
+
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1) != null && this.state.pruningNumber1RepMerliceRow1Plant2 !== null) {
+
+
+      let data1 = {
+
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 1),
+        fruitDiameter: this.state.fruitDiameter1RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits1RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers1RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber1RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+
+      }
+
+
+
+
+      db.addTrussDetails(data1).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2) !== null && this.state.pruningNumber2RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB2();
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB2 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2) != null && this.state.pruningNumber2RepMerliceRow1Plant2 !== null) {
+
+
+      let data2 = {
+
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 2),
+        fruitDiameter: this.state.fruitDiameter2RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits2RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers2RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber2RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+      }
+
+
+
+
+      db.addTrussDetails(data2).then((result) => {
+        console.log(result);
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3) !== null && this.state.pruningNumber3RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB3();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+
+    }
+
+  }
+
+  saveTrussToDB3 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3) !== null && this.state.pruningNumber3RepMerliceRow1Plant2 !== null) {
+
+
+      let data3 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 3),
+        fruitDiameter: this.state.fruitDiameter3RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits3RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers3RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber3RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+
+      }
+
+
+      db.addTrussDetails(data3).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4) !== null && this.state.pruningNumber4RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB4();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB4 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4) != null && this.state.pruningNumber4RepMerliceRow1Plant2 !== null) {
+
+
+      let data4 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 4),
+        fruitDiameter: this.state.fruitDiameter4RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits4RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers4RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber4RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+
+      }
+
+
+
+      db.addTrussDetails(data4).then((result) => {
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5) !== null && this.state.pruningNumber5RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB5();
+
+
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB5 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5) != null && this.state.pruningNumber5RepMerliceRow1Plant2 !== null) {
+
+
+      let data5 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 5),
+        fruitDiameter: this.state.fruitDiameter5RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits5RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers5RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber5RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+      }
+
+
+
+      db.addTrussDetails(data5).then((result) => {
+        console.log(result);
+        this.setState({
+          isLoading: false,
+          isDataSend: true,
+
+        });
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6) !== null && this.state.pruningNumber6RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB6();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB6 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6) != null && this.state.pruningNumber6RepMerliceRow1Plant2 !== null) {
+
+
+      let data6 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 6),
+        fruitDiameter: this.state.fruitDiameter6RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits6RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers6RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber6RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+      }
+
+
+
+      db.addTrussDetails(data6).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7) !== null && this.state.pruningNumber7RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB7();
+
+
+        } else {
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB7 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7) != null && this.state.pruningNumber7RepMerliceRow1Plant2 !== null) {
+
+
+      let data7 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 7),
+        fruitDiameter: this.state.fruitDiameter7RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits7RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers7RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber7RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+      }
+
+
+
+      db.addTrussDetails(data7).then((result) => {
+        console.log(result);
+
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8) !== null && this.state.pruningNumber8RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB8();
+
+
+        } else {
+
+
+
+        }
+
+      }).catch((err) => {
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+
+    }
+
+
+
+  }
+
+  saveTrussToDB8 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8) != null && this.state.pruningNumber8RepMerliceRow1Plant2 !== null) {
+
+
+      let data8 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 8),
+        fruitDiameter: this.state.fruitDiameter8RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits8RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers8RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber8RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+      }
+
+
+
+      db.addTrussDetails(data8).then((result) => {
+
+        console.log(result);
+
+        if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9) !== null && this.state.pruningNumber9RepMerliceRow1Plant2 !== '') {
+
+          this.saveTrussToDB9();
+
+
+        } else {
+
+
+
+        }
+
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+
+    } else {
+
+
+    }
+
+  }
+
+  saveTrussToDB9 = () => {
+
+    if ((parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9) != null && this.state.pruningNumber9RepMerliceRow1Plant2 !== null) {
+
+
+
+      let data9 = {
+        trussNumber: (parseInt(this.state.trussNumberRepMerliceRow1Plant2) + 9),
+        fruitDiameter: this.state.fruitDiameter9RepMerliceRow1Plant2,
+        setFruits: this.state.setFruits9RepMerliceRow1Plant2,
+        setFlowers: this.state.setFlowers9RepMerliceRow1Plant2,
+        pruningNumber: this.state.pruningNumber9RepMerliceRow1Plant2,
+        plantRow: '123',
+        plantName: 'REP - Merlice',
+        plantWeek: this.state.weekNumber,
+        plantNumber: 2,
+        fruitLoad: this.state.fruitLoadRepMerliceRow1Plant2,
+        pruningFlower: this.state.pruneFloweringRepMerliceRow1Plant2,
+        floweringTruss: this.state.floweringTrussssRepMerliceRow1Plant2,
+        pruningSet: this.state.prunSettingRepMerliceRow1Plant2,
+        settingTruss: this.state.settingTrussNumberRepMerliceRow1Plant2,
+        pruningHarvest: this.state.pruningHarRepMerliceRow1Plant2,
+        harvestTruss: this.state.harvestTrussRepMerliceRow1Plant2
+
+
+
+      }
+
+
+      db.addTrussDetails(data9).then((result) => {
+
+        console.log(result);
+
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
+
+    } else {
+
+
+    }
+
+
+
+  }
+
+
 
   onAccessoryPress() {
     this.setState(({ secureTextEntry }) => ({ secureTextEntry: !secureTextEntry }));
@@ -1727,8 +3557,8 @@ export default class RepMerliceRow1Plant1 extends Component {
     this.LastWeekStmDiameter.focus();
   }
 
-  onSubmitleavesPerPlantRepMerliceRow1Plant1() {
-    this.leavesPerPlantRepMerliceRow1Plant1.focus();
+  onSubmitleavesPerPlantRepMerliceRow1Plant2() {
+    this.leavesPerPlantRepMerliceRow1Plant2.focus();
   }
   //
 
@@ -1754,7 +3584,7 @@ export default class RepMerliceRow1Plant1 extends Component {
   onSubmit() {
     let errors = {};
 
-    ['leavesPerPlantRepMerliceRow1Plant1', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
+    ['leavesPerPlantRepMerliceRow1Plant2', 'FullysetTruss', 'TrussLength', 'WeeklyGrowth', 'FlowerTrussHeight', 'LeafLength', 'LeafWidth', 'StmDiameter', 'LastWeekStmDiameter']
       .forEach((name) => {
         let value = this[name].value();
 
@@ -1823,1948 +3653,1966 @@ export default class RepMerliceRow1Plant1 extends Component {
           scrollEventThrottle={16}
         >
 
-          <View style={styles.formContainer}>
+          <View pointerEvents={this.state.MerliceRow1Plant2Selected ? 'none' : 'auto'}>
 
-            <View style={styles.marginSmallDimensionTop}></View>
 
-            <View style={styles.backgroundColour}>
+            <View style={styles.formContainer}>
 
-              <View style={styles.row}>
+              <View style={styles.marginSmallDimensionTop}></View>
 
-                <Text style={styles.textTitle}>Leaves per plant</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onFocus={this.onFocus}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantRepMerliceRow1Plant1')}
-                    value={this.state.leavesPerPlantRepMerliceRow1Plant1}
-                    onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Fully set truss</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussRepMerliceRow1Plant1')}
-                    value={this.state.fullySetTrussRepMerliceRow1Plant1}
-                    ref={(input) => { this.fullySetTrussTextInput = input; }}
-                    onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Fully set truss length</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthRepMerliceRow1Plant1')}
-                    value={this.state.setTrussLengthRepMerliceRow1Plant1}
-                    ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
-                    onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Weekly growth</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthRepMerliceRow1Plant1')}
-                    value={this.state.weeklyGrowthRepMerliceRow1Plant1}
-                    ref={(input) => { this.weeklyGrowthTextInput = input; }}
-                    onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Flower truss height</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightRepMerliceRow1Plant1')}
-                    value={this.state.floweringTrussHeightRepMerliceRow1Plant1}
-                    ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
-                    onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Leaf Length</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthRepMerliceRow1Plant1')}
-                    value={this.state.leafLengthRepMerliceRow1Plant1}
-                    ref={(input) => { this.leafLengthTextInput = input; }}
-                    onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Leaf Width</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthRepMerliceRow1Plant1')}
-                    value={this.state.leafWidthRepMerliceRow1Plant1}
-                    ref={(input) => { this.leafWidthTextInput = input; }}
-                    onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Stem diameter</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"next"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterRepMerliceRow1Plant1')}
-                    value={this.state.stmDiameterRepMerliceRow1Plant1}
-                    ref={(input) => { this.stmDiameterTextInput = input; }}
-                    onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
-                    onFocus={this.onFocus}
-
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.backgroundColour}>
-
-              <View style={styles.row}>
-
-                <Text style={styles.textTitle}>Last week stem diameter</Text>
-                <Text style={styles.textTitle}></Text>
-                <Text style={styles.textTitle}>Last week</Text>
-              </View>
-
-              <View style={styles.row}>
-                <View style={styles.borderEdit}>
-                  <TextInput style={styles.textInputStyle}
-                    placeholderTextColor="transparent"
-                    autoCapitalize="none"
-                    multiline={false}
-                    autoCorrect={false}
-                    enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
-                    returnKeyType={"done"}
-                    keyboardType={'numeric'}
-                    blurOnSubmit={false}
-                    onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepMerliceRow1Plant1')}
-                    value={this.state.lastWeekStmDiameterRepMerliceRow1Plant1}
-                    ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
-                    onFocus={this.onFocus}
-                  />
-                </View>
-                <Text style={styles.textLastWeek}>19</Text>
-
-
-              </View>
-
-              <View style={styles.marginXSmallDimensionTop}></View>
-
-
-            </View>
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <Text style={styles.text2}>Truss Details</Text>
-
-
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-              }}
-            />
-
-            {Platform.isPad ? (<View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>TrussNo</Text>
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <Text style={styles.text222}>Set Fruit</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Flowers</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Pruning</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <Text style={styles.text222}>Fruit Dia</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>) : (<View style={styles.rowContainer21}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>TrussNo</Text>
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <Text style={styles.text222}>Set Fruit</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Flowers</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <Text style={styles.text222}>Pruning</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <Text style={styles.text222}>Fruit Dia</Text>
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>)}
-
-
-
-
-            <View
-              style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }}
-            />
-
-
-            <View
-
-              style={{
-                margin: 8
-
-              }}
-            />
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-
-              }}
-            />
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-
-                }}
-              />
-
-
-
-
-              <TextInput
-                style={styles.textinputheight2}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                placeholderTextColor="#000000"
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumberRepMerliceRow1Plant1}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-
-                }}
-              />
-
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruitsRepMerliceRow1Plant1.toString()}
-              />
-
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepMerliceRow1Plant1')}
-                value={this.state.setFlowersRepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepMerliceRow1Plant1')}
-                value={this.state.pruningNumberRepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterRepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-            </View>
-
-
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber1RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits1RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepMerliceRow1Plant1')}
-                value={this.state.setFlowers1RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber1RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                // underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={this.onChangeText}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber2RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits2RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepMerliceRow1Plant1')}
-                value={this.state.setFlowers2RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber2RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                editable={false}
-                selectTextOnFocus={false}
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber3RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits3RepMerliceRow1Plant1.toString()} />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepMerliceRow1Plant1')}
-                value={this.state.setFlowers3RepMerliceRow1Plant1.toString()} />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber3RepMerliceRow1Plant1.toString()} />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber4RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits4RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepMerliceRow1Plant1')}
-                value={this.state.setFlowers4RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber4RepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber5RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits5RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepMerliceRow1Plant1')}
-                value={this.state.setFlowers5RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber5RepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber6RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits6RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepMerliceRow1Plant1')}
-                value={this.state.setFlowers6RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber6RepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber7RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits7RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepMerliceRow1Plant1')}
-                value={this.state.setFlowers7RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber7RepMerliceRow1Plant1.toString()}
-
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber8RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits8RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepMerliceRow1Plant1')}
-                value={this.state.setFlowers8RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber8RepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-            </View>
-
-            <View
-              style={{
-                borderTopColor: 'black',
-                borderTopWidth: 1,
-
-              }}
-            />
-
-            <View style={styles.rowContainer222}>
-
-              <View
-                style={{
-                  borderLeftColor: 'black',
-                  borderLeftWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.textinputheight}
-                //underlineColorAndroid="black"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                multiline={false}
-                editable={false}
-                selectTextOnFocus={false}
-                returnKeyType={"next"}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'trussNumber9RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.trussNumber9RepMerliceRow1Plant1.toString()}
-              />
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                returnKeyType={"next"}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepMerliceRow1Plant1')}
-                blurOnSubmit={false}
-                value={this.state.setFruits9RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                returnKeyType={"next"}
-                enablesReturnKeyAutomatically={true}
-                blurOnSubmit={false}
-                onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepMerliceRow1Plant1')}
-                value={this.state.setFlowers9RepMerliceRow1Plant1.toString()}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepMerliceRow1Plant1')}
-                value={this.state.pruningNumber9RepMerliceRow1Plant1.toString()}
-              />
-
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-              <TextInput
-                style={styles.bottonColor}
-                underlineColorAndroid="black"
-                placeholderTextColor="#000000"
-                autoCapitalize="none"
-                multiline={false}
-                keyboardType={'numeric'}
-                autoCorrect={false}
-                enablesReturnKeyAutomatically={true}
-                returnKeyType={"done"}
-                onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9RepMerliceRow1Plant1')}
-              />
-
-              <View
-                style={{
-                  borderRightColor: 'black',
-                  borderRightWidth: 1,
-                }}
-              />
-
-            </View>
-
-            <View
-              style={{
-                borderBottomColor: 'black',
-                borderBottomWidth: 1,
-              }}
-            />
-
-
-
-            <View
-              style={{
-                marginBottom: 20
-              }}
-            />
-
-            <View style={styles.marginDimensionTop}></View>
-
-            <View style={styles.borderEditTruss}>
-
-              <View style={[(this.state.fruitLoadRepMerliceRow1Plant1 <= 22 || this.state.fruitLoadRepMerliceRow1Plant1 >= 40) ? styles.borderErrorColor : null]}>
-
-                <View
-                  style={{
-                    marginTop: 1
-                  }}
-                />
+              <View style={styles.backgroundColour}>
 
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Fruit Load</Text>
-                  <Text style={styles.text5}>{this.state.fruitLoadRepMerliceRow1Plant1}</Text>
+
+                  <Text style={styles.textTitle}>Leaves per plant</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
 
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
-
-              </View>
-
-              <View style={[(this.state.floweringTrussssRepMerliceRow1Plant1 <= 0 || this.state.floweringTrussssRepMerliceRow1Plant1 >= 45) ? styles.borderErrorColor : null]}>
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Flowering Truss</Text>
-                  <Text style={styles.text5}>{this.state.floweringTrussssRepMerliceRow1Plant1}</Text>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onFocus={this.onFocus}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leavesPerPlantRepMerliceRow1Plant2')}
+                      value={this.state.leavesPerPlantRepMerliceRow1Plant2}
+                      onSubmitEditing={() => { this.fullySetTrussTextInput.focus(); }}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.leavesPerPlantPreviousData}</Text>
+
+
                 </View>
 
+                <View style={styles.marginXSmallDimensionTop}></View>
 
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
+
               </View>
 
-              <View style={[(this.state.settingTrussNumberRepMerliceRow1Plant1 <= 1 || this.state.settingTrussNumberRepMerliceRow1Plant1 >= 45) ? styles.borderErrorColor : null]}>
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Setting Truss</Text>
-                  <Text style={styles.text5}>{this.state.settingTrussNumberRepMerliceRow1Plant1}</Text>
+
+                  <Text style={styles.textTitle}>Fully set truss</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
-                <View
-                  style={{
-                    marginBottom: 5
-                  }}
-                />
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'fullySetTrussRepMerliceRow1Plant2')}
+                      value={this.state.fullySetTrussRepMerliceRow1Plant2}
+                      ref={(input) => { this.fullySetTrussTextInput = input; }}
+                      onSubmitEditing={() => { this.fullySetTrussLengthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
               </View>
 
-              <View style={[(this.state.floweringTrussssRepMerliceRow1Plant1 <= 0 || this.state.floweringTrussssRepMerliceRow1Plant1 >= 45) ? styles.borderErrorColor : null]}>
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
                 <View style={styles.row}>
-                  <Text style={styles.text4}>Harvest Truss</Text>
-                  <Text style={styles.text5}>{this.state.harvestTrussRepMerliceRow1Plant1}</Text>
+
+                  <Text style={styles.textTitle}>Fully set truss length</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
                 </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'setTrussLengthRepMerliceRow1Plant2')}
+                      value={this.state.setTrussLengthRepMerliceRow1Plant2}
+                      ref={(input) => { this.fullySetTrussLengthTextInput = input; }}
+                      onSubmitEditing={() => { this.weeklyGrowthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussLengthPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Weekly growth</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'weeklyGrowthRepMerliceRow1Plant2')}
+                      value={this.state.weeklyGrowthRepMerliceRow1Plant2}
+                      ref={(input) => { this.weeklyGrowthTextInput = input; }}
+                      onSubmitEditing={() => { this.FlowerTrussHeightTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.weeklyGrowthPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Flower truss height</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'floweringTrussHeightRepMerliceRow1Plant2')}
+                      value={this.state.floweringTrussHeightRepMerliceRow1Plant2}
+                      ref={(input) => { this.FlowerTrussHeightTextInput = input; }}
+                      onSubmitEditing={() => { this.leafLengthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.flowerTrussHeightPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Leaf Length</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leafLengthRepMerliceRow1Plant2')}
+                      value={this.state.leafLengthRepMerliceRow1Plant2}
+                      ref={(input) => { this.leafLengthTextInput = input; }}
+                      onSubmitEditing={() => { this.leafWidthTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.leafLengthPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Leaf Width</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'leafWidthRepMerliceRow1Plant2')}
+                      value={this.state.leafWidthRepMerliceRow1Plant2}
+                      ref={(input) => { this.leafWidthTextInput = input; }}
+                      onSubmitEditing={() => { this.stmDiameterTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.leafWidthPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Stem diameter</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"next"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'stmDiameterRepMerliceRow1Plant2')}
+                      value={this.state.stmDiameterRepMerliceRow1Plant2}
+                      ref={(input) => { this.stmDiameterTextInput = input; }}
+                      onSubmitEditing={() => { this.lastWeekSmDiameterTextInput.focus(); }}
+                      onFocus={this.onFocus}
+
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.stemDiPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.backgroundColour}>
+
+                <View style={styles.row}>
+
+                  <Text style={styles.textTitle}>Last week stem diameter</Text>
+                  <Text style={styles.textTitle}></Text>
+                  <Text style={styles.textTitle}>Last week</Text>
+                </View>
+
+                <View style={styles.row}>
+                  <View style={styles.borderEdit}>
+                    <TextInput style={styles.textInputStyle}
+                      placeholderTextColor="transparent"
+                      autoCapitalize="none"
+                      multiline={false}
+                      autoCorrect={false}
+                      enablesReturnKeyAutomatically={true}
+                      onChangeText={this.onChangeText}
+                      returnKeyType={"done"}
+                      keyboardType={'numeric'}
+                      blurOnSubmit={false}
+                      onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepMerliceRow1Plant2')}
+                      value={this.state.lastWeekStmDiameterRepMerliceRow1Plant2}
+                      ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+                      onFocus={this.onFocus}
+                    />
+                  </View>
+                  <Text style={styles.textLastWeek}>{this.state.lastWeekStemDiaPreviousData}</Text>
+
+
+                </View>
+
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <Text style={styles.text2}>Truss Details</Text>
+
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+                }}
+              />
+
+              {Platform.isPad ? (<View style={styles.rowContainer222}>
+
                 <View
                   style={{
-                    marginBottom: 5
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
                   }}
                 />
+
+
+                <Text style={styles.text222}>TrussNo</Text>
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <Text style={styles.text222}>Set Fruit</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Flowers</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Pruning</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <Text style={styles.text222}>Fruit Dia</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>) : (<View style={styles.rowContainer21}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>TrussNo</Text>
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <Text style={styles.text222}>Set Fruit</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Flowers</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <Text style={styles.text222}>Pruning</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <Text style={styles.text222}>Fruit Dia</Text>
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>)}
+
+
+
+
+              <View
+                style={{
+                  borderBottomColor: 'black',
+                  borderBottomWidth: 1,
+                }}
+              />
+
+
+              <View
+
+                style={{
+                  margin: 8
+
+                }}
+              />
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+
+                }}
+              />
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+
+                  }}
+                />
+
+
+
+
+                <TextInput
+                  style={styles.textinputheight2}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  placeholderTextColor="#000000"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumberRepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumberRepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+
+                  }}
+                />
+
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruitsRepMerliceRow1Plant2}
+                />
+
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepMerliceRow1Plant2')}
+                  value={this.state.setFlowersRepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepMerliceRow1Plant2')}
+                  value={this.state.pruningNumberRepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameterRepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
               </View>
+
+
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber1RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber1RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits1RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers1RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber1RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter1RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  // underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={this.onChangeText}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber2RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits2RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers2RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber2RepMerliceRow1Plant2}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter2RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  editable={false}
+                  selectTextOnFocus={false}
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber3RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber3RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits3RepMerliceRow1Plant2} />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers3RepMerliceRow1Plant2} />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber3RepMerliceRow1Plant2} />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter3RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber4RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber4RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits4RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers4RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber4RepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter4RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber5RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber5RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits5RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers5RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber5RepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter5RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber6RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber6RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits6RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers6RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber6RepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter6RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber7RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber7RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits7RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers7RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber7RepMerliceRow1Plant2}
+
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter7RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput22(text, 'trussNumber8RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber8RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits8RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers8RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber8RepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter8RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+              </View>
+
+              <View
+                style={{
+                  borderTopColor: 'black',
+                  borderTopWidth: 1,
+
+                }}
+              />
+
+              <View style={styles.rowContainer222}>
+
+                <View
+                  style={{
+                    borderLeftColor: 'black',
+                    borderLeftWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.textinputheight}
+                  //underlineColorAndroid="black"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  multiline={false}
+                  editable={false}
+                  selectTextOnFocus={false}
+                  returnKeyType={"next"}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'trussNumber9RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.trussNumber9RepMerliceRow1Plant2.toString()}
+                />
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  returnKeyType={"next"}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepMerliceRow1Plant2')}
+                  blurOnSubmit={false}
+                  value={this.state.setFruits9RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  returnKeyType={"next"}
+                  enablesReturnKeyAutomatically={true}
+                  blurOnSubmit={false}
+                  onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepMerliceRow1Plant2')}
+                  value={this.state.setFlowers9RepMerliceRow1Plant2}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepMerliceRow1Plant2')}
+                  value={this.state.pruningNumber9RepMerliceRow1Plant2}
+                />
+
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+                <TextInput
+                  style={styles.bottonColor}
+                  underlineColorAndroid="black"
+                  placeholderTextColor="#000000"
+                  autoCapitalize="none"
+                  multiline={false}
+                  keyboardType={'numeric'}
+                  autoCorrect={false}
+                  enablesReturnKeyAutomatically={true}
+                  returnKeyType={"done"}
+                  onChangeText={(text) => this.updateTextInput(text, 'fruitDiameter9RepMerliceRow1Plant2')}
+                />
+
+                <View
+                  style={{
+                    borderRightColor: 'black',
+                    borderRightWidth: 1,
+                  }}
+                />
+
+              </View>
+
+              <View
+                style={{
+                  borderBottomColor: 'black',
+                  borderBottomWidth: 1,
+                }}
+              />
+
+
+
+              <View
+                style={{
+                  marginBottom: 20
+                }}
+              />
+
+
+
+              <View style={styles.marginDimensionTop}></View>
+
+              <View style={styles.borderEditTruss}>
+
+                <View style={[(this.state.fruitLoadRepMerliceRow1Plant2 <= 22 || this.state.fruitLoadRepMerliceRow1Plant2 >= 40) ? styles.borderErrorColor : null]}>
+
+                  <View
+                    style={{
+                      marginTop: 1
+                    }}
+                  />
+
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Fruit Load</Text>
+                    <Text style={styles.text5}>{this.state.fruitLoadRepMerliceRow1Plant2}</Text>
+                  </View>
+
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+
+                </View>
+
+                <View style={[(this.state.floweringTrussssRepMerliceRow1Plant2 <= 0 || this.state.floweringTrussssRepMerliceRow1Plant2 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Flowering Truss</Text>
+                    <Text style={styles.text5}>{this.state.floweringTrussssRepMerliceRow1Plant2}</Text>
+                  </View>
+
+
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+
+                <View style={[(this.state.settingTrussNumberRepMerliceRow1Plant2 <= 1 || this.state.settingTrussNumberRepMerliceRow1Plant2 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Setting Truss</Text>
+                    <Text style={styles.text5}>{this.state.settingTrussNumberRepMerliceRow1Plant2}</Text>
+                  </View>
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+
+                <View style={[(this.state.floweringTrussssRepMerliceRow1Plant2 <= 0 || this.state.floweringTrussssRepMerliceRow1Plant2 >= 45) ? styles.borderErrorColor : null]}>
+                  <View style={styles.row}>
+                    <Text style={styles.text4}>Harvest Truss</Text>
+                    <Text style={styles.text5}>{this.state.harvestTrussRepMerliceRow1Plant2}</Text>
+                  </View>
+                  <View
+                    style={{
+                      marginBottom: 5
+                    }}
+                  />
+                </View>
+              </View>
+
+              <View style={styles.marginDimensionTop}></View>
+
+
+              <CheckBox style={styles.styleCheckbox}
+                size={40}
+                uncheckedColor='red'
+                checkedColor="green"
+                title="Merlice Plant 2 completed"
+                checked={this.state.MerliceRow1Plant2Selected}
+                textStyle={{ fontSize: 22 }}
+                containerStyle={{ backgroundColor: 'transparent' }}
+                onPress={() => this.changeCheckbox()} />
+
             </View>
-
 
           </View>
 
         </ScrollView>
-
 
       </View >
     );
@@ -3773,9 +5621,17 @@ export default class RepMerliceRow1Plant1 extends Component {
 
 const styles = StyleSheet.create({
 
+
+
   container: {
     flex: 1,
     backgroundColor: '#F3F9FF'
+  },
+
+  styleCheckBox: {
+
+    borderRadius: 3
+
   },
 
   borderEditTruss: {
@@ -4068,4 +5924,4 @@ const styles = StyleSheet.create({
 
   },
 
-});  
+});

@@ -108,6 +108,8 @@ import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10'
 
 
 import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
+import GetAwsData from '../screens/getAwsData';
+
 
 import Har1AnnasunRow from '../screens/Har1AnnasunRow';
 import Har1AvalantinoRow from '../screens/Har1AvalantinoRow';
@@ -172,7 +174,7 @@ function MainStackNavigator() {
 
 
             <Stack.Navigator
-                initialRouteName='SiteSelection'
+                initialRouteName='GetAwsData'
 
                 screenOptions={{
                     //gestureEnabled: true,
@@ -369,6 +371,8 @@ function MainStackNavigator() {
                 <Stack.Screen name='RepMerliceRow2Plant10' component={RepMerliceRow2Plant10} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='ViewPlantTrussDetails' component={ViewPlantTrussDetails} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='GetAwsData' component={GetAwsData} options={{ headerShown: false, title: 'T&G Global' }} />
                 
                 <Stack.Screen name='Har1AnnasunRow' component={Har1AnnasunRow} options={{ headerShown: false, title: 'T&G Global' }} />
 

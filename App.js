@@ -75,7 +75,10 @@ export default class App extends Component {
 
     this.getTruss();
 
+
   }
+
+ 
 
   performTimeConsumingTask = async () => {
     return new Promise((resolve) =>

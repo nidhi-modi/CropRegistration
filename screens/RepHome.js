@@ -118,7 +118,7 @@ export default class RepHome extends Component {
           </TouchableOpacity>
 
           <View style={styles.textContainer}>
-            <Text style={styles.textBottom}>Press submit button only when all the above varieties are completed.</Text>
+          <Text style={styles.textBottom}>Press submit button only when there is internet connection.</Text>
           </View>
 
 

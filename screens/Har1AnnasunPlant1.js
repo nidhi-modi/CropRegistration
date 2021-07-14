@@ -151,6 +151,20 @@ export default class Har1AnnasunPlant1 extends Component {
       Har1AnnasunPlant1Selected: false,
       checkboxStatus: '',
 
+      allTrussData: [],
+      allPlantData: [],
+
+      leavesPerPlantPreviousData: '',
+      fullySetTrussPreviousData: '',
+      fullySetTrussLengthPreviousData: '',
+      weeklyGrowthPreviousData: '',
+      flowerTrussHeightPreviousData: '',
+      leafLengthPreviousData: '',
+      leafWidthPreviousData: '',
+      stemDiPreviousData: '',
+      lastWeekStemDiaPreviousData: '',
+
+
     }
   }
 
@@ -175,9 +189,229 @@ export default class Har1AnnasunPlant1 extends Component {
 
     LogBox.ignoreAllLogs(true)
 
+    this.renderEntryData();
+
     this.getAsysncValues();
 
+
+
   }
+
+  renderEntryData = () => {
+
+    //AWS data
+    try {
+      AsyncStorage.getItem('@MySuperStore:plantKey').then((plantValues) => {
+
+        const allPlant = JSON.parse(plantValues)
+
+        const filteredPlantWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowPlant = d => d.plantName === 'HAR 1 - Annasun' && d.plantNumber === 1 && d.plantRow === 105 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
+
+        this.setState({ allPlantData: filteredweekRowPlant })
+
+        this.setData();
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('@MySuperStore:trussKey').then((trussValues) => {
+
+        const allTruss = JSON.parse(trussValues)
+
+        const filteredTrussWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowTruss = d => d.plantName === 'HAR 1 - Annasun' && d.plantNumber === '1' && d.plantRow === 105 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
+
+        this.setState({ allTrussData: filteredweekRowTruss })
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //AWS DATA ENDS
+
+
+
+
+  }
+
+  setData = () => {
+
+    if (this.state.allPlantData.length != 0) {
+
+      if (JSON.stringify(this.state.allPlantData[0].leavesPerPlant) != null) {
+
+        this.setState({
+
+          leavesPerPlantPreviousData: JSON.stringify(this.state.allPlantData[0].leavesPerPlant)
+        })
+
+      } else {
+
+        this.setState({
+
+          leavesPerPlantPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].fullySetTruss) != null) {
+
+        this.setState({
+
+          fullySetTrussPreviousData: JSON.stringify(this.state.allPlantData[0].fullySetTruss)
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].setTrussLength) != null) {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: JSON.stringify(this.state.allPlantData[0].setTrussLength)
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].weeklyGrowth) != null) {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: JSON.stringify(this.state.allPlantData[0].weeklyGrowth)
+        })
+
+      } else {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].floweringTrussHeight) != null) {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: JSON.stringify(this.state.allPlantData[0].floweringTrussHeight)
+        })
+
+      } else {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafLength) != null) {
+
+        this.setState({
+
+          leafLengthPreviousData: JSON.stringify(this.state.allPlantData[0].leafLength)
+        })
+
+      } else {
+
+        this.setState({
+
+          leafLengthPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafWidth) != null) {
+
+        this.setState({
+
+          leafWidthPreviousData: JSON.stringify(this.state.allPlantData[0].leafWidth)
+        })
+
+      } else {
+
+        this.setState({
+
+          leafWidthPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].stmDiameter) != null) {
+
+        this.setState({
+
+          stemDiPreviousData: JSON.stringify(this.state.allPlantData[0].stmDiameter)
+        })
+
+      } else {
+
+        this.setState({
+
+          stemDiPreviousData: '--'
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter) != null) {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter)
+        })
+
+      } else {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: '--'
+        })
+
+
+      }
+
+    } else {
+
+      console.log("No data in the database")
+    }
+
+
+  }
+
 
   //ASYNC METHOD
 
@@ -197,6 +431,7 @@ export default class Har1AnnasunPlant1 extends Component {
   //
 
   getAsysncValues = async () => {
+
 
 
     try {
@@ -1634,72 +1869,970 @@ export default class Har1AnnasunPlant1 extends Component {
 
   getTrussData = () => {
 
+    if (this.state.allTrussData.length != 0) {
 
-    /*if (this.state.trussNumber != null) {
+      //1st Truss
+      if (this.state.trussNumberHar1AnnasunPlant1 != null) {
 
-       db.trussById(this.state.trussNumber, numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data) => {
-           console.log(data);
-           console.log("Calling database")
-           truss = data;
-           this.setState({
-               truss,
-               setFruits: data.setFruits,
-               setFlowers: data.setFlowers,
-               pruningNumber: data.pruningNumber,
-           });
-           console.log("Truss Details", this.state.truss);
+        //Change week number
+        const weekRowTruss1 = d => d.trussNumber === parseInt(this.state.trussNumberHar1AnnasunPlant1);
 
-           this.calculateFruitLoad();
-           this.calculateharvestTrussHar1AnnasunPlant1();
-           this.calculateSettingTruss2();
-           this.calculateFloweringTruss2();
+        const filteredweekRowTruss1 = this.state.allTrussData.filter(weekRowTruss1);
 
+        console.log("Truss 1 : " + JSON.stringify(filteredweekRowTruss1));
 
-       }).catch((err) => {
-           console.log(err);
+        if (filteredweekRowTruss1.length != 0) {
 
-       })
-   } else {
+          if (JSON.stringify(filteredweekRowTruss1[0].setFlowers) === 'null') {
 
+            this.setState({
 
-   }
-   
-   setTimeout(() => {
+              setFlowersHar1AnnasunPlant1: "",
 
-           if ((parseInt(this.state.trussNumber) + 1) != null) {
+            })
 
-               db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data1) => {
-                   console.log(data1);
-                   console.log("Calling database")
-                   truss1 = data1;
-                   this.setState({
-                       truss1,
-                       setFruits1: data1.setFruits,
-                       setFlowers1: data1.setFlowers,
-                       pruningNumber1: data1.pruningNumber,
-                   });
-                   console.log("Truss Details", this.state.truss1);
+          } else {
 
-                   this.calculateFruitLoad();
-                   this.calculateHarvestTruss();
-                   this.calculateSettingTruss2();
-                   this.calculateFloweringTruss2();
+            this.setState({
+
+              setFlowersHar1AnnasunPlant1: JSON.stringify(filteredweekRowTruss1[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].setFruits) === 'null') {
 
 
-               }).catch((err) => {
-                   console.log(err);
-
-               })
-           } else {
+            this.setState({
 
 
-           }
+              setFruitsHar1AnnasunPlant1: "",
+
+            })
 
 
-       }, 1000); and so on....*/
+          } else {
+
+
+            this.setState({
+
+
+              setFruitsHar1AnnasunPlant1: JSON.stringify(filteredweekRowTruss1[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumberHar1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumberHar1AnnasunPlant1: JSON.stringify(filteredweekRowTruss1[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+      //End
+
+
+      //2nd Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 1) != null) {
+
+        //Change week number
+        const weekRowTruss2 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 1);
+
+        const filteredweekRowTruss2 = this.state.allTrussData.filter(weekRowTruss2);
+
+        console.log("Truss 2 : " + JSON.stringify(filteredweekRowTruss2));
+
+        if (filteredweekRowTruss2.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers1Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers1Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss2[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits1Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits1Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss2[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber1Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber1Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss2[0].pruningNumber)
+
+            })
+
+          }
+
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //3rd Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 2) != null) {
+
+        //Change week number
+        const weekRowTruss3 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 2);
+
+        const filteredweekRowTruss3 = this.state.allTrussData.filter(weekRowTruss3);
+
+        console.log("Truss 3 : " + JSON.stringify(filteredweekRowTruss3));
+
+        if (filteredweekRowTruss3.length != 0) {
+
+
+            if (JSON.stringify(filteredweekRowTruss3[0].setFlowers) === 'null') {
+
+              this.setState({
+
+                setFlowers2Har1AnnasunPlant1: "",
+
+              })
+
+            } else {
+
+              this.setState({
+
+                setFlowers2Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss3[0].setFlowers),
+
+              })
+
+            }
+
+            //-------------------------------------------------------
+
+            if (JSON.stringify(filteredweekRowTruss3[0].setFruits) === 'null') {
+
+
+              this.setState({
+
+
+                setFruits2Har1AnnasunPlant1: "",
+
+              })
+
+
+            } else {
+
+
+              this.setState({
+
+
+                setFruits2Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss3[0].setFruits),
+
+              })
+
+            }
+
+            //-------------------------------------------------------
+
+            if (JSON.stringify(filteredweekRowTruss3[0].pruningNumber) === 'null') {
+
+
+              this.setState({
+
+
+                pruningNumber2Har1AnnasunPlant1: "",
+
+              })
+
+
+            } else {
+
+
+              this.setState({
+
+
+                pruningNumber2Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss3[0].pruningNumber)
+
+              })
+
+            
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //4th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 3) != null) {
+
+        //Change week number
+        const weekRowTruss4 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 3);
+
+        const filteredweekRowTruss4 = this.state.allTrussData.filter(weekRowTruss4);
+
+        console.log("Truss 4 : " + JSON.stringify(filteredweekRowTruss4));
+
+        if (filteredweekRowTruss4.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers3Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers3Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss4[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits3Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits3Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss4[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber3Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber3Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss4[0].pruningNumber)
+
+            })
+
+          }
+
+         
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //5th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 4) != null) {
+
+        //Change week number
+        const weekRowTruss5 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 4);
+
+        const filteredweekRowTruss5 = this.state.allTrussData.filter(weekRowTruss5);
+
+        console.log("Truss 5 : " + JSON.stringify(filteredweekRowTruss5));
+
+        if (filteredweekRowTruss5.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers4Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers4Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss5[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits4Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits4Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss5[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber4Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber4Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss5[0].pruningNumber)
+
+            })
+
+          }
+         
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //6th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 5) != null) {
+
+        //Change week number
+        const weekRowTruss6 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 5);
+
+        const filteredweekRowTruss6 = this.state.allTrussData.filter(weekRowTruss6);
+
+        console.log("Truss 6 : " + JSON.stringify(filteredweekRowTruss6));
+
+        if (filteredweekRowTruss6.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers5Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers5Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss6[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits5Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits5Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss6[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber5Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber5Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss6[0].pruningNumber)
+
+            })
+
+          }
+         
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //7th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 6) != null) {
+
+        //Change week number
+        const weekRowTruss7 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 6);
+
+        const filteredweekRowTruss7 = this.state.allTrussData.filter(weekRowTruss7);
+
+        console.log("Truss 7 : " + JSON.stringify(filteredweekRowTruss7));
+
+        if (filteredweekRowTruss7.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers6Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers6Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss7[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits6Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits6Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss7[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber6Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber6Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss7[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //8th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 7) != null) {
+
+        //Change week number
+        const weekRowTruss8 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 7);
+
+        const filteredweekRowTruss8 = this.state.allTrussData.filter(weekRowTruss8);
+
+        console.log("Truss 8 : " + JSON.stringify(filteredweekRowTruss8));
+
+        if (filteredweekRowTruss8.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers7Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers7Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss8[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits7Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits7Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss8[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber7Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber7Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss8[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //9th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 8) != null) {
+
+        //Change week number
+        const weekRowTruss9 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 8);
+
+        const filteredweekRowTruss9 = this.state.allTrussData.filter(weekRowTruss9);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss9));
+
+        if (filteredweekRowTruss9.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers8Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers8Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss9[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits8Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits8Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss9[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber8Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber8Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss9[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //10th Truss
+      if ((parseInt(this.state.trussNumberHar1AnnasunPlant1) + 9) != null) {
+
+        //Change week number
+        const weekRowTruss10 = d => d.trussNumber === (parseInt(this.state.trussNumberHar1AnnasunPlant1) + 9);
+
+        const filteredweekRowTruss10 = this.state.allTrussData.filter(weekRowTruss10);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss10));
+
+        if (filteredweekRowTruss10.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers9Har1AnnasunPlant1: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers9Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss10[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits9Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits9Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss10[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber9Har1AnnasunPlant1: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber9Har1AnnasunPlant1: JSON.stringify(filteredweekRowTruss10[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+    } else {
+
+      console.log("No data in the database")
+
+    }
+
+
 
   }
-  //
+
 
   //DEFINE FOCUS
 
@@ -2533,7 +3666,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leavesPerPlantPreviousData}</Text>
 
 
                 </View>
@@ -2576,7 +3709,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussPreviousData}</Text>
 
 
                 </View>
@@ -2617,7 +3750,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussLengthPreviousData}</Text>
 
 
                 </View>
@@ -2658,7 +3791,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.weeklyGrowthPreviousData}</Text>
 
 
                 </View>
@@ -2700,7 +3833,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.flowerTrussHeightPreviousData}</Text>
 
 
                 </View>
@@ -2741,7 +3874,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leafLengthPreviousData}</Text>
 
 
                 </View>
@@ -2782,7 +3915,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leafWidthPreviousData}</Text>
 
 
                 </View>
@@ -2823,7 +3956,7 @@ export default class Har1AnnasunPlant1 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.stemDiPreviousData}</Text>
 
 
                 </View>
@@ -2862,7 +3995,7 @@ export default class Har1AnnasunPlant1 extends Component {
                       onFocus={this.onFocus}
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.lastWeekStemDiaPreviousData}</Text>
 
 
                 </View>
@@ -3084,7 +4217,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruitsHar1AnnasunPlant1')}
                   blurOnSubmit={false}
-                  value={this.state.setFruitsHar1AnnasunPlant1.toString()}
+                  value={this.state.setFruitsHar1AnnasunPlant1}
                 />
 
 
@@ -3095,7 +4228,6 @@ export default class Har1AnnasunPlant1 extends Component {
                     borderRightWidth: 1,
                   }}
                 />
-
 
                 <TextInput
                   style={styles.bottonColor}
@@ -3109,7 +4241,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowersHar1AnnasunPlant1')}
-                  value={this.state.setFlowersHar1AnnasunPlant1.toString()}
+                  value={this.state.setFlowersHar1AnnasunPlant1}
                 />
 
                 <View
@@ -3130,7 +4262,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumberHar1AnnasunPlant1')}
-                  value={this.state.pruningNumberHar1AnnasunPlant1.toString()}
+                  value={this.state.pruningNumberHar1AnnasunPlant1}
                 />
 
 
@@ -3221,7 +4353,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits1Har1AnnasunPlant1')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits1Har1AnnasunPlant1.toString()}
+                  value={this.state.setFruits1Har1AnnasunPlant1}
                 />
 
                 <View
@@ -3244,7 +4376,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers1Har1AnnasunPlant1')}
-                  value={this.state.setFlowers1Har1AnnasunPlant1.toString()}
+                  value={this.state.setFlowers1Har1AnnasunPlant1}
                 />
 
                 <View
@@ -3266,7 +4398,7 @@ export default class Har1AnnasunPlant1 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1Har1AnnasunPlant1')}
-                  value={this.state.pruningNumber1Har1AnnasunPlant1.toString()}
+                  value={this.state.pruningNumber1Har1AnnasunPlant1}
                 />
 
                 <View

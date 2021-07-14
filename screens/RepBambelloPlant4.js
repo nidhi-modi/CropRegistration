@@ -151,6 +151,20 @@ export default class RepBambelloPlant4 extends Component {
       bambelloPlant4Selected: false,
       checkboxStatus: '',
 
+
+      allTrussData: [],
+      allPlantData: [],
+
+      leavesPerPlantPreviousData: '',
+      fullySetTrussPreviousData: '',
+      fullySetTrussLengthPreviousData: '',
+      weeklyGrowthPreviousData: '',
+      flowerTrussHeightPreviousData: '',
+      leafLengthPreviousData: '',
+      leafWidthPreviousData: '',
+      stemDiPreviousData: '',
+      lastWeekStemDiaPreviousData: '',
+
     }
   }
 
@@ -175,6 +189,8 @@ export default class RepBambelloPlant4 extends Component {
 
     LogBox.ignoreAllLogs(true)
 
+    this.renderEntryData();
+
     this.getAsysncValues();
 
   }
@@ -195,6 +211,248 @@ export default class RepBambelloPlant4 extends Component {
   }
 
   //
+
+  renderEntryData = () => {
+
+    //AWS data
+    try {
+      AsyncStorage.getItem('@MySuperStore:plantKey').then((plantValues) => {
+
+        const allPlant = JSON.parse(plantValues)
+
+        const filteredPlantWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowPlant = d => d.plantName === 'REP - Bambello' && d.plantNumber === 4 && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
+
+        this.setState({ allPlantData: filteredweekRowPlant })
+
+        this.setData();
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    try {
+      AsyncStorage.getItem('@MySuperStore:trussKey').then((trussValues) => {
+
+        const allTruss = JSON.parse(trussValues)
+
+        const filteredTrussWeek = (this.state.weekNumber) - 1;
+
+        //Change week number
+        const weekRowTruss = d => d.plantName === 'REP - Bambello' && d.plantNumber === '4' && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
+
+        const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
+
+        this.setState({ allTrussData: filteredweekRowTruss })
+
+
+      }).done();
+    } catch (error) {
+    }
+
+    //AWS DATA ENDS
+
+
+
+
+  }
+
+  setData = () => {
+
+   if (this.state.allPlantData.length !== 0) {
+
+   
+
+      if (JSON.stringify(this.state.allPlantData[0].leavesPerPlant) === 'null') {
+
+
+        this.setState({
+
+
+          leavesPerPlantPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leavesPerPlantPreviousData: JSON.stringify(this.state.allPlantData[0].leavesPerPlant)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].fullySetTruss) === 'null') {
+
+        this.setState({
+
+          fullySetTrussPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussPreviousData: JSON.stringify(this.state.allPlantData[0].fullySetTruss)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].setTrussLength) === 'null') {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          fullySetTrussLengthPreviousData: JSON.stringify(this.state.allPlantData[0].setTrussLength)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].weeklyGrowth) === 'null') {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          weeklyGrowthPreviousData: JSON.stringify(this.state.allPlantData[0].weeklyGrowth)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].floweringTrussHeight) === 'null') {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          flowerTrussHeightPreviousData: JSON.stringify(this.state.allPlantData[0].floweringTrussHeight)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafLength) === 'null') {
+
+        this.setState({
+
+          leafLengthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leafLengthPreviousData: JSON.stringify(this.state.allPlantData[0].leafLength)
+
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].leafWidth) === 'null') {
+
+        this.setState({
+
+          leafWidthPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          leafWidthPreviousData: JSON.stringify(this.state.allPlantData[0].leafWidth)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].stmDiameter) === 'null') {
+
+        this.setState({
+
+          stemDiPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          stemDiPreviousData: JSON.stringify(this.state.allPlantData[0].stmDiameter)
+
+        })
+
+
+      }
+
+      if (JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter) === 'null') {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: "--"
+
+        })
+
+      } else {
+
+        this.setState({
+
+          lastWeekStemDiaPreviousData: JSON.stringify(this.state.allPlantData[0].lastWeekStmDiameter)
+
+        })
+
+
+      }
+
+    } else {
+
+      console.log("No data in the database")
+    }
+
+
+  }
+
 
   getAsysncValues = async () => {
 
@@ -1082,6 +1340,7 @@ export default class RepBambelloPlant4 extends Component {
   calculateFruitLoad = () => {
 
     var sum = 0;
+
     sum = ((parseInt(this.state.setFruitsRepBambelloPlant4) ? parseInt(this.state.setFruitsRepBambelloPlant4) : 0) + (parseInt(this.state.setFruits1RepBambelloPlant4) ? parseInt(this.state.setFruits1RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits2RepBambelloPlant4) ? parseInt(this.state.setFruits2RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits3RepBambelloPlant4) ? parseInt(this.state.setFruits3RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits4RepBambelloPlant4) ? parseInt(this.state.setFruits4RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits5RepBambelloPlant4) ? parseInt(this.state.setFruits5RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits6RepBambelloPlant4) ? parseInt(this.state.setFruits6RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits7RepBambelloPlant4) ? parseInt(this.state.setFruits7RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits8RepBambelloPlant4) ? parseInt(this.state.setFruits8RepBambelloPlant4) : 0) + (parseInt(this.state.setFruits9RepBambelloPlant4) ? parseInt(this.state.setFruits9RepBambelloPlant4) : 0));
     this.setState({
       fruitLoadRepBambelloPlant4: sum,
@@ -1634,70 +1893,965 @@ export default class RepBambelloPlant4 extends Component {
 
   getTrussData = () => {
 
+    if (this.state.allTrussData.length != 0) {
 
-    /*if (this.state.trussNumber != null) {
+      //1st Truss
+      if (this.state.trussNumberRepBambelloPlant4 != null) {
 
-       db.trussById(this.state.trussNumber, numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data) => {
-           console.log(data);
-           console.log("Calling database")
-           truss = data;
-           this.setState({
-               truss,
-               setFruits: data.setFruits,
-               setFlowers: data.setFlowers,
-               pruningNumber: data.pruningNumber,
-           });
-           console.log("Truss Details", this.state.truss);
+        //Change week number
+        const weekRowTruss1 = d => d.trussNumber === parseInt(this.state.trussNumberRepBambelloPlant4);
 
-           this.calculateFruitLoad();
-           this.calculateharvestTrussRepBambelloPlant4();
-           this.calculateSettingTruss2();
-           this.calculateFloweringTruss2();
+        const filteredweekRowTruss1 = this.state.allTrussData.filter(weekRowTruss1);
 
+        console.log("Truss 1 : " + JSON.stringify(filteredweekRowTruss1));
 
-       }).catch((err) => {
-           console.log(err);
+        if (filteredweekRowTruss1.length != 0) {
 
-       })
-   } else {
+          if (JSON.stringify(filteredweekRowTruss1[0].setFlowers) === 'null') {
 
+            this.setState({
 
-   }
-   
-   setTimeout(() => {
+              setFlowersRepBambelloPlant4: "",
 
-           if ((parseInt(this.state.trussNumber) + 1) != null) {
+            })
 
-               db.trussByIdRow((parseInt(this.state.trussNumber) + 1), numberWeek - 1, 'GER 1 - Merlice', number, '81/86').then((data1) => {
-                   console.log(data1);
-                   console.log("Calling database")
-                   truss1 = data1;
-                   this.setState({
-                       truss1,
-                       setFruits1: data1.setFruits,
-                       setFlowers1: data1.setFlowers,
-                       pruningNumber1: data1.pruningNumber,
-                   });
-                   console.log("Truss Details", this.state.truss1);
+          } else {
 
-                   this.calculateFruitLoad();
-                   this.calculateHarvestTruss();
-                   this.calculateSettingTruss2();
-                   this.calculateFloweringTruss2();
+            this.setState({
+
+              setFlowersRepBambelloPlant4: JSON.stringify(filteredweekRowTruss1[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].setFruits) === 'null') {
 
 
-               }).catch((err) => {
-                   console.log(err);
-
-               })
-           } else {
+            this.setState({
 
 
-           }
+              setFruitsRepBambelloPlant4: "",
+
+            })
 
 
-       }, 1000); and so on....*/
+          } else {
 
+
+            this.setState({
+
+
+              setFruitsRepBambelloPlant4: JSON.stringify(filteredweekRowTruss1[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss1[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumberRepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumberRepBambelloPlant4: JSON.stringify(filteredweekRowTruss1[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+      //End
+
+
+      //2nd Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 1) != null) {
+
+        //Change week number
+        const weekRowTruss2 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 1);
+
+        const filteredweekRowTruss2 = this.state.allTrussData.filter(weekRowTruss2);
+
+        console.log("Truss 2 : " + JSON.stringify(filteredweekRowTruss2));
+
+        if (filteredweekRowTruss2.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers1RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers1RepBambelloPlant4: JSON.stringify(filteredweekRowTruss2[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits1RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits1RepBambelloPlant4: JSON.stringify(filteredweekRowTruss2[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss2[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber1RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber1RepBambelloPlant4: JSON.stringify(filteredweekRowTruss2[0].pruningNumber)
+
+            })
+
+          }
+
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //3rd Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 2) != null) {
+
+        //Change week number
+        const weekRowTruss3 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 2);
+
+        const filteredweekRowTruss3 = this.state.allTrussData.filter(weekRowTruss3);
+
+        console.log("Truss 3 : " + JSON.stringify(filteredweekRowTruss3));
+
+        if (filteredweekRowTruss3.length != 0) {
+
+
+          if (JSON.stringify(filteredweekRowTruss3[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers2RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers2RepBambelloPlant4: JSON.stringify(filteredweekRowTruss3[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss3[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits2RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits2RepBambelloPlant4: JSON.stringify(filteredweekRowTruss3[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss3[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber2RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber2RepBambelloPlant4: JSON.stringify(filteredweekRowTruss3[0].pruningNumber)
+
+            })
+
+
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //4th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 3) != null) {
+
+        //Change week number
+        const weekRowTruss4 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 3);
+
+        const filteredweekRowTruss4 = this.state.allTrussData.filter(weekRowTruss4);
+
+        console.log("Truss 4 : " + JSON.stringify(filteredweekRowTruss4));
+
+        if (filteredweekRowTruss4.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers3RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers3RepBambelloPlant4: JSON.stringify(filteredweekRowTruss4[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits3RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits3RepBambelloPlant4: JSON.stringify(filteredweekRowTruss4[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss4[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber3RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber3RepBambelloPlant4: JSON.stringify(filteredweekRowTruss4[0].pruningNumber)
+
+            })
+
+          }
+
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //5th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 4) != null) {
+
+        //Change week number
+        const weekRowTruss5 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 4);
+
+        const filteredweekRowTruss5 = this.state.allTrussData.filter(weekRowTruss5);
+
+        console.log("Truss 5 : " + JSON.stringify(filteredweekRowTruss5));
+
+        if (filteredweekRowTruss5.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers4RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers4RepBambelloPlant4: JSON.stringify(filteredweekRowTruss5[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits4RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits4RepBambelloPlant4: JSON.stringify(filteredweekRowTruss5[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss5[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber4RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber4RepBambelloPlant4: JSON.stringify(filteredweekRowTruss5[0].pruningNumber)
+
+            })
+
+          }
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //6th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 5) != null) {
+
+        //Change week number
+        const weekRowTruss6 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 5);
+
+        const filteredweekRowTruss6 = this.state.allTrussData.filter(weekRowTruss6);
+
+        console.log("Truss 6 : " + JSON.stringify(filteredweekRowTruss6));
+
+        if (filteredweekRowTruss6.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers5RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers5RepBambelloPlant4: JSON.stringify(filteredweekRowTruss6[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits5RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits5RepBambelloPlant4: JSON.stringify(filteredweekRowTruss6[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss6[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber5RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber5RepBambelloPlant4: JSON.stringify(filteredweekRowTruss6[0].pruningNumber)
+
+            })
+
+          }
+
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //7th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 6) != null) {
+
+        //Change week number
+        const weekRowTruss7 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 6);
+
+        const filteredweekRowTruss7 = this.state.allTrussData.filter(weekRowTruss7);
+
+        console.log("Truss 7 : " + JSON.stringify(filteredweekRowTruss7));
+
+        if (filteredweekRowTruss7.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers6RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers6RepBambelloPlant4: JSON.stringify(filteredweekRowTruss7[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits6RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits6RepBambelloPlant4: JSON.stringify(filteredweekRowTruss7[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss7[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber6RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber6RepBambelloPlant4: JSON.stringify(filteredweekRowTruss7[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //8th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 7) != null) {
+
+        //Change week number
+        const weekRowTruss8 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 7);
+
+        const filteredweekRowTruss8 = this.state.allTrussData.filter(weekRowTruss8);
+
+        console.log("Truss 8 : " + JSON.stringify(filteredweekRowTruss8));
+
+        if (filteredweekRowTruss8.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers7RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers7RepBambelloPlant4: JSON.stringify(filteredweekRowTruss8[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits7RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits7RepBambelloPlant4: JSON.stringify(filteredweekRowTruss8[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss8[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber7RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber7RepBambelloPlant4: JSON.stringify(filteredweekRowTruss8[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+
+      } else {
+
+
+      }
+
+      //End
+
+      //9th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 8) != null) {
+
+        //Change week number
+        const weekRowTruss9 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 8);
+
+        const filteredweekRowTruss9 = this.state.allTrussData.filter(weekRowTruss9);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss9));
+
+        if (filteredweekRowTruss9.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers8RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers8RepBambelloPlant4: JSON.stringify(filteredweekRowTruss9[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits8RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits8RepBambelloPlant4: JSON.stringify(filteredweekRowTruss9[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss9[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber8RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber8RepBambelloPlant4: JSON.stringify(filteredweekRowTruss9[0].pruningNumber)
+
+            })
+
+          }
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+      //10th Truss
+      if ((parseInt(this.state.trussNumberRepBambelloPlant4) + 9) != null) {
+
+        //Change week number
+        const weekRowTruss10 = d => d.trussNumber === (parseInt(this.state.trussNumberRepBambelloPlant4) + 9);
+
+        const filteredweekRowTruss10 = this.state.allTrussData.filter(weekRowTruss10);
+
+        console.log("Truss 9 : " + JSON.stringify(filteredweekRowTruss10));
+
+        if (filteredweekRowTruss10.length != 0) {
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFlowers) === 'null') {
+
+            this.setState({
+
+              setFlowers9RepBambelloPlant4: "",
+
+            })
+
+          } else {
+
+            this.setState({
+
+              setFlowers9RepBambelloPlant4: JSON.stringify(filteredweekRowTruss10[0].setFlowers),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].setFruits) === 'null') {
+
+
+            this.setState({
+
+
+              setFruits9RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              setFruits9RepBambelloPlant4: JSON.stringify(filteredweekRowTruss10[0].setFruits),
+
+            })
+
+          }
+
+          //-------------------------------------------------------
+
+          if (JSON.stringify(filteredweekRowTruss10[0].pruningNumber) === 'null') {
+
+
+            this.setState({
+
+
+              pruningNumber9RepBambelloPlant4: "",
+
+            })
+
+
+          } else {
+
+
+            this.setState({
+
+
+              pruningNumber9RepBambelloPlant4: JSON.stringify(filteredweekRowTruss10[0].pruningNumber)
+
+            })
+
+          }
+
+          this.calculateSettingTruss2();
+          this.calculateFloweringTruss2();
+          this.calculateFruitLoad();
+          this.calculateHarvestTruss();
+
+        }
+
+      } else {
+
+
+      }
+
+      //End
+
+    } else {
+
+      console.log("No data in the database")
+
+    }
   }
   //
 
@@ -2533,7 +3687,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leavesPerPlantPreviousData}</Text>
 
 
                 </View>
@@ -2576,7 +3730,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussPreviousData}</Text>
 
 
                 </View>
@@ -2617,7 +3771,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.fullySetTrussLengthPreviousData}</Text>
 
 
                 </View>
@@ -2658,7 +3812,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.weeklyGrowthPreviousData}</Text>
 
 
                 </View>
@@ -2700,7 +3854,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.flowerTrussHeightPreviousData}</Text>
 
 
                 </View>
@@ -2741,7 +3895,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leafLengthPreviousData}</Text>
 
 
                 </View>
@@ -2782,7 +3936,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.leafWidthPreviousData}</Text>
 
 
                 </View>
@@ -2823,7 +3977,7 @@ export default class RepBambelloPlant4 extends Component {
 
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.stemDiPreviousData}</Text>
 
 
                 </View>
@@ -2862,7 +4016,7 @@ export default class RepBambelloPlant4 extends Component {
                       onFocus={this.onFocus}
                     />
                   </View>
-                  <Text style={styles.textLastWeek}>19</Text>
+                  <Text style={styles.textLastWeek}>{this.state.lastWeekStemDiaPreviousData}</Text>
 
 
                 </View>
@@ -3084,7 +4238,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruitsRepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruitsRepBambelloPlant4.toString()}
+                  value={this.state.setFruitsRepBambelloPlant4}
                 />
 
 
@@ -3109,7 +4263,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowersRepBambelloPlant4')}
-                  value={this.state.setFlowersRepBambelloPlant4.toString()}
+                  value={this.state.setFlowersRepBambelloPlant4}
                 />
 
                 <View
@@ -3130,7 +4284,7 @@ export default class RepBambelloPlant4 extends Component {
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumberRepBambelloPlant4')}
-                  value={this.state.pruningNumberRepBambelloPlant4.toString()}
+                  value={this.state.pruningNumberRepBambelloPlant4}
                 />
 
 
@@ -3221,7 +4375,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits1RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits1RepBambelloPlant4.toString()}
+                  value={this.state.setFruits1RepBambelloPlant4}
                 />
 
                 <View
@@ -3244,7 +4398,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers1RepBambelloPlant4')}
-                  value={this.state.setFlowers1RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers1RepBambelloPlant4}
                 />
 
                 <View
@@ -3266,7 +4420,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber1RepBambelloPlant4')}
-                  value={this.state.pruningNumber1RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber1RepBambelloPlant4}
                 />
 
                 <View
@@ -3355,7 +4509,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits2RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits2RepBambelloPlant4.toString()}
+                  value={this.state.setFruits2RepBambelloPlant4}
                 />
 
                 <View
@@ -3378,7 +4532,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers2RepBambelloPlant4')}
-                  value={this.state.setFlowers2RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers2RepBambelloPlant4}
                 />
 
                 <View
@@ -3400,7 +4554,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber2RepBambelloPlant4')}
-                  value={this.state.pruningNumber2RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber2RepBambelloPlant4}
                 />
                 <View
                   style={{
@@ -3486,7 +4640,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits3RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits3RepBambelloPlant4.toString()} />
+                  value={this.state.setFruits3RepBambelloPlant4} />
 
                 <View
                   style={{
@@ -3508,7 +4662,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers3RepBambelloPlant4')}
-                  value={this.state.setFlowers3RepBambelloPlant4.toString()} />
+                  value={this.state.setFlowers3RepBambelloPlant4} />
 
                 <View
                   style={{
@@ -3528,7 +4682,7 @@ export default class RepBambelloPlant4 extends Component {
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber3RepBambelloPlant4')}
-                  value={this.state.pruningNumber3RepBambelloPlant4.toString()} />
+                  value={this.state.pruningNumber3RepBambelloPlant4} />
 
 
                 <View
@@ -3614,7 +4768,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits4RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits4RepBambelloPlant4.toString()}
+                  value={this.state.setFruits4RepBambelloPlant4}
                 />
 
                 <View
@@ -3637,7 +4791,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers4RepBambelloPlant4')}
-                  value={this.state.setFlowers4RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers4RepBambelloPlant4}
                 />
 
                 <View
@@ -3659,7 +4813,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber4RepBambelloPlant4')}
-                  value={this.state.pruningNumber4RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber4RepBambelloPlant4}
                 />
 
 
@@ -3747,7 +4901,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits5RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits5RepBambelloPlant4.toString()}
+                  value={this.state.setFruits5RepBambelloPlant4}
                 />
 
                 <View
@@ -3770,7 +4924,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers5RepBambelloPlant4')}
-                  value={this.state.setFlowers5RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers5RepBambelloPlant4}
                 />
 
                 <View
@@ -3792,7 +4946,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber5RepBambelloPlant4')}
-                  value={this.state.pruningNumber5RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber5RepBambelloPlant4}
                 />
 
 
@@ -3880,7 +5034,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits6RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits6RepBambelloPlant4.toString()}
+                  value={this.state.setFruits6RepBambelloPlant4}
                 />
 
                 <View
@@ -3903,7 +5057,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers6RepBambelloPlant4')}
-                  value={this.state.setFlowers6RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers6RepBambelloPlant4}
                 />
 
                 <View
@@ -3925,7 +5079,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber6RepBambelloPlant4')}
-                  value={this.state.pruningNumber6RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber6RepBambelloPlant4}
                 />
 
 
@@ -4013,7 +5167,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits7RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits7RepBambelloPlant4.toString()}
+                  value={this.state.setFruits7RepBambelloPlant4}
                 />
 
                 <View
@@ -4036,7 +5190,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers7RepBambelloPlant4')}
-                  value={this.state.setFlowers7RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers7RepBambelloPlant4}
                 />
 
                 <View
@@ -4058,7 +5212,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber7RepBambelloPlant4')}
-                  value={this.state.pruningNumber7RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber7RepBambelloPlant4}
 
                 />
 
@@ -4146,7 +5300,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits8RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits8RepBambelloPlant4.toString()}
+                  value={this.state.setFruits8RepBambelloPlant4}
                 />
 
                 <View
@@ -4169,7 +5323,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers8RepBambelloPlant4')}
-                  value={this.state.setFlowers8RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers8RepBambelloPlant4}
                 />
 
                 <View
@@ -4191,7 +5345,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber8RepBambelloPlant4')}
-                  value={this.state.pruningNumber8RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber8RepBambelloPlant4}
                 />
 
 
@@ -4281,7 +5435,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   onChangeText={(text) => this.updateTextInput(text, 'setFruits9RepBambelloPlant4')}
                   blurOnSubmit={false}
-                  value={this.state.setFruits9RepBambelloPlant4.toString()}
+                  value={this.state.setFruits9RepBambelloPlant4}
                 />
 
                 <View
@@ -4304,7 +5458,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   blurOnSubmit={false}
                   onChangeText={(text) => this.updateTextInput(text, 'setFlowers9RepBambelloPlant4')}
-                  value={this.state.setFlowers9RepBambelloPlant4.toString()}
+                  value={this.state.setFlowers9RepBambelloPlant4}
                 />
 
                 <View
@@ -4326,7 +5480,7 @@ export default class RepBambelloPlant4 extends Component {
                   enablesReturnKeyAutomatically={true}
                   returnKeyType={"done"}
                   onChangeText={(text) => this.updateTextInput(text, 'pruningNumber9RepBambelloPlant4')}
-                  value={this.state.pruningNumber9RepBambelloPlant4.toString()}
+                  value={this.state.pruningNumber9RepBambelloPlant4}
                 />
 
 

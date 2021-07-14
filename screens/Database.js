@@ -756,7 +756,7 @@ export default class Database {
                 console.log(err);
             });
         }
-        catch(err_1) {
+        catch (err_1) {
             console.log(err_1);
         }
     }
@@ -967,6 +967,48 @@ export default class Database {
                 db.transaction((tx) => {
                     //need to add plant name, plant row and plant week 
                     tx.executeSql('DELETE FROM PlantDetails WHERE plantId = ?', [id]).then(([tx, results]) => {
+                        console.log(results);
+                        resolve(results);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        });
+    }
+
+    //delete all plants data
+    deleteAllPlants() {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+
+                    tx.executeSql('DELETE FROM PlantDetails').then(([tx, results]) => {
+                        console.log(results);
+                        resolve(results);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        });
+    }
+
+    //delete all truss data
+    deleteAllTruss() {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+
+                    tx.executeSql('DELETE FROM TrussDetails').then(([tx, results]) => {
                         console.log(results);
                         resolve(results);
                     });
