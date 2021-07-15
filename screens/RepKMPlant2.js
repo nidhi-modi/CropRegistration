@@ -4015,6 +4015,7 @@ export default class RepKMPlant2 extends Component {
                       value={this.state.lastWeekStmDiameterRepKMPlant2}
                       ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
                       onFocus={this.onFocus}
+                      onSubmitEditing={Keyboard.dismiss}
                     />
                   </View>
                   <Text style={styles.textLastWeek}>{this.state.lastWeekStemDiaPreviousData}</Text>

@@ -4014,6 +4014,7 @@ export default class RepKMPlant9 extends Component {
                       onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepKMPlant9')}
                       value={this.state.lastWeekStmDiameterRepKMPlant9}
                       ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+                      onSubmitEditing={Keyboard.dismiss}
                       onFocus={this.onFocus}
                     />
                   </View>

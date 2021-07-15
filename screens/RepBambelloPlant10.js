@@ -4013,6 +4013,7 @@ export default class RepBambelloPlant100 extends Component {
                       onChangeText={(text) => this.updatePlantsTextInput(text, 'lastWeekStmDiameterRepBambelloPlant10')}
                       value={this.state.lastWeekStmDiameterRepBambelloPlant10}
                       ref={(input) => { this.lastWeekSmDiameterTextInput = input; }}
+                      onSubmitEditing={Keyboard.dismiss}
                       onFocus={this.onFocus}
                     />
                   </View>
