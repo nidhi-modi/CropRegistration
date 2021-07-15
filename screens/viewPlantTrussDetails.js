@@ -101,7 +101,7 @@ export const ViewPlantTrussDetails = (props) => {
         if (data.length !== 0) {
 
           setPlantData(data);
-          AsyncStorage.clear();
+          AsyncStorage.getAllKeys.then(AsyncStorage.multiRemove)
 
         } else {
 
@@ -144,7 +144,8 @@ export const ViewPlantTrussDetails = (props) => {
               console.log("truss data in local db")
               if (data.length !== 0) {
                 setTrussData(data);
-                AsyncStorage.clear();
+                AsyncStorage.getAllKeys.then(AsyncStorage.multiRemove)
+
               } else {
 
                 loading = false;
