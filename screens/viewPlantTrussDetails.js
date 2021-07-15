@@ -130,8 +130,9 @@ export const ViewPlantTrussDetails = (props) => {
             obj[key] = null
           }
         }
+        });
         console.log("here objs in plant", objs)
-        insertPlantDetails({   
+        insertPlantDetails({
           variables: {
             objects: objs,
           },
@@ -142,10 +143,8 @@ export const ViewPlantTrussDetails = (props) => {
             db.listTruss().then((data) => {
               console.log("truss data in local db")
               if (data.length !== 0) {
-
                 setTrussData(data);
                 AsyncStorage.clear();
-
               } else {
 
                 loading = false;
@@ -160,7 +159,7 @@ export const ViewPlantTrussDetails = (props) => {
           .catch(e => {
             console.log('error in plant mutation', e);
           });
-      });
+
     }
   }, [plantData]);
 
@@ -190,7 +189,7 @@ export const ViewPlantTrussDetails = (props) => {
 
         getPlantQuery();
 
-        
+
       }).catch((e) => {
         console.log("error in truss mutation", e)
       })
