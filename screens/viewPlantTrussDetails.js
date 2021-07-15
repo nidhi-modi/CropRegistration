@@ -5,13 +5,10 @@ import { INSERT_PLANT_DETAILS, INSERT_TRUSS_DETAILS } from '../graphql/mutation'
 import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
 import Database from './Database';
 import AsyncStorage from '@react-native-community/async-storage';
-import { EventRegister } from 'react-native-event-listeners'
 
 
 
 var loadingDone = '';
-
-var houseSelected;
 var loading = true;
 
 
@@ -80,9 +77,9 @@ export const ViewPlantTrussDetails = (props) => {
           console.log(err);
         });
 
-        saveAsyncData();
+      //saveAsyncData();
 
-      
+
       //navigating to previous screen
       loading = false;
       props.navigation.goBack(null);
@@ -101,11 +98,12 @@ export const ViewPlantTrussDetails = (props) => {
       .then(data => {
         console.log('data from local database', data);
 
-        if(data.length !== 0){
+        if (data.length !== 0) {
 
           setPlantData(data);
+          AsyncStorage.clear();
 
-        }else{
+        } else {
 
           loading = false;
           props.navigation.goBack(null);
@@ -121,7 +119,8 @@ export const ViewPlantTrussDetails = (props) => {
   useEffect(() => {
     let objs = [];
     if (plantData?.length > 0) {
-      plantData?.map(obj => {
+      plantData?.map(
+        obj => {
         delete obj.plantId;
         delete obj?.__typename;
         delete obj?.id
@@ -132,7 +131,7 @@ export const ViewPlantTrussDetails = (props) => {
           }
         }
         console.log("here objs in plant", objs)
-        insertPlantDetails({
+        insertPlantDetails({   
           variables: {
             objects: objs,
           },
@@ -140,15 +139,15 @@ export const ViewPlantTrussDetails = (props) => {
           .then(res => {
             // res?.data?.insert_plant_details?.returning?.length > 0 && setPlantDataAws(res?.data?.insert_plant_details?.returning)
             console.log('res in plant mutation', res);
-            getPlantQuery();
             db.listTruss().then((data) => {
               console.log("truss data in local db")
-              if(data.length !== 0){
+              if (data.length !== 0) {
 
                 setTrussData(data);
-      
-              }else{
-      
+                AsyncStorage.clear();
+
+              } else {
+
                 loading = false;
                 props.navigation.goBack(null);
                 alert("No data to submit")
@@ -187,9 +186,11 @@ export const ViewPlantTrussDetails = (props) => {
       }).then((res) => {
         // res?.data?.insert_truss_details?.returning?.length > 0 && setTrussDataAws(res?.data?.insert_truss_details?.returning)
         console.log("res in truss Detaaails", res)
-        AsyncStorage.clear();
+
 
         getPlantQuery();
+
+        
       }).catch((e) => {
         console.log("error in truss mutation", e)
       })
@@ -200,14 +201,14 @@ export const ViewPlantTrussDetails = (props) => {
     getPlantDetails()
   }
 
- 
+
 
   const saveAsyncData = () => {
 
     try {
       AsyncStorage.getItem('house').then((text1Value) => {
         houseSelected = JSON.parse(text1Value);
-       
+
       }).done();
     } catch (error) {
 
@@ -320,7 +321,7 @@ const styles = StyleSheet.create({
   textBottom: {
 
     fontSize: 24,
-    paddingBottom: 20, 
+    paddingBottom: 20,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
