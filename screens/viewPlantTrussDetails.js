@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useMutation, useLazyQuery } from '@apollo/client/react';
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Modal, TouchableOpacity, Image, Platform } from 'react-native';
 import { INSERT_PLANT_DETAILS, INSERT_TRUSS_DETAILS } from '../graphql/mutation';
 import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
 import Database from './Database';
@@ -101,7 +101,8 @@ export const ViewPlantTrussDetails = (props) => {
         if (data.length !== 0) {
 
           setPlantData(data);
-          AsyncStorage.getAllKeys.then(AsyncStorage.multiRemove)
+          //AsyncStorage.clear();
+          getKeys();
 
         } else {
 
@@ -144,7 +145,8 @@ export const ViewPlantTrussDetails = (props) => {
               console.log("truss data in local db")
               if (data.length !== 0) {
                 setTrussData(data);
-                AsyncStorage.getAllKeys.then(AsyncStorage.multiRemove)
+                //AsyncStorage.clear();
+                getKeys();
 
               } else {
 
@@ -163,6 +165,18 @@ export const ViewPlantTrussDetails = (props) => {
 
     }
   }, [plantData]);
+
+
+  const getKeys = () => {
+
+    const asynKeys =  AsyncStorage.getAllKeys();
+    if(asynKeys.length > 0){
+
+         AsyncStorage.clear();  
+
+    }
+  }
+ 
 
   useEffect(() => {
     let objs = []
@@ -202,19 +216,6 @@ export const ViewPlantTrussDetails = (props) => {
   }
 
 
-
-  const saveAsyncData = () => {
-
-    try {
-      AsyncStorage.getItem('house').then((text1Value) => {
-        houseSelected = JSON.parse(text1Value);
-
-      }).done();
-    } catch (error) {
-
-
-    }
-  }
 
   return (
 
