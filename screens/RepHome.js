@@ -178,7 +178,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18
+    marginTop: 18,
+    width: '100%'
   },
 
   marginDimensionTop: {

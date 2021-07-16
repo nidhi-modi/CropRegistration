@@ -261,4 +261,12 @@ const styles = StyleSheet.create({
     //fontStyle: 'italic'
 
   },
+
+  text: {
+    margin: 6,
+    margin: 20,
+    fontSize: 22,
+    color: 'black',
+    fontWeight: 'bold',
+  },
 }); 
