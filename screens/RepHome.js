@@ -5,15 +5,20 @@ import {
   View,
   TouchableOpacity,
   Image,
-  BackHandler
+  BackHandler,
+  Alert
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import NetInfo from "@react-native-community/netinfo";
+
 
 export default class RepHome extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
+
+      isItConnected: '',
 
     }
   }
@@ -37,9 +42,84 @@ export default class RepHome extends Component {
 
 
     BackHandler.addEventListener('hardwareBackPress', this.handleBackButton);
+    NetInfo.addEventListener(this.handleConnectivityChange);
+
   }
 
+  CheckConnectivity = () => {
+    // For Android devices
+    if (Platform.OS === "android") {
+      NetInfo.isConnected.fetch().then(isConnected => {
+        if (isConnected) {
+          Alert.alert("You are online!");
+        } else {
+          Alert.alert("You are offline!");
+        }
+      });
+    } else {
+      // For iOS devices
+      NetInfo.isConnected.addEventListener(
+        "connectionChange",
+        this.handleFirstConnectivityChange
+      );
+    }
+  };
 
+  handleFirstConnectivityChange = isConnected => {
+    NetInfo.isConnected.removeEventListener(
+      "connectionChange",
+      this.handleFirstConnectivityChange
+    );
+
+    if (isConnected === false) {
+      Alert.alert("You are offline!");
+    } else {
+      Alert.alert("You are online!");
+    }
+  };
+
+  handleConnectivityChange = state => {
+    if (state.isConnected) {
+
+      this.setState({ isItConnected: 'Online' });
+
+    } else {
+
+      this.setState({ isItConnected: 'Offline' });
+    }
+  };
+
+  checkInternetConnection = () => {
+
+    if (this.state.isItConnected == 'Online') {
+
+      this.props.navigation.navigate('ViewPlantTrussDetails')
+
+
+    } else {
+
+      this.errorMessage();
+
+    }
+  }
+
+  errorMessage = () => {
+
+    Alert.alert(
+      'No Internet Connection',
+      'Make sure your device is connected to the internet',
+      [
+
+        { text: 'OK', onPress: () => console.log('No button clicked'), style: 'cancel' },
+
+      ],
+      {
+        cancelable: true
+      }
+    );
+
+
+  }
 
 
   componentWillUnmount() {
@@ -108,7 +188,7 @@ export default class RepHome extends Component {
 
           </View>
 
-          <TouchableOpacity onPress={() => this.props.navigation.navigate('ViewPlantTrussDetails')} >
+          <TouchableOpacity onPress={() => this.checkInternetConnection()} >
             <View style={styles.headerImage2}>
 
               <Image source={require('../assets/submit.png')} />
@@ -118,7 +198,7 @@ export default class RepHome extends Component {
           </TouchableOpacity>
 
           <View style={styles.textContainer}>
-          <Text style={styles.textBottom}>Press submit button only when there is internet connection.</Text>
+            <Text style={styles.textBottom}>Press submit button only when there is internet connection.</Text>
           </View>
 
 
