@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Dimensions
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
@@ -30,8 +31,15 @@ export default class RepKmRow extends Component {
     return (
       <View style={styles.container}>
 
+{Platform.OS === 'ios'? 
+        
+        <View style={styles.marginDimensionTop}></View>
+
+        : none }
+
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
+       
           <View style={styles.headerImage1}>
 
             <TouchableOpacity  onPress={() => this.props.navigation.navigate('RepHome')} >
@@ -160,4 +168,12 @@ const styles = StyleSheet.create({
     //fontStyle: 'italic'
 
   },
+
+
+  marginDimensionTop: {
+
+    marginTop: 44,
+
+  }
+
 });  

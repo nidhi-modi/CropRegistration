@@ -7,7 +7,8 @@ import {
   Image,
   BackHandler,
   Alert,
-  Dimensions
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import NetInfo from "@react-native-community/netinfo";
@@ -132,6 +133,12 @@ export default class RepHome extends Component {
   render() {
     return (
       <View style={styles.container}>
+
+        {Platform.OS === 'ios'? 
+        
+        <View style={styles.marginDimensionTop}></View>
+
+        : none }
 
         <View style={styles.headerImage}>
 
