@@ -225,7 +225,7 @@ export default class RepKMPlant2 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'REP - KM5512' && d.plantNumber === 2 && d.plantRow === 232 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'REP - KM5512' && d.plantNumber === 2 && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class RepKMPlant2 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'REP - KM5512' && d.plantNumber === '2' && d.plantRow === 232 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'REP - KM5512' && d.plantNumber === '2' && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -2895,7 +2895,7 @@ export default class RepKMPlant2 extends Component {
 
 
       let data = {
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -2940,7 +2940,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruitsRepKMPlant2,
         setFlowers: this.state.setFlowersRepKMPlant2,
         pruningNumber: this.state.pruningNumberRepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3000,7 +3000,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits1RepKMPlant2,
         setFlowers: this.state.setFlowers1RepKMPlant2,
         pruningNumber: this.state.pruningNumber1RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3061,7 +3061,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits2RepKMPlant2,
         setFlowers: this.state.setFlowers2RepKMPlant2,
         pruningNumber: this.state.pruningNumber2RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3120,7 +3120,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits3RepKMPlant2,
         setFlowers: this.state.setFlowers3RepKMPlant2,
         pruningNumber: this.state.pruningNumber3RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3178,7 +3178,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits4RepKMPlant2,
         setFlowers: this.state.setFlowers4RepKMPlant2,
         pruningNumber: this.state.pruningNumber4RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3238,7 +3238,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits5RepKMPlant2,
         setFlowers: this.state.setFlowers5RepKMPlant2,
         pruningNumber: this.state.pruningNumber5RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3304,7 +3304,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits6RepKMPlant2,
         setFlowers: this.state.setFlowers6RepKMPlant2,
         pruningNumber: this.state.pruningNumber6RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3365,7 +3365,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits7RepKMPlant2,
         setFlowers: this.state.setFlowers7RepKMPlant2,
         pruningNumber: this.state.pruningNumber7RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3424,7 +3424,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits8RepKMPlant2,
         setFlowers: this.state.setFlowers8RepKMPlant2,
         pruningNumber: this.state.pruningNumber8RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3483,7 +3483,7 @@ export default class RepKMPlant2 extends Component {
         setFruits: this.state.setFruits9RepKMPlant2,
         setFlowers: this.state.setFlowers9RepKMPlant2,
         pruningNumber: this.state.pruningNumber9RepKMPlant2,
-        plantRow: '232',
+        plantRow: '807',
         plantName: 'REP - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3652,7 +3652,7 @@ export default class RepKMPlant2 extends Component {
 
         <Text style={styles.text}>REP - KM5512</Text>
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 2</Text>/ Row No. 232/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 2</Text>/ Row No. 807/ Week No. {this.state.weekNumber}</Text>
 
 
         <ScrollView

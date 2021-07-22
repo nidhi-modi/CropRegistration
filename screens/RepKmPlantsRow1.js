@@ -573,7 +573,7 @@ export default class RepKmPlantsRow1 extends Component {
 
         </View>
 
-        <Text style={styles.text}>REP - KM5512 / Row 232</Text>
+        <Text style={styles.text}>REP - KM5512 / Row 807</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>

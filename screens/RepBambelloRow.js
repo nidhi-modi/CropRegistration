@@ -72,7 +72,7 @@ export default class RepBambelloRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 807</Text>
+              <Text style={styles.buttonText}>Row 232</Text>
             </TouchableOpacity>
 
 

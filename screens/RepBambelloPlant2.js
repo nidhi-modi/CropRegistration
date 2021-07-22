@@ -224,7 +224,7 @@ export default class RepBambelloPlant2 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'REP - Bambello' && d.plantNumber === 2 && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'REP - Bambello' && d.plantNumber === 2 && d.plantRow === 232 && d.plantWeek === this.state.weekNumber;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -245,7 +245,7 @@ export default class RepBambelloPlant2 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'REP - Bambello' && d.plantNumber === '2' && d.plantRow === 807 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'REP - Bambello' && d.plantNumber === '2' && d.plantRow === 232 && d.plantWeek === this.state.weekNumber;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -2894,7 +2894,7 @@ export default class RepBambelloPlant2 extends Component {
 
 
       let data = {
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -2939,7 +2939,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruitsRepBambelloPlant2,
         setFlowers: this.state.setFlowersRepBambelloPlant2,
         pruningNumber: this.state.pruningNumberRepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -2999,7 +2999,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits1RepBambelloPlant2,
         setFlowers: this.state.setFlowers1RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber1RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3060,7 +3060,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits2RepBambelloPlant2,
         setFlowers: this.state.setFlowers2RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber2RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3119,7 +3119,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits3RepBambelloPlant2,
         setFlowers: this.state.setFlowers3RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber3RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3177,7 +3177,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits4RepBambelloPlant2,
         setFlowers: this.state.setFlowers4RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber4RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3237,7 +3237,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits5RepBambelloPlant2,
         setFlowers: this.state.setFlowers5RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber5RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3303,7 +3303,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits6RepBambelloPlant2,
         setFlowers: this.state.setFlowers6RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber6RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3364,7 +3364,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits7RepBambelloPlant2,
         setFlowers: this.state.setFlowers7RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber7RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3423,7 +3423,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits8RepBambelloPlant2,
         setFlowers: this.state.setFlowers8RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber8RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3482,7 +3482,7 @@ export default class RepBambelloPlant2 extends Component {
         setFruits: this.state.setFruits9RepBambelloPlant2,
         setFlowers: this.state.setFlowers9RepBambelloPlant2,
         pruningNumber: this.state.pruningNumber9RepBambelloPlant2,
-        plantRow: '807',
+        plantRow: '232',
         plantName: 'REP - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3651,7 +3651,7 @@ export default class RepBambelloPlant2 extends Component {
 
         <Text style={styles.text}>REP - Bambello</Text>
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 2</Text>/ Row No. 807/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 2</Text>/ Row No. 232/ Week No. {this.state.weekNumber}</Text>
 
 
         <ScrollView

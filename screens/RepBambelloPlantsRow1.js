@@ -573,7 +573,7 @@ export default class RepBambelloPlantsRow1 extends Component {
 
         </View>
 
-        <Text style={styles.text}>REP - Bambello / Row 807</Text>
+        <Text style={styles.text}>REP - Bambello / Row 232</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>

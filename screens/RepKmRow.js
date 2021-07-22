@@ -73,7 +73,7 @@ export default class RepKmRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('RepKmPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 232</Text>
+              <Text style={styles.buttonText}>Row 807</Text>
             </TouchableOpacity>
 
            
