@@ -6,14 +6,15 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Dimensions
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
 import { EventRegister } from 'react-native-event-listeners'
 
-var screenWidth = (Dimensions.get('window').width)/1.6;
+var screenWidth = (Dimensions.get('window').width) / 1.6;
 
 
 var plant1Selected;
@@ -92,13 +93,13 @@ export default class RepAngellePlantsRow2 extends Component {
 
   componentDidUpdate() {
 
-     /*this.loadData();
+    /*this.loadData();
 
-    this.focusListener = this.props.navigation.addListener('didFocus', () => {
+   this.focusListener = this.props.navigation.addListener('didFocus', () => {
 
-      this.loadData();
+     this.loadData();
 
-    });*/
+   });*/
 
   }
 
@@ -227,8 +228,8 @@ export default class RepAngellePlantsRow2 extends Component {
 
     })
 
-     //PLANT 8
-     this.angelleRow2EventPlant8 = EventRegister.addEventListener('angelleRow2EventPlant8', (data8) => {
+    //PLANT 8
+    this.angelleRow2EventPlant8 = EventRegister.addEventListener('angelleRow2EventPlant8', (data8) => {
       plant8Selected = data8;
 
       if (data8 == null || data8 == true || data8 != false) {
@@ -543,6 +544,11 @@ export default class RepAngellePlantsRow2 extends Component {
     return (
       <View style={styles.container}>
 
+        {Platform.OS === 'ios' ?
+
+          <View style={{ marginTop: 40 }}></View>
+
+          : null}
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
@@ -720,7 +726,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     width: screenWidth,
 
-    
+
 
   },
 

@@ -33,9 +33,9 @@ export default class RepKmRow extends Component {
 
 {Platform.OS === 'ios'? 
         
-        <View style={styles.marginDimensionTop}></View>
+        <View style={{ marginTop: 40 }}></View>
 
-        : none }
+        : null }
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 

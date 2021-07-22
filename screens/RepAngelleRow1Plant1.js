@@ -15,7 +15,7 @@ import { CheckBox } from 'react-native-elements'
 import Database from './Database'
 import { LogBox } from 'react-native'
 import { EventRegister } from 'react-native-event-listeners'
-var screenWidth2 = (Dimensions.get('window').width)/1.6;
+var screenWidth2 = (Dimensions.get('window').width) / 1.6;
 
 
 const { width, height } = Dimensions.get('window');
@@ -266,9 +266,9 @@ export default class RepAngelleRow1Plant1 extends Component {
 
   setData = () => {
 
-   if (this.state.allPlantData.length !== 0) {
+    if (this.state.allPlantData.length !== 0) {
 
-   
+
 
       if (JSON.stringify(this.state.allPlantData[0].leavesPerPlant) === 'null') {
 
@@ -3621,6 +3621,14 @@ export default class RepAngelleRow1Plant1 extends Component {
 
       <View style={styles.container}>
 
+        {Platform.OS === 'ios' ?
+
+          <View style={{ marginTop: 40 }}></View>
+
+          : null}
+
+
+
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
           <View style={styles.headerImage1}>
@@ -4231,7 +4239,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4256,7 +4264,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4279,7 +4287,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4300,7 +4308,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4368,7 +4376,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4391,7 +4399,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4414,7 +4422,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4436,7 +4444,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4502,7 +4510,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4525,7 +4533,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4548,7 +4556,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4568,7 +4576,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4633,7 +4641,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4655,7 +4663,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4677,7 +4685,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4697,7 +4705,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4761,7 +4769,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4784,7 +4792,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4807,7 +4815,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4829,7 +4837,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4894,7 +4902,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4917,7 +4925,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4940,7 +4948,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4962,7 +4970,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5027,7 +5035,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5050,7 +5058,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5073,7 +5081,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5095,7 +5103,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5160,7 +5168,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5183,7 +5191,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5206,7 +5214,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5228,7 +5236,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5293,7 +5301,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5316,7 +5324,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5339,7 +5347,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5361,7 +5369,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5428,7 +5436,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5451,7 +5459,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5474,7 +5482,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5496,7 +5504,7 @@ export default class RepAngelleRow1Plant1 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                 
+
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}

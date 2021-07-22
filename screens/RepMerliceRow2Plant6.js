@@ -3620,6 +3620,12 @@ export default class RepMerliceRow2Plant6 extends Component {
 
       <View style={styles.container}>
 
+{Platform.OS === 'ios'? 
+        
+        <View style={{ marginTop: 40 }}></View>
+
+        : null }
+
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
           <View style={styles.headerImage1}>

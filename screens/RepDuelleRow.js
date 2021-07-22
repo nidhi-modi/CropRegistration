@@ -6,7 +6,8 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Dimensions
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
@@ -29,6 +30,12 @@ export default class RepDuelleRow extends Component {
   render() {
     return (
       <View style={styles.container}>
+
+{Platform.OS === 'ios'? 
+        
+        <View style={{ marginTop: 40 }}></View>
+
+        : null }
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 

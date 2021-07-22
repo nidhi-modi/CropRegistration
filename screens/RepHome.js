@@ -13,7 +13,7 @@ import {
 import { ScrollView } from 'react-native-gesture-handler';
 import NetInfo from "@react-native-community/netinfo";
 
-var screenWidth = (Dimensions.get('window').width)/1.6;
+var screenWidth = (Dimensions.get('window').width) / 1.6;
 
 
 export default class RepHome extends Component {
@@ -133,12 +133,11 @@ export default class RepHome extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {Platform.OS === 'ios' ?
 
-        {Platform.OS === 'ios'? 
-        
-        <View style={styles.marginDimensionTop}></View>
+          <View style={{ marginTop: 40 }}></View>
 
-        : none }
+          : null}
 
         <View style={styles.headerImage}>
 
@@ -229,7 +228,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F3F9FF',
 
-   
+
   },
 
   headerImage2: {
@@ -271,8 +270,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 18,
     resizeMode: 'cover',
-    
-    
+
+
   },
 
   marginDimensionTop: {

@@ -6,12 +6,12 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Dimensions
-
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 
-var screenWidth = (Dimensions.get('window').width)/1.6;
+var screenWidth = (Dimensions.get('window').width) / 1.6;
 
 export default class RepMerliceRow extends Component {
 
@@ -27,13 +27,18 @@ export default class RepMerliceRow extends Component {
   render() {
     return (
       <View style={styles.container}>
+        {Platform.OS === 'ios' ?
+
+          <View style={{ marginTop: 40 }}></View>
+
+          : null}
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity  onPress={() => this.props.navigation.navigate('RepHome')} >
-            <Image source={require('../assets/back.png')}/>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('RepHome')} >
+              <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
           </View>
@@ -54,7 +59,7 @@ export default class RepMerliceRow extends Component {
         <Text style={styles.text}>REP - Merlice</Text>
 
 
-        <ScrollView  keyboardShouldPersistTaps='handled'>
+        <ScrollView keyboardShouldPersistTaps='handled'>
 
           <View style={styles.marginDimensionTop}></View>
 
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F3F9FF',
-    
+
   },
 
   headerImage1: {
@@ -165,4 +170,4 @@ const styles = StyleSheet.create({
     //fontStyle: 'italic'
 
   },
-});  
+});
