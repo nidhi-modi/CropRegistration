@@ -5895,10 +5895,14 @@ const styles = StyleSheet.create({
   text2: {
     margin: 6,
     margin: 20,
-    fontSize: 20,
+    fontSize: 19,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    textAlign: 'center',
     textDecorationLine: 'underline',
 
   },

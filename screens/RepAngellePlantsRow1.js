@@ -720,15 +720,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
+    marginBottom: 20,
     height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
-    width: screenWidth,
-
-
-
+    flexDirection: 'row'
   },
 
   text: {

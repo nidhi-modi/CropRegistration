@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useMutation, useLazyQuery } from '@apollo/client/react';
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Modal, TouchableOpacity, Image, Platform } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
 import { INSERT_PLANT_DETAILS, INSERT_TRUSS_DETAILS } from '../graphql/mutation';
 import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
 import Database from './Database';
@@ -169,12 +169,25 @@ export const ViewPlantTrussDetails = (props) => {
 
   const getKeys = () => {
 
-    const asynKeys =  AsyncStorage.getAllKeys();
-    if(asynKeys.length > 0){
+    try{
 
-         AsyncStorage.clear();  
+    if(Platform.OS == 'ios'){
+
+      AsyncStorage.getAllKeys().then(AsyncStorage.multiRemove);
 
     }
+
+    if(Platform.OS == 'android'){
+
+        AsyncStorage.clear();  
+
+    }
+
+  }catch(error){
+
+    console.error('Error clearing app data');
+  }
+   
   }
  
 
@@ -237,6 +250,12 @@ export const ViewPlantTrussDetails = (props) => {
         </View>
       </Modal>
 
+      {Platform.OS === 'ios'? 
+        
+        <View style={{ marginTop: 40 }}></View>
+
+        : null }
+
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
         <View style={styles.headerImage1}>
@@ -250,7 +269,7 @@ export const ViewPlantTrussDetails = (props) => {
 
         <View style={styles.headerImage2}>
 
-          <Image source={require('../assets/fresh2.png')} />
+          <Image source={require('../assets/fresh3.png')} />
 
         </View>
 

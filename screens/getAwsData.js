@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useMutation, useLazyQuery } from '@apollo/client/react';
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Platform, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
 import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
 import Database from './Database';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -79,6 +79,12 @@ export const GetAwsData = (props) => {
           </View>
         </View>
       </Modal>
+
+      {Platform.OS === 'ios'? 
+        
+        <View style={{ marginTop: 40 }}></View>
+
+        : null }
 
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
