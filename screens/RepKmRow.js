@@ -5,9 +5,15 @@ import {
   View,
   TouchableOpacity,
   Image,
-  BackHandler
+  BackHandler,
+  Dimensions
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import moment from 'moment'
+import AsyncStorage from '@react-native-community/async-storage';
+import { EventRegister } from 'react-native-event-listeners'
+
+var screenWidth = (Dimensions.get('window').width)/1.6;
 
 export default class RepKmRow extends Component {
 
@@ -37,7 +43,7 @@ export default class RepKmRow extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh2.png')} />
+            <Image source={require('../assets/fresh3.png')} />
 
           </View>
 
@@ -75,7 +81,8 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF'
+    backgroundColor: '#F3F9FF',
+    
   },
 
   headerImage1: {
@@ -113,8 +120,11 @@ const styles = StyleSheet.create({
 
   containerView: {
 
-    marginLeft: 95,
-    marginRight: 95,
+    marginLeft: 100,
+    marginRight: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
 
   },
 
@@ -122,17 +132,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
-    height: 70,
+    marginBottom: 20,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center'
 
   },
 
+
   text: {
     margin: 6,
     margin: 20,
-    fontSize: 40,
+    fontSize: 28,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -142,11 +154,10 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    fontSize: 24,
+    fontSize: 18,
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
 
   },
-
 });  

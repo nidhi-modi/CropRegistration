@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, ImageBackground, Alert, FlatList, ActivityIndicator } from 'react-native'
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Image, Dimensions, Alert, FlatList, ActivityIndicator } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 
 
 var houseSelected;
+
+var screenWidth = (Dimensions.get('window').width)/1.6;
+
 
 export default class SiteSelection extends React.Component {
 
@@ -201,9 +204,10 @@ const styles = StyleSheet.create({
   container: {
 
     flex: 1,
+    alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-
+  
 
   },
 
@@ -236,7 +240,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     padding: 10,
     margin: 20,
-    height: 70,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center'
 
@@ -255,7 +260,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    fontSize: 24,
+    fontSize: 15,
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'

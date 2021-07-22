@@ -15,6 +15,7 @@ import { CheckBox } from 'react-native-elements'
 import Database from './Database'
 import { LogBox } from 'react-native'
 import { EventRegister } from 'react-native-event-listeners'
+var screenWidth2 = (Dimensions.get('window').width)/1.6;
 
 
 const { width, height } = Dimensions.get('window');
@@ -3632,7 +3633,7 @@ export default class RepBambelloPlant7 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh2.png')} />
+            <Image source={require('../assets/fresh3.png')} />
 
           </View>
 
@@ -4229,7 +4230,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4254,7 +4255,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4277,7 +4278,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4298,7 +4299,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4366,7 +4367,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4389,7 +4390,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4412,7 +4413,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4434,7 +4435,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4474,7 +4475,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.textinputheight}
-                  // underlineColorAndroid="black"
+                  //
                   autoCapitalize="none"
                   multiline={false}
                   editable={false}
@@ -4500,7 +4501,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4523,7 +4524,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4546,7 +4547,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4566,7 +4567,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4631,7 +4632,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4653,7 +4654,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4675,7 +4676,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4695,7 +4696,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4759,7 +4760,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4782,7 +4783,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4805,7 +4806,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4827,7 +4828,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4892,7 +4893,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4915,7 +4916,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4938,7 +4939,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -4960,7 +4961,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5025,7 +5026,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5048,7 +5049,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5071,7 +5072,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5093,7 +5094,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5158,7 +5159,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5181,7 +5182,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5204,7 +5205,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5226,7 +5227,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5291,7 +5292,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5314,7 +5315,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5337,7 +5338,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5359,7 +5360,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5426,7 +5427,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5449,7 +5450,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5472,7 +5473,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5494,7 +5495,7 @@ export default class RepBambelloPlant7 extends Component {
 
                 <TextInput
                   style={styles.bottonColor}
-                  underlineColorAndroid="black"
+                 
                   placeholderTextColor="#000000"
                   autoCapitalize="none"
                   multiline={false}
@@ -5673,7 +5674,7 @@ const styles = StyleSheet.create({
 
     //color: '#110A6A',
     color: '#2C3E50',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
     marginRight: 10,
@@ -5683,7 +5684,7 @@ const styles = StyleSheet.create({
 
     //color: '#110A6A',
     color: '#000000',
-    fontSize: 22,
+    fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
     marginRight: 40,
@@ -5727,7 +5728,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderColor: '#EFEFEF',
     borderWidth: 1,
-    width: 470,
+    width: screenWidth2,
 
   },
 
@@ -5748,10 +5749,8 @@ const styles = StyleSheet.create({
 
     borderRadius: 5,
     padding: 10,
-    margin: 20,
-    marginRight: 20,
     height: '100%',
-    width: '95%'
+    width: '100%'
 
   },
 
@@ -5775,9 +5774,9 @@ const styles = StyleSheet.create({
   },
 
   textInputStyle: {
-    fontSize: 22,
+    fontSize: 20,
     color: 'black',
-    height: 60,
+    height: 40,
     backgroundColor: '#ffffff',
   },
 
@@ -5876,7 +5875,7 @@ const styles = StyleSheet.create({
   text: {
     margin: 6,
     margin: 20,
-    fontSize: 40,
+    fontSize: 28,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -5888,7 +5887,7 @@ const styles = StyleSheet.create({
   text2: {
     margin: 6,
     margin: 20,
-    fontSize: 28,
+    fontSize: 20,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -5899,7 +5898,7 @@ const styles = StyleSheet.create({
   textPlants: {
     margin: 6,
     margin: 20,
-    fontSize: 32,
+    fontSize: 24,
     color: '#ff0000',
     fontWeight: 'bold',
     alignSelf: 'center',

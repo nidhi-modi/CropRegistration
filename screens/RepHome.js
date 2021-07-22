@@ -6,10 +6,13 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Alert
+  Alert,
+  Dimensions
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import NetInfo from "@react-native-community/netinfo";
+
+var screenWidth = (Dimensions.get('window').width)/1.6;
 
 
 export default class RepHome extends Component {
@@ -132,7 +135,7 @@ export default class RepHome extends Component {
 
         <View style={styles.headerImage}>
 
-          <Image source={require('../assets/fresh2.png')} />
+          <Image source={require('../assets/fresh3.png')} />
 
         </View>
 
@@ -191,7 +194,7 @@ export default class RepHome extends Component {
           <TouchableOpacity onPress={() => this.checkInternetConnection()} >
             <View style={styles.headerImage2}>
 
-              <Image source={require('../assets/submit.png')} />
+              <Image source={require('../assets/submit2.png')} />
 
             </View>
 
@@ -217,7 +220,9 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF'
+    backgroundColor: '#F3F9FF',
+
+   
   },
 
   headerImage2: {
@@ -237,8 +242,8 @@ const styles = StyleSheet.create({
 
   textBottom: {
 
-    fontSize: 24,
-    width: 450,
+    fontSize: 20,
+    width: screenWidth,
     color: '#2C3E50',
     fontWeight: 'bold',
     alignSelf: 'center',
@@ -254,12 +259,13 @@ const styles = StyleSheet.create({
 
   headerImage: {
 
-    resizeMode: 'cover',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 18,
-    width: '100%'
+    resizeMode: 'cover',
+    
+    
   },
 
   marginDimensionTop: {
@@ -276,8 +282,11 @@ const styles = StyleSheet.create({
 
   containerView: {
 
-    marginLeft: 95,
-    marginRight: 95,
+    marginLeft: 100,
+    marginRight: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
 
   },
 
@@ -285,8 +294,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
-    height: 70,
+    marginBottom: 20,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center'
 
@@ -302,7 +312,7 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    fontSize: 24,
+    fontSize: 18,
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'

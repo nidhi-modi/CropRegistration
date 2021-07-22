@@ -93,7 +93,7 @@ export const GetAwsData = (props) => {
 
         <View style={styles.headerImage2}>
 
-          <Image source={require('../assets/fresh2.png')} />
+          <Image source={require('../assets/fresh3.png')} />
 
         </View>
 
@@ -153,17 +153,18 @@ const styles = StyleSheet.create({
 
   headerImage2: {
 
-    resizeMode: 'cover',
+    resizeMode: 'contain',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 18,
+   
 
   },
 
   textBottom: {
 
-    fontSize: 24,
+    fontSize: 18,
     paddingBottom: 20,
     color: '#2C3E50',
     fontWeight: 'bold',
