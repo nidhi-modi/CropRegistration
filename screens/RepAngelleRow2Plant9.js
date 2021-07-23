@@ -5780,10 +5780,9 @@ const styles = StyleSheet.create({
 
   },
 
-  textInputStyle: {
+ textInputStyle: {
     fontSize: 20,
     color: 'black',
-    height: 40,
     backgroundColor: '#ffffff',
   },
 
