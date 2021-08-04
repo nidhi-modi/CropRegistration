@@ -82,7 +82,7 @@ export const GetAwsData = (props) => {
 
       {Platform.OS === 'ios'? 
         
-        <View style={{ marginTop: 40 }}></View>
+        <View style={{ marginTop: 20 }}></View>
 
         : null }
 

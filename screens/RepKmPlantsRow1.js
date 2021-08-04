@@ -545,7 +545,7 @@ export default class RepKmPlantsRow1 extends Component {
       <View style={styles.container}>
 {Platform.OS === 'ios'? 
         
-        <View style={{ marginTop: 40 }}></View>
+        <View style={{ marginTop: 15 }}></View>
 
         : null }
 
