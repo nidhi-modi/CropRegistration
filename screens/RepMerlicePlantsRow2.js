@@ -561,7 +561,7 @@ export default class RepMerliceRow2PlantsRow2 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh3.png')} />
+          <Text style={styles.text}>REP - Merlice / Row 707</Text>
 
           </View>
 
@@ -571,12 +571,11 @@ export default class RepMerliceRow2PlantsRow2 extends Component {
 
         </View>
 
-        <Text style={styles.text}>REP - Merlice / Row 707</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>
 
-          <View style={styles.marginDimensionTop}></View>
+          <View style={styles.marginDimensionSmallTop}></View>
 
           <View style={styles.containerView}>
 
@@ -651,6 +650,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
+    marginTop: 5,
 
   },
 
@@ -660,7 +660,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    textAlign: 'center',
+    marginTop: 5,
 
   },
 
@@ -669,6 +670,12 @@ const styles = StyleSheet.create({
   marginDimensionTop: {
 
     marginTop: 44,
+
+  },
+
+  marginDimensionSmallTop: {
+
+    marginTop: 28,
 
   },
 
@@ -730,11 +737,13 @@ const styles = StyleSheet.create({
   text: {
     margin: 6,
     margin: 20,
-    fontSize: 28,
-    color: '#2C3E50',
+    fontSize: 23,
+    color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
     textDecorationLine: 'underline',
+    flexShrink: 1,
+    textAlign: 'center'
 
 
   },

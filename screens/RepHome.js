@@ -276,7 +276,7 @@ const styles = StyleSheet.create({
 
   marginDimensionTop: {
 
-    marginTop: 44,
+    marginTop: 20,
 
   },
 

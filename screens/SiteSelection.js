@@ -56,7 +56,7 @@ export default class SiteSelection extends React.Component {
 
         } else if (houseSelected === 'GER') {
 
-          this.props.navigation.navigate('HarHome');
+          this.props.navigation.navigate('GerHome');
 
 
         } else if (houseSelected === 'OHA') {

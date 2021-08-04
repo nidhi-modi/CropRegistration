@@ -10,6 +10,8 @@ import ScreenNavigator from '../screens/ScreenNavigator'
 
 import HarHome from '../screens/HarHome'
 import RepHome from '../screens/RepHome'
+import GerHome from '../screens/GerHome'
+
 
 import Har123 from '../screens/Har123'
 
@@ -18,6 +20,15 @@ import RepAngelleRow from '../screens/RepAngelleRow'
 import RepDuelleRow from '../screens/RepDuelleRow'
 import RepKmRow from '../screens/RepKmRow'
 import RepBambelloRow from '../screens/RepBambelloRow'
+
+
+import Ger1MerliceRow from '../screens/Ger1MerliceRow'
+import Ger2MerliceRow from '../screens/Ger2MerliceRow'
+import Ger3EndeavourRow from '../screens/Ger3EndeavourRow'
+import Ger4EndeavourRow from '../screens/Ger4EndeavourRow'
+import Ger5AngelleRow from '../screens/Ger5AngelleRow'
+import Ger5DuelleRow from '../screens/Ger5DuelleRow'
+
 
 import RepMerlicePlantsRow1 from '../screens/RepMerlicePlantsRow1'
 import RepMerlicePlantsRow2 from '../screens/RepMerlicePlantsRow2'
@@ -203,6 +214,8 @@ function MainStackNavigator() {
                 <Stack.Screen name='HarHome' component={HarHome} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='RepHome' component={RepHome} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='GerHome' component={GerHome} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har123' component={Har123} options={{ headerShown: false, title: 'T&G Global' }} />
 
@@ -447,6 +460,19 @@ function MainStackNavigator() {
                 <Stack.Screen name='Har1HtlPlant4' component={Har1HtlPlant4} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har1HtlPlant5' component={Har1HtlPlant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger1MerliceRow' component={Ger1MerliceRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger2MerliceRow' component={Ger2MerliceRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger3EndeavourRow' component={Ger3EndeavourRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger4EndeavourRow' component={Ger4EndeavourRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger5DuelleRow' component={Ger5DuelleRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Ger5AngelleRow' component={Ger5AngelleRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
 
             </Stack.Navigator>
 
