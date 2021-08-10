@@ -3622,7 +3622,7 @@ export default class RepMerliceRow2Plant6 extends Component {
 
 {Platform.OS === 'ios'? 
         
-        <View style={{ marginTop: 40 }}></View>
+        <View style={{ marginTop: 15 }}></View>
 
         : null }
 
@@ -3639,7 +3639,7 @@ export default class RepMerliceRow2Plant6 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh3.png')} />
+          <Text style={styles.text}>REP - Merlice</Text>
 
           </View>
 
@@ -3649,10 +3649,10 @@ export default class RepMerliceRow2Plant6 extends Component {
 
         </View>
 
-        <Text style={styles.text}>REP - Merlice</Text>
 
         <Text style={styles.text2}><Text style={styles.textPlants}>Plant 6</Text>/ Row No. 707/ Week No. {this.state.weekNumber}</Text>
 
+        <View style={styles.marginMicroSmallDimensionTop}></View>
 
         <ScrollView
           keyboardShouldPersistTaps='handled'
@@ -5611,7 +5611,7 @@ export default class RepMerliceRow2Plant6 extends Component {
                 checkedColor="green"
                 title="Merlice Plant 6 completed"
                 checked={this.state.MerliceRow2Plant6Selected}
-                textStyle={{ fontSize: 22 }}
+                textStyle={{ fontSize: 19 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
                 onPress={() => this.changeCheckbox()} />
 
@@ -5766,6 +5766,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
+    marginTop: 5,
 
   },
 
@@ -5775,7 +5776,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    marginTop: 5,
 
   },
 
@@ -5881,17 +5882,18 @@ const styles = StyleSheet.create({
     margin: 6,
     margin: 20,
     fontSize: 28,
-    color: '#2C3E50',
+    color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
-    textDecorationLine: 'underline',
+    textDecorationLine: 'underline'
 
 
   },
 
   text2: {
-    margin: 6,
-    margin: 20,
+    marginTop: 10,
+    marginLeft: 20,
+    marginRight: 20,
     fontSize: 19,
     color: '#2C3E50',
     fontWeight: 'bold',
@@ -5920,6 +5922,12 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
+
+  },
+
+  marginMicroSmallDimensionTop: {
+
+    marginTop: 10,
 
   },
 

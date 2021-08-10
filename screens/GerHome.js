@@ -135,7 +135,7 @@ export default class GerHome extends Component {
       <View style={styles.container}>
         {Platform.OS === 'ios' ?
 
-          <View style={{ marginTop: 40 }}></View>
+          <View style={{ marginTop: 20 }}></View>
 
           : null}
 
@@ -146,7 +146,10 @@ export default class GerHome extends Component {
         </View>
 
 
+        <View style={styles.marginDimensionTop}></View>
+
         <View style={styles.marginSmallDimensionTop}></View>
+
 
 
 
@@ -283,13 +286,13 @@ const styles = StyleSheet.create({
 
   marginDimensionTop: {
 
-    marginTop: 35,
+    marginTop: 20,
 
   },
 
   marginSmallDimensionTop: {
 
-    marginTop: 20,
+    marginTop: 18,
 
   },
 

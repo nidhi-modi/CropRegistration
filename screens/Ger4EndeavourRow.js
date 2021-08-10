@@ -6,8 +6,8 @@ import {
   TouchableOpacity,
   Image,
   BackHandler,
-  Platform,
-  Dimensions
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
@@ -33,7 +33,7 @@ export default class Ger4EndeavourRow extends Component {
 
         {Platform.OS === 'ios' ?
 
-          <View style={{ marginTop: 40 }}></View>
+          <View style={{ marginTop: 15 }}></View>
 
           : null}
 
@@ -50,7 +50,7 @@ export default class Ger4EndeavourRow extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh3.png')} />
+          <Text style={styles.text}>GER 4 - Endeavour</Text>
 
           </View>
 
@@ -60,7 +60,6 @@ export default class Ger4EndeavourRow extends Component {
 
         </View>
 
-        <Text style={styles.text}>GER 4 - Endeavour</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>
@@ -71,7 +70,7 @@ export default class Ger4EndeavourRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepAngellePlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Ger4EndeavourPlantsRow1')}>
               <Text style={styles.buttonText}>Row 140/141</Text>
             </TouchableOpacity>
 
@@ -79,7 +78,7 @@ export default class Ger4EndeavourRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepAngellePlantsRow2')}>
+              onPress={() => this.props.navigation.navigate('Ger4EndeavourPlantsRow2')}>
               <Text style={styles.buttonText}>Row 70/71</Text>
             </TouchableOpacity>
 
@@ -105,7 +104,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-
+    marginTop: 5,
   },
 
   headerImage2: {
@@ -114,7 +113,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    marginTop: 5,
 
   },
 
@@ -159,11 +158,10 @@ const styles = StyleSheet.create({
     margin: 6,
     margin: 20,
     fontSize: 28,
-    color: '#2C3E50',
+    color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
-    textDecorationLine: 'underline',
-
+    textDecorationLine: 'underline'
 
   },
 
