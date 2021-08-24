@@ -225,7 +225,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 1 - Merlice' && d.plantNumber === 10 && d.plantRow === 81/86 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 1 - Merlice' && d.plantNumber === 10 && d.plantRow === '81/86' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 1 - Merlice' && d.plantNumber === '10' && d.plantRow === 81/86 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 1 - Merlice' && d.plantNumber === 10 && d.plantRow === '81/86' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 

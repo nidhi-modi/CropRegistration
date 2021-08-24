@@ -5,7 +5,7 @@ SQLite.DEBUG(true);
 SQLite.enablePromise(true);
 
 const database_name = "T&GCropRegoDatabase.db";
-const database_version = "1.0";
+const database_version = "2.0";
 const database_displayname = "Crop Rego New Offline Database";
 const database_size = 20000000;
 
@@ -37,7 +37,7 @@ export default class Database {
                                 console.log("Database not yet ready ... populating data");
                                 db.transaction((tx) => {
                                     tx.executeSql('DROP TABLE IF EXISTS TrussDetails', []);
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), fruitDiameter INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20),plantRow INT(20),plantName VARCHAR(30), plantWeek INT(20), fruitLoad INT(20), pruningFlower INT(20), floweringTruss INT(20), pruningSet INT(20), settingTruss INT(20), pruningHarvest INT(20), harvestTruss INT(20))');
+                                    tx.executeSql('CREATE TABLE IF NOT EXISTS TrussDetails (trussID INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber VARCHAR(30), trussNumber INT(20), fruitDiameter INT(20), setFruits INT(20), setFlowers INT(20), pruningNumber INT(20),plantRow VARCHAR(20),plantName VARCHAR(30), plantWeek INT(20), fruitLoad INT(20), pruningFlower INT(20), floweringTruss INT(20), pruningSet INT(20), settingTruss INT(20), pruningHarvest INT(20), harvestTruss INT(20))');
                                 }).then(() => {
                                     console.log("Truss Details Table created successfully");
                                 }).catch(error => {
@@ -83,7 +83,7 @@ export default class Database {
                                 console.log("Database not yet ready ... populating data");
                                 db.transaction((tx) => {
                                     tx.executeSql('DROP TABLE IF EXISTS PlantDetails', []);
-                                    tx.executeSql('CREATE TABLE IF NOT EXISTS PlantDetails (plantId INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber INT(20), plantRow INT(20), plantName VARCHAR(30), plantWeek INT(20), leavesPerPlant INT(20), fullySetTruss INT(20), setTrussLength INT(20), weeklyGrowth INT(20), floweringTrussHeight INT(20), leafLength INT(20), leafWidth INT(20), stmDiameter INT(20), lastWeekStmDiameter INT(20))');
+                                    tx.executeSql('CREATE TABLE IF NOT EXISTS PlantDetails (plantId INTEGER PRIMARY KEY AUTOINCREMENT, plantNumber INT(20), plantRow VARCHAR(20), plantName VARCHAR(30), plantWeek INT(20), leavesPerPlant INT(20), fullySetTruss INT(20), setTrussLength INT(20), weeklyGrowth INT(20), floweringTrussHeight INT(20), leafLength INT(20), leafWidth INT(20), stmDiameter INT(20), lastWeekStmDiameter INT(20))');
                                 }).then(() => {
                                     console.log("Table created successfully");
                                 }).catch(error => {

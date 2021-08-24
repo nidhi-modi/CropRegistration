@@ -225,7 +225,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 2 - Merlice' && d.plantNumber === 2 && d.plantRow === 114/115 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 2 - Merlice' && d.plantNumber === 6 && d.plantRow === '114/115' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 2 - Merlice' && d.plantNumber === '2' && d.plantRow === 114/115 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 2 - Merlice' && d.plantNumber === 6 && d.plantRow === '114/115' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -2898,7 +2898,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         leavesPerPlant: this.state.leavesPerPlantGer2MerliceRow2Plant6,
         fullySetTruss: this.state.fullySetTrussGer2MerliceRow2Plant6,
         setTrussLength: this.state.setTrussLengthGer2MerliceRow2Plant6,
@@ -2943,7 +2943,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3003,7 +3003,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3064,7 +3064,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3123,7 +3123,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3181,7 +3181,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3241,7 +3241,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3307,7 +3307,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3368,7 +3368,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3427,7 +3427,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,
@@ -3486,7 +3486,7 @@ export default class Ger2MerliceRow2Plant6 extends Component {
         plantRow: '114/115',
         plantName: 'GER 2 - Merlice',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 6,
         fruitLoad: this.state.fruitLoadGer2MerliceRow2Plant6,
         pruningFlower: this.state.pruneFloweringGer2MerliceRow2Plant6,
         floweringTruss: this.state.floweringTrussssGer2MerliceRow2Plant6,

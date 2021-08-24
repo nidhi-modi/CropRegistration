@@ -225,7 +225,7 @@ export default class Ger4EndeavourRow2Plant5 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 5 && d.plantRow === 70/71 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 5 && d.plantRow === '70/71' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Ger4EndeavourRow2Plant5 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === '5' && d.plantRow === 70/71 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 5 && d.plantRow === '70/71' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 

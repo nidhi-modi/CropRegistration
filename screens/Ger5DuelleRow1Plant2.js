@@ -225,7 +225,7 @@ export default class Ger5DuelleRow1Plant2 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 5 - Duelle' && d.plantNumber === 2 && d.plantRow === 48 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 5 - Duelle' && d.plantNumber === 2 && d.plantRow === '48' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Ger5DuelleRow1Plant2 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 5 - Duelle' && d.plantNumber === '2' && d.plantRow === 48 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 5 - Duelle' && d.plantNumber === 2 && d.plantRow === '48' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 

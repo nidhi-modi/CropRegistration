@@ -224,8 +224,10 @@ export default class Ger4EndeavourRow1Plant10 extends Component {
 
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
+        console.log("hjhjhjh : "+filteredPlantWeek)
+
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 10 && d.plantRow === 140/141 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 10 && d.plantRow === '140/141' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +248,7 @@ export default class Ger4EndeavourRow1Plant10 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === '10' && d.plantRow === 140/141 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 4 - Endeavour' && d.plantNumber === 10 && d.plantRow === '140/141' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -2851,7 +2853,7 @@ export default class Ger4EndeavourRow1Plant10 extends Component {
 
     } else {
 
-      console.log("No data in the database")
+      console.log("No Truss data in the database")
 
     }
   }

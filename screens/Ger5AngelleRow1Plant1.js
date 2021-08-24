@@ -225,7 +225,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'GER 5 - Angelle' && d.plantNumber === 1 && d.plantRow === 98 && d.plantWeek === this.state.weekNumber;
+        const weekRowPlant = d => d.plantName === 'GER 5 - Angelle' && d.plantNumber === 1 && d.plantRow === '98' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'GER 5 - Angelle' && d.plantNumber === '1' && d.plantRow === 98 && d.plantWeek === this.state.weekNumber;
+        const weekRowTruss = d => d.plantName === 'GER 5 - Angelle' && d.plantNumber === 1 && d.plantRow === '98' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -2895,7 +2895,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
 
 
       let data = {
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -2940,7 +2940,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruitsGer5AngelleRow1Plant1,
         setFlowers: this.state.setFlowersGer5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumberGer5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3000,7 +3000,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits1Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers1Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber1Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3061,7 +3061,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits2Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers2Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber2Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3120,7 +3120,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits3Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers3Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber3Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3178,7 +3178,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits4Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers4Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber4Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3238,7 +3238,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits5Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers5Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber5Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3304,7 +3304,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits6Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers6Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber6Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3365,7 +3365,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits7Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers7Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber7Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3424,7 +3424,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits8Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers8Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber8Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3483,7 +3483,7 @@ export default class Ger5AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits9Ger5AngelleRow1Plant1,
         setFlowers: this.state.setFlowers9Ger5AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber9Ger5AngelleRow1Plant1,
-        plantRow: '98',
+        plantRow: "98",
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
