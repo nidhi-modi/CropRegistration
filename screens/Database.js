@@ -4,7 +4,7 @@ import SQLite from "react-native-sqlite-storage";
 SQLite.DEBUG(true);
 SQLite.enablePromise(true);
 
-const database_name = "T&GCropRegoDatabase.db";
+const database_name = "T&GCropRegoDB.db";
 const database_version = "2.0";
 const database_displayname = "Crop Rego New Offline Database";
 const database_size = 20000000;
