@@ -544,15 +544,15 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         if (text10Value !== null) {
           this.setState({ trussNumberGer5AngelleRow1Plant3: JSON.parse(text10Value) });
 
-          this.setState({ trussNumber1Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1 })
-          this.setState({ trussNumber2Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2 })
-          this.setState({ trussNumber3Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3 })
-          this.setState({ trussNumber4Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4 })
-          this.setState({ trussNumber5Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5 })
-          this.setState({ trussNumber6Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6 })
-          this.setState({ trussNumber7Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7 })
-          this.setState({ trussNumber8Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8 })
-          this.setState({ trussNumber9Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9 })
+          this.setState({ trussNumber1Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1 })
+          this.setState({ trussNumber2Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2 })
+          this.setState({ trussNumber3Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3 })
+          this.setState({ trussNumber4Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4 })
+          this.setState({ trussNumber5Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5 })
+          this.setState({ trussNumber6Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6 })
+          this.setState({ trussNumber7Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7 })
+          this.setState({ trussNumber8Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8 })
+          this.setState({ trussNumber9Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9 })
 
         }
 
@@ -1314,15 +1314,15 @@ export default class Ger5AngelleRow1Plant3 extends Component {
     state[field] = text;
     this.setState(state)
 
-    this.setState({ trussNumber1Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1 })
-    this.setState({ trussNumber2Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2 })
-    this.setState({ trussNumber3Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3 })
-    this.setState({ trussNumber4Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4 })
-    this.setState({ trussNumber5Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5 })
-    this.setState({ trussNumber6Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6 })
-    this.setState({ trussNumber7Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7 })
-    this.setState({ trussNumber8Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8 })
-    this.setState({ trussNumber9Ger5AngelleRow1Plant3: parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9 })
+    this.setState({ trussNumber1Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1 })
+    this.setState({ trussNumber2Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2 })
+    this.setState({ trussNumber3Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3 })
+    this.setState({ trussNumber4Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4 })
+    this.setState({ trussNumber5Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5 })
+    this.setState({ trussNumber6Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6 })
+    this.setState({ trussNumber7Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7 })
+    this.setState({ trussNumber8Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8 })
+    this.setState({ trussNumber9Ger5AngelleRow1Plant3: Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9 })
 
 
     if (this.state.trussNumberGer5AngelleRow1Plant3 !== "") {
@@ -1332,6 +1332,53 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       this.calculateFruitLoad();
       this.calculateHarvestTruss();
       this.getTrussData();
+
+    } else {
+
+      this.setState({
+
+        setFruitsGer5AngelleRow1Plant3: '',
+        setFlowersGer5AngelleRow1Plant3: '',
+        pruningNumberGer5AngelleRow1Plant3: '',
+
+        setFruits1Ger5AngelleRow1Plant3: '',
+        setFlowers1Ger5AngelleRow1Plant3: '',
+        pruningNumber1Ger5AngelleRow1Plant3: '',
+
+        setFruits2Ger5AngelleRow1Plant3: '',
+        setFlowers2Ger5AngelleRow1Plant3: '',
+        pruningNumber2Ger5AngelleRow1Plant3: '',
+
+        setFruits3Ger5AngelleRow1Plant3: '',
+        setFlowers3Ger5AngelleRow1Plant3: '',
+        pruningNumber3Ger5AngelleRow1Plant3: '',
+
+        setFruits4Ger5AngelleRow1Plant3: '',
+        setFlowers4Ger5AngelleRow1Plant3: '',
+        pruningNumber4Ger5AngelleRow1Plant3: '',
+
+        setFruits5Ger5AngelleRow1Plant3: '',
+        setFlowers5Ger5AngelleRow1Plant3: '',
+        pruningNumber5Ger5AngelleRow1Plant3: '',
+
+        setFruits6Ger5AngelleRow1Plant3: '',
+        setFlowers6Ger5AngelleRow1Plant3: '',
+        pruningNumber6Ger5AngelleRow1Plant3: '',
+
+        setFruits7Ger5AngelleRow1Plant3: '',
+        setFlowers7Ger5AngelleRow1Plant3: '',
+        pruningNumber7Ger5AngelleRow1Plant3: '',
+
+        setFruits8Ger5AngelleRow1Plant3: '',
+        setFlowers8Ger5AngelleRow1Plant3: '',
+        pruningNumber8Ger5AngelleRow1Plant3: '',
+
+        setFruits9Ger5AngelleRow1Plant3: '',
+        setFlowers9Ger5AngelleRow1Plant3: '',
+        pruningNumber9Ger5AngelleRow1Plant3: '',
+
+      })
+
 
     }
 
@@ -1343,7 +1390,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
     var sum = 0;
 
-    sum = ((parseInt(this.state.setFruitsGer5AngelleRow1Plant3) ? parseInt(this.state.setFruitsGer5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits1Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits1Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits2Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits2Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits3Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits3Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits4Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits4Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits5Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits5Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits6Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits6Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits7Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits7Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits8Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits8Ger5AngelleRow1Plant3) : 0) + (parseInt(this.state.setFruits9Ger5AngelleRow1Plant3) ? parseInt(this.state.setFruits9Ger5AngelleRow1Plant3) : 0));
+    sum = ((Number.parseInt(this.state.setFruitsGer5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruitsGer5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits1Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits1Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits2Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits2Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits3Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits3Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits4Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits4Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits5Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits5Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits6Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits6Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits7Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits7Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits8Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits8Ger5AngelleRow1Plant3) : 0) + (Number.parseInt(this.state.setFruits9Ger5AngelleRow1Plant3) ? Number.parseInt(this.state.setFruits9Ger5AngelleRow1Plant3) : 0));
     this.setState({
       fruitLoadGer5AngelleRow1Plant3: sum,
     });
@@ -1365,11 +1412,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
     if (this.state.setFlowersGer5AngelleRow1Plant3 === "") {
 
-      prunNum = parseInt(this.state.pruningNumberGer5AngelleRow1Plant3)
+      prunNum = Number.parseInt(this.state.pruningNumberGer5AngelleRow1Plant3)
 
-      div = (parseInt((this.state.setFruitsGer5AngelleRow1Plant3) ? (this.state.setFruitsGer5AngelleRow1Plant3) : 0) / parseFloat((this.state.pruningNumberGer5AngelleRow1Plant3) ? (this.state.pruningNumberGer5AngelleRow1Plant3) : 0))
+      div = (Number.parseInt((this.state.setFruitsGer5AngelleRow1Plant3) ? (this.state.setFruitsGer5AngelleRow1Plant3) : 0) / parseFloat((this.state.pruningNumberGer5AngelleRow1Plant3) ? (this.state.pruningNumberGer5AngelleRow1Plant3) : 0))
       sub = (1 - div);
-      add = (((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) ? parseInt(this.state.trussNumberGer5AngelleRow1Plant3) : 0) + sub).toFixed(2))
+      add = (((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) ? Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) : 0) + sub).toFixed(2))
       this.setState({
         harvestTrussGer5AngelleRow1Plant3: add,
         pruningHarGer5AngelleRow1Plant3: prunNum,
@@ -1377,7 +1424,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
     } else {
 
-      prunNum = parseInt(this.state.pruningNumberGer5AngelleRow1Plant3)
+      prunNum = Number.parseInt(this.state.pruningNumberGer5AngelleRow1Plant3)
       var num = this.state.trussNumberGer5AngelleRow1Plant3
 
       this.setState({
@@ -1429,9 +1476,9 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                       } else {
 
-                        pruningSet = parseInt(this.state.pruningNumberGer5AngelleRow1Plant3);
-                        trussNum = parseInt(this.state.trussNumberGer5AngelleRow1Plant3);
-                        settingFruit = parseInt(this.state.setFruitsGer5AngelleRow1Plant3);
+                        pruningSet = Number.parseInt(this.state.pruningNumberGer5AngelleRow1Plant3);
+                        trussNum = Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3);
+                        settingFruit = Number.parseInt(this.state.setFruitsGer5AngelleRow1Plant3);
                         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                         console.log("Setting Truss Number : " + settingTruss);
                         this.setState({
@@ -1447,11 +1494,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                     } else {
 
-                      var number = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1)
+                      var number = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1)
 
-                      pruningSet = parseInt(this.state.pruningNumber1Ger5AngelleRow1Plant3);
-                      trussNum = parseInt(number);
-                      settingFruit = parseInt(this.state.setFruits1Ger5AngelleRow1Plant3);
+                      pruningSet = Number.parseInt(this.state.pruningNumber1Ger5AngelleRow1Plant3);
+                      trussNum = Number.parseInt(number);
+                      settingFruit = Number.parseInt(this.state.setFruits1Ger5AngelleRow1Plant3);
                       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                       console.log("Setting Truss Number 1 : " + settingTruss);
                       this.setState({
@@ -1468,11 +1515,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                   } else {
 
-                    var number2 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2)
+                    var number2 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2)
 
-                    pruningSet = parseInt(this.state.pruningNumber2Ger5AngelleRow1Plant3);
-                    trussNum = parseInt(number2);
-                    settingFruit = parseInt(this.state.setFruits2Ger5AngelleRow1Plant3);
+                    pruningSet = Number.parseInt(this.state.pruningNumber2Ger5AngelleRow1Plant3);
+                    trussNum = Number.parseInt(number2);
+                    settingFruit = Number.parseInt(this.state.setFruits2Ger5AngelleRow1Plant3);
                     settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                     console.log("Setting Truss Number 2 : " + settingTruss);
                     this.setState({
@@ -1488,11 +1535,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                 } else {
 
-                  var number3 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3)
+                  var number3 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3)
 
-                  pruningSet = parseInt(this.state.pruningNumber3Ger5AngelleRow1Plant3);
-                  trussNum = parseInt(number3);
-                  settingFruit = parseInt(this.state.setFruits3Ger5AngelleRow1Plant3);
+                  pruningSet = Number.parseInt(this.state.pruningNumber3Ger5AngelleRow1Plant3);
+                  trussNum = Number.parseInt(number3);
+                  settingFruit = Number.parseInt(this.state.setFruits3Ger5AngelleRow1Plant3);
                   settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                   console.log("Setting Truss Number 3 : " + settingTruss);
                   this.setState({
@@ -1509,11 +1556,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
               } else {
 
-                var number4 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4)
+                var number4 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4)
 
-                pruningSet = parseInt(this.state.pruningNumber4Ger5AngelleRow1Plant3);
-                trussNum = parseInt(number4);
-                settingFruit = parseInt(this.state.setFruits4Ger5AngelleRow1Plant3);
+                pruningSet = Number.parseInt(this.state.pruningNumber4Ger5AngelleRow1Plant3);
+                trussNum = Number.parseInt(number4);
+                settingFruit = Number.parseInt(this.state.setFruits4Ger5AngelleRow1Plant3);
                 settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
                 console.log("Setting Truss Number 4 : " + settingTruss);
                 this.setState({
@@ -1530,11 +1577,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
             } else {
 
-              var number5 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5)
+              var number5 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5)
 
-              pruningSet = parseInt(this.state.pruningNumber5Ger5AngelleRow1Plant3);
-              trussNum = parseInt(number5);
-              settingFruit = parseInt(this.state.setFruits5Ger5AngelleRow1Plant3);
+              pruningSet = Number.parseInt(this.state.pruningNumber5Ger5AngelleRow1Plant3);
+              trussNum = Number.parseInt(number5);
+              settingFruit = Number.parseInt(this.state.setFruits5Ger5AngelleRow1Plant3);
               settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
               console.log("Setting Truss Number 5 : " + settingTruss);
               this.setState({
@@ -1552,11 +1599,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
           } else {
 
-            var number6 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6)
+            var number6 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6)
 
-            pruningSet = parseInt(this.state.pruningNumber6Ger5AngelleRow1Plant3);
-            trussNum = parseInt(number6);
-            settingFruit = parseInt(this.state.setFruits6Ger5AngelleRow1Plant3);
+            pruningSet = Number.parseInt(this.state.pruningNumber6Ger5AngelleRow1Plant3);
+            trussNum = Number.parseInt(number6);
+            settingFruit = Number.parseInt(this.state.setFruits6Ger5AngelleRow1Plant3);
             settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
             console.log("Setting Truss Number 6 : " + settingTruss);
             this.setState({
@@ -1572,11 +1619,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           }
 
         } else {
-          var number7 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7)
+          var number7 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7)
 
-          pruningSet = parseInt(this.state.pruningNumber7Ger5AngelleRow1Plant3);
-          trussNum = parseInt(number7);
-          settingFruit = parseInt(this.state.setFruits7Ger5AngelleRow1Plant3);
+          pruningSet = Number.parseInt(this.state.pruningNumber7Ger5AngelleRow1Plant3);
+          trussNum = Number.parseInt(number7);
+          settingFruit = Number.parseInt(this.state.setFruits7Ger5AngelleRow1Plant3);
           settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
           console.log("Setting Truss Number 7 : " + settingTruss);
           this.setState({
@@ -1592,11 +1639,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
       } else {
 
-        var number8 = (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8)
+        var number8 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8)
 
-        pruningSet = parseInt(this.state.pruningNumber8Ger5AngelleRow1Plant3);
-        trussNum = parseInt(number8);
-        settingFruit = parseInt(this.state.setFruits8Ger5AngelleRow1Plant3);
+        pruningSet = Number.parseInt(this.state.pruningNumber8Ger5AngelleRow1Plant3);
+        trussNum = Number.parseInt(number8);
+        settingFruit = Number.parseInt(this.state.setFruits8Ger5AngelleRow1Plant3);
         settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
         console.log("Setting Truss Number 8 : " + settingTruss);
         this.setState({
@@ -1613,11 +1660,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
     } else {
 
-      var number9 = (ParseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9)
+      var number9 = (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9)
 
-      pruningSet = parseInt(this.state.pruningNumber9Ger5AngelleRow1Plant3);
-      trussNum = parseInt(number9);
-      settingFruit = parseInt(this.state.setFruits9Ger5AngelleRow1Plant3);
+      pruningSet = Number.parseInt(this.state.pruningNumber9Ger5AngelleRow1Plant3);
+      trussNum = Number.parseInt(number9);
+      settingFruit = Number.parseInt(this.state.setFruits9Ger5AngelleRow1Plant3);
       settingTruss = ((trussNum + (settingFruit / pruningSet)).toFixed(2));
       console.log("Setting Truss Number 9 : " + settingTruss);
       this.setState({
@@ -1674,11 +1721,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
                         var number01 = this.state.trussNumberGer5AngelleRow1Plant3
 
 
-                        flowerPruningNumner = parseInt(this.state.pruningNumberGer5AngelleRow1Plant3);
-                        flowering = parseInt(this.state.setFlowersGer5AngelleRow1Plant3);
-                        flowerSetFruits = parseInt(this.state.setFruitsGer5AngelleRow1Plant3);
+                        flowerPruningNumner = Number.parseInt(this.state.pruningNumberGer5AngelleRow1Plant3);
+                        flowering = Number.parseInt(this.state.setFlowersGer5AngelleRow1Plant3);
+                        flowerSetFruits = Number.parseInt(this.state.setFruitsGer5AngelleRow1Plant3);
                         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                        floweringTruss = ((parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
+                        floweringTruss = ((Number.parseInt(number01) + (summ / flowerPruningNumner)).toFixed(2));
                         console.log("Flowering Truss Value : " + floweringTruss);
                         this.setState({
                           floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1694,12 +1741,12 @@ export default class Ger5AngelleRow1Plant3 extends Component {
                       var number11 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 1
 
                       console.log("oooooooooooooooooooooooooooooo : " + number11);
-                      flowerPruningNumner = parseInt(this.state.pruningNumber1Ger5AngelleRow1Plant3);
-                      flowering = parseInt(this.state.setFlowers1Ger5AngelleRow1Plant3);
-                      flowerSetFruits = parseInt(this.state.setFruits1Ger5AngelleRow1Plant3);
+                      flowerPruningNumner = Number.parseInt(this.state.pruningNumber1Ger5AngelleRow1Plant3);
+                      flowering = Number.parseInt(this.state.setFlowers1Ger5AngelleRow1Plant3);
+                      flowerSetFruits = Number.parseInt(this.state.setFruits1Ger5AngelleRow1Plant3);
                       trussNum = number11
                       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                      floweringTruss = ((parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
+                      floweringTruss = ((Number.parseInt(number11) + (summ / flowerPruningNumner)).toFixed(2));
                       console.log("Flowering Truss Value : " + floweringTruss);
                       this.setState({
                         floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1716,11 +1763,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                     var number21 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 2
 
-                    flowerPruningNumner = parseInt(this.state.pruningNumber2Ger5AngelleRow1Plant3);
-                    flowering = parseInt(this.state.setFlowers2Ger5AngelleRow1Plant3);
-                    flowerSetFruits = parseInt(this.state.setFruits2Ger5AngelleRow1Plant3);
+                    flowerPruningNumner = Number.parseInt(this.state.pruningNumber2Ger5AngelleRow1Plant3);
+                    flowering = Number.parseInt(this.state.setFlowers2Ger5AngelleRow1Plant3);
+                    flowerSetFruits = Number.parseInt(this.state.setFruits2Ger5AngelleRow1Plant3);
                     summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                    floweringTruss = ((parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
+                    floweringTruss = ((Number.parseInt(number21) + (summ / flowerPruningNumner)).toFixed(2));
                     console.log("Flowering Truss Value : " + floweringTruss);
                     this.setState({
                       floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1737,11 +1784,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                   var number31 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 3
 
-                  flowerPruningNumner = parseInt(this.state.pruningNumber3Ger5AngelleRow1Plant3);
-                  flowering = parseInt(this.state.setFlowers3Ger5AngelleRow1Plant3);
-                  flowerSetFruits = parseInt(this.state.setFruits3Ger5AngelleRow1Plant3);
+                  flowerPruningNumner = Number.parseInt(this.state.pruningNumber3Ger5AngelleRow1Plant3);
+                  flowering = Number.parseInt(this.state.setFlowers3Ger5AngelleRow1Plant3);
+                  flowerSetFruits = Number.parseInt(this.state.setFruits3Ger5AngelleRow1Plant3);
                   summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                  floweringTruss = ((parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
+                  floweringTruss = ((Number.parseInt(number31) + (summ / flowerPruningNumner)).toFixed(2));
                   console.log("Flowering Truss Value : " + floweringTruss);
                   this.setState({
                     floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1758,11 +1805,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
                 var number41 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 4
 
-                flowerPruningNumner = parseInt(this.state.pruningNumber4Ger5AngelleRow1Plant3);
-                flowering = parseInt(this.state.setFlowers4Ger5AngelleRow1Plant3);
-                flowerSetFruits = parseInt(this.state.setFruits4Ger5AngelleRow1Plant3);
+                flowerPruningNumner = Number.parseInt(this.state.pruningNumber4Ger5AngelleRow1Plant3);
+                flowering = Number.parseInt(this.state.setFlowers4Ger5AngelleRow1Plant3);
+                flowerSetFruits = Number.parseInt(this.state.setFruits4Ger5AngelleRow1Plant3);
                 summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-                floweringTruss = ((parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
+                floweringTruss = ((Number.parseInt(number41) + (summ / flowerPruningNumner)).toFixed(2));
                 console.log("Flowering Truss Value : " + floweringTruss);
                 this.setState({
                   floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1780,11 +1827,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
               var number51 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 5
 
-              flowerPruningNumner = parseInt(this.state.pruningNumber5Ger5AngelleRow1Plant3);
-              flowering = parseInt(this.state.setFlowers5Ger5AngelleRow1Plant3);
-              flowerSetFruits = parseInt(this.state.setFruits5Ger5AngelleRow1Plant3);
+              flowerPruningNumner = Number.parseInt(this.state.pruningNumber5Ger5AngelleRow1Plant3);
+              flowering = Number.parseInt(this.state.setFlowers5Ger5AngelleRow1Plant3);
+              flowerSetFruits = Number.parseInt(this.state.setFruits5Ger5AngelleRow1Plant3);
               summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-              floweringTruss = ((parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
+              floweringTruss = ((Number.parseInt(number51) + (summ / flowerPruningNumner)).toFixed(2));
               console.log("Flowering Truss Value : " + floweringTruss);
               this.setState({
                 floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1802,11 +1849,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
             var number61 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 6
 
-            flowerPruningNumner = parseInt(this.state.pruningNumber6Ger5AngelleRow1Plant3);
-            flowering = parseInt(this.state.setFlowers6Ger5AngelleRow1Plant3);
-            flowerSetFruits = parseInt(this.state.setFruits6Ger5AngelleRow1Plant3);
+            flowerPruningNumner = Number.parseInt(this.state.pruningNumber6Ger5AngelleRow1Plant3);
+            flowering = Number.parseInt(this.state.setFlowers6Ger5AngelleRow1Plant3);
+            flowerSetFruits = Number.parseInt(this.state.setFruits6Ger5AngelleRow1Plant3);
             summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-            floweringTruss = ((parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
+            floweringTruss = ((Number.parseInt(number61) + (summ / flowerPruningNumner)).toFixed(2));
             console.log("Flowering Truss Value : " + floweringTruss);
             this.setState({
               floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1824,11 +1871,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
           var number71 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 7
 
-          flowerPruningNumner = parseInt(this.state.pruningNumber7Ger5AngelleRow1Plant3);
-          flowering = parseInt(this.state.setFlowers7Ger5AngelleRow1Plant3);
-          flowerSetFruits = parseInt(this.state.setFruits7Ger5AngelleRow1Plant3);
+          flowerPruningNumner = Number.parseInt(this.state.pruningNumber7Ger5AngelleRow1Plant3);
+          flowering = Number.parseInt(this.state.setFlowers7Ger5AngelleRow1Plant3);
+          flowerSetFruits = Number.parseInt(this.state.setFruits7Ger5AngelleRow1Plant3);
           summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-          floweringTruss = ((parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
+          floweringTruss = ((Number.parseInt(number71) + (summ / flowerPruningNumner)).toFixed(2));
           console.log("Flowering Truss Value : " + floweringTruss);
           this.setState({
             floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1845,11 +1892,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       } else {
         var number81 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 8
 
-        flowerPruningNumner = parseInt(this.state.pruningNumber8Ger5AngelleRow1Plant3);
-        flowering = parseInt(this.state.setFlowers8Ger5AngelleRow1Plant3);
-        flowerSetFruits = parseInt(this.state.setFruits8Ger5AngelleRow1Plant3);
+        flowerPruningNumner = Number.parseInt(this.state.pruningNumber8Ger5AngelleRow1Plant3);
+        flowering = Number.parseInt(this.state.setFlowers8Ger5AngelleRow1Plant3);
+        flowerSetFruits = Number.parseInt(this.state.setFruits8Ger5AngelleRow1Plant3);
         summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-        floweringTruss = ((parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
+        floweringTruss = ((Number.parseInt(number81) + (summ / flowerPruningNumner)).toFixed(2));
         console.log("Flowering Truss Value : " + floweringTruss);
         this.setState({
           floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1867,11 +1914,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
       var number91 = + (this.state.trussNumberGer5AngelleRow1Plant3) + 9
 
-      flowerPruningNumner = parseInt(this.state.pruningNumber9Ger5AngelleRow1Plant3);
-      flowering = parseInt(this.state.setFlowers9Ger5AngelleRow1Plant3);
-      flowerSetFruits = parseInt(this.state.setFruits9Ger5AngelleRow1Plant3);
+      flowerPruningNumner = Number.parseInt(this.state.pruningNumber9Ger5AngelleRow1Plant3);
+      flowering = Number.parseInt(this.state.setFlowers9Ger5AngelleRow1Plant3);
+      flowerSetFruits = Number.parseInt(this.state.setFruits9Ger5AngelleRow1Plant3);
       summ = (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
-      floweringTruss = ((parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
+      floweringTruss = ((Number.parseInt(number91) + (summ / flowerPruningNumner)).toFixed(2));
       console.log("Flowering Truss Value : " + floweringTruss);
       this.setState({
         floweringTrussssGer5AngelleRow1Plant3: floweringTruss,
@@ -1901,7 +1948,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       if (this.state.trussNumberGer5AngelleRow1Plant3 != null) {
 
         //Change week number
-        const weekRowTruss1 = d => d.trussNumber === parseInt(this.state.trussNumberGer5AngelleRow1Plant3);
+        const weekRowTruss1 = d => d.trussNumber === Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3);
 
         const filteredweekRowTruss1 = this.state.allTrussData.filter(weekRowTruss1);
 
@@ -1982,6 +2029,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumberGer5AngelleRow1Plant3: '',
+            setFruitsGer5AngelleRow1Plant3: '',
+            setFlowersGer5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
       } else {
@@ -1992,10 +2050,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
 
       //2nd Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) != null) {
 
         //Change week number
-        const weekRowTruss2 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1);
+        const weekRowTruss2 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1);
 
         const filteredweekRowTruss2 = this.state.allTrussData.filter(weekRowTruss2);
 
@@ -2078,6 +2136,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber1Ger5AngelleRow1Plant3: '',
+            setFruits1Ger5AngelleRow1Plant3: '',
+            setFlowers1Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
 
@@ -2090,10 +2159,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //3rd Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) != null) {
 
         //Change week number
-        const weekRowTruss3 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2);
+        const weekRowTruss3 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2);
 
         const filteredweekRowTruss3 = this.state.allTrussData.filter(weekRowTruss3);
 
@@ -2177,6 +2246,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber2Ger5AngelleRow1Plant3: '',
+            setFruits2Ger5AngelleRow1Plant3: '',
+            setFlowers2Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
       } else {
@@ -2187,10 +2267,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //4th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) != null) {
 
         //Change week number
-        const weekRowTruss4 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3);
+        const weekRowTruss4 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3);
 
         const filteredweekRowTruss4 = this.state.allTrussData.filter(weekRowTruss4);
 
@@ -2273,6 +2353,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber3Ger5AngelleRow1Plant3: '',
+            setFruits3Ger5AngelleRow1Plant3: '',
+            setFlowers3Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
       } else {
@@ -2283,10 +2374,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //5th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) != null) {
 
         //Change week number
-        const weekRowTruss5 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4);
+        const weekRowTruss5 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4);
 
         const filteredweekRowTruss5 = this.state.allTrussData.filter(weekRowTruss5);
 
@@ -2368,6 +2459,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber4Ger5AngelleRow1Plant3: '',
+            setFruits4Ger5AngelleRow1Plant3: '',
+            setFlowers4Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
       } else {
@@ -2378,10 +2480,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //6th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) != null) {
 
         //Change week number
-        const weekRowTruss6 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5);
+        const weekRowTruss6 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5);
 
         const filteredweekRowTruss6 = this.state.allTrussData.filter(weekRowTruss6);
 
@@ -2463,6 +2565,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber5Ger5AngelleRow1Plant3: '',
+            setFruits5Ger5AngelleRow1Plant3: '',
+            setFlowers5Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
 
@@ -2474,10 +2587,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //7th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) != null) {
 
         //Change week number
-        const weekRowTruss7 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6);
+        const weekRowTruss7 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6);
 
         const filteredweekRowTruss7 = this.state.allTrussData.filter(weekRowTruss7);
 
@@ -2557,6 +2670,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber6Ger5AngelleRow1Plant3: '',
+            setFruits6Ger5AngelleRow1Plant3: '',
+            setFlowers6Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
 
@@ -2568,10 +2692,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //8th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) != null) {
 
         //Change week number
-        const weekRowTruss8 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7);
+        const weekRowTruss8 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7);
 
         const filteredweekRowTruss8 = this.state.allTrussData.filter(weekRowTruss8);
 
@@ -2652,6 +2776,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber7Ger5AngelleRow1Plant3: '',
+            setFruits7Ger5AngelleRow1Plant3: '',
+            setFlowers7Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
 
@@ -2663,10 +2798,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //9th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) != null) {
 
         //Change week number
-        const weekRowTruss9 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8);
+        const weekRowTruss9 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8);
 
         const filteredweekRowTruss9 = this.state.allTrussData.filter(weekRowTruss9);
 
@@ -2746,6 +2881,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
+        } else {
+
+          this.setState({
+
+            pruningNumber8Ger5AngelleRow1Plant3: '',
+            setFruits8Ger5AngelleRow1Plant3: '',
+            setFlowers8Ger5AngelleRow1Plant3: '',
+
+
+          })
+
         }
 
       } else {
@@ -2756,10 +2902,10 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       //End
 
       //10th Truss
-      if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) != null) {
+      if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) != null) {
 
         //Change week number
-        const weekRowTruss10 = d => d.trussNumber === (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9);
+        const weekRowTruss10 = d => d.trussNumber === (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9);
 
         const filteredweekRowTruss10 = this.state.allTrussData.filter(weekRowTruss10);
 
@@ -2839,6 +2985,17 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
+
+        } else {
+
+          this.setState({
+
+            pruningNumber9Ger5AngelleRow1Plant3: '',
+            setFruits9Ger5AngelleRow1Plant3: '',
+            setFlowers9Ger5AngelleRow1Plant3: '',
+
+
+          })
 
         }
 
@@ -2960,7 +3117,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         console.log(result);
 
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) !== null && this.state.pruningNumber1Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) !== null && this.state.pruningNumber1Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB1();
 
@@ -2990,12 +3147,12 @@ export default class Ger5AngelleRow1Plant3 extends Component {
   saveTrussToDB1 = () => {
 
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) != null && this.state.pruningNumber1Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1) != null && this.state.pruningNumber1Ger5AngelleRow1Plant3 !== null) {
 
 
       let data1 = {
 
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 1),
         fruitDiameter: this.state.fruitDiameter1Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits1Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers1Ger5AngelleRow1Plant3,
@@ -3023,7 +3180,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         console.log(result);
 
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) !== null && this.state.pruningNumber2Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) !== null && this.state.pruningNumber2Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB2();
 
@@ -3051,12 +3208,12 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB2 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) != null && this.state.pruningNumber2Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2) != null && this.state.pruningNumber2Ger5AngelleRow1Plant3 !== null) {
 
 
       let data2 = {
 
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 2),
         fruitDiameter: this.state.fruitDiameter2Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits2Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers2Ger5AngelleRow1Plant3,
@@ -3081,7 +3238,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       db.addTrussDetails(data2).then((result) => {
         console.log(result);
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) !== null && this.state.pruningNumber3Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) !== null && this.state.pruningNumber3Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB3();
 
@@ -3111,11 +3268,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB3 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) !== null && this.state.pruningNumber3Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3) !== null && this.state.pruningNumber3Ger5AngelleRow1Plant3 !== null) {
 
 
       let data3 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 3),
         fruitDiameter: this.state.fruitDiameter3Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits3Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers3Ger5AngelleRow1Plant3,
@@ -3141,7 +3298,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         console.log(result);
 
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) !== null && this.state.pruningNumber4Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) !== null && this.state.pruningNumber4Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB4();
 
@@ -3169,11 +3326,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB4 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) != null && this.state.pruningNumber4Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4) != null && this.state.pruningNumber4Ger5AngelleRow1Plant3 !== null) {
 
 
       let data4 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 4),
         fruitDiameter: this.state.fruitDiameter4Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits4Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers4Ger5AngelleRow1Plant3,
@@ -3198,7 +3355,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
       db.addTrussDetails(data4).then((result) => {
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) !== null && this.state.pruningNumber5Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) !== null && this.state.pruningNumber5Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB5();
 
@@ -3229,11 +3386,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB5 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) != null && this.state.pruningNumber5Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5) != null && this.state.pruningNumber5Ger5AngelleRow1Plant3 !== null) {
 
 
       let data5 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 5),
         fruitDiameter: this.state.fruitDiameter5Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits5Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers5Ger5AngelleRow1Plant3,
@@ -3263,7 +3420,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
         });
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) !== null && this.state.pruningNumber6Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) !== null && this.state.pruningNumber6Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB6();
 
@@ -3295,11 +3452,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB6 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) != null && this.state.pruningNumber6Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6) != null && this.state.pruningNumber6Ger5AngelleRow1Plant3 !== null) {
 
 
       let data6 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 6),
         fruitDiameter: this.state.fruitDiameter6Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits6Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers6Ger5AngelleRow1Plant3,
@@ -3324,7 +3481,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         console.log(result);
 
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) !== null && this.state.pruningNumber7Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) !== null && this.state.pruningNumber7Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB7();
 
@@ -3356,11 +3513,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB7 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) != null && this.state.pruningNumber7Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7) != null && this.state.pruningNumber7Ger5AngelleRow1Plant3 !== null) {
 
 
       let data7 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 7),
         fruitDiameter: this.state.fruitDiameter7Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits7Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers7Ger5AngelleRow1Plant3,
@@ -3386,7 +3543,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         console.log(result);
 
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) !== null && this.state.pruningNumber8Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) !== null && this.state.pruningNumber8Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB8();
 
@@ -3415,11 +3572,11 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB8 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) != null && this.state.pruningNumber8Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8) != null && this.state.pruningNumber8Ger5AngelleRow1Plant3 !== null) {
 
 
       let data8 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 8),
         fruitDiameter: this.state.fruitDiameter8Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits8Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers8Ger5AngelleRow1Plant3,
@@ -3445,7 +3602,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
         console.log(result);
 
-        if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) !== null && this.state.pruningNumber9Ger5AngelleRow1Plant3 !== '') {
+        if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) !== null && this.state.pruningNumber9Ger5AngelleRow1Plant3 !== '') {
 
           this.saveTrussToDB9();
 
@@ -3473,12 +3630,12 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
   saveTrussToDB9 = () => {
 
-    if ((parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) != null && this.state.pruningNumber9Ger5AngelleRow1Plant3 !== null) {
+    if ((Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9) != null && this.state.pruningNumber9Ger5AngelleRow1Plant3 !== null) {
 
 
 
       let data9 = {
-        trussNumber: (parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9),
+        trussNumber: (Number.parseInt(this.state.trussNumberGer5AngelleRow1Plant3) + 9),
         fruitDiameter: this.state.fruitDiameter9Ger5AngelleRow1Plant3,
         setFruits: this.state.setFruits9Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers9Ger5AngelleRow1Plant3,
@@ -3642,7 +3799,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 5 - Angelle</Text>
+            <Text style={styles.text}>GER 5 - Angelle</Text>
 
           </View>
 
@@ -5783,7 +5940,7 @@ const styles = StyleSheet.create({
 
   },
 
- textInputStyle: {
+  textInputStyle: {
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',
