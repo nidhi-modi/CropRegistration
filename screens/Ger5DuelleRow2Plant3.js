@@ -5911,6 +5911,8 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',
+    height: 45,
+    paddingLeft: 8
   },
 
   lastWeekNumber: {
