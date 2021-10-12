@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Alert,
   Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -2881,7 +2882,6 @@ export default class Ger3EndeavourRow1Plant7 extends Component {
 
     }
 
-    this.checkStatus();
 
   }
 
@@ -2891,7 +2891,15 @@ export default class Ger3EndeavourRow1Plant7 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
+      const { leavesPerPlantGer3EndeavourRow1Plant7 } = this.state;
+      const { fullySetTrussGer3EndeavourRow1Plant7 } = this.state;
+      const { setTrussLengthGer3EndeavourRow1Plant7 } = this.state;
+      const { weeklyGrowthGer3EndeavourRow1Plant7 } = this.state;
+      const { floweringTrussHeightGer3EndeavourRow1Plant7 } = this.state;
+      const { leafLengthGer3EndeavourRow1Plant7 } = this.state;
+      const { leafWidthGer3EndeavourRow1Plant7 } = this.state;
+      const { stmDiameterGer3EndeavourRow1Plant7 } = this.state;
+      const { lastWeekStmDiameterGer3EndeavourRow1Plant7 } = this.state;
 
 
       let data = {
@@ -2911,15 +2919,88 @@ export default class Ger3EndeavourRow1Plant7 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer3EndeavourRow1Plant7)) {
+        if (+!isNaN(+fullySetTrussGer3EndeavourRow1Plant7)) {
+          if (+!isNaN(+setTrussLengthGer3EndeavourRow1Plant7)) {
+            if (+!isNaN(+weeklyGrowthGer3EndeavourRow1Plant7)) {
+              if (+!isNaN(+floweringTrussHeightGer3EndeavourRow1Plant7)) {
+                if (+!isNaN(+leafLengthGer3EndeavourRow1Plant7)) {
+                  if (+!isNaN(+leafWidthGer3EndeavourRow1Plant7)) {
+                    if (+!isNaN(+stmDiameterGer3EndeavourRow1Plant7)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer3EndeavourRow1Plant7)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+
+                        }).catch((err) => {
+                          console.log(err);
+
+                        })
+
+                        this.saveTrussToDb();
+
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+      }
+
 
     } else {
 
@@ -3642,7 +3723,7 @@ export default class Ger3EndeavourRow1Plant7 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 3 - Endeavour</Text>
+            <Text style={styles.text}>GER 3 - Endeavour</Text>
 
           </View>
 
@@ -5616,7 +5697,7 @@ export default class Ger3EndeavourRow1Plant7 extends Component {
                 checked={this.state.Ger3EndeavourRow1Plant7Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 
@@ -5783,7 +5864,7 @@ const styles = StyleSheet.create({
 
   },
 
- textInputStyle: {
+  textInputStyle: {
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',

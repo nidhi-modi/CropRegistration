@@ -1333,49 +1333,49 @@ export default class Ger1MerliceRow2Plant9 extends Component {
       this.calculateHarvestTruss();
       this.getTrussData();
 
-    }else{
+    } else {
 
       this.setState({
 
-      setFruitsGer1MerliceRow2Plant9: '',
-      setFlowersGer1MerliceRow2Plant9: '',
-      pruningNumberGer1MerliceRow2Plant9: '',
+        setFruitsGer1MerliceRow2Plant9: '',
+        setFlowersGer1MerliceRow2Plant9: '',
+        pruningNumberGer1MerliceRow2Plant9: '',
 
-      setFruits1Ger1MerliceRow2Plant9: '',
-      setFlowers1Ger1MerliceRow2Plant9: '',
-      pruningNumber1Ger1MerliceRow2Plant9: '',
+        setFruits1Ger1MerliceRow2Plant9: '',
+        setFlowers1Ger1MerliceRow2Plant9: '',
+        pruningNumber1Ger1MerliceRow2Plant9: '',
 
-      setFruits2Ger1MerliceRow2Plant9: '',
-      setFlowers2Ger1MerliceRow2Plant9: '',
-      pruningNumber2Ger1MerliceRow2Plant9: '',
+        setFruits2Ger1MerliceRow2Plant9: '',
+        setFlowers2Ger1MerliceRow2Plant9: '',
+        pruningNumber2Ger1MerliceRow2Plant9: '',
 
-      setFruits3Ger1MerliceRow2Plant9: '',
-      setFlowers3Ger1MerliceRow2Plant9: '',
-      pruningNumber3Ger1MerliceRow2Plant9: '',
+        setFruits3Ger1MerliceRow2Plant9: '',
+        setFlowers3Ger1MerliceRow2Plant9: '',
+        pruningNumber3Ger1MerliceRow2Plant9: '',
 
-      setFruits4Ger1MerliceRow2Plant9: '',
-      setFlowers4Ger1MerliceRow2Plant9: '',
-      pruningNumber4Ger1MerliceRow2Plant9: '',
+        setFruits4Ger1MerliceRow2Plant9: '',
+        setFlowers4Ger1MerliceRow2Plant9: '',
+        pruningNumber4Ger1MerliceRow2Plant9: '',
 
-      setFruits5Ger1MerliceRow2Plant9: '',
-      setFlowers5Ger1MerliceRow2Plant9: '',
-      pruningNumber5Ger1MerliceRow2Plant9: '',
+        setFruits5Ger1MerliceRow2Plant9: '',
+        setFlowers5Ger1MerliceRow2Plant9: '',
+        pruningNumber5Ger1MerliceRow2Plant9: '',
 
-      setFruits6Ger1MerliceRow2Plant9: '',
-      setFlowers6Ger1MerliceRow2Plant9: '',
-      pruningNumber6Ger1MerliceRow2Plant9: '',
+        setFruits6Ger1MerliceRow2Plant9: '',
+        setFlowers6Ger1MerliceRow2Plant9: '',
+        pruningNumber6Ger1MerliceRow2Plant9: '',
 
-      setFruits7Ger1MerliceRow2Plant9: '',
-      setFlowers7Ger1MerliceRow2Plant9: '',
-      pruningNumber7Ger1MerliceRow2Plant9: '',
+        setFruits7Ger1MerliceRow2Plant9: '',
+        setFlowers7Ger1MerliceRow2Plant9: '',
+        pruningNumber7Ger1MerliceRow2Plant9: '',
 
-      setFruits8Ger1MerliceRow2Plant9: '',
-      setFlowers8Ger1MerliceRow2Plant9: '',
-      pruningNumber8Ger1MerliceRow2Plant9: '',
+        setFruits8Ger1MerliceRow2Plant9: '',
+        setFlowers8Ger1MerliceRow2Plant9: '',
+        pruningNumber8Ger1MerliceRow2Plant9: '',
 
-      setFruits9Ger1MerliceRow2Plant9: '',
-      setFlowers9Ger1MerliceRow2Plant9: '',
-      pruningNumber9Ger1MerliceRow2Plant9: '',
+        setFruits9Ger1MerliceRow2Plant9: '',
+        setFlowers9Ger1MerliceRow2Plant9: '',
+        pruningNumber9Ger1MerliceRow2Plant9: '',
       })
     }
 
@@ -2026,15 +2026,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruitsGer1MerliceRow2Plant9: '',
-          setFlowersGer1MerliceRow2Plant9: '',
-          pruningNumberGer1MerliceRow2Plant9: '',
 
-          
+            setFruitsGer1MerliceRow2Plant9: '',
+            setFlowersGer1MerliceRow2Plant9: '',
+            pruningNumberGer1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2133,15 +2133,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits1Ger1MerliceRow2Plant9: '',
-          setFlowers1Ger1MerliceRow2Plant9: '',
-          pruningNumber1Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits1Ger1MerliceRow2Plant9: '',
+            setFlowers1Ger1MerliceRow2Plant9: '',
+            pruningNumber1Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2243,15 +2243,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits2Ger1MerliceRow2Plant9: '',
-          setFlowers2Ger1MerliceRow2Plant9: '',
-          pruningNumber2Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits2Ger1MerliceRow2Plant9: '',
+            setFlowers2Ger1MerliceRow2Plant9: '',
+            pruningNumber2Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2350,15 +2350,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits3Ger1MerliceRow2Plant9: '',
-          setFlowers3Ger1MerliceRow2Plant9: '',
-          pruningNumber3Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits3Ger1MerliceRow2Plant9: '',
+            setFlowers3Ger1MerliceRow2Plant9: '',
+            pruningNumber3Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2456,15 +2456,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits4Ger1MerliceRow2Plant9: '',
-          setFlowers4Ger1MerliceRow2Plant9: '',
-          pruningNumber4Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits4Ger1MerliceRow2Plant9: '',
+            setFlowers4Ger1MerliceRow2Plant9: '',
+            pruningNumber4Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2562,15 +2562,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits5Ger1MerliceRow2Plant9: '',
-          setFlowers5Ger1MerliceRow2Plant9: '',
-          pruningNumber5Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits5Ger1MerliceRow2Plant9: '',
+            setFlowers5Ger1MerliceRow2Plant9: '',
+            pruningNumber5Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2667,15 +2667,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits6Ger1MerliceRow2Plant9: '',
-          setFlowers6Ger1MerliceRow2Plant9: '',
-          pruningNumber6Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits6Ger1MerliceRow2Plant9: '',
+            setFlowers6Ger1MerliceRow2Plant9: '',
+            pruningNumber6Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2773,15 +2773,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits7Ger1MerliceRow2Plant9: '',
-          setFlowers7Ger1MerliceRow2Plant9: '',
-          pruningNumber7Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits7Ger1MerliceRow2Plant9: '',
+            setFlowers7Ger1MerliceRow2Plant9: '',
+            pruningNumber7Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2878,15 +2878,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits8Ger1MerliceRow2Plant9: '',
-          setFlowers8Ger1MerliceRow2Plant9: '',
-          pruningNumber8Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits8Ger1MerliceRow2Plant9: '',
+            setFlowers8Ger1MerliceRow2Plant9: '',
+            pruningNumber8Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -2983,15 +2983,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
-    
-          setFruits9Ger1MerliceRow2Plant9: '',
-          setFlowers9Ger1MerliceRow2Plant9: '',
-          pruningNumber9Ger1MerliceRow2Plant9: '',
 
-          
+            setFruits9Ger1MerliceRow2Plant9: '',
+            setFlowers9Ger1MerliceRow2Plant9: '',
+            pruningNumber9Ger1MerliceRow2Plant9: '',
+
+
           })
 
         }
@@ -3035,7 +3035,7 @@ export default class Ger1MerliceRow2Plant9 extends Component {
 
     }
 
-    this.checkStatus();
+
 
   }
 
@@ -3045,8 +3045,15 @@ export default class Ger1MerliceRow2Plant9 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
-
+      const { leavesPerPlantGer1MerliceRow2Plant9 } = this.state;
+      const { fullySetTrussGer1MerliceRow2Plant9 } = this.state;
+      const { setTrussLengthGer1MerliceRow2Plant9 } = this.state;
+      const { weeklyGrowthGer1MerliceRow2Plant9 } = this.state;
+      const { floweringTrussHeightGer1MerliceRow2Plant9 } = this.state;
+      const { leafLengthGer1MerliceRow2Plant9 } = this.state;
+      const { leafWidthGer1MerliceRow2Plant9 } = this.state;
+      const { stmDiameterGer1MerliceRow2Plant9 } = this.state;
+      const { lastWeekStmDiameterGer1MerliceRow2Plant9 } = this.state;
 
       let data = {
         plantRow: '45/46',
@@ -3065,15 +3072,88 @@ export default class Ger1MerliceRow2Plant9 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer1MerliceRow2Plant9)) {
+        if (+!isNaN(+fullySetTrussGer1MerliceRow2Plant9)) {
+          if (+!isNaN(+setTrussLengthGer1MerliceRow2Plant9)) {
+            if (+!isNaN(+weeklyGrowthGer1MerliceRow2Plant9)) {
+              if (+!isNaN(+floweringTrussHeightGer1MerliceRow2Plant9)) {
+                if (+!isNaN(+leafLengthGer1MerliceRow2Plant9)) {
+                  if (+!isNaN(+leafWidthGer1MerliceRow2Plant9)) {
+                    if (+!isNaN(+stmDiameterGer1MerliceRow2Plant9)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer1MerliceRow2Plant9)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+
+                        }).catch((err) => {
+                          console.log(err);
+
+                        })
+
+                        this.saveTrussToDb();
+
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+      }
 
     } else {
 
@@ -3796,7 +3876,7 @@ export default class Ger1MerliceRow2Plant9 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 1 - Merlice</Text>
+            <Text style={styles.text}>GER 1 - Merlice</Text>
 
           </View>
 
@@ -5770,7 +5850,7 @@ export default class Ger1MerliceRow2Plant9 extends Component {
                 checked={this.state.Ger1MerliceRow2Plant9Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 
@@ -5937,7 +6017,7 @@ const styles = StyleSheet.create({
 
   },
 
- textInputStyle: {
+  textInputStyle: {
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',

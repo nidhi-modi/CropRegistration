@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Alert,
   Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -1333,49 +1334,49 @@ export default class Ger5DuelleRow2Plant3 extends Component {
       this.calculateHarvestTruss();
       this.getTrussData();
 
-    }else{
+    } else {
 
       this.setState({
 
-      setFruitsGer5DuelleRow2Plant3: '',
-      setFlowersGer5DuelleRow2Plant3: '',
-      pruningNumberGer5DuelleRow2Plant3: '',
+        setFruitsGer5DuelleRow2Plant3: '',
+        setFlowersGer5DuelleRow2Plant3: '',
+        pruningNumberGer5DuelleRow2Plant3: '',
 
-      setFruits1Ger5DuelleRow2Plant3: '',
-      setFlowers1Ger5DuelleRow2Plant3: '',
-      pruningNumber1Ger5DuelleRow2Plant3: '',
+        setFruits1Ger5DuelleRow2Plant3: '',
+        setFlowers1Ger5DuelleRow2Plant3: '',
+        pruningNumber1Ger5DuelleRow2Plant3: '',
 
-      setFruits2Ger5DuelleRow2Plant3: '',
-      setFlowers2Ger5DuelleRow2Plant3: '',
-      pruningNumber2Ger5DuelleRow2Plant3: '',
+        setFruits2Ger5DuelleRow2Plant3: '',
+        setFlowers2Ger5DuelleRow2Plant3: '',
+        pruningNumber2Ger5DuelleRow2Plant3: '',
 
-      setFruits3Ger5DuelleRow2Plant3: '',
-      setFlowers3Ger5DuelleRow2Plant3: '',
-      pruningNumber3Ger5DuelleRow2Plant3: '',
+        setFruits3Ger5DuelleRow2Plant3: '',
+        setFlowers3Ger5DuelleRow2Plant3: '',
+        pruningNumber3Ger5DuelleRow2Plant3: '',
 
-      setFruits4Ger5DuelleRow2Plant3: '',
-      setFlowers4Ger5DuelleRow2Plant3: '',
-      pruningNumber4Ger5DuelleRow2Plant3: '',
+        setFruits4Ger5DuelleRow2Plant3: '',
+        setFlowers4Ger5DuelleRow2Plant3: '',
+        pruningNumber4Ger5DuelleRow2Plant3: '',
 
-      setFruits5Ger5DuelleRow2Plant3: '',
-      setFlowers5Ger5DuelleRow2Plant3: '',
-      pruningNumber5Ger5DuelleRow2Plant3: '',
+        setFruits5Ger5DuelleRow2Plant3: '',
+        setFlowers5Ger5DuelleRow2Plant3: '',
+        pruningNumber5Ger5DuelleRow2Plant3: '',
 
-      setFruits6Ger5DuelleRow2Plant3: '',
-      setFlowers6Ger5DuelleRow2Plant3: '',
-      pruningNumber6Ger5DuelleRow2Plant3: '',
+        setFruits6Ger5DuelleRow2Plant3: '',
+        setFlowers6Ger5DuelleRow2Plant3: '',
+        pruningNumber6Ger5DuelleRow2Plant3: '',
 
-      setFruits7Ger5DuelleRow2Plant3: '',
-      setFlowers7Ger5DuelleRow2Plant3: '',
-      pruningNumber7Ger5DuelleRow2Plant3: '',
+        setFruits7Ger5DuelleRow2Plant3: '',
+        setFlowers7Ger5DuelleRow2Plant3: '',
+        pruningNumber7Ger5DuelleRow2Plant3: '',
 
-      setFruits8Ger5DuelleRow2Plant3: '',
-      setFlowers8Ger5DuelleRow2Plant3: '',
-      pruningNumber8Ger5DuelleRow2Plant3: '',
+        setFruits8Ger5DuelleRow2Plant3: '',
+        setFlowers8Ger5DuelleRow2Plant3: '',
+        pruningNumber8Ger5DuelleRow2Plant3: '',
 
-      setFruits9Ger5DuelleRow2Plant3: '',
-      setFlowers9Ger5DuelleRow2Plant3: '',
-      pruningNumber9Ger5DuelleRow2Plant3: '',
+        setFruits9Ger5DuelleRow2Plant3: '',
+        setFlowers9Ger5DuelleRow2Plant3: '',
+        pruningNumber9Ger5DuelleRow2Plant3: '',
       })
     }
 
@@ -2026,7 +2027,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2130,7 +2131,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2237,7 +2238,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2341,7 +2342,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2444,7 +2445,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2547,7 +2548,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2649,7 +2650,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2752,7 +2753,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2854,7 +2855,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2956,7 +2957,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -3005,7 +3006,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
 
     }
 
-    this.checkStatus();
+
 
   }
 
@@ -3015,8 +3016,15 @@ export default class Ger5DuelleRow2Plant3 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
-
+      const { leavesPerPlantGer5DuelleRow2Plant3 } = this.state;
+      const { fullySetTrussGer5DuelleRow2Plant3 } = this.state;
+      const { setTrussLengthGer5DuelleRow2Plant3 } = this.state;
+      const { weeklyGrowthGer5DuelleRow2Plant3 } = this.state;
+      const { floweringTrussHeightGer5DuelleRow2Plant3 } = this.state;
+      const { leafLengthGer5DuelleRow2Plant3 } = this.state;
+      const { leafWidthGer5DuelleRow2Plant3 } = this.state;
+      const { stmDiameterGer5DuelleRow2Plant3 } = this.state;
+      const { lastWeekStmDiameterGer5DuelleRow2Plant3 } = this.state;
 
       let data = {
         plantRow: '23',
@@ -3035,15 +3043,88 @@ export default class Ger5DuelleRow2Plant3 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer5DuelleRow2Plant3)) {
+        if (+!isNaN(+fullySetTrussGer5DuelleRow2Plant3)) {
+          if (+!isNaN(+setTrussLengthGer5DuelleRow2Plant3)) {
+            if (+!isNaN(+weeklyGrowthGer5DuelleRow2Plant3)) {
+              if (+!isNaN(+floweringTrussHeightGer5DuelleRow2Plant3)) {
+                if (+!isNaN(+leafLengthGer5DuelleRow2Plant3)) {
+                  if (+!isNaN(+leafWidthGer5DuelleRow2Plant3)) {
+                    if (+!isNaN(+stmDiameterGer5DuelleRow2Plant3)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer5DuelleRow2Plant3)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+
+                        }).catch((err) => {
+                          console.log(err);
+
+                        })
+
+                        this.saveTrussToDb();
+
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+      }
+
 
     } else {
 
@@ -3766,7 +3847,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 5 - Duelle</Text>
+            <Text style={styles.text}>GER 5 - Duelle</Text>
 
           </View>
 
@@ -5740,7 +5821,7 @@ export default class Ger5DuelleRow2Plant3 extends Component {
                 checked={this.state.Ger5DuelleRow2Plant3Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 
@@ -5907,7 +5988,7 @@ const styles = StyleSheet.create({
 
   },
 
- textInputStyle: {
+  textInputStyle: {
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',

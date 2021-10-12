@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Alert,
   Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -1333,49 +1334,49 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
       this.calculateHarvestTruss();
       this.getTrussData();
 
-    }else{
+    } else {
 
       this.setState({
 
-      setFruitsGer4EndeavourRow1Plant6: '',
-      setFlowersGer4EndeavourRow1Plant6: '',
-      pruningNumberGer4EndeavourRow1Plant6: '',
+        setFruitsGer4EndeavourRow1Plant6: '',
+        setFlowersGer4EndeavourRow1Plant6: '',
+        pruningNumberGer4EndeavourRow1Plant6: '',
 
-      setFruits1Ger4EndeavourRow1Plant6: '',
-      setFlowers1Ger4EndeavourRow1Plant6: '',
-      pruningNumber1Ger4EndeavourRow1Plant6: '',
+        setFruits1Ger4EndeavourRow1Plant6: '',
+        setFlowers1Ger4EndeavourRow1Plant6: '',
+        pruningNumber1Ger4EndeavourRow1Plant6: '',
 
-      setFruits2Ger4EndeavourRow1Plant6: '',
-      setFlowers2Ger4EndeavourRow1Plant6: '',
-      pruningNumber2Ger4EndeavourRow1Plant6: '',
+        setFruits2Ger4EndeavourRow1Plant6: '',
+        setFlowers2Ger4EndeavourRow1Plant6: '',
+        pruningNumber2Ger4EndeavourRow1Plant6: '',
 
-      setFruits3Ger4EndeavourRow1Plant6: '',
-      setFlowers3Ger4EndeavourRow1Plant6: '',
-      pruningNumber3Ger4EndeavourRow1Plant6: '',
+        setFruits3Ger4EndeavourRow1Plant6: '',
+        setFlowers3Ger4EndeavourRow1Plant6: '',
+        pruningNumber3Ger4EndeavourRow1Plant6: '',
 
-      setFruits4Ger4EndeavourRow1Plant6: '',
-      setFlowers4Ger4EndeavourRow1Plant6: '',
-      pruningNumber4Ger4EndeavourRow1Plant6: '',
+        setFruits4Ger4EndeavourRow1Plant6: '',
+        setFlowers4Ger4EndeavourRow1Plant6: '',
+        pruningNumber4Ger4EndeavourRow1Plant6: '',
 
-      setFruits5Ger4EndeavourRow1Plant6: '',
-      setFlowers5Ger4EndeavourRow1Plant6: '',
-      pruningNumber5Ger4EndeavourRow1Plant6: '',
+        setFruits5Ger4EndeavourRow1Plant6: '',
+        setFlowers5Ger4EndeavourRow1Plant6: '',
+        pruningNumber5Ger4EndeavourRow1Plant6: '',
 
-      setFruits6Ger4EndeavourRow1Plant6: '',
-      setFlowers6Ger4EndeavourRow1Plant6: '',
-      pruningNumber6Ger4EndeavourRow1Plant6: '',
+        setFruits6Ger4EndeavourRow1Plant6: '',
+        setFlowers6Ger4EndeavourRow1Plant6: '',
+        pruningNumber6Ger4EndeavourRow1Plant6: '',
 
-      setFruits7Ger4EndeavourRow1Plant6: '',
-      setFlowers7Ger4EndeavourRow1Plant6: '',
-      pruningNumber7Ger4EndeavourRow1Plant6: '',
+        setFruits7Ger4EndeavourRow1Plant6: '',
+        setFlowers7Ger4EndeavourRow1Plant6: '',
+        pruningNumber7Ger4EndeavourRow1Plant6: '',
 
-      setFruits8Ger4EndeavourRow1Plant6: '',
-      setFlowers8Ger4EndeavourRow1Plant6: '',
-      pruningNumber8Ger4EndeavourRow1Plant6: '',
+        setFruits8Ger4EndeavourRow1Plant6: '',
+        setFlowers8Ger4EndeavourRow1Plant6: '',
+        pruningNumber8Ger4EndeavourRow1Plant6: '',
 
-      setFruits9Ger4EndeavourRow1Plant6: '',
-      setFlowers9Ger4EndeavourRow1Plant6: '',
-      pruningNumber9Ger4EndeavourRow1Plant6: '',
+        setFruits9Ger4EndeavourRow1Plant6: '',
+        setFlowers9Ger4EndeavourRow1Plant6: '',
+        pruningNumber9Ger4EndeavourRow1Plant6: '',
       })
     }
 
@@ -2026,7 +2027,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2131,7 +2132,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2239,7 +2240,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2344,7 +2345,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2448,7 +2449,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2552,7 +2553,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2655,7 +2656,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2759,7 +2760,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2862,7 +2863,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -2965,7 +2966,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else{
+        } else {
 
           this.setState({
 
@@ -3015,7 +3016,6 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
 
     }
 
-    this.checkStatus();
 
   }
 
@@ -3025,7 +3025,16 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
+      const { leavesPerPlantGer4EndeavourRow1Plant6 } = this.state;
+      const { fullySetTrussGer4EndeavourRow1Plant6 } = this.state;
+      const { setTrussLengthGer4EndeavourRow1Plant6 } = this.state;
+      const { weeklyGrowthGer4EndeavourRow1Plant6 } = this.state;
+      const { floweringTrussHeightGer4EndeavourRow1Plant6 } = this.state;
+      const { leafLengthGer4EndeavourRow1Plant6 } = this.state;
+      const { leafWidthGer4EndeavourRow1Plant6 } = this.state;
+      const { stmDiameterGer4EndeavourRow1Plant6 } = this.state;
+      const { lastWeekStmDiameterGer4EndeavourRow1Plant6 } = this.state;
+
 
 
       let data = {
@@ -3045,15 +3054,87 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer4EndeavourRow1Plant6)) {
+        if (+!isNaN(+fullySetTrussGer4EndeavourRow1Plant6)) {
+          if (+!isNaN(+setTrussLengthGer4EndeavourRow1Plant6)) {
+            if (+!isNaN(+weeklyGrowthGer4EndeavourRow1Plant6)) {
+              if (+!isNaN(+floweringTrussHeightGer4EndeavourRow1Plant6)) {
+                if (+!isNaN(+leafLengthGer4EndeavourRow1Plant6)) {
+                  if (+!isNaN(+leafWidthGer4EndeavourRow1Plant6)) {
+                    if (+!isNaN(+stmDiameterGer4EndeavourRow1Plant6)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer4EndeavourRow1Plant6)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+
+                        }).catch((err) => {
+                          console.log(err);
+
+                        })
+
+                        this.saveTrussToDb();
+
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+      }
 
     } else {
 
@@ -3776,7 +3857,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 4 - Endeavour</Text>
+            <Text style={styles.text}>GER 4 - Endeavour</Text>
 
           </View>
 
@@ -5750,7 +5831,7 @@ export default class Ger4EndeavourRow1Plant6 extends Component {
                 checked={this.state.Ger4EndeavourRow1Plant6Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 
@@ -5917,7 +5998,7 @@ const styles = StyleSheet.create({
 
   },
 
- textInputStyle: {
+  textInputStyle: {
     fontSize: 20,
     color: 'black',
     backgroundColor: '#ffffff',

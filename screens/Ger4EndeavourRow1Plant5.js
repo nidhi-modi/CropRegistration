@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Alert,
   Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -2132,7 +2133,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2239,7 +2240,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2343,7 +2344,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2446,7 +2447,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2549,7 +2550,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2651,7 +2652,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2754,7 +2755,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2856,7 +2857,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2958,7 +2959,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -3007,7 +3008,6 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
 
     }
 
-    this.checkStatus();
 
   }
 
@@ -3017,7 +3017,16 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
+      const { leavesPerPlantGer4EndeavourRow1Plant5 } = this.state;
+      const { fullySetTrussGer4EndeavourRow1Plant5 } = this.state;
+      const { setTrussLengthGer4EndeavourRow1Plant5 } = this.state;
+      const { weeklyGrowthGer4EndeavourRow1Plant5 } = this.state;
+      const { floweringTrussHeightGer4EndeavourRow1Plant5 } = this.state;
+      const { leafLengthGer4EndeavourRow1Plant5 } = this.state;
+      const { leafWidthGer4EndeavourRow1Plant5 } = this.state;
+      const { stmDiameterGer4EndeavourRow1Plant5 } = this.state;
+      const { lastWeekStmDiameterGer4EndeavourRow1Plant5 } = this.state;
+
 
 
       let data = {
@@ -3037,15 +3046,87 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer4EndeavourRow1Plant5)) {
+        if (+!isNaN(+fullySetTrussGer4EndeavourRow1Plant5)) {
+          if (+!isNaN(+setTrussLengthGer4EndeavourRow1Plant5)) {
+            if (+!isNaN(+weeklyGrowthGer4EndeavourRow1Plant5)) {
+              if (+!isNaN(+floweringTrussHeightGer4EndeavourRow1Plant5)) {
+                if (+!isNaN(+leafLengthGer4EndeavourRow1Plant5)) {
+                  if (+!isNaN(+leafWidthGer4EndeavourRow1Plant5)) {
+                    if (+!isNaN(+stmDiameterGer4EndeavourRow1Plant5)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer4EndeavourRow1Plant5)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+
+                        }).catch((err) => {
+                          console.log(err);
+
+                        })
+
+                        this.saveTrussToDb();
+
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+      }
 
     } else {
 
@@ -5742,7 +5823,7 @@ export default class Ger4EndeavourRow1Plant5 extends Component {
                 checked={this.state.Ger4EndeavourRow1Plant5Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
+  Alert,
   Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
@@ -2130,7 +2131,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2237,7 +2238,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2341,7 +2342,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2444,7 +2445,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2547,7 +2548,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2649,7 +2650,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2752,7 +2753,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2854,7 +2855,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -2956,7 +2957,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
 
-        }else {
+        } else {
 
           this.setState({
 
@@ -3005,7 +3006,6 @@ export default class Ger1MerliceRow1Plant5 extends Component {
 
     }
 
-    this.checkStatus();
 
   }
 
@@ -3015,8 +3015,16 @@ export default class Ger1MerliceRow1Plant5 extends Component {
 
     if (vart == null || vart == false) {
 
-      this.setState({ checkboxStatus: 'CHECKED' })
 
+      const { leavesPerPlantGer1MerliceRow1Plant5 } = this.state;
+      const { fullySetTrussGer1MerliceRow1Plant5 } = this.state;
+      const { setTrussLengthGer1MerliceRow1Plant5 } = this.state;
+      const { weeklyGrowthGer1MerliceRow1Plant5 } = this.state;
+      const { floweringTrussHeightGer1MerliceRow1Plant5 } = this.state;
+      const { leafLengthGer1MerliceRow1Plant5 } = this.state;
+      const { leafWidthGer1MerliceRow1Plant5 } = this.state;
+      const { stmDiameterGer1MerliceRow1Plant5 } = this.state;
+      const { lastWeekStmDiameterGer1MerliceRow1Plant5 } = this.state;
 
       let data = {
         plantRow: '81/86',
@@ -3035,15 +3043,89 @@ export default class Ger1MerliceRow1Plant5 extends Component {
 
       }
 
-      db.addPlants(data).then((result) => {
-        console.log(result);
+      if (+!isNaN(+leavesPerPlantGer1MerliceRow1Plant5)) {
+        if (+!isNaN(+fullySetTrussGer1MerliceRow1Plant5)) {
+          if (+!isNaN(+setTrussLengthGer1MerliceRow1Plant5)) {
+            if (+!isNaN(+weeklyGrowthGer1MerliceRow1Plant5)) {
+              if (+!isNaN(+floweringTrussHeightGer1MerliceRow1Plant5)) {
+                if (+!isNaN(+leafLengthGer1MerliceRow1Plant5)) {
+                  if (+!isNaN(+leafWidthGer1MerliceRow1Plant5)) {
+                    if (+!isNaN(+stmDiameterGer1MerliceRow1Plant5)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer1MerliceRow1Plant5)) {
 
-      }).catch((err) => {
-        console.log(err);
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-      })
+                        this.changeCheckbox()
 
-      this.saveTrussToDb();
+                        db.addPlants(data).then((result) => {
+                          console.log(result);
+                  
+                        }).catch((err) => {
+                          console.log(err);
+                  
+                        })
+                  
+                        this.saveTrussToDb();
+                      } else {
+
+                        Alert.alert('Last week stem diameter value looks incorrect')
+
+                      }
+
+                    } else {
+
+                      Alert.alert('Stem diameter value looks incorrect')
+
+
+                    }
+
+                  } else {
+
+                    Alert.alert('Leaf width values look incorrect')
+
+
+                  }
+
+                } else {
+
+                  Alert.alert('Leaf length values look incorrect')
+
+
+                }
+
+              } else {
+
+                Alert.alert('Flower truss height value looks incorrect')
+
+              }
+
+            } else {
+              Alert.alert('Weekly growth value looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set truss length value looks incorrect')
+
+
+          }
+
+        } else {
+
+          Alert.alert('Fully set truss value looks incorrect')
+
+        }
+
+      } else {
+
+        Alert.alert('Leaves per plant value looks incorrect')
+
+
+      }
+
+     
 
     } else {
 
@@ -5740,7 +5822,7 @@ export default class Ger1MerliceRow1Plant5 extends Component {
                 checked={this.state.Ger1MerliceRow1Plant5Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
-                onPress={() => this.changeCheckbox()} />
+                onPress={() => this.checkStatus()} />
 
             </View>
 
