@@ -3185,8 +3185,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         settingTruss: this.state.settingTrussNumberGer1MerliceRow1Plant1,
         pruningHarvest: this.state.pruningHarGer1MerliceRow1Plant1,
         harvestTruss: this.state.harvestTrussGer1MerliceRow1Plant1
-
-
+      
       }
 
     

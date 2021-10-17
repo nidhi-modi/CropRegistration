@@ -3026,15 +3026,15 @@ export default class Ger5AngelleRow2Plant2 extends Component {
 
     if (vart == null || vart == false) {
 
-      const { leavesPerPlantGer5AngelleRow1Plant2 } = this.state;
-      const { fullySetTrussGer5AngelleRow1Plant2 } = this.state;
-      const { setTrussLengthGer5AngelleRow1Plant2 } = this.state;
-      const { weeklyGrowthGer5AngelleRow1Plant2 } = this.state;
-      const { floweringTrussHeightGer5AngelleRow1Plant2 } = this.state;
-      const { leafLengthGer5AngelleRow1Plant2 } = this.state;
-      const { leafWidthGer5AngelleRow1Plant2 } = this.state;
-      const { stmDiameterGer5AngelleRow1Plant2 } = this.state;
-      const { lastWeekStmDiameterGer5AngelleRow1Plant2 } = this.state;
+      const { leavesPerPlantGer5AngelleRow2Plant2 } = this.state;
+      const { fullySetTrussGer5AngelleRow2Plant2 } = this.state;
+      const { setTrussLengthGer5AngelleRow2Plant2 } = this.state;
+      const { weeklyGrowthGer5AngelleRow2Plant2 } = this.state;
+      const { floweringTrussHeightGer5AngelleRow2Plant2 } = this.state;
+      const { leafLengthGer5AngelleRow2Plant2 } = this.state;
+      const { leafWidthGer5AngelleRow2Plant2 } = this.state;
+      const { stmDiameterGer5AngelleRow2Plant2 } = this.state;
+      const { lastWeekStmDiameterGer5AngelleRow2Plant2 } = this.state;
 
 
       let data = {
@@ -3054,15 +3054,15 @@ export default class Ger5AngelleRow2Plant2 extends Component {
 
       }
 
-      if (+!isNaN(+leavesPerPlantGer5AngelleRow1Plant2)) {
-        if (+!isNaN(+fullySetTrussGer5AngelleRow1Plant2)) {
-          if (+!isNaN(+setTrussLengthGer5AngelleRow1Plant2)) {
-            if (+!isNaN(+weeklyGrowthGer5AngelleRow1Plant2)) {
-              if (+!isNaN(+floweringTrussHeightGer5AngelleRow1Plant2)) {
-                if (+!isNaN(+leafLengthGer5AngelleRow1Plant2)) {
-                  if (+!isNaN(+leafWidthGer5AngelleRow1Plant2)) {
-                    if (+!isNaN(+stmDiameterGer5AngelleRow1Plant2)) {
-                      if (+!isNaN(+lastWeekStmDiameterGer5AngelleRow1Plant2)) {
+      if (+!isNaN(+leavesPerPlantGer5AngelleRow2Plant2)) {
+        if (+!isNaN(+fullySetTrussGer5AngelleRow2Plant2)) {
+          if (+!isNaN(+setTrussLengthGer5AngelleRow2Plant2)) {
+            if (+!isNaN(+weeklyGrowthGer5AngelleRow2Plant2)) {
+              if (+!isNaN(+floweringTrussHeightGer5AngelleRow2Plant2)) {
+                if (+!isNaN(+leafLengthGer5AngelleRow2Plant2)) {
+                  if (+!isNaN(+leafWidthGer5AngelleRow2Plant2)) {
+                    if (+!isNaN(+stmDiameterGer5AngelleRow2Plant2)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer5AngelleRow2Plant2)) {
 
                         this.setState({ checkboxStatus: 'CHECKED' })
 
