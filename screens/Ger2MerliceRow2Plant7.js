@@ -3035,15 +3035,15 @@ export default class Ger2MerliceRow2Plant7 extends Component {
 
     if (vart == null || vart == false) {
 
-      const { leavesPerPlantGer2MerliceRow2Plant2 } = this.state;
-      const { fullySetTrussGer2MerliceRow2Plant2 } = this.state;
-      const { setTrussLengthGer2MerliceRow2Plant2 } = this.state;
-      const { weeklyGrowthGer2MerliceRow2Plant2 } = this.state;
-      const { floweringTrussHeightGer2MerliceRow2Plant2 } = this.state;
-      const { leafLengthGer2MerliceRow2Plant2 } = this.state;
-      const { leafWidthGer2MerliceRow2Plant2 } = this.state;
-      const { stmDiameterGer2MerliceRow2Plant2 } = this.state;
-      const { lastWeekStmDiameterGer2MerliceRow2Plant2 } = this.state;
+      const { leavesPerPlantGer2MerliceRow2Plant7 } = this.state;
+      const { fullySetTrussGer2MerliceRow2Plant7 } = this.state;
+      const { setTrussLengthGer2MerliceRow2Plant7 } = this.state;
+      const { weeklyGrowthGer2MerliceRow2Plant7 } = this.state;
+      const { floweringTrussHeightGer2MerliceRow2Plant7 } = this.state;
+      const { leafLengthGer2MerliceRow2Plant7 } = this.state;
+      const { leafWidthGer2MerliceRow2Plant7 } = this.state;
+      const { stmDiameterGer2MerliceRow2Plant7 } = this.state;
+      const { lastWeekStmDiameterGer2MerliceRow2Plant7 } = this.state;
 
       let data = {
         plantRow: '114/115',
@@ -3062,15 +3062,15 @@ export default class Ger2MerliceRow2Plant7 extends Component {
 
       }
 
-      if (+!isNaN(+leavesPerPlantGer2MerliceRow2Plant2)) {
-        if (+!isNaN(+fullySetTrussGer2MerliceRow2Plant2)) {
-          if (+!isNaN(+setTrussLengthGer2MerliceRow2Plant2)) {
-            if (+!isNaN(+weeklyGrowthGer2MerliceRow2Plant2)) {
-              if (+!isNaN(+floweringTrussHeightGer2MerliceRow2Plant2)) {
-                if (+!isNaN(+leafLengthGer2MerliceRow2Plant2)) {
-                  if (+!isNaN(+leafWidthGer2MerliceRow2Plant2)) {
-                    if (+!isNaN(+stmDiameterGer2MerliceRow2Plant2)) {
-                      if (+!isNaN(+lastWeekStmDiameterGer2MerliceRow2Plant2)) {
+      if (+!isNaN(+leavesPerPlantGer2MerliceRow2Plant7)) {
+        if (+!isNaN(+fullySetTrussGer2MerliceRow2Plant7)) {
+          if (+!isNaN(+setTrussLengthGer2MerliceRow2Plant7)) {
+            if (+!isNaN(+weeklyGrowthGer2MerliceRow2Plant7)) {
+              if (+!isNaN(+floweringTrussHeightGer2MerliceRow2Plant7)) {
+                if (+!isNaN(+leafLengthGer2MerliceRow2Plant7)) {
+                  if (+!isNaN(+leafWidthGer2MerliceRow2Plant7)) {
+                    if (+!isNaN(+stmDiameterGer2MerliceRow2Plant7)) {
+                      if (+!isNaN(+lastWeekStmDiameterGer2MerliceRow2Plant7)) {
 
                         this.setState({ checkboxStatus: 'CHECKED' })
 
