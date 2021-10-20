@@ -5,9 +5,16 @@ import {
   View,
   TouchableOpacity,
   Image,
-  BackHandler
+  BackHandler,
+  Dimensions,
+  Platform
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
+import moment from 'moment'
+import AsyncStorage from '@react-native-community/async-storage';
+import { EventRegister } from 'react-native-event-listeners'
+
+var screenWidth = (Dimensions.get('window').width) / 1.6;
 
 export default class Har3AngelleRow extends Component {
 
@@ -24,12 +31,18 @@ export default class Har3AngelleRow extends Component {
     return (
       <View style={styles.container}>
 
+        {Platform.OS === 'ios' ?
+
+          <View style={{ marginTop: 15 }}></View>
+
+          : null}
+
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity  onPress={() => this.props.navigation.navigate('Har123')} >
-            <Image source={require('../assets/back.png')}/>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har123')} >
+              <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
           </View>
@@ -37,7 +50,7 @@ export default class Har3AngelleRow extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh2.png')} />
+          <Text style={styles.text}>HAR 3 - Angelle</Text>
 
           </View>
 
@@ -47,10 +60,9 @@ export default class Har3AngelleRow extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 3 - Angelle</Text>
 
 
-        <ScrollView  keyboardShouldPersistTaps='handled'>
+        <ScrollView keyboardShouldPersistTaps='handled'>
 
           <View style={styles.marginDimensionTop}></View>
 
@@ -58,19 +70,21 @@ export default class Har3AngelleRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har3AngellePlantsRow1')}>
               <Text style={styles.buttonText}>Row 323</Text>
             </TouchableOpacity>
 
+            <View style={styles.marginSmallDimensionTop}></View>
+
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('RepBambelloPlantsRow1')}>
+              onPress={() => this.props.navigation.navigate('Har3AngellePlantsRow2')}>
               <Text style={styles.buttonText}>Row 347</Text>
             </TouchableOpacity>
 
-           
+            <View style={styles.marginSmallDimensionTop}></View>
 
-           
+
           </View>
 
         </ScrollView>
@@ -83,7 +97,8 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF'
+    backgroundColor: '#F3F9FF',
+
   },
 
   headerImage1: {
@@ -92,7 +107,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-
+    marginTop: 5,
   },
 
   headerImage2: {
@@ -101,7 +116,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    marginTop: 5,
 
   },
 
@@ -121,8 +136,11 @@ const styles = StyleSheet.create({
 
   containerView: {
 
-    marginLeft: 95,
-    marginRight: 95,
+    marginLeft: 100,
+    marginRight: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
 
   },
 
@@ -130,31 +148,31 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
-    height: 70,
+    marginBottom: 20,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center'
 
   },
 
+
   text: {
     margin: 6,
     margin: 20,
-    fontSize: 40,
-    color: '#2C3E50',
+    fontSize: 28,
+    color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
-    textDecorationLine: 'underline',
-
+    textDecorationLine: 'underline'
 
   },
 
   buttonText: {
-    fontSize: 24,
+    fontSize: 18,
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
 
   },
-
-});  
+});

@@ -5,12 +5,17 @@ import {
   View,
   TouchableOpacity,
   Image,
-  BackHandler
+  BackHandler,
+  Platform,
+  Dimensions
+
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
 import AsyncStorage from '@react-native-community/async-storage';
 import { EventRegister } from 'react-native-event-listeners'
+
+var screenWidth = (Dimensions.get('window').width) / 1.6;
 
 
 var plant1Selected;
@@ -18,7 +23,6 @@ var plant2Selected;
 var plant3Selected;
 var plant4Selected;
 var plant5Selected;
-
 
 
 export default class Har1AvalantinoPlantsRow3 extends Component {
@@ -64,12 +68,14 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
 
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.Har1AvalantinoEventRow3Plant1)
-    EventRegister.removeEventListener(this.Har1AvalantinoEventRow3Plant2)
-    EventRegister.removeEventListener(this.Har1AvalantinoEventRow3Plant3)
-    EventRegister.removeEventListener(this.Har1AvalantinoEventRow3Plant4)
-    EventRegister.removeEventListener(this.Har1AvalantinoEventRow3Plant5)
+    EventRegister.removeEventListener(this.har1AvalantinoRow3EventPlant1)
+    EventRegister.removeEventListener(this.har1AvalantinoRow3EventPlant2)
+    EventRegister.removeEventListener(this.har1AvalantinoRow3EventPlant3)
+    EventRegister.removeEventListener(this.har1AvalantinoRow3EventPlant4)
+    EventRegister.removeEventListener(this.har1AvalantinoRow3EventPlant5)
     
+
+
 
 
   }
@@ -77,13 +83,13 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
 
   componentDidUpdate() {
 
-     /*this.loadData();
+    /*this.loadData();
 
-    this.focusListener = this.props.navigation.addListener('didFocus', () => {
+   this.focusListener = this.props.navigation.addListener('didFocus', () => {
 
-      this.loadData();
+     this.loadData();
 
-    });*/
+   });*/
 
   }
 
@@ -94,7 +100,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
   UNSAFE_componentWillMount() {
 
     //PLANT 1
-    this.Har1AvalantinoEventRow3Plant1 = EventRegister.addEventListener('Har1AvalantinoEventRow3Plant1', (data1) => {
+    this.har1AvalantinoRow3EventPlant1 = EventRegister.addEventListener('har1AvalantinoRow3EventPlant1', (data1) => {
       plant1Selected = data1;
 
       if (data1 == null || data1 == true || data1 != false) {
@@ -111,7 +117,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
     })
 
     //PLANT 2
-    this.Har1AvalantinoEventRow3Plant2 = EventRegister.addEventListener('Har1AvalantinoEventRow3Plant2', (data2) => {
+    this.har1AvalantinoRow3EventPlant2 = EventRegister.addEventListener('har1AvalantinoRow3EventPlant2', (data2) => {
       plant2Selected = data2;
 
       if (data2 == null || data2 == true || data2 != false) {
@@ -128,7 +134,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
     })
 
     //PLANT 3
-    this.Har1AvalantinoEventRow3Plant3 = EventRegister.addEventListener('Har1AvalantinoEventRow3Plant3', (data3) => {
+    this.har1AvalantinoRow3EventPlant3 = EventRegister.addEventListener('har1AvalantinoRow3EventPlant3', (data3) => {
       plant3Selected = data3;
 
       if (data3 == null || data3 == true || data3 != false) {
@@ -145,7 +151,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
     })
 
     //PLANT 4
-    this.Har1AvalantinoEventRow3Plant4 = EventRegister.addEventListener('Har1AvalantinoEventRow3Plant4', (data4) => {
+    this.har1AvalantinoRow3EventPlant4 = EventRegister.addEventListener('har1AvalantinoRow3EventPlant4', (data4) => {
       plant4Selected = data4;
 
       if (data4 == null || data4 == true || data4 != false) {
@@ -162,7 +168,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
     })
 
     //PLANT 5
-    this.Har1AvalantinoEventRow3Plant5 = EventRegister.addEventListener('Har1AvalantinoEventRow3Plant5', (data5) => {
+    this.har1AvalantinoRow3EventPlant5 = EventRegister.addEventListener('har1AvalantinoRow3EventPlant5', (data5) => {
       plant5Selected = data5;
 
       if (data5 == null || data5 == true || data5 != false) {
@@ -177,6 +183,8 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
       }
 
     })
+
+   
 
   }
 
@@ -311,11 +319,17 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
 
   }
 
- 
+  
+
   render() {
     return (
       <View style={styles.container}>
 
+        {Platform.OS === 'ios' ?
+
+          <View style={{ marginTop: 15 }}></View>
+
+          : null}
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
@@ -330,7 +344,7 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
 
           <View style={styles.headerImage2}>
 
-            <Image source={require('../assets/fresh2.png')} />
+          <Text style={styles.text}>HAR 1 - Avalantino / {'\n'}Row 156</Text>
 
           </View>
 
@@ -340,12 +354,11 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
 
         </View>
 
-        <Text style={styles.text}>HAR 1 - Avalantino / Row 156</Text>
 
 
         <ScrollView keyboardShouldPersistTaps='handled'>
 
-          <View style={styles.marginDimensionTop}></View>
+          <View style={styles.marginDimensionSmallTop}></View>
 
           <View style={styles.containerView}>
 
@@ -372,7 +385,6 @@ export default class Har1AvalantinoPlantsRow3 extends Component {
             {this.renderElement5()}
 
 
-            
           </View>
 
         </ScrollView>
@@ -394,6 +406,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
+    marginTop: 5,
 
   },
 
@@ -403,7 +416,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    marginTop: 18,
+    textAlign: 'center',
+    marginTop: 5,
 
   },
 
@@ -412,6 +426,12 @@ const styles = StyleSheet.create({
   marginDimensionTop: {
 
     marginTop: 44,
+
+  },
+
+  marginDimensionSmallTop: {
+
+    marginTop: 28,
 
   },
 
@@ -435,8 +455,12 @@ const styles = StyleSheet.create({
 
   containerView: {
 
-    marginLeft: 95,
-    marginRight: 95,
+    marginLeft: 100,
+    marginRight: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+
 
   },
 
@@ -444,8 +468,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
-    height: 70,
+    marginBottom: 20,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center'
 
@@ -455,22 +480,26 @@ const styles = StyleSheet.create({
     backgroundColor: '#2C3E50',
     borderRadius: 8,
     padding: 10,
-    margin: 20,
-    height: 70,
+    marginBottom: 20,
+    height: 50,
+    width: screenWidth,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row'
+      
 
   },
 
   text: {
     margin: 6,
     margin: 20,
-    fontSize: 40,
-    color: '#2C3E50',
+    fontSize: 23,
+    color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
     textDecorationLine: 'underline',
+    flexShrink: 1,
+    textAlign: 'center'
 
 
   },
@@ -482,11 +511,10 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-    fontSize: 24,
+    fontSize: 18,
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
 
   },
-
 });
