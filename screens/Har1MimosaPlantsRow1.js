@@ -30,7 +30,7 @@ var plant5Selected;
 
 
 
-export default class Har1AnnasunPlantsRow1 extends Component {
+export default class Har1MimosaPlantsRow1 extends Component {
 
   constructor(props) {
     super(props);
@@ -73,11 +73,11 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.har1AnnasunRow1EventPlant1)
-    EventRegister.removeEventListener(this.har1AnnasunRow1EventPlant2)
-    EventRegister.removeEventListener(this.har1AnnasunRow1EventPlant3)
-    EventRegister.removeEventListener(this.har1AnnasunRow1EventPlant4)
-    EventRegister.removeEventListener(this.har1AnnasunRow1EventPlant5)
+    EventRegister.removeEventListener(this.har1MimosaRow1EventPlant1)
+    EventRegister.removeEventListener(this.har1MimosaRow1EventPlant2)
+    EventRegister.removeEventListener(this.har1MimosaRow1EventPlant3)
+    EventRegister.removeEventListener(this.har1MimosaRow1EventPlant4)
+    EventRegister.removeEventListener(this.har1MimosaRow1EventPlant5)
     
 
 
@@ -105,7 +105,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
   UNSAFE_componentWillMount() {
 
     //PLANT 1
-    this.har1AnnasunRow1EventPlant1 = EventRegister.addEventListener('har1AnnasunRow1EventPlant1', (data1) => {
+    this.har1MimosaRow1EventPlant1 = EventRegister.addEventListener('har1MimosaRow1EventPlant1', (data1) => {
       plant1Selected = data1;
 
       if (data1 == null || data1 == true || data1 != false) {
@@ -122,7 +122,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
     })
 
     //PLANT 2
-    this.har1AnnasunRow1EventPlant2 = EventRegister.addEventListener('har1AnnasunRow1EventPlant2', (data2) => {
+    this.har1MimosaRow1EventPlant2 = EventRegister.addEventListener('har1MimosaRow1EventPlant2', (data2) => {
       plant2Selected = data2;
 
       if (data2 == null || data2 == true || data2 != false) {
@@ -139,7 +139,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
     })
 
     //PLANT 3
-    this.har1AnnasunRow1EventPlant3 = EventRegister.addEventListener('har1AnnasunRow1EventPlant3', (data3) => {
+    this.har1MimosaRow1EventPlant3 = EventRegister.addEventListener('har1MimosaRow1EventPlant3', (data3) => {
       plant3Selected = data3;
 
       if (data3 == null || data3 == true || data3 != false) {
@@ -156,7 +156,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
     })
 
     //PLANT 4
-    this.har1AnnasunRow1EventPlant4 = EventRegister.addEventListener('har1AnnasunRow1EventPlant4', (data4) => {
+    this.har1MimosaRow1EventPlant4 = EventRegister.addEventListener('har1MimosaRow1EventPlant4', (data4) => {
       plant4Selected = data4;
 
       if (data4 == null || data4 == true || data4 != false) {
@@ -173,7 +173,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
     })
 
     //PLANT 5
-    this.har1AnnasunRow1EventPlant5 = EventRegister.addEventListener('har1AnnasunRow1EventPlant5', (data5) => {
+    this.har1MimosaRow1EventPlant5 = EventRegister.addEventListener('har1MimosaRow1EventPlant5', (data5) => {
       plant5Selected = data5;
 
       if (data5 == null || data5 == true || data5 != false) {
@@ -202,7 +202,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant1')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant1')}>
         <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -211,7 +211,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant1')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant1')}>
         <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -230,7 +230,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant2')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant2')}>
         <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -239,7 +239,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant2')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant2')}>
         <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -255,7 +255,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant3')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant3')}>
         <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -264,7 +264,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant3')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant3')}>
         <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -280,7 +280,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant4')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant4')}>
         <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -289,7 +289,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant4')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant4')}>
         <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -306,7 +306,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant5')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant5')}>
         <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -315,7 +315,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Har1AnnasunRow1Plant5')}>
+        onPress={() => this.props.navigation.navigate('Har1MimosaRow1Plant5')}>
         <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -340,7 +340,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1AnnasunRow')} >
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har1MimosaRow')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -349,7 +349,7 @@ export default class Har1AnnasunPlantsRow1 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>HAR 1 - Annasun / Row 105</Text>
+          <Text style={styles.text}>HAR 1 - Mimosa / Row 143</Text>
 
           </View>
 

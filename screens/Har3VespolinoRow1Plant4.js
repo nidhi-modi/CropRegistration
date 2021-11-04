@@ -225,7 +225,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'HAR 3 - Vespolino' && d.plantNumber === 4 && d.plantRow === '324' && d.plantWeek === filteredPlantWeek;
+        const weekRowPlant = d => d.plantName === 'HAR 3 - Vespolino' && d.plantNumber === 4 && d.plantRow === '345' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'HAR 3 - Vespolino' && d.plantNumber === 4 && d.plantRow === '324' && d.plantWeek === filteredTrussWeek;
+        const weekRowTruss = d => d.plantName === 'HAR 3 - Vespolino' && d.plantNumber === 4 && d.plantRow === '345' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -3062,7 +3062,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
 
 
       let data = {
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3180,7 +3180,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruitsHar3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowersHar3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumberHar3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3240,7 +3240,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits1Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers1Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber1Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3301,7 +3301,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits2Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers2Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber2Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3360,7 +3360,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits3Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers3Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber3Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3418,7 +3418,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits4Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers4Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber4Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3478,7 +3478,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits5Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers5Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber5Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3544,7 +3544,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits6Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers6Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber6Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3605,7 +3605,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits7Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers7Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber7Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3664,7 +3664,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits8Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers8Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber8Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3723,7 +3723,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         setFruits: this.state.setFruits9Har3VespolinoRow1Plant4,
         setFlowers: this.state.setFlowers9Har3VespolinoRow1Plant4,
         pruningNumber: this.state.pruningNumber9Har3VespolinoRow1Plant4,
-        plantRow: '324',
+        plantRow: '345',
         plantName: 'HAR 3 - Vespolino',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3893,7 +3893,7 @@ export default class Har3VespolinoRow1Plant4 extends Component {
         </View>
 
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 4</Text>/ Row No. 324/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 4</Text>/ Row No. 345/ Week No. {this.state.weekNumber}</Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
 

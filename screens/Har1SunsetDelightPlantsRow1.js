@@ -345,7 +345,7 @@ export default class Har1SunsetDelightPlantsRow1 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>HAR 1 - Sunset Delight / {'\n'}Row 125</Text>
+          <Text style={styles.text}>HAR 1 - Sunset Delight / {'\n'}Row 157</Text>
 
           </View>
 

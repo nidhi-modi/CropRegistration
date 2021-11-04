@@ -71,7 +71,7 @@ export default class Har1SunsetDelightRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har1SunsetDelightPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 125</Text>
+              <Text style={styles.buttonText}>Row 157</Text>
             </TouchableOpacity>
 
 

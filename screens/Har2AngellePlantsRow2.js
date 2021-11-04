@@ -344,7 +344,7 @@ export default class Har2AngellePlantsRow2 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>HAR 2 - Angelle / Row 228</Text>
+          <Text style={styles.text}>HAR 2 - Angelle / Row 236</Text>
 
           </View>
 

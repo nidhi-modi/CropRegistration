@@ -344,7 +344,7 @@ export default class Har3VespolinoPlantsRow1 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>HAR 3 - Vespolino / Row 324</Text>
+          <Text style={styles.text}>HAR 3 - Vespolino / Row 345</Text>
 
           </View>
 

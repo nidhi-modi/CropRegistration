@@ -16,7 +16,7 @@ import { EventRegister } from 'react-native-event-listeners'
 
 var screenWidth = (Dimensions.get('window').width) / 1.6;
 
-export default class Har1AvalantinoRow extends Component {
+export default class Har1MimosaRow extends Component {
 
   constructor(props) {
     super(props);
@@ -50,7 +50,7 @@ export default class Har1AvalantinoRow extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>HAR 1 - Avalantino</Text>
+          <Text style={styles.text}>HAR 1 - Mimosa</Text>
 
           </View>
 
@@ -70,21 +70,11 @@ export default class Har1AvalantinoRow extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AvalantinoPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 136</Text>
+              onPress={() => this.props.navigation.navigate('Har1MimosaPlantsRow1')}>
+              <Text style={styles.buttonText}>Row 143</Text>
             </TouchableOpacity>
 
-            <View style={styles.marginSmallDimensionTop}></View>
 
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1AvalantinoPlantsRow2')}>
-              <Text style={styles.buttonText}>Row 123</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            
           </View>
 
         </ScrollView>

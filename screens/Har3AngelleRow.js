@@ -71,17 +71,10 @@ export default class Har3AngelleRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har3AngellePlantsRow1')}>
-              <Text style={styles.buttonText}>Row 323</Text>
+              <Text style={styles.buttonText}>Row 325</Text>
             </TouchableOpacity>
 
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har3AngellePlantsRow2')}>
-              <Text style={styles.buttonText}>Row 347</Text>
-            </TouchableOpacity>
-
+            
             <View style={styles.marginSmallDimensionTop}></View>
 
 
