@@ -62,7 +62,7 @@ export default class SiteSelection extends React.Component {
         } else if (houseSelected === 'OHA') {
 
           //CHANGE THE SCREEN NAME
-          this.props.navigation.navigate('HarHome');
+          this.props.navigation.navigate('OhaHome');
 
 
         } else if (houseSelected === 'REP') {

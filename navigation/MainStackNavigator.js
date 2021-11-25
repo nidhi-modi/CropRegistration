@@ -11,6 +11,7 @@ import ScreenNavigator from '../screens/ScreenNavigator'
 import HarHome from '../screens/HarHome'
 import RepHome from '../screens/RepHome'
 import GerHome from '../screens/GerHome'
+import OhaHome from '../screens/OhaHome'
 
 
 import Har123 from '../screens/Har123'
@@ -22,6 +23,48 @@ import RepAngelleRow from '../screens/RepAngelleRow'
 import RepDuelleRow from '../screens/RepDuelleRow'
 import RepKmRow from '../screens/RepKmRow'
 import RepBambelloRow from '../screens/RepBambelloRow'
+
+
+import Oha1IntenseRow from '../screens/Oha1IntenseRow'
+import Oha2NMerliceRow from '../screens/Oha2NMerliceRow'
+import Oha2SMerliceRow from '../screens/Oha2SMerliceRow'
+
+
+import Oha1IntensePlantsRow1 from '../screens/Oha1IntensePlantsRow1'
+import Oha1IntensePlantsRow2 from '../screens/Oha1IntensePlantsRow2'
+import Oha2NMerlicePlantsRow1 from '../screens/Oha2NMerlicePlantsRow1'
+import Oha2NMerlicePlantsRow2 from '../screens/Oha2NMerlicePlantsRow2'
+import Oha2SMerlicePlantsRow1 from '../screens/Oha2SMerlicePlantsRow1'
+
+import Oha1IntenseRow1Plant1 from '../screens/Oha1IntenseRow1Plant1'
+import Oha1IntenseRow1Plant2 from '../screens/Oha1IntenseRow1Plant2'
+import Oha1IntenseRow1Plant3 from '../screens/Oha1IntenseRow1Plant3'
+import Oha1IntenseRow1Plant4 from '../screens/Oha1IntenseRow1Plant4'
+import Oha1IntenseRow1Plant5 from '../screens/Oha1IntenseRow1Plant5'
+
+import Oha1IntenseRow2Plant1 from '../screens/Oha1IntenseRow2Plant1'
+import Oha1IntenseRow2Plant2 from '../screens/Oha1IntenseRow2Plant2'
+import Oha1IntenseRow2Plant3 from '../screens/Oha1IntenseRow2Plant3'
+import Oha1IntenseRow2Plant4 from '../screens/Oha1IntenseRow2Plant4'
+import Oha1IntenseRow2Plant5 from '../screens/Oha1IntenseRow2Plant5'
+
+import Oha2NMerliceRow1Plant1 from '../screens/Oha2NMerliceRow1Plant1'
+import Oha2NMerliceRow1Plant2 from '../screens/Oha2NMerliceRow1Plant2'
+import Oha2NMerliceRow1Plant3 from '../screens/Oha2NMerliceRow1Plant3'
+import Oha2NMerliceRow1Plant4 from '../screens/Oha2NMerliceRow1Plant4'
+import Oha2NMerliceRow1Plant5 from '../screens/Oha2NMerliceRow1Plant5'
+
+import Oha2NMerliceRow2Plant1 from '../screens/Oha2NMerliceRow2Plant1'
+import Oha2NMerliceRow2Plant2 from '../screens/Oha2NMerliceRow2Plant2'
+import Oha2NMerliceRow2Plant3 from '../screens/Oha2NMerliceRow2Plant3'
+import Oha2NMerliceRow2Plant4 from '../screens/Oha2NMerliceRow2Plant4'
+import Oha2NMerliceRow2Plant5 from '../screens/Oha2NMerliceRow2Plant5'
+
+import Oha2SMerliceRow1Plant1 from '../screens/Oha2SMerliceRow1Plant1'
+import Oha2SMerliceRow1Plant2 from '../screens/Oha2SMerliceRow1Plant2'
+import Oha2SMerliceRow1Plant3 from '../screens/Oha2SMerliceRow1Plant3'
+import Oha2SMerliceRow1Plant4 from '../screens/Oha2SMerliceRow1Plant4'
+import Oha2SMerliceRow1Plant5 from '../screens/Oha2SMerliceRow1Plant5'
 
 
 import Ger1MerliceRow from '../screens/Ger1MerliceRow'
@@ -648,11 +691,11 @@ function MainStackNavigator() {
                 <Stack.Screen name='Har1MimosaRow1Plant1' component={Har1MimosaRow1Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har2AngelleRow1Plant1' component={Har2AngelleRow1Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har2AngelleRow1Plant2' component={Har2AngelleRow1Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har2AngelleRow1Plant3' component={Har2AngelleRow1Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har1LorenzoRow' component={Har1LorenzoRow} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har2AngelleRow1Plant4' component={Har2AngelleRow1Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
@@ -660,11 +703,11 @@ function MainStackNavigator() {
                 <Stack.Screen name='Har2AngelleRow1Plant5' component={Har2AngelleRow1Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har2AngelleRow2Plant1' component={Har2AngelleRow2Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har2AngelleRow2Plant2' component={Har2AngelleRow2Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har2AngelleRow2Plant3' component={Har2AngelleRow2Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
-                
+
                 <Stack.Screen name='Har2AngelleRow2Plant4' component={Har2AngelleRow2Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har2AngelleRow2Plant5' component={Har2AngelleRow2Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
@@ -1128,6 +1171,74 @@ function MainStackNavigator() {
                 <Stack.Screen name='Har3KM5512Row1Plant4' component={Har3KM5512Row1Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
 
                 <Stack.Screen name='Har3KM5512Row1Plant5' component={Har3KM5512Row1Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='OhaHome' component={OhaHome} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow' component={Oha1IntenseRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntensePlantsRow1' component={Oha1IntensePlantsRow1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntensePlantsRow2' component={Oha1IntensePlantsRow2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow' component={Oha2NMerliceRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow' component={Oha2SMerliceRow} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerlicePlantsRow1' component={Oha2NMerlicePlantsRow1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerlicePlantsRow2' component={Oha2NMerlicePlantsRow2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerlicePlantsRow1' component={Oha2SMerlicePlantsRow1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow1Plant1' component={Oha1IntenseRow1Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow1Plant2' component={Oha1IntenseRow1Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow1Plant3' component={Oha1IntenseRow1Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow1Plant4' component={Oha1IntenseRow1Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow1Plant5' component={Oha1IntenseRow1Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow2Plant1' component={Oha1IntenseRow2Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow2Plant2' component={Oha1IntenseRow2Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow2Plant3' component={Oha1IntenseRow2Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow2Plant4' component={Oha1IntenseRow2Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha1IntenseRow2Plant5' component={Oha1IntenseRow2Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow1Plant1' component={Oha2NMerliceRow1Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow1Plant2' component={Oha2NMerliceRow1Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow1Plant3' component={Oha2NMerliceRow1Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow1Plant4' component={Oha2NMerliceRow1Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow1Plant5' component={Oha2NMerliceRow1Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow2Plant1' component={Oha2NMerliceRow2Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow2Plant2' component={Oha2NMerliceRow2Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow2Plant3' component={Oha2NMerliceRow2Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow2Plant4' component={Oha2NMerliceRow2Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2NMerliceRow2Plant5' component={Oha2NMerliceRow2Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow1Plant1' component={Oha2SMerliceRow1Plant1} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow1Plant2' component={Oha2SMerliceRow1Plant2} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow1Plant3' component={Oha2SMerliceRow1Plant3} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow1Plant4' component={Oha2SMerliceRow1Plant4} options={{ headerShown: false, title: 'T&G Global' }} />
+
+                <Stack.Screen name='Oha2SMerliceRow1Plant5' component={Oha2SMerliceRow1Plant5} options={{ headerShown: false, title: 'T&G Global' }} />
 
             </Stack.Navigator>
 
