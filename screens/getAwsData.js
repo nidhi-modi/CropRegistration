@@ -27,8 +27,10 @@ export const GetAwsData = (props) => {
         console.log(error)
 
       }
+      //Close this screen
+      loading = false;
+      props.navigation.navigate('SiteSelection')
 
-      getTrussDetails();
     }
   });
   const [getTrussDetails] = useLazyQuery(GET_TRUSS_DETAILS, {
@@ -38,26 +40,26 @@ export const GetAwsData = (props) => {
       console.log("Truss data from AWS : ", data)
 
       try {
+
         AsyncStorage.setItem('@MySuperStore:trussKey', JSON.stringify(data));
+
       } catch (error) {
         // Error saving data
         console.log(error)
 
       }
 
-      //Close this screen
-      loading = false;
-      props.navigation.navigate('SiteSelection')
+      getPlantDetails();
     }
   });
 
   useEffect(() => {
-    getPlantQuery();
+    getTrussQuery();
   }, []);
 
   //Use below query
-  const getPlantQuery = () => {
-    getPlantDetails()
+  const getTrussQuery = () => {
+    getTrussDetails()
   }
 
   return (
@@ -80,11 +82,11 @@ export const GetAwsData = (props) => {
         </View>
       </Modal>
 
-      {Platform.OS === 'ios'? 
-        
+      {Platform.OS === 'ios' ?
+
         <View style={{ marginTop: 20 }}></View>
 
-        : null }
+        : null}
 
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
 
@@ -164,7 +166,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 18,
-   
+
 
   },
 

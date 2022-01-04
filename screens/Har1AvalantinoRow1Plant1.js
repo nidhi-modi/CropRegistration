@@ -241,16 +241,21 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
     try {
       AsyncStorage.getItem('@MySuperStore:trussKey').then((trussValues) => {
 
+        console.log("jsdbshdsg "+trussValues);
+
         const allTruss = JSON.parse(trussValues)
 
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
+        console.log("OOOOOOOOOOOOOOOOOOO  " + filteredTrussWeek);
+
         //Change week number
-        const weekRowTruss = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 1 && d.plantRow === '136' && d.plantWeek === filteredTrussWeek;
+        const weekRowTruss = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 1 && d.plantRow === '136' && d.plantWeek === 2152;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
         this.setState({ allTrussData: filteredweekRowTruss })
+
 
 
       }).done();
