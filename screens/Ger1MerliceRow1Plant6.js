@@ -3879,7 +3879,7 @@ export default class Ger1MerliceRow1Plant6 extends Component {
         </View>
 
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 6</Text>/ Row No. 81&amp;86/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 6</Text>/ Row No. 81&amp;85/ Week No. {this.state.weekNumber}</Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
 

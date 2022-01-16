@@ -71,7 +71,7 @@ export default class Ger1MerliceRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Ger1MerlicePlantsRow1')}>
-              <Text style={styles.buttonText}>Row 81/86</Text>
+              <Text style={styles.buttonText}>Row 81/85</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -79,7 +79,7 @@ export default class Ger1MerliceRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Ger1MerlicePlantsRow2')}>
-              <Text style={styles.buttonText}>Row 45/46</Text>
+              <Text style={styles.buttonText}>Row 55/56</Text>
             </TouchableOpacity>
 
           </View>
