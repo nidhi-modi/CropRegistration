@@ -1614,7 +1614,7 @@ export default class Ger3EndeavourRow2Plant9 extends Component {
 
     } else {
 
-      var number9 = (ParseInt(this.state.trussNumberGer3EndeavourRow2Plant9) + 9)
+      var number9 = (parseInt(this.state.trussNumberGer3EndeavourRow2Plant9) + 9)
 
       pruningSet = parseInt(this.state.pruningNumber9Ger3EndeavourRow2Plant9);
       trussNum = parseInt(number9);
