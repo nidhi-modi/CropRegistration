@@ -1287,7 +1287,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
     this.setItem(field, text)
     const state = this.state
-    const value = text.replace(/[- #*;,<>\{\}\[\]\\\/]/gi, '')
     state[field] = value;
     this.setState(state);
 
