@@ -3167,7 +3167,13 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
     if (this.state.trussNumberGer1MerliceRow1Plant1 !== null && this.state.pruningNumberGer1MerliceRow1Plant1 !== null) {
 
-     
+      const { trussNumberGer1MerliceRow1Plant1 } = this.state;
+      const { fruitDiameterGer1MerliceRow1Plant1 } = this.state;
+      const { setFruitsGer1MerliceRow1Plant1 } = this.state;
+      const { setFlowersGer1MerliceRow1Plant1 } = this.state;
+      const { pruningNumberGer1MerliceRow1Plant1 } = this.state;
+      
+
       let data = {
         trussNumber: this.state.trussNumberGer1MerliceRow1Plant1,
         fruitDiameter: this.state.fruitDiameterGer1MerliceRow1Plant1,
@@ -3185,31 +3191,70 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         settingTruss: this.state.settingTrussNumberGer1MerliceRow1Plant1,
         pruningHarvest: this.state.pruningHarGer1MerliceRow1Plant1,
         harvestTruss: this.state.harvestTrussGer1MerliceRow1Plant1
-      
+
       }
 
-    
+      if (+!isNaN(+trussNumberGer1MerliceRow1Plant1)) {
+        if (+!isNaN(+fruitDiameterGer1MerliceRow1Plant1)) {
+          if (+!isNaN(+setFruitsGer1MerliceRow1Plant1)) {
+            if (+!isNaN(+setFlowersGer1MerliceRow1Plant1)) {
+              if (+!isNaN(+pruningNumberGer1MerliceRow1Plant1)) {
 
-      db.addTrussDetails(data).then((result) => {
-        console.log(result);
+
+                db.addTrussDetails(data).then((result) => {
+                  console.log(result);
 
 
-        if ((Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant1) + 1) !== null && this.state.pruningNumber1Ger1MerliceRow1Plant1 !== '') {
+                  if ((Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant1) + 1) !== null && this.state.pruningNumber1Ger1MerliceRow1Plant1 !== '') {
 
-          this.saveTrussToDB1();
+                    this.saveTrussToDB1();
 
+
+                  } else {
+
+
+                  }
+
+
+                }).catch((err) => {
+
+                  console.log(err);
+
+                })
+
+              } else {
+
+                Alert.alert('Pruning number looks incorrect')
+                
+
+              }
+
+            } else {
+
+              Alert.alert('Set flowers looks incorrect')
+
+
+            }
+
+          } else {
+
+            Alert.alert('Set fruit look incorrect')
+
+
+          }
 
         } else {
+
+          Alert.alert('Fruit diameter values look incorrect')
 
 
         }
 
+      } else {
 
-      }).catch((err) => {
+        Alert.alert('Truss number looks incorrect')
 
-        console.log(err);
-
-      })
+      }
 
     } else {
 
