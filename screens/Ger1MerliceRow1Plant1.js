@@ -18,6 +18,7 @@ import { LogBox } from 'react-native'
 import { EventRegister } from 'react-native-event-listeners'
 var screenWidth2 = (Dimensions.get('window').width) / 1.6;
 
+
 const { width, height } = Dimensions.get('window');
 let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
@@ -1287,7 +1288,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
     this.setItem(field, text)
     const state = this.state
-    state[field] = value;
+    state[field] = text;
     this.setState(state);
 
   }
@@ -2034,7 +2035,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowersGer1MerliceRow1Plant1: '',
             pruningNumberGer1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -2140,7 +2140,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFruits1Ger1MerliceRow1Plant1: '',
             setFlowers1Ger1MerliceRow1Plant1: '',
             pruningNumber1Ger1MerliceRow1Plant1: '',
-
 
           })
 
@@ -2251,7 +2250,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowers2Ger1MerliceRow1Plant1: '',
             pruningNumber2Ger1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -2358,7 +2356,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowers3Ger1MerliceRow1Plant1: '',
             pruningNumber3Ger1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -2463,7 +2460,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFruits4Ger1MerliceRow1Plant1: '',
             setFlowers4Ger1MerliceRow1Plant1: '',
             pruningNumber4Ger1MerliceRow1Plant1: '',
-
 
           })
 
@@ -2570,7 +2566,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowers5Ger1MerliceRow1Plant1: '',
             pruningNumber5Ger1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -2674,7 +2669,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFruits6Ger1MerliceRow1Plant1: '',
             setFlowers6Ger1MerliceRow1Plant1: '',
             pruningNumber6Ger1MerliceRow1Plant1: '',
-
 
           })
 
@@ -2781,7 +2775,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowers7Ger1MerliceRow1Plant1: '',
             pruningNumber7Ger1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -2885,7 +2878,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFruits8Ger1MerliceRow1Plant1: '',
             setFlowers8Ger1MerliceRow1Plant1: '',
             pruningNumber8Ger1MerliceRow1Plant1: '',
-
 
           })
 
@@ -2991,7 +2983,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
             setFlowers9Ger1MerliceRow1Plant1: '',
             pruningNumber9Ger1MerliceRow1Plant1: '',
 
-
           })
 
         }
@@ -3034,6 +3025,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
       EventRegister.emit('ger1MerliceRow1EventPlant1', vart)
 
     }
+
 
 
   }
@@ -3154,6 +3146,8 @@ export default class Ger1MerliceRow1Plant1 extends Component {
       }
 
 
+
+
     } else {
 
       this.setState({ checkboxStatus: 'UNCHECKED' })
@@ -3166,13 +3160,6 @@ export default class Ger1MerliceRow1Plant1 extends Component {
   saveTrussToDb = () => {
 
     if (this.state.trussNumberGer1MerliceRow1Plant1 !== null && this.state.pruningNumberGer1MerliceRow1Plant1 !== null) {
-
-      const { trussNumberGer1MerliceRow1Plant1 } = this.state;
-      const { fruitDiameterGer1MerliceRow1Plant1 } = this.state;
-      const { setFruitsGer1MerliceRow1Plant1 } = this.state;
-      const { setFlowersGer1MerliceRow1Plant1 } = this.state;
-      const { pruningNumberGer1MerliceRow1Plant1 } = this.state;
-      
 
       let data = {
         trussNumber: this.state.trussNumberGer1MerliceRow1Plant1,
@@ -3192,69 +3179,30 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         pruningHarvest: this.state.pruningHarGer1MerliceRow1Plant1,
         harvestTruss: this.state.harvestTrussGer1MerliceRow1Plant1
 
+
       }
 
-      if (+!isNaN(+trussNumberGer1MerliceRow1Plant1)) {
-        if (+!isNaN(+fruitDiameterGer1MerliceRow1Plant1)) {
-          if (+!isNaN(+setFruitsGer1MerliceRow1Plant1)) {
-            if (+!isNaN(+setFlowersGer1MerliceRow1Plant1)) {
-              if (+!isNaN(+pruningNumberGer1MerliceRow1Plant1)) {
+
+      db.addTrussDetails(data).then((result) => {
+        console.log(result);
 
 
-                db.addTrussDetails(data).then((result) => {
-                  console.log(result);
+        if ((Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant1) + 1) !== null && this.state.pruningNumber1Ger1MerliceRow1Plant1 !== '') {
 
+          this.saveTrussToDB1();
 
-                  if ((Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant1) + 1) !== null && this.state.pruningNumber1Ger1MerliceRow1Plant1 !== '') {
-
-                    this.saveTrussToDB1();
-
-
-                  } else {
-
-
-                  }
-
-
-                }).catch((err) => {
-
-                  console.log(err);
-
-                })
-
-              } else {
-
-                Alert.alert('Pruning number looks incorrect')
-                
-
-              }
-
-            } else {
-
-              Alert.alert('Set flowers looks incorrect')
-
-
-            }
-
-          } else {
-
-            Alert.alert('Set fruit look incorrect')
-
-
-          }
 
         } else {
-
-          Alert.alert('Fruit diameter values look incorrect')
 
 
         }
 
-      } else {
 
-        Alert.alert('Truss number looks incorrect')
+      }).catch((err) => {
 
-      }
+        console.log(err);
+
+      })
 
     } else {
 
@@ -5891,7 +5839,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                 size={40}
                 uncheckedColor='red'
                 checkedColor="green"
-                title="GER 1 Merlice plant 1 completed"
+                title="GER 1 Merlice Plant 1 completed"
                 checked={this.state.Ger1MerliceRow1Plant1Selected}
                 textStyle={{ fontSize: 16 }}
                 containerStyle={{ backgroundColor: 'transparent' }}
