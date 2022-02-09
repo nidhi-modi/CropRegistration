@@ -2034,9 +2034,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruitsGer1MerliceRow1Plant2: '',
             setFlowersGer1MerliceRow1Plant2: '',
             pruningNumberGer1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -2140,9 +2138,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits1Ger1MerliceRow1Plant2: '',
             setFlowers1Ger1MerliceRow1Plant2: '',
             pruningNumber1Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
 
@@ -2249,9 +2245,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits2Ger1MerliceRow1Plant2: '',
             setFlowers2Ger1MerliceRow1Plant2: '',
             pruningNumber2Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -2355,9 +2349,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits3Ger1MerliceRow1Plant2: '',
             setFlowers3Ger1MerliceRow1Plant2: '',
             pruningNumber3Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -2460,9 +2452,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits4Ger1MerliceRow1Plant2: '',
             setFlowers4Ger1MerliceRow1Plant2: '',
             pruningNumber4Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -2565,9 +2555,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits5Ger1MerliceRow1Plant2: '',
             setFlowers5Ger1MerliceRow1Plant2: '',
             pruningNumber5Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
 
@@ -2669,9 +2657,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits6Ger1MerliceRow1Plant2: '',
             setFlowers6Ger1MerliceRow1Plant2: '',
             pruningNumber6Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
 
@@ -2774,9 +2760,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits7Ger1MerliceRow1Plant2: '',
             setFlowers7Ger1MerliceRow1Plant2: '',
             pruningNumber7Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
 
@@ -2878,9 +2862,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits8Ger1MerliceRow1Plant2: '',
             setFlowers8Ger1MerliceRow1Plant2: '',
             pruningNumber8Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -2982,9 +2964,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
             setFruits9Ger1MerliceRow1Plant2: '',
             setFlowers9Ger1MerliceRow1Plant2: '',
             pruningNumber9Ger1MerliceRow1Plant2: '',
-
           })
-
         }
 
       } else {
@@ -3027,7 +3007,6 @@ export default class Ger1MerliceRow1Plant2 extends Component {
     }
 
 
-
   }
 
   checkStatus = () => {
@@ -3035,6 +3014,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
     const vart = this.state.Ger1MerliceRow1Plant2Selected
 
     if (vart == null || vart == false) {
+
 
       const { leavesPerPlantGer1MerliceRow1Plant2 } = this.state;
       const { fullySetTrussGer1MerliceRow1Plant2 } = this.state;
@@ -3075,6 +3055,7 @@ export default class Ger1MerliceRow1Plant2 extends Component {
 
                         this.setState({ checkboxStatus: 'CHECKED' })
 
+
                         this.changeCheckbox();
 
                         db.addPlants(data).then((result) => {
@@ -3086,7 +3067,6 @@ export default class Ger1MerliceRow1Plant2 extends Component {
                         })
 
                         this.saveTrussToDb();
-
                       } else {
 
                         Alert.alert('Last week stem diameter value looks incorrect')
@@ -3144,8 +3124,6 @@ export default class Ger1MerliceRow1Plant2 extends Component {
         Alert.alert('Leaves per plant value looks incorrect')
 
       }
-
-
 
 
     } else {

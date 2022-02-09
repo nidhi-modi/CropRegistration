@@ -225,7 +225,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'HAR 6 - Angelle' && d.plantNumber === 1 && d.plantRow === '633' && d.plantWeek === filteredPlantWeek;
+        const weekRowPlant = d => d.plantName === 'HAR 6 - Angelle' && d.plantNumber === 1 && d.plantRow === '629' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'HAR 6 - Angelle' && d.plantNumber === 1 && d.plantRow === '633' && d.plantWeek === filteredTrussWeek;
+        const weekRowTruss = d => d.plantName === 'HAR 6 - Angelle' && d.plantNumber === 1 && d.plantRow === '629' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -3062,7 +3062,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
 
 
       let data = {
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3180,7 +3180,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruitsHar6AngelleRow1Plant1,
         setFlowers: this.state.setFlowersHar6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumberHar6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3240,7 +3240,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits1Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers1Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber1Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3301,7 +3301,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits2Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers2Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber2Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3360,7 +3360,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits3Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers3Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber3Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3418,7 +3418,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits4Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers4Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber4Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3478,7 +3478,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits5Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers5Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber5Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3544,7 +3544,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits6Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers6Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber6Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3605,7 +3605,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits7Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers7Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber7Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3664,7 +3664,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits8Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers8Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber8Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3723,7 +3723,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits9Har6AngelleRow1Plant1,
         setFlowers: this.state.setFlowers9Har6AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber9Har6AngelleRow1Plant1,
-        plantRow: '633',
+        plantRow: '629',
         plantName: 'HAR 6 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3893,7 +3893,7 @@ export default class Har6AngelleRow1Plant1 extends Component {
         </View>
 
 
-        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 1</Text>/ Row No. 633/ Week No. {this.state.weekNumber}</Text>
+        <Text style={styles.text2}><Text style={styles.textPlants}>Plant 1</Text>/ Row No. 629/ Week No. {this.state.weekNumber}</Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
 

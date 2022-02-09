@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+  import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -71,7 +71,7 @@ export default class Har6AngelleRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har6AngellePlantsRow1')}>
-              <Text style={styles.buttonText}>Row 633</Text>
+              <Text style={styles.buttonText}>Row 629</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -79,7 +79,7 @@ export default class Har6AngelleRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har6AngellePlantsRow2')}>
-              <Text style={styles.buttonText}>Row 647</Text>
+              <Text style={styles.buttonText}>Row 643</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

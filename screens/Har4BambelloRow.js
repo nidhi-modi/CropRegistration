@@ -71,12 +71,13 @@ export default class Har4BambelloRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har4BambelloPlantsRow1')}>
-              <Text style={styles.buttonText}>Row 425</Text>
+              <Text style={styles.buttonText}>Row 405</Text>
             </TouchableOpacity>
 
+            
             <View style={styles.marginSmallDimensionTop}></View>
 
-           
+
           </View>
 
         </ScrollView>
