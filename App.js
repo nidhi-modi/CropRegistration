@@ -107,6 +107,27 @@ export default class App extends Component {
 
     })
 
+    /*db.deleteTrussById(635).then((data) => {
+      console.log("Calling database")
+     
+    }).catch((err) => {
+      console.log(err);
+
+    })*/
+
+    /*db.updateTrussData("HAR 2 - Angelle",18,"3.0","235",2208,"7").then((data) => {
+      console.log("Calling database")
+      listPlants = data;
+      plants = data;
+      this.setState({
+        listPlants,
+      });
+
+    }).catch((err) => {
+      console.log(err);
+
+    })*/
+
 
   }
 

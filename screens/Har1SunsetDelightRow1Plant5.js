@@ -225,7 +225,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'HAR 1 - Sunset Delight' && d.plantNumber === 3 && d.plantRow === '157' && d.plantWeek === filteredPlantWeek;
+        const weekRowPlant = d => d.plantName === 'HAR 1 - Sunset Delight' && d.plantNumber === 5 && d.plantRow === '157' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'HAR 1 - Sunset Delight' && d.plantNumber === 3 && d.plantRow === '157' && d.plantWeek === filteredTrussWeek;
+        const weekRowTruss = d => d.plantName === 'HAR 1 - Sunset Delight' && d.plantNumber === 5 && d.plantRow === '157' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -3065,7 +3065,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         leavesPerPlant: this.state.leavesPerPlantHar1SunsetDelightRow1Plant5,
         fullySetTruss: this.state.fullySetTrussHar1SunsetDelightRow1Plant5,
         setTrussLength: this.state.setTrussLengthHar1SunsetDelightRow1Plant5,
@@ -3183,7 +3183,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3243,7 +3243,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3304,7 +3304,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3363,7 +3363,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3421,7 +3421,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3481,7 +3481,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3547,7 +3547,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3608,7 +3608,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3667,7 +3667,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,
@@ -3726,7 +3726,7 @@ export default class Har1SunsetDelightRow1Plant5 extends Component {
         plantRow: '157',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
-        plantNumber: 3,
+        plantNumber: 5,
         fruitLoad: this.state.fruitLoadHar1SunsetDelightRow1Plant5,
         pruningFlower: this.state.pruneFloweringHar1SunsetDelightRow1Plant5,
         floweringTruss: this.state.floweringTrussssHar1SunsetDelightRow1Plant5,

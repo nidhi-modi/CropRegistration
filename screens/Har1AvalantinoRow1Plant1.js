@@ -225,7 +225,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         const filteredPlantWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowPlant = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 2 && d.plantRow === '136' && d.plantWeek === filteredPlantWeek;
+        const weekRowPlant = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 1 && d.plantRow === '136' && d.plantWeek === filteredPlantWeek;
 
         const filteredweekRowPlant = allPlant.plant_details.filter(weekRowPlant);
 
@@ -246,7 +246,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         const filteredTrussWeek = (this.state.weekNumber) - 1;
 
         //Change week number
-        const weekRowTruss = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 2 && d.plantRow === '136' && d.plantWeek === filteredTrussWeek;
+        const weekRowTruss = d => d.plantName === 'HAR 1 - Avalantino' && d.plantNumber === 1 && d.plantRow === '136' && d.plantWeek === filteredTrussWeek;
 
         const filteredweekRowTruss = allTruss.truss_details.filter(weekRowTruss);
 
@@ -3065,7 +3065,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         leavesPerPlant: this.state.leavesPerPlantHar1AvalantinoRow1Plant1,
         fullySetTruss: this.state.fullySetTrussHar1AvalantinoRow1Plant1,
         setTrussLength: this.state.setTrussLengthHar1AvalantinoRow1Plant1,
@@ -3183,7 +3183,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3243,7 +3243,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3304,7 +3304,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3363,7 +3363,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3421,7 +3421,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3481,7 +3481,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3547,7 +3547,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3608,7 +3608,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3667,7 +3667,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,
@@ -3726,7 +3726,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         plantRow: '136',
         plantName: 'HAR 1 - Avalantino',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
+        plantNumber: 1,
         fruitLoad: this.state.fruitLoadHar1AvalantinoRow1Plant1,
         pruningFlower: this.state.pruneFloweringHar1AvalantinoRow1Plant1,
         floweringTruss: this.state.floweringTrussssHar1AvalantinoRow1Plant1,

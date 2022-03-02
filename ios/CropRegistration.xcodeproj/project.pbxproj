@@ -11,9 +11,9 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		4CD1F36E24BB8FEEA3FF957A /* libPods-CropRegistration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF1407686704AF69B60521F /* libPods-CropRegistration.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		D4BBF70E6C3EA010DF936F51 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78A03A54BCA81AABADA7C1C /* libPods-CropRegistration-CropRegistrationTests.a */; };
+		F9F200A5B8DD152076D2228C /* libPods-CropRegistration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF1407686704AF69B60521F /* libPods-CropRegistration.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CD1F36E24BB8FEEA3FF957A /* libPods-CropRegistration.a in Frameworks */,
+				F9F200A5B8DD152076D2228C /* libPods-CropRegistration.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
@@ -491,7 +491,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 18.0;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -512,14 +513,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 18;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 6.0;
+				MARKETING_VERSION = 18.0;
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

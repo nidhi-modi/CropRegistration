@@ -939,6 +939,25 @@ export default class Database {
 
     }
 
+    updateTrussData(pName,tNumber, pnumber, rNumber, pWeek, trussData) {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('UPDATE TrussDetails SET pruningNumber = ? WHERE plantName = ? AND plantNumber = ? AND plantRow = ? AND trussNumber = ? AND plantWeek = ?', [trussData.pruningNumber, pName, pnumber, rNumber, tNumber, pWeek]).then(([tx, results]) => {
+                        resolve(results);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        });
+    }
+
 
     //Add a function to update a plant.
     //need to add plant name, plant row and plant week 
@@ -960,6 +979,28 @@ export default class Database {
             });
         });
     }
+
+    //need to add plant name, plant row and plant week 
+    deleteTrussById(id) {
+        return new Promise((resolve) => {
+            this.initDB().then((db) => {
+                db.transaction((tx) => {
+                    //need to add plant name, plant row and plant week 
+                    tx.executeSql('DELETE FROM TrussDetails WHERE trussId = ?', [id]).then(([tx, results]) => {
+                        console.log(results);
+                        resolve(results);
+                    });
+                }).then((result) => {
+                    this.closeDatabase(db);
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
+        });
+    }
+
 
     //need to add plant name, plant row and plant week 
     deleteplants(id) {
