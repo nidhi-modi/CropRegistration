@@ -3026,7 +3026,6 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
     const vart2 = false;
 
-
     if (vart == null) {
 
       this.setItem('Har1AvalantinoRow1Plant1Selected', vart2)
@@ -3038,8 +3037,6 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
       this.setItem('Har1AvalantinoRow1Plant1Selected', vart)
 
       EventRegister.emit('har1AvalantinoRow1EventPlant1', vart)
-
-      console.log("WHY IS IT NOT UPDATING  :  "+vart);
 
     }
 
@@ -3091,9 +3088,9 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
                     if (+!isNaN(+stmDiameterHar1AvalantinoRow1Plant1)) {
                       if (+!isNaN(+lastWeekStmDiameterHar1AvalantinoRow1Plant1)) {
 
-                        //this.setState({ checkboxStatus: 'CHECKED' })
+                        this.setState({ checkboxStatus: 'CHECKED' })
 
-                        //this.changeCheckbox()
+                        this.changeCheckbox()
 
                         db.addPlants(data).then((result) => {
                           console.log(result);
@@ -3175,17 +3172,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
   saveTrussToDb = () => {
 
-    const vart = this.state.Har1AvalantinoRow1Plant1Selected
-
-    if (vart == null || vart == false) {
-
     if (this.state.trussNumberHar1AvalantinoRow1Plant1 !== null && this.state.pruningNumberHar1AvalantinoRow1Plant1 !== null) {
-
-      const { trussNumberHar1AvalantinoRow1Plant1 } = this.state;
-      const { fruitDiameterHar1AvalantinoRow1Plant1 } = this.state;
-      const { setFruitsHar1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowersHar1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumberHar1AvalantinoRow1Plant1 } = this.state;
 
       let data = {
         trussNumber: this.state.trussNumberHar1AvalantinoRow1Plant1,
@@ -3208,79 +3195,33 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
       }
 
-      if (+!isNaN(+trussNumberHar1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+fruitDiameterHar1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFruitsHar1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+setFlowersHar1AvalantinoRow1Plant1)) {
-              if (+!isNaN(+pruningNumberHar1AvalantinoRow1Plant1)) {
+
+      db.addTrussDetails(data).then((result) => {
+        console.log(result);
 
 
-                db.addTrussDetails(data).then((result) => {
-                  console.log(result);
+        if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 1) !== null && this.state.pruningNumber1Har1AvalantinoRow1Plant1 !== '') {
 
+          this.saveTrussToDB1();
 
-                  if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 1) !== null && this.state.pruningNumber1Har1AvalantinoRow1Plant1 !== '') {
-
-                    this.saveTrussToDB1();
-
-
-                  } else {
-
-                    this.setState({ checkboxStatus: 'CHECKED' })
-
-                    this.changeCheckbox()
-
-
-                  }
-
-
-                }).catch((err) => {
-
-                  console.log(err);
-
-                })
-
-              } else {
-
-                Alert.alert('Pruning number value looks incorrect')
-
-              }
-
-            } else {
-
-              Alert.alert('Set flower value looks incorrect')
-
-            }
-          } else {
-
-            Alert.alert('Set fruit value looks incorrect')
-
-          }
 
         } else {
 
-          Alert.alert('Fruit diameter value looks incorrect')
-
 
         }
-      } else {
-
-        Alert.alert('Truss number value looks incorrect')
 
 
-      }
+      }).catch((err) => {
+
+        console.log(err);
+
+      })
 
     } else {
 
 
 
     }
-
-  }else{
-
-    this.setState({ checkboxStatus: 'UNCHECKED' })
-
-  }
 
 
 
@@ -3291,10 +3232,6 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 1) != null && this.state.pruningNumber1Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter1Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits1Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers1Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber1Har1AvalantinoRow1Plant1 } = this.state;
 
       let data1 = {
 
@@ -3315,63 +3252,33 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
         pruningHarvest: this.state.pruningHarHar1AvalantinoRow1Plant1,
         harvestTruss: this.state.harvestTrussHar1AvalantinoRow1Plant1
 
+
+
       }
 
 
-      if (+!isNaN(+fruitDiameter1Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits1Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers1Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber1Har1AvalantinoRow1Plant1)) {
 
 
-              db.addTrussDetails(data1).then((result) => {
-                console.log(result);
+      db.addTrussDetails(data1).then((result) => {
+        console.log(result);
 
 
-                if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 2) !== null && this.state.pruningNumber2Har1AvalantinoRow1Plant1 !== '') {
+        if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 2) !== null && this.state.pruningNumber2Har1AvalantinoRow1Plant1 !== '') {
 
-                  this.saveTrussToDB2();
+          this.saveTrussToDB2();
 
-                } else {
-
-                  console.log("FFffffffffffffffff");
-
-                  this.setState({ checkboxStatus: 'CHECKED' })
-
-                  this.changeCheckbox()
-
-                }
-
-              }).catch((err) => {
-
-                console.log(err);
-
-              })
-
-
-            } else {
-
-              Alert.alert('Pruning number value looks incorrect')
-
-            }
-
-          } else {
-
-            Alert.alert('Set flower value looks incorrect')
-
-          }
         } else {
 
-          Alert.alert('Set fruit value looks incorrect')
+
 
         }
 
-      } else {
+      }).catch((err) => {
 
-        Alert.alert('Fruit diameter value looks incorrect')
+        console.log(err);
 
+      })
 
-      }
 
     } else {
 
@@ -3386,10 +3293,6 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 2) != null && this.state.pruningNumber2Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter2Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits2Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers2Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber2Har1AvalantinoRow1Plant1 } = this.state;
 
       let data2 = {
 
@@ -3412,10 +3315,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
       }
 
-      if (+!isNaN(+fruitDiameter2Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits2Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers2Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber2Har1AvalantinoRow1Plant1)) {
+
 
 
       db.addTrussDetails(data2).then((result) => {
@@ -3428,9 +3328,6 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
-
-          this.changeCheckbox()
 
 
         }
@@ -3441,29 +3338,7 @@ export default class Har1AvalantinoRow1Plant1 extends Component {
 
       })
 
-    } else {
 
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
 
     } else {
 
@@ -3478,10 +3353,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 3) !== null && this.state.pruningNumber3Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter3Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits3Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers3Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber3Har1AvalantinoRow1Plant1 } = this.state;
 
       let data3 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 3),
@@ -3505,10 +3376,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter3Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits3Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers3Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber3Har1AvalantinoRow1Plant1)) {
 
       db.addTrussDetails(data3).then((result) => {
         console.log(result);
@@ -3521,9 +3388,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
-
-          this.changeCheckbox()
 
         }
 
@@ -3532,30 +3396,6 @@ Alert.alert('Fruit diameter value looks incorrect')
         console.log(err);
 
       })
-
-    } else {
-
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
 
     } else {
 
@@ -3571,10 +3411,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 4) != null && this.state.pruningNumber4Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter4Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits4Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers4Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber4Har1AvalantinoRow1Plant1 } = this.state;
 
       let data4 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 4),
@@ -3598,10 +3434,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter4Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits4Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers4Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber4Har1AvalantinoRow1Plant1)) {
+
 
       db.addTrussDetails(data4).then((result) => {
 
@@ -3613,9 +3446,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-this.setState({ checkboxStatus: 'CHECKED' })
 
-                    this.changeCheckbox()
 
         }
 
@@ -3624,29 +3455,6 @@ this.setState({ checkboxStatus: 'CHECKED' })
 
       })
 
-    } else {
-
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
 
 
     } else {
@@ -3663,10 +3471,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 5) != null && this.state.pruningNumber5Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter5Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits5Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers5Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber5Har1AvalantinoRow1Plant1 } = this.state;
 
       let data5 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 5),
@@ -3689,10 +3493,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter5Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits5Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers5Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber5Har1AvalantinoRow1Plant1)) {
+
 
       db.addTrussDetails(data5).then((result) => {
         console.log(result);
@@ -3709,9 +3510,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
 
-          this.changeCheckbox()
 
         }
 
@@ -3722,29 +3521,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       })
 
-    } else {
-
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
 
 
     } else {
@@ -3761,10 +3537,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 6) != null && this.state.pruningNumber6Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter6Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits6Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers6Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber6Har1AvalantinoRow1Plant1 } = this.state;
 
       let data6 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 6),
@@ -3787,10 +3559,6 @@ Alert.alert('Fruit diameter value looks incorrect')
       }
 
 
-      if (+!isNaN(+fruitDiameter6Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits6Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers6Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber6Har1AvalantinoRow1Plant1)) {
 
       db.addTrussDetails(data6).then((result) => {
         console.log(result);
@@ -3803,9 +3571,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
-
-                    this.changeCheckbox()
 
         }
 
@@ -3816,29 +3581,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       })
 
-    } else {
 
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
 
 
     } else {
@@ -3855,10 +3598,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 7) != null && this.state.pruningNumber7Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter7Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits7Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers7Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber7Har1AvalantinoRow1Plant1 } = this.state;
 
       let data7 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 7),
@@ -3881,10 +3620,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter7Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits7Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers7Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber7Har1AvalantinoRow1Plant1)) {
+
 
       db.addTrussDetails(data7).then((result) => {
         console.log(result);
@@ -3897,9 +3633,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
-
-                    this.changeCheckbox()
 
 
         }
@@ -3909,29 +3642,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       })
 
-    } else {
 
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
     } else {
 
 
@@ -3946,10 +3657,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 8) != null && this.state.pruningNumber8Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter8Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits8Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers8Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber8Har1AvalantinoRow1Plant1 } = this.state;
 
       let data8 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 8),
@@ -3972,10 +3679,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter8Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits8Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers8Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber8Har1AvalantinoRow1Plant1)) {
 
 
       db.addTrussDetails(data8).then((result) => {
@@ -3989,9 +3692,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
         } else {
 
-          this.setState({ checkboxStatus: 'CHECKED' })
 
-          this.changeCheckbox()
 
         }
 
@@ -4002,29 +3703,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       })
 
-    } else {
 
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
     } else {
 
 
@@ -4036,10 +3715,7 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     if ((Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 9) != null && this.state.pruningNumber9Har1AvalantinoRow1Plant1 !== null) {
 
-      const { fruitDiameter9Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFruits9Har1AvalantinoRow1Plant1 } = this.state;
-      const { setFlowers9Har1AvalantinoRow1Plant1 } = this.state;
-      const { pruningNumber9Har1AvalantinoRow1Plant1 } = this.state;
+
 
       let data9 = {
         trussNumber: (Number.parseInt(this.state.trussNumberHar1AvalantinoRow1Plant1) + 9),
@@ -4063,19 +3739,10 @@ Alert.alert('Fruit diameter value looks incorrect')
 
       }
 
-      if (+!isNaN(+fruitDiameter9Har1AvalantinoRow1Plant1)) {
-        if (+!isNaN(+setFruits9Har1AvalantinoRow1Plant1)) {
-          if (+!isNaN(+setFlowers9Har1AvalantinoRow1Plant1)) {
-            if (+!isNaN(+pruningNumber9Har1AvalantinoRow1Plant1)) {
-
 
       db.addTrussDetails(data9).then((result) => {
 
         console.log(result);
-
-        this.setState({ checkboxStatus: 'CHECKED' })
-
-                    this.changeCheckbox()
 
       }).catch((err) => {
 
@@ -4085,31 +3752,6 @@ Alert.alert('Fruit diameter value looks incorrect')
 
     } else {
 
-      Alert.alert('Pruning number value looks incorrect')
-
-    }
-
-  } else {
-
-    Alert.alert('Set flower value looks incorrect')
-
-  }
-} else {
-
-  Alert.alert('Set fruit value looks incorrect')
-
-}
-
-} else {
-
-Alert.alert('Fruit diameter value looks incorrect')
-
-
-}
-
-    } else {
-
-      
 
     }
 
