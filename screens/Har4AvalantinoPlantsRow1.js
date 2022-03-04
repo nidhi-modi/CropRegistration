@@ -356,6 +356,8 @@ export default class Har4AvalantinoPlantsRow1 extends Component {
 
 
 
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"} enabled>
+
         <ScrollView keyboardShouldPersistTaps='handled'>
 
           <View style={styles.marginDimensionSmallTop}></View>
@@ -388,6 +390,8 @@ export default class Har4AvalantinoPlantsRow1 extends Component {
           </View>
 
         </ScrollView>
+
+        </KeyboardAvoidingView>
       </View>
     );
   }

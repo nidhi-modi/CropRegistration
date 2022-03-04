@@ -7,7 +7,7 @@ import {
   Image,
   TextInput,
   Alert,
-  Platform, Dimensions, Keyboard
+  Platform, Dimensions, Keyboard, KeyboardAvoidingView
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
@@ -3883,6 +3883,8 @@ export default class Ger5DuelleRow1Plant3 extends Component {
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
 
+        <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"} enabled>
+
         <ScrollView
           keyboardShouldPersistTaps='handled'
           scrollEventThrottle={16}
@@ -5849,6 +5851,8 @@ export default class Ger5DuelleRow1Plant3 extends Component {
           </View>
 
         </ScrollView>
+
+        </KeyboardAvoidingView>
 
       </View >
     );

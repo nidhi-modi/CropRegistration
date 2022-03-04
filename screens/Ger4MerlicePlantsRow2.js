@@ -32,7 +32,7 @@ var plant10Selected;
 
 
 
-export default class Ger4EndeavourPlantsRow2 extends Component {
+export default class Ger4MerlicePlantsRow2 extends Component {
 
   constructor(props) {
     super(props);
@@ -75,16 +75,16 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant1)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant2)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant3)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant4)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant5)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant6)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant7)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant8)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant9)
-    EventRegister.removeEventListener(this.ger4EndeavourRow2EventPlant10)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant1)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant2)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant3)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant4)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant5)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant6)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant7)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant8)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant9)
+    EventRegister.removeEventListener(this.ger4MerliceRow2EventPlant10)
 
 
 
@@ -111,7 +111,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
   UNSAFE_componentWillMount() {
 
     //PLANT 1
-    this.ger4EndeavourRow2EventPlant1 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant1', (data1) => {
+    this.ger4MerliceRow2EventPlant1 = EventRegister.addEventListener('ger4MerliceRow2EventPlant1', (data1) => {
       plant1Selected = data1;
 
       if (data1 == null || data1 == true || data1 != false) {
@@ -128,7 +128,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 2
-    this.ger4EndeavourRow2EventPlant2 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant2', (data2) => {
+    this.ger4MerliceRow2EventPlant2 = EventRegister.addEventListener('ger4MerliceRow2EventPlant2', (data2) => {
       plant2Selected = data2;
 
       if (data2 == null || data2 == true || data2 != false) {
@@ -145,7 +145,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 3
-    this.ger4EndeavourRow2EventPlant3 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant3', (data3) => {
+    this.ger4MerliceRow2EventPlant3 = EventRegister.addEventListener('ger4MerliceRow2EventPlant3', (data3) => {
       plant3Selected = data3;
 
       if (data3 == null || data3 == true || data3 != false) {
@@ -162,7 +162,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 4
-    this.ger4EndeavourRow2EventPlant4 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant4', (data4) => {
+    this.ger4MerliceRow2EventPlant4 = EventRegister.addEventListener('ger4MerliceRow2EventPlant4', (data4) => {
       plant4Selected = data4;
 
       if (data4 == null || data4 == true || data4 != false) {
@@ -179,7 +179,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 5
-    this.ger4EndeavourRow2EventPlant5 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant5', (data5) => {
+    this.ger4MerliceRow2EventPlant5 = EventRegister.addEventListener('ger4MerliceRow2EventPlant5', (data5) => {
       plant5Selected = data5;
 
       if (data5 == null || data5 == true || data5 != false) {
@@ -196,7 +196,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 6
-    this.ger4EndeavourRow2EventPlant6 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant6', (data6) => {
+    this.ger4MerliceRow2EventPlant6 = EventRegister.addEventListener('ger4MerliceRow2EventPlant6', (data6) => {
       plant6Selected = data6;
 
       if (data6 == null || data6 == true || data6 != false) {
@@ -213,7 +213,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 7
-    this.ger4EndeavourRow2EventPlant7 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant7', (data7) => {
+    this.ger4MerliceRow2EventPlant7 = EventRegister.addEventListener('ger4MerliceRow2EventPlant7', (data7) => {
       plant7Selected = data7;
 
       if (data7 == null || data7 == true || data7 != false) {
@@ -230,7 +230,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 8
-    this.ger4EndeavourRow2EventPlant8 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant8', (data8) => {
+    this.ger4MerliceRow2EventPlant8 = EventRegister.addEventListener('ger4MerliceRow2EventPlant8', (data8) => {
       plant8Selected = data8;
 
       if (data8 == null || data8 == true || data8 != false) {
@@ -248,7 +248,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
 
     //PLANT 9
-    this.ger4EndeavourRow2EventPlant9 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant9', (data9) => {
+    this.ger4MerliceRow2EventPlant9 = EventRegister.addEventListener('ger4MerliceRow2EventPlant9', (data9) => {
       plant9Selected = data9;
 
       if (data9 == null || data9 == true || data9 != false) {
@@ -265,7 +265,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
     })
 
     //PLANT 10
-    this.ger4EndeavourRow2EventPlant10 = EventRegister.addEventListener('ger4EndeavourRow2EventPlant10', (data10) => {
+    this.ger4MerliceRow2EventPlant10 = EventRegister.addEventListener('ger4MerliceRow2EventPlant10', (data10) => {
       plant10Selected = data10;
 
       if (data10 == null || data10 == true || data10 != false) {
@@ -295,7 +295,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant1')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant1')}>
         <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -304,7 +304,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant1')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant1')}>
         <Text style={styles.buttonText}>Plant 1 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -323,7 +323,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant2')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant2')}>
         <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -332,7 +332,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant2')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant2')}>
         <Text style={styles.buttonText}>Plant 2 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -348,7 +348,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant3')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant3')}>
         <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -357,7 +357,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant3')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant3')}>
         <Text style={styles.buttonText}>Plant 3 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -373,7 +373,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant4')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant4')}>
         <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -382,7 +382,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant4')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant4')}>
         <Text style={styles.buttonText}>Plant 4 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -399,7 +399,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant5')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant5')}>
         <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -408,7 +408,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant5')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant5')}>
         <Text style={styles.buttonText}>Plant 5 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -424,7 +424,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant6')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant6')}>
         <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -433,7 +433,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant6')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant6')}>
         <Text style={styles.buttonText}>Plant 6 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -449,7 +449,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant7')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant7')}>
         <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -458,7 +458,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant7')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant7')}>
         <Text style={styles.buttonText}>Plant 7 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -474,7 +474,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant8')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant8')}>
         <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -483,7 +483,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant8')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant8')}>
         <Text style={styles.buttonText}>Plant 8 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -499,7 +499,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant9')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant9')}>
         <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -508,7 +508,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant9')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant9')}>
         <Text style={styles.buttonText}>Plant 9 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -524,7 +524,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant10')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant10')}>
         <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
       </TouchableOpacity>
 
@@ -533,7 +533,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
       return <TouchableOpacity
         style={styles.buttonContainerImage}
-        onPress={() => this.props.navigation.navigate('Ger4EndeavourRow2Plant10')}>
+        onPress={() => this.props.navigation.navigate('Ger4MerliceRow2Plant10')}>
         <Text style={styles.buttonText}>Plant 10 - Week {this.state.weekNumber}</Text>
         <Image source={require('../assets/tick.png')} style={styles.FloatingButtonStyle2} />
       </TouchableOpacity>
@@ -555,7 +555,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
           <View style={styles.headerImage1}>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger4EndeavourRow')} >
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Ger4MerliceRow')} >
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
 
@@ -564,7 +564,7 @@ export default class Ger4EndeavourPlantsRow2 extends Component {
 
           <View style={styles.headerImage2}>
 
-          <Text style={styles.text}>GER 4 - Endeavour / Row 70/71</Text>
+          <Text style={styles.text}>GER 4 - Merlice / Row 70/71</Text>
 
           </View>
 
