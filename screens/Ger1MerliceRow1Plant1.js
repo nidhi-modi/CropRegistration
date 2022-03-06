@@ -1295,10 +1295,23 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
   updateTextInput = (text, field) => {
 
-    this.setItem(field, text)
-    const state = this.state
-    state[field] = text;
-    this.setState(state)
+    const cleanNumber = text.replace(/[^0-9.]/g, "")
+
+    if(cleanNumber.test(text)){
+
+      this.setItem(field, text)
+      const state = this.state
+      state[field] = text;
+      this.setState(state)
+
+    }else{
+
+      Alert.alert('Enter valid number')
+
+
+    }
+
+   
 
     this.calculateFruitLoad();
     this.calculateHarvestTruss();
