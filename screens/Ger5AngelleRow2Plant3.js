@@ -1295,7 +1295,7 @@ export default class Ger5AngelleRow2Plant3 extends Component {
 
   updateTextInput = (text, field) => {
 
-    const cleanNumber = /[^0-9.]/
+    const cleanNumber = /[^0-9]/
 
     if(!cleanNumber.test(text)){
 

@@ -1294,7 +1294,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
 
   updateTextInput = (text, field) => {
 
-    const cleanNumber = /[^0-9.]/
+    const cleanNumber = /[^0-9]/
 
     if(!cleanNumber.test(text)){
 

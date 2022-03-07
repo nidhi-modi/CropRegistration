@@ -1294,7 +1294,7 @@ export default class Ger1MerliceRow2Plant7 extends Component {
 
   updateTextInput = (text, field) => {
 
-    const cleanNumber = /[^0-9.]/
+    const cleanNumber = /[^0-9]/
 
     if(!cleanNumber.test(text)){
 
