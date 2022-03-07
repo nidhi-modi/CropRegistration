@@ -7,7 +7,8 @@ import {
   Image,
   BackHandler,
   Platform,
-  Dimensions
+  Dimensions,
+  KeyboardAvoidingView
 
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
