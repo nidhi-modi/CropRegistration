@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   Image,
   TextInput,
-  Platform, Dimensions, Keyboard, KeyboardAvoidingView
+  Platform, Dimensions, Keyboard
 } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import moment from 'moment'
@@ -1294,10 +1294,20 @@ export default class RepKMPlant9 extends Component {
 
   updateTextInput = (text, field) => {
 
-    this.setItem(field, text)
-    const state = this.state
-    state[field] = text;
-    this.setState(state)
+    const cleanNumber = /[^0-9.]/
+
+    if(!cleanNumber.test(text)){
+
+      this.setItem(field, text)
+      const state = this.state
+      state[field] = text;
+      this.setState(state)
+
+    }else{
+
+      Alert.alert('Enter valid number')
+
+    }
 
     this.calculateFruitLoad();
     this.calculateHarvestTruss();
@@ -3655,8 +3665,6 @@ export default class RepKMPlant9 extends Component {
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
 
-        <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : "height"} enabled>
-
         <ScrollView
           keyboardShouldPersistTaps='handled'
           scrollEventThrottle={16}
@@ -5623,8 +5631,6 @@ export default class RepKMPlant9 extends Component {
           </View>
 
         </ScrollView>
-
-        </KeyboardAvoidingView>
 
       </View >
     );

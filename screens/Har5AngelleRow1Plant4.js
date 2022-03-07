@@ -1294,11 +1294,20 @@ export default class Har5AngelleRow1Plant4 extends Component {
 
   updateTextInput = (text, field) => {
 
-    this.setItem(field, text)
-    const state = this.state
-    state[field] = text;
-    this.setState(state)
+    const cleanNumber = /[^0-9.]/
 
+    if(!cleanNumber.test(text)){
+
+      this.setItem(field, text)
+      const state = this.state
+      state[field] = text;
+      this.setState(state)
+
+    }else{
+
+      Alert.alert('Enter valid number')
+
+    }
     this.calculateFruitLoad();
     this.calculateHarvestTruss();
     this.calculateSettingTruss2();
