@@ -1295,7 +1295,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
   updateTextInput = (text, field) => {
 
-    const cleanNumber = text.replace(/[^0-9.]/g, "")
+    const cleanNumber = /[^0-9.]/g 
 
     if(cleanNumber.test(text)){
 
@@ -1308,10 +1308,8 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
       Alert.alert('Enter valid number')
 
-
     }
 
-   
 
     this.calculateFruitLoad();
     this.calculateHarvestTruss();
