@@ -2111,6 +2111,22 @@ export default class Ger5DuelleRow1Plant1 extends Component {
             });
           }
 
+          //-------------------------------------------------------
+
+          if (
+            JSON.stringify(filteredweekRowTruss1[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameterGer5DuelleRow1Plant1: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameterGer5DuelleRow1Plant1: JSON.stringify(
+                filteredweekRowTruss1[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2120,6 +2136,7 @@ export default class Ger5DuelleRow1Plant1 extends Component {
             pruningNumberGer5DuelleRow1Plant1: '',
             setFruitsGer5DuelleRow1Plant1: '',
             setFlowersGer5DuelleRow1Plant1: '',
+            fruitDiameterGer5DuelleRow1Plant1: '',
           });
         }
       } else {
