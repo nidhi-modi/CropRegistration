@@ -16,7 +16,7 @@ import {EventRegister} from 'react-native-event-listeners';
 
 var screenWidth = Dimensions.get('window').width / 1.6;
 
-export default class Ger1MerliceRow extends Component {
+export default class Ger1DataChecker extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -78,7 +78,7 @@ export default class Ger1MerliceRow extends Component {
           </View>
         </ScrollView>
 
-        {/* <TouchableOpacity
+        <TouchableOpacity
           activeOpacity={0.7}
           onPress={() => this.clickHandler()}
           style={styles.touchableOpacityStyle}>
@@ -87,7 +87,7 @@ export default class Ger1MerliceRow extends Component {
             source={require('../assets/checker.png')}
             style={styles.floatingButtonStyle}
           />
-        </TouchableOpacity>*/}
+        </TouchableOpacity>
       </View>
     );
   }
