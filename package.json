@@ -28,11 +28,12 @@
     "react-native-event-listeners": "^1.0.7",
     "react-native-gesture-handler": "^1.10.3",
     "react-native-looped-carousel": "^0.1.13",
+    "react-native-paper": "^4.12.4",
     "react-native-safe-area-context": "^3.2.0",
     "react-native-splash-screen": "^3.2.0",
     "react-native-sqlite-storage": "^5.0.0",
     "react-native-tiny-toast": "^1.0.7",
-    "react-native-vector-icons": "^8.1.0",
+    "react-native-vector-icons": "^9.2.0",
     "react-navigation": "^4.4.4"
   },
   "devDependencies": {

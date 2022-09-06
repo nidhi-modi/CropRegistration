@@ -1062,6 +1062,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         .done();
     } catch (error) {}
 
+
     /*try {
       AsyncStorage.getItem('trussNumberGer1MerliceRow1Plant1').then((text10Value) => {
         this.setState({ trussNumberGer1MerliceRow1Plant1: JSON.parse(text10Value) });
@@ -1452,6 +1453,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         harvestTrussGer1MerliceRow1Plant1: add,
         pruningHarGer1MerliceRow1Plant1: prunNum,
       });
+      this.setItem(
+        'pruningHarGer1MerliceRow1Plant1',
+        prunNum,
+      );
     } else {
       prunNum = Number.parseInt(this.state.pruningNumberGer1MerliceRow1Plant1);
       var num = this.state.trussNumberGer1MerliceRow1Plant1;
@@ -1460,6 +1465,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         harvestTrussGer1MerliceRow1Plant1: num,
         pruningHarGer1MerliceRow1Plant1: prunNum,
       });
+      this.setItem(
+        'pruningHarGer1MerliceRow1Plant1',
+        prunNum,
+      );
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1518,6 +1527,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                           'settingTrussNumberGer1MerliceRow1Plant1',
                           settingTruss,
                         );
+                        this.setItem(
+                          'prunSettingGer1MerliceRow1Plant1',
+                          pruningSet,
+                        );
                       }
                     } else {
                       var number =
@@ -1547,6 +1560,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                         'settingTrussNumberGer1MerliceRow1Plant1',
                         settingTruss,
                       );
+                      this.setItem(
+                        'prunSettingGer1MerliceRow1Plant1',
+                        pruningSet,
+                      );
                     }
                   } else {
                     var number2 =
@@ -1574,6 +1591,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                     this.setItem(
                       'settingTrussNumberGer1MerliceRow1Plant1',
                       settingTruss,
+                    );
+                    this.setItem(
+                      'prunSettingGer1MerliceRow1Plant1',
+                      pruningSet,
                     );
                   }
                 } else {
@@ -1603,6 +1624,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                     'settingTrussNumberGer1MerliceRow1Plant1',
                     settingTruss,
                   );
+                  this.setItem(
+                    'prunSettingGer1MerliceRow1Plant1',
+                    pruningSet,
+                  );
                 }
               } else {
                 var number4 =
@@ -1630,6 +1655,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                   'settingTrussNumberGer1MerliceRow1Plant1',
                   settingTruss,
                 );
+                this.setItem(
+                  'prunSettingGer1MerliceRow1Plant1',
+                  pruningSet,
+                );
               }
             } else {
               var number5 =
@@ -1655,6 +1684,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                 'settingTrussNumberGer1MerliceRow1Plant1',
                 settingTruss,
               );
+              this.setItem(
+                'prunSettingGer1MerliceRow1Plant1',
+                pruningSet,
+              );
             }
           } else {
             var number6 =
@@ -1679,6 +1712,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
               'settingTrussNumberGer1MerliceRow1Plant1',
               settingTruss,
             );
+            this.setItem(
+              'prunSettingGer1MerliceRow1Plant1',
+              pruningSet,
+            );
           }
         } else {
           var number7 =
@@ -1700,6 +1737,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
           });
 
           this.setItem('settingTrussNumberGer1MerliceRow1Plant1', settingTruss);
+          this.setItem(
+            'prunSettingGer1MerliceRow1Plant1',
+            pruningSet,
+          );
         }
       } else {
         var number8 =
@@ -1721,6 +1762,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         });
 
         this.setItem('settingTrussNumberGer1MerliceRow1Plant1', settingTruss);
+        this.setItem(
+          'prunSettingGer1MerliceRow1Plant1',
+          pruningSet,
+        );
       }
     } else {
       var number9 =
@@ -1742,6 +1787,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
       });
 
       this.setItem('settingTrussNumberGer1MerliceRow1Plant1', settingTruss);
+      this.setItem(
+        'prunSettingGer1MerliceRow1Plant1',
+        pruningSet,
+      );
     }
   };
 
@@ -1799,6 +1848,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                           'floweringTrussssGer1MerliceRow1Plant1',
                           floweringTruss,
                         );
+                        this.setItem(
+                          'pruneFloweringGer1MerliceRow1Plant1',
+                          flowerPruningNumner,
+                        );
                       }
                     } else {
                       var number11 =
@@ -1833,6 +1886,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                         'floweringTrussssGer1MerliceRow1Plant1',
                         floweringTruss,
                       );
+                      this.setItem(
+                        'pruneFloweringGer1MerliceRow1Plant1',
+                        flowerPruningNumner,
+                      );
                     }
                   } else {
                     var number21 =
@@ -1862,6 +1919,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                     this.setItem(
                       'floweringTrussssGer1MerliceRow1Plant1',
                       floweringTruss,
+                    );
+                    this.setItem(
+                      'pruneFloweringGer1MerliceRow1Plant1',
+                      flowerPruningNumner,
                     );
                   }
                 } else {
@@ -1894,6 +1955,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                     'floweringTrussssGer1MerliceRow1Plant1',
                     floweringTruss,
                   );
+                  this.setItem(
+                    'pruneFloweringGer1MerliceRow1Plant1',
+                    flowerPruningNumner,
+                  );
                 }
               } else {
                 var number41 = +this.state.trussNumberGer1MerliceRow1Plant1 + 4;
@@ -1923,6 +1988,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                 this.setItem(
                   'floweringTrussssGer1MerliceRow1Plant1',
                   floweringTruss,
+                );
+                this.setItem(
+                  'pruneFloweringGer1MerliceRow1Plant1',
+                  flowerPruningNumner,
                 );
               }
             } else {
@@ -1954,6 +2023,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
                 'floweringTrussssGer1MerliceRow1Plant1',
                 floweringTruss,
               );
+              this.setItem(
+                'pruneFloweringGer1MerliceRow1Plant1',
+                flowerPruningNumner,
+              );
             }
           } else {
             var number61 = +this.state.trussNumberGer1MerliceRow1Plant1 + 6;
@@ -1984,6 +2057,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
               'floweringTrussssGer1MerliceRow1Plant1',
               floweringTruss,
             );
+            this.setItem(
+              'pruneFloweringGer1MerliceRow1Plant1',
+              flowerPruningNumner,
+            );
           }
         } else {
           var number71 = +this.state.trussNumberGer1MerliceRow1Plant1 + 7;
@@ -2011,6 +2088,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
           });
 
           this.setItem('floweringTrussssGer1MerliceRow1Plant1', floweringTruss);
+          this.setItem(
+            'pruneFloweringGer1MerliceRow1Plant1',
+            flowerPruningNumner,
+          );
         }
       } else {
         var number81 = +this.state.trussNumberGer1MerliceRow1Plant1 + 8;
@@ -2037,6 +2118,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
         });
 
         this.setItem('floweringTrussssGer1MerliceRow1Plant1', floweringTruss);
+        this.setItem(
+          'pruneFloweringGer1MerliceRow1Plant1',
+          flowerPruningNumner,
+        );
       }
     } else {
       var number91 = +this.state.trussNumberGer1MerliceRow1Plant1 + 9;
@@ -2061,6 +2146,10 @@ export default class Ger1MerliceRow1Plant1 extends Component {
       });
 
       this.setItem('floweringTrussssGer1MerliceRow1Plant1', floweringTruss);
+      this.setItem(
+        'pruneFloweringGer1MerliceRow1Plant1',
+        flowerPruningNumner,
+      );
     }
   };
   //
@@ -5609,7 +5698,7 @@ export default class Ger1MerliceRow1Plant1 extends Component {
 
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Ger1DataChecker')
+                    this.props.navigation.navigate('Ger1DataChecker', {name : 'Ger1MerliceRow1Plant1', row : '81/86', plant: 1})
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>

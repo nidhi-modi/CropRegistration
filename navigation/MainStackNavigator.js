@@ -450,6 +450,20 @@ import Ger5DuelleRow2Plant4 from '../screens/Ger5DuelleRow2Plant4';
 import Ger5DuelleRow2Plant5 from '../screens/Ger5DuelleRow2Plant5';
 
 import Ger1DataChecker from '../screens/Ger1DataChecker';
+import Ger2DataChecker from '../screens/Ger2DataChecker';
+import Ger3DataChecker from '../screens/Ger3DataChecker';
+import Ger4DataChecker from '../screens/Ger4DataChecker';
+import Ger5DataChecker from '../screens/Ger5DataChecker';
+import Har1DataChecker from '../screens/Har1DataChecker';
+import Har2DataChecker from '../screens/Har2DataChecker';
+import Har3DataChecker from '../screens/Har3DataChecker';
+import Har4DataChecker from '../screens/Har4DataChecker';
+import Har5DataChecker from '../screens/Har5DataChecker';
+import Har6DataChecker from '../screens/Har6DataChecker';
+import OhaDataChecker from '../screens/OhaDataChecker';
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -2754,6 +2768,71 @@ function MainStackNavigator() {
           component={Ger1DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
+         <Stack.Screen
+          name="Ger2DataChecker"
+          component={Ger2DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Ger3DataChecker"
+          component={Ger3DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Ger4DataChecker"
+          component={Ger4DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Ger5DataChecker"
+          component={Ger5DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Har1DataChecker"
+          component={Har1DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Har2DataChecker"
+          component={Har2DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Har3DataChecker"
+          component={Har3DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Har4DataChecker"
+          component={Har4DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har5DataChecker"
+          component={Har5DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="Har6DataChecker"
+          component={Har6DataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+         <Stack.Screen
+          name="OhaDataChecker"
+          component={OhaDataChecker}
+          options={{headerShown: false, title: 'T&G Global'}}
+         />
       </Stack.Navigator>
     </NavigationContainer>
   );

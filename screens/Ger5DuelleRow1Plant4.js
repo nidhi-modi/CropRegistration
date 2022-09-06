@@ -499,39 +499,48 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
             this.setState({
               trussNumber1Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 1,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                1,
             });
             this.setState({
               trussNumber2Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 2,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                2,
             });
             this.setState({
               trussNumber3Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 3,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                3,
             });
             this.setState({
               trussNumber4Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 4,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                4,
             });
             this.setState({
               trussNumber5Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 5,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                5,
             });
             this.setState({
               trussNumber6Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 6,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                6,
             });
             this.setState({
               trussNumber7Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 7,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                7,
             });
             this.setState({
               trussNumber8Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 8,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                8,
             });
             this.setState({
               trussNumber9Ger5DuelleRow1Plant4:
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 9,
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                9,
             });
           }
         })
@@ -1053,6 +1062,7 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         .done();
     } catch (error) {}
 
+
     /*try {
       AsyncStorage.getItem('trussNumberGer5DuelleRow1Plant4').then((text10Value) => {
         this.setState({ trussNumberGer5DuelleRow1Plant4: JSON.parse(text10Value) });
@@ -1325,52 +1335,42 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         setFruitsGer5DuelleRow1Plant4: '',
         setFlowersGer5DuelleRow1Plant4: '',
         pruningNumberGer5DuelleRow1Plant4: '',
-        fruitDiameterGer5DuelleRow1Plant4: '',
 
         setFruits1Ger5DuelleRow1Plant4: '',
         setFlowers1Ger5DuelleRow1Plant4: '',
         pruningNumber1Ger5DuelleRow1Plant4: '',
-        fruitDiameter1Ger5DuelleRow1Plant4: '',
 
         setFruits2Ger5DuelleRow1Plant4: '',
         setFlowers2Ger5DuelleRow1Plant4: '',
         pruningNumber2Ger5DuelleRow1Plant4: '',
-        fruitDiameter2Ger5DuelleRow1Plant4: '',
 
         setFruits3Ger5DuelleRow1Plant4: '',
         setFlowers3Ger5DuelleRow1Plant4: '',
         pruningNumber3Ger5DuelleRow1Plant4: '',
-        fruitDiameter3Ger5DuelleRow1Plant4: '',
 
         setFruits4Ger5DuelleRow1Plant4: '',
         setFlowers4Ger5DuelleRow1Plant4: '',
         pruningNumber4Ger5DuelleRow1Plant4: '',
-        fruitDiameter4Ger5DuelleRow1Plant4: '',
 
         setFruits5Ger5DuelleRow1Plant4: '',
         setFlowers5Ger5DuelleRow1Plant4: '',
         pruningNumber5Ger5DuelleRow1Plant4: '',
-        fruitDiameter5Ger5DuelleRow1Plant4: '',
 
         setFruits6Ger5DuelleRow1Plant4: '',
         setFlowers6Ger5DuelleRow1Plant4: '',
         pruningNumber6Ger5DuelleRow1Plant4: '',
-        fruitDiameter6Ger5DuelleRow1Plant4: '',
 
         setFruits7Ger5DuelleRow1Plant4: '',
         setFlowers7Ger5DuelleRow1Plant4: '',
         pruningNumber7Ger5DuelleRow1Plant4: '',
-        fruitDiameter7Ger5DuelleRow1Plant4: '',
 
         setFruits8Ger5DuelleRow1Plant4: '',
         setFlowers8Ger5DuelleRow1Plant4: '',
         pruningNumber8Ger5DuelleRow1Plant4: '',
-        fruitDiameter8Ger5DuelleRow1Plant4: '',
 
         setFruits9Ger5DuelleRow1Plant4: '',
         setFlowers9Ger5DuelleRow1Plant4: '',
         pruningNumber9Ger5DuelleRow1Plant4: '',
-        fruitDiameter9Ger5DuelleRow1Plant4: '',
       });
     }
   };
@@ -1453,6 +1453,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         harvestTrussGer5DuelleRow1Plant4: add,
         pruningHarGer5DuelleRow1Plant4: prunNum,
       });
+      this.setItem(
+        'pruningHarGer5DuelleRow1Plant4',
+        prunNum,
+      );
     } else {
       prunNum = Number.parseInt(this.state.pruningNumberGer5DuelleRow1Plant4);
       var num = this.state.trussNumberGer5DuelleRow1Plant4;
@@ -1461,6 +1465,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         harvestTrussGer5DuelleRow1Plant4: num,
         pruningHarGer5DuelleRow1Plant4: prunNum,
       });
+      this.setItem(
+        'pruningHarGer5DuelleRow1Plant4',
+        prunNum,
+      );
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1519,6 +1527,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                           'settingTrussNumberGer5DuelleRow1Plant4',
                           settingTruss,
                         );
+                        this.setItem(
+                          'prunSettingGer5DuelleRow1Plant4',
+                          pruningSet,
+                        );
                       }
                     } else {
                       var number =
@@ -1548,6 +1560,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         'settingTrussNumberGer5DuelleRow1Plant4',
                         settingTruss,
                       );
+                      this.setItem(
+                        'prunSettingGer5DuelleRow1Plant4',
+                        pruningSet,
+                      );
                     }
                   } else {
                     var number2 =
@@ -1575,6 +1591,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     this.setItem(
                       'settingTrussNumberGer5DuelleRow1Plant4',
                       settingTruss,
+                    );
+                    this.setItem(
+                      'prunSettingGer5DuelleRow1Plant4',
+                      pruningSet,
                     );
                   }
                 } else {
@@ -1604,6 +1624,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     'settingTrussNumberGer5DuelleRow1Plant4',
                     settingTruss,
                   );
+                  this.setItem(
+                    'prunSettingGer5DuelleRow1Plant4',
+                    pruningSet,
+                  );
                 }
               } else {
                 var number4 =
@@ -1631,10 +1655,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                   'settingTrussNumberGer5DuelleRow1Plant4',
                   settingTruss,
                 );
+                this.setItem(
+                  'prunSettingGer5DuelleRow1Plant4',
+                  pruningSet,
+                );
               }
             } else {
               var number5 =
-                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 5;
+                Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) +
+                5;
 
               pruningSet = Number.parseInt(
                 this.state.pruningNumber5Ger5DuelleRow1Plant4,
@@ -1654,6 +1683,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
               this.setItem(
                 'settingTrussNumberGer5DuelleRow1Plant4',
                 settingTruss,
+              );
+              this.setItem(
+                'prunSettingGer5DuelleRow1Plant4',
+                pruningSet,
               );
             }
           } else {
@@ -1679,6 +1712,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
               'settingTrussNumberGer5DuelleRow1Plant4',
               settingTruss,
             );
+            this.setItem(
+              'prunSettingGer5DuelleRow1Plant4',
+              pruningSet,
+            );
           }
         } else {
           var number7 =
@@ -1700,6 +1737,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
           });
 
           this.setItem('settingTrussNumberGer5DuelleRow1Plant4', settingTruss);
+          this.setItem(
+            'prunSettingGer5DuelleRow1Plant4',
+            pruningSet,
+          );
         }
       } else {
         var number8 =
@@ -1721,6 +1762,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         });
 
         this.setItem('settingTrussNumberGer5DuelleRow1Plant4', settingTruss);
+        this.setItem(
+          'prunSettingGer5DuelleRow1Plant4',
+          pruningSet,
+        );
       }
     } else {
       var number9 =
@@ -1730,7 +1775,9 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         this.state.pruningNumber9Ger5DuelleRow1Plant4,
       );
       trussNum = Number.parseInt(number9);
-      settingFruit = Number.parseInt(this.state.setFruits9Ger5DuelleRow1Plant4);
+      settingFruit = Number.parseInt(
+        this.state.setFruits9Ger5DuelleRow1Plant4,
+      );
       settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
       console.log('Setting Truss Number 9 : ' + settingTruss);
       this.setState({
@@ -1740,6 +1787,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
       });
 
       this.setItem('settingTrussNumberGer5DuelleRow1Plant4', settingTruss);
+      this.setItem(
+        'prunSettingGer5DuelleRow1Plant4',
+        pruningSet,
+      );
     }
   };
 
@@ -1797,6 +1848,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                           'floweringTrussssGer5DuelleRow1Plant4',
                           floweringTruss,
                         );
+                        this.setItem(
+                          'pruneFloweringGer5DuelleRow1Plant4',
+                          flowerPruningNumner,
+                        );
                       }
                     } else {
                       var number11 =
@@ -1831,6 +1886,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         'floweringTrussssGer5DuelleRow1Plant4',
                         floweringTruss,
                       );
+                      this.setItem(
+                        'pruneFloweringGer5DuelleRow1Plant4',
+                        flowerPruningNumner,
+                      );
                     }
                   } else {
                     var number21 =
@@ -1860,6 +1919,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     this.setItem(
                       'floweringTrussssGer5DuelleRow1Plant4',
                       floweringTruss,
+                    );
+                    this.setItem(
+                      'pruneFloweringGer5DuelleRow1Plant4',
+                      flowerPruningNumner,
                     );
                   }
                 } else {
@@ -1892,6 +1955,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     'floweringTrussssGer5DuelleRow1Plant4',
                     floweringTruss,
                   );
+                  this.setItem(
+                    'pruneFloweringGer5DuelleRow1Plant4',
+                    flowerPruningNumner,
+                  );
                 }
               } else {
                 var number41 = +this.state.trussNumberGer5DuelleRow1Plant4 + 4;
@@ -1921,6 +1988,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                 this.setItem(
                   'floweringTrussssGer5DuelleRow1Plant4',
                   floweringTruss,
+                );
+                this.setItem(
+                  'pruneFloweringGer5DuelleRow1Plant4',
+                  flowerPruningNumner,
                 );
               }
             } else {
@@ -1952,6 +2023,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                 'floweringTrussssGer5DuelleRow1Plant4',
                 floweringTruss,
               );
+              this.setItem(
+                'pruneFloweringGer5DuelleRow1Plant4',
+                flowerPruningNumner,
+              );
             }
           } else {
             var number61 = +this.state.trussNumberGer5DuelleRow1Plant4 + 6;
@@ -1982,6 +2057,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
               'floweringTrussssGer5DuelleRow1Plant4',
               floweringTruss,
             );
+            this.setItem(
+              'pruneFloweringGer5DuelleRow1Plant4',
+              flowerPruningNumner,
+            );
           }
         } else {
           var number71 = +this.state.trussNumberGer5DuelleRow1Plant4 + 7;
@@ -2009,6 +2088,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
           });
 
           this.setItem('floweringTrussssGer5DuelleRow1Plant4', floweringTruss);
+          this.setItem(
+            'pruneFloweringGer5DuelleRow1Plant4',
+            flowerPruningNumner,
+          );
         }
       } else {
         var number81 = +this.state.trussNumberGer5DuelleRow1Plant4 + 8;
@@ -2016,7 +2099,9 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         flowerPruningNumner = Number.parseInt(
           this.state.pruningNumber8Ger5DuelleRow1Plant4,
         );
-        flowering = Number.parseInt(this.state.setFlowers8Ger5DuelleRow1Plant4);
+        flowering = Number.parseInt(
+          this.state.setFlowers8Ger5DuelleRow1Plant4,
+        );
         flowerSetFruits = Number.parseInt(
           this.state.setFruits8Ger5DuelleRow1Plant4,
         );
@@ -2033,6 +2118,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         });
 
         this.setItem('floweringTrussssGer5DuelleRow1Plant4', floweringTruss);
+        this.setItem(
+          'pruneFloweringGer5DuelleRow1Plant4',
+          flowerPruningNumner,
+        );
       }
     } else {
       var number91 = +this.state.trussNumberGer5DuelleRow1Plant4 + 9;
@@ -2057,6 +2146,10 @@ export default class Ger5DuelleRow1Plant4 extends Component {
       });
 
       this.setItem('floweringTrussssGer5DuelleRow1Plant4', floweringTruss);
+      this.setItem(
+        'pruneFloweringGer5DuelleRow1Plant4',
+        flowerPruningNumner,
+      );
     }
   };
   //
@@ -2121,32 +2214,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss1[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameterGer5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameterGer5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss1[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumberGer5DuelleRow1Plant4: '',
             setFruitsGer5DuelleRow1Plant4: '',
             setFlowersGer5DuelleRow1Plant4: '',
-            fruitDiameterGer5DuelleRow1Plant4: '',
+            pruningNumberGer5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2212,32 +2288,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss2[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter1Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter1Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss2[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber1Ger5DuelleRow1Plant4: '',
             setFruits1Ger5DuelleRow1Plant4: '',
             setFlowers1Ger5DuelleRow1Plant4: '',
-            fruitDiameter1Ger5DuelleRow1Plant4: '',
+            pruningNumber1Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2304,32 +2363,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss3[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter2Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter2Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss3[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber2Ger5DuelleRow1Plant4: '',
             setFruits2Ger5DuelleRow1Plant4: '',
             setFlowers2Ger5DuelleRow1Plant4: '',
-            fruitDiameter2Ger5DuelleRow1Plant4: '',
+            pruningNumber2Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2396,32 +2438,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss4[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter3Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter3Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss4[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber3Ger5DuelleRow1Plant4: '',
             setFruits3Ger5DuelleRow1Plant4: '',
             setFlowers3Ger5DuelleRow1Plant4: '',
-            fruitDiameter3Ger5DuelleRow1Plant4: '',
+            pruningNumber3Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2488,32 +2513,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss5[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter4Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter4Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss5[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber4Ger5DuelleRow1Plant4: '',
             setFruits4Ger5DuelleRow1Plant4: '',
             setFlowers4Ger5DuelleRow1Plant4: '',
-            fruitDiameter4Ger5DuelleRow1Plant4: '',
+            pruningNumber4Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2580,32 +2588,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss6[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter5Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter5Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss6[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber5Ger5DuelleRow1Plant4: '',
             setFruits5Ger5DuelleRow1Plant4: '',
             setFlowers5Ger5DuelleRow1Plant4: '',
-            fruitDiameter5Ger5DuelleRow1Plant4: '',
+            pruningNumber5Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2671,33 +2662,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
               ),
             });
           }
-
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss7[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter6Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter6Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss7[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber6Ger5DuelleRow1Plant4: '',
             setFruits6Ger5DuelleRow1Plant4: '',
             setFlowers6Ger5DuelleRow1Plant4: '',
-            fruitDiameter6Ger5DuelleRow1Plant4: '',
+            pruningNumber6Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2764,32 +2737,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss8[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter7Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter7Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss8[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber7Ger5DuelleRow1Plant4: '',
             setFruits7Ger5DuelleRow1Plant4: '',
             setFlowers7Ger5DuelleRow1Plant4: '',
-            fruitDiameter7Ger5DuelleRow1Plant4: '',
+            pruningNumber7Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2855,33 +2811,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
               ),
             });
           }
-
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss9[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter8Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter8Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss9[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber8Ger5DuelleRow1Plant4: '',
             setFruits8Ger5DuelleRow1Plant4: '',
             setFlowers8Ger5DuelleRow1Plant4: '',
-            fruitDiameter8Ger5DuelleRow1Plant4: '',
+            pruningNumber8Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -2948,32 +2886,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
             });
           }
 
-          //-------------------------------------------------------
-
-          if (
-            JSON.stringify(filteredweekRowTruss10[0].fruitDiameter) === 'null'
-          ) {
-            this.setState({
-              fruitDiameter9Ger5DuelleRow1Plant4: '',
-            });
-          } else {
-            this.setState({
-              fruitDiameter9Ger5DuelleRow1Plant4: JSON.stringify(
-                filteredweekRowTruss10[0].fruitDiameter,
-              ),
-            });
-          }
-
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            pruningNumber9Ger5DuelleRow1Plant4: '',
             setFruits9Ger5DuelleRow1Plant4: '',
             setFlowers9Ger5DuelleRow1Plant4: '',
-            fruitDiameter9Ger5DuelleRow1Plant4: '',
+            pruningNumber9Ger5DuelleRow1Plant4: '',
           });
         }
       } else {
@@ -3036,7 +2957,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         leafLength: this.state.leafLengthGer5DuelleRow1Plant4,
         leafWidth: this.state.leafWidthGer5DuelleRow1Plant4,
         stmDiameter: this.state.stmDiameterGer5DuelleRow1Plant4,
-        lastWeekStmDiameter: this.state.lastWeekStmDiameterGer5DuelleRow1Plant4,
+        lastWeekStmDiameter: this.state
+          .lastWeekStmDiameterGer5DuelleRow1Plant4,
       };
 
       if (+!isNaN(+leavesPerPlantGer5DuelleRow1Plant4)) {
@@ -3141,7 +3063,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB1 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 1 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 1 !=
+        null &&
       this.state.pruningNumber1Ger5DuelleRow1Plant4 !== null
     ) {
       let data1 = {
@@ -3186,7 +3109,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB2 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 2 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 2 !=
+        null &&
       this.state.pruningNumber2Ger5DuelleRow1Plant4 !== null
     ) {
       let data2 = {
@@ -3277,7 +3201,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB4 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 4 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 4 !=
+        null &&
       this.state.pruningNumber4Ger5DuelleRow1Plant4 !== null
     ) {
       let data4 = {
@@ -3320,7 +3245,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB5 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 5 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 5 !=
+        null &&
       this.state.pruningNumber5Ger5DuelleRow1Plant4 !== null
     ) {
       let data5 = {
@@ -3369,7 +3295,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB6 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 6 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 6 !=
+        null &&
       this.state.pruningNumber6Ger5DuelleRow1Plant4 !== null
     ) {
       let data6 = {
@@ -3414,7 +3341,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB7 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 7 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 7 !=
+        null &&
       this.state.pruningNumber7Ger5DuelleRow1Plant4 !== null
     ) {
       let data7 = {
@@ -3459,7 +3387,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB8 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 8 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 8 !=
+        null &&
       this.state.pruningNumber8Ger5DuelleRow1Plant4 !== null
     ) {
       let data8 = {
@@ -3504,7 +3433,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
 
   saveTrussToDB9 = () => {
     if (
-      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 9 != null &&
+      Number.parseInt(this.state.trussNumberGer5DuelleRow1Plant4) + 9 !=
+        null &&
       this.state.pruningNumber9Ger5DuelleRow1Plant4 !== null
     ) {
       let data9 = {
@@ -3666,8 +3596,8 @@ export default class Ger5DuelleRow1Plant4 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 48/ Week No.{' '}
-          {this.state.weekNumber}
+          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 48/
+          Week No. {this.state.weekNumber}
         </Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
@@ -3702,7 +3632,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3745,7 +3674,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3791,7 +3719,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3837,7 +3764,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3883,7 +3809,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3931,7 +3856,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -3977,7 +3901,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -4023,7 +3946,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'next'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -4071,7 +3993,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                         multiline={false}
                         autoCorrect={false}
                         enablesReturnKeyAutomatically={true}
-                        onChangeText={this.onChangeText}
                         returnKeyType={'done'}
                         keyboardType={'numeric'}
                         blurOnSubmit={false}
@@ -4156,7 +4077,7 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                       }}
                     />
 
-                    <Text style={styles.text222}>Split Trs</Text>
+                    <Text style={styles.text222}>Fruit Dia</Text>
 
                     <View
                       style={{
@@ -4209,7 +4130,7 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                       }}
                     />
 
-                    <Text style={styles.text222}>Split Trs</Text>
+                    <Text style={styles.text222}>Fruit Dia</Text>
 
                     <View
                       style={{
@@ -4254,7 +4175,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     placeholderTextColor="#000000"
                     multiline={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -4360,7 +4280,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameterGer5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -4400,7 +4319,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -4506,7 +4424,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter1Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -4546,11 +4463,9 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
-                    onChangeText={this.onChangeText}
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
@@ -4652,7 +4567,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter2Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -4692,7 +4606,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     selectTextOnFocus={false}
                     multiline={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -4796,7 +4709,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     keyboardType={'numeric'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
-                    value={this.state.fruitDiameter3Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -4836,7 +4748,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -4942,7 +4853,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter4Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -4982,7 +4892,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -5088,7 +4997,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter5Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -5128,7 +5036,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -5234,7 +5141,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter6Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -5274,7 +5180,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -5380,7 +5285,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter7Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -5420,7 +5324,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     editable={false}
                     selectTextOnFocus={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     returnKeyType={'next'}
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
@@ -5526,7 +5429,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter8Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -5564,7 +5466,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCapitalize="none"
                     multiline={false}
                     keyboardType={'numeric'}
-                    multiline={false}
                     editable={false}
                     selectTextOnFocus={false}
                     returnKeyType={'next'}
@@ -5672,7 +5573,6 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                     autoCorrect={false}
                     enablesReturnKeyAutomatically={true}
                     returnKeyType={'done'}
-                    value={this.state.fruitDiameter9Ger5DuelleRow1Plant4}
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
@@ -5794,7 +5694,15 @@ export default class Ger5DuelleRow1Plant4 extends Component {
                   </View>
                 </View>
 
-                <View style={styles.marginDimensionTop}></View>
+                <View style={styles.marginXSmallDimensionTop}></View>
+
+                <TouchableOpacity
+                  onPress={() =>
+                    this.props.navigation.navigate('Ger5DataChecker', {name : 'Ger5DuelleRow1Plant4', row : '48', plant: 4, type: 'GER 5 - Duelle'})
+                  }>
+                  <Text style={styles.textDataChecker}>Data Checker</Text>
+                </TouchableOpacity>
+                <View style={styles.marginXSmallDimensionTop}></View>
 
                 <CheckBox
                   style={styles.styleCheckbox}
@@ -5842,6 +5750,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginLeft: 12,
     marginRight: 10,
+  },
+
+  textDataChecker: {
+    //color: '#110A6A',
+    color: '#2C903D',
+    fontSize: 17,
+    fontWeight: 'bold',
+    marginLeft: 10,
+    marginRight: 10,
+    alignItems: 'flex-end',
+    alignContent: 'flex-end',
+    textAlign: 'right',
   },
 
   borderErrorColor: {
