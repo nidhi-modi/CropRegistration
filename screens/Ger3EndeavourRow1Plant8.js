@@ -231,7 +231,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'GER 3 - Endeavour' &&
             d.plantNumber === 8 &&
-            d.plantRow === '125/126' &&
+            d.plantRow === '65/125' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -256,7 +256,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'GER 3 - Endeavour' &&
             d.plantNumber === 8 &&
-            d.plantRow === '125/126' &&
+            d.plantRow === '65/125' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -1044,7 +1044,9 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         .then(text51Value => {
           if (text51Value !== null) {
             this.setState({
-              settingTrussNumberGer3EndeavourRow1Plant8: JSON.parse(text51Value),
+              settingTrussNumberGer3EndeavourRow1Plant8: JSON.parse(
+                text51Value,
+              ),
             });
           }
         })
@@ -1061,7 +1063,6 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         })
         .done();
     } catch (error) {}
-
 
     /*try {
       AsyncStorage.getItem('trussNumberGer3EndeavourRow1Plant8').then((text10Value) => {
@@ -1430,7 +1431,9 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
     var prunNum = 0;
 
     if (this.state.setFlowersGer3EndeavourRow1Plant8 === '') {
-      prunNum = Number.parseInt(this.state.pruningNumberGer3EndeavourRow1Plant8);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberGer3EndeavourRow1Plant8,
+      );
 
       div =
         Number.parseInt(
@@ -1453,22 +1456,18 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         harvestTrussGer3EndeavourRow1Plant8: add,
         pruningHarGer3EndeavourRow1Plant8: prunNum,
       });
-      this.setItem(
-        'pruningHarGer3EndeavourRow1Plant8',
-        prunNum,
-      );
+      this.setItem('pruningHarGer3EndeavourRow1Plant8', prunNum);
     } else {
-      prunNum = Number.parseInt(this.state.pruningNumberGer3EndeavourRow1Plant8);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberGer3EndeavourRow1Plant8,
+      );
       var num = this.state.trussNumberGer3EndeavourRow1Plant8;
 
       this.setState({
         harvestTrussGer3EndeavourRow1Plant8: num,
         pruningHarGer3EndeavourRow1Plant8: prunNum,
       });
-      this.setItem(
-        'pruningHarGer3EndeavourRow1Plant8',
-        prunNum,
-      );
+      this.setItem('pruningHarGer3EndeavourRow1Plant8', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1631,8 +1630,9 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
                 }
               } else {
                 var number4 =
-                  Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
-                  4;
+                  Number.parseInt(
+                    this.state.trussNumberGer3EndeavourRow1Plant8,
+                  ) + 4;
 
                 pruningSet = Number.parseInt(
                   this.state.pruningNumber4Ger3EndeavourRow1Plant8,
@@ -1655,10 +1655,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
                   'settingTrussNumberGer3EndeavourRow1Plant8',
                   settingTruss,
                 );
-                this.setItem(
-                  'prunSettingGer3EndeavourRow1Plant8',
-                  pruningSet,
-                );
+                this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
               }
             } else {
               var number5 =
@@ -1684,14 +1681,12 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
                 'settingTrussNumberGer3EndeavourRow1Plant8',
                 settingTruss,
               );
-              this.setItem(
-                'prunSettingGer3EndeavourRow1Plant8',
-                pruningSet,
-              );
+              this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
             }
           } else {
             var number6 =
-              Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 6;
+              Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              6;
 
             pruningSet = Number.parseInt(
               this.state.pruningNumber6Ger3EndeavourRow1Plant8,
@@ -1712,10 +1707,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
               'settingTrussNumberGer3EndeavourRow1Plant8',
               settingTruss,
             );
-            this.setItem(
-              'prunSettingGer3EndeavourRow1Plant8',
-              pruningSet,
-            );
+            this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
           }
         } else {
           var number7 =
@@ -1736,11 +1728,11 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
             prunSettingGer3EndeavourRow1Plant8: pruningSet,
           });
 
-          this.setItem('settingTrussNumberGer3EndeavourRow1Plant8', settingTruss);
           this.setItem(
-            'prunSettingGer3EndeavourRow1Plant8',
-            pruningSet,
+            'settingTrussNumberGer3EndeavourRow1Plant8',
+            settingTruss,
           );
+          this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
         }
       } else {
         var number8 =
@@ -1762,10 +1754,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         });
 
         this.setItem('settingTrussNumberGer3EndeavourRow1Plant8', settingTruss);
-        this.setItem(
-          'prunSettingGer3EndeavourRow1Plant8',
-          pruningSet,
-        );
+        this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
       }
     } else {
       var number9 =
@@ -1787,10 +1776,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
       });
 
       this.setItem('settingTrussNumberGer3EndeavourRow1Plant8', settingTruss);
-      this.setItem(
-        'prunSettingGer3EndeavourRow1Plant8',
-        pruningSet,
-      );
+      this.setItem('prunSettingGer3EndeavourRow1Plant8', pruningSet);
     }
   };
 
@@ -1804,7 +1790,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Flowering truss called : ' + this.state.setFlowers2Ger3EndeavourRow1Plant8,
+      'Flowering truss called : ' +
+        this.state.setFlowers2Ger3EndeavourRow1Plant8,
     );
 
     if (this.state.setFlowers9Ger3EndeavourRow1Plant8 === '') {
@@ -1961,7 +1948,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
                   );
                 }
               } else {
-                var number41 = +this.state.trussNumberGer3EndeavourRow1Plant8 + 4;
+                var number41 =
+                  +this.state.trussNumberGer3EndeavourRow1Plant8 + 4;
 
                 flowerPruningNumner = Number.parseInt(
                   this.state.pruningNumber4Ger3EndeavourRow1Plant8,
@@ -2087,7 +2075,10 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
             pruneFloweringGer3EndeavourRow1Plant8: flowerPruningNumner,
           });
 
-          this.setItem('floweringTrussssGer3EndeavourRow1Plant8', floweringTruss);
+          this.setItem(
+            'floweringTrussssGer3EndeavourRow1Plant8',
+            floweringTruss,
+          );
           this.setItem(
             'pruneFloweringGer3EndeavourRow1Plant8',
             flowerPruningNumner,
@@ -2129,7 +2120,9 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
       flowerPruningNumner = Number.parseInt(
         this.state.pruningNumber9Ger3EndeavourRow1Plant8,
       );
-      flowering = Number.parseInt(this.state.setFlowers9Ger3EndeavourRow1Plant8);
+      flowering = Number.parseInt(
+        this.state.setFlowers9Ger3EndeavourRow1Plant8,
+      );
       flowerSetFruits = Number.parseInt(
         this.state.setFruits9Ger3EndeavourRow1Plant8,
       );
@@ -2911,7 +2904,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
 
   changeCheckbox = () => {
     this.setState({
-      Ger3EndeavourRow1Plant8Selected: !this.state.Ger3EndeavourRow1Plant8Selected,
+      Ger3EndeavourRow1Plant8Selected: !this.state
+        .Ger3EndeavourRow1Plant8Selected,
     });
 
     const vart = this.state.Ger3EndeavourRow1Plant8Selected;
@@ -2944,7 +2938,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
       const {lastWeekStmDiameterGer3EndeavourRow1Plant8} = this.state;
 
       let data = {
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -2969,7 +2963,9 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
                 if (+!isNaN(+leafLengthGer3EndeavourRow1Plant8)) {
                   if (+!isNaN(+leafWidthGer3EndeavourRow1Plant8)) {
                     if (+!isNaN(+stmDiameterGer3EndeavourRow1Plant8)) {
-                      if (+!isNaN(+lastWeekStmDiameterGer3EndeavourRow1Plant8)) {
+                      if (
+                        +!isNaN(+lastWeekStmDiameterGer3EndeavourRow1Plant8)
+                      ) {
                         this.setState({checkboxStatus: 'CHECKED'});
 
                         this.changeCheckbox();
@@ -3028,7 +3024,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruitsGer3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowersGer3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumberGer3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3046,7 +3042,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 1 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              1 !==
               null &&
             this.state.pruningNumber1Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3074,7 +3071,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits1Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers1Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber1Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3092,7 +3089,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 2 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              2 !==
               null &&
             this.state.pruningNumber2Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3120,7 +3118,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits2Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers2Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber2Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3138,7 +3136,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 3 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              3 !==
               null &&
             this.state.pruningNumber3Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3166,7 +3165,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits3Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers3Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber3Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3184,7 +3183,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 4 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              4 !==
               null &&
             this.state.pruningNumber4Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3212,7 +3212,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits4Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers4Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber4Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3228,7 +3228,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
       db.addTrussDetails(data4)
         .then(result => {
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 5 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              5 !==
               null &&
             this.state.pruningNumber5Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3256,7 +3257,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits5Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers5Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber5Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3278,7 +3279,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           });
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 6 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              6 !==
               null &&
             this.state.pruningNumber6Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3306,7 +3308,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits6Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers6Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber6Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3324,7 +3326,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 7 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              7 !==
               null &&
             this.state.pruningNumber7Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3352,7 +3355,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits7Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers7Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber7Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3370,7 +3373,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 8 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              8 !==
               null &&
             this.state.pruningNumber8Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3398,7 +3402,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits8Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers8Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber8Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3416,7 +3420,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) + 9 !==
+            Number.parseInt(this.state.trussNumberGer3EndeavourRow1Plant8) +
+              9 !==
               null &&
             this.state.pruningNumber9Ger3EndeavourRow1Plant8 !== ''
           ) {
@@ -3444,7 +3449,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         setFruits: this.state.setFruits9Ger3EndeavourRow1Plant8,
         setFlowers: this.state.setFlowers9Ger3EndeavourRow1Plant8,
         pruningNumber: this.state.pruningNumber9Ger3EndeavourRow1Plant8,
-        plantRow: '125/126',
+        plantRow: '65/125',
         plantName: 'GER 3 - Endeavour',
         plantWeek: this.state.weekNumber,
         plantNumber: 8,
@@ -3596,7 +3601,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 8</Text>/ Row No. 125&amp;126/
+          <Text style={styles.textPlants}>Plant 8</Text>/ Row No. 65&amp;125/
           Week No. {this.state.weekNumber}
         </Text>
 
@@ -5655,7 +5660,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
 
                   <View
                     style={[
-                      this.state.settingTrussNumberGer3EndeavourRow1Plant8 <= 1 ||
+                      this.state.settingTrussNumberGer3EndeavourRow1Plant8 <=
+                        1 ||
                       this.state.settingTrussNumberGer3EndeavourRow1Plant8 >= 45
                         ? styles.borderErrorColor
                         : null,
@@ -5698,7 +5704,11 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
 
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Ger3DataChecker', {name : 'Ger3EndeavourRow1Plant8', row : '125/126', plant: 8})
+                    this.props.navigation.navigate('Ger3DataChecker', {
+                      name: 'Ger3EndeavourRow1Plant8',
+                      row: '65/125',
+                      plant: 8,
+                    })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>
