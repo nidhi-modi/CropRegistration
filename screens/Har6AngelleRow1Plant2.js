@@ -174,6 +174,11 @@ export default class Har6AngelleRow1Plant2 extends Component {
       leafWidthPreviousData: '',
       stemDiPreviousData: '',
       lastWeekStemDiaPreviousData: '',
+
+      fruitLoadPreviousData: '',
+      floweringTrussPreviousData: '',
+      settingTrussPreviousData: '',
+      harvestTrussPreviousData: '',
     };
   }
 
@@ -264,12 +269,82 @@ export default class Har6AngelleRow1Plant2 extends Component {
           );
 
           this.setState({allTrussData: filteredweekRowTruss});
+          this.renderLastWeekTrussDetails();
         })
         .done();
     } catch (error) {}
 
     //AWS DATA ENDS
   };
+
+  renderLastWeekTrussDetails = () => {
+
+    if (this.state.allTrussData.length !== 0) {
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
+      ) {
+        this.setState({
+          fruitLoadPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          fruitLoadPreviousData: JSON.stringify(
+            this.state.allTrussData[0].fruitLoad,
+          ),
+        });
+      }
+
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
+      ) {
+        this.setState({
+          floweringTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          floweringTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].floweringTruss,
+          ),
+        });
+      }
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
+      ) {
+        this.setState({
+          settingTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          settingTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].settingTruss,
+          ),
+        });
+      }
+
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
+      ) {
+        this.setState({
+          harvestTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          harvestTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].harvestTruss,
+          ),
+        });
+      }
+
+    }else{
+
+      console.log('No data in the database');
+
+    }
+  }
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -5694,6 +5769,80 @@ export default class Har6AngelleRow1Plant2 extends Component {
                   </View>
                 </View>
 
+                <View style={styles.marginDimensionTop}></View>
+
+                <View style={styles.marginXXSmallDimensionTop}></View>
+
+                <Text style={styles.lastWeekText22}>Last Week's Data : </Text>
+
+                <View style={styles.marginXXSmallDimensionTop}></View>
+
+                <View style={styles.borderEditTrussLastWeek}>
+                  <View>
+                    <View
+                      style={{
+                        marginTop: 1,
+                      }}
+                    />
+
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Fruit Load</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.fruitLoadPreviousData}
+                      </Text>
+                    </View>
+
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Flowering Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.floweringTrussPreviousData}
+                      </Text>
+                    </View>
+
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Setting Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.settingTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Harvest Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.harvestTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+                </View>
+
                 <View style={styles.marginXSmallDimensionTop}></View>
 
                 <TouchableOpacity
@@ -5743,9 +5892,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(192,192,192,0.55)',
   },
 
+  borderEditTrussLastWeek: {
+    marginTop: 8,
+    marginLeft: 6,
+    marginRight: 6,
+    borderColor: '#000000',
+    borderWidth: 1,
+    backgroundColor: '#093145',
+  },
+
   text4: {
     //color: '#110A6A',
     color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
+  },
+
+  text4LastWk: {
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
@@ -5775,6 +5941,15 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
+
+  text5LastWeek: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
+  },
+
 
   textTitle: {
     //color: '#110A6A',
@@ -5889,6 +6064,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
+  marginXXSmallDimensionTop: {
+    marginTop: 6,
+  },
+
   textinputheight2: {
     height: 60,
     width: 40,
@@ -5950,6 +6129,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center',
     textDecorationLine: 'underline',
+  },
+
+  lastWeekText22: {
+    fontSize: 24,
+    color: '#58B332',
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
   },
 
   text2: {

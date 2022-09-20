@@ -174,6 +174,11 @@ export default class Ger5DuelleRow2Plant4 extends Component {
       leafWidthPreviousData: '',
       stemDiPreviousData: '',
       lastWeekStemDiaPreviousData: '',
+
+      fruitLoadPreviousData: '',
+      floweringTrussPreviousData: '',
+      settingTrussPreviousData: '',
+      harvestTrussPreviousData: '',
     };
   }
 
@@ -264,12 +269,82 @@ export default class Ger5DuelleRow2Plant4 extends Component {
           );
 
           this.setState({allTrussData: filteredweekRowTruss});
+          this.renderLastWeekTrussDetails();
         })
         .done();
     } catch (error) {}
 
     //AWS DATA ENDS
   };
+
+  renderLastWeekTrussDetails = () => {
+
+    if (this.state.allTrussData.length !== 0) {
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
+      ) {
+        this.setState({
+          fruitLoadPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          fruitLoadPreviousData: JSON.stringify(
+            this.state.allTrussData[0].fruitLoad,
+          ),
+        });
+      }
+
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
+      ) {
+        this.setState({
+          floweringTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          floweringTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].floweringTruss,
+          ),
+        });
+      }
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
+      ) {
+        this.setState({
+          settingTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          settingTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].settingTruss,
+          ),
+        });
+      }
+
+
+      if (
+        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
+      ) {
+        this.setState({
+          harvestTrussPreviousData: '--',
+        });
+      } else {
+        this.setState({
+          harvestTrussPreviousData: JSON.stringify(
+            this.state.allTrussData[0].harvestTruss,
+          ),
+        });
+      }
+
+    }else{
+
+      console.log('No data in the database');
+
+    }
+  }
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -2214,6 +2289,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+          //-------------------------------------------------------
+
+          if (
+            JSON.stringify(filteredweekRowTruss1[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameterGer5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameterGer5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss1[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2223,6 +2314,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruitsGer5DuelleRow2Plant4: '',
             setFlowersGer5DuelleRow2Plant4: '',
             pruningNumberGer5DuelleRow2Plant4: '',
+            fruitDiameterGer5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2288,6 +2380,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss2[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter1Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter1Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss2[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2297,6 +2405,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits1Ger5DuelleRow2Plant4: '',
             setFlowers1Ger5DuelleRow2Plant4: '',
             pruningNumber1Ger5DuelleRow2Plant4: '',
+            fruitDiameter1Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2363,6 +2472,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss3[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter2Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter2Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss3[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2372,6 +2497,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits2Ger5DuelleRow2Plant4: '',
             setFlowers2Ger5DuelleRow2Plant4: '',
             pruningNumber2Ger5DuelleRow2Plant4: '',
+            fruitDiameter2Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2438,6 +2564,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss4[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter3Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter3Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss4[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2447,6 +2589,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits3Ger5DuelleRow2Plant4: '',
             setFlowers3Ger5DuelleRow2Plant4: '',
             pruningNumber3Ger5DuelleRow2Plant4: '',
+            fruitDiameter3Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2513,6 +2656,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss5[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter4Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter4Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss5[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2522,6 +2681,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits4Ger5DuelleRow2Plant4: '',
             setFlowers4Ger5DuelleRow2Plant4: '',
             pruningNumber4Ger5DuelleRow2Plant4: '',
+            fruitDiameter4Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2588,6 +2748,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss6[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter5Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter5Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss6[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2597,6 +2773,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits5Ger5DuelleRow2Plant4: '',
             setFlowers5Ger5DuelleRow2Plant4: '',
             pruningNumber5Ger5DuelleRow2Plant4: '',
+            fruitDiameter5Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2662,6 +2839,23 @@ export default class Ger5DuelleRow2Plant4 extends Component {
               ),
             });
           }
+
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss7[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter6Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter6Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss7[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2671,6 +2865,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits6Ger5DuelleRow2Plant4: '',
             setFlowers6Ger5DuelleRow2Plant4: '',
             pruningNumber6Ger5DuelleRow2Plant4: '',
+            fruitDiameter6Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2737,6 +2932,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss8[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter7Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter7Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss8[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2746,6 +2957,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits7Ger5DuelleRow2Plant4: '',
             setFlowers7Ger5DuelleRow2Plant4: '',
             pruningNumber7Ger5DuelleRow2Plant4: '',
+            fruitDiameter7Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2811,6 +3023,23 @@ export default class Ger5DuelleRow2Plant4 extends Component {
               ),
             });
           }
+
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss9[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter8Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter8Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss9[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2820,6 +3049,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits8Ger5DuelleRow2Plant4: '',
             setFlowers8Ger5DuelleRow2Plant4: '',
             pruningNumber8Ger5DuelleRow2Plant4: '',
+            fruitDiameter8Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -2886,6 +3116,22 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             });
           }
 
+           //-------------------------------------------------------
+
+           if (
+            JSON.stringify(filteredweekRowTruss2[0].fruitDiameter) === 'null'
+          ) {
+            this.setState({
+              fruitDiameter9Ger5DuelleRow2Plant4: '',
+            });
+          } else {
+            this.setState({
+              fruitDiameter9Ger5DuelleRow2Plant4: JSON.stringify(
+                filteredweekRowTruss2[0].fruitDiameter,
+              ),
+            });
+          }
+
           this.calculateSettingTruss2();
           this.calculateFloweringTruss2();
           this.calculateFruitLoad();
@@ -2895,6 +3141,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
             setFruits9Ger5DuelleRow2Plant4: '',
             setFlowers9Ger5DuelleRow2Plant4: '',
             pruningNumber9Ger5DuelleRow2Plant4: '',
+            fruitDiameter9Ger5DuelleRow2Plant4: '',
           });
         }
       } else {
@@ -4077,7 +4324,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                       }}
                     />
 
-                    <Text style={styles.text222}>Fruit Dia</Text>
+                    <Text style={styles.text222}>Split Trs</Text>
 
                     <View
                       style={{
@@ -4130,7 +4377,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                       }}
                     />
 
-                    <Text style={styles.text222}>Fruit Dia</Text>
+                    <Text style={styles.text222}>Split Trs</Text>
 
                     <View
                       style={{
@@ -4286,6 +4533,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameterGer5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameterGer5DuelleRow2Plant4}
                   />
 
                   <View
@@ -4430,6 +4678,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter1Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter1Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -4573,6 +4822,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter2Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter2Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -4715,6 +4965,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter3Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter3Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -4859,6 +5110,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter4Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter4Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5003,6 +5255,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter5Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter5Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5147,6 +5400,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter6Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter6Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5291,6 +5545,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter7Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter7Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5435,6 +5690,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter8Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter8Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5579,6 +5835,7 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                         'fruitDiameter9Ger5DuelleRow2Plant4',
                       )
                     }
+                    value={this.state.fruitDiameter9Ger5DuelleRow2Plant4}
                   />
 
                   <View
@@ -5694,7 +5951,81 @@ export default class Ger5DuelleRow2Plant4 extends Component {
                   </View>
                 </View>
 
-                <View style={styles.marginXSmallDimensionTop}></View>
+                <View style={styles.marginDimensionTop}></View>
+
+<View style={styles.marginXXSmallDimensionTop}></View>
+
+<Text style={styles.lastWeekText22}>Last Week's Data : </Text>
+
+<View style={styles.marginXXSmallDimensionTop}></View>
+
+<View style={styles.borderEditTrussLastWeek}>
+  <View>
+    <View
+      style={{
+        marginTop: 1,
+      }}
+    />
+
+    <View style={styles.row}>
+      <Text style={styles.text4LastWk}>Fruit Load</Text>
+      <Text style={styles.text5LastWeek}>
+        {this.state.fruitLoadPreviousData}
+      </Text>
+    </View>
+
+    <View
+      style={{
+        marginBottom: 5,
+      }}
+    />
+  </View>
+
+  <View>
+    <View style={styles.row}>
+      <Text style={styles.text4LastWk}>Flowering Truss</Text>
+      <Text style={styles.text5LastWeek}>
+        {this.state.floweringTrussPreviousData}
+      </Text>
+    </View>
+
+    <View
+      style={{
+        marginBottom: 5,
+      }}
+    />
+  </View>
+
+  <View>
+    <View style={styles.row}>
+      <Text style={styles.text4LastWk}>Setting Truss</Text>
+      <Text style={styles.text5LastWeek}>
+        {this.state.settingTrussPreviousData}
+      </Text>
+    </View>
+    <View
+      style={{
+        marginBottom: 5,
+      }}
+    />
+  </View>
+
+  <View>
+    <View style={styles.row}>
+      <Text style={styles.text4LastWk}>Harvest Truss</Text>
+      <Text style={styles.text5LastWeek}>
+        {this.state.harvestTrussPreviousData}
+      </Text>
+    </View>
+    <View
+      style={{
+        marginBottom: 5,
+      }}
+    />
+  </View>
+</View>
+
+<View style={styles.marginXSmallDimensionTop}></View>
 
                 <TouchableOpacity
                   onPress={() =>
@@ -5743,9 +6074,26 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(192,192,192,0.55)',
   },
 
+  borderEditTrussLastWeek: {
+    marginTop: 8,
+    marginLeft: 6,
+    marginRight: 6,
+    borderColor: '#000000',
+    borderWidth: 1,
+    backgroundColor: '#093145',
+  },
+
   text4: {
     //color: '#110A6A',
     color: 'black',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
+  },
+
+  text4LastWk: {
+    color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
     marginLeft: 12,
@@ -5775,6 +6123,15 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
+
+  text5LastWeek: {
+    color: 'white',
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
+  },
+
 
   textTitle: {
     //color: '#110A6A',
@@ -5889,6 +6246,10 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 
+  marginXXSmallDimensionTop: {
+    marginTop: 6,
+  },
+
   textinputheight2: {
     height: 60,
     width: 40,
@@ -5950,6 +6311,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     alignSelf: 'center',
     textDecorationLine: 'underline',
+  },
+
+  lastWeekText22: {
+    fontSize: 24,
+    color: '#58B332',
+    fontWeight: 'bold',
+    marginLeft: 12,
+    marginRight: 10,
   },
 
   text2: {
