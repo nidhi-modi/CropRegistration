@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,79 +7,62 @@ import {
   Image,
   BackHandler,
   Dimensions,
-  Platform
+  Platform,
 } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import moment from 'moment'
+import {ScrollView} from 'react-native-gesture-handler';
+import moment from 'moment';
 import AsyncStorage from '@react-native-community/async-storage';
-import { EventRegister } from 'react-native-event-listeners'
+import {EventRegister} from 'react-native-event-listeners';
 
-var screenWidth = (Dimensions.get('window').width) / 1.6;
+var screenWidth = Dimensions.get('window').width / 1.6;
 
 export default class Har3BambelloRow extends Component {
-
   constructor(props) {
     super(props);
-    this.state = {
-
-    }
+    this.state = {};
   }
-
-
 
   render() {
     return (
       <View style={styles.container}>
+        {Platform.OS === 'ios' ? <View style={{marginTop: 15}}></View> : null}
 
-        {Platform.OS === 'ios' ?
-
-          <View style={{ marginTop: 15 }}></View>
-
-          : null}
-
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
-
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginLeft: 20,
+          }}>
           <View style={styles.headerImage1}>
-
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Har123')} >
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Har123')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
-
           </View>
-
 
           <View style={styles.headerImage2}>
-
-          <Text style={styles.text}>HAR 3 - Bambello</Text>
-
+            <Text style={styles.text}>HAR 3 - Bambello</Text>
           </View>
 
-          <View style={{ height: 20, width: 20 }}>
-            <Text style={{ alignSelf: 'center' }}></Text>
+          <View style={{height: 20, width: 20}}>
+            <Text style={{alignSelf: 'center'}}></Text>
           </View>
-
         </View>
 
-
-
-        <ScrollView keyboardShouldPersistTaps='handled'>
-
+        <ScrollView keyboardShouldPersistTaps="handled">
           <View style={styles.marginDimensionTop}></View>
 
           <View style={styles.containerView}>
-
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har3BambelloPlantsRow1')}>
+              onPress={() =>
+                this.props.navigation.navigate('Har3BambelloPlantsRow1')
+              }>
               <Text style={styles.buttonText}>Row 326</Text>
             </TouchableOpacity>
 
-            
             <View style={styles.marginSmallDimensionTop}></View>
-
-
           </View>
-
         </ScrollView>
       </View>
     );
@@ -87,15 +70,12 @@ export default class Har3BambelloRow extends Component {
 }
 
 const styles = StyleSheet.create({
-
   container: {
     flex: 1,
     backgroundColor: '#F3F9FF',
-
   },
 
   headerImage1: {
-
     resizeMode: 'cover',
     justifyContent: 'center',
     alignContent: 'center',
@@ -104,37 +84,27 @@ const styles = StyleSheet.create({
   },
 
   headerImage2: {
-
     resizeMode: 'cover',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 5,
-
   },
 
-
-
   marginDimensionTop: {
-
     marginTop: 44,
-
   },
 
   marginSmallDimensionTop: {
-
     marginTop: 18,
-
   },
 
   containerView: {
-
     marginLeft: 100,
     marginRight: 100,
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-
   },
 
   buttonContainer: {
@@ -145,10 +115,8 @@ const styles = StyleSheet.create({
     height: 50,
     width: screenWidth,
     justifyContent: 'center',
-    alignItems: 'center'
-
+    alignItems: 'center',
   },
-
 
   text: {
     margin: 6,
@@ -157,8 +125,7 @@ const styles = StyleSheet.create({
     color: '#58B332',
     fontWeight: 'bold',
     alignSelf: 'center',
-    textDecorationLine: 'underline'
-
+    textDecorationLine: 'underline',
   },
 
   buttonText: {
@@ -166,6 +133,5 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
-
   },
 });

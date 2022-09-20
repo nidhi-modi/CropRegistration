@@ -278,12 +278,8 @@ export default class Ger2MerliceRow2Plant7 extends Component {
   };
 
   renderLastWeekTrussDetails = () => {
-
     if (this.state.allTrussData.length !== 0) {
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null') {
         this.setState({
           fruitLoadPreviousData: '--',
         });
@@ -294,7 +290,6 @@ export default class Ger2MerliceRow2Plant7 extends Component {
           ),
         });
       }
-
 
       if (
         JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
@@ -310,9 +305,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         });
       }
 
-      if (
-        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null') {
         this.setState({
           settingTrussPreviousData: '--',
         });
@@ -324,10 +317,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         });
       }
 
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null') {
         this.setState({
           harvestTrussPreviousData: '--',
         });
@@ -338,13 +328,10 @@ export default class Ger2MerliceRow2Plant7 extends Component {
           ),
         });
       }
-
-    }else{
-
+    } else {
       console.log('No data in the database');
-
     }
-  }
+  };
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -1137,7 +1124,6 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         .done();
     } catch (error) {}
 
-
     /*try {
       AsyncStorage.getItem('trussNumberGer2MerliceRow2Plant7').then((text10Value) => {
         this.setState({ trussNumberGer2MerliceRow2Plant7: JSON.parse(text10Value) });
@@ -1528,10 +1514,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         harvestTrussGer2MerliceRow2Plant7: add,
         pruningHarGer2MerliceRow2Plant7: prunNum,
       });
-      this.setItem(
-        'pruningHarGer2MerliceRow2Plant7',
-        prunNum,
-      );
+      this.setItem('pruningHarGer2MerliceRow2Plant7', prunNum);
     } else {
       prunNum = Number.parseInt(this.state.pruningNumberGer2MerliceRow2Plant7);
       var num = this.state.trussNumberGer2MerliceRow2Plant7;
@@ -1540,10 +1523,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         harvestTrussGer2MerliceRow2Plant7: num,
         pruningHarGer2MerliceRow2Plant7: prunNum,
       });
-      this.setItem(
-        'pruningHarGer2MerliceRow2Plant7',
-        prunNum,
-      );
+      this.setItem('pruningHarGer2MerliceRow2Plant7', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1699,10 +1679,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
                     'settingTrussNumberGer2MerliceRow2Plant7',
                     settingTruss,
                   );
-                  this.setItem(
-                    'prunSettingGer2MerliceRow2Plant7',
-                    pruningSet,
-                  );
+                  this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
                 }
               } else {
                 var number4 =
@@ -1730,10 +1707,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
                   'settingTrussNumberGer2MerliceRow2Plant7',
                   settingTruss,
                 );
-                this.setItem(
-                  'prunSettingGer2MerliceRow2Plant7',
-                  pruningSet,
-                );
+                this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
               }
             } else {
               var number5 =
@@ -1759,10 +1733,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
                 'settingTrussNumberGer2MerliceRow2Plant7',
                 settingTruss,
               );
-              this.setItem(
-                'prunSettingGer2MerliceRow2Plant7',
-                pruningSet,
-              );
+              this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
             }
           } else {
             var number6 =
@@ -1787,10 +1758,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
               'settingTrussNumberGer2MerliceRow2Plant7',
               settingTruss,
             );
-            this.setItem(
-              'prunSettingGer2MerliceRow2Plant7',
-              pruningSet,
-            );
+            this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
           }
         } else {
           var number7 =
@@ -1812,10 +1780,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
           });
 
           this.setItem('settingTrussNumberGer2MerliceRow2Plant7', settingTruss);
-          this.setItem(
-            'prunSettingGer2MerliceRow2Plant7',
-            pruningSet,
-          );
+          this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
         }
       } else {
         var number8 =
@@ -1837,10 +1802,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
         });
 
         this.setItem('settingTrussNumberGer2MerliceRow2Plant7', settingTruss);
-        this.setItem(
-          'prunSettingGer2MerliceRow2Plant7',
-          pruningSet,
-        );
+        this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
       }
     } else {
       var number9 =
@@ -1862,10 +1824,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
       });
 
       this.setItem('settingTrussNumberGer2MerliceRow2Plant7', settingTruss);
-      this.setItem(
-        'prunSettingGer2MerliceRow2Plant7',
-        pruningSet,
-      );
+      this.setItem('prunSettingGer2MerliceRow2Plant7', pruningSet);
     }
   };
 
@@ -2221,10 +2180,7 @@ export default class Ger2MerliceRow2Plant7 extends Component {
       });
 
       this.setItem('floweringTrussssGer2MerliceRow2Plant7', floweringTruss);
-      this.setItem(
-        'pruneFloweringGer2MerliceRow2Plant7',
-        flowerPruningNumner,
-      );
+      this.setItem('pruneFloweringGer2MerliceRow2Plant7', flowerPruningNumner);
     }
   };
   //
@@ -5771,83 +5727,87 @@ export default class Ger2MerliceRow2Plant7 extends Component {
 
                 <View style={styles.marginDimensionTop}></View>
 
-<View style={styles.marginXXSmallDimensionTop}></View>
+                <View style={styles.marginXXSmallDimensionTop}></View>
 
-<Text style={styles.lastWeekText22}>Last Week's Data : </Text>
+                <Text style={styles.lastWeekText22}>Last Week's Data : </Text>
 
-<View style={styles.marginXXSmallDimensionTop}></View>
+                <View style={styles.marginXXSmallDimensionTop}></View>
 
-<View style={styles.borderEditTrussLastWeek}>
-  <View>
-    <View
-      style={{
-        marginTop: 1,
-      }}
-    />
+                <View style={styles.borderEditTrussLastWeek}>
+                  <View>
+                    <View
+                      style={{
+                        marginTop: 1,
+                      }}
+                    />
 
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Fruit Load</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.fruitLoadPreviousData}
-      </Text>
-    </View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Fruit Load</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.fruitLoadPreviousData}
+                      </Text>
+                    </View>
 
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Flowering Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.floweringTrussPreviousData}
-      </Text>
-    </View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Flowering Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.floweringTrussPreviousData}
+                      </Text>
+                    </View>
 
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Setting Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.settingTrussPreviousData}
-      </Text>
-    </View>
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Setting Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.settingTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Harvest Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.harvestTrussPreviousData}
-      </Text>
-    </View>
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
-</View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Harvest Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.harvestTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+                </View>
 
-<View style={styles.marginXSmallDimensionTop}></View>
+                <View style={styles.marginXSmallDimensionTop}></View>
 
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Ger2DataChecker', {name : 'Ger2MerliceRow2Plant7', row : '114/115', plant: 7})
+                    this.props.navigation.navigate('Ger2DataChecker', {
+                      name: 'Ger2MerliceRow2Plant7',
+                      row: '114/115',
+                      plant: 7,
+                    })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>
@@ -5949,7 +5909,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
-
 
   textTitle: {
     //color: '#110A6A',

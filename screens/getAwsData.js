@@ -1,14 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { useMutation, useLazyQuery } from '@apollo/client/react';
-import { StyleSheet, Text, View, ScrollView, Platform, ActivityIndicator, Modal, TouchableOpacity, Image } from 'react-native';
-import { GET_PLANT_DETAILS, GET_TRUSS_DETAILS } from '../graphql/queries';
+import React, {useEffect, useState} from 'react';
+import {useMutation, useLazyQuery} from '@apollo/client/react';
+import {
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Platform,
+  ActivityIndicator,
+  Modal,
+  TouchableOpacity,
+  Image,
+} from 'react-native';
+import {GET_PLANT_DETAILS, GET_TRUSS_DETAILS} from '../graphql/queries';
 import Database from './Database';
 import AsyncStorage from '@react-native-community/async-storage';
 
 var loading = true;
 
-export const GetAwsData = (props) => {
-
+export const GetAwsData = props => {
   const db = new Database();
   const [plantData, setPlantData] = useState([]);
 
@@ -18,39 +27,34 @@ export const GetAwsData = (props) => {
   const [getPlantDetails] = useLazyQuery(GET_PLANT_DETAILS, {
     fetchPolicy: 'no-cache',
     onCompleted: data => {
-      setPlantDataAws(data?.plant_details)
-      console.log("Plant data from AWS : ", data)
+      setPlantDataAws(data?.plant_details);
+      console.log('Plant data from AWS : ', data);
       try {
         AsyncStorage.setItem('@MySuperStore:plantKey', JSON.stringify(data));
       } catch (error) {
         // Error saving data
-        console.log(error)
-
+        console.log(error);
       }
       //Close this screen
       loading = false;
-      props.navigation.navigate('SiteSelection')
-
-    }
+      props.navigation.navigate('SiteSelection');
+    },
   });
   const [getTrussDetails] = useLazyQuery(GET_TRUSS_DETAILS, {
     fetchPolicy: 'no-cache',
     onCompleted: data => {
-      setTrussDataAws(data?.truss_details)
-      console.log("Truss data from AWS : ", data)
+      setTrussDataAws(data?.truss_details);
+      console.log('Truss data from AWS : ', data);
 
       try {
-
         AsyncStorage.setItem('@MySuperStore:trussKey', JSON.stringify(data));
-
       } catch (error) {
         // Error saving data
-        console.log(error)
-
+        console.log(error);
       }
 
       getPlantDetails();
-    }
+    },
   });
 
   useEffect(() => {
@@ -59,18 +63,18 @@ export const GetAwsData = (props) => {
 
   //Use below query
   const getTrussQuery = () => {
-    getTrussDetails()
-  }
+    getTrussDetails();
+  };
 
   return (
-
     <View style={styles.container}>
-
       <Modal
         transparent={loading}
         animationType={'fade'}
         visible={loading}
-        onRequestClose={() => { console.log("Not allowed to close") }}>
+        onRequestClose={() => {
+          console.log('Not allowed to close');
+        }}>
         <View style={styles.modalBackground}>
           <View style={styles.activityIndicatorWrapper}>
             <ActivityIndicator
@@ -82,38 +86,30 @@ export const GetAwsData = (props) => {
         </View>
       </Modal>
 
-      {Platform.OS === 'ios' ?
+      {Platform.OS === 'ios' ? <View style={{marginTop: 20}}></View> : null}
 
-        <View style={{ marginTop: 20 }}></View>
-
-        : null}
-
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginLeft: 20 }}>
-
+      <View
+        style={{
+          flexDirection: 'row',
+          justifyContent: 'space-between',
+          marginLeft: 20,
+        }}>
         <View style={styles.headerImage1}>
-
           <TouchableOpacity>
             <Image source={require('../assets/back.png')} />
           </TouchableOpacity>
-
         </View>
-
 
         <View style={styles.headerImage2}>
-
           <Image source={require('../assets/fresh3.png')} />
-
         </View>
 
-        <View style={{ height: 20, width: 20 }}>
-          <Text style={{ alignSelf: 'center' }}></Text>
+        <View style={{height: 20, width: 20}}>
+          <Text style={{alignSelf: 'center'}}></Text>
         </View>
-
       </View>
 
-      <ScrollView keyboardShouldPersistTaps='handled'>
-
-
+      <ScrollView keyboardShouldPersistTaps="handled">
         <View style={styles.marginSmallDimensionTop}></View>
 
         <View style={styles.marginSmallDimensionTop}></View>
@@ -122,22 +118,19 @@ export const GetAwsData = (props) => {
 
         <View style={styles.marginSmallDimensionTop}></View>
 
-        <Text
-          style={styles.textBottom}>Getting data from the server, please don't exit this page or close the app{'\n'} Please wait...</Text>
-
-
+        <Text style={styles.textBottom}>
+          Getting data from the server, please don't exit this page or close the
+          app{'\n'} Please wait...
+        </Text>
       </ScrollView>
     </View>
-
-
   );
-
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF'
+    backgroundColor: '#F3F9FF',
   },
 
   text: {
@@ -146,32 +139,25 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#2C3E50',
     fontWeight: 'bold',
-    alignSelf: 'center'
-
+    alignSelf: 'center',
   },
 
   headerImage1: {
-
     resizeMode: 'cover',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-
   },
 
   headerImage2: {
-
     resizeMode: 'contain',
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
     marginTop: 18,
-
-
   },
 
   textBottom: {
-
     fontSize: 18,
     paddingBottom: 20,
     color: '#2C3E50',
@@ -180,36 +166,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
-    textAlign: 'center'
-
-
-
+    textAlign: 'center',
   },
 
   textContainer: {
-
-    flexShrink: 1
-
+    flexShrink: 1,
   },
 
-
   marginDimensionTop: {
-
     marginTop: 44,
-
   },
 
   marginSmallDimensionTop: {
-
     marginTop: 18,
-
   },
 
   containerView: {
-
     marginLeft: 95,
     marginRight: 95,
-
   },
 
   buttonContainer: {
@@ -219,8 +193,7 @@ const styles = StyleSheet.create({
     margin: 20,
     height: 70,
     justifyContent: 'center',
-    alignItems: 'center'
-
+    alignItems: 'center',
   },
 
   buttonText: {
@@ -228,7 +201,6 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     fontWeight: 'bold',
     //fontStyle: 'italic'
-
   },
 
   modalBackground: {
@@ -236,7 +208,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'column',
     justifyContent: 'space-around',
-    backgroundColor: '#00000040'
+    backgroundColor: '#00000040',
   },
   activityIndicatorWrapper: {
     backgroundColor: '#FFFFFF',
@@ -245,9 +217,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-around'
-  }
-
+    justifyContent: 'space-around',
+  },
 });
 
 export default GetAwsData;

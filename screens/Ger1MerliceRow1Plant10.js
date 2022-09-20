@@ -279,12 +279,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
   };
 
   renderLastWeekTrussDetails = () => {
-
     if (this.state.allTrussData.length !== 0) {
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null') {
         this.setState({
           fruitLoadPreviousData: '--',
         });
@@ -295,7 +291,6 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           ),
         });
       }
-
 
       if (
         JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
@@ -311,9 +306,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         });
       }
 
-      if (
-        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null') {
         this.setState({
           settingTrussPreviousData: '--',
         });
@@ -325,10 +318,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         });
       }
 
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null') {
         this.setState({
           harvestTrussPreviousData: '--',
         });
@@ -339,13 +329,10 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           ),
         });
       }
-
-    }else{
-
+    } else {
       console.log('No data in the database');
-
     }
-  }
+  };
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -1138,7 +1125,6 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         .done();
     } catch (error) {}
 
-
     /*try {
       AsyncStorage.getItem('trussNumberGer1MerliceRow1Plant10').then((text10Value) => {
         this.setState({ trussNumberGer1MerliceRow1Plant10: JSON.parse(text10Value) });
@@ -1529,10 +1515,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         harvestTrussGer1MerliceRow1Plant10: add,
         pruningHarGer1MerliceRow1Plant10: prunNum,
       });
-      this.setItem(
-        'pruningHarGer1MerliceRow1Plant10',
-        prunNum,
-      );
+      this.setItem('pruningHarGer1MerliceRow1Plant10', prunNum);
     } else {
       prunNum = Number.parseInt(this.state.pruningNumberGer1MerliceRow1Plant10);
       var num = this.state.trussNumberGer1MerliceRow1Plant10;
@@ -1541,10 +1524,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         harvestTrussGer1MerliceRow1Plant10: num,
         pruningHarGer1MerliceRow1Plant10: prunNum,
       });
-      this.setItem(
-        'pruningHarGer1MerliceRow1Plant10',
-        prunNum,
-      );
+      this.setItem('pruningHarGer1MerliceRow1Plant10', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1700,15 +1680,13 @@ export default class Ger1MerliceRow1Plant10 extends Component {
                     'settingTrussNumberGer1MerliceRow1Plant10',
                     settingTruss,
                   );
-                  this.setItem(
-                    'prunSettingGer1MerliceRow1Plant10',
-                    pruningSet,
-                  );
+                  this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
                 }
               } else {
                 var number4 =
-                  Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
-                  4;
+                  Number.parseInt(
+                    this.state.trussNumberGer1MerliceRow1Plant10,
+                  ) + 4;
 
                 pruningSet = Number.parseInt(
                   this.state.pruningNumber4Ger1MerliceRow1Plant10,
@@ -1731,10 +1709,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
                   'settingTrussNumberGer1MerliceRow1Plant10',
                   settingTruss,
                 );
-                this.setItem(
-                  'prunSettingGer1MerliceRow1Plant10',
-                  pruningSet,
-                );
+                this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
               }
             } else {
               var number5 =
@@ -1760,10 +1735,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
                 'settingTrussNumberGer1MerliceRow1Plant10',
                 settingTruss,
               );
-              this.setItem(
-                'prunSettingGer1MerliceRow1Plant10',
-                pruningSet,
-              );
+              this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
             }
           } else {
             var number6 =
@@ -1788,10 +1760,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
               'settingTrussNumberGer1MerliceRow1Plant10',
               settingTruss,
             );
-            this.setItem(
-              'prunSettingGer1MerliceRow1Plant10',
-              pruningSet,
-            );
+            this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
           }
         } else {
           var number7 =
@@ -1812,11 +1781,11 @@ export default class Ger1MerliceRow1Plant10 extends Component {
             prunSettingGer1MerliceRow1Plant10: pruningSet,
           });
 
-          this.setItem('settingTrussNumberGer1MerliceRow1Plant10', settingTruss);
           this.setItem(
-            'prunSettingGer1MerliceRow1Plant10',
-            pruningSet,
+            'settingTrussNumberGer1MerliceRow1Plant10',
+            settingTruss,
           );
+          this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
         }
       } else {
         var number8 =
@@ -1838,10 +1807,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
         });
 
         this.setItem('settingTrussNumberGer1MerliceRow1Plant10', settingTruss);
-        this.setItem(
-          'prunSettingGer1MerliceRow1Plant10',
-          pruningSet,
-        );
+        this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
       }
     } else {
       var number9 =
@@ -1863,10 +1829,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
       });
 
       this.setItem('settingTrussNumberGer1MerliceRow1Plant10', settingTruss);
-      this.setItem(
-        'prunSettingGer1MerliceRow1Plant10',
-        pruningSet,
-      );
+      this.setItem('prunSettingGer1MerliceRow1Plant10', pruningSet);
     }
   };
 
@@ -1880,7 +1843,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Flowering truss called : ' + this.state.setFlowers2Ger1MerliceRow1Plant10,
+      'Flowering truss called : ' +
+        this.state.setFlowers2Ger1MerliceRow1Plant10,
     );
 
     if (this.state.setFlowers9Ger1MerliceRow1Plant10 === '') {
@@ -2037,7 +2001,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
                   );
                 }
               } else {
-                var number41 = +this.state.trussNumberGer1MerliceRow1Plant10 + 4;
+                var number41 =
+                  +this.state.trussNumberGer1MerliceRow1Plant10 + 4;
 
                 flowerPruningNumner = Number.parseInt(
                   this.state.pruningNumber4Ger1MerliceRow1Plant10,
@@ -2163,7 +2128,10 @@ export default class Ger1MerliceRow1Plant10 extends Component {
             pruneFloweringGer1MerliceRow1Plant10: flowerPruningNumner,
           });
 
-          this.setItem('floweringTrussssGer1MerliceRow1Plant10', floweringTruss);
+          this.setItem(
+            'floweringTrussssGer1MerliceRow1Plant10',
+            floweringTruss,
+          );
           this.setItem(
             'pruneFloweringGer1MerliceRow1Plant10',
             flowerPruningNumner,
@@ -2222,10 +2190,7 @@ export default class Ger1MerliceRow1Plant10 extends Component {
       });
 
       this.setItem('floweringTrussssGer1MerliceRow1Plant10', floweringTruss);
-      this.setItem(
-        'pruneFloweringGer1MerliceRow1Plant10',
-        flowerPruningNumner,
-      );
+      this.setItem('pruneFloweringGer1MerliceRow1Plant10', flowerPruningNumner);
     }
   };
   //
@@ -2987,7 +2952,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
 
   changeCheckbox = () => {
     this.setState({
-      Ger1MerliceRow1Plant10Selected: !this.state.Ger1MerliceRow1Plant10Selected,
+      Ger1MerliceRow1Plant10Selected: !this.state
+        .Ger1MerliceRow1Plant10Selected,
     });
 
     const vart = this.state.Ger1MerliceRow1Plant10Selected;
@@ -3122,7 +3088,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 1 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              1 !==
               null &&
             this.state.pruningNumber1Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3168,7 +3135,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 2 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              2 !==
               null &&
             this.state.pruningNumber2Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3214,7 +3182,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 3 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              3 !==
               null &&
             this.state.pruningNumber3Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3260,7 +3229,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 4 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              4 !==
               null &&
             this.state.pruningNumber4Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3304,7 +3274,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
       db.addTrussDetails(data4)
         .then(result => {
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 5 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              5 !==
               null &&
             this.state.pruningNumber5Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3354,7 +3325,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           });
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 6 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              6 !==
               null &&
             this.state.pruningNumber6Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3400,7 +3372,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 7 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              7 !==
               null &&
             this.state.pruningNumber7Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3446,7 +3419,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 8 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              8 !==
               null &&
             this.state.pruningNumber8Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -3492,7 +3466,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) + 9 !==
+            Number.parseInt(this.state.trussNumberGer1MerliceRow1Plant10) +
+              9 !==
               null &&
             this.state.pruningNumber9Ger1MerliceRow1Plant10 !== ''
           ) {
@@ -5731,7 +5706,8 @@ export default class Ger1MerliceRow1Plant10 extends Component {
 
                   <View
                     style={[
-                      this.state.settingTrussNumberGer1MerliceRow1Plant10 <= 1 ||
+                      this.state.settingTrussNumberGer1MerliceRow1Plant10 <=
+                        1 ||
                       this.state.settingTrussNumberGer1MerliceRow1Plant10 >= 45
                         ? styles.borderErrorColor
                         : null,
@@ -5846,10 +5822,13 @@ export default class Ger1MerliceRow1Plant10 extends Component {
 
                 <View style={styles.marginXSmallDimensionTop}></View>
 
-
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Ger1DataChecker', {name : 'Ger1MerliceRow1Plant10', row : '81/86', plant: 10})
+                    this.props.navigation.navigate('Ger1DataChecker', {
+                      name: 'Ger1MerliceRow1Plant10',
+                      row: '81/86',
+                      plant: 10,
+                    })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>
@@ -5951,7 +5930,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
-
 
   textTitle: {
     //color: '#110A6A',

@@ -278,12 +278,8 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
   };
 
   renderLastWeekTrussDetails = () => {
-
     if (this.state.allTrussData.length !== 0) {
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null') {
         this.setState({
           fruitLoadPreviousData: '--',
         });
@@ -294,7 +290,6 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           ),
         });
       }
-
 
       if (
         JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
@@ -310,9 +305,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         });
       }
 
-      if (
-        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null') {
         this.setState({
           settingTrussPreviousData: '--',
         });
@@ -324,10 +317,7 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
         });
       }
 
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null') {
         this.setState({
           harvestTrussPreviousData: '--',
         });
@@ -338,13 +328,10 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
           ),
         });
       }
-
-    }else{
-
+    } else {
       console.log('No data in the database');
-
     }
-  }
+  };
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -5777,79 +5764,79 @@ export default class Ger3EndeavourRow1Plant8 extends Component {
 
                 <View style={styles.marginDimensionTop}></View>
 
-<View style={styles.marginXXSmallDimensionTop}></View>
+                <View style={styles.marginXXSmallDimensionTop}></View>
 
-<Text style={styles.lastWeekText22}>Last Week's Data : </Text>
+                <Text style={styles.lastWeekText22}>Last Week's Data : </Text>
 
-<View style={styles.marginXXSmallDimensionTop}></View>
+                <View style={styles.marginXXSmallDimensionTop}></View>
 
-<View style={styles.borderEditTrussLastWeek}>
-  <View>
-    <View
-      style={{
-        marginTop: 1,
-      }}
-    />
+                <View style={styles.borderEditTrussLastWeek}>
+                  <View>
+                    <View
+                      style={{
+                        marginTop: 1,
+                      }}
+                    />
 
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Fruit Load</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.fruitLoadPreviousData}
-      </Text>
-    </View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Fruit Load</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.fruitLoadPreviousData}
+                      </Text>
+                    </View>
 
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Flowering Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.floweringTrussPreviousData}
-      </Text>
-    </View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Flowering Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.floweringTrussPreviousData}
+                      </Text>
+                    </View>
 
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Setting Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.settingTrussPreviousData}
-      </Text>
-    </View>
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Setting Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.settingTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
 
-  <View>
-    <View style={styles.row}>
-      <Text style={styles.text4LastWk}>Harvest Truss</Text>
-      <Text style={styles.text5LastWeek}>
-        {this.state.harvestTrussPreviousData}
-      </Text>
-    </View>
-    <View
-      style={{
-        marginBottom: 5,
-      }}
-    />
-  </View>
-</View>
+                  <View>
+                    <View style={styles.row}>
+                      <Text style={styles.text4LastWk}>Harvest Truss</Text>
+                      <Text style={styles.text5LastWeek}>
+                        {this.state.harvestTrussPreviousData}
+                      </Text>
+                    </View>
+                    <View
+                      style={{
+                        marginBottom: 5,
+                      }}
+                    />
+                  </View>
+                </View>
 
-<View style={styles.marginXSmallDimensionTop}></View>
+                <View style={styles.marginXSmallDimensionTop}></View>
 
                 <TouchableOpacity
                   onPress={() =>
@@ -5959,7 +5946,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
-
 
   textTitle: {
     //color: '#110A6A',

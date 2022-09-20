@@ -278,12 +278,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
   };
 
   renderLastWeekTrussDetails = () => {
-
     if (this.state.allTrussData.length !== 0) {
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null') {
         this.setState({
           fruitLoadPreviousData: '--',
         });
@@ -294,7 +290,6 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           ),
         });
       }
-
 
       if (
         JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
@@ -310,9 +305,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         });
       }
 
-      if (
-        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null') {
         this.setState({
           settingTrussPreviousData: '--',
         });
@@ -324,10 +317,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         });
       }
 
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null') {
         this.setState({
           harvestTrussPreviousData: '--',
         });
@@ -338,13 +328,10 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           ),
         });
       }
-
-    }else{
-
+    } else {
       console.log('No data in the database');
-
     }
-  }
+  };
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -1119,7 +1106,9 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         .then(text51Value => {
           if (text51Value !== null) {
             this.setState({
-              settingTrussNumberHar3VespolinoRow1Plant3: JSON.parse(text51Value),
+              settingTrussNumberHar3VespolinoRow1Plant3: JSON.parse(
+                text51Value,
+              ),
             });
           }
         })
@@ -1136,7 +1125,6 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         })
         .done();
     } catch (error) {}
-
 
     /*try {
       AsyncStorage.getItem('trussNumberHar3VespolinoRow1Plant3').then((text10Value) => {
@@ -1505,7 +1493,9 @@ export default class Har3VespolinoRow1Plant3 extends Component {
     var prunNum = 0;
 
     if (this.state.setFlowersHar3VespolinoRow1Plant3 === '') {
-      prunNum = Number.parseInt(this.state.pruningNumberHar3VespolinoRow1Plant3);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberHar3VespolinoRow1Plant3,
+      );
 
       div =
         Number.parseInt(
@@ -1528,22 +1518,18 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         harvestTrussHar3VespolinoRow1Plant3: add,
         pruningHarHar3VespolinoRow1Plant3: prunNum,
       });
-      this.setItem(
-        'pruningHarHar3VespolinoRow1Plant3',
-        prunNum,
-      );
+      this.setItem('pruningHarHar3VespolinoRow1Plant3', prunNum);
     } else {
-      prunNum = Number.parseInt(this.state.pruningNumberHar3VespolinoRow1Plant3);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberHar3VespolinoRow1Plant3,
+      );
       var num = this.state.trussNumberHar3VespolinoRow1Plant3;
 
       this.setState({
         harvestTrussHar3VespolinoRow1Plant3: num,
         pruningHarHar3VespolinoRow1Plant3: prunNum,
       });
-      this.setItem(
-        'pruningHarHar3VespolinoRow1Plant3',
-        prunNum,
-      );
+      this.setItem('pruningHarHar3VespolinoRow1Plant3', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1706,8 +1692,9 @@ export default class Har3VespolinoRow1Plant3 extends Component {
                 }
               } else {
                 var number4 =
-                  Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
-                  4;
+                  Number.parseInt(
+                    this.state.trussNumberHar3VespolinoRow1Plant3,
+                  ) + 4;
 
                 pruningSet = Number.parseInt(
                   this.state.pruningNumber4Har3VespolinoRow1Plant3,
@@ -1730,10 +1717,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
                   'settingTrussNumberHar3VespolinoRow1Plant3',
                   settingTruss,
                 );
-                this.setItem(
-                  'prunSettingHar3VespolinoRow1Plant3',
-                  pruningSet,
-                );
+                this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
               }
             } else {
               var number5 =
@@ -1759,14 +1743,12 @@ export default class Har3VespolinoRow1Plant3 extends Component {
                 'settingTrussNumberHar3VespolinoRow1Plant3',
                 settingTruss,
               );
-              this.setItem(
-                'prunSettingHar3VespolinoRow1Plant3',
-                pruningSet,
-              );
+              this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
             }
           } else {
             var number6 =
-              Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 6;
+              Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              6;
 
             pruningSet = Number.parseInt(
               this.state.pruningNumber6Har3VespolinoRow1Plant3,
@@ -1787,10 +1769,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
               'settingTrussNumberHar3VespolinoRow1Plant3',
               settingTruss,
             );
-            this.setItem(
-              'prunSettingHar3VespolinoRow1Plant3',
-              pruningSet,
-            );
+            this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
           }
         } else {
           var number7 =
@@ -1811,11 +1790,11 @@ export default class Har3VespolinoRow1Plant3 extends Component {
             prunSettingHar3VespolinoRow1Plant3: pruningSet,
           });
 
-          this.setItem('settingTrussNumberHar3VespolinoRow1Plant3', settingTruss);
           this.setItem(
-            'prunSettingHar3VespolinoRow1Plant3',
-            pruningSet,
+            'settingTrussNumberHar3VespolinoRow1Plant3',
+            settingTruss,
           );
+          this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
         }
       } else {
         var number8 =
@@ -1837,10 +1816,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         });
 
         this.setItem('settingTrussNumberHar3VespolinoRow1Plant3', settingTruss);
-        this.setItem(
-          'prunSettingHar3VespolinoRow1Plant3',
-          pruningSet,
-        );
+        this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
       }
     } else {
       var number9 =
@@ -1862,10 +1838,7 @@ export default class Har3VespolinoRow1Plant3 extends Component {
       });
 
       this.setItem('settingTrussNumberHar3VespolinoRow1Plant3', settingTruss);
-      this.setItem(
-        'prunSettingHar3VespolinoRow1Plant3',
-        pruningSet,
-      );
+      this.setItem('prunSettingHar3VespolinoRow1Plant3', pruningSet);
     }
   };
 
@@ -1879,7 +1852,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Flowering truss called : ' + this.state.setFlowers2Har3VespolinoRow1Plant3,
+      'Flowering truss called : ' +
+        this.state.setFlowers2Har3VespolinoRow1Plant3,
     );
 
     if (this.state.setFlowers9Har3VespolinoRow1Plant3 === '') {
@@ -2036,7 +2010,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
                   );
                 }
               } else {
-                var number41 = +this.state.trussNumberHar3VespolinoRow1Plant3 + 4;
+                var number41 =
+                  +this.state.trussNumberHar3VespolinoRow1Plant3 + 4;
 
                 flowerPruningNumner = Number.parseInt(
                   this.state.pruningNumber4Har3VespolinoRow1Plant3,
@@ -2162,7 +2137,10 @@ export default class Har3VespolinoRow1Plant3 extends Component {
             pruneFloweringHar3VespolinoRow1Plant3: flowerPruningNumner,
           });
 
-          this.setItem('floweringTrussssHar3VespolinoRow1Plant3', floweringTruss);
+          this.setItem(
+            'floweringTrussssHar3VespolinoRow1Plant3',
+            floweringTruss,
+          );
           this.setItem(
             'pruneFloweringHar3VespolinoRow1Plant3',
             flowerPruningNumner,
@@ -2204,7 +2182,9 @@ export default class Har3VespolinoRow1Plant3 extends Component {
       flowerPruningNumner = Number.parseInt(
         this.state.pruningNumber9Har3VespolinoRow1Plant3,
       );
-      flowering = Number.parseInt(this.state.setFlowers9Har3VespolinoRow1Plant3);
+      flowering = Number.parseInt(
+        this.state.setFlowers9Har3VespolinoRow1Plant3,
+      );
       flowerSetFruits = Number.parseInt(
         this.state.setFruits9Har3VespolinoRow1Plant3,
       );
@@ -2986,7 +2966,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
 
   changeCheckbox = () => {
     this.setState({
-      Har3VespolinoRow1Plant3Selected: !this.state.Har3VespolinoRow1Plant3Selected,
+      Har3VespolinoRow1Plant3Selected: !this.state
+        .Har3VespolinoRow1Plant3Selected,
     });
 
     const vart = this.state.Har3VespolinoRow1Plant3Selected;
@@ -3044,7 +3025,9 @@ export default class Har3VespolinoRow1Plant3 extends Component {
                 if (+!isNaN(+leafLengthHar3VespolinoRow1Plant3)) {
                   if (+!isNaN(+leafWidthHar3VespolinoRow1Plant3)) {
                     if (+!isNaN(+stmDiameterHar3VespolinoRow1Plant3)) {
-                      if (+!isNaN(+lastWeekStmDiameterHar3VespolinoRow1Plant3)) {
+                      if (
+                        +!isNaN(+lastWeekStmDiameterHar3VespolinoRow1Plant3)
+                      ) {
                         this.setState({checkboxStatus: 'CHECKED'});
 
                         this.changeCheckbox();
@@ -3121,7 +3104,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 1 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              1 !==
               null &&
             this.state.pruningNumber1Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3167,7 +3151,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 2 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              2 !==
               null &&
             this.state.pruningNumber2Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3213,7 +3198,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 3 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              3 !==
               null &&
             this.state.pruningNumber3Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3259,7 +3245,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 4 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              4 !==
               null &&
             this.state.pruningNumber4Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3303,7 +3290,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
       db.addTrussDetails(data4)
         .then(result => {
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 5 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              5 !==
               null &&
             this.state.pruningNumber5Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3353,7 +3341,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           });
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 6 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              6 !==
               null &&
             this.state.pruningNumber6Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3399,7 +3388,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 7 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              7 !==
               null &&
             this.state.pruningNumber7Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3445,7 +3435,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 8 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              8 !==
               null &&
             this.state.pruningNumber8Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3491,7 +3482,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) + 9 !==
+            Number.parseInt(this.state.trussNumberHar3VespolinoRow1Plant3) +
+              9 !==
               null &&
             this.state.pruningNumber9Har3VespolinoRow1Plant3 !== ''
           ) {
@@ -3671,8 +3663,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 345/
-          Week No. {this.state.weekNumber}
+          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 345/ Week No.{' '}
+          {this.state.weekNumber}
         </Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
@@ -5730,7 +5722,8 @@ export default class Har3VespolinoRow1Plant3 extends Component {
 
                   <View
                     style={[
-                      this.state.settingTrussNumberHar3VespolinoRow1Plant3 <= 1 ||
+                      this.state.settingTrussNumberHar3VespolinoRow1Plant3 <=
+                        1 ||
                       this.state.settingTrussNumberHar3VespolinoRow1Plant3 >= 45
                         ? styles.borderErrorColor
                         : null,
@@ -5847,7 +5840,12 @@ export default class Har3VespolinoRow1Plant3 extends Component {
 
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Har3DataChecker', {name : 'Har3VespolinoRow1Plant3', row : '345', plant: 3, type: 'HAR 3 - Vespolino'})
+                    this.props.navigation.navigate('Har3DataChecker', {
+                      name: 'Har3VespolinoRow1Plant3',
+                      row: '345',
+                      plant: 3,
+                      type: 'HAR 3 - Vespolino',
+                    })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>
@@ -5949,7 +5947,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
-
 
   textTitle: {
     //color: '#110A6A',

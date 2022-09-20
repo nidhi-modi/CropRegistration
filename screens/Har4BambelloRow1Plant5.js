@@ -278,12 +278,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
   };
 
   renderLastWeekTrussDetails = () => {
-
     if (this.state.allTrussData.length !== 0) {
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].fruitLoad) === 'null') {
         this.setState({
           fruitLoadPreviousData: '--',
         });
@@ -294,7 +290,6 @@ export default class Har4BambelloRow1Plant5 extends Component {
           ),
         });
       }
-
 
       if (
         JSON.stringify(this.state.allTrussData[0].floweringTruss) === 'null'
@@ -310,9 +305,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
         });
       }
 
-      if (
-        JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].settingTruss) === 'null') {
         this.setState({
           settingTrussPreviousData: '--',
         });
@@ -324,10 +317,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
         });
       }
 
-
-      if (
-        JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null'
-      ) {
+      if (JSON.stringify(this.state.allTrussData[0].harvestTruss) === 'null') {
         this.setState({
           harvestTrussPreviousData: '--',
         });
@@ -338,13 +328,10 @@ export default class Har4BambelloRow1Plant5 extends Component {
           ),
         });
       }
-
-    }else{
-
+    } else {
       console.log('No data in the database');
-
     }
-  }
+  };
 
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
@@ -1137,7 +1124,6 @@ export default class Har4BambelloRow1Plant5 extends Component {
         .done();
     } catch (error) {}
 
-
     /*try {
       AsyncStorage.getItem('trussNumberHar4BambelloRow1Plant5').then((text10Value) => {
         this.setState({ trussNumberHar4BambelloRow1Plant5: JSON.parse(text10Value) });
@@ -1528,10 +1514,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
         harvestTrussHar4BambelloRow1Plant5: add,
         pruningHarHar4BambelloRow1Plant5: prunNum,
       });
-      this.setItem(
-        'pruningHarHar4BambelloRow1Plant5',
-        prunNum,
-      );
+      this.setItem('pruningHarHar4BambelloRow1Plant5', prunNum);
     } else {
       prunNum = Number.parseInt(this.state.pruningNumberHar4BambelloRow1Plant5);
       var num = this.state.trussNumberHar4BambelloRow1Plant5;
@@ -1540,10 +1523,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
         harvestTrussHar4BambelloRow1Plant5: num,
         pruningHarHar4BambelloRow1Plant5: prunNum,
       });
-      this.setItem(
-        'pruningHarHar4BambelloRow1Plant5',
-        prunNum,
-      );
+      this.setItem('pruningHarHar4BambelloRow1Plant5', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
@@ -1699,15 +1679,13 @@ export default class Har4BambelloRow1Plant5 extends Component {
                     'settingTrussNumberHar4BambelloRow1Plant5',
                     settingTruss,
                   );
-                  this.setItem(
-                    'prunSettingHar4BambelloRow1Plant5',
-                    pruningSet,
-                  );
+                  this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
                 }
               } else {
                 var number4 =
-                  Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
-                  4;
+                  Number.parseInt(
+                    this.state.trussNumberHar4BambelloRow1Plant5,
+                  ) + 4;
 
                 pruningSet = Number.parseInt(
                   this.state.pruningNumber4Har4BambelloRow1Plant5,
@@ -1730,10 +1708,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
                   'settingTrussNumberHar4BambelloRow1Plant5',
                   settingTruss,
                 );
-                this.setItem(
-                  'prunSettingHar4BambelloRow1Plant5',
-                  pruningSet,
-                );
+                this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
               }
             } else {
               var number5 =
@@ -1759,10 +1734,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
                 'settingTrussNumberHar4BambelloRow1Plant5',
                 settingTruss,
               );
-              this.setItem(
-                'prunSettingHar4BambelloRow1Plant5',
-                pruningSet,
-              );
+              this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
             }
           } else {
             var number6 =
@@ -1787,10 +1759,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
               'settingTrussNumberHar4BambelloRow1Plant5',
               settingTruss,
             );
-            this.setItem(
-              'prunSettingHar4BambelloRow1Plant5',
-              pruningSet,
-            );
+            this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
           }
         } else {
           var number7 =
@@ -1811,11 +1780,11 @@ export default class Har4BambelloRow1Plant5 extends Component {
             prunSettingHar4BambelloRow1Plant5: pruningSet,
           });
 
-          this.setItem('settingTrussNumberHar4BambelloRow1Plant5', settingTruss);
           this.setItem(
-            'prunSettingHar4BambelloRow1Plant5',
-            pruningSet,
+            'settingTrussNumberHar4BambelloRow1Plant5',
+            settingTruss,
           );
+          this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
         }
       } else {
         var number8 =
@@ -1837,10 +1806,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
         });
 
         this.setItem('settingTrussNumberHar4BambelloRow1Plant5', settingTruss);
-        this.setItem(
-          'prunSettingHar4BambelloRow1Plant5',
-          pruningSet,
-        );
+        this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
       }
     } else {
       var number9 =
@@ -1862,10 +1828,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
       });
 
       this.setItem('settingTrussNumberHar4BambelloRow1Plant5', settingTruss);
-      this.setItem(
-        'prunSettingHar4BambelloRow1Plant5',
-        pruningSet,
-      );
+      this.setItem('prunSettingHar4BambelloRow1Plant5', pruningSet);
     }
   };
 
@@ -1879,7 +1842,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Flowering truss called : ' + this.state.setFlowers2Har4BambelloRow1Plant5,
+      'Flowering truss called : ' +
+        this.state.setFlowers2Har4BambelloRow1Plant5,
     );
 
     if (this.state.setFlowers9Har4BambelloRow1Plant5 === '') {
@@ -2036,7 +2000,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
                   );
                 }
               } else {
-                var number41 = +this.state.trussNumberHar4BambelloRow1Plant5 + 4;
+                var number41 =
+                  +this.state.trussNumberHar4BambelloRow1Plant5 + 4;
 
                 flowerPruningNumner = Number.parseInt(
                   this.state.pruningNumber4Har4BambelloRow1Plant5,
@@ -2162,7 +2127,10 @@ export default class Har4BambelloRow1Plant5 extends Component {
             pruneFloweringHar4BambelloRow1Plant5: flowerPruningNumner,
           });
 
-          this.setItem('floweringTrussssHar4BambelloRow1Plant5', floweringTruss);
+          this.setItem(
+            'floweringTrussssHar4BambelloRow1Plant5',
+            floweringTruss,
+          );
           this.setItem(
             'pruneFloweringHar4BambelloRow1Plant5',
             flowerPruningNumner,
@@ -2221,10 +2189,7 @@ export default class Har4BambelloRow1Plant5 extends Component {
       });
 
       this.setItem('floweringTrussssHar4BambelloRow1Plant5', floweringTruss);
-      this.setItem(
-        'pruneFloweringHar4BambelloRow1Plant5',
-        flowerPruningNumner,
-      );
+      this.setItem('pruneFloweringHar4BambelloRow1Plant5', flowerPruningNumner);
     }
   };
   //
@@ -2986,7 +2951,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
 
   changeCheckbox = () => {
     this.setState({
-      Har4BambelloRow1Plant5Selected: !this.state.Har4BambelloRow1Plant5Selected,
+      Har4BambelloRow1Plant5Selected: !this.state
+        .Har4BambelloRow1Plant5Selected,
     });
 
     const vart = this.state.Har4BambelloRow1Plant5Selected;
@@ -3121,7 +3087,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 1 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              1 !==
               null &&
             this.state.pruningNumber1Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3167,7 +3134,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 2 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              2 !==
               null &&
             this.state.pruningNumber2Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3213,7 +3181,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 3 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              3 !==
               null &&
             this.state.pruningNumber3Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3259,7 +3228,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 4 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              4 !==
               null &&
             this.state.pruningNumber4Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3303,7 +3273,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
       db.addTrussDetails(data4)
         .then(result => {
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 5 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              5 !==
               null &&
             this.state.pruningNumber5Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3353,7 +3324,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           });
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 6 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              6 !==
               null &&
             this.state.pruningNumber6Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3399,7 +3371,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 7 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              7 !==
               null &&
             this.state.pruningNumber7Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3445,7 +3418,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 8 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              8 !==
               null &&
             this.state.pruningNumber8Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3491,7 +3465,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) + 9 !==
+            Number.parseInt(this.state.trussNumberHar4BambelloRow1Plant5) +
+              9 !==
               null &&
             this.state.pruningNumber9Har4BambelloRow1Plant5 !== ''
           ) {
@@ -3671,8 +3646,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 405/
-          Week No. {this.state.weekNumber}
+          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 405/ Week No.{' '}
+          {this.state.weekNumber}
         </Text>
 
         <View style={styles.marginMicroSmallDimensionTop}></View>
@@ -5730,7 +5705,8 @@ export default class Har4BambelloRow1Plant5 extends Component {
 
                   <View
                     style={[
-                      this.state.settingTrussNumberHar4BambelloRow1Plant5 <= 1 ||
+                      this.state.settingTrussNumberHar4BambelloRow1Plant5 <=
+                        1 ||
                       this.state.settingTrussNumberHar4BambelloRow1Plant5 >= 45
                         ? styles.borderErrorColor
                         : null,
@@ -5847,7 +5823,12 @@ export default class Har4BambelloRow1Plant5 extends Component {
 
                 <TouchableOpacity
                   onPress={() =>
-                    this.props.navigation.navigate('Har4DataChecker', {name : 'Har4BambelloRow1Plant5', row : '405', plant: 5, type: 'HAR 4 - Bambello'})
+                    this.props.navigation.navigate('Har4DataChecker', {
+                      name: 'Har4BambelloRow1Plant5',
+                      row: '405',
+                      plant: 5,
+                      type: 'HAR 4 - Bambello',
+                    })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
                 </TouchableOpacity>
@@ -5949,7 +5930,6 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     marginRight: 10,
   },
-
 
   textTitle: {
     //color: '#110A6A',
