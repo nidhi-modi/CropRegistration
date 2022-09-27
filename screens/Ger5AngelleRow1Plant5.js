@@ -332,6 +332,7 @@ export default class Ger5AngelleRow1Plant5 extends Component {
       console.log('No data in the database');
     }
   };
+
   setData = () => {
     if (this.state.allPlantData.length !== 0) {
       if (
