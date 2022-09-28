@@ -177,7 +177,7 @@ import RepMerliceRow2Plant9 from '../screens/RepMerliceRow2Plant9';
 import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10';
 
 import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
-import GetAwsData from '../screens/GetAwsData';
+import GetAwsData from '../screens/getAwsData';
 
 import Har1MimosaRow from '../screens/Har1MimosaRow';
 import Har1AvalantinoRow from '../screens/Har1AvalantinoRow';
