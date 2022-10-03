@@ -16,7 +16,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 import {DataTable} from 'react-native-paper';
 
 var screenWidth = Dimensions.get('window').width / 1.6;
-var nameSelected, rowSelected, plantNumberSelected;
+var nameSelected, rowSelected, plantNumberSelected, plantTypeSelected;
 
 export default class Ger3DataChecker extends Component {
   constructor(props) {
@@ -24,6 +24,7 @@ export default class Ger3DataChecker extends Component {
 
     this.state = {
       className: '',
+      plantType: '',
       rowNumber: '',
       plantNumber: '',
       weekNumber: '',
@@ -128,10 +129,12 @@ export default class Ger3DataChecker extends Component {
     nameSelected = this.props.route.params.name;
     rowSelected = this.props.route.params.row;
     plantNumberSelected = this.props.route.params.plant;
+    plantTypeSelected = this.props.route.params.type;
     this.setState({
       className: nameSelected,
       rowNumber: rowSelected,
       plantNumber: plantNumberSelected,
+      plantType: plantTypeSelected,
     });
 
     var weekNumber = moment().week() - 2;
@@ -344,7 +347,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -369,7 +372,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -396,7 +399,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -421,7 +424,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -452,7 +455,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -477,7 +480,7 @@ export default class Ger3DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 3 - Endeavour' &&
+            d.plantName === plantTypeSelected &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -1313,7 +1316,7 @@ export default class Ger3DataChecker extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 3 - Endeavour</Text>
+            <Text style={styles.text}>{plantTypeSelected}</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

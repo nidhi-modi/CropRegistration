@@ -5844,6 +5844,7 @@ export default class Ger3EndeavourRow2Plant2 extends Component {
                       name: 'Ger3EndeavourRow2Plant2',
                       row: '66/126',
                       plant: 2,
+                      type: 'GER 3 - Endeavour',
                     })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>

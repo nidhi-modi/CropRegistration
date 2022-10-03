@@ -5844,6 +5844,7 @@ export default class Ger3GrandiceRow1Plant10 extends Component {
                       name: 'Ger3GrandiceRow1Plant10',
                       row: '65/125',
                       plant: 10,
+                      type: 'GER 3 - Grandice',
                     })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
