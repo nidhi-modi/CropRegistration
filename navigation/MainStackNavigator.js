@@ -74,6 +74,7 @@ import Oha2SMerliceRow1Plant5 from '../screens/Oha2SMerliceRow1Plant5';
 import Ger1MerliceRow from '../screens/Ger1MerliceRow';
 import Ger2MerliceRow from '../screens/Ger2MerliceRow';
 import Ger3EndeavourRow from '../screens/Ger3EndeavourRow';
+import Ger3GrandiceRow from '../screens/Ger3GrandiceRow';
 import Ger4MerliceRow from '../screens/Ger4MerliceRow';
 import Ger5AngelleRow from '../screens/Ger5AngelleRow';
 import Ger5DuelleRow from '../screens/Ger5DuelleRow';
@@ -90,7 +91,7 @@ import Ger1MerlicePlantsRow1 from '../screens/Ger1MerlicePlantsRow1';
 import Ger1MerlicePlantsRow2 from '../screens/Ger1MerlicePlantsRow2';
 import Ger2MerlicePlantsRow2 from '../screens/Ger2MerlicePlantsRow2';
 import Ger2MerlicePlantsRow1 from '../screens/Ger2MerlicePlantsRow1';
-import Ger3EndeavourPlantsRow1 from '../screens/Ger3EndeavourPlantsRow1';
+import Ger3GrandicePlantsRow1 from '../screens/Ger3GrandicePlantsRow1';
 import Ger3EndeavourPlantsRow2 from '../screens/Ger3EndeavourPlantsRow2';
 import Ger4MerlicePlantsRow1 from '../screens/Ger4MerlicePlantsRow1';
 import Ger4MerlicePlantsRow2 from '../screens/Ger4MerlicePlantsRow2';
@@ -177,7 +178,7 @@ import RepMerliceRow2Plant9 from '../screens/RepMerliceRow2Plant9';
 import RepMerliceRow2Plant10 from '../screens/RepMerliceRow2Plant10';
 
 import ViewPlantTrussDetails from '../screens/viewPlantTrussDetails';
-import GetAwsData from '../screens/getAwsData';
+import GetAwsData from '../screens/GetAwsData';
 
 import Har1MimosaRow from '../screens/Har1MimosaRow';
 import Har1AvalantinoRow from '../screens/Har1AvalantinoRow';
@@ -381,16 +382,16 @@ import Ger2MerliceRow2Plant8 from '../screens/Ger2MerliceRow2Plant8';
 import Ger2MerliceRow2Plant9 from '../screens/Ger2MerliceRow2Plant9';
 import Ger2MerliceRow2Plant10 from '../screens/Ger2MerliceRow2Plant10';
 
-import Ger3EndeavourRow1Plant1 from '../screens/Ger3EndeavourRow1Plant1';
-import Ger3EndeavourRow1Plant2 from '../screens/Ger3EndeavourRow1Plant2';
-import Ger3EndeavourRow1Plant3 from '../screens/Ger3EndeavourRow1Plant3';
-import Ger3EndeavourRow1Plant4 from '../screens/Ger3EndeavourRow1Plant4';
-import Ger3EndeavourRow1Plant5 from '../screens/Ger3EndeavourRow1Plant5';
-import Ger3EndeavourRow1Plant6 from '../screens/Ger3EndeavourRow1Plant6';
-import Ger3EndeavourRow1Plant7 from '../screens/Ger3EndeavourRow1Plant7';
-import Ger3EndeavourRow1Plant8 from '../screens/Ger3EndeavourRow1Plant8';
-import Ger3EndeavourRow1Plant9 from '../screens/Ger3EndeavourRow1Plant9';
-import Ger3EndeavourRow1Plant10 from '../screens/Ger3EndeavourRow1Plant10';
+import Ger3GrandiceRow1Plant1 from '../screens/Ger3GrandiceRow1Plant1';
+import Ger3GrandiceRow1Plant2 from '../screens/Ger3GrandiceRow1Plant2';
+import Ger3GrandiceRow1Plant3 from '../screens/Ger3GrandiceRow1Plant3';
+import Ger3GrandiceRow1Plant4 from '../screens/Ger3GrandiceRow1Plant4';
+import Ger3GrandiceRow1Plant5 from '../screens/Ger3GrandiceRow1Plant5';
+import Ger3GrandiceRow1Plant6 from '../screens/Ger3GrandiceRow1Plant6';
+import Ger3GrandiceRow1Plant7 from '../screens/Ger3GrandiceRow1Plant7';
+import Ger3GrandiceRow1Plant8 from '../screens/Ger3GrandiceRow1Plant8';
+import Ger3GrandiceRow1Plant9 from '../screens/Ger3GrandiceRow1Plant9';
+import Ger3GrandiceRow1Plant10 from '../screens/Ger3GrandiceRow1Plant10';
 
 import Ger3EndeavourRow2Plant1 from '../screens/Ger3EndeavourRow2Plant1';
 import Ger3EndeavourRow2Plant2 from '../screens/Ger3EndeavourRow2Plant2';
@@ -461,9 +462,6 @@ import Har4DataChecker from '../screens/Har4DataChecker';
 import Har5DataChecker from '../screens/Har5DataChecker';
 import Har6DataChecker from '../screens/Har6DataChecker';
 import OhaDataChecker from '../screens/OhaDataChecker';
-
-
-
 
 const Stack = createStackNavigator();
 
@@ -1378,8 +1376,8 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger3EndeavourPlantsRow1"
-          component={Ger3EndeavourPlantsRow1}
+          name="Ger3GrandicePlantsRow1"
+          component={Ger3GrandicePlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -1666,62 +1664,62 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant1"
-          component={Ger3EndeavourRow1Plant1}
+          name="Ger3GrandiceRow1Plant1"
+          component={Ger3GrandiceRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant2"
-          component={Ger3EndeavourRow1Plant2}
+          name="Ger3GrandiceRow1Plant2"
+          component={Ger3GrandiceRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant3"
-          component={Ger3EndeavourRow1Plant3}
+          name="Ger3GrandiceRow1Plant3"
+          component={Ger3GrandiceRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant4"
-          component={Ger3EndeavourRow1Plant4}
+          name="Ger3GrandiceRow1Plant4"
+          component={Ger3GrandiceRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant5"
-          component={Ger3EndeavourRow1Plant5}
+          name="Ger3GrandiceRow1Plant5"
+          component={Ger3GrandiceRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant6"
-          component={Ger3EndeavourRow1Plant6}
+          name="Ger3GrandiceRow1Plant6"
+          component={Ger3GrandiceRow1Plant6}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant7"
-          component={Ger3EndeavourRow1Plant7}
+          name="Ger3GrandiceRow1Plant7"
+          component={Ger3GrandiceRow1Plant7}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant8"
-          component={Ger3EndeavourRow1Plant8}
+          name="Ger3GrandiceRow1Plant8"
+          component={Ger3GrandiceRow1Plant8}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant9"
-          component={Ger3EndeavourRow1Plant9}
+          name="Ger3GrandiceRow1Plant9"
+          component={Ger3GrandiceRow1Plant9}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger3EndeavourRow1Plant10"
-          component={Ger3EndeavourRow1Plant10}
+          name="Ger3GrandiceRow1Plant10"
+          component={Ger3GrandiceRow1Plant10}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2768,49 +2766,49 @@ function MainStackNavigator() {
           component={Ger1DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="Ger2DataChecker"
           component={Ger2DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Ger3DataChecker"
           component={Ger3DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Ger4DataChecker"
           component={Ger4DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Ger5DataChecker"
           component={Ger5DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Har1DataChecker"
           component={Har1DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Har2DataChecker"
           component={Har2DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Har3DataChecker"
           component={Har3DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Har4DataChecker"
           component={Har4DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
@@ -2822,17 +2820,23 @@ function MainStackNavigator() {
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="Har6DataChecker"
           component={Har6DataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-         <Stack.Screen
+        <Stack.Screen
           name="OhaDataChecker"
           component={OhaDataChecker}
           options={{headerShown: false, title: 'T&G Global'}}
-         />
+        />
+
+        <Stack.Screen
+          name="Ger3GrandiceRow"
+          component={Ger3GrandiceRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
