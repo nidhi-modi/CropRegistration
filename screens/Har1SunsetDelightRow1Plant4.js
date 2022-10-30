@@ -236,7 +236,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 1 - Sunset Delight' &&
             d.plantNumber === 4 &&
-            d.plantRow === '157' &&
+            d.plantRow === '123' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 1 - Sunset Delight' &&
             d.plantNumber === 4 &&
-            d.plantRow === '157' &&
+            d.plantRow === '123' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -3104,7 +3104,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
       const {lastWeekStmDiameterHar1SunsetDelightRow1Plant4} = this.state;
 
       let data = {
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3190,7 +3190,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruitsHar1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowersHar1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumberHar1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3238,7 +3238,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits1Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers1Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber1Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3286,7 +3286,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits2Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers2Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber2Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3334,7 +3334,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits3Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers3Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber3Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3382,7 +3382,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits4Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers4Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber4Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3428,7 +3428,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits5Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers5Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber5Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3480,7 +3480,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits6Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers6Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber6Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3528,7 +3528,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits7Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers7Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber7Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3576,7 +3576,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits8Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers8Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber8Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3624,7 +3624,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         setFruits: this.state.setFruits9Har1SunsetDelightRow1Plant4,
         setFlowers: this.state.setFlowers9Har1SunsetDelightRow1Plant4,
         pruningNumber: this.state.pruningNumber9Har1SunsetDelightRow1Plant4,
-        plantRow: '157',
+        plantRow: '123',
         plantName: 'HAR 1 - Sunset Delight',
         plantWeek: this.state.weekNumber,
         plantNumber: 4,
@@ -3776,7 +3776,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 157/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 123/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5975,7 +5975,7 @@ export default class Har1SunsetDelightRow1Plant4 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har1DataChecker', {
                       name: 'Har1SunsetDelightRow1Plant4',
-                      row: '157',
+                      row: '123',
                       plant: 4,
                       type: 'HAR 1 - Sunset Delight',
                     })

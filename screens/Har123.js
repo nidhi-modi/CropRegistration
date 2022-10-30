@@ -134,16 +134,8 @@ export default class Har123 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1MimosaRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Mimosa</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1LorenzoRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Lorenzo</Text>
+              onPress={() => this.props.navigation.navigate('Har1DunistarRow')}>
+              <Text style={styles.buttonText}>HAR 1 - Dunistar</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -166,10 +158,8 @@ export default class Har123 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() =>
-                this.props.navigation.navigate('Har3VespolinoRow')
-              }>
-              <Text style={styles.buttonText}>HAR 3 - Vespolino</Text>
+              onPress={() => this.props.navigation.navigate('Har3GouramiRow')}>
+              <Text style={styles.buttonText}>HAR 3 - Gourami</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>
@@ -186,6 +176,14 @@ export default class Har123 extends Component {
               style={styles.buttonContainer}
               onPress={() => this.props.navigation.navigate('Har3KM5512Row')}>
               <Text style={styles.buttonText}>HAR 3 - KM5512</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har3DunistarRow')}>
+              <Text style={styles.buttonText}>HAR 3 - Dunistar</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>

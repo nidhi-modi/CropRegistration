@@ -322,7 +322,7 @@ export default class Har3KM5512PlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - KM5512 / Row 346</Text>
+            <Text style={styles.text}>HAR 3 - KM5512 / Row 354</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

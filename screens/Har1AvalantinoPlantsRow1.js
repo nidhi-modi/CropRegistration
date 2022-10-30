@@ -324,7 +324,7 @@ export default class Har1AvalantinoPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 1 - Avalantino / {'\n'}Row 136</Text>
+            <Text style={styles.text}>HAR 1 - Avalantino / {'\n'}Row 134</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

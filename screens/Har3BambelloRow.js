@@ -58,7 +58,7 @@ export default class Har3BambelloRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Har3BambelloPlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 326</Text>
+              <Text style={styles.buttonText}>Row 316</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

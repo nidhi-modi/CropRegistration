@@ -236,7 +236,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 3 - KM5512' &&
             d.plantNumber === 2 &&
-            d.plantRow === '346' &&
+            d.plantRow === '354' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 3 - KM5512' &&
             d.plantNumber === 2 &&
-            d.plantRow === '346' &&
+            d.plantRow === '354' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2955,7 +2955,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
       const {lastWeekStmDiameterHar3KM5512Row1Plant2} = this.state;
 
       let data = {
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3038,7 +3038,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruitsHar3KM5512Row1Plant2,
         setFlowers: this.state.setFlowersHar3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumberHar3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3083,7 +3083,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits1Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers1Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber1Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3128,7 +3128,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits2Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers2Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber2Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3174,7 +3174,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits3Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers3Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber3Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3219,7 +3219,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits4Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers4Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber4Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3262,7 +3262,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits5Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers5Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber5Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3311,7 +3311,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits6Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers6Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber6Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3356,7 +3356,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits7Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers7Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber7Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3401,7 +3401,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits8Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers8Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber8Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3446,7 +3446,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         setFruits: this.state.setFruits9Har3KM5512Row1Plant2,
         setFlowers: this.state.setFlowers9Har3KM5512Row1Plant2,
         pruningNumber: this.state.pruningNumber9Har3KM5512Row1Plant2,
-        plantRow: '346',
+        plantRow: '354',
         plantName: 'HAR 3 - KM5512',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3598,7 +3598,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 346/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 354/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5776,7 +5776,7 @@ export default class Har3KM5512Row1Plant2 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har3DataChecker', {
                       name: 'Har3KM5512Row1Plant2',
-                      row: '346',
+                      row: '354',
                       plant: 2,
                       type: 'HAR 3 - KM5512',
                     })

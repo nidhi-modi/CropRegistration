@@ -322,7 +322,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - Bambello / Row 326</Text>
+            <Text style={styles.text}>HAR 3 - Bambello / Row 316</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

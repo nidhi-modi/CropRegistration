@@ -324,7 +324,7 @@ export default class Har3VespolinoPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - Vespolino / Row 345</Text>
+            <Text style={styles.text}>HAR 3 - Vespolino / Row 337</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -345,14 +345,6 @@ export default class Har3VespolinoPlantsRow1 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             {this.renderElement3()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement4()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement5()}
           </View>
         </ScrollView>
       </View>
