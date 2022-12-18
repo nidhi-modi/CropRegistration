@@ -344,7 +344,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -369,7 +369,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -396,7 +396,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -421,7 +421,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -452,7 +452,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredPlantWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -477,7 +477,7 @@ export default class Ger2DataChecker extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'GER 2 - Merlice' &&
+            d.plantName === 'GER 2 - Grandice' &&
             d.plantWeek === filteredTrussWeek &&
             d.plantRow === rowSelected &&
             d.plantNumber === plantNumberSelected;
@@ -1313,7 +1313,7 @@ export default class Ger2DataChecker extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 2 - Merlice</Text>
+            <Text style={styles.text}>GER 2 - Grandice</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
