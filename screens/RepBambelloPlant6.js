@@ -3695,7 +3695,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3737,7 +3736,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3778,7 +3776,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3819,7 +3816,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3861,7 +3857,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3902,7 +3897,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3943,7 +3937,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3984,7 +3977,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -4025,7 +4017,6 @@ export default class RepBambelloPlant6 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"done"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -4503,7 +4494,7 @@ export default class RepBambelloPlant6 extends Component {
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
-                  onChangeText={this.onChangeText}
+                  
                   onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepBambelloPlant6')}
                   blurOnSubmit={false}
                   value={this.state.trussNumber2RepBambelloPlant6.toString()}

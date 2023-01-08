@@ -3698,7 +3698,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3740,7 +3739,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3781,7 +3780,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3822,7 +3821,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3864,7 +3863,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3905,7 +3904,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3946,7 +3945,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -3987,7 +3986,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"next"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -4028,7 +4027,7 @@ export default class RepAngelleRow1Plant1 extends Component {
                       multiline={false}
                       autoCorrect={false}
                       enablesReturnKeyAutomatically={true}
-                      onChangeText={this.onChangeText}
+                      
                       returnKeyType={"done"}
                       keyboardType={'numeric'}
                       blurOnSubmit={false}
@@ -4229,7 +4228,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   placeholderTextColor="#000000"
                   multiline={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -4369,7 +4367,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -4502,11 +4499,10 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
-                  onChangeText={this.onChangeText}
+          
                   onChangeText={(text) => this.updateTextInput22(text, 'trussNumber2RepAngelleRow1Plant1')}
                   blurOnSubmit={false}
                   value={this.state.trussNumber2RepAngelleRow1Plant1.toString()}
@@ -4634,7 +4630,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   selectTextOnFocus={false}
                   multiline={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -4762,7 +4757,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -4895,7 +4889,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -5028,7 +5021,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -5161,7 +5153,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -5294,7 +5285,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   editable={false}
                   selectTextOnFocus={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   returnKeyType={"next"}
                   autoCorrect={false}
                   enablesReturnKeyAutomatically={true}
@@ -5427,7 +5417,6 @@ export default class RepAngelleRow1Plant1 extends Component {
                   autoCapitalize="none"
                   multiline={false}
                   keyboardType={'numeric'}
-                  multiline={false}
                   editable={false}
                   selectTextOnFocus={false}
                   returnKeyType={"next"}
