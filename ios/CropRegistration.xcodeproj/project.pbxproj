@@ -487,7 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
@@ -499,7 +499,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 33.0;
+				MARKETING_VERSION = 34.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -521,7 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 33;
+				CURRENT_PROJECT_VERSION = 34;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,7 +532,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 33.0;
+				MARKETING_VERSION = 34.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
