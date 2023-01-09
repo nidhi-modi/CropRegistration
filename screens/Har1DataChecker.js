@@ -137,7 +137,7 @@ export default class Har1DataChecker extends Component {
       plantType: plantTypeSelected,
     });
 
-    var weekNumber = moment().week() - 2;
+    var weekNumber = moment().week() - 1;
     var yearNumber = moment().year();
     var toText = yearNumber.toString(); //convert to string
     var lastChar = toText.slice(-2); //gets last character
