@@ -63,7 +63,7 @@ export default class Ger1MerliceRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Ger1MerlicePlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 81/85</Text>
+              <Text style={styles.buttonText}>Row 85/86</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

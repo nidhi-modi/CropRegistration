@@ -236,7 +236,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'GER 1 - Merlice' &&
             d.plantNumber === 6 &&
-            d.plantRow === '45/46' &&
+            d.plantRow === '55/56' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'GER 1 - Merlice' &&
             d.plantNumber === 6 &&
-            d.plantRow === '45/46' &&
+            d.plantRow === '55/56' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2975,7 +2975,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
       const {lastWeekStmDiameterGer1MerliceRow2Plant6} = this.state;
 
       let data = {
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3059,7 +3059,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruitsGer1MerliceRow2Plant6,
         setFlowers: this.state.setFlowersGer1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumberGer1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3105,7 +3105,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits1Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers1Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber1Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3151,7 +3151,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits2Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers2Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber2Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3197,7 +3197,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits3Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers3Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber3Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3243,7 +3243,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits4Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers4Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber4Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3287,7 +3287,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits5Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers5Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber5Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3337,7 +3337,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits6Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers6Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber6Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3383,7 +3383,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits7Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers7Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber7Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3429,7 +3429,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits8Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers8Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber8Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -3475,7 +3475,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
         setFruits: this.state.setFruits9Ger1MerliceRow2Plant6,
         setFlowers: this.state.setFlowers9Ger1MerliceRow2Plant6,
         pruningNumber: this.state.pruningNumber9Ger1MerliceRow2Plant6,
-        plantRow: '45/46',
+        plantRow: '55/56',
         plantName: 'GER 1 - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 6,
@@ -5805,7 +5805,7 @@ export default class Ger1MerliceRow2Plant6 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Ger1DataChecker', {
                       name: 'Ger1MerliceRow2Plant6',
-                      row: '45/46',
+                      row: '55/56',
                       plant: 6,
                     })
                   }>

@@ -562,7 +562,7 @@ export default class Ger1MerlicePlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 1 - Merlice / Row 81/85</Text>
+            <Text style={styles.text}>GER 1 - Merlice / Row 85/86</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
