@@ -58,7 +58,7 @@ export default class Har6AngelleRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Har6AngellePlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 629</Text>
+              <Text style={styles.buttonText}>Row 632</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -68,7 +68,7 @@ export default class Har6AngelleRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Har6AngellePlantsRow2')
               }>
-              <Text style={styles.buttonText}>Row 643</Text>
+              <Text style={styles.buttonText}>Row 649</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

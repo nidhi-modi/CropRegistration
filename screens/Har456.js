@@ -114,24 +114,32 @@ export default class Har456 extends Component {
           <View style={styles.containerView}>
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4BambelloRow')}>
-              <Text style={styles.buttonText}>HAR 4 - Bambello</Text>
+              onPress={() => this.props.navigation.navigate('Har4HTL1606150Row')}>
+              <Text style={styles.buttonText}>HAR 4 - HTL1606150</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4KM5512Row')}>
-              <Text style={styles.buttonText}>HAR 4 - KM5512</Text>
+              onPress={() => this.props.navigation.navigate('Har4MonalisaRow')}>
+              <Text style={styles.buttonText}>HAR 4 - Monalisa</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4MimosaRow')}>
-              <Text style={styles.buttonText}>HAR 4 - Mimosa</Text>
+              onPress={() => this.props.navigation.navigate('Har4FlavorinoRow')}>
+              <Text style={styles.buttonText}>HAR 4 - Flavorino</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har4AngelleRow')}>
+              <Text style={styles.buttonText}>HAR 4 - Angelle</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>

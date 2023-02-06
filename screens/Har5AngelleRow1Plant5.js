@@ -236,7 +236,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 5 - Angelle' &&
             d.plantNumber === 5 &&
-            d.plantRow === '543' &&
+            d.plantRow === '527' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 5 - Angelle' &&
             d.plantNumber === 5 &&
-            d.plantRow === '543' &&
+            d.plantRow === '527' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2975,7 +2975,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
       const {lastWeekStmDiameterHar5AngelleRow1Plant5} = this.state;
 
       let data = {
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3059,7 +3059,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruitsHar5AngelleRow1Plant5,
         setFlowers: this.state.setFlowersHar5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumberHar5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3105,7 +3105,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits1Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers1Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber1Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3151,7 +3151,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits2Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers2Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber2Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3197,7 +3197,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits3Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers3Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber3Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3243,7 +3243,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits4Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers4Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber4Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3287,7 +3287,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits5Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers5Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber5Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3337,7 +3337,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits6Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers6Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber6Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3383,7 +3383,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits7Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers7Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber7Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3429,7 +3429,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits8Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers8Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber8Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3475,7 +3475,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         setFruits: this.state.setFruits9Har5AngelleRow1Plant5,
         setFlowers: this.state.setFlowers9Har5AngelleRow1Plant5,
         pruningNumber: this.state.pruningNumber9Har5AngelleRow1Plant5,
-        plantRow: '543',
+        plantRow: '527',
         plantName: 'HAR 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3627,7 +3627,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 543/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 527/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5805,7 +5805,7 @@ export default class Har5AngelleRow1Plant5 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har5DataChecker', {
                       name: 'Har5AngelleRow1Plant5',
-                      row: '543',
+                      row: '527',
                       plant: 5,
                       type: 'HAR 5 - Angelle',
                     })
