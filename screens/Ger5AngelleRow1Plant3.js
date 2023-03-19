@@ -236,7 +236,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'GER 5 - Angelle' &&
             d.plantNumber === 3 &&
-            d.plantRow === '98' &&
+            d.plantRow === '108' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'GER 5 - Angelle' &&
             d.plantNumber === 3 &&
-            d.plantRow === '98' &&
+            d.plantRow === '108' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -3147,7 +3147,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
       const {lastWeekStmDiameterGer5AngelleRow1Plant3} = this.state;
 
       let data = {
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3231,7 +3231,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruitsGer5AngelleRow1Plant3,
         setFlowers: this.state.setFlowersGer5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumberGer5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3277,7 +3277,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits1Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers1Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber1Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3323,7 +3323,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits2Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers2Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber2Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3369,7 +3369,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits3Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers3Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber3Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3415,7 +3415,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits4Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers4Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber4Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3459,7 +3459,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits5Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers5Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber5Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3509,7 +3509,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits6Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers6Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber6Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3555,7 +3555,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits7Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers7Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber7Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3601,7 +3601,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits8Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers8Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber8Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3647,7 +3647,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         setFruits: this.state.setFruits9Ger5AngelleRow1Plant3,
         setFlowers: this.state.setFlowers9Ger5AngelleRow1Plant3,
         pruningNumber: this.state.pruningNumber9Ger5AngelleRow1Plant3,
-        plantRow: '98',
+        plantRow: '108',
         plantName: 'GER 5 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3799,7 +3799,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 98/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 108/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5987,7 +5987,7 @@ export default class Ger5AngelleRow1Plant3 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Ger5DataChecker', {
                       name: 'Ger5AngelleRow1Plant3',
-                      row: '98',
+                      row: '108',
                       plant: 3,
                       type: 'GER 5 - Angelle',
                     })

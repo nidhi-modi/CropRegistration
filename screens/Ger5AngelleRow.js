@@ -58,17 +58,7 @@ export default class Ger5AngelleRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Ger5AngellePlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 98</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() =>
-                this.props.navigation.navigate('Ger5AngellePlantsRow2')
-              }>
-              <Text style={styles.buttonText}>Row 73</Text>
+              <Text style={styles.buttonText}>Row 108</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

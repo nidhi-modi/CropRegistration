@@ -179,6 +179,14 @@ export default class GerHome extends Component {
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5BambelloRow')}>
+              <Text style={styles.buttonText}>GER 5 - Bambello</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
           </View>
 
           <TouchableOpacity onPress={() => this.checkInternetConnection()}>

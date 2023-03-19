@@ -322,7 +322,7 @@ export default class Ger5DuellePlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 5 - Duelle / Row 48</Text>
+            <Text style={styles.text}>GER 5 - Duelle / Row 33</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

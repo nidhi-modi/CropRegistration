@@ -78,6 +78,7 @@ import Ger3GrandiceRow from '../screens/Ger3GrandiceRow';
 import Ger4MerliceRow from '../screens/Ger4MerliceRow';
 import Ger5AngelleRow from '../screens/Ger5AngelleRow';
 import Ger5DuelleRow from '../screens/Ger5DuelleRow';
+import Ger5BambelloRow from '../screens/Ger5BambelloRow';
 
 import RepMerlicePlantsRow1 from '../screens/RepMerlicePlantsRow1';
 import RepMerlicePlantsRow2 from '../screens/RepMerlicePlantsRow2';
@@ -96,9 +97,8 @@ import Ger3EndeavourPlantsRow2 from '../screens/Ger3EndeavourPlantsRow2';
 import Ger4MerlicePlantsRow1 from '../screens/Ger4MerlicePlantsRow1';
 import Ger4MerlicePlantsRow2 from '../screens/Ger4MerlicePlantsRow2';
 import Ger5AngellePlantsRow1 from '../screens/Ger5AngellePlantsRow1';
-import Ger5AngellePlantsRow2 from '../screens/Ger5AngellePlantsRow2';
 import Ger5DuellePlantsRow1 from '../screens/Ger5DuellePlantsRow1';
-import Ger5DuellePlantsRow2 from '../screens/Ger5DuellePlantsRow2';
+import Ger5BambelloPlantsRow1 from '../screens/Ger5BambelloPlantsRow1';
 
 import RepBambelloPlant1 from '../screens/RepBambelloPlant1';
 import RepBambelloPlant2 from '../screens/RepBambelloPlant2';
@@ -440,23 +440,17 @@ import Ger5AngelleRow1Plant3 from '../screens/Ger5AngelleRow1Plant3';
 import Ger5AngelleRow1Plant4 from '../screens/Ger5AngelleRow1Plant4';
 import Ger5AngelleRow1Plant5 from '../screens/Ger5AngelleRow1Plant5';
 
-import Ger5AngelleRow2Plant1 from '../screens/Ger5AngelleRow2Plant1';
-import Ger5AngelleRow2Plant2 from '../screens/Ger5AngelleRow2Plant2';
-import Ger5AngelleRow2Plant3 from '../screens/Ger5AngelleRow2Plant3';
-import Ger5AngelleRow2Plant4 from '../screens/Ger5AngelleRow2Plant4';
-import Ger5AngelleRow2Plant5 from '../screens/Ger5AngelleRow2Plant5';
-
 import Ger5DuelleRow1Plant1 from '../screens/Ger5DuelleRow1Plant1';
 import Ger5DuelleRow1Plant2 from '../screens/Ger5DuelleRow1Plant2';
 import Ger5DuelleRow1Plant3 from '../screens/Ger5DuelleRow1Plant3';
 import Ger5DuelleRow1Plant4 from '../screens/Ger5DuelleRow1Plant4';
 import Ger5DuelleRow1Plant5 from '../screens/Ger5DuelleRow1Plant5';
 
-import Ger5DuelleRow2Plant1 from '../screens/Ger5DuelleRow2Plant1';
-import Ger5DuelleRow2Plant2 from '../screens/Ger5DuelleRow2Plant2';
-import Ger5DuelleRow2Plant3 from '../screens/Ger5DuelleRow2Plant3';
-import Ger5DuelleRow2Plant4 from '../screens/Ger5DuelleRow2Plant4';
-import Ger5DuelleRow2Plant5 from '../screens/Ger5DuelleRow2Plant5';
+import Ger5BambelloRow1Plant1 from '../screens/Ger5BambelloRow1Plant1';
+import Ger5BambelloRow1Plant2 from '../screens/Ger5BambelloRow1Plant2';
+import Ger5BambelloRow1Plant3 from '../screens/Ger5BambelloRow1Plant3';
+import Ger5BambelloRow1Plant4 from '../screens/Ger5BambelloRow1Plant4';
+import Ger5BambelloRow1Plant5 from '../screens/Ger5BambelloRow1Plant5';
 
 import Ger1DataChecker from '../screens/Ger1DataChecker';
 import Ger2DataChecker from '../screens/Ger2DataChecker';
@@ -1360,6 +1354,12 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
+          name="Ger5BambelloRow"
+          component={Ger5BambelloRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
           name="Ger1MerlicePlantsRow1"
           component={Ger1MerlicePlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
@@ -1414,20 +1414,14 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger5AngellePlantsRow2"
-          component={Ger5AngellePlantsRow2}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
           name="Ger5DuellePlantsRow1"
           component={Ger5DuellePlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger5DuellePlantsRow2"
-          component={Ger5DuellePlantsRow2}
+          name="Ger5BambelloPlantsRow1"
+          component={Ger5BambelloPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -1942,36 +1936,6 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger5AngelleRow2Plant1"
-          component={Ger5AngelleRow2Plant1}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger5AngelleRow2Plant2"
-          component={Ger5AngelleRow2Plant2}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger5AngelleRow2Plant3"
-          component={Ger5AngelleRow2Plant3}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger5AngelleRow2Plant4"
-          component={Ger5AngelleRow2Plant4}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger5AngelleRow2Plant5"
-          component={Ger5AngelleRow2Plant5}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
           name="Ger5DuelleRow1Plant1"
           component={Ger5DuelleRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
@@ -2002,32 +1966,32 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger5DuelleRow2Plant1"
-          component={Ger5DuelleRow2Plant1}
+          name="Ger5BambelloRow1Plant1"
+          component={Ger5BambelloRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger5DuelleRow2Plant2"
-          component={Ger5DuelleRow2Plant2}
+          name="Ger5BambelloRow1Plant2"
+          component={Ger5BambelloRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger5DuelleRow2Plant3"
-          component={Ger5DuelleRow2Plant3}
+          name="Ger5BambelloRow1Plant3"
+          component={Ger5BambelloRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger5DuelleRow2Plant4"
-          component={Ger5DuelleRow2Plant4}
+          name="Ger5BambelloRow1Plant4"
+          component={Ger5BambelloRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Ger5DuelleRow2Plant5"
-          component={Ger5DuelleRow2Plant5}
+          name="Ger5BambelloRow1Plant5"
+          component={Ger5BambelloRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2241,7 +2205,7 @@ function MainStackNavigator() {
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
-<Stack.Screen
+        <Stack.Screen
           name="Har4MonalisaRow"
           component={Har4MonalisaRow}
           options={{headerShown: false, title: 'T&G Global'}}
