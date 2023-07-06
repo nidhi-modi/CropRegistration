@@ -140,18 +140,32 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() =>
-                this.props.navigation.navigate('Ger3EndeavourRow')
-              }>
-              <Text style={styles.buttonText}>GER 3 - Endeavour</Text>
+              onPress={() => this.props.navigation.navigate('Ger3GustelleRow')}>
+              <Text style={styles.buttonText}>GER 3 - Gustelle</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger3GrandiceRow')}>
-              <Text style={styles.buttonText}>GER 3 - Grandice</Text>
+              onPress={() => this.props.navigation.navigate('Ger3DunistarRow')}>
+              <Text style={styles.buttonText}>GER 3 - Dunistar</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger3DuelleRow')}>
+              <Text style={styles.buttonText}>GER 3 - Duelle</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger3AngelleRow')}>
+              <Text style={styles.buttonText}>GER 3 - Angelle</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

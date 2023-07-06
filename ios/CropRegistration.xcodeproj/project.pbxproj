@@ -13,8 +13,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		884A3E05284EFB9600CD58B1 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A3E04284EFB9600CD58B1 /* libswiftWebKit.tbd */; };
-		D4BBF70E6C3EA010DF936F51 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D78A03A54BCA81AABADA7C1C /* libPods-CropRegistration-CropRegistrationTests.a */; };
-		F9F200A5B8DD152076D2228C /* libPods-CropRegistration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF1407686704AF69B60521F /* libPods-CropRegistration.a */; };
+		980B17E0AAB6FF4CF96C21B3 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E528F1B546FA40160500C565 /* libPods-CropRegistration-CropRegistrationTests.a */; };
+		A6797F3D8C74E50E3986CA4E /* libPods-CropRegistration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0CE86CD73FF8BDD967DC9F /* libPods-CropRegistration.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,21 +31,21 @@
 		00E356EE1AD99517003FC87E /* CropRegistrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CropRegistrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* CropRegistrationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CropRegistrationTests.m; sourceTree = "<group>"; };
+		0A0CE86CD73FF8BDD967DC9F /* libPods-CropRegistration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CropRegistration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* CropRegistration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CropRegistration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = CropRegistration/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = CropRegistration/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = CropRegistration/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = CropRegistration/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = CropRegistration/main.m; sourceTree = "<group>"; };
-		1953117900137FAED9D63AB6 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; sourceTree = "<group>"; };
-		4FE87921ADE6B75F8FAAC341 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; sourceTree = "<group>"; };
-		6C26E3298ECFF061CE73070F /* Pods-CropRegistration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.release.xcconfig"; sourceTree = "<group>"; };
-		6DF1407686704AF69B60521F /* libPods-CropRegistration.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CropRegistration.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		316F9086C1C567955C2C72E3 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CropRegistration/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		884A3E04284EFB9600CD58B1 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
-		D78A03A54BCA81AABADA7C1C /* libPods-CropRegistration-CropRegistrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CropRegistration-CropRegistrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD6462733C15A3EA4D9C1E42 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B977B007B793468958F50EBA /* Pods-CropRegistration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.debug.xcconfig"; sourceTree = "<group>"; };
+		C442F9A3D6C470DBB20EE1BF /* Pods-CropRegistration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.release.xcconfig"; sourceTree = "<group>"; };
+		E528F1B546FA40160500C565 /* libPods-CropRegistration-CropRegistrationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CropRegistration-CropRegistrationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F015300F610E0535B85F0E50 /* Pods-CropRegistration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BBF70E6C3EA010DF936F51 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */,
+				980B17E0AAB6FF4CF96C21B3 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				884A3E05284EFB9600CD58B1 /* libswiftWebKit.tbd in Frameworks */,
-				F9F200A5B8DD152076D2228C /* libPods-CropRegistration.a in Frameworks */,
+				A6797F3D8C74E50E3986CA4E /* libPods-CropRegistration.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +104,8 @@
 			children = (
 				884A3E04284EFB9600CD58B1 /* libswiftWebKit.tbd */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6DF1407686704AF69B60521F /* libPods-CropRegistration.a */,
-				D78A03A54BCA81AABADA7C1C /* libPods-CropRegistration-CropRegistrationTests.a */,
+				0A0CE86CD73FF8BDD967DC9F /* libPods-CropRegistration.a */,
+				E528F1B546FA40160500C565 /* libPods-CropRegistration-CropRegistrationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,10 +144,10 @@
 		E65CB3B120606D5D5B2BF488 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F015300F610E0535B85F0E50 /* Pods-CropRegistration.debug.xcconfig */,
-				6C26E3298ECFF061CE73070F /* Pods-CropRegistration.release.xcconfig */,
-				1953117900137FAED9D63AB6 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */,
-				4FE87921ADE6B75F8FAAC341 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */,
+				B977B007B793468958F50EBA /* Pods-CropRegistration.debug.xcconfig */,
+				C442F9A3D6C470DBB20EE1BF /* Pods-CropRegistration.release.xcconfig */,
+				AD6462733C15A3EA4D9C1E42 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */,
+				316F9086C1C567955C2C72E3 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -159,12 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "CropRegistrationTests" */;
 			buildPhases = (
-				34C4515214ED4FB156DE624B /* [CP] Check Pods Manifest.lock */,
+				05B4FF977A94380B81F49968 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				AC1BA84AB48A034502D5C541 /* [CP] Embed Pods Frameworks */,
-				55C26A0DF3BB8BDF6461F57C /* [CP] Copy Pods Resources */,
+				4089A35CBB927889148FD08C /* [CP] Embed Pods Frameworks */,
+				D660858DE9A196C88B6AAD85 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -180,14 +180,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "CropRegistration" */;
 			buildPhases = (
-				A13729BE4BDE0A2F208D98B8 /* [CP] Check Pods Manifest.lock */,
+				B18E9B9792F8D6327F5B473A /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				1BFDB5438160F2E10005D3FF /* [CP] Embed Pods Frameworks */,
-				EE177A8DB72DD22AD11A27B2 /* [CP] Copy Pods Resources */,
+				2C6412BE84CF2EEE388C0CDC /* [CP] Embed Pods Frameworks */,
+				C1396E0DEDD95F339598C08B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -268,24 +268,7 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
-		1BFDB5438160F2E10005D3FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		34C4515214ED4FB156DE624B /* [CP] Check Pods Manifest.lock */ = {
+		05B4FF977A94380B81F49968 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -307,24 +290,41 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		55C26A0DF3BB8BDF6461F57C /* [CP] Copy Pods Resources */ = {
+		2C6412BE84CF2EEE388C0CDC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A13729BE4BDE0A2F208D98B8 /* [CP] Check Pods Manifest.lock */ = {
+		4089A35CBB927889148FD08C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B18E9B9792F8D6327F5B473A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -346,24 +346,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC1BA84AB48A034502D5C541 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EE177A8DB72DD22AD11A27B2 /* [CP] Copy Pods Resources */ = {
+		C1396E0DEDD95F339598C08B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,6 +361,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration/Pods-CropRegistration-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D660858DE9A196C88B6AAD85 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -432,9 +432,11 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1953117900137FAED9D63AB6 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */;
+			baseConfigurationReference = AD6462733C15A3EA4D9C1E42 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -459,10 +461,12 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FE87921ADE6B75F8FAAC341 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */;
+			baseConfigurationReference = 316F9086C1C567955C2C72E3 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropRegistrationTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,11 +487,11 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F015300F610E0535B85F0E50 /* Pods-CropRegistration.debug.xcconfig */;
+			baseConfigurationReference = B977B007B793468958F50EBA /* Pods-CropRegistration.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
@@ -499,7 +503,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 38.0;
+				MARKETING_VERSION = 39.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -508,6 +512,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CropRegistration;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -517,11 +524,11 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C26E3298ECFF061CE73070F /* Pods-CropRegistration.release.xcconfig */;
+			baseConfigurationReference = C442F9A3D6C470DBB20EE1BF /* Pods-CropRegistration.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 38;
+				CURRENT_PROJECT_VERSION = 39;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -532,7 +539,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 38.0;
+				MARKETING_VERSION = 39.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -541,6 +548,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = CropRegistration;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";

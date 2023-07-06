@@ -27,7 +27,7 @@ var plant8Selected;
 var plant9Selected;
 var plant10Selected;
 
-export default class Ger3EndeavourPlantsRow2 extends Component {
+export default class Ger3GustellePlantsRow2 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -59,16 +59,11 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant1);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant2);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant3);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant4);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant5);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant6);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant7);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant8);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant9);
-    EventRegister.removeEventListener(this.ger3EndeavourRow2EventPlant10);
+    EventRegister.removeEventListener(this.ger3GustelleRow2EventPlant1);
+    EventRegister.removeEventListener(this.ger3GustelleRow2EventPlant2);
+    EventRegister.removeEventListener(this.ger3GustelleRow2EventPlant3);
+    EventRegister.removeEventListener(this.ger3GustelleRow2EventPlant4);
+    EventRegister.removeEventListener(this.ger3GustelleRow2EventPlant5);
   }
 
   componentDidUpdate() {
@@ -83,8 +78,8 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.ger3EndeavourRow2EventPlant1 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant1',
+    this.ger3GustelleRow2EventPlant1 = EventRegister.addEventListener(
+      'ger3GustelleRow2EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -97,8 +92,8 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
     );
 
     //PLANT 2
-    this.ger3EndeavourRow2EventPlant2 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant2',
+    this.ger3GustelleRow2EventPlant2 = EventRegister.addEventListener(
+      'ger3GustelleRow2EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -111,8 +106,8 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
     );
 
     //PLANT 3
-    this.ger3EndeavourRow2EventPlant3 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant3',
+    this.ger3GustelleRow2EventPlant3 = EventRegister.addEventListener(
+      'ger3GustelleRow2EventPlant3',
       data3 => {
         plant3Selected = data3;
 
@@ -125,8 +120,8 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
     );
 
     //PLANT 4
-    this.ger3EndeavourRow2EventPlant4 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant4',
+    this.ger3GustelleRow2EventPlant4 = EventRegister.addEventListener(
+      'ger3GustelleRow2EventPlant4',
       data4 => {
         plant4Selected = data4;
 
@@ -139,82 +134,12 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
     );
 
     //PLANT 5
-    this.ger3EndeavourRow2EventPlant5 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant5',
+    this.ger3GustelleRow2EventPlant5 = EventRegister.addEventListener(
+      'ger3GustelleRow2EventPlant5',
       data5 => {
         plant5Selected = data5;
 
         if (data5 == null || data5 == true || data5 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 6
-    this.ger3EndeavourRow2EventPlant6 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant6',
-      data6 => {
-        plant6Selected = data6;
-
-        if (data6 == null || data6 == true || data6 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 7
-    this.ger3EndeavourRow2EventPlant7 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant7',
-      data7 => {
-        plant7Selected = data7;
-
-        if (data7 == null || data7 == true || data7 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 8
-    this.ger3EndeavourRow2EventPlant8 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant8',
-      data8 => {
-        plant8Selected = data8;
-
-        if (data8 == null || data8 == true || data8 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 9
-    this.ger3EndeavourRow2EventPlant9 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant9',
-      data9 => {
-        plant9Selected = data9;
-
-        if (data9 == null || data9 == true || data9 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 10
-    this.ger3EndeavourRow2EventPlant10 = EventRegister.addEventListener(
-      'ger3EndeavourRow2EventPlant10',
-      data10 => {
-        plant10Selected = data10;
-
-        if (data10 == null || data10 == true || data10 != false) {
           console.log('Plant not done');
         } else {
           console.log('Plant completed');
@@ -229,7 +154,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant1')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -241,7 +166,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant1')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -261,7 +186,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant2')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -273,7 +198,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant2')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -293,7 +218,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant3')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -305,7 +230,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant3')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -325,7 +250,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant4')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -337,7 +262,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant4')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -357,7 +282,7 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant5')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -369,170 +294,10 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant5')
+            this.props.navigation.navigate('Ger3GustelleRow2Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement6() {
-    if (plant6Selected == null || plant6Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant6')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 6 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant6')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 6 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement7() {
-    if (plant7Selected == null || plant7Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant7')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 7 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant7')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 7 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement8() {
-    if (plant8Selected == null || plant8Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant8')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 8 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant8')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 8 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement9() {
-    if (plant9Selected == null || plant9Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant9')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 9 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant9')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 9 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement10() {
-    if (plant10Selected == null || plant10Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant10')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 10 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger3EndeavourRow2Plant10')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 10 - Week {this.state.weekNumber}
           </Text>
           <Image
             source={require('../assets/tick.png')}
@@ -556,15 +321,13 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate('Ger3EndeavourRow')
-              }>
+              onPress={() => this.props.navigation.navigate('Ger3GustelleRow')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 3 - Endeavour / Row 66/126</Text>
+            <Text style={styles.text}>GER 3 - Gustelle / Row 36</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -593,26 +356,6 @@ export default class Ger3EndeavourPlantsRow2 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             {this.renderElement5()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement6()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement7()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement8()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement9()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement10()}
           </View>
         </ScrollView>
       </View>
