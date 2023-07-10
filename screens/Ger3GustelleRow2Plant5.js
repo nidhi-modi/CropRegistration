@@ -3646,7 +3646,7 @@ export default class Ger3GustelleRow2Plant5 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 66&amp;126/
+          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 36/
           Week No. {this.state.weekNumber}
         </Text>
 

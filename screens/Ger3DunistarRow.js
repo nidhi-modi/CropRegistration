@@ -56,7 +56,7 @@ export default class Ger3DunistarRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Ger3DunistarPlantsRow1')
+                this.props.navigation.navigate('Ger3DunistarPlantsRow2')
               }>
               <Text style={styles.buttonText}>Row 76</Text>
             </TouchableOpacity>
