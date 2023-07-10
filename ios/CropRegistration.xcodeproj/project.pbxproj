@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		884A3E05284EFB9600CD58B1 /* libswiftWebKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 884A3E04284EFB9600CD58B1 /* libswiftWebKit.tbd */; };
+		885209722A5B9D40008FD307 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 885209712A5B9D40008FD307 /* main.jsbundle */; };
 		980B17E0AAB6FF4CF96C21B3 /* libPods-CropRegistration-CropRegistrationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E528F1B546FA40160500C565 /* libPods-CropRegistration-CropRegistrationTests.a */; };
 		A6797F3D8C74E50E3986CA4E /* libPods-CropRegistration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A0CE86CD73FF8BDD967DC9F /* libPods-CropRegistration.a */; };
 /* End PBXBuildFile section */
@@ -41,6 +42,7 @@
 		316F9086C1C567955C2C72E3 /* Pods-CropRegistration-CropRegistrationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = CropRegistration/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		884A3E04284EFB9600CD58B1 /* libswiftWebKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftWebKit.tbd; path = usr/lib/swift/libswiftWebKit.tbd; sourceTree = SDKROOT; };
+		885209712A5B9D40008FD307 /* main.jsbundle */ = {isa = PBXFileReference; lastKnownFileType = text; name = main.jsbundle; path = CropRegistration/main.jsbundle; sourceTree = "<group>"; };
 		AD6462733C15A3EA4D9C1E42 /* Pods-CropRegistration-CropRegistrationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B977B007B793468958F50EBA /* Pods-CropRegistration.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.debug.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.debug.xcconfig"; sourceTree = "<group>"; };
 		C442F9A3D6C470DBB20EE1BF /* Pods-CropRegistration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CropRegistration.release.xcconfig"; path = "Target Support Files/Pods-CropRegistration/Pods-CropRegistration.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				885209712A5B9D40008FD307 /* main.jsbundle */,
 				13B07FAE1A68108700A75B9A /* CropRegistration */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* CropRegistrationTests */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885209722A5B9D40008FD307 /* main.jsbundle in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -266,8 +270,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "
-";
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		05B4FF977A94380B81F49968 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -492,7 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
@@ -504,7 +507,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 41.0;
+				MARKETING_VERSION = 42.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -529,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 41;
+				CURRENT_PROJECT_VERSION = 42;
 				DEVELOPMENT_TEAM = 4Q6XJ675Q5;
 				INFOPLIST_FILE = CropRegistration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -540,7 +543,7 @@
 					"$(inherited)",
 					"$(SDKROOT)/usr/lib/swift",
 				);
-				MARKETING_VERSION = 41.0;
+				MARKETING_VERSION = 42.0;
 				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "--generate-entitlement-der";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
