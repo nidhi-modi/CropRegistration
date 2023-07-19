@@ -114,28 +114,8 @@ export default class Har123 extends Component {
           <View style={styles.containerView}>
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() =>
-                this.props.navigation.navigate('Har1AvalantinoRow')
-              }>
-              <Text style={styles.buttonText}>HAR 1 - Avalantino</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() =>
-                this.props.navigation.navigate('Har1SunsetDelightRow')
-              }>
-              <Text style={styles.buttonText}>HAR 1 - Sunset Delight</Text>
-            </TouchableOpacity>
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            <TouchableOpacity
-              style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har1DunistarRow')}>
-              <Text style={styles.buttonText}>HAR 1 - Dunistar</Text>
+              onPress={() => this.props.navigation.navigate('Har1IntenseRow')}>
+              <Text style={styles.buttonText}>HAR 1 - Intense</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

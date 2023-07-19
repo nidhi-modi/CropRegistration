@@ -16,7 +16,7 @@ import {EventRegister} from 'react-native-event-listeners';
 
 var screenWidth = Dimensions.get('window').width / 1.6;
 
-export default class Har1AvalantinoRow extends Component {
+export default class Har1IntenseRow extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -41,7 +41,7 @@ export default class Har1AvalantinoRow extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 1 - Avalantino</Text>
+            <Text style={styles.text}>HAR 1 - Intense</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -56,9 +56,9 @@ export default class Har1AvalantinoRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Har1AvalantinoPlantsRow1')
+                this.props.navigation.navigate('Har1IntensePlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 134</Text>
+              <Text style={styles.buttonText}>Row 133</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -66,9 +66,9 @@ export default class Har1AvalantinoRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Har1AvalantinoPlantsRow2')
+                this.props.navigation.navigate('Har1IntensePlantsRow2')
               }>
-              <Text style={styles.buttonText}>Row 153</Text>
+              <Text style={styles.buttonText}>Row 134</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

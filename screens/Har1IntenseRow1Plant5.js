@@ -26,7 +26,7 @@ let screenWidth = Dimensions.get('window').width;
 let screenHeight = Dimensions.get('window').height;
 const db = new Database();
 
-export default class Har1AvalantinoRow2Plant2 extends Component {
+export default class Har1IntenseRow1Plant5 extends Component {
   constructor(props) {
     super(props);
 
@@ -34,7 +34,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
     this.onFocus = this.onFocus.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
-    this.onSubmitleavesPerPlantHar1AvalantinoRow2Plant2 = this.onSubmitleavesPerPlantHar1AvalantinoRow2Plant2.bind(
+    this.onSubmitleavesPerPlantHar1IntenseRow1Plant5 = this.onSubmitleavesPerPlantHar1IntenseRow1Plant5.bind(
       this,
     );
     this.onSubmitFullysetTruss = this.onSubmitFullysetTruss.bind(this);
@@ -49,9 +49,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     );
     this.onAccessoryPress = this.onAccessoryPress.bind(this);
 
-    this.leavesPerPlantHar1AvalantinoRow2Plant2Ref = this.updateRef.bind(
+    this.leavesPerPlantHar1IntenseRow1Plant5Ref = this.updateRef.bind(
       this,
-      'leavesPerPlantHar1AvalantinoRow2Plant2',
+      'leavesPerPlantHar1IntenseRow1Plant5',
     );
     this.fullysetTrussRef = this.updateRef.bind(this, 'FullysetTruss');
     this.trussLengthRef = this.updateRef.bind(this, 'TrussLength');
@@ -74,92 +74,92 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
       plantRow: '',
       plantName: '',
       plantWeek: '',
-      leavesPerPlantHar1AvalantinoRow2Plant2: '',
-      fullySetTrussHar1AvalantinoRow2Plant2: '',
-      setTrussLengthHar1AvalantinoRow2Plant2: '',
-      weeklyGrowthHar1AvalantinoRow2Plant2: '',
-      floweringTrussHeightHar1AvalantinoRow2Plant2: '',
-      leafLengthHar1AvalantinoRow2Plant2: '',
-      leafWidthHar1AvalantinoRow2Plant2: '',
-      stmDiameterHar1AvalantinoRow2Plant2: '',
-      lastWeekStmDiameterHar1AvalantinoRow2Plant2: '',
+      leavesPerPlantHar1IntenseRow1Plant5: '',
+      fullySetTrussHar1IntenseRow1Plant5: '',
+      setTrussLengthHar1IntenseRow1Plant5: '',
+      weeklyGrowthHar1IntenseRow1Plant5: '',
+      floweringTrussHeightHar1IntenseRow1Plant5: '',
+      leafLengthHar1IntenseRow1Plant5: '',
+      leafWidthHar1IntenseRow1Plant5: '',
+      stmDiameterHar1IntenseRow1Plant5: '',
+      lastWeekStmDiameterHar1IntenseRow1Plant5: '',
       isLoading: false,
       errors: false,
 
       //Truss
-      trussNumberHar1AvalantinoRow2Plant2: '',
-      setFruitsHar1AvalantinoRow2Plant2: '',
-      setFlowersHar1AvalantinoRow2Plant2: '',
-      pruningNumberHar1AvalantinoRow2Plant2: '',
-      fruitDiameterHar1AvalantinoRow2Plant2: '',
+      trussNumberHar1IntenseRow1Plant5: '',
+      setFruitsHar1IntenseRow1Plant5: '',
+      setFlowersHar1IntenseRow1Plant5: '',
+      pruningNumberHar1IntenseRow1Plant5: '',
+      fruitDiameterHar1IntenseRow1Plant5: '',
 
-      trussNumber1Har1AvalantinoRow2Plant2: '',
-      setFruits1Har1AvalantinoRow2Plant2: '',
-      setFlowers1Har1AvalantinoRow2Plant2: '',
-      pruningNumber1Har1AvalantinoRow2Plant2: '',
-      fruitDiameter1Har1AvalantinoRow2Plant2: '',
+      trussNumber1Har1IntenseRow1Plant5: '',
+      setFruits1Har1IntenseRow1Plant5: '',
+      setFlowers1Har1IntenseRow1Plant5: '',
+      pruningNumber1Har1IntenseRow1Plant5: '',
+      fruitDiameter1Har1IntenseRow1Plant5: '',
 
-      trussNumber2Har1AvalantinoRow2Plant2: '',
-      setFruits2Har1AvalantinoRow2Plant2: '',
-      setFlowers2Har1AvalantinoRow2Plant2: '',
-      pruningNumber2Har1AvalantinoRow2Plant2: '',
-      fruitDiameter2Har1AvalantinoRow2Plant2: '',
+      trussNumber2Har1IntenseRow1Plant5: '',
+      setFruits2Har1IntenseRow1Plant5: '',
+      setFlowers2Har1IntenseRow1Plant5: '',
+      pruningNumber2Har1IntenseRow1Plant5: '',
+      fruitDiameter2Har1IntenseRow1Plant5: '',
 
-      trussNumber3Har1AvalantinoRow2Plant2: '',
-      setFruits3Har1AvalantinoRow2Plant2: '',
-      setFlowers3Har1AvalantinoRow2Plant2: '',
-      pruningNumber3Har1AvalantinoRow2Plant2: '',
-      fruitDiameter3Har1AvalantinoRow2Plant2: '',
+      trussNumber3Har1IntenseRow1Plant5: '',
+      setFruits3Har1IntenseRow1Plant5: '',
+      setFlowers3Har1IntenseRow1Plant5: '',
+      pruningNumber3Har1IntenseRow1Plant5: '',
+      fruitDiameter3Har1IntenseRow1Plant5: '',
 
-      trussNumber4Har1AvalantinoRow2Plant2: '',
-      setFruits4Har1AvalantinoRow2Plant2: '',
-      setFlowers4Har1AvalantinoRow2Plant2: '',
-      pruningNumber4Har1AvalantinoRow2Plant2: '',
-      fruitDiameter4Har1AvalantinoRow2Plant2: '',
+      trussNumber4Har1IntenseRow1Plant5: '',
+      setFruits4Har1IntenseRow1Plant5: '',
+      setFlowers4Har1IntenseRow1Plant5: '',
+      pruningNumber4Har1IntenseRow1Plant5: '',
+      fruitDiameter4Har1IntenseRow1Plant5: '',
 
-      trussNumber5Har1AvalantinoRow2Plant2: '',
-      setFruits5Har1AvalantinoRow2Plant2: '',
-      setFlowers5Har1AvalantinoRow2Plant2: '',
-      pruningNumber5Har1AvalantinoRow2Plant2: '',
-      fruitDiameter5Har1AvalantinoRow2Plant2: '',
+      trussNumber5Har1IntenseRow1Plant5: '',
+      setFruits5Har1IntenseRow1Plant5: '',
+      setFlowers5Har1IntenseRow1Plant5: '',
+      pruningNumber5Har1IntenseRow1Plant5: '',
+      fruitDiameter5Har1IntenseRow1Plant5: '',
 
-      trussNumber6Har1AvalantinoRow2Plant2: '',
-      setFruits6Har1AvalantinoRow2Plant2: '',
-      setFlowers6Har1AvalantinoRow2Plant2: '',
-      pruningNumber6Har1AvalantinoRow2Plant2: '',
-      fruitDiameter6Har1AvalantinoRow2Plant2: '',
+      trussNumber6Har1IntenseRow1Plant5: '',
+      setFruits6Har1IntenseRow1Plant5: '',
+      setFlowers6Har1IntenseRow1Plant5: '',
+      pruningNumber6Har1IntenseRow1Plant5: '',
+      fruitDiameter6Har1IntenseRow1Plant5: '',
 
-      trussNumber7Har1AvalantinoRow2Plant2: '',
-      setFruits7Har1AvalantinoRow2Plant2: '',
-      setFlowers7Har1AvalantinoRow2Plant2: '',
-      pruningNumber7Har1AvalantinoRow2Plant2: '',
-      fruitDiameter7Har1AvalantinoRow2Plant2: '',
+      trussNumber7Har1IntenseRow1Plant5: '',
+      setFruits7Har1IntenseRow1Plant5: '',
+      setFlowers7Har1IntenseRow1Plant5: '',
+      pruningNumber7Har1IntenseRow1Plant5: '',
+      fruitDiameter7Har1IntenseRow1Plant5: '',
 
-      trussNumber8Har1AvalantinoRow2Plant2: '',
-      setFruits8Har1AvalantinoRow2Plant2: '',
-      setFlowers8Har1AvalantinoRow2Plant2: '',
-      pruningNumber8Har1AvalantinoRow2Plant2: '',
-      fruitDiameter8Har1AvalantinoRow2Plant2: '',
+      trussNumber8Har1IntenseRow1Plant5: '',
+      setFruits8Har1IntenseRow1Plant5: '',
+      setFlowers8Har1IntenseRow1Plant5: '',
+      pruningNumber8Har1IntenseRow1Plant5: '',
+      fruitDiameter8Har1IntenseRow1Plant5: '',
 
-      trussNumber9Har1AvalantinoRow2Plant2: '',
-      setFruits9Har1AvalantinoRow2Plant2: '',
-      setFlowers9Har1AvalantinoRow2Plant2: '',
-      pruningNumber9Har1AvalantinoRow2Plant2: '',
-      fruitDiameter9Har1AvalantinoRow2Plant2: '',
+      trussNumber9Har1IntenseRow1Plant5: '',
+      setFruits9Har1IntenseRow1Plant5: '',
+      setFlowers9Har1IntenseRow1Plant5: '',
+      pruningNumber9Har1IntenseRow1Plant5: '',
+      fruitDiameter9Har1IntenseRow1Plant5: '',
 
-      fruitLoadHar1AvalantinoRow2Plant2: '',
-      harvestTrussHar1AvalantinoRow2Plant2: '',
-      pruningHarHar1AvalantinoRow2Plant2: '',
-      settingTrussNumberHar1AvalantinoRow2Plant2: '',
-      prunSettingHar1AvalantinoRow2Plant2: '',
-      pruneFloweringHar1AvalantinoRow2Plant2: '',
+      fruitLoadHar1IntenseRow1Plant5: '',
+      harvestTrussHar1IntenseRow1Plant5: '',
+      pruningHarHar1IntenseRow1Plant5: '',
+      settingTrussNumberHar1IntenseRow1Plant5: '',
+      prunSettingHar1IntenseRow1Plant5: '',
+      pruneFloweringHar1IntenseRow1Plant5: '',
 
-      floweringTrussNumberHar1AvalantinoRow2Plant2: '',
-      settingTrussHar1AvalantinoRow2Plant2: '',
-      settingTruss2Har1AvalantinoRow2Plant2: '',
-      floweringTrussssHar1AvalantinoRow2Plant2: '',
+      floweringTrussNumberHar1IntenseRow1Plant5: '',
+      settingTrussHar1IntenseRow1Plant5: '',
+      settingTruss2Har1IntenseRow1Plant5: '',
+      floweringTrussssHar1IntenseRow1Plant5: '',
 
-      Har1AvalantinoRow2Plant2Selected: false,
+      Har1IntenseRow1Plant5Selected: false,
       checkboxStatus: '',
 
       allTrussData: [],
@@ -234,9 +234,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           //Change week number
           const weekRowPlant = d =>
-            d.plantName === 'HAR 1 - Avalantino' &&
-            d.plantNumber === 2 &&
-            d.plantRow === '153' &&
+            d.plantName === 'HAR 1 - Intense' &&
+            d.plantNumber === 5 &&
+            d.plantRow === '133' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -259,9 +259,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           //Change week number
           const weekRowTruss = d =>
-            d.plantName === 'HAR 1 - Avalantino' &&
-            d.plantNumber === 2 &&
-            d.plantRow === '153' &&
+            d.plantName === 'HAR 1 - Intense' &&
+            d.plantNumber === 5 &&
+            d.plantRow === '133' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -459,172 +459,161 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   getAsysncValues = async () => {
     try {
-      AsyncStorage.getItem('leavesPerPlantHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('leavesPerPlantHar1IntenseRow1Plant5')
         .then(text1Value => {
           this.setState({
-            leavesPerPlantHar1AvalantinoRow2Plant2: JSON.parse(text1Value),
+            leavesPerPlantHar1IntenseRow1Plant5: JSON.parse(text1Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fullySetTrussHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fullySetTrussHar1IntenseRow1Plant5')
         .then(text2Value => {
           this.setState({
-            fullySetTrussHar1AvalantinoRow2Plant2: JSON.parse(text2Value),
+            fullySetTrussHar1IntenseRow1Plant5: JSON.parse(text2Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setTrussLengthHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setTrussLengthHar1IntenseRow1Plant5')
         .then(text3Value => {
           this.setState({
-            setTrussLengthHar1AvalantinoRow2Plant2: JSON.parse(text3Value),
+            setTrussLengthHar1IntenseRow1Plant5: JSON.parse(text3Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('weeklyGrowthHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('weeklyGrowthHar1IntenseRow1Plant5')
         .then(text4Value => {
           this.setState({
-            weeklyGrowthHar1AvalantinoRow2Plant2: JSON.parse(text4Value),
+            weeklyGrowthHar1IntenseRow1Plant5: JSON.parse(text4Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('floweringTrussHeightHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('floweringTrussHeightHar1IntenseRow1Plant5')
         .then(text5Value => {
           this.setState({
-            floweringTrussHeightHar1AvalantinoRow2Plant2: JSON.parse(
-              text5Value,
-            ),
+            floweringTrussHeightHar1IntenseRow1Plant5: JSON.parse(text5Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('leafLengthHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('leafLengthHar1IntenseRow1Plant5')
         .then(text6Value => {
           this.setState({
-            leafLengthHar1AvalantinoRow2Plant2: JSON.parse(text6Value),
+            leafLengthHar1IntenseRow1Plant5: JSON.parse(text6Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('leafWidthHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('leafWidthHar1IntenseRow1Plant5')
         .then(text7Value => {
           this.setState({
-            leafWidthHar1AvalantinoRow2Plant2: JSON.parse(text7Value),
+            leafWidthHar1IntenseRow1Plant5: JSON.parse(text7Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('stmDiameterHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('stmDiameterHar1IntenseRow1Plant5')
         .then(text8Value => {
           this.setState({
-            stmDiameterHar1AvalantinoRow2Plant2: JSON.parse(text8Value),
+            stmDiameterHar1IntenseRow1Plant5: JSON.parse(text8Value),
           });
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('lastWeekStmDiameterHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('lastWeekStmDiameterHar1IntenseRow1Plant5')
         .then(text9Value => {
           this.setState({
-            lastWeekStmDiameterHar1AvalantinoRow2Plant2: JSON.parse(text9Value),
+            lastWeekStmDiameterHar1IntenseRow1Plant5: JSON.parse(text9Value),
           });
         })
         .done();
     } catch (error) {}
 
     try {
-      AsyncStorage.getItem('Har1AvalantinoRow2Plant2Selected')
+      AsyncStorage.getItem('Har1IntenseRow1Plant5Selected')
         .then(text99Value => {
           this.setState({
-            Har1AvalantinoRow2Plant2Selected: JSON.parse(text99Value),
+            Har1IntenseRow1Plant5Selected: JSON.parse(text99Value),
           });
 
-          console.log(this.state.Har1AvalantinoRow2Plant2Selected);
+          console.log(this.state.Har1IntenseRow1Plant5Selected);
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('trussNumberHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('trussNumberHar1IntenseRow1Plant5')
         .then(text10Value => {
           if (text10Value !== null) {
             this.setState({
-              trussNumberHar1AvalantinoRow2Plant2: JSON.parse(text10Value),
+              trussNumberHar1IntenseRow1Plant5: JSON.parse(text10Value),
             });
 
             this.setState({
-              trussNumber1Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 1,
+              trussNumber1Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                1,
             });
             this.setState({
-              trussNumber2Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 2,
+              trussNumber2Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                2,
             });
             this.setState({
-              trussNumber3Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 3,
+              trussNumber3Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                3,
             });
             this.setState({
-              trussNumber4Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 4,
+              trussNumber4Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                4,
             });
             this.setState({
-              trussNumber5Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 5,
+              trussNumber5Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                5,
             });
             this.setState({
-              trussNumber6Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 6,
+              trussNumber6Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                6,
             });
             this.setState({
-              trussNumber7Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 7,
+              trussNumber7Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                7,
             });
             this.setState({
-              trussNumber8Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 8,
+              trussNumber8Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                8,
             });
             this.setState({
-              trussNumber9Har1AvalantinoRow2Plant2:
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 9,
+              trussNumber9Har1IntenseRow1Plant5:
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                9,
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFruitsHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruitsHar1IntenseRow1Plant5')
         .then(text11Value => {
           if (text11Value !== null) {
             this.setState({
-              setFruitsHar1AvalantinoRow2Plant2: JSON.parse(text11Value),
+              setFruitsHar1IntenseRow1Plant5: JSON.parse(text11Value),
             });
           }
         })
@@ -632,33 +621,33 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     } catch (error) {}
 
     try {
-      AsyncStorage.getItem('setFlowersHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowersHar1IntenseRow1Plant5')
         .then(text12Value => {
           if (text12Value !== null) {
             this.setState({
-              setFlowersHar1AvalantinoRow2Plant2: JSON.parse(text12Value),
+              setFlowersHar1IntenseRow1Plant5: JSON.parse(text12Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumberHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumberHar1IntenseRow1Plant5')
         .then(text13Value => {
           if (text13Value !== null) {
             this.setState({
-              pruningNumberHar1AvalantinoRow2Plant2: JSON.parse(text13Value),
+              pruningNumberHar1IntenseRow1Plant5: JSON.parse(text13Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameterHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameterHar1IntenseRow1Plant5')
         .then(text14Value => {
           if (text14Value !== null) {
             this.setState({
-              fruitDiameterHar1AvalantinoRow2Plant2: JSON.parse(text14Value),
+              fruitDiameterHar1IntenseRow1Plant5: JSON.parse(text14Value),
             });
           }
         })
@@ -668,44 +657,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 1---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits1Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits1Har1IntenseRow1Plant5')
         .then(text16Value => {
           if (text16Value !== null) {
             this.setState({
-              setFruits1Har1AvalantinoRow2Plant2: JSON.parse(text16Value),
+              setFruits1Har1IntenseRow1Plant5: JSON.parse(text16Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers1Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers1Har1IntenseRow1Plant5')
         .then(text17Value => {
           if (text17Value !== null) {
             this.setState({
-              setFlowers1Har1AvalantinoRow2Plant2: JSON.parse(text17Value),
+              setFlowers1Har1IntenseRow1Plant5: JSON.parse(text17Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber1Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber1Har1IntenseRow1Plant5')
         .then(text18Value => {
           if (text18Value !== null) {
             this.setState({
-              pruningNumber1Har1AvalantinoRow2Plant2: JSON.parse(text18Value),
+              pruningNumber1Har1IntenseRow1Plant5: JSON.parse(text18Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter1Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter1Har1IntenseRow1Plant5')
         .then(text19Value => {
           if (text19Value !== null) {
             this.setState({
-              fruitDiameter1Har1AvalantinoRow2Plant2: JSON.parse(text19Value),
+              fruitDiameter1Har1IntenseRow1Plant5: JSON.parse(text19Value),
             });
           }
         })
@@ -715,44 +704,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 2---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits2Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits2Har1IntenseRow1Plant5')
         .then(text17Value => {
           if (text17Value !== null) {
             this.setState({
-              setFruits2Har1AvalantinoRow2Plant2: JSON.parse(text17Value),
+              setFruits2Har1IntenseRow1Plant5: JSON.parse(text17Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers2Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers2Har1IntenseRow1Plant5')
         .then(text18Value => {
           if (text18Value !== null) {
             this.setState({
-              setFlowers2Har1AvalantinoRow2Plant2: JSON.parse(text18Value),
+              setFlowers2Har1IntenseRow1Plant5: JSON.parse(text18Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber2Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber2Har1IntenseRow1Plant5')
         .then(text19Value => {
           if (text19Value !== null) {
             this.setState({
-              pruningNumber2Har1AvalantinoRow2Plant2: JSON.parse(text19Value),
+              pruningNumber2Har1IntenseRow1Plant5: JSON.parse(text19Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter2Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter2Har1IntenseRow1Plant5')
         .then(text20Value => {
           if (text20Value !== null) {
             this.setState({
-              fruitDiameter2Har1AvalantinoRow2Plant2: JSON.parse(text20Value),
+              fruitDiameter2Har1IntenseRow1Plant5: JSON.parse(text20Value),
             });
           }
         })
@@ -762,44 +751,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 3---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits3Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits3Har1IntenseRow1Plant5')
         .then(text21Value => {
           if (text21Value !== null) {
             this.setState({
-              setFruits3Har1AvalantinoRow2Plant2: JSON.parse(text21Value),
+              setFruits3Har1IntenseRow1Plant5: JSON.parse(text21Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers3Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers3Har1IntenseRow1Plant5')
         .then(text22Value => {
           if (text22Value !== null) {
             this.setState({
-              setFlowers3Har1AvalantinoRow2Plant2: JSON.parse(text22Value),
+              setFlowers3Har1IntenseRow1Plant5: JSON.parse(text22Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber3Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber3Har1IntenseRow1Plant5')
         .then(text23Value => {
           if (text23Value !== null) {
             this.setState({
-              pruningNumber3Har1AvalantinoRow2Plant2: JSON.parse(text23Value),
+              pruningNumber3Har1IntenseRow1Plant5: JSON.parse(text23Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter3Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter3Har1IntenseRow1Plant5')
         .then(text24Value => {
           if (text24Value !== null) {
             this.setState({
-              fruitDiameter3Har1AvalantinoRow2Plant2: JSON.parse(text24Value),
+              fruitDiameter3Har1IntenseRow1Plant5: JSON.parse(text24Value),
             });
           }
         })
@@ -809,44 +798,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 4---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits4Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits4Har1IntenseRow1Plant5')
         .then(text25Value => {
           if (text25Value !== null) {
             this.setState({
-              setFruits4Har1AvalantinoRow2Plant2: JSON.parse(text25Value),
+              setFruits4Har1IntenseRow1Plant5: JSON.parse(text25Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers4Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers4Har1IntenseRow1Plant5')
         .then(text26Value => {
           if (text26Value !== null) {
             this.setState({
-              setFlowers4Har1AvalantinoRow2Plant2: JSON.parse(text26Value),
+              setFlowers4Har1IntenseRow1Plant5: JSON.parse(text26Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber4Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber4Har1IntenseRow1Plant5')
         .then(text27Value => {
           if (text27Value !== null) {
             this.setState({
-              pruningNumber4Har1AvalantinoRow2Plant2: JSON.parse(text27Value),
+              pruningNumber4Har1IntenseRow1Plant5: JSON.parse(text27Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter4Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter4Har1IntenseRow1Plant5')
         .then(text28Value => {
           if (text28Value !== null) {
             this.setState({
-              fruitDiameter4Har1AvalantinoRow2Plant2: JSON.parse(text28Value),
+              fruitDiameter4Har1IntenseRow1Plant5: JSON.parse(text28Value),
             });
           }
         })
@@ -856,44 +845,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 5---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits5Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits5Har1IntenseRow1Plant5')
         .then(text29Value => {
           if (text29Value !== null) {
             this.setState({
-              setFruits5Har1AvalantinoRow2Plant2: JSON.parse(text29Value),
+              setFruits5Har1IntenseRow1Plant5: JSON.parse(text29Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers5Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers5Har1IntenseRow1Plant5')
         .then(text30Value => {
           if (text30Value !== null) {
             this.setState({
-              setFlowers5Har1AvalantinoRow2Plant2: JSON.parse(text30Value),
+              setFlowers5Har1IntenseRow1Plant5: JSON.parse(text30Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber5Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber5Har1IntenseRow1Plant5')
         .then(text31Value => {
           if (text31Value !== null) {
             this.setState({
-              pruningNumber5Har1AvalantinoRow2Plant2: JSON.parse(text31Value),
+              pruningNumber5Har1IntenseRow1Plant5: JSON.parse(text31Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter5Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter5Har1IntenseRow1Plant5')
         .then(text32Value => {
           if (text32Value !== null) {
             this.setState({
-              fruitDiameter5Har1AvalantinoRow2Plant2: JSON.parse(text32Value),
+              fruitDiameter5Har1IntenseRow1Plant5: JSON.parse(text32Value),
             });
           }
         })
@@ -903,44 +892,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 6---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits6Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits6Har1IntenseRow1Plant5')
         .then(text33Value => {
           if (text33Value !== null) {
             this.setState({
-              setFruits6Har1AvalantinoRow2Plant2: JSON.parse(text33Value),
+              setFruits6Har1IntenseRow1Plant5: JSON.parse(text33Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers6Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers6Har1IntenseRow1Plant5')
         .then(text34Value => {
           if (text34Value !== null) {
             this.setState({
-              setFlowers6Har1AvalantinoRow2Plant2: JSON.parse(text34Value),
+              setFlowers6Har1IntenseRow1Plant5: JSON.parse(text34Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber6Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber6Har1IntenseRow1Plant5')
         .then(text35Value => {
           if (text35Value !== null) {
             this.setState({
-              pruningNumber6Har1AvalantinoRow2Plant2: JSON.parse(text35Value),
+              pruningNumber6Har1IntenseRow1Plant5: JSON.parse(text35Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter6Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter6Har1IntenseRow1Plant5')
         .then(text36Value => {
           if (text36Value !== null) {
             this.setState({
-              fruitDiameter6Har1AvalantinoRow2Plant2: JSON.parse(text36Value),
+              fruitDiameter6Har1IntenseRow1Plant5: JSON.parse(text36Value),
             });
           }
         })
@@ -950,44 +939,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 7---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits7Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits7Har1IntenseRow1Plant5')
         .then(text37Value => {
           if (text37Value !== null) {
             this.setState({
-              setFruits7Har1AvalantinoRow2Plant2: JSON.parse(text37Value),
+              setFruits7Har1IntenseRow1Plant5: JSON.parse(text37Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers7Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers7Har1IntenseRow1Plant5')
         .then(text38Value => {
           if (text38Value !== null) {
             this.setState({
-              setFlowers7Har1AvalantinoRow2Plant2: JSON.parse(text38Value),
+              setFlowers7Har1IntenseRow1Plant5: JSON.parse(text38Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber7Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber7Har1IntenseRow1Plant5')
         .then(text39Value => {
           if (text39Value !== null) {
             this.setState({
-              pruningNumber7Har1AvalantinoRow2Plant2: JSON.parse(text39Value),
+              pruningNumber7Har1IntenseRow1Plant5: JSON.parse(text39Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter7Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter7Har1IntenseRow1Plant5')
         .then(text40Value => {
           if (text40Value !== null) {
             this.setState({
-              fruitDiameter7Har1AvalantinoRow2Plant2: JSON.parse(text40Value),
+              fruitDiameter7Har1IntenseRow1Plant5: JSON.parse(text40Value),
             });
           }
         })
@@ -997,44 +986,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 8---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits8Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits8Har1IntenseRow1Plant5')
         .then(text41Value => {
           if (text41Value !== null) {
             this.setState({
-              setFruits8Har1AvalantinoRow2Plant2: JSON.parse(text41Value),
+              setFruits8Har1IntenseRow1Plant5: JSON.parse(text41Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers8Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers8Har1IntenseRow1Plant5')
         .then(text42Value => {
           if (text42Value !== null) {
             this.setState({
-              setFlowers8Har1AvalantinoRow2Plant2: JSON.parse(text42Value),
+              setFlowers8Har1IntenseRow1Plant5: JSON.parse(text42Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber8Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber8Har1IntenseRow1Plant5')
         .then(text43Value => {
           if (text43Value !== null) {
             this.setState({
-              pruningNumber8Har1AvalantinoRow2Plant2: JSON.parse(text43Value),
+              pruningNumber8Har1IntenseRow1Plant5: JSON.parse(text43Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter8Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter8Har1IntenseRow1Plant5')
         .then(text44Value => {
           if (text44Value !== null) {
             this.setState({
-              fruitDiameter8Har1AvalantinoRow2Plant2: JSON.parse(text44Value),
+              fruitDiameter8Har1IntenseRow1Plant5: JSON.parse(text44Value),
             });
           }
         })
@@ -1044,44 +1033,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Truss 9---------------------------------//
 
     try {
-      AsyncStorage.getItem('setFruits9Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFruits9Har1IntenseRow1Plant5')
         .then(text45Value => {
           if (text45Value !== null) {
             this.setState({
-              setFruits9Har1AvalantinoRow2Plant2: JSON.parse(text45Value),
+              setFruits9Har1IntenseRow1Plant5: JSON.parse(text45Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('setFlowers9Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('setFlowers9Har1IntenseRow1Plant5')
         .then(text46Value => {
           if (text46Value !== null) {
             this.setState({
-              setFlowers9Har1AvalantinoRow2Plant2: JSON.parse(text46Value),
+              setFlowers9Har1IntenseRow1Plant5: JSON.parse(text46Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('pruningNumber9Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('pruningNumber9Har1IntenseRow1Plant5')
         .then(text47Value => {
           if (text47Value !== null) {
             this.setState({
-              pruningNumber9Har1AvalantinoRow2Plant2: JSON.parse(text47Value),
+              pruningNumber9Har1IntenseRow1Plant5: JSON.parse(text47Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('fruitDiameter9Har1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitDiameter9Har1IntenseRow1Plant5')
         .then(text48Value => {
           if (text48Value !== null) {
             this.setState({
-              fruitDiameter9Har1AvalantinoRow2Plant2: JSON.parse(text48Value),
+              fruitDiameter9Har1IntenseRow1Plant5: JSON.parse(text48Value),
             });
           }
         })
@@ -1091,46 +1080,44 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     //-------------------------Calculations---------------------------------//
 
     try {
-      AsyncStorage.getItem('fruitLoadHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('fruitLoadHar1IntenseRow1Plant5')
         .then(text49Value => {
           if (text49Value !== null) {
             this.setState({
-              fruitLoadHar1AvalantinoRow2Plant2: JSON.parse(text49Value),
+              fruitLoadHar1IntenseRow1Plant5: JSON.parse(text49Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('floweringTrussssHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('floweringTrussssHar1IntenseRow1Plant5')
         .then(text50Value => {
           if (text50Value !== null) {
             this.setState({
-              floweringTrussssHar1AvalantinoRow2Plant2: JSON.parse(text50Value),
+              floweringTrussssHar1IntenseRow1Plant5: JSON.parse(text50Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('settingTrussNumberHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('settingTrussNumberHar1IntenseRow1Plant5')
         .then(text51Value => {
           if (text51Value !== null) {
             this.setState({
-              settingTrussNumberHar1AvalantinoRow2Plant2: JSON.parse(
-                text51Value,
-              ),
+              settingTrussNumberHar1IntenseRow1Plant5: JSON.parse(text51Value),
             });
           }
         })
         .done();
     } catch (error) {}
     try {
-      AsyncStorage.getItem('harvestTrussHar1AvalantinoRow2Plant2')
+      AsyncStorage.getItem('harvestTrussHar1IntenseRow1Plant5')
         .then(text52Value => {
           if (text52Value !== null) {
             this.setState({
-              harvestTrussHar1AvalantinoRow2Plant2: JSON.parse(text52Value),
+              harvestTrussHar1IntenseRow1Plant5: JSON.parse(text52Value),
             });
           }
         })
@@ -1138,9 +1125,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     } catch (error) {}
 
     /*try {
-      AsyncStorage.getItem('trussNumberHar1AvalantinoRow2Plant2').then((text10Value) => {
-        this.setState({ trussNumberHar1AvalantinoRow2Plant2: JSON.parse(text10Value) });
-        console.log(this.state.trussNumberHar1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('trussNumberHar1IntenseRow1Plant5').then((text10Value) => {
+        this.setState({ trussNumberHar1IntenseRow1Plant5: JSON.parse(text10Value) });
+        console.log(this.state.trussNumberHar1IntenseRow1Plant5)
 
 
 
@@ -1149,9 +1136,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruitsHar1AvalantinoRow2Plant2').then((text11Value) => {
-        this.setState({ setFruitsHar1AvalantinoRow2Plant2: JSON.parse(text11Value) });
-        console.log(this.state.setFruitsHar1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFruitsHar1IntenseRow1Plant5').then((text11Value) => {
+        this.setState({ setFruitsHar1IntenseRow1Plant5: JSON.parse(text11Value) });
+        console.log(this.state.setFruitsHar1IntenseRow1Plant5)
 
 
 
@@ -1160,9 +1147,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowersHar1AvalantinoRow2Plant2').then((text12Value) => {
-        this.setState({ setFlowersHar1AvalantinoRow2Plant2: JSON.parse(text12Value) });
-        console.log(this.state.setFlowersHar1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFlowersHar1IntenseRow1Plant5').then((text12Value) => {
+        this.setState({ setFlowersHar1IntenseRow1Plant5: JSON.parse(text12Value) });
+        console.log(this.state.setFlowersHar1IntenseRow1Plant5)
 
 
 
@@ -1171,9 +1158,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumberHar1AvalantinoRow2Plant2').then((text13Value) => {
-        this.setState({ pruningNumberHar1AvalantinoRow2Plant2: JSON.parse(text13Value) });
-        console.log(this.state.pruningNumberHar1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('pruningNumberHar1IntenseRow1Plant5').then((text13Value) => {
+        this.setState({ pruningNumberHar1IntenseRow1Plant5: JSON.parse(text13Value) });
+        console.log(this.state.pruningNumberHar1IntenseRow1Plant5)
 
 
 
@@ -1182,9 +1169,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameterHar1AvalantinoRow2Plant2').then((text14Value) => {
-        this.setState({ fruitDiameterHar1AvalantinoRow2Plant2: JSON.parse(text14Value) });
-        console.log(this.state.fruitDiameterHar1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('fruitDiameterHar1IntenseRow1Plant5').then((text14Value) => {
+        this.setState({ fruitDiameterHar1IntenseRow1Plant5: JSON.parse(text14Value) });
+        console.log(this.state.fruitDiameterHar1IntenseRow1Plant5)
 
 
 
@@ -1193,9 +1180,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits1Har1AvalantinoRow2Plant2').then((text15Value) => {
-        this.setState({ setFruits1Har1AvalantinoRow2Plant2: JSON.parse(text15Value) });
-        console.log(this.state.setFruits1Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFruits1Har1IntenseRow1Plant5').then((text15Value) => {
+        this.setState({ setFruits1Har1IntenseRow1Plant5: JSON.parse(text15Value) });
+        console.log(this.state.setFruits1Har1IntenseRow1Plant5)
 
 
 
@@ -1204,9 +1191,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers1Har1AvalantinoRow2Plant2').then((text16Value) => {
-        this.setState({ setFlowers1Har1AvalantinoRow2Plant2: JSON.parse(text16Value) });
-        console.log(this.state.setFlowers1Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFlowers1Har1IntenseRow1Plant5').then((text16Value) => {
+        this.setState({ setFlowers1Har1IntenseRow1Plant5: JSON.parse(text16Value) });
+        console.log(this.state.setFlowers1Har1IntenseRow1Plant5)
 
 
 
@@ -1215,9 +1202,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber1Har1AvalantinoRow2Plant2').then((text17Value) => {
-        this.setState({ pruningNumber1Har1AvalantinoRow2Plant2: JSON.parse(text17Value) });
-        console.log(this.state.pruningNumber1Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('pruningNumber1Har1IntenseRow1Plant5').then((text17Value) => {
+        this.setState({ pruningNumber1Har1IntenseRow1Plant5: JSON.parse(text17Value) });
+        console.log(this.state.pruningNumber1Har1IntenseRow1Plant5)
 
 
 
@@ -1226,9 +1213,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter1Har1AvalantinoRow2Plant2').then((text18Value) => {
-        this.setState({ fruitDiameter1Har1AvalantinoRow2Plant2: JSON.parse(text18Value) });
-        console.log(this.state.fruitDiameter1Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('fruitDiameter1Har1IntenseRow1Plant5').then((text18Value) => {
+        this.setState({ fruitDiameter1Har1IntenseRow1Plant5: JSON.parse(text18Value) });
+        console.log(this.state.fruitDiameter1Har1IntenseRow1Plant5)
 
 
 
@@ -1237,9 +1224,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits2Har1AvalantinoRow2Plant2').then((text19Value) => {
-        this.setState({ setFruits2Har1AvalantinoRow2Plant2: JSON.parse(text19Value) });
-        console.log(this.state.setFruits2Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFruits2Har1IntenseRow1Plant5').then((text19Value) => {
+        this.setState({ setFruits2Har1IntenseRow1Plant5: JSON.parse(text19Value) });
+        console.log(this.state.setFruits2Har1IntenseRow1Plant5)
 
 
 
@@ -1248,9 +1235,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers2Har1AvalantinoRow2Plant2').then((text20Value) => {
-        this.setState({ setFlowers2Har1AvalantinoRow2Plant2: JSON.parse(text20Value) });
-        console.log(this.state.setFlowers2Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFlowers2Har1IntenseRow1Plant5').then((text20Value) => {
+        this.setState({ setFlowers2Har1IntenseRow1Plant5: JSON.parse(text20Value) });
+        console.log(this.state.setFlowers2Har1IntenseRow1Plant5)
 
 
 
@@ -1259,9 +1246,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber2Har1AvalantinoRow2Plant2').then((text21Value) => {
-        this.setState({ pruningNumber2Har1AvalantinoRow2Plant2: JSON.parse(text21Value) });
-        console.log(this.state.pruningNumber2Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('pruningNumber2Har1IntenseRow1Plant5').then((text21Value) => {
+        this.setState({ pruningNumber2Har1IntenseRow1Plant5: JSON.parse(text21Value) });
+        console.log(this.state.pruningNumber2Har1IntenseRow1Plant5)
 
 
 
@@ -1270,9 +1257,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter2Har1AvalantinoRow2Plant2').then((text22Value) => {
-        this.setState({ fruitDiameter2Har1AvalantinoRow2Plant2: JSON.parse(text22Value) });
-        console.log(this.state.fruitDiameter2Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('fruitDiameter2Har1IntenseRow1Plant5').then((text22Value) => {
+        this.setState({ fruitDiameter2Har1IntenseRow1Plant5: JSON.parse(text22Value) });
+        console.log(this.state.fruitDiameter2Har1IntenseRow1Plant5)
 
 
 
@@ -1281,9 +1268,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFruits3Har1AvalantinoRow2Plant2').then((text23Value) => {
-        this.setState({ setFruits3Har1AvalantinoRow2Plant2: JSON.parse(text23Value) });
-        console.log(this.state.setFruits3Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFruits3Har1IntenseRow1Plant5').then((text23Value) => {
+        this.setState({ setFruits3Har1IntenseRow1Plant5: JSON.parse(text23Value) });
+        console.log(this.state.setFruits3Har1IntenseRow1Plant5)
 
 
 
@@ -1292,9 +1279,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('setFlowers3Har1AvalantinoRow2Plant2').then((text24Value) => {
-        this.setState({ setFlowers3Har1AvalantinoRow2Plant2: JSON.parse(text24Value) });
-        console.log(this.state.setFlowers3Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('setFlowers3Har1IntenseRow1Plant5').then((text24Value) => {
+        this.setState({ setFlowers3Har1IntenseRow1Plant5: JSON.parse(text24Value) });
+        console.log(this.state.setFlowers3Har1IntenseRow1Plant5)
 
 
 
@@ -1303,9 +1290,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('pruningNumber3Har1AvalantinoRow2Plant2').then((text25Value) => {
-        this.setState({ pruningNumber3Har1AvalantinoRow2Plant2: JSON.parse(text25Value) });
-        console.log(this.state.pruningNumber3Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('pruningNumber3Har1IntenseRow1Plant5').then((text25Value) => {
+        this.setState({ pruningNumber3Har1IntenseRow1Plant5: JSON.parse(text25Value) });
+        console.log(this.state.pruningNumber3Har1IntenseRow1Plant5)
 
 
 
@@ -1314,9 +1301,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     }
 
     try {
-      AsyncStorage.getItem('fruitDiameter3Har1AvalantinoRow2Plant2').then((text26Value) => {
-        this.setState({ fruitDiameter3Har1AvalantinoRow2Plant2: JSON.parse(text26Value) });
-        console.log(this.state.fruitDiameter3Har1AvalantinoRow2Plant2)
+      AsyncStorage.getItem('fruitDiameter3Har1IntenseRow1Plant5').then((text26Value) => {
+        this.setState({ fruitDiameter3Har1IntenseRow1Plant5: JSON.parse(text26Value) });
+        console.log(this.state.fruitDiameter3Har1IntenseRow1Plant5)
 
 
 
@@ -1362,43 +1349,43 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     this.setState(state);
 
     this.setState({
-      trussNumber1Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 1,
+      trussNumber1Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1,
     });
     this.setState({
-      trussNumber2Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 2,
+      trussNumber2Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2,
     });
     this.setState({
-      trussNumber3Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 3,
+      trussNumber3Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3,
     });
     this.setState({
-      trussNumber4Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 4,
+      trussNumber4Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4,
     });
     this.setState({
-      trussNumber5Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 5,
+      trussNumber5Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5,
     });
     this.setState({
-      trussNumber6Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 6,
+      trussNumber6Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6,
     });
     this.setState({
-      trussNumber7Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7,
+      trussNumber7Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7,
     });
     this.setState({
-      trussNumber8Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8,
+      trussNumber8Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8,
     });
     this.setState({
-      trussNumber9Har1AvalantinoRow2Plant2:
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9,
+      trussNumber9Har1IntenseRow1Plant5:
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9,
     });
 
-    if (this.state.trussNumberHar1AvalantinoRow2Plant2 !== '') {
+    if (this.state.trussNumberHar1IntenseRow1Plant5 !== '') {
       this.calculateSettingTruss2();
       this.calculateFloweringTruss2();
       this.calculateFruitLoad();
@@ -1406,45 +1393,45 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
       this.getTrussData();
     } else {
       this.setState({
-        setFruitsHar1AvalantinoRow2Plant2: '',
-        setFlowersHar1AvalantinoRow2Plant2: '',
-        pruningNumberHar1AvalantinoRow2Plant2: '',
+        setFruitsHar1IntenseRow1Plant5: '',
+        setFlowersHar1IntenseRow1Plant5: '',
+        pruningNumberHar1IntenseRow1Plant5: '',
 
-        setFruits1Har1AvalantinoRow2Plant2: '',
-        setFlowers1Har1AvalantinoRow2Plant2: '',
-        pruningNumber1Har1AvalantinoRow2Plant2: '',
+        setFruits1Har1IntenseRow1Plant5: '',
+        setFlowers1Har1IntenseRow1Plant5: '',
+        pruningNumber1Har1IntenseRow1Plant5: '',
 
-        setFruits2Har1AvalantinoRow2Plant2: '',
-        setFlowers2Har1AvalantinoRow2Plant2: '',
-        pruningNumber2Har1AvalantinoRow2Plant2: '',
+        setFruits2Har1IntenseRow1Plant5: '',
+        setFlowers2Har1IntenseRow1Plant5: '',
+        pruningNumber2Har1IntenseRow1Plant5: '',
 
-        setFruits3Har1AvalantinoRow2Plant2: '',
-        setFlowers3Har1AvalantinoRow2Plant2: '',
-        pruningNumber3Har1AvalantinoRow2Plant2: '',
+        setFruits3Har1IntenseRow1Plant5: '',
+        setFlowers3Har1IntenseRow1Plant5: '',
+        pruningNumber3Har1IntenseRow1Plant5: '',
 
-        setFruits4Har1AvalantinoRow2Plant2: '',
-        setFlowers4Har1AvalantinoRow2Plant2: '',
-        pruningNumber4Har1AvalantinoRow2Plant2: '',
+        setFruits4Har1IntenseRow1Plant5: '',
+        setFlowers4Har1IntenseRow1Plant5: '',
+        pruningNumber4Har1IntenseRow1Plant5: '',
 
-        setFruits5Har1AvalantinoRow2Plant2: '',
-        setFlowers5Har1AvalantinoRow2Plant2: '',
-        pruningNumber5Har1AvalantinoRow2Plant2: '',
+        setFruits5Har1IntenseRow1Plant5: '',
+        setFlowers5Har1IntenseRow1Plant5: '',
+        pruningNumber5Har1IntenseRow1Plant5: '',
 
-        setFruits6Har1AvalantinoRow2Plant2: '',
-        setFlowers6Har1AvalantinoRow2Plant2: '',
-        pruningNumber6Har1AvalantinoRow2Plant2: '',
+        setFruits6Har1IntenseRow1Plant5: '',
+        setFlowers6Har1IntenseRow1Plant5: '',
+        pruningNumber6Har1IntenseRow1Plant5: '',
 
-        setFruits7Har1AvalantinoRow2Plant2: '',
-        setFlowers7Har1AvalantinoRow2Plant2: '',
-        pruningNumber7Har1AvalantinoRow2Plant2: '',
+        setFruits7Har1IntenseRow1Plant5: '',
+        setFlowers7Har1IntenseRow1Plant5: '',
+        pruningNumber7Har1IntenseRow1Plant5: '',
 
-        setFruits8Har1AvalantinoRow2Plant2: '',
-        setFlowers8Har1AvalantinoRow2Plant2: '',
-        pruningNumber8Har1AvalantinoRow2Plant2: '',
+        setFruits8Har1IntenseRow1Plant5: '',
+        setFlowers8Har1IntenseRow1Plant5: '',
+        pruningNumber8Har1IntenseRow1Plant5: '',
 
-        setFruits9Har1AvalantinoRow2Plant2: '',
-        setFlowers9Har1AvalantinoRow2Plant2: '',
-        pruningNumber9Har1AvalantinoRow2Plant2: '',
+        setFruits9Har1IntenseRow1Plant5: '',
+        setFlowers9Har1IntenseRow1Plant5: '',
+        pruningNumber9Har1IntenseRow1Plant5: '',
       });
     }
   };
@@ -1455,43 +1442,43 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     var sum = 0;
 
     sum =
-      (Number.parseInt(this.state.setFruitsHar1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruitsHar1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruitsHar1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruitsHar1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits1Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits1Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits1Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits1Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits2Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits2Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits2Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits2Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits3Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits3Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits3Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits3Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits4Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits4Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits4Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits4Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits5Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits5Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits5Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits5Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits6Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits6Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits6Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits6Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits7Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits7Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits7Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits7Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits8Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits8Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits8Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits8Har1IntenseRow1Plant5)
         : 0) +
-      (Number.parseInt(this.state.setFruits9Har1AvalantinoRow2Plant2)
-        ? Number.parseInt(this.state.setFruits9Har1AvalantinoRow2Plant2)
+      (Number.parseInt(this.state.setFruits9Har1IntenseRow1Plant5)
+        ? Number.parseInt(this.state.setFruits9Har1IntenseRow1Plant5)
         : 0);
     this.setState({
-      fruitLoadHar1AvalantinoRow2Plant2: sum,
+      fruitLoadHar1IntenseRow1Plant5: sum,
     });
 
     this.setItem(
-      'fruitLoadHar1AvalantinoRow2Plant2',
-      this.state.fruitLoadHar1AvalantinoRow2Plant2,
+      'fruitLoadHar1IntenseRow1Plant5',
+      this.state.fruitLoadHar1IntenseRow1Plant5,
     );
 
     console.log('Fruit Load : ' + sum);
@@ -1503,51 +1490,47 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     var add = 0;
     var prunNum = 0;
 
-    if (this.state.setFlowersHar1AvalantinoRow2Plant2 === '') {
-      prunNum = Number.parseInt(
-        this.state.pruningNumberHar1AvalantinoRow2Plant2,
-      );
+    if (this.state.setFlowersHar1IntenseRow1Plant5 === '') {
+      prunNum = Number.parseInt(this.state.pruningNumberHar1IntenseRow1Plant5);
 
       div =
         Number.parseInt(
-          this.state.setFruitsHar1AvalantinoRow2Plant2
-            ? this.state.setFruitsHar1AvalantinoRow2Plant2
+          this.state.setFruitsHar1IntenseRow1Plant5
+            ? this.state.setFruitsHar1IntenseRow1Plant5
             : 0,
         ) /
         parseFloat(
-          this.state.pruningNumberHar1AvalantinoRow2Plant2
-            ? this.state.pruningNumberHar1AvalantinoRow2Plant2
+          this.state.pruningNumberHar1IntenseRow1Plant5
+            ? this.state.pruningNumberHar1IntenseRow1Plant5
             : 0,
         );
       sub = 1 - div;
       add = (
-        (Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2)
-          ? Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2)
+        (Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5)
+          ? Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5)
           : 0) + sub
       ).toFixed(2);
       this.setState({
-        harvestTrussHar1AvalantinoRow2Plant2: add,
-        pruningHarHar1AvalantinoRow2Plant2: prunNum,
+        harvestTrussHar1IntenseRow1Plant5: add,
+        pruningHarHar1IntenseRow1Plant5: prunNum,
       });
-      this.setItem('pruningHarHar1AvalantinoRow2Plant2', prunNum);
+      this.setItem('pruningHarHar1IntenseRow1Plant5', prunNum);
     } else {
-      prunNum = Number.parseInt(
-        this.state.pruningNumberHar1AvalantinoRow2Plant2,
-      );
-      var num = this.state.trussNumberHar1AvalantinoRow2Plant2;
+      prunNum = Number.parseInt(this.state.pruningNumberHar1IntenseRow1Plant5);
+      var num = this.state.trussNumberHar1IntenseRow1Plant5;
 
       this.setState({
-        harvestTrussHar1AvalantinoRow2Plant2: num,
-        pruningHarHar1AvalantinoRow2Plant2: prunNum,
+        harvestTrussHar1IntenseRow1Plant5: num,
+        pruningHarHar1IntenseRow1Plant5: prunNum,
       });
-      this.setItem('pruningHarHar1AvalantinoRow2Plant2', prunNum);
+      this.setItem('pruningHarHar1IntenseRow1Plant5', prunNum);
     }
 
     console.log('Harvest Truss : ' + add);
 
     this.setItem(
-      'harvestTrussHar1AvalantinoRow2Plant2',
-      this.state.harvestTrussHar1AvalantinoRow2Plant2,
+      'harvestTrussHar1IntenseRow1Plant5',
+      this.state.harvestTrussHar1IntenseRow1Plant5,
     );
   };
 
@@ -1561,28 +1544,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Setting truss called : ' + this.state.setFruits2Har1AvalantinoRow2Plant2,
+      'Setting truss called : ' + this.state.setFruits2Har1IntenseRow1Plant5,
     );
 
-    if (this.state.setFruits9Har1AvalantinoRow2Plant2 === '') {
-      if (this.state.setFruits8Har1AvalantinoRow2Plant2 === '') {
-        if (this.state.setFruits7Har1AvalantinoRow2Plant2 === '') {
-          if (this.state.setFruits6Har1AvalantinoRow2Plant2 === '') {
-            if (this.state.setFruits5Har1AvalantinoRow2Plant2 === '') {
-              if (this.state.setFruits4Har1AvalantinoRow2Plant2 === '') {
-                if (this.state.setFruits3Har1AvalantinoRow2Plant2 === '') {
-                  if (this.state.setFruits2Har1AvalantinoRow2Plant2 === '') {
-                    if (this.state.setFruits1Har1AvalantinoRow2Plant2 === '') {
-                      if (this.state.setFruitsHar1AvalantinoRow2Plant2 === '') {
+    if (this.state.setFruits9Har1IntenseRow1Plant5 === '') {
+      if (this.state.setFruits8Har1IntenseRow1Plant5 === '') {
+        if (this.state.setFruits7Har1IntenseRow1Plant5 === '') {
+          if (this.state.setFruits6Har1IntenseRow1Plant5 === '') {
+            if (this.state.setFruits5Har1IntenseRow1Plant5 === '') {
+              if (this.state.setFruits4Har1IntenseRow1Plant5 === '') {
+                if (this.state.setFruits3Har1IntenseRow1Plant5 === '') {
+                  if (this.state.setFruits2Har1IntenseRow1Plant5 === '') {
+                    if (this.state.setFruits1Har1IntenseRow1Plant5 === '') {
+                      if (this.state.setFruitsHar1IntenseRow1Plant5 === '') {
                       } else {
                         pruningSet = Number.parseInt(
-                          this.state.pruningNumberHar1AvalantinoRow2Plant2,
+                          this.state.pruningNumberHar1IntenseRow1Plant5,
                         );
                         trussNum = Number.parseInt(
-                          this.state.trussNumberHar1AvalantinoRow2Plant2,
+                          this.state.trussNumberHar1IntenseRow1Plant5,
                         );
                         settingFruit = Number.parseInt(
-                          this.state.setFruitsHar1AvalantinoRow2Plant2,
+                          this.state.setFruitsHar1IntenseRow1Plant5,
                         );
                         settingTruss = (
                           trussNum +
@@ -1590,32 +1573,32 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         ).toFixed(2);
                         console.log('Setting Truss Number : ' + settingTruss);
                         this.setState({
-                          settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                          settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                           settingTruss: trussNum,
-                          prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                          prunSettingHar1IntenseRow1Plant5: pruningSet,
                         });
 
                         this.setItem(
-                          'settingTrussNumberHar1AvalantinoRow2Plant2',
+                          'settingTrussNumberHar1IntenseRow1Plant5',
                           settingTruss,
                         );
                         this.setItem(
-                          'prunSettingHar1AvalantinoRow2Plant2',
+                          'prunSettingHar1IntenseRow1Plant5',
                           pruningSet,
                         );
                       }
                     } else {
                       var number =
                         Number.parseInt(
-                          this.state.trussNumberHar1AvalantinoRow2Plant2,
+                          this.state.trussNumberHar1IntenseRow1Plant5,
                         ) + 1;
 
                       pruningSet = Number.parseInt(
-                        this.state.pruningNumber1Har1AvalantinoRow2Plant2,
+                        this.state.pruningNumber1Har1IntenseRow1Plant5,
                       );
                       trussNum = Number.parseInt(number);
                       settingFruit = Number.parseInt(
-                        this.state.setFruits1Har1AvalantinoRow2Plant2,
+                        this.state.setFruits1Har1IntenseRow1Plant5,
                       );
                       settingTruss = (
                         trussNum +
@@ -1623,32 +1606,32 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                       ).toFixed(2);
                       console.log('Setting Truss Number 1 : ' + settingTruss);
                       this.setState({
-                        settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                        settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                         settingTruss: trussNum,
-                        prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                        prunSettingHar1IntenseRow1Plant5: pruningSet,
                       });
 
                       this.setItem(
-                        'settingTrussNumberHar1AvalantinoRow2Plant2',
+                        'settingTrussNumberHar1IntenseRow1Plant5',
                         settingTruss,
                       );
                       this.setItem(
-                        'prunSettingHar1AvalantinoRow2Plant2',
+                        'prunSettingHar1IntenseRow1Plant5',
                         pruningSet,
                       );
                     }
                   } else {
                     var number2 =
                       Number.parseInt(
-                        this.state.trussNumberHar1AvalantinoRow2Plant2,
+                        this.state.trussNumberHar1IntenseRow1Plant5,
                       ) + 2;
 
                     pruningSet = Number.parseInt(
-                      this.state.pruningNumber2Har1AvalantinoRow2Plant2,
+                      this.state.pruningNumber2Har1IntenseRow1Plant5,
                     );
                     trussNum = Number.parseInt(number2);
                     settingFruit = Number.parseInt(
-                      this.state.setFruits2Har1AvalantinoRow2Plant2,
+                      this.state.setFruits2Har1IntenseRow1Plant5,
                     );
                     settingTruss = (
                       trussNum +
@@ -1656,204 +1639,192 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     ).toFixed(2);
                     console.log('Setting Truss Number 2 : ' + settingTruss);
                     this.setState({
-                      settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                      settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                       settingTruss: trussNum,
-                      prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                      prunSettingHar1IntenseRow1Plant5: pruningSet,
                     });
                     this.setItem(
-                      'settingTrussNumberHar1AvalantinoRow2Plant2',
+                      'settingTrussNumberHar1IntenseRow1Plant5',
                       settingTruss,
                     );
                     this.setItem(
-                      'prunSettingHar1AvalantinoRow2Plant2',
+                      'prunSettingHar1IntenseRow1Plant5',
                       pruningSet,
                     );
                   }
                 } else {
                   var number3 =
                     Number.parseInt(
-                      this.state.trussNumberHar1AvalantinoRow2Plant2,
+                      this.state.trussNumberHar1IntenseRow1Plant5,
                     ) + 3;
 
                   pruningSet = Number.parseInt(
-                    this.state.pruningNumber3Har1AvalantinoRow2Plant2,
+                    this.state.pruningNumber3Har1IntenseRow1Plant5,
                   );
                   trussNum = Number.parseInt(number3);
                   settingFruit = Number.parseInt(
-                    this.state.setFruits3Har1AvalantinoRow2Plant2,
+                    this.state.setFruits3Har1IntenseRow1Plant5,
                   );
                   settingTruss = (trussNum + settingFruit / pruningSet).toFixed(
                     2,
                   );
                   console.log('Setting Truss Number 3 : ' + settingTruss);
                   this.setState({
-                    settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                    settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                     settingTruss: trussNum,
-                    prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                    prunSettingHar1IntenseRow1Plant5: pruningSet,
                   });
 
                   this.setItem(
-                    'settingTrussNumberHar1AvalantinoRow2Plant2',
+                    'settingTrussNumberHar1IntenseRow1Plant5',
                     settingTruss,
                   );
-                  this.setItem(
-                    'prunSettingHar1AvalantinoRow2Plant2',
-                    pruningSet,
-                  );
+                  this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
                 }
               } else {
                 var number4 =
-                  Number.parseInt(
-                    this.state.trussNumberHar1AvalantinoRow2Plant2,
-                  ) + 4;
+                  Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                  4;
 
                 pruningSet = Number.parseInt(
-                  this.state.pruningNumber4Har1AvalantinoRow2Plant2,
+                  this.state.pruningNumber4Har1IntenseRow1Plant5,
                 );
                 trussNum = Number.parseInt(number4);
                 settingFruit = Number.parseInt(
-                  this.state.setFruits4Har1AvalantinoRow2Plant2,
+                  this.state.setFruits4Har1IntenseRow1Plant5,
                 );
                 settingTruss = (trussNum + settingFruit / pruningSet).toFixed(
                   2,
                 );
                 console.log('Setting Truss Number 4 : ' + settingTruss);
                 this.setState({
-                  settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                  settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                   settingTruss: trussNum,
-                  prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                  prunSettingHar1IntenseRow1Plant5: pruningSet,
                 });
 
                 this.setItem(
-                  'settingTrussNumberHar1AvalantinoRow2Plant2',
+                  'settingTrussNumberHar1IntenseRow1Plant5',
                   settingTruss,
                 );
-                this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+                this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
               }
             } else {
               var number5 =
-                Number.parseInt(
-                  this.state.trussNumberHar1AvalantinoRow2Plant2,
-                ) + 5;
+                Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) +
+                5;
 
               pruningSet = Number.parseInt(
-                this.state.pruningNumber5Har1AvalantinoRow2Plant2,
+                this.state.pruningNumber5Har1IntenseRow1Plant5,
               );
               trussNum = Number.parseInt(number5);
               settingFruit = Number.parseInt(
-                this.state.setFruits5Har1AvalantinoRow2Plant2,
+                this.state.setFruits5Har1IntenseRow1Plant5,
               );
               settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
               console.log('Setting Truss Number 5 : ' + settingTruss);
               this.setState({
-                settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+                settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
                 settingTruss: trussNum,
-                prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+                prunSettingHar1IntenseRow1Plant5: pruningSet,
               });
 
               this.setItem(
-                'settingTrussNumberHar1AvalantinoRow2Plant2',
+                'settingTrussNumberHar1IntenseRow1Plant5',
                 settingTruss,
               );
-              this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+              this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
             }
           } else {
             var number6 =
-              Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              6;
+              Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6;
 
             pruningSet = Number.parseInt(
-              this.state.pruningNumber6Har1AvalantinoRow2Plant2,
+              this.state.pruningNumber6Har1IntenseRow1Plant5,
             );
             trussNum = Number.parseInt(number6);
             settingFruit = Number.parseInt(
-              this.state.setFruits6Har1AvalantinoRow2Plant2,
+              this.state.setFruits6Har1IntenseRow1Plant5,
             );
             settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
             console.log('Setting Truss Number 6 : ' + settingTruss);
             this.setState({
-              settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+              settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
               settingTruss: trussNum,
-              prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+              prunSettingHar1IntenseRow1Plant5: pruningSet,
             });
 
             this.setItem(
-              'settingTrussNumberHar1AvalantinoRow2Plant2',
+              'settingTrussNumberHar1IntenseRow1Plant5',
               settingTruss,
             );
-            this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+            this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
           }
         } else {
           var number7 =
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7;
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7;
 
           pruningSet = Number.parseInt(
-            this.state.pruningNumber7Har1AvalantinoRow2Plant2,
+            this.state.pruningNumber7Har1IntenseRow1Plant5,
           );
           trussNum = Number.parseInt(number7);
           settingFruit = Number.parseInt(
-            this.state.setFruits7Har1AvalantinoRow2Plant2,
+            this.state.setFruits7Har1IntenseRow1Plant5,
           );
           settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
           console.log('Setting Truss Number 7 : ' + settingTruss);
           this.setState({
-            settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+            settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
             settingTruss: trussNum,
-            prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+            prunSettingHar1IntenseRow1Plant5: pruningSet,
           });
 
-          this.setItem(
-            'settingTrussNumberHar1AvalantinoRow2Plant2',
-            settingTruss,
-          );
-          this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+          this.setItem('settingTrussNumberHar1IntenseRow1Plant5', settingTruss);
+          this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
         }
       } else {
         var number8 =
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8;
 
         pruningSet = Number.parseInt(
-          this.state.pruningNumber8Har1AvalantinoRow2Plant2,
+          this.state.pruningNumber8Har1IntenseRow1Plant5,
         );
         trussNum = Number.parseInt(number8);
         settingFruit = Number.parseInt(
-          this.state.setFruits8Har1AvalantinoRow2Plant2,
+          this.state.setFruits8Har1IntenseRow1Plant5,
         );
         settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
         console.log('Setting Truss Number 8 : ' + settingTruss);
         this.setState({
-          settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+          settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
           settingTruss: trussNum,
-          prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+          prunSettingHar1IntenseRow1Plant5: pruningSet,
         });
 
-        this.setItem(
-          'settingTrussNumberHar1AvalantinoRow2Plant2',
-          settingTruss,
-        );
-        this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+        this.setItem('settingTrussNumberHar1IntenseRow1Plant5', settingTruss);
+        this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
       }
     } else {
       var number9 =
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9;
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9;
 
       pruningSet = Number.parseInt(
-        this.state.pruningNumber9Har1AvalantinoRow2Plant2,
+        this.state.pruningNumber9Har1IntenseRow1Plant5,
       );
       trussNum = Number.parseInt(number9);
       settingFruit = Number.parseInt(
-        this.state.setFruits9Har1AvalantinoRow2Plant2,
+        this.state.setFruits9Har1IntenseRow1Plant5,
       );
       settingTruss = (trussNum + settingFruit / pruningSet).toFixed(2);
       console.log('Setting Truss Number 9 : ' + settingTruss);
       this.setState({
-        settingTrussNumberHar1AvalantinoRow2Plant2: settingTruss,
+        settingTrussNumberHar1IntenseRow1Plant5: settingTruss,
         settingTruss2: trussNum,
-        prunSettingHar1AvalantinoRow2Plant2: pruningSet,
+        prunSettingHar1IntenseRow1Plant5: pruningSet,
       });
 
-      this.setItem('settingTrussNumberHar1AvalantinoRow2Plant2', settingTruss);
-      this.setItem('prunSettingHar1AvalantinoRow2Plant2', pruningSet);
+      this.setItem('settingTrussNumberHar1IntenseRow1Plant5', settingTruss);
+      this.setItem('prunSettingHar1IntenseRow1Plant5', pruningSet);
     }
   };
 
@@ -1867,34 +1838,31 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     var trussNum = 0;
 
     console.log(
-      'Flowering truss called : ' +
-        this.state.setFlowers2Har1AvalantinoRow2Plant2,
+      'Flowering truss called : ' + this.state.setFlowers2Har1IntenseRow1Plant5,
     );
 
-    if (this.state.setFlowers9Har1AvalantinoRow2Plant2 === '') {
-      if (this.state.setFlowers8Har1AvalantinoRow2Plant2 === '') {
-        if (this.state.setFlowers7Har1AvalantinoRow2Plant2 === '') {
-          if (this.state.setFlowers6Har1AvalantinoRow2Plant2 === '') {
-            if (this.state.setFlowers5Har1AvalantinoRow2Plant2 === '') {
-              if (this.state.setFlowers4Har1AvalantinoRow2Plant2 === '') {
-                if (this.state.setFlowers3Har1AvalantinoRow2Plant2 === '') {
-                  if (this.state.setFlowers2Har1AvalantinoRow2Plant2 === '') {
-                    if (this.state.setFlowers1Har1AvalantinoRow2Plant2 === '') {
-                      if (
-                        this.state.setFlowersHar1AvalantinoRow2Plant2 === ''
-                      ) {
+    if (this.state.setFlowers9Har1IntenseRow1Plant5 === '') {
+      if (this.state.setFlowers8Har1IntenseRow1Plant5 === '') {
+        if (this.state.setFlowers7Har1IntenseRow1Plant5 === '') {
+          if (this.state.setFlowers6Har1IntenseRow1Plant5 === '') {
+            if (this.state.setFlowers5Har1IntenseRow1Plant5 === '') {
+              if (this.state.setFlowers4Har1IntenseRow1Plant5 === '') {
+                if (this.state.setFlowers3Har1IntenseRow1Plant5 === '') {
+                  if (this.state.setFlowers2Har1IntenseRow1Plant5 === '') {
+                    if (this.state.setFlowers1Har1IntenseRow1Plant5 === '') {
+                      if (this.state.setFlowersHar1IntenseRow1Plant5 === '') {
                       } else {
                         var number01 = this.state
-                          .trussNumberHar1AvalantinoRow2Plant2;
+                          .trussNumberHar1IntenseRow1Plant5;
 
                         flowerPruningNumner = Number.parseInt(
-                          this.state.pruningNumberHar1AvalantinoRow2Plant2,
+                          this.state.pruningNumberHar1IntenseRow1Plant5,
                         );
                         flowering = Number.parseInt(
-                          this.state.setFlowersHar1AvalantinoRow2Plant2,
+                          this.state.setFlowersHar1IntenseRow1Plant5,
                         );
                         flowerSetFruits = Number.parseInt(
-                          this.state.setFruitsHar1AvalantinoRow2Plant2,
+                          this.state.setFruitsHar1IntenseRow1Plant5,
                         );
                         summ =
                           (flowering ? flowering : 0) +
@@ -1907,33 +1875,33 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                           'Flowering Truss Value : ' + floweringTruss,
                         );
                         this.setState({
-                          floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                          pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                          floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                          pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
                         });
                         this.setItem(
-                          'floweringTrussssHar1AvalantinoRow2Plant2',
+                          'floweringTrussssHar1IntenseRow1Plant5',
                           floweringTruss,
                         );
                         this.setItem(
-                          'pruneFloweringHar1AvalantinoRow2Plant2',
+                          'pruneFloweringHar1IntenseRow1Plant5',
                           flowerPruningNumner,
                         );
                       }
                     } else {
                       var number11 =
-                        +this.state.trussNumberHar1AvalantinoRow2Plant2 + 1;
+                        +this.state.trussNumberHar1IntenseRow1Plant5 + 1;
 
                       console.log(
                         'oooooooooooooooooooooooooooooo : ' + number11,
                       );
                       flowerPruningNumner = Number.parseInt(
-                        this.state.pruningNumber1Har1AvalantinoRow2Plant2,
+                        this.state.pruningNumber1Har1IntenseRow1Plant5,
                       );
                       flowering = Number.parseInt(
-                        this.state.setFlowers1Har1AvalantinoRow2Plant2,
+                        this.state.setFlowers1Har1IntenseRow1Plant5,
                       );
                       flowerSetFruits = Number.parseInt(
-                        this.state.setFruits1Har1AvalantinoRow2Plant2,
+                        this.state.setFruits1Har1IntenseRow1Plant5,
                       );
                       trussNum = number11;
                       summ =
@@ -1945,30 +1913,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                       ).toFixed(2);
                       console.log('Flowering Truss Value : ' + floweringTruss);
                       this.setState({
-                        floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                        pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                        floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                        pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
                       });
                       this.setItem(
-                        'floweringTrussssHar1AvalantinoRow2Plant2',
+                        'floweringTrussssHar1IntenseRow1Plant5',
                         floweringTruss,
                       );
                       this.setItem(
-                        'pruneFloweringHar1AvalantinoRow2Plant2',
+                        'pruneFloweringHar1IntenseRow1Plant5',
                         flowerPruningNumner,
                       );
                     }
                   } else {
                     var number21 =
-                      +this.state.trussNumberHar1AvalantinoRow2Plant2 + 2;
+                      +this.state.trussNumberHar1IntenseRow1Plant5 + 2;
 
                     flowerPruningNumner = Number.parseInt(
-                      this.state.pruningNumber2Har1AvalantinoRow2Plant2,
+                      this.state.pruningNumber2Har1IntenseRow1Plant5,
                     );
                     flowering = Number.parseInt(
-                      this.state.setFlowers2Har1AvalantinoRow2Plant2,
+                      this.state.setFlowers2Har1IntenseRow1Plant5,
                     );
                     flowerSetFruits = Number.parseInt(
-                      this.state.setFruits2Har1AvalantinoRow2Plant2,
+                      this.state.setFruits2Har1IntenseRow1Plant5,
                     );
                     summ =
                       (flowering ? flowering : 0) +
@@ -1979,30 +1947,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     ).toFixed(2);
                     console.log('Flowering Truss Value : ' + floweringTruss);
                     this.setState({
-                      floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                      pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                      floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                      pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
                     });
                     this.setItem(
-                      'floweringTrussssHar1AvalantinoRow2Plant2',
+                      'floweringTrussssHar1IntenseRow1Plant5',
                       floweringTruss,
                     );
                     this.setItem(
-                      'pruneFloweringHar1AvalantinoRow2Plant2',
+                      'pruneFloweringHar1IntenseRow1Plant5',
                       flowerPruningNumner,
                     );
                   }
                 } else {
                   var number31 =
-                    +this.state.trussNumberHar1AvalantinoRow2Plant2 + 3;
+                    +this.state.trussNumberHar1IntenseRow1Plant5 + 3;
 
                   flowerPruningNumner = Number.parseInt(
-                    this.state.pruningNumber3Har1AvalantinoRow2Plant2,
+                    this.state.pruningNumber3Har1IntenseRow1Plant5,
                   );
                   flowering = Number.parseInt(
-                    this.state.setFlowers3Har1AvalantinoRow2Plant2,
+                    this.state.setFlowers3Har1IntenseRow1Plant5,
                   );
                   flowerSetFruits = Number.parseInt(
-                    this.state.setFruits3Har1AvalantinoRow2Plant2,
+                    this.state.setFruits3Har1IntenseRow1Plant5,
                   );
                   summ =
                     (flowering ? flowering : 0) +
@@ -2013,31 +1981,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                   ).toFixed(2);
                   console.log('Flowering Truss Value : ' + floweringTruss);
                   this.setState({
-                    floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                    pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                    floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                    pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
                   });
 
                   this.setItem(
-                    'floweringTrussssHar1AvalantinoRow2Plant2',
+                    'floweringTrussssHar1IntenseRow1Plant5',
                     floweringTruss,
                   );
                   this.setItem(
-                    'pruneFloweringHar1AvalantinoRow2Plant2',
+                    'pruneFloweringHar1IntenseRow1Plant5',
                     flowerPruningNumner,
                   );
                 }
               } else {
-                var number41 =
-                  +this.state.trussNumberHar1AvalantinoRow2Plant2 + 4;
+                var number41 = +this.state.trussNumberHar1IntenseRow1Plant5 + 4;
 
                 flowerPruningNumner = Number.parseInt(
-                  this.state.pruningNumber4Har1AvalantinoRow2Plant2,
+                  this.state.pruningNumber4Har1IntenseRow1Plant5,
                 );
                 flowering = Number.parseInt(
-                  this.state.setFlowers4Har1AvalantinoRow2Plant2,
+                  this.state.setFlowers4Har1IntenseRow1Plant5,
                 );
                 flowerSetFruits = Number.parseInt(
-                  this.state.setFruits4Har1AvalantinoRow2Plant2,
+                  this.state.setFruits4Har1IntenseRow1Plant5,
                 );
                 summ =
                   (flowering ? flowering : 0) +
@@ -2048,31 +2015,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                 ).toFixed(2);
                 console.log('Flowering Truss Value : ' + floweringTruss);
                 this.setState({
-                  floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                  pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                  floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                  pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
                 });
 
                 this.setItem(
-                  'floweringTrussssHar1AvalantinoRow2Plant2',
+                  'floweringTrussssHar1IntenseRow1Plant5',
                   floweringTruss,
                 );
                 this.setItem(
-                  'pruneFloweringHar1AvalantinoRow2Plant2',
+                  'pruneFloweringHar1IntenseRow1Plant5',
                   flowerPruningNumner,
                 );
               }
             } else {
-              var number51 =
-                +this.state.trussNumberHar1AvalantinoRow2Plant2 + 5;
+              var number51 = +this.state.trussNumberHar1IntenseRow1Plant5 + 5;
 
               flowerPruningNumner = Number.parseInt(
-                this.state.pruningNumber5Har1AvalantinoRow2Plant2,
+                this.state.pruningNumber5Har1IntenseRow1Plant5,
               );
               flowering = Number.parseInt(
-                this.state.setFlowers5Har1AvalantinoRow2Plant2,
+                this.state.setFlowers5Har1IntenseRow1Plant5,
               );
               flowerSetFruits = Number.parseInt(
-                this.state.setFruits5Har1AvalantinoRow2Plant2,
+                this.state.setFruits5Har1IntenseRow1Plant5,
               );
               summ =
                 (flowering ? flowering : 0) +
@@ -2083,30 +2049,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
               ).toFixed(2);
               console.log('Flowering Truss Value : ' + floweringTruss);
               this.setState({
-                floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-                pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+                floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+                pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
               });
 
               this.setItem(
-                'floweringTrussssHar1AvalantinoRow2Plant2',
+                'floweringTrussssHar1IntenseRow1Plant5',
                 floweringTruss,
               );
               this.setItem(
-                'pruneFloweringHar1AvalantinoRow2Plant2',
+                'pruneFloweringHar1IntenseRow1Plant5',
                 flowerPruningNumner,
               );
             }
           } else {
-            var number61 = +this.state.trussNumberHar1AvalantinoRow2Plant2 + 6;
+            var number61 = +this.state.trussNumberHar1IntenseRow1Plant5 + 6;
 
             flowerPruningNumner = Number.parseInt(
-              this.state.pruningNumber6Har1AvalantinoRow2Plant2,
+              this.state.pruningNumber6Har1IntenseRow1Plant5,
             );
             flowering = Number.parseInt(
-              this.state.setFlowers6Har1AvalantinoRow2Plant2,
+              this.state.setFlowers6Har1IntenseRow1Plant5,
             );
             flowerSetFruits = Number.parseInt(
-              this.state.setFruits6Har1AvalantinoRow2Plant2,
+              this.state.setFruits6Har1IntenseRow1Plant5,
             );
             summ =
               (flowering ? flowering : 0) +
@@ -2117,30 +2083,30 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             ).toFixed(2);
             console.log('Flowering Truss Value : ' + floweringTruss);
             this.setState({
-              floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-              pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+              floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+              pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
             });
 
             this.setItem(
-              'floweringTrussssHar1AvalantinoRow2Plant2',
+              'floweringTrussssHar1IntenseRow1Plant5',
               floweringTruss,
             );
             this.setItem(
-              'pruneFloweringHar1AvalantinoRow2Plant2',
+              'pruneFloweringHar1IntenseRow1Plant5',
               flowerPruningNumner,
             );
           }
         } else {
-          var number71 = +this.state.trussNumberHar1AvalantinoRow2Plant2 + 7;
+          var number71 = +this.state.trussNumberHar1IntenseRow1Plant5 + 7;
 
           flowerPruningNumner = Number.parseInt(
-            this.state.pruningNumber7Har1AvalantinoRow2Plant2,
+            this.state.pruningNumber7Har1IntenseRow1Plant5,
           );
           flowering = Number.parseInt(
-            this.state.setFlowers7Har1AvalantinoRow2Plant2,
+            this.state.setFlowers7Har1IntenseRow1Plant5,
           );
           flowerSetFruits = Number.parseInt(
-            this.state.setFruits7Har1AvalantinoRow2Plant2,
+            this.state.setFruits7Har1IntenseRow1Plant5,
           );
           summ =
             (flowering ? flowering : 0) +
@@ -2151,30 +2117,27 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           ).toFixed(2);
           console.log('Flowering Truss Value : ' + floweringTruss);
           this.setState({
-            floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-            pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+            floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+            pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
           });
 
+          this.setItem('floweringTrussssHar1IntenseRow1Plant5', floweringTruss);
           this.setItem(
-            'floweringTrussssHar1AvalantinoRow2Plant2',
-            floweringTruss,
-          );
-          this.setItem(
-            'pruneFloweringHar1AvalantinoRow2Plant2',
+            'pruneFloweringHar1IntenseRow1Plant5',
             flowerPruningNumner,
           );
         }
       } else {
-        var number81 = +this.state.trussNumberHar1AvalantinoRow2Plant2 + 8;
+        var number81 = +this.state.trussNumberHar1IntenseRow1Plant5 + 8;
 
         flowerPruningNumner = Number.parseInt(
-          this.state.pruningNumber8Har1AvalantinoRow2Plant2,
+          this.state.pruningNumber8Har1IntenseRow1Plant5,
         );
         flowering = Number.parseInt(
-          this.state.setFlowers8Har1AvalantinoRow2Plant2,
+          this.state.setFlowers8Har1IntenseRow1Plant5,
         );
         flowerSetFruits = Number.parseInt(
-          this.state.setFruits8Har1AvalantinoRow2Plant2,
+          this.state.setFruits8Har1IntenseRow1Plant5,
         );
         summ =
           (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
@@ -2184,30 +2147,25 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         ).toFixed(2);
         console.log('Flowering Truss Value : ' + floweringTruss);
         this.setState({
-          floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-          pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+          floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+          pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
         });
 
+        this.setItem('floweringTrussssHar1IntenseRow1Plant5', floweringTruss);
         this.setItem(
-          'floweringTrussssHar1AvalantinoRow2Plant2',
-          floweringTruss,
-        );
-        this.setItem(
-          'pruneFloweringHar1AvalantinoRow2Plant2',
+          'pruneFloweringHar1IntenseRow1Plant5',
           flowerPruningNumner,
         );
       }
     } else {
-      var number91 = +this.state.trussNumberHar1AvalantinoRow2Plant2 + 9;
+      var number91 = +this.state.trussNumberHar1IntenseRow1Plant5 + 9;
 
       flowerPruningNumner = Number.parseInt(
-        this.state.pruningNumber9Har1AvalantinoRow2Plant2,
+        this.state.pruningNumber9Har1IntenseRow1Plant5,
       );
-      flowering = Number.parseInt(
-        this.state.setFlowers9Har1AvalantinoRow2Plant2,
-      );
+      flowering = Number.parseInt(this.state.setFlowers9Har1IntenseRow1Plant5);
       flowerSetFruits = Number.parseInt(
-        this.state.setFruits9Har1AvalantinoRow2Plant2,
+        this.state.setFruits9Har1IntenseRow1Plant5,
       );
       summ =
         (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
@@ -2217,15 +2175,12 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
       ).toFixed(2);
       console.log('Flowering Truss Value : ' + floweringTruss);
       this.setState({
-        floweringTrussssHar1AvalantinoRow2Plant2: floweringTruss,
-        pruneFloweringHar1AvalantinoRow2Plant2: flowerPruningNumner,
+        floweringTrussssHar1IntenseRow1Plant5: floweringTruss,
+        pruneFloweringHar1IntenseRow1Plant5: flowerPruningNumner,
       });
 
-      this.setItem('floweringTrussssHar1AvalantinoRow2Plant2', floweringTruss);
-      this.setItem(
-        'pruneFloweringHar1AvalantinoRow2Plant2',
-        flowerPruningNumner,
-      );
+      this.setItem('floweringTrussssHar1IntenseRow1Plant5', floweringTruss);
+      this.setItem('pruneFloweringHar1IntenseRow1Plant5', flowerPruningNumner);
     }
   };
   //
@@ -2235,11 +2190,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
   getTrussData = () => {
     if (this.state.allTrussData.length != 0) {
       //1st Truss
-      if (this.state.trussNumberHar1AvalantinoRow2Plant2 != null) {
+      if (this.state.trussNumberHar1IntenseRow1Plant5 != null) {
         //Change week number
         const weekRowTruss1 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2);
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5);
 
         const filteredweekRowTruss1 = this.state.allTrussData.filter(
           weekRowTruss1,
@@ -2250,11 +2205,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss1.length != 0) {
           if (JSON.stringify(filteredweekRowTruss1[0].setFlowers) === 'null') {
             this.setState({
-              setFlowersHar1AvalantinoRow2Plant2: '',
+              setFlowersHar1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowersHar1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowersHar1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss1[0].setFlowers,
               ),
             });
@@ -2264,11 +2219,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss1[0].setFruits) === 'null') {
             this.setState({
-              setFruitsHar1AvalantinoRow2Plant2: '',
+              setFruitsHar1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruitsHar1AvalantinoRow2Plant2: JSON.stringify(
+              setFruitsHar1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss1[0].setFruits,
               ),
             });
@@ -2280,11 +2235,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss1[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumberHar1AvalantinoRow2Plant2: '',
+              pruningNumberHar1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumberHar1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumberHar1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss1[0].pruningNumber,
               ),
             });
@@ -2296,9 +2251,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruitsHar1AvalantinoRow2Plant2: '',
-            setFlowersHar1AvalantinoRow2Plant2: '',
-            pruningNumberHar1AvalantinoRow2Plant2: '',
+            setFruitsHar1IntenseRow1Plant5: '',
+            setFlowersHar1IntenseRow1Plant5: '',
+            pruningNumberHar1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2307,13 +2262,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //2nd Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 1 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1 !=
         null
       ) {
         //Change week number
         const weekRowTruss2 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 1;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1;
 
         const filteredweekRowTruss2 = this.state.allTrussData.filter(
           weekRowTruss2,
@@ -2324,11 +2279,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss2.length != 0) {
           if (JSON.stringify(filteredweekRowTruss2[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers1Har1AvalantinoRow2Plant2: '',
+              setFlowers1Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers1Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers1Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss2[0].setFlowers,
               ),
             });
@@ -2338,11 +2293,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss2[0].setFruits) === 'null') {
             this.setState({
-              setFruits1Har1AvalantinoRow2Plant2: '',
+              setFruits1Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits1Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits1Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss2[0].setFruits,
               ),
             });
@@ -2354,11 +2309,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss2[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber1Har1AvalantinoRow2Plant2: '',
+              pruningNumber1Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber1Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber1Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss2[0].pruningNumber,
               ),
             });
@@ -2370,9 +2325,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits1Har1AvalantinoRow2Plant2: '',
-            setFlowers1Har1AvalantinoRow2Plant2: '',
-            pruningNumber1Har1AvalantinoRow2Plant2: '',
+            setFruits1Har1IntenseRow1Plant5: '',
+            setFlowers1Har1IntenseRow1Plant5: '',
+            pruningNumber1Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2382,13 +2337,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //3rd Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 2 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2 !=
         null
       ) {
         //Change week number
         const weekRowTruss3 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 2;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2;
 
         const filteredweekRowTruss3 = this.state.allTrussData.filter(
           weekRowTruss3,
@@ -2399,11 +2354,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss3.length != 0) {
           if (JSON.stringify(filteredweekRowTruss3[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers2Har1AvalantinoRow2Plant2: '',
+              setFlowers2Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers2Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers2Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss3[0].setFlowers,
               ),
             });
@@ -2413,11 +2368,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss3[0].setFruits) === 'null') {
             this.setState({
-              setFruits2Har1AvalantinoRow2Plant2: '',
+              setFruits2Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits2Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits2Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss3[0].setFruits,
               ),
             });
@@ -2429,11 +2384,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss3[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber2Har1AvalantinoRow2Plant2: '',
+              pruningNumber2Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber2Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber2Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss3[0].pruningNumber,
               ),
             });
@@ -2445,9 +2400,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits2Har1AvalantinoRow2Plant2: '',
-            setFlowers2Har1AvalantinoRow2Plant2: '',
-            pruningNumber2Har1AvalantinoRow2Plant2: '',
+            setFruits2Har1IntenseRow1Plant5: '',
+            setFlowers2Har1IntenseRow1Plant5: '',
+            pruningNumber2Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2457,13 +2412,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //4th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 3 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3 !=
         null
       ) {
         //Change week number
         const weekRowTruss4 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 3;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3;
 
         const filteredweekRowTruss4 = this.state.allTrussData.filter(
           weekRowTruss4,
@@ -2474,11 +2429,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss4.length != 0) {
           if (JSON.stringify(filteredweekRowTruss4[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers3Har1AvalantinoRow2Plant2: '',
+              setFlowers3Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers3Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers3Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss4[0].setFlowers,
               ),
             });
@@ -2488,11 +2443,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss4[0].setFruits) === 'null') {
             this.setState({
-              setFruits3Har1AvalantinoRow2Plant2: '',
+              setFruits3Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits3Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits3Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss4[0].setFruits,
               ),
             });
@@ -2504,11 +2459,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss4[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber3Har1AvalantinoRow2Plant2: '',
+              pruningNumber3Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber3Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber3Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss4[0].pruningNumber,
               ),
             });
@@ -2520,9 +2475,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits3Har1AvalantinoRow2Plant2: '',
-            setFlowers3Har1AvalantinoRow2Plant2: '',
-            pruningNumber3Har1AvalantinoRow2Plant2: '',
+            setFruits3Har1IntenseRow1Plant5: '',
+            setFlowers3Har1IntenseRow1Plant5: '',
+            pruningNumber3Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2532,13 +2487,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //5th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 4 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4 !=
         null
       ) {
         //Change week number
         const weekRowTruss5 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 4;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4;
 
         const filteredweekRowTruss5 = this.state.allTrussData.filter(
           weekRowTruss5,
@@ -2549,11 +2504,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss5.length != 0) {
           if (JSON.stringify(filteredweekRowTruss5[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers4Har1AvalantinoRow2Plant2: '',
+              setFlowers4Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers4Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers4Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss5[0].setFlowers,
               ),
             });
@@ -2563,11 +2518,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss5[0].setFruits) === 'null') {
             this.setState({
-              setFruits4Har1AvalantinoRow2Plant2: '',
+              setFruits4Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits4Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits4Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss5[0].setFruits,
               ),
             });
@@ -2579,11 +2534,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss5[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber4Har1AvalantinoRow2Plant2: '',
+              pruningNumber4Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber4Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber4Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss5[0].pruningNumber,
               ),
             });
@@ -2595,9 +2550,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits4Har1AvalantinoRow2Plant2: '',
-            setFlowers4Har1AvalantinoRow2Plant2: '',
-            pruningNumber4Har1AvalantinoRow2Plant2: '',
+            setFruits4Har1IntenseRow1Plant5: '',
+            setFlowers4Har1IntenseRow1Plant5: '',
+            pruningNumber4Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2607,13 +2562,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //6th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 5 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5 !=
         null
       ) {
         //Change week number
         const weekRowTruss6 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 5;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5;
 
         const filteredweekRowTruss6 = this.state.allTrussData.filter(
           weekRowTruss6,
@@ -2624,11 +2579,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss6.length != 0) {
           if (JSON.stringify(filteredweekRowTruss6[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers5Har1AvalantinoRow2Plant2: '',
+              setFlowers5Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers5Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers5Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss6[0].setFlowers,
               ),
             });
@@ -2638,11 +2593,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss6[0].setFruits) === 'null') {
             this.setState({
-              setFruits5Har1AvalantinoRow2Plant2: '',
+              setFruits5Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits5Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits5Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss6[0].setFruits,
               ),
             });
@@ -2654,11 +2609,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss6[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber5Har1AvalantinoRow2Plant2: '',
+              pruningNumber5Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber5Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber5Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss6[0].pruningNumber,
               ),
             });
@@ -2670,9 +2625,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits5Har1AvalantinoRow2Plant2: '',
-            setFlowers5Har1AvalantinoRow2Plant2: '',
-            pruningNumber5Har1AvalantinoRow2Plant2: '',
+            setFruits5Har1IntenseRow1Plant5: '',
+            setFlowers5Har1IntenseRow1Plant5: '',
+            pruningNumber5Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2682,13 +2637,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //7th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 6 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6 !=
         null
       ) {
         //Change week number
         const weekRowTruss7 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 6;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6;
 
         const filteredweekRowTruss7 = this.state.allTrussData.filter(
           weekRowTruss7,
@@ -2699,11 +2654,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss7.length != 0) {
           if (JSON.stringify(filteredweekRowTruss7[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers6Har1AvalantinoRow2Plant2: '',
+              setFlowers6Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers6Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers6Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss7[0].setFlowers,
               ),
             });
@@ -2713,11 +2668,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss7[0].setFruits) === 'null') {
             this.setState({
-              setFruits6Har1AvalantinoRow2Plant2: '',
+              setFruits6Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits6Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits6Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss7[0].setFruits,
               ),
             });
@@ -2729,11 +2684,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss7[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber6Har1AvalantinoRow2Plant2: '',
+              pruningNumber6Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber6Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber6Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss7[0].pruningNumber,
               ),
             });
@@ -2744,9 +2699,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits6Har1AvalantinoRow2Plant2: '',
-            setFlowers6Har1AvalantinoRow2Plant2: '',
-            pruningNumber6Har1AvalantinoRow2Plant2: '',
+            setFruits6Har1IntenseRow1Plant5: '',
+            setFlowers6Har1IntenseRow1Plant5: '',
+            pruningNumber6Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2756,13 +2711,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //8th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7 !=
         null
       ) {
         //Change week number
         const weekRowTruss8 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7;
 
         const filteredweekRowTruss8 = this.state.allTrussData.filter(
           weekRowTruss8,
@@ -2773,11 +2728,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss8.length != 0) {
           if (JSON.stringify(filteredweekRowTruss8[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers7Har1AvalantinoRow2Plant2: '',
+              setFlowers7Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers7Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers7Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss8[0].setFlowers,
               ),
             });
@@ -2787,11 +2742,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss8[0].setFruits) === 'null') {
             this.setState({
-              setFruits7Har1AvalantinoRow2Plant2: '',
+              setFruits7Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits7Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits7Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss8[0].setFruits,
               ),
             });
@@ -2803,11 +2758,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss8[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber7Har1AvalantinoRow2Plant2: '',
+              pruningNumber7Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber7Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber7Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss8[0].pruningNumber,
               ),
             });
@@ -2819,9 +2774,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits7Har1AvalantinoRow2Plant2: '',
-            setFlowers7Har1AvalantinoRow2Plant2: '',
-            pruningNumber7Har1AvalantinoRow2Plant2: '',
+            setFruits7Har1IntenseRow1Plant5: '',
+            setFlowers7Har1IntenseRow1Plant5: '',
+            pruningNumber7Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2831,13 +2786,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //9th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8 !=
         null
       ) {
         //Change week number
         const weekRowTruss9 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8;
 
         const filteredweekRowTruss9 = this.state.allTrussData.filter(
           weekRowTruss9,
@@ -2848,11 +2803,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss9.length != 0) {
           if (JSON.stringify(filteredweekRowTruss9[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers8Har1AvalantinoRow2Plant2: '',
+              setFlowers8Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers8Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers8Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss9[0].setFlowers,
               ),
             });
@@ -2862,11 +2817,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss9[0].setFruits) === 'null') {
             this.setState({
-              setFruits8Har1AvalantinoRow2Plant2: '',
+              setFruits8Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits8Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits8Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss9[0].setFruits,
               ),
             });
@@ -2878,11 +2833,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss9[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber8Har1AvalantinoRow2Plant2: '',
+              pruningNumber8Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber8Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber8Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss9[0].pruningNumber,
               ),
             });
@@ -2893,9 +2848,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits8Har1AvalantinoRow2Plant2: '',
-            setFlowers8Har1AvalantinoRow2Plant2: '',
-            pruningNumber8Har1AvalantinoRow2Plant2: '',
+            setFruits8Har1IntenseRow1Plant5: '',
+            setFlowers8Har1IntenseRow1Plant5: '',
+            pruningNumber8Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2905,13 +2860,13 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
       //10th Truss
       if (
-        Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9 !=
+        Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9 !=
         null
       ) {
         //Change week number
         const weekRowTruss10 = d =>
           d.trussNumber ===
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9;
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9;
 
         const filteredweekRowTruss10 = this.state.allTrussData.filter(
           weekRowTruss10,
@@ -2922,11 +2877,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         if (filteredweekRowTruss10.length != 0) {
           if (JSON.stringify(filteredweekRowTruss10[0].setFlowers) === 'null') {
             this.setState({
-              setFlowers9Har1AvalantinoRow2Plant2: '',
+              setFlowers9Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFlowers9Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFlowers9Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss10[0].setFlowers,
               ),
             });
@@ -2936,11 +2891,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
           if (JSON.stringify(filteredweekRowTruss10[0].setFruits) === 'null') {
             this.setState({
-              setFruits9Har1AvalantinoRow2Plant2: '',
+              setFruits9Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              setFruits9Har1AvalantinoRow2Plant2: JSON.stringify(
+              setFruits9Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss10[0].setFruits,
               ),
             });
@@ -2952,11 +2907,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             JSON.stringify(filteredweekRowTruss10[0].pruningNumber) === 'null'
           ) {
             this.setState({
-              pruningNumber9Har1AvalantinoRow2Plant2: '',
+              pruningNumber9Har1IntenseRow1Plant5: '',
             });
           } else {
             this.setState({
-              pruningNumber9Har1AvalantinoRow2Plant2: JSON.stringify(
+              pruningNumber9Har1IntenseRow1Plant5: JSON.stringify(
                 filteredweekRowTruss10[0].pruningNumber,
               ),
             });
@@ -2968,9 +2923,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           this.calculateHarvestTruss();
         } else {
           this.setState({
-            setFruits9Har1AvalantinoRow2Plant2: '',
-            setFlowers9Har1AvalantinoRow2Plant2: '',
-            pruningNumber9Har1AvalantinoRow2Plant2: '',
+            setFruits9Har1IntenseRow1Plant5: '',
+            setFlowers9Har1IntenseRow1Plant5: '',
+            pruningNumber9Har1IntenseRow1Plant5: '',
           });
         }
       } else {
@@ -2987,68 +2942,65 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   changeCheckbox = () => {
     this.setState({
-      Har1AvalantinoRow2Plant2Selected: !this.state
-        .Har1AvalantinoRow2Plant2Selected,
+      Har1IntenseRow1Plant5Selected: !this.state.Har1IntenseRow1Plant5Selected,
     });
 
-    const vart = this.state.Har1AvalantinoRow2Plant2Selected;
+    const vart = this.state.Har1IntenseRow1Plant5Selected;
 
     const vart2 = false;
 
     if (vart == null) {
-      this.setItem('Har1AvalantinoRow2Plant2Selected', vart2);
+      this.setItem('Har1IntenseRow1Plant5Selected', vart2);
 
-      EventRegister.emit('har1AvalantinoRow2EventPlant2', vart2);
+      EventRegister.emit('har1IntenseRow1EventPlant5', vart2);
     } else {
-      this.setItem('Har1AvalantinoRow2Plant2Selected', vart);
+      this.setItem('Har1IntenseRow1Plant5Selected', vart);
 
-      EventRegister.emit('har1AvalantinoRow2EventPlant2', vart);
+      EventRegister.emit('har1IntenseRow1EventPlant5', vart);
     }
   };
 
   checkStatus = () => {
-    const vart = this.state.Har1AvalantinoRow2Plant2Selected;
+    const vart = this.state.Har1IntenseRow1Plant5Selected;
 
     if (vart == null || vart == false) {
-      const {leavesPerPlantHar1AvalantinoRow2Plant2} = this.state;
-      const {fullySetTrussHar1AvalantinoRow2Plant2} = this.state;
-      const {setTrussLengthHar1AvalantinoRow2Plant2} = this.state;
-      const {weeklyGrowthHar1AvalantinoRow2Plant2} = this.state;
-      const {floweringTrussHeightHar1AvalantinoRow2Plant2} = this.state;
-      const {leafLengthHar1AvalantinoRow2Plant2} = this.state;
-      const {leafWidthHar1AvalantinoRow2Plant2} = this.state;
-      const {stmDiameterHar1AvalantinoRow2Plant2} = this.state;
-      const {lastWeekStmDiameterHar1AvalantinoRow2Plant2} = this.state;
+      const {leavesPerPlantHar1IntenseRow1Plant5} = this.state;
+      const {fullySetTrussHar1IntenseRow1Plant5} = this.state;
+      const {setTrussLengthHar1IntenseRow1Plant5} = this.state;
+      const {weeklyGrowthHar1IntenseRow1Plant5} = this.state;
+      const {floweringTrussHeightHar1IntenseRow1Plant5} = this.state;
+      const {leafLengthHar1IntenseRow1Plant5} = this.state;
+      const {leafWidthHar1IntenseRow1Plant5} = this.state;
+      const {stmDiameterHar1IntenseRow1Plant5} = this.state;
+      const {lastWeekStmDiameterHar1IntenseRow1Plant5} = this.state;
 
       let data = {
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        leavesPerPlant: this.state.leavesPerPlantHar1AvalantinoRow2Plant2,
-        fullySetTruss: this.state.fullySetTrussHar1AvalantinoRow2Plant2,
-        setTrussLength: this.state.setTrussLengthHar1AvalantinoRow2Plant2,
-        weeklyGrowth: this.state.weeklyGrowthHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        leavesPerPlant: this.state.leavesPerPlantHar1IntenseRow1Plant5,
+        fullySetTruss: this.state.fullySetTrussHar1IntenseRow1Plant5,
+        setTrussLength: this.state.setTrussLengthHar1IntenseRow1Plant5,
+        weeklyGrowth: this.state.weeklyGrowthHar1IntenseRow1Plant5,
         floweringTrussHeight: this.state
-          .floweringTrussHeightHar1AvalantinoRow2Plant2,
-        leafLength: this.state.leafLengthHar1AvalantinoRow2Plant2,
-        leafWidth: this.state.leafWidthHar1AvalantinoRow2Plant2,
-        stmDiameter: this.state.stmDiameterHar1AvalantinoRow2Plant2,
+          .floweringTrussHeightHar1IntenseRow1Plant5,
+        leafLength: this.state.leafLengthHar1IntenseRow1Plant5,
+        leafWidth: this.state.leafWidthHar1IntenseRow1Plant5,
+        stmDiameter: this.state.stmDiameterHar1IntenseRow1Plant5,
         lastWeekStmDiameter: this.state
-          .lastWeekStmDiameterHar1AvalantinoRow2Plant2,
+          .lastWeekStmDiameterHar1IntenseRow1Plant5,
       };
 
-      if (+!isNaN(+leavesPerPlantHar1AvalantinoRow2Plant2)) {
-        if (+!isNaN(+fullySetTrussHar1AvalantinoRow2Plant2)) {
-          if (+!isNaN(+setTrussLengthHar1AvalantinoRow2Plant2)) {
-            if (+!isNaN(+weeklyGrowthHar1AvalantinoRow2Plant2)) {
-              if (+!isNaN(+floweringTrussHeightHar1AvalantinoRow2Plant2)) {
-                if (+!isNaN(+leafLengthHar1AvalantinoRow2Plant2)) {
-                  if (+!isNaN(+leafWidthHar1AvalantinoRow2Plant2)) {
-                    if (+!isNaN(+stmDiameterHar1AvalantinoRow2Plant2)) {
-                      if (
-                        +!isNaN(+lastWeekStmDiameterHar1AvalantinoRow2Plant2)
-                      ) {
+      if (+!isNaN(+leavesPerPlantHar1IntenseRow1Plant5)) {
+        if (+!isNaN(+fullySetTrussHar1IntenseRow1Plant5)) {
+          if (+!isNaN(+setTrussLengthHar1IntenseRow1Plant5)) {
+            if (+!isNaN(+weeklyGrowthHar1IntenseRow1Plant5)) {
+              if (+!isNaN(+floweringTrussHeightHar1IntenseRow1Plant5)) {
+                if (+!isNaN(+leafLengthHar1IntenseRow1Plant5)) {
+                  if (+!isNaN(+leafWidthHar1IntenseRow1Plant5)) {
+                    if (+!isNaN(+stmDiameterHar1IntenseRow1Plant5)) {
+                      if (+!isNaN(+lastWeekStmDiameterHar1IntenseRow1Plant5)) {
                         this.setState({checkboxStatus: 'CHECKED'});
 
                         this.changeCheckbox();
@@ -3098,26 +3050,26 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDb = () => {
     if (
-      this.state.trussNumberHar1AvalantinoRow2Plant2 !== null &&
-      this.state.pruningNumberHar1AvalantinoRow2Plant2 !== null
+      this.state.trussNumberHar1IntenseRow1Plant5 !== null &&
+      this.state.pruningNumberHar1IntenseRow1Plant5 !== null
     ) {
       let data = {
-        trussNumber: this.state.trussNumberHar1AvalantinoRow2Plant2,
-        fruitDiameter: this.state.fruitDiameterHar1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruitsHar1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowersHar1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumberHar1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+        trussNumber: this.state.trussNumberHar1IntenseRow1Plant5,
+        fruitDiameter: this.state.fruitDiameterHar1IntenseRow1Plant5,
+        setFruits: this.state.setFruitsHar1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowersHar1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumberHar1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data)
@@ -3125,10 +3077,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              1 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1 !==
               null &&
-            this.state.pruningNumber1Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber1Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB1();
           } else {
@@ -3143,28 +3094,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB1 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 1 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1 !=
         null &&
-      this.state.pruningNumber1Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber1Har1IntenseRow1Plant5 !== null
     ) {
       let data1 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 1,
-        fruitDiameter: this.state.fruitDiameter1Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits1Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers1Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber1Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 1,
+        fruitDiameter: this.state.fruitDiameter1Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits1Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers1Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber1Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data1)
@@ -3172,10 +3123,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              2 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2 !==
               null &&
-            this.state.pruningNumber2Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber2Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB2();
           } else {
@@ -3190,28 +3140,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB2 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 2 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2 !=
         null &&
-      this.state.pruningNumber2Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber2Har1IntenseRow1Plant5 !== null
     ) {
       let data2 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 2,
-        fruitDiameter: this.state.fruitDiameter2Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits2Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers2Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber2Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 2,
+        fruitDiameter: this.state.fruitDiameter2Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits2Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers2Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber2Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data2)
@@ -3219,10 +3169,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              3 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3 !==
               null &&
-            this.state.pruningNumber3Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber3Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB3();
           } else {
@@ -3237,28 +3186,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB3 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 3 !==
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3 !==
         null &&
-      this.state.pruningNumber3Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber3Har1IntenseRow1Plant5 !== null
     ) {
       let data3 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 3,
-        fruitDiameter: this.state.fruitDiameter3Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits3Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers3Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber3Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 3,
+        fruitDiameter: this.state.fruitDiameter3Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits3Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers3Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber3Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data3)
@@ -3266,10 +3215,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              4 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4 !==
               null &&
-            this.state.pruningNumber4Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber4Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB4();
           } else {
@@ -3284,37 +3232,36 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB4 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 4 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4 !=
         null &&
-      this.state.pruningNumber4Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber4Har1IntenseRow1Plant5 !== null
     ) {
       let data4 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 4,
-        fruitDiameter: this.state.fruitDiameter4Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits4Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers4Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber4Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 4,
+        fruitDiameter: this.state.fruitDiameter4Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits4Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers4Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber4Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data4)
         .then(result => {
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              5 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5 !==
               null &&
-            this.state.pruningNumber5Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber5Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB5();
           } else {
@@ -3329,28 +3276,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB5 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 5 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5 !=
         null &&
-      this.state.pruningNumber5Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber5Har1IntenseRow1Plant5 !== null
     ) {
       let data5 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 5,
-        fruitDiameter: this.state.fruitDiameter5Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits5Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers5Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber5Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 5,
+        fruitDiameter: this.state.fruitDiameter5Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits5Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers5Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber5Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data5)
@@ -3362,10 +3309,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           });
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              6 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6 !==
               null &&
-            this.state.pruningNumber6Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber6Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB6();
           } else {
@@ -3380,28 +3326,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB6 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 6 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6 !=
         null &&
-      this.state.pruningNumber6Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber6Har1IntenseRow1Plant5 !== null
     ) {
       let data6 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 6,
-        fruitDiameter: this.state.fruitDiameter6Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits6Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers6Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber6Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 6,
+        fruitDiameter: this.state.fruitDiameter6Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits6Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers6Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber6Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data6)
@@ -3409,10 +3355,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              7 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7 !==
               null &&
-            this.state.pruningNumber7Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber7Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB7();
           } else {
@@ -3427,28 +3372,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB7 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7 !=
         null &&
-      this.state.pruningNumber7Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber7Har1IntenseRow1Plant5 !== null
     ) {
       let data7 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 7,
-        fruitDiameter: this.state.fruitDiameter7Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits7Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers7Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber7Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 7,
+        fruitDiameter: this.state.fruitDiameter7Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits7Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers7Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber7Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data7)
@@ -3456,10 +3401,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              8 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8 !==
               null &&
-            this.state.pruningNumber8Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber8Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB8();
           } else {
@@ -3474,28 +3418,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB8 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8 !=
         null &&
-      this.state.pruningNumber8Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber8Har1IntenseRow1Plant5 !== null
     ) {
       let data8 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 8,
-        fruitDiameter: this.state.fruitDiameter8Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits8Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers8Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber8Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 8,
+        fruitDiameter: this.state.fruitDiameter8Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits8Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers8Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber8Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data8)
@@ -3503,10 +3447,9 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           console.log(result);
 
           if (
-            Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) +
-              9 !==
+            Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9 !==
               null &&
-            this.state.pruningNumber9Har1AvalantinoRow2Plant2 !== ''
+            this.state.pruningNumber9Har1IntenseRow1Plant5 !== ''
           ) {
             this.saveTrussToDB9();
           } else {
@@ -3521,28 +3464,28 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
   saveTrussToDB9 = () => {
     if (
-      Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9 !=
+      Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9 !=
         null &&
-      this.state.pruningNumber9Har1AvalantinoRow2Plant2 !== null
+      this.state.pruningNumber9Har1IntenseRow1Plant5 !== null
     ) {
       let data9 = {
         trussNumber:
-          Number.parseInt(this.state.trussNumberHar1AvalantinoRow2Plant2) + 9,
-        fruitDiameter: this.state.fruitDiameter9Har1AvalantinoRow2Plant2,
-        setFruits: this.state.setFruits9Har1AvalantinoRow2Plant2,
-        setFlowers: this.state.setFlowers9Har1AvalantinoRow2Plant2,
-        pruningNumber: this.state.pruningNumber9Har1AvalantinoRow2Plant2,
-        plantRow: '153',
-        plantName: 'HAR 1 - Avalantino',
+          Number.parseInt(this.state.trussNumberHar1IntenseRow1Plant5) + 9,
+        fruitDiameter: this.state.fruitDiameter9Har1IntenseRow1Plant5,
+        setFruits: this.state.setFruits9Har1IntenseRow1Plant5,
+        setFlowers: this.state.setFlowers9Har1IntenseRow1Plant5,
+        pruningNumber: this.state.pruningNumber9Har1IntenseRow1Plant5,
+        plantRow: '133',
+        plantName: 'HAR 1 - Intense',
         plantWeek: this.state.weekNumber,
-        plantNumber: 2,
-        fruitLoad: this.state.fruitLoadHar1AvalantinoRow2Plant2,
-        pruningFlower: this.state.pruneFloweringHar1AvalantinoRow2Plant2,
-        floweringTruss: this.state.floweringTrussssHar1AvalantinoRow2Plant2,
-        pruningSet: this.state.prunSettingHar1AvalantinoRow2Plant2,
-        settingTruss: this.state.settingTrussNumberHar1AvalantinoRow2Plant2,
-        pruningHarvest: this.state.pruningHarHar1AvalantinoRow2Plant2,
-        harvestTruss: this.state.harvestTrussHar1AvalantinoRow2Plant2,
+        plantNumber: 5,
+        fruitLoad: this.state.fruitLoadHar1IntenseRow1Plant5,
+        pruningFlower: this.state.pruneFloweringHar1IntenseRow1Plant5,
+        floweringTruss: this.state.floweringTrussssHar1IntenseRow1Plant5,
+        pruningSet: this.state.prunSettingHar1IntenseRow1Plant5,
+        settingTruss: this.state.settingTrussNumberHar1IntenseRow1Plant5,
+        pruningHarvest: this.state.pruningHarHar1IntenseRow1Plant5,
+        harvestTruss: this.state.harvestTrussHar1IntenseRow1Plant5,
       };
 
       db.addTrussDetails(data9)
@@ -3592,8 +3535,8 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     this.LastWeekStmDiameter.focus();
   }
 
-  onSubmitleavesPerPlantHar1AvalantinoRow2Plant2() {
-    this.leavesPerPlantHar1AvalantinoRow2Plant2.focus();
+  onSubmitleavesPerPlantHar1IntenseRow1Plant5() {
+    this.leavesPerPlantHar1IntenseRow1Plant5.focus();
   }
   //
 
@@ -3620,7 +3563,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
     let errors = {};
 
     [
-      'leavesPerPlantHar1AvalantinoRow2Plant2',
+      'leavesPerPlantHar1IntenseRow1Plant5',
       'FullysetTruss',
       'TrussLength',
       'WeeklyGrowth',
@@ -3668,14 +3611,14 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
           <View style={styles.headerImage1}>
             <TouchableOpacity
               onPress={() =>
-                this.props.navigation.push('Har1AvalantinoPlantsRow2')
+                this.props.navigation.push('Har1IntensePlantsRow1')
               }>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 1 - Avalantino</Text>
+            <Text style={styles.text}>HAR 1 - Intense</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -3684,7 +3627,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 153/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 133/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -3699,7 +3642,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
             scrollEventThrottle={16}>
             <View
               pointerEvents={
-                this.state.Har1AvalantinoRow2Plant2Selected ? 'none' : 'auto'
+                this.state.Har1IntenseRow1Plant5Selected ? 'none' : 'auto'
               }>
               <View style={styles.formContainer}>
                 <View style={styles.marginSmallDimensionTop}></View>
@@ -3727,12 +3670,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'leavesPerPlantHar1AvalantinoRow2Plant2',
+                            'leavesPerPlantHar1IntenseRow1Plant5',
                           )
                         }
-                        value={
-                          this.state.leavesPerPlantHar1AvalantinoRow2Plant2
-                        }
+                        value={this.state.leavesPerPlantHar1IntenseRow1Plant5}
                         onSubmitEditing={() => {
                           this.fullySetTrussTextInput.focus();
                         }}
@@ -3770,10 +3711,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'fullySetTrussHar1AvalantinoRow2Plant2',
+                            'fullySetTrussHar1IntenseRow1Plant5',
                           )
                         }
-                        value={this.state.fullySetTrussHar1AvalantinoRow2Plant2}
+                        value={this.state.fullySetTrussHar1IntenseRow1Plant5}
                         ref={input => {
                           this.fullySetTrussTextInput = input;
                         }}
@@ -3815,12 +3756,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'setTrussLengthHar1AvalantinoRow2Plant2',
+                            'setTrussLengthHar1IntenseRow1Plant5',
                           )
                         }
-                        value={
-                          this.state.setTrussLengthHar1AvalantinoRow2Plant2
-                        }
+                        value={this.state.setTrussLengthHar1IntenseRow1Plant5}
                         ref={input => {
                           this.fullySetTrussLengthTextInput = input;
                         }}
@@ -3862,10 +3801,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'weeklyGrowthHar1AvalantinoRow2Plant2',
+                            'weeklyGrowthHar1IntenseRow1Plant5',
                           )
                         }
-                        value={this.state.weeklyGrowthHar1AvalantinoRow2Plant2}
+                        value={this.state.weeklyGrowthHar1IntenseRow1Plant5}
                         ref={input => {
                           this.weeklyGrowthTextInput = input;
                         }}
@@ -3907,12 +3846,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'floweringTrussHeightHar1AvalantinoRow2Plant2',
+                            'floweringTrussHeightHar1IntenseRow1Plant5',
                           )
                         }
                         value={
-                          this.state
-                            .floweringTrussHeightHar1AvalantinoRow2Plant2
+                          this.state.floweringTrussHeightHar1IntenseRow1Plant5
                         }
                         ref={input => {
                           this.FlowerTrussHeightTextInput = input;
@@ -3955,10 +3893,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'leafLengthHar1AvalantinoRow2Plant2',
+                            'leafLengthHar1IntenseRow1Plant5',
                           )
                         }
-                        value={this.state.leafLengthHar1AvalantinoRow2Plant2}
+                        value={this.state.leafLengthHar1IntenseRow1Plant5}
                         ref={input => {
                           this.leafLengthTextInput = input;
                         }}
@@ -4000,10 +3938,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'leafWidthHar1AvalantinoRow2Plant2',
+                            'leafWidthHar1IntenseRow1Plant5',
                           )
                         }
-                        value={this.state.leafWidthHar1AvalantinoRow2Plant2}
+                        value={this.state.leafWidthHar1IntenseRow1Plant5}
                         ref={input => {
                           this.leafWidthTextInput = input;
                         }}
@@ -4045,10 +3983,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'stmDiameterHar1AvalantinoRow2Plant2',
+                            'stmDiameterHar1IntenseRow1Plant5',
                           )
                         }
-                        value={this.state.stmDiameterHar1AvalantinoRow2Plant2}
+                        value={this.state.stmDiameterHar1IntenseRow1Plant5}
                         ref={input => {
                           this.stmDiameterTextInput = input;
                         }}
@@ -4092,11 +4030,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                         onChangeText={text =>
                           this.updatePlantsTextInput(
                             text,
-                            'lastWeekStmDiameterHar1AvalantinoRow2Plant2',
+                            'lastWeekStmDiameterHar1IntenseRow1Plant5',
                           )
                         }
                         value={
-                          this.state.lastWeekStmDiameterHar1AvalantinoRow2Plant2
+                          this.state.lastWeekStmDiameterHar1IntenseRow1Plant5
                         }
                         ref={input => {
                           this.lastWeekSmDiameterTextInput = input;
@@ -4274,11 +4212,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumberHar1AvalantinoRow2Plant2',
+                        'trussNumberHar1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumberHar1AvalantinoRow2Plant2}
+                    value={this.state.trussNumberHar1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4300,11 +4238,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruitsHar1AvalantinoRow2Plant2',
+                        'setFruitsHar1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruitsHar1AvalantinoRow2Plant2}
+                    value={this.state.setFruitsHar1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4327,10 +4265,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowersHar1AvalantinoRow2Plant2',
+                        'setFlowersHar1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowersHar1AvalantinoRow2Plant2}
+                    value={this.state.setFlowersHar1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4351,10 +4289,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumberHar1AvalantinoRow2Plant2',
+                        'pruningNumberHar1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumberHar1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumberHar1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4376,7 +4314,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameterHar1AvalantinoRow2Plant2',
+                        'fruitDiameterHar1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -4418,11 +4356,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber1Har1AvalantinoRow2Plant2',
+                        'trussNumber1Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber1Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber1Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -4443,11 +4381,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits1Har1AvalantinoRow2Plant2',
+                        'setFruits1Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits1Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits1Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4470,10 +4408,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers1Har1AvalantinoRow2Plant2',
+                        'setFlowers1Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers1Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers1Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4495,10 +4433,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber1Har1AvalantinoRow2Plant2',
+                        'pruningNumber1Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber1Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber1Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4520,7 +4458,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter1Har1AvalantinoRow2Plant2',
+                        'fruitDiameter1Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -4562,11 +4500,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber2Har1AvalantinoRow2Plant2',
+                        'trussNumber2Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber2Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber2Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -4587,11 +4525,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits2Har1AvalantinoRow2Plant2',
+                        'setFruits2Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits2Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits2Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4614,10 +4552,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers2Har1AvalantinoRow2Plant2',
+                        'setFlowers2Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers2Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers2Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4639,10 +4577,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber2Har1AvalantinoRow2Plant2',
+                        'pruningNumber2Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber2Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber2Har1IntenseRow1Plant5}
                   />
                   <View
                     style={{
@@ -4663,7 +4601,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter2Har1AvalantinoRow2Plant2',
+                        'fruitDiameter2Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -4705,11 +4643,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber3Har1AvalantinoRow2Plant2',
+                        'trussNumber3Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber3Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber3Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -4730,11 +4668,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits3Har1AvalantinoRow2Plant2',
+                        'setFruits3Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits3Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits3Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4757,10 +4695,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers3Har1AvalantinoRow2Plant2',
+                        'setFlowers3Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers3Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers3Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4781,10 +4719,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber3Har1AvalantinoRow2Plant2',
+                        'pruningNumber3Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber3Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber3Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4805,7 +4743,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter3Har1AvalantinoRow2Plant2',
+                        'fruitDiameter3Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -4847,11 +4785,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber4Har1AvalantinoRow2Plant2',
+                        'trussNumber4Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber4Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber4Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -4872,11 +4810,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits4Har1AvalantinoRow2Plant2',
+                        'setFruits4Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits4Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits4Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4899,10 +4837,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers4Har1AvalantinoRow2Plant2',
+                        'setFlowers4Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers4Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers4Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4924,10 +4862,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber4Har1AvalantinoRow2Plant2',
+                        'pruningNumber4Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber4Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber4Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -4949,7 +4887,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter4Har1AvalantinoRow2Plant2',
+                        'fruitDiameter4Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -4991,11 +4929,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber5Har1AvalantinoRow2Plant2',
+                        'trussNumber5Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber5Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber5Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -5016,11 +4954,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits5Har1AvalantinoRow2Plant2',
+                        'setFruits5Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits5Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits5Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5043,10 +4981,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers5Har1AvalantinoRow2Plant2',
+                        'setFlowers5Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers5Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers5Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5068,10 +5006,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber5Har1AvalantinoRow2Plant2',
+                        'pruningNumber5Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber5Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber5Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5093,7 +5031,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter5Har1AvalantinoRow2Plant2',
+                        'fruitDiameter5Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -5135,11 +5073,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber6Har1AvalantinoRow2Plant2',
+                        'trussNumber6Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber6Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber6Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -5160,11 +5098,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits6Har1AvalantinoRow2Plant2',
+                        'setFruits6Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits6Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits6Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5187,10 +5125,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers6Har1AvalantinoRow2Plant2',
+                        'setFlowers6Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers6Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers6Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5212,10 +5150,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber6Har1AvalantinoRow2Plant2',
+                        'pruningNumber6Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber6Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber6Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5237,7 +5175,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter6Har1AvalantinoRow2Plant2',
+                        'fruitDiameter6Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -5279,11 +5217,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber7Har1AvalantinoRow2Plant2',
+                        'trussNumber7Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber7Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber7Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -5304,11 +5242,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits7Har1AvalantinoRow2Plant2',
+                        'setFruits7Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits7Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits7Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5331,10 +5269,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers7Har1AvalantinoRow2Plant2',
+                        'setFlowers7Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers7Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers7Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5356,10 +5294,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber7Har1AvalantinoRow2Plant2',
+                        'pruningNumber7Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber7Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber7Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5381,7 +5319,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter7Har1AvalantinoRow2Plant2',
+                        'fruitDiameter7Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -5423,11 +5361,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput22(
                         text,
-                        'trussNumber8Har1AvalantinoRow2Plant2',
+                        'trussNumber8Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber8Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber8Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -5448,11 +5386,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits8Har1AvalantinoRow2Plant2',
+                        'setFruits8Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits8Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits8Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5475,10 +5413,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers8Har1AvalantinoRow2Plant2',
+                        'setFlowers8Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers8Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers8Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5500,10 +5438,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber8Har1AvalantinoRow2Plant2',
+                        'pruningNumber8Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber8Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber8Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5525,7 +5463,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter8Har1AvalantinoRow2Plant2',
+                        'fruitDiameter8Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -5567,11 +5505,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'trussNumber9Har1AvalantinoRow2Plant2',
+                        'trussNumber9Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.trussNumber9Har1AvalantinoRow2Plant2.toString()}
+                    value={this.state.trussNumber9Har1IntenseRow1Plant5.toString()}
                   />
                   <View
                     style={{
@@ -5592,11 +5530,11 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFruits9Har1AvalantinoRow2Plant2',
+                        'setFruits9Har1IntenseRow1Plant5',
                       )
                     }
                     blurOnSubmit={false}
-                    value={this.state.setFruits9Har1AvalantinoRow2Plant2}
+                    value={this.state.setFruits9Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5619,10 +5557,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'setFlowers9Har1AvalantinoRow2Plant2',
+                        'setFlowers9Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.setFlowers9Har1AvalantinoRow2Plant2}
+                    value={this.state.setFlowers9Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5644,10 +5582,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'pruningNumber9Har1AvalantinoRow2Plant2',
+                        'pruningNumber9Har1IntenseRow1Plant5',
                       )
                     }
-                    value={this.state.pruningNumber9Har1AvalantinoRow2Plant2}
+                    value={this.state.pruningNumber9Har1IntenseRow1Plant5}
                   />
 
                   <View
@@ -5669,7 +5607,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     onChangeText={text =>
                       this.updateTextInput(
                         text,
-                        'fruitDiameter9Har1AvalantinoRow2Plant2',
+                        'fruitDiameter9Har1IntenseRow1Plant5',
                       )
                     }
                   />
@@ -5700,8 +5638,8 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                 <View style={styles.borderEditTruss}>
                   <View
                     style={[
-                      this.state.fruitLoadHar1AvalantinoRow2Plant2 <= 22 ||
-                      this.state.fruitLoadHar1AvalantinoRow2Plant2 >= 40
+                      this.state.fruitLoadHar1IntenseRow1Plant5 <= 22 ||
+                      this.state.fruitLoadHar1IntenseRow1Plant5 >= 40
                         ? styles.borderErrorColor
                         : null,
                     ]}>
@@ -5714,7 +5652,7 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                     <View style={styles.row}>
                       <Text style={styles.text4}>Fruit Load</Text>
                       <Text style={styles.text5}>
-                        {this.state.fruitLoadHar1AvalantinoRow2Plant2}
+                        {this.state.fruitLoadHar1IntenseRow1Plant5}
                       </Text>
                     </View>
 
@@ -5727,16 +5665,15 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
                   <View
                     style={[
-                      this.state.floweringTrussssHar1AvalantinoRow2Plant2 <=
-                        0 ||
-                      this.state.floweringTrussssHar1AvalantinoRow2Plant2 >= 45
+                      this.state.floweringTrussssHar1IntenseRow1Plant5 <= 0 ||
+                      this.state.floweringTrussssHar1IntenseRow1Plant5 >= 45
                         ? styles.borderErrorColor
                         : null,
                     ]}>
                     <View style={styles.row}>
                       <Text style={styles.text4}>Flowering Truss</Text>
                       <Text style={styles.text5}>
-                        {this.state.floweringTrussssHar1AvalantinoRow2Plant2}
+                        {this.state.floweringTrussssHar1IntenseRow1Plant5}
                       </Text>
                     </View>
 
@@ -5749,17 +5686,15 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
                   <View
                     style={[
-                      this.state.settingTrussNumberHar1AvalantinoRow2Plant2 <=
-                        1 ||
-                      this.state.settingTrussNumberHar1AvalantinoRow2Plant2 >=
-                        45
+                      this.state.settingTrussNumberHar1IntenseRow1Plant5 <= 1 ||
+                      this.state.settingTrussNumberHar1IntenseRow1Plant5 >= 45
                         ? styles.borderErrorColor
                         : null,
                     ]}>
                     <View style={styles.row}>
                       <Text style={styles.text4}>Setting Truss</Text>
                       <Text style={styles.text5}>
-                        {this.state.settingTrussNumberHar1AvalantinoRow2Plant2}
+                        {this.state.settingTrussNumberHar1IntenseRow1Plant5}
                       </Text>
                     </View>
                     <View
@@ -5771,16 +5706,15 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
 
                   <View
                     style={[
-                      this.state.floweringTrussssHar1AvalantinoRow2Plant2 <=
-                        0 ||
-                      this.state.floweringTrussssHar1AvalantinoRow2Plant2 >= 45
+                      this.state.floweringTrussssHar1IntenseRow1Plant5 <= 0 ||
+                      this.state.floweringTrussssHar1IntenseRow1Plant5 >= 45
                         ? styles.borderErrorColor
                         : null,
                     ]}>
                     <View style={styles.row}>
                       <Text style={styles.text4}>Harvest Truss</Text>
                       <Text style={styles.text5}>
-                        {this.state.harvestTrussHar1AvalantinoRow2Plant2}
+                        {this.state.harvestTrussHar1IntenseRow1Plant5}
                       </Text>
                     </View>
                     <View
@@ -5870,10 +5804,10 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                 <TouchableOpacity
                   onPress={() =>
                     this.props.navigation.navigate('Har1DataChecker', {
-                      name: 'Har1AvalantinoRow2Plant2',
-                      row: '153',
-                      plant: 2,
-                      type: 'HAR 1 - Avalantino',
+                      name: 'Har1IntenseRow1Plant5',
+                      row: '133',
+                      plant: 5,
+                      type: 'HAR 1 - Intense',
                     })
                   }>
                   <Text style={styles.textDataChecker}>Data Checker</Text>
@@ -5885,8 +5819,8 @@ export default class Har1AvalantinoRow2Plant2 extends Component {
                   size={40}
                   uncheckedColor="red"
                   checkedColor="green"
-                  title="HAR 1 Avalantino Plant 2 completed"
-                  checked={this.state.Har1AvalantinoRow2Plant2Selected}
+                  title="HAR 1 Intense Plant 5 completed"
+                  checked={this.state.Har1IntenseRow1Plant5Selected}
                   textStyle={{fontSize: 16}}
                   containerStyle={{backgroundColor: 'transparent'}}
                   onPress={() => this.checkStatus()}
