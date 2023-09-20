@@ -322,7 +322,7 @@ export default class Har3DunistarPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - Dunistar / Row 353</Text>
+            <Text style={styles.text}>HAR 3 - Dunistar / Row 348</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

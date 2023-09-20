@@ -19,10 +19,8 @@ var screenWidth = Dimensions.get('window').width / 1.6;
 var plant1Selected;
 var plant2Selected;
 var plant3Selected;
-var plant4Selected;
-var plant5Selected;
 
-export default class Har3BambelloPlantsRow1 extends Component {
+export default class Har3SunfunPlantsRow1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,11 +52,9 @@ export default class Har3BambelloPlantsRow1 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.har3BambelloRow1EventPlant1);
-    EventRegister.removeEventListener(this.har3BambelloRow1EventPlant2);
-    EventRegister.removeEventListener(this.har3BambelloRow1EventPlant3);
-    EventRegister.removeEventListener(this.har3BambelloRow1EventPlant4);
-    EventRegister.removeEventListener(this.har3BambelloRow1EventPlant5);
+    EventRegister.removeEventListener(this.har3SunfunRow1EventPlant1);
+    EventRegister.removeEventListener(this.har3SunfunRow1EventPlant2);
+    EventRegister.removeEventListener(this.har3SunfunRow1EventPlant3);
   }
 
   componentDidUpdate() {
@@ -73,8 +69,8 @@ export default class Har3BambelloPlantsRow1 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.har3BambelloRow1EventPlant1 = EventRegister.addEventListener(
-      'har3BambelloRow1EventPlant1',
+    this.har3SunfunRow1EventPlant1 = EventRegister.addEventListener(
+      'har3SunfunRow1EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -87,8 +83,8 @@ export default class Har3BambelloPlantsRow1 extends Component {
     );
 
     //PLANT 2
-    this.har3BambelloRow1EventPlant2 = EventRegister.addEventListener(
-      'har3BambelloRow1EventPlant2',
+    this.har3SunfunRow1EventPlant2 = EventRegister.addEventListener(
+      'har3SunfunRow1EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -101,40 +97,12 @@ export default class Har3BambelloPlantsRow1 extends Component {
     );
 
     //PLANT 3
-    this.har3BambelloRow1EventPlant3 = EventRegister.addEventListener(
-      'har3BambelloRow1EventPlant3',
+    this.har3SunfunRow1EventPlant3 = EventRegister.addEventListener(
+      'har3SunfunRow1EventPlant3',
       data3 => {
         plant3Selected = data3;
 
         if (data3 == null || data3 == true || data3 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 4
-    this.har3BambelloRow1EventPlant4 = EventRegister.addEventListener(
-      'har3BambelloRow1EventPlant4',
-      data4 => {
-        plant4Selected = data4;
-
-        if (data4 == null || data4 == true || data4 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 5
-    this.har3BambelloRow1EventPlant5 = EventRegister.addEventListener(
-      'har3BambelloRow1EventPlant5',
-      data5 => {
-        plant5Selected = data5;
-
-        if (data5 == null || data5 == true || data5 != false) {
           console.log('Plant not done');
         } else {
           console.log('Plant completed');
@@ -149,7 +117,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant1')
+            this.props.navigation.navigate('Har3SunfunRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -161,7 +129,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant1')
+            this.props.navigation.navigate('Har3SunfunRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -181,7 +149,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant2')
+            this.props.navigation.navigate('Har3SunfunRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -193,7 +161,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant2')
+            this.props.navigation.navigate('Har3SunfunRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -213,7 +181,7 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant3')
+            this.props.navigation.navigate('Har3SunfunRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -225,74 +193,10 @@ export default class Har3BambelloPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant3')
+            this.props.navigation.navigate('Har3SunfunRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement4() {
-    if (plant4Selected == null || plant4Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant4')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 4 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant4')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 4 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement5() {
-    if (plant5Selected == null || plant5Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant5')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 5 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Har3BambelloRow1Plant5')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 5 - Week {this.state.weekNumber}
           </Text>
           <Image
             source={require('../assets/tick.png')}
@@ -316,13 +220,13 @@ export default class Har3BambelloPlantsRow1 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Har3BambelloRow')}>
+              onPress={() => this.props.navigation.navigate('Har3SunfunRow')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - Bambello / Row 315</Text>
+            <Text style={styles.text}>HAR 3 - Sunfun / Row 326</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -343,14 +247,6 @@ export default class Har3BambelloPlantsRow1 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             {this.renderElement3()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement4()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement5()}
           </View>
         </ScrollView>
       </View>

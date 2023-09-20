@@ -236,7 +236,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 3 - Dunistar' &&
             d.plantNumber === 2 &&
-            d.plantRow === '353' &&
+            d.plantRow === '348' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 3 - Dunistar' &&
             d.plantNumber === 2 &&
-            d.plantRow === '353' &&
+            d.plantRow === '348' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2985,7 +2985,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
       const {lastWeekStmDiameterHar3DunistarRow1Plant2} = this.state;
 
       let data = {
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3069,7 +3069,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruitsHar3DunistarRow1Plant2,
         setFlowers: this.state.setFlowersHar3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumberHar3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3116,7 +3116,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits1Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers1Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber1Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3163,7 +3163,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits2Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers2Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber2Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3210,7 +3210,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits3Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers3Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber3Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3257,7 +3257,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits4Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers4Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber4Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3302,7 +3302,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits5Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers5Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber5Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3353,7 +3353,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits6Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers6Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber6Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3400,7 +3400,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits7Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers7Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber7Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3447,7 +3447,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits8Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers8Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber8Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3494,7 +3494,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         setFruits: this.state.setFruits9Har3DunistarRow1Plant2,
         setFlowers: this.state.setFlowers9Har3DunistarRow1Plant2,
         pruningNumber: this.state.pruningNumber9Har3DunistarRow1Plant2,
-        plantRow: '353',
+        plantRow: '348',
         plantName: 'HAR 3 - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3646,7 +3646,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 353/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 348/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5825,7 +5825,7 @@ export default class Har3DunistarRow1Plant2 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har3DataChecker', {
                       name: 'Har3DunistarRow1Plant2',
-                      row: '353',
+                      row: '348',
                       plant: 2,
                       type: 'HAR 3 - Dunistar',
                     })

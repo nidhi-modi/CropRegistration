@@ -236,7 +236,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 2 - Angelle' &&
             d.plantNumber === 1 &&
-            d.plantRow === '243' &&
+            d.plantRow === '237' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 2 - Angelle' &&
             d.plantNumber === 1 &&
-            d.plantRow === '243' &&
+            d.plantRow === '237' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2975,7 +2975,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
       const {lastWeekStmDiameterHar2AngelleRow1Plant1} = this.state;
 
       let data = {
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3059,7 +3059,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruitsHar2AngelleRow1Plant1,
         setFlowers: this.state.setFlowersHar2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumberHar2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3105,7 +3105,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits1Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers1Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber1Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3151,7 +3151,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits2Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers2Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber2Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3197,7 +3197,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits3Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers3Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber3Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3243,7 +3243,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits4Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers4Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber4Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3287,7 +3287,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits5Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers5Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber5Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3337,7 +3337,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits6Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers6Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber6Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3383,7 +3383,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits7Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers7Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber7Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3429,7 +3429,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits8Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers8Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber8Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3475,7 +3475,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits9Har2AngelleRow1Plant1,
         setFlowers: this.state.setFlowers9Har2AngelleRow1Plant1,
         pruningNumber: this.state.pruningNumber9Har2AngelleRow1Plant1,
-        plantRow: '243',
+        plantRow: '237',
         plantName: 'HAR 2 - Angelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3627,7 +3627,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 243/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 237/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5805,7 +5805,7 @@ export default class Har2AngelleRow1Plant1 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har2DataChecker', {
                       name: 'Har2AngelleRow1Plant1',
-                      row: '243',
+                      row: '237',
                       plant: 1,
                       type: 'HAR 2 - Angelle',
                     })

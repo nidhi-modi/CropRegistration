@@ -22,7 +22,7 @@ var plant3Selected;
 var plant4Selected;
 var plant5Selected;
 
-export default class Har3GouramiPlantsRow1 extends Component {
+export default class Har3GustellePlantsRow1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,11 +54,11 @@ export default class Har3GouramiPlantsRow1 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.har3GouramiRow1EventPlant1);
-    EventRegister.removeEventListener(this.har3GouramiRow1EventPlant2);
-    EventRegister.removeEventListener(this.har3GouramiRow1EventPlant3);
-    EventRegister.removeEventListener(this.har3GouramiRow1EventPlant4);
-    EventRegister.removeEventListener(this.har3GouramiRow1EventPlant5);
+    EventRegister.removeEventListener(this.har3GustelleRow1EventPlant1);
+    EventRegister.removeEventListener(this.har3GustelleRow1EventPlant2);
+    EventRegister.removeEventListener(this.har3GustelleRow1EventPlant3);
+    EventRegister.removeEventListener(this.har3GustelleRow1EventPlant4);
+    EventRegister.removeEventListener(this.har3GustelleRow1EventPlant5);
   }
 
   componentDidUpdate() {
@@ -73,8 +73,8 @@ export default class Har3GouramiPlantsRow1 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.har3GouramiRow1EventPlant1 = EventRegister.addEventListener(
-      'har3GouramiRow1EventPlant1',
+    this.har3GustelleRow1EventPlant1 = EventRegister.addEventListener(
+      'har3GustelleRow1EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -87,8 +87,8 @@ export default class Har3GouramiPlantsRow1 extends Component {
     );
 
     //PLANT 2
-    this.har3GouramiRow1EventPlant2 = EventRegister.addEventListener(
-      'har3GouramiRow1EventPlant2',
+    this.har3GustelleRow1EventPlant2 = EventRegister.addEventListener(
+      'har3GustelleRow1EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -101,8 +101,8 @@ export default class Har3GouramiPlantsRow1 extends Component {
     );
 
     //PLANT 3
-    this.har3GouramiRow1EventPlant3 = EventRegister.addEventListener(
-      'har3GouramiRow1EventPlant3',
+    this.har3GustelleRow1EventPlant3 = EventRegister.addEventListener(
+      'har3GustelleRow1EventPlant3',
       data3 => {
         plant3Selected = data3;
 
@@ -115,8 +115,8 @@ export default class Har3GouramiPlantsRow1 extends Component {
     );
 
     //PLANT 4
-    this.har3GouramiRow1EventPlant4 = EventRegister.addEventListener(
-      'har3GouramiRow1EventPlant4',
+    this.har3GustelleRow1EventPlant4 = EventRegister.addEventListener(
+      'har3GustelleRow1EventPlant4',
       data4 => {
         plant4Selected = data4;
 
@@ -129,8 +129,8 @@ export default class Har3GouramiPlantsRow1 extends Component {
     );
 
     //PLANT 5
-    this.har3GouramiRow1EventPlant5 = EventRegister.addEventListener(
-      'har3GouramiRow1EventPlant5',
+    this.har3GustelleRow1EventPlant5 = EventRegister.addEventListener(
+      'har3GustelleRow1EventPlant5',
       data5 => {
         plant5Selected = data5;
 
@@ -149,7 +149,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant1')
+            this.props.navigation.navigate('Har3GustelleRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -161,7 +161,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant1')
+            this.props.navigation.navigate('Har3GustelleRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -181,7 +181,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant2')
+            this.props.navigation.navigate('Har3GustelleRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -193,7 +193,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant2')
+            this.props.navigation.navigate('Har3GustelleRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -213,7 +213,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant3')
+            this.props.navigation.navigate('Har3GustelleRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -225,7 +225,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant3')
+            this.props.navigation.navigate('Har3GustelleRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -245,7 +245,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant4')
+            this.props.navigation.navigate('Har3GustelleRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -257,7 +257,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant4')
+            this.props.navigation.navigate('Har3GustelleRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -277,7 +277,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant5')
+            this.props.navigation.navigate('Har3GustelleRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -289,7 +289,7 @@ export default class Har3GouramiPlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har3GouramiRow1Plant5')
+            this.props.navigation.navigate('Har3GustelleRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -316,15 +316,13 @@ export default class Har3GouramiPlantsRow1 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() =>
-                this.props.navigation.navigate('Har3GouramiRow')
-              }>
+              onPress={() => this.props.navigation.navigate('Har3GustelleRow')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 3 - Gourami / Row 337</Text>
+            <Text style={styles.text}>HAR 3 - Gustelle / Row 347</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -345,6 +343,14 @@ export default class Har3GouramiPlantsRow1 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             {this.renderElement3()}
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            {this.renderElement4()}
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            {this.renderElement5()}
           </View>
         </ScrollView>
       </View>
