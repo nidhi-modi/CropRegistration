@@ -22,7 +22,7 @@ var plant3Selected;
 var plant4Selected;
 var plant5Selected;
 
-export default class Oha2NMerlicePlantsRow1 extends Component {
+export default class Oha2NAnnicoPlantsRow1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,11 +54,11 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.oha2NMerliceRow1EventPlant1);
-    EventRegister.removeEventListener(this.oha2NMerliceRow1EventPlant2);
-    EventRegister.removeEventListener(this.oha2NMerliceRow1EventPlant3);
-    EventRegister.removeEventListener(this.oha2NMerliceRow1EventPlant4);
-    EventRegister.removeEventListener(this.oha2NMerliceRow1EventPlant5);
+    EventRegister.removeEventListener(this.oha2NAnnicoRow1EventPlant1);
+    EventRegister.removeEventListener(this.oha2NAnnicoRow1EventPlant2);
+    EventRegister.removeEventListener(this.oha2NAnnicoRow1EventPlant3);
+    EventRegister.removeEventListener(this.oha2NAnnicoRow1EventPlant4);
+    EventRegister.removeEventListener(this.oha2NAnnicoRow1EventPlant5);
   }
 
   componentDidUpdate() {
@@ -73,8 +73,8 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.oha2NMerliceRow1EventPlant1 = EventRegister.addEventListener(
-      'oha2NMerliceRow1EventPlant1',
+    this.oha2NAnnicoRow1EventPlant1 = EventRegister.addEventListener(
+      'oha2NAnnicoRow1EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -87,8 +87,8 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
     );
 
     //PLANT 2
-    this.oha2NMerliceRow1EventPlant2 = EventRegister.addEventListener(
-      'oha2NMerliceRow1EventPlant2',
+    this.oha2NAnnicoRow1EventPlant2 = EventRegister.addEventListener(
+      'oha2NAnnicoRow1EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -101,8 +101,8 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
     );
 
     //PLANT 3
-    this.oha2NMerliceRow1EventPlant3 = EventRegister.addEventListener(
-      'oha2NMerliceRow1EventPlant3',
+    this.oha2NAnnicoRow1EventPlant3 = EventRegister.addEventListener(
+      'oha2NAnnicoRow1EventPlant3',
       data3 => {
         plant3Selected = data3;
 
@@ -115,8 +115,8 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
     );
 
     //PLANT 4
-    this.oha2NMerliceRow1EventPlant4 = EventRegister.addEventListener(
-      'oha2NMerliceRow1EventPlant4',
+    this.oha2NAnnicoRow1EventPlant4 = EventRegister.addEventListener(
+      'oha2NAnnicoRow1EventPlant4',
       data4 => {
         plant4Selected = data4;
 
@@ -129,8 +129,8 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
     );
 
     //PLANT 5
-    this.oha2NMerliceRow1EventPlant5 = EventRegister.addEventListener(
-      'oha2NMerliceRow1EventPlant5',
+    this.oha2NAnnicoRow1EventPlant5 = EventRegister.addEventListener(
+      'oha2NAnnicoRow1EventPlant5',
       data5 => {
         plant5Selected = data5;
 
@@ -149,7 +149,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant1')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -161,7 +161,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant1')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -181,7 +181,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant2')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -193,7 +193,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant2')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -213,7 +213,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant3')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -225,7 +225,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant3')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -245,7 +245,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant4')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -257,7 +257,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant4')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -277,7 +277,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant5')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -289,7 +289,7 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Oha2NMerliceRow1Plant5')
+            this.props.navigation.navigate('Oha2NAnnicoRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -316,13 +316,13 @@ export default class Oha2NMerlicePlantsRow1 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Oha2NMerliceRow')}>
+              onPress={() => this.props.navigation.navigate('Oha2NAnnicoRow')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>OHA 2N - Merlice / Row 93</Text>
+            <Text style={styles.text}>OHA 2N - Annico / Row 120</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

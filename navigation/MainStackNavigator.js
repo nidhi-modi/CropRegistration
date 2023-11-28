@@ -32,14 +32,17 @@ import RepKmRow from '../screens/RepKmRow';
 import RepBambelloRow from '../screens/RepBambelloRow';
 
 import Oha1IntenseRow from '../screens/Oha1IntenseRow';
-import Oha2NMerliceRow from '../screens/Oha2NMerliceRow';
+import Oha2NAnnicoRow from '../screens/Oha2NAnnicoRow';
+import Oha2NAvalantinoRow from '../screens/Oha2NAvalantinoRow';
 import Oha2SMerliceRow from '../screens/Oha2SMerliceRow';
+import Oha2SClobagoRow from '../screens/Oha2SClobagoRow';
 
 import Oha1IntensePlantsRow1 from '../screens/Oha1IntensePlantsRow1';
 import Oha1IntensePlantsRow2 from '../screens/Oha1IntensePlantsRow2';
-import Oha2NMerlicePlantsRow1 from '../screens/Oha2NMerlicePlantsRow1';
-import Oha2NMerlicePlantsRow2 from '../screens/Oha2NMerlicePlantsRow2';
+import Oha2NAnnicoPlantsRow1 from '../screens/Oha2NAnnicoPlantsRow1';
+import Oha2NAvalantinoPlantsRow1 from '../screens/Oha2NAvalantinoPlantsRow1';
 import Oha2SMerlicePlantsRow1 from '../screens/Oha2SMerlicePlantsRow1';
+import Oha2SClobagoPlantsRow1 from '../screens/Oha2SClobagoPlantsRow1';
 
 import Oha1IntenseRow1Plant1 from '../screens/Oha1IntenseRow1Plant1';
 import Oha1IntenseRow1Plant2 from '../screens/Oha1IntenseRow1Plant2';
@@ -53,23 +56,35 @@ import Oha1IntenseRow2Plant3 from '../screens/Oha1IntenseRow2Plant3';
 import Oha1IntenseRow2Plant4 from '../screens/Oha1IntenseRow2Plant4';
 import Oha1IntenseRow2Plant5 from '../screens/Oha1IntenseRow2Plant5';
 
-import Oha2NMerliceRow1Plant1 from '../screens/Oha2NMerliceRow1Plant1';
-import Oha2NMerliceRow1Plant2 from '../screens/Oha2NMerliceRow1Plant2';
-import Oha2NMerliceRow1Plant3 from '../screens/Oha2NMerliceRow1Plant3';
-import Oha2NMerliceRow1Plant4 from '../screens/Oha2NMerliceRow1Plant4';
-import Oha2NMerliceRow1Plant5 from '../screens/Oha2NMerliceRow1Plant5';
+import Oha2NAnnicoRow1Plant1 from '../screens/Oha2NAnnicoRow1Plant1';
+import Oha2NAnnicoRow1Plant2 from '../screens/Oha2NAnnicoRow1Plant2';
+import Oha2NAnnicoRow1Plant3 from '../screens/Oha2NAnnicoRow1Plant3';
+import Oha2NAnnicoRow1Plant4 from '../screens/Oha2NAnnicoRow1Plant4';
+import Oha2NAnnicoRow1Plant5 from '../screens/Oha2NAnnicoRow1Plant5';
 
-import Oha2NMerliceRow2Plant1 from '../screens/Oha2NMerliceRow2Plant1';
-import Oha2NMerliceRow2Plant2 from '../screens/Oha2NMerliceRow2Plant2';
-import Oha2NMerliceRow2Plant3 from '../screens/Oha2NMerliceRow2Plant3';
-import Oha2NMerliceRow2Plant4 from '../screens/Oha2NMerliceRow2Plant4';
-import Oha2NMerliceRow2Plant5 from '../screens/Oha2NMerliceRow2Plant5';
+import Oha2NAvalantinoRow1Plant1 from '../screens/Oha2NAvalantinoRow1Plant1';
+import Oha2NAvalantinoRow1Plant2 from '../screens/Oha2NAvalantinoRow1Plant2';
+import Oha2NAvalantinoRow1Plant3 from '../screens/Oha2NAvalantinoRow1Plant3';
+import Oha2NAvalantinoRow1Plant4 from '../screens/Oha2NAvalantinoRow1Plant4';
+import Oha2NAvalantinoRow1Plant5 from '../screens/Oha2NAvalantinoRow1Plant5';
+
+import Oha2NMonalisaRow1Plant1 from '../screens/Oha2NMonalisaRow1Plant1';
+import Oha2NMonalisaRow1Plant2 from '../screens/Oha2NMonalisaRow1Plant2';
+import Oha2NMonalisaRow1Plant3 from '../screens/Oha2NMonalisaRow1Plant3';
+import Oha2NMonalisaRow1Plant4 from '../screens/Oha2NMonalisaRow1Plant4';
+import Oha2NMonalisaRow1Plant5 from '../screens/Oha2NMonalisaRow1Plant5';
 
 import Oha2SMerliceRow1Plant1 from '../screens/Oha2SMerliceRow1Plant1';
 import Oha2SMerliceRow1Plant2 from '../screens/Oha2SMerliceRow1Plant2';
 import Oha2SMerliceRow1Plant3 from '../screens/Oha2SMerliceRow1Plant3';
 import Oha2SMerliceRow1Plant4 from '../screens/Oha2SMerliceRow1Plant4';
 import Oha2SMerliceRow1Plant5 from '../screens/Oha2SMerliceRow1Plant5';
+
+import Oha2SClobagoRow1Plant1 from '../screens/Oha2SClobagoRow1Plant1';
+import Oha2SClobagoRow1Plant2 from '../screens/Oha2SClobagoRow1Plant2';
+import Oha2SClobagoRow1Plant3 from '../screens/Oha2SClobagoRow1Plant3';
+import Oha2SClobagoRow1Plant4 from '../screens/Oha2SClobagoRow1Plant4';
+import Oha2SClobagoRow1Plant5 from '../screens/Oha2SClobagoRow1Plant5';
 
 import Ger1MerliceRow from '../screens/Ger1MerliceRow';
 import Ger2GrandiceRow from '../screens/Ger2GrandiceRow';
@@ -480,6 +495,8 @@ import Har4DataChecker from '../screens/Har4DataChecker';
 import Har5DataChecker from '../screens/Har5DataChecker';
 import Har6DataChecker from '../screens/Har6DataChecker';
 import OhaDataChecker from '../screens/OhaDataChecker';
+import Oha2NMonalisaRow from '../screens/Oha2NMonalisaRow';
+import Oha2NMonalisaPlantsNewRow1 from '../screens/Oha2NMonalisaPlantsNewRow1';
 
 const Stack = createStackNavigator();
 
@@ -2582,8 +2599,20 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow"
-          component={Oha2NMerliceRow}
+          name="Oha2NAnnicoRow"
+          component={Oha2NAnnicoRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NAvalantinoRow"
+          component={Oha2NAvalantinoRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow"
+          component={Oha2NMonalisaRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2594,20 +2623,38 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Oha2NMerlicePlantsRow1"
-          component={Oha2NMerlicePlantsRow1}
+          name="Oha2SClobagoRow"
+          component={Oha2SClobagoRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerlicePlantsRow2"
-          component={Oha2NMerlicePlantsRow2}
+          name="Oha2NAnnicoPlantsRow1"
+          component={Oha2NAnnicoPlantsRow1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NAvalantinoPlantsRow1"
+          component={Oha2NAvalantinoPlantsRow1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaPlantsNewRow1"
+          component={Oha2NMonalisaPlantsNewRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
           name="Oha2SMerlicePlantsRow1"
           component={Oha2SMerlicePlantsRow1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoPlantsRow1"
+          component={Oha2SClobagoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2672,62 +2719,92 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow1Plant1"
-          component={Oha2NMerliceRow1Plant1}
+          name="Oha2NAnnicoRow1Plant1"
+          component={Oha2NAnnicoRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow1Plant2"
-          component={Oha2NMerliceRow1Plant2}
+          name="Oha2NAnnicoRow1Plant2"
+          component={Oha2NAnnicoRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow1Plant3"
-          component={Oha2NMerliceRow1Plant3}
+          name="Oha2NAnnicoRow1Plant3"
+          component={Oha2NAnnicoRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow1Plant4"
-          component={Oha2NMerliceRow1Plant4}
+          name="Oha2NAnnicoRow1Plant4"
+          component={Oha2NAnnicoRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow1Plant5"
-          component={Oha2NMerliceRow1Plant5}
+          name="Oha2NAnnicoRow1Plant5"
+          component={Oha2NAnnicoRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow2Plant1"
-          component={Oha2NMerliceRow2Plant1}
+          name="Oha2NAvalantinoRow1Plant1"
+          component={Oha2NAvalantinoRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow2Plant2"
-          component={Oha2NMerliceRow2Plant2}
+          name="Oha2NAvalantinoRow1Plant2"
+          component={Oha2NAvalantinoRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow2Plant3"
-          component={Oha2NMerliceRow2Plant3}
+          name="Oha2NAvalantinoRow1Plant3"
+          component={Oha2NAvalantinoRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow2Plant4"
-          component={Oha2NMerliceRow2Plant4}
+          name="Oha2NAvalantinoRow1Plant4"
+          component={Oha2NAvalantinoRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Oha2NMerliceRow2Plant5"
-          component={Oha2NMerliceRow2Plant5}
+          name="Oha2NAvalantinoRow1Plant5"
+          component={Oha2NAvalantinoRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow1Plant1"
+          component={Oha2NMonalisaRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow1Plant2"
+          component={Oha2NMonalisaRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow1Plant3"
+          component={Oha2NMonalisaRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow1Plant4"
+          component={Oha2NMonalisaRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2NMonalisaRow1Plant5"
+          component={Oha2NMonalisaRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2758,6 +2835,36 @@ function MainStackNavigator() {
         <Stack.Screen
           name="Oha2SMerliceRow1Plant5"
           component={Oha2SMerliceRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoRow1Plant1"
+          component={Oha2SClobagoRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoRow1Plant2"
+          component={Oha2SClobagoRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoRow1Plant3"
+          component={Oha2SClobagoRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoRow1Plant4"
+          component={Oha2SClobagoRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Oha2SClobagoRow1Plant5"
+          component={Oha2SClobagoRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 

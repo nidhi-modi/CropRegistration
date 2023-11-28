@@ -236,7 +236,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'OHA 2S - Merlice' &&
             d.plantNumber === 3 &&
-            d.plantRow === '161' &&
+            d.plantRow === '181' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'OHA 2S - Merlice' &&
             d.plantNumber === 3 &&
-            d.plantRow === '161' &&
+            d.plantRow === '181' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2985,7 +2985,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
       const {lastWeekStmDiameterOha2SMerliceRow1Plant3} = this.state;
 
       let data = {
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3069,7 +3069,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruitsOha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowersOha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumberOha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3116,7 +3116,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits1Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers1Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber1Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3163,7 +3163,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits2Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers2Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber2Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3210,7 +3210,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits3Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers3Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber3Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3257,7 +3257,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits4Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers4Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber4Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3302,7 +3302,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits5Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers5Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber5Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3353,7 +3353,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits6Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers6Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber6Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3400,7 +3400,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits7Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers7Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber7Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3447,7 +3447,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits8Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers8Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber8Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3494,7 +3494,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         setFruits: this.state.setFruits9Oha2SMerliceRow1Plant3,
         setFlowers: this.state.setFlowers9Oha2SMerliceRow1Plant3,
         pruningNumber: this.state.pruningNumber9Oha2SMerliceRow1Plant3,
-        plantRow: '161',
+        plantRow: '181',
         plantName: 'OHA 2S - Merlice',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3646,7 +3646,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 161/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 181/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5825,7 +5825,7 @@ export default class Oha2SMerliceRow1Plant3 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('OhaDataChecker', {
                       name: 'Oha2SMerliceRow1Plant3',
-                      row: '161',
+                      row: '181',
                       plant: 3,
                       type: 'OHA 2S - Merlice',
                     })
