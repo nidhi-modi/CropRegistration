@@ -124,8 +124,8 @@ export default class GerHome extends Component {
           <View style={styles.containerView}>
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger1MerliceRow')}>
-              <Text style={styles.buttonText}>GER 1 - Merlice</Text>
+              onPress={() => this.props.navigation.navigate('Ger1DuelleRow')}>
+              <Text style={styles.buttonText}>GER 1 - Duelle</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
