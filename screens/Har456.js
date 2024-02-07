@@ -112,9 +112,11 @@ export default class Har456 extends Component {
 
         <ScrollView keyboardShouldPersistTaps="handled">
           <View style={styles.containerView}>
-            <TouchableOpacity
+            {/* <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4HTL1606150Row')}>
+              onPress={() =>
+                this.props.navigation.navigate('Har4HTL1606150Row')
+              }>
               <Text style={styles.buttonText}>HAR 4 - HTL1606150</Text>
             </TouchableOpacity>
 
@@ -130,21 +132,23 @@ export default class Har456 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4FlavorinoRow')}>
+              onPress={() =>
+                this.props.navigation.navigate('Har4FlavorinoRow')
+              }>
               <Text style={styles.buttonText}>HAR 4 - Flavorino</Text>
             </TouchableOpacity>
 
-            <View style={styles.marginSmallDimensionTop}></View>
+            <View style={styles.marginSmallDimensionTop}></View>*/}
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har4AngelleRow')}>
-              <Text style={styles.buttonText}>HAR 4 - Angelle</Text>
+              onPress={() => this.props.navigation.navigate('Har4ClobagoRow')}>
+              <Text style={styles.buttonText}>HAR 4 - Clobago</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>
 
-            <TouchableOpacity
+            {/*<TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
                 this.props.navigation.navigate('Har4AvalantinoRow')
@@ -162,12 +166,12 @@ export default class Har456 extends Component {
               <Text style={styles.buttonText}>HAR 4 - Sunset Delight</Text>
             </TouchableOpacity>
 
-            <View style={styles.marginSmallDimensionTop}></View>
+            <View style={styles.marginSmallDimensionTop}></View>*/}
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har5AngelleRow')}>
-              <Text style={styles.buttonText}>HAR 5 - Angelle</Text>
+              onPress={() => this.props.navigation.navigate('Har5ClobagoRow')}>
+              <Text style={styles.buttonText}>HAR 5 - Clobago</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
