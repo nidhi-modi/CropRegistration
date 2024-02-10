@@ -219,7 +219,9 @@ import Har4MonalisaRow from '../screens/Har4MonalisaRow';
 import Har4ClobagoRow from '../screens/Har4ClobagoRow';
 import Har4SunsetDelightRow from '../screens/Har4SunsetDelightRow';
 import Har5ClobagoRow from '../screens/Har5ClobagoRow';
-import Har6AngelleRow from '../screens/Har6AngelleRow';
+import Har6AvalantinoRow from '../screens/Har6AvalantinoRow';
+import Har6TandG1Row from '../screens/Har6TandG1Row';
+import Har6AnnicoRow from '../screens/Har6AnnicoRow';
 import Har3DunistarRow from '../screens/Har3DunistarRow';
 import Har3BambelloRow from '../screens/Har3BambelloRow';
 import Har3OranjitaRow from '../screens/Har3OranjitaRow';
@@ -245,8 +247,9 @@ import Har4ClobagoPlantsRow2 from '../screens/Har4ClobagoPlantsRow2';
 import Har4SunsetDelightPlantsRow1 from '../screens/Har4SunsetDelightPlantsRow1';
 import Har5ClobagoPlantsRow1 from '../screens/Har5ClobagoPlantsRow1';
 import Har5ClobagoPlantsRow2 from '../screens/Har5ClobagoPlantsRow2';
-import Har6AngellePlantsRow2 from '../screens/Har6AngellePlantsRow2';
-import Har6AngellePlantsRow1 from '../screens/Har6AngellePlantsRow1';
+import Har6AnnicoPlantsRow1 from '../screens/Har6AnnicoPlantsRow1';
+import Har6AvalantinoPlantsRow1 from '../screens/Har6AvalantinoPlantsRow1';
+import Har6TandG1PlantsRow1 from '../screens/Har6TandG1PlantsRow1';
 import Har3OranjitaPlantsRow1 from '../screens/Har3OranjitaPlantsRow1';
 import Har4AvalantinoPlantsRow1 from '../screens/Har4AvalantinoPlantsRow1';
 import Har3IvorinoPlantsRow1 from '../screens/Har3IvorinoPlantsRow1';
@@ -264,17 +267,23 @@ import Har3IvorinoRow1Plant1 from '../screens/Har3IvorinoRow1Plant1';
 import Har3IvorinoRow1Plant2 from '../screens/Har3IvorinoRow1Plant2';
 import Har3IvorinoRow1Plant3 from '../screens/Har3IvorinoRow1Plant3';
 
-import Har6AngelleRow1Plant1 from '../screens/Har6AngelleRow1Plant1';
-import Har6AngelleRow1Plant2 from '../screens/Har6AngelleRow1Plant2';
-import Har6AngelleRow1Plant3 from '../screens/Har6AngelleRow1Plant3';
-import Har6AngelleRow1Plant4 from '../screens/Har6AngelleRow1Plant4';
-import Har6AngelleRow1Plant5 from '../screens/Har6AngelleRow1Plant5';
+import Har6AvalantinoRow1Plant1 from '../screens/Har6AvalantinoRow1Plant1';
+import Har6AvalantinoRow1Plant2 from '../screens/Har6AvalantinoRow1Plant2';
+import Har6AvalantinoRow1Plant3 from '../screens/Har6AvalantinoRow1Plant3';
+import Har6AvalantinoRow1Plant4 from '../screens/Har6AvalantinoRow1Plant4';
+import Har6AvalantinoRow1Plant5 from '../screens/Har6AvalantinoRow1Plant5';
 
-import Har6AngelleRow2Plant1 from '../screens/Har6AngelleRow2Plant1';
-import Har6AngelleRow2Plant2 from '../screens/Har6AngelleRow2Plant2';
-import Har6AngelleRow2Plant3 from '../screens/Har6AngelleRow2Plant3';
-import Har6AngelleRow2Plant4 from '../screens/Har6AngelleRow2Plant4';
-import Har6AngelleRow2Plant5 from '../screens/Har6AngelleRow2Plant5';
+import Har6TandG1Row1Plant1 from '../screens/Har6TandG1Row1Plant1';
+import Har6TandG1Row1Plant2 from '../screens/Har6TandG1Row1Plant2';
+import Har6TandG1Row1Plant3 from '../screens/Har6TandG1Row1Plant3';
+import Har6TandG1Row1Plant4 from '../screens/Har6TandG1Row1Plant4';
+import Har6TandG1Row1Plant5 from '../screens/Har6TandG1Row1Plant5';
+
+import Har6AnnicoRow1Plant1 from '../screens/Har6AnnicoRow1Plant1';
+import Har6AnnicoRow1Plant2 from '../screens/Har6AnnicoRow1Plant2';
+import Har6AnnicoRow1Plant3 from '../screens/Har6AnnicoRow1Plant3';
+import Har6AnnicoRow1Plant4 from '../screens/Har6AnnicoRow1Plant4';
+import Har6AnnicoRow1Plant5 from '../screens/Har6AnnicoRow1Plant5';
 
 import Har4SunsetDelightRow1Plant1 from '../screens/Har4SunsetDelightRow1Plant1';
 import Har4SunsetDelightRow1Plant2 from '../screens/Har4SunsetDelightRow1Plant2';
@@ -2452,80 +2461,128 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Har6AngelleRow"
-          component={Har6AngelleRow}
+          name="Har6AvalantinoRow"
+          component={Har6AvalantinoRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngellePlantsRow1"
-          component={Har6AngellePlantsRow1}
+          name="Har6TandG1Row"
+          component={Har6TandG1Row}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngellePlantsRow2"
-          component={Har6AngellePlantsRow2}
+          name="Har6AnnicoRow"
+          component={Har6AnnicoRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow1Plant1"
-          component={Har6AngelleRow1Plant1}
+          name="Har6AvalantinoPlantsRow1"
+          component={Har6AvalantinoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow1Plant2"
-          component={Har6AngelleRow1Plant2}
+          name="Har6TandG1PlantsRow1"
+          component={Har6TandG1PlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow1Plant3"
-          component={Har6AngelleRow1Plant3}
+          name="Har6AnnicoPlantsRow1"
+          component={Har6AnnicoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow1Plant4"
-          component={Har6AngelleRow1Plant4}
+          name="Har6TandG1Row1Plant1"
+          component={Har6TandG1Row1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow1Plant5"
-          component={Har6AngelleRow1Plant5}
+          name="Har6TandG1Row1Plant2"
+          component={Har6TandG1Row1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow2Plant1"
-          component={Har6AngelleRow2Plant1}
+          name="Har6TandG1Row1Plant3"
+          component={Har6TandG1Row1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow2Plant2"
-          component={Har6AngelleRow2Plant2}
+          name="Har6TandG1Row1Plant4"
+          component={Har6TandG1Row1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow2Plant3"
-          component={Har6AngelleRow2Plant3}
+          name="Har6TandG1Row1Plant5"
+          component={Har6TandG1Row1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow2Plant4"
-          component={Har6AngelleRow2Plant4}
+          name="Har6AvalantinoRow1Plant1"
+          component={Har6AvalantinoRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har6AngelleRow2Plant5"
-          component={Har6AngelleRow2Plant5}
+          name="Har6AvalantinoRow1Plant2"
+          component={Har6AvalantinoRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AvalantinoRow1Plant3"
+          component={Har6AvalantinoRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AvalantinoRow1Plant4"
+          component={Har6AvalantinoRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AvalantinoRow1Plant5"
+          component={Har6AvalantinoRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AnnicoRow1Plant1"
+          component={Har6AnnicoRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AnnicoRow1Plant2"
+          component={Har6AnnicoRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AnnicoRow1Plant3"
+          component={Har6AnnicoRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AnnicoRow1Plant4"
+          component={Har6AnnicoRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Har6AnnicoRow1Plant5"
+          component={Har6AnnicoRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 

@@ -178,8 +178,26 @@ export default class Har456 extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Har6AngelleRow')}>
-              <Text style={styles.buttonText}>HAR 6 - Angelle</Text>
+              onPress={() =>
+                this.props.navigation.navigate('Har6AvalantinoRow')
+              }>
+              <Text style={styles.buttonText}>HAR 6 - Avalantino</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har6AnnicoRow')}>
+              <Text style={styles.buttonText}>HAR 6 - Annico</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Har6TandG1Row')}>
+              <Text style={styles.buttonText}>HAR 6 - T&G1</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

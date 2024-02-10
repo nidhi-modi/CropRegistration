@@ -22,7 +22,7 @@ var plant3Selected;
 var plant4Selected;
 var plant5Selected;
 
-export default class Har6AngellePlantsRow2 extends Component {
+export default class Har6AnnicoPlantsRow1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -54,11 +54,11 @@ export default class Har6AngellePlantsRow2 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.har6AngelleRow2EventPlant1);
-    EventRegister.removeEventListener(this.har6AngelleRow2EventPlant2);
-    EventRegister.removeEventListener(this.har6AngelleRow2EventPlant3);
-    EventRegister.removeEventListener(this.har6AngelleRow2EventPlant4);
-    EventRegister.removeEventListener(this.har6AngelleRow2EventPlant5);
+    EventRegister.removeEventListener(this.har6AnnicoRow1EventPlant1);
+    EventRegister.removeEventListener(this.har6AnnicoRow1EventPlant2);
+    EventRegister.removeEventListener(this.har6AnnicoRow1EventPlant3);
+    EventRegister.removeEventListener(this.har6AnnicoRow1EventPlant4);
+    EventRegister.removeEventListener(this.har6AnnicoRow1EventPlant5);
   }
 
   componentDidUpdate() {
@@ -73,8 +73,8 @@ export default class Har6AngellePlantsRow2 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.har6AngelleRow2EventPlant1 = EventRegister.addEventListener(
-      'har6AngelleRow2EventPlant1',
+    this.har6AnnicoRow1EventPlant1 = EventRegister.addEventListener(
+      'har6AnnicoRow1EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -87,8 +87,8 @@ export default class Har6AngellePlantsRow2 extends Component {
     );
 
     //PLANT 2
-    this.har6AngelleRow2EventPlant2 = EventRegister.addEventListener(
-      'har6AngelleRow2EventPlant2',
+    this.har6AnnicoRow1EventPlant2 = EventRegister.addEventListener(
+      'har6AnnicoRow1EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -101,8 +101,8 @@ export default class Har6AngellePlantsRow2 extends Component {
     );
 
     //PLANT 3
-    this.har6AngelleRow2EventPlant3 = EventRegister.addEventListener(
-      'har6AngelleRow2EventPlant3',
+    this.har6AnnicoRow1EventPlant3 = EventRegister.addEventListener(
+      'har6AnnicoRow1EventPlant3',
       data3 => {
         plant3Selected = data3;
 
@@ -115,8 +115,8 @@ export default class Har6AngellePlantsRow2 extends Component {
     );
 
     //PLANT 4
-    this.har6AngelleRow2EventPlant4 = EventRegister.addEventListener(
-      'har6AngelleRow2EventPlant4',
+    this.har6AnnicoRow1EventPlant4 = EventRegister.addEventListener(
+      'har6AnnicoRow1EventPlant4',
       data4 => {
         plant4Selected = data4;
 
@@ -129,8 +129,8 @@ export default class Har6AngellePlantsRow2 extends Component {
     );
 
     //PLANT 5
-    this.har6AngelleRow2EventPlant5 = EventRegister.addEventListener(
-      'har6AngelleRow2EventPlant5',
+    this.har6AnnicoRow1EventPlant5 = EventRegister.addEventListener(
+      'har6AnnicoRow1EventPlant5',
       data5 => {
         plant5Selected = data5;
 
@@ -149,7 +149,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant1')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -161,7 +161,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant1')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -181,7 +181,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant2')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -193,7 +193,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant2')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -213,7 +213,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant3')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -225,7 +225,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant3')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -245,7 +245,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant4')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -257,7 +257,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant4')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -277,7 +277,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant5')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -289,7 +289,7 @@ export default class Har6AngellePlantsRow2 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Har6AngelleRow2Plant5')
+            this.props.navigation.navigate('Har6AnnicoRow1Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -316,13 +316,13 @@ export default class Har6AngellePlantsRow2 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Har6AngelleRow')}>
+              onPress={() => this.props.navigation.navigate('Har6AnnicoRow')}>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 6 - Angelle / Row 649</Text>
+            <Text style={styles.text}>HAR 6 - Annico / Row 643</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
