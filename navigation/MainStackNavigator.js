@@ -216,9 +216,9 @@ import Har4HTL1606150Row from '../screens/Har4HTL1606150Row';
 import Har4AvalantinoRow from '../screens/Har4AvalantinoRow';
 import Har4FlavorinoRow from '../screens/Har4FlavorinoRow';
 import Har4MonalisaRow from '../screens/Har4MonalisaRow';
-import Har4ClobagoRow from '../screens/Har4ClobagoRow';
+import Har4ClobogoRow from '../screens/Har4ClobogoRow';
 import Har4SunsetDelightRow from '../screens/Har4SunsetDelightRow';
-import Har5ClobagoRow from '../screens/Har5ClobagoRow';
+import Har5ClobogoRow from '../screens/Har5ClobogoRow';
 import Har6AvalantinoRow from '../screens/Har6AvalantinoRow';
 import Har6TandG1Row from '../screens/Har6TandG1Row';
 import Har6AnnicoRow from '../screens/Har6AnnicoRow';
@@ -242,11 +242,11 @@ import Har3GustellePlantsRow1 from '../screens/Har3GustellePlantsRow1';
 import Har4HTL1606150PlantsRow1 from '../screens/Har4HTL1606150PlantsRow1';
 import Har4FlavorinoPlantsRow1 from '../screens/Har4FlavorinoPlantsRow1';
 import Har4MonalisaPlantsRow1 from '../screens/Har4MonalisaPlantsRow1';
-import Har4ClobagoPlantsRow1 from '../screens/Har4ClobagoPlantsRow1';
-import Har4ClobagoPlantsRow2 from '../screens/Har4ClobagoPlantsRow2';
+import Har4ClobogoPlantsRow1 from '../screens/Har4ClobogoPlantsRow1';
+import Har4ClobogoPlantsRow2 from '../screens/Har4ClobogoPlantsRow2';
 import Har4SunsetDelightPlantsRow1 from '../screens/Har4SunsetDelightPlantsRow1';
-import Har5ClobagoPlantsRow1 from '../screens/Har5ClobagoPlantsRow1';
-import Har5ClobagoPlantsRow2 from '../screens/Har5ClobagoPlantsRow2';
+import Har5ClobogoPlantsRow1 from '../screens/Har5ClobogoPlantsRow1';
+import Har5ClobogoPlantsRow2 from '../screens/Har5ClobogoPlantsRow2';
 import Har6AnnicoPlantsRow1 from '../screens/Har6AnnicoPlantsRow1';
 import Har6AvalantinoPlantsRow1 from '../screens/Har6AvalantinoPlantsRow1';
 import Har6TandG1PlantsRow1 from '../screens/Har6TandG1PlantsRow1';
@@ -291,17 +291,17 @@ import Har4SunsetDelightRow1Plant3 from '../screens/Har4SunsetDelightRow1Plant3'
 import Har4SunsetDelightRow1Plant4 from '../screens/Har4SunsetDelightRow1Plant4';
 import Har4SunsetDelightRow1Plant5 from '../screens/Har4SunsetDelightRow1Plant5';
 
-import Har4ClobagoRow1Plant1 from '../screens/Har4ClobagoRow1Plant1';
-import Har4ClobagoRow1Plant2 from '../screens/Har4ClobagoRow1Plant2';
-import Har4ClobagoRow1Plant3 from '../screens/Har4ClobagoRow1Plant3';
-import Har4ClobagoRow1Plant4 from '../screens/Har4ClobagoRow1Plant4';
-import Har4ClobagoRow1Plant5 from '../screens/Har4ClobagoRow1Plant5';
+import Har4ClobogoRow1Plant1 from '../screens/Har4ClobogoRow1Plant1';
+import Har4ClobogoRow1Plant2 from '../screens/Har4ClobogoRow1Plant2';
+import Har4ClobogoRow1Plant3 from '../screens/Har4ClobogoRow1Plant3';
+import Har4ClobogoRow1Plant4 from '../screens/Har4ClobogoRow1Plant4';
+import Har4ClobogoRow1Plant5 from '../screens/Har4ClobogoRow1Plant5';
 
-import Har4ClobagoRow2Plant1 from '../screens/Har4ClobagoRow2Plant1';
-import Har4ClobagoRow2Plant2 from '../screens/Har4ClobagoRow2Plant2';
-import Har4ClobagoRow2Plant3 from '../screens/Har4ClobagoRow2Plant3';
-import Har4ClobagoRow2Plant4 from '../screens/Har4ClobagoRow2Plant4';
-import Har4ClobagoRow2Plant5 from '../screens/Har4ClobagoRow2Plant5';
+import Har4ClobogoRow2Plant1 from '../screens/Har4ClobogoRow2Plant1';
+import Har4ClobogoRow2Plant2 from '../screens/Har4ClobogoRow2Plant2';
+import Har4ClobogoRow2Plant3 from '../screens/Har4ClobogoRow2Plant3';
+import Har4ClobogoRow2Plant4 from '../screens/Har4ClobogoRow2Plant4';
+import Har4ClobogoRow2Plant5 from '../screens/Har4ClobogoRow2Plant5';
 
 import Har3GustelleRow1Plant1 from '../screens/Har3GustelleRow1Plant1';
 import Har3GustelleRow1Plant2 from '../screens/Har3GustelleRow1Plant2';
@@ -339,17 +339,17 @@ import Har2AngelleRow2Plant3 from '../screens/Har2AngelleRow2Plant3';
 import Har2AngelleRow2Plant4 from '../screens/Har2AngelleRow2Plant4';
 import Har2AngelleRow2Plant5 from '../screens/Har2AngelleRow2Plant5';
 
-import Har5ClobagoRow1Plant1 from '../screens/Har5ClobagoRow1Plant1';
-import Har5ClobagoRow1Plant2 from '../screens/Har5ClobagoRow1Plant2';
-import Har5ClobagoRow1Plant3 from '../screens/Har5ClobagoRow1Plant3';
-import Har5ClobagoRow1Plant4 from '../screens/Har5ClobagoRow1Plant4';
-import Har5ClobagoRow1Plant5 from '../screens/Har5ClobagoRow1Plant5';
+import Har5ClobogoRow1Plant1 from '../screens/Har5ClobogoRow1Plant1';
+import Har5ClobogoRow1Plant2 from '../screens/Har5ClobogoRow1Plant2';
+import Har5ClobogoRow1Plant3 from '../screens/Har5ClobogoRow1Plant3';
+import Har5ClobogoRow1Plant4 from '../screens/Har5ClobogoRow1Plant4';
+import Har5ClobogoRow1Plant5 from '../screens/Har5ClobogoRow1Plant5';
 
-import Har5ClobagoRow2Plant1 from '../screens/Har5ClobagoRow2Plant1';
-import Har5ClobagoRow2Plant2 from '../screens/Har5ClobagoRow2Plant2';
-import Har5ClobagoRow2Plant3 from '../screens/Har5ClobagoRow2Plant3';
-import Har5ClobagoRow2Plant4 from '../screens/Har5ClobagoRow2Plant4';
-import Har5ClobagoRow2Plant5 from '../screens/Har5ClobagoRow2Plant5';
+import Har5ClobogoRow2Plant1 from '../screens/Har5ClobogoRow2Plant1';
+import Har5ClobogoRow2Plant2 from '../screens/Har5ClobogoRow2Plant2';
+import Har5ClobogoRow2Plant3 from '../screens/Har5ClobogoRow2Plant3';
+import Har5ClobogoRow2Plant4 from '../screens/Har5ClobogoRow2Plant4';
+import Har5ClobogoRow2Plant5 from '../screens/Har5ClobogoRow2Plant5';
 
 import Har33D17621Row1Plant1 from '../screens/Har33D17621Row1Plant1';
 import Har33D17621Row1Plant2 from '../screens/Har33D17621Row1Plant2';
@@ -2221,8 +2221,8 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow"
-          component={Har4ClobagoRow}
+          name="Har4ClobogoRow"
+          component={Har4ClobogoRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2269,74 +2269,74 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Har4ClobagoPlantsRow2"
-          component={Har4ClobagoPlantsRow2}
+          name="Har4ClobogoPlantsRow2"
+          component={Har4ClobogoPlantsRow2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow2Plant1"
-          component={Har4ClobagoRow2Plant1}
+          name="Har4ClobogoRow2Plant1"
+          component={Har4ClobogoRow2Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow2Plant2"
-          component={Har4ClobagoRow2Plant2}
+          name="Har4ClobogoRow2Plant2"
+          component={Har4ClobogoRow2Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow2Plant3"
-          component={Har4ClobagoRow2Plant3}
+          name="Har4ClobogoRow2Plant3"
+          component={Har4ClobogoRow2Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow2Plant4"
-          component={Har4ClobagoRow2Plant4}
+          name="Har4ClobogoRow2Plant4"
+          component={Har4ClobogoRow2Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow2Plant5"
-          component={Har4ClobagoRow2Plant5}
+          name="Har4ClobogoRow2Plant5"
+          component={Har4ClobogoRow2Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoPlantsRow1"
-          component={Har4ClobagoPlantsRow1}
+          name="Har4ClobogoPlantsRow1"
+          component={Har4ClobogoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow1Plant1"
-          component={Har4ClobagoRow1Plant1}
+          name="Har4ClobogoRow1Plant1"
+          component={Har4ClobogoRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow1Plant2"
-          component={Har4ClobagoRow1Plant2}
+          name="Har4ClobogoRow1Plant2"
+          component={Har4ClobogoRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow1Plant3"
-          component={Har4ClobagoRow1Plant3}
+          name="Har4ClobogoRow1Plant3"
+          component={Har4ClobogoRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow1Plant4"
-          component={Har4ClobagoRow1Plant4}
+          name="Har4ClobogoRow1Plant4"
+          component={Har4ClobogoRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har4ClobagoRow1Plant5"
-          component={Har4ClobagoRow1Plant5}
+          name="Har4ClobogoRow1Plant5"
+          component={Har4ClobogoRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2383,80 +2383,80 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow"
-          component={Har5ClobagoRow}
+          name="Har5ClobogoRow"
+          component={Har5ClobogoRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoPlantsRow1"
-          component={Har5ClobagoPlantsRow1}
+          name="Har5ClobogoPlantsRow1"
+          component={Har5ClobogoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoPlantsRow2"
-          component={Har5ClobagoPlantsRow2}
+          name="Har5ClobogoPlantsRow2"
+          component={Har5ClobogoPlantsRow2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow1Plant1"
-          component={Har5ClobagoRow1Plant1}
+          name="Har5ClobogoRow1Plant1"
+          component={Har5ClobogoRow1Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow1Plant3"
-          component={Har5ClobagoRow1Plant3}
+          name="Har5ClobogoRow1Plant3"
+          component={Har5ClobogoRow1Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow1Plant2"
-          component={Har5ClobagoRow1Plant2}
+          name="Har5ClobogoRow1Plant2"
+          component={Har5ClobogoRow1Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow1Plant4"
-          component={Har5ClobagoRow1Plant4}
+          name="Har5ClobogoRow1Plant4"
+          component={Har5ClobogoRow1Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow1Plant5"
-          component={Har5ClobagoRow1Plant5}
+          name="Har5ClobogoRow1Plant5"
+          component={Har5ClobogoRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow2Plant1"
-          component={Har5ClobagoRow2Plant1}
+          name="Har5ClobogoRow2Plant1"
+          component={Har5ClobogoRow2Plant1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow2Plant2"
-          component={Har5ClobagoRow2Plant2}
+          name="Har5ClobogoRow2Plant2"
+          component={Har5ClobogoRow2Plant2}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow2Plant3"
-          component={Har5ClobagoRow2Plant3}
+          name="Har5ClobogoRow2Plant3"
+          component={Har5ClobogoRow2Plant3}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow2Plant4"
-          component={Har5ClobagoRow2Plant4}
+          name="Har5ClobogoRow2Plant4"
+          component={Har5ClobogoRow2Plant4}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
-          name="Har5ClobagoRow2Plant5"
-          component={Har5ClobagoRow2Plant5}
+          name="Har5ClobogoRow2Plant5"
+          component={Har5ClobogoRow2Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 

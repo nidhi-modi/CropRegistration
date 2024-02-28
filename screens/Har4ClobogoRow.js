@@ -16,7 +16,7 @@ import {EventRegister} from 'react-native-event-listeners';
 
 var screenWidth = Dimensions.get('window').width / 1.6;
 
-export default class Har5ClobagoRow extends Component {
+export default class Har4ClobogoRow extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -41,7 +41,7 @@ export default class Har5ClobagoRow extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>HAR 5 - Clobago</Text>
+            <Text style={styles.text}>HAR 4 - Clobogo</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -56,9 +56,9 @@ export default class Har5ClobagoRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Har5ClobagoPlantsRow1')
+                this.props.navigation.navigate('Har4ClobogoPlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 527</Text>
+              <Text style={styles.buttonText}>Row 427</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -66,9 +66,9 @@ export default class Har5ClobagoRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Har5ClobagoPlantsRow2')
+                this.props.navigation.navigate('Har4ClobogoPlantsRow2')
               }>
-              <Text style={styles.buttonText}>Row 528</Text>
+              <Text style={styles.buttonText}>Row 428</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
