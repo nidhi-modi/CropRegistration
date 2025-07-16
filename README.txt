@@ -1,6 +1,6 @@
-******************************************
+*******************************************************************************************
 
-This build as been simulated, archived and tested on flight mode.
+This build has been simulated, archived and tested on flight mode.
 
 Repo Git clone: https://github.com/nidhi-modi/CropRegistration.git (last updated Feb-2024)
 macOS: Sequoia 15.5 (24F74)
@@ -18,9 +18,9 @@ Updating yarn and pods:
 Launching Metro (prior Build/Simulator)
 /CropRegistration: yarn start
 
-*'CURRENT_ARCH=arm64 pod install' or 'CURRENT_ARCH=arm64 pod install --repo-update' solved glog (0.35.0) install error. Althought this wasn't a problem with this project.
+*'CURRENT_ARCH=arm64 pod install' or 'CURRENT_ARCH=arm64 pod install --repo-update' solved glog (0.35.0) install error. Although this wasn't a problem with this project.
 
---------------------------------------------Error Logs----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------Error Logs---------------
 
 1. Build project: 'Yoga' > accept the suggested fix
 
@@ -95,6 +95,6 @@ Added to Podfile lines 22 to 57 to fix:
 -Remove any bitcode* trace from other dependencies (Validation error)
 *Submission with Bitcode are not longer allowed from Xcode 16
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------
 
 Project changes commited to: https://github.com/CoveredCropsTG/CropRegistration-v69.1.git
