@@ -236,7 +236,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'OHA 2N - Mona Lisa' &&
             d.plantNumber === 1 &&
-            d.plantRow === '94' &&
+            d.plantRow === '103' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'OHA 2N - Mona Lisa' &&
             d.plantNumber === 1 &&
-            d.plantRow === '94' &&
+            d.plantRow === '103' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -3000,7 +3000,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
       const {lastWeekStmDiameterOha2NMonalisaRow1Plant1} = this.state;
 
       let data = {
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3086,7 +3086,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruitsOha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowersOha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumberOha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3133,7 +3133,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits1Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers1Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber1Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3180,7 +3180,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits2Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers2Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber2Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3227,7 +3227,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits3Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers3Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber3Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3274,7 +3274,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits4Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers4Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber4Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3319,7 +3319,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits5Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers5Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber5Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3370,7 +3370,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits6Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers6Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber6Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3417,7 +3417,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits7Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers7Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber7Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3464,7 +3464,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits8Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers8Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber8Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3511,7 +3511,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         setFruits: this.state.setFruits9Oha2NMonalisaRow1Plant1,
         setFlowers: this.state.setFlowers9Oha2NMonalisaRow1Plant1,
         pruningNumber: this.state.pruningNumber9Oha2NMonalisaRow1Plant1,
-        plantRow: '94',
+        plantRow: '103',
         plantName: 'OHA 2N - Mona Lisa',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3536,7 +3536,9 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3663,7 +3665,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 94/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 103/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5842,7 +5844,7 @@ export default class Oha2NMonalisaRow1Plant1 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('OhaDataChecker', {
                       name: 'Oha2NMonalisaRow1Plant1',
-                      row: '94',
+                      row: '103',
                       plant: 1,
                       type: 'OHA 2N - Mona Lisa',
                     })

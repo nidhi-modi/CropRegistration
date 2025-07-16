@@ -58,7 +58,7 @@ export default class Oha2NAnnicoRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Oha2NAnnicoPlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 120</Text>
+              <Text style={styles.buttonText}>Row 130</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

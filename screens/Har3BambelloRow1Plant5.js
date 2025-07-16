@@ -236,7 +236,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 3 - Bambello' &&
             d.plantNumber === 5 &&
-            d.plantRow === '315' &&
+            d.plantRow === '347' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 3 - Bambello' &&
             d.plantNumber === 5 &&
-            d.plantRow === '315' &&
+            d.plantRow === '347' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2985,7 +2985,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
       const {lastWeekStmDiameterHar3BambelloRow1Plant5} = this.state;
 
       let data = {
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3069,7 +3069,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruitsHar3BambelloRow1Plant5,
         setFlowers: this.state.setFlowersHar3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumberHar3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3116,7 +3116,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits1Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers1Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber1Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3163,7 +3163,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits2Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers2Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber2Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3210,7 +3210,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits3Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers3Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber3Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3257,7 +3257,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits4Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers4Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber4Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3302,7 +3302,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits5Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers5Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber5Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3353,7 +3353,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits6Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers6Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber6Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3400,7 +3400,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits7Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers7Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber7Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3447,7 +3447,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits8Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers8Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber8Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3494,7 +3494,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         setFruits: this.state.setFruits9Har3BambelloRow1Plant5,
         setFlowers: this.state.setFlowers9Har3BambelloRow1Plant5,
         pruningNumber: this.state.pruningNumber9Har3BambelloRow1Plant5,
-        plantRow: '315',
+        plantRow: '347',
         plantName: 'HAR 3 - Bambello',
         plantWeek: this.state.weekNumber,
         plantNumber: 5,
@@ -3519,7 +3519,9 @@ export default class Har3BambelloRow1Plant5 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3646,7 +3648,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 315/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 5</Text>/ Row No. 347/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5825,7 +5827,7 @@ export default class Har3BambelloRow1Plant5 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har3DataChecker', {
                       name: 'Har3BambelloRow1Plant5',
-                      row: '315',
+                      row: '347',
                       plant: 5,
                       type: 'HAR 3 - Bambello',
                     })

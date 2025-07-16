@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
@@ -10,7 +10,7 @@ import {
   Dimensions,
   Platform,
 } from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
+import { ScrollView } from 'react-native-gesture-handler';
 import NetInfo from '@react-native-community/netinfo';
 
 var screenWidth = Dimensions.get('window').width / 1.6;
@@ -72,9 +72,9 @@ export default class GerHome extends Component {
 
   handleConnectivityChange = state => {
     if (state.isConnected) {
-      this.setState({isItConnected: 'Online'});
+      this.setState({ isItConnected: 'Online' });
     } else {
-      this.setState({isItConnected: 'Offline'});
+      this.setState({ isItConnected: 'Offline' });
     }
   };
 
@@ -110,7 +110,7 @@ export default class GerHome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' ? <View style={{marginTop: 20}}></View> : null}
+        {Platform.OS === 'ios' ? <View style={{ marginTop: 20 }}></View> : null}
 
         <View style={styles.headerImage}>
           <Image source={require('../assets/fresh3.png')} />
@@ -124,7 +124,17 @@ export default class GerHome extends Component {
           <View style={styles.containerView}>
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger1DuelleRow')}>
+              onPress={() => this.props.navigation.navigate('Ger1DormaPlumRow')}
+            >
+              <Text style={styles.buttonText}>GER 1 - Dorma Plum</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger1DuelleRow')}
+            >
               <Text style={styles.buttonText}>GER 1 - Duelle</Text>
             </TouchableOpacity>
 
@@ -132,15 +142,17 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger2GrandiceRow')}>
-              <Text style={styles.buttonText}>GER 2 - Grandice</Text>
+              onPress={() => this.props.navigation.navigate('Ger2ClobogoRow')}
+            >
+              <Text style={styles.buttonText}>GER 2 - Clobogo</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger3GustelleRow')}>
+              onPress={() => this.props.navigation.navigate('Ger3GustelleRow')}
+            >
               <Text style={styles.buttonText}>GER 3 - Gustelle</Text>
             </TouchableOpacity>
 
@@ -148,7 +160,8 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger3DunistarRow')}>
+              onPress={() => this.props.navigation.navigate('Ger3ProdelleRow')}
+            >
               <Text style={styles.buttonText}>GER 3 - Dunistar</Text>
             </TouchableOpacity>
 
@@ -156,7 +169,8 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger3DuelleRow')}>
+              onPress={() => this.props.navigation.navigate('Ger3DuelleRow')}
+            >
               <Text style={styles.buttonText}>GER 3 - Duelle</Text>
             </TouchableOpacity>
 
@@ -164,23 +178,53 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger3AngelleRow')}>
-              <Text style={styles.buttonText}>GER 3 - Angelle</Text>
+              onPress={() => this.props.navigation.navigate('Ger3IcariaRow')}
+            >
+              <Text style={styles.buttonText}>GER 3 - Icaria</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger4GrandiceRow')}>
-              <Text style={styles.buttonText}>GER 4 - Grandice</Text>
+              onPress={() => this.props.navigation.navigate('Ger4PatzcuaroRow')}
+            >
+              <Text style={styles.buttonText}>GER 4 - Patzcuaro</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger5AngelleRow')}>
+              onPress={() => this.props.navigation.navigate('Ger4XaveriusRow')}
+            >
+              <Text style={styles.buttonText}>GER 4 - Xaverius</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger4RhodiumRow')}
+            >
+              <Text style={styles.buttonText}>GER 4 - Rhodium</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger4SanPirloRow')}
+            >
+              <Text style={styles.buttonText}>GER 4 - San Pirlo</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5AngelleRow')}
+            >
               <Text style={styles.buttonText}>GER 5 - Angelle</Text>
             </TouchableOpacity>
 
@@ -188,7 +232,8 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger5DuelleRow')}>
+              onPress={() => this.props.navigation.navigate('Ger5DuelleRow')}
+            >
               <Text style={styles.buttonText}>GER 5 - Duelle</Text>
             </TouchableOpacity>
 
@@ -196,8 +241,83 @@ export default class GerHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Ger5BambelloRow')}>
+              onPress={() => this.props.navigation.navigate('Ger5BambelloRow')}
+            >
               <Text style={styles.buttonText}>GER 5 - Bambello</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5IcariaRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Icaria</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5ProdelleRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Prodelle</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5DormaPlumRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Dorma Plum</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5TattooRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Tattoo</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5AdorelleRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Adorelle</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() =>
+                this.props.navigation.navigate('Ger5BellamariaRow')
+              }
+            >
+              <Text style={styles.buttonText}>GER 5 - Bellamaria</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5CrystelleRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Crystelle</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() => this.props.navigation.navigate('Ger5TomVioletRow')}
+            >
+              <Text style={styles.buttonText}>GER 5 - Tom Violet</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>

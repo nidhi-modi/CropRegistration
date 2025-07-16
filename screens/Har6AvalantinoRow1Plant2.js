@@ -236,7 +236,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 6 - Avalantino' &&
             d.plantNumber === 2 &&
-            d.plantRow === '653' &&
+            d.plantRow === '649' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 6 - Avalantino' &&
             d.plantNumber === 2 &&
-            d.plantRow === '653' &&
+            d.plantRow === '649' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -3021,7 +3021,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
       const {lastWeekStmDiameterHar6AvalantinoRow1Plant2} = this.state;
 
       let data = {
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3107,7 +3107,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruitsHar6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowersHar6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumberHar6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3154,7 +3154,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits1Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers1Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber1Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3201,7 +3201,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits2Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers2Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber2Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3248,7 +3248,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits3Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers3Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber3Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3295,7 +3295,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits4Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers4Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber4Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3340,7 +3340,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits5Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers5Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber5Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3391,7 +3391,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits6Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers6Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber6Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3438,7 +3438,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits7Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers7Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber7Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3485,7 +3485,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits8Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers8Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber8Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3532,7 +3532,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         setFruits: this.state.setFruits9Har6AvalantinoRow1Plant2,
         setFlowers: this.state.setFlowers9Har6AvalantinoRow1Plant2,
         pruningNumber: this.state.pruningNumber9Har6AvalantinoRow1Plant2,
-        plantRow: '653',
+        plantRow: '649',
         plantName: 'HAR 6 - Avalantino',
         plantWeek: this.state.weekNumber,
         plantNumber: 2,
@@ -3557,7 +3557,9 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3684,7 +3686,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 653/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 2</Text>/ Row No. 649/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5871,7 +5873,7 @@ export default class Har6AvalantinoRow1Plant2 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har6DataChecker', {
                       name: 'Har6AvalantinoRow1Plant2',
-                      row: '653',
+                      row: '649',
                       plant: 2,
                       type: 'HAR 6 - Avalantino',
                     })

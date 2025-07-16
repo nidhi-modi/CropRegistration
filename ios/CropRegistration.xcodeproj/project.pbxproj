@@ -192,6 +192,7 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				2C6412BE84CF2EEE388C0CDC /* [CP] Embed Pods Frameworks */,
+				883A68EA2E2849B0002D0951 /* ShellScript */,
 				C1396E0DEDD95F339598C08B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -338,6 +339,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CropRegistration-CropRegistrationTests/Pods-CropRegistration-CropRegistrationTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		883A68EA2E2849B0002D0951 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nBITCODE_STRIP=\"$(xcrun --find bitcode_strip)\"\nFRAMEWORKS_DIR=\"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\n\necho \"Stripping bitcode from embedded frameworks in ${FRAMEWORKS_DIR}\"\n\nfor FRAMEWORK in \\\n  OpenSSL.framework \\\n  ReactNativeSafeAreaContext.framework \\\n  RNSplashScreen.framework\ndo\n  BIN=\"$FRAMEWORKS_DIR/$FRAMEWORK/$FRAMEWORK\"\n  if [ -f \"$BIN\" ]; then\n    echo \" → Stripping $BIN\"\n    \"$BITCODE_STRIP\" -r \"$BIN\" -o \"$BIN\"\n  fi\ndone\n";
 		};
 		B18E9B9792F8D6327F5B473A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

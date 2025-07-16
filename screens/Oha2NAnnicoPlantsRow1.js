@@ -322,7 +322,7 @@ export default class Oha2NAnnicoPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>OHA 2N - Annico / Row 120</Text>
+            <Text style={styles.text}>OHA 2N - Annico / Row 130</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

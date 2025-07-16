@@ -236,7 +236,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'HAR 3 - Gustelle' &&
             d.plantNumber === 1 &&
-            d.plantRow === '347' &&
+            d.plantRow === '327' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'HAR 3 - Gustelle' &&
             d.plantNumber === 1 &&
-            d.plantRow === '347' &&
+            d.plantRow === '327' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2985,7 +2985,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
       const {lastWeekStmDiameterHar3GustelleRow1Plant1} = this.state;
 
       let data = {
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3069,7 +3069,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruitsHar3GustelleRow1Plant1,
         setFlowers: this.state.setFlowersHar3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumberHar3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3116,7 +3116,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits1Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers1Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber1Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3163,7 +3163,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits2Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers2Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber2Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3210,7 +3210,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits3Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers3Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber3Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3257,7 +3257,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits4Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers4Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber4Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3302,7 +3302,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits5Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers5Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber5Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3353,7 +3353,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits6Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers6Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber6Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3400,7 +3400,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits7Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers7Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber7Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3447,7 +3447,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits8Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers8Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber8Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3494,7 +3494,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         setFruits: this.state.setFruits9Har3GustelleRow1Plant1,
         setFlowers: this.state.setFlowers9Har3GustelleRow1Plant1,
         pruningNumber: this.state.pruningNumber9Har3GustelleRow1Plant1,
-        plantRow: '347',
+        plantRow: '327',
         plantName: 'HAR 3 - Gustelle',
         plantWeek: this.state.weekNumber,
         plantNumber: 1,
@@ -3519,7 +3519,9 @@ export default class Har3GustelleRow1Plant1 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3646,7 +3648,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 347/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 1</Text>/ Row No. 327/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5825,7 +5827,7 @@ export default class Har3GustelleRow1Plant1 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('Har3DataChecker', {
                       name: 'Har3GustelleRow1Plant1',
-                      row: '347',
+                      row: '327',
                       plant: 1,
                       type: 'HAR 3 - Gustelle',
                     })

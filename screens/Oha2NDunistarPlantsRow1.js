@@ -324,7 +324,7 @@ export default class Oha2NDunistarPlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>OHA 2N - Dunistar / Row 81</Text>
+            <Text style={styles.text}>OHA 2N - Dunistar / Row 83</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

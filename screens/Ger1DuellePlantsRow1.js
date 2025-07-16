@@ -21,11 +21,6 @@ var plant2Selected;
 var plant3Selected;
 var plant4Selected;
 var plant5Selected;
-var plant6Selected;
-var plant7Selected;
-var plant8Selected;
-var plant9Selected;
-var plant10Selected;
 
 export default class Ger1DuellePlantsRow1 extends Component {
   constructor(props) {
@@ -64,11 +59,6 @@ export default class Ger1DuellePlantsRow1 extends Component {
     EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant3);
     EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant4);
     EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant5);
-    EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant6);
-    EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant7);
-    EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant8);
-    EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant9);
-    EventRegister.removeEventListener(this.ger1DuelleRow1EventPlant10);
   }
 
   componentDidUpdate() {
@@ -145,76 +135,6 @@ export default class Ger1DuellePlantsRow1 extends Component {
         plant5Selected = data5;
 
         if (data5 == null || data5 == true || data5 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 6
-    this.ger1DuelleRow1EventPlant6 = EventRegister.addEventListener(
-      'ger1DuelleRow1EventPlant6',
-      data6 => {
-        plant6Selected = data6;
-
-        if (data6 == null || data6 == true || data6 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 7
-    this.ger1DuelleRow1EventPlant7 = EventRegister.addEventListener(
-      'ger1DuelleRow1EventPlant7',
-      data7 => {
-        plant7Selected = data7;
-
-        if (data7 == null || data7 == true || data7 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 8
-    this.ger1DuelleRow1EventPlant8 = EventRegister.addEventListener(
-      'ger1DuelleRow1EventPlant8',
-      data8 => {
-        plant8Selected = data8;
-
-        if (data8 == null || data8 == true || data8 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 9
-    this.ger1DuelleRow1EventPlant9 = EventRegister.addEventListener(
-      'ger1DuelleRow1EventPlant9',
-      data9 => {
-        plant9Selected = data9;
-
-        if (data9 == null || data9 == true || data9 != false) {
-          console.log('Plant not done');
-        } else {
-          console.log('Plant completed');
-        }
-      },
-    );
-
-    //PLANT 10
-    this.ger1DuelleRow1EventPlant10 = EventRegister.addEventListener(
-      'ger1DuelleRow1EventPlant10',
-      data10 => {
-        plant10Selected = data10;
-
-        if (data10 == null || data10 == true || data10 != false) {
           console.log('Plant not done');
         } else {
           console.log('Plant completed');
@@ -383,166 +303,6 @@ export default class Ger1DuellePlantsRow1 extends Component {
     }
   }
 
-  renderElement6() {
-    if (plant6Selected == null || plant6Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant6')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 6 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant6')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 6 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement7() {
-    if (plant7Selected == null || plant7Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant7')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 7 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant7')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 7 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement8() {
-    if (plant8Selected == null || plant8Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant8')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 8 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant8')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 8 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement9() {
-    if (plant9Selected == null || plant9Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant9')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 9 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant9')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 9 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
-  renderElement10() {
-    if (plant10Selected == null || plant10Selected == true) {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainer}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant10')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 10 - Week {this.state.weekNumber}
-          </Text>
-        </TouchableOpacity>
-      );
-    } else {
-      return (
-        <TouchableOpacity
-          style={styles.buttonContainerImage}
-          onPress={() =>
-            this.props.navigation.navigate('Ger1DuelleRow1Plant10')
-          }>
-          <Text style={styles.buttonText}>
-            Plant 10 - Week {this.state.weekNumber}
-          </Text>
-          <Image
-            source={require('../assets/tick.png')}
-            style={styles.FloatingButtonStyle2}
-          />
-        </TouchableOpacity>
-      );
-    }
-  }
-
   render() {
     return (
       <View style={styles.container}>
@@ -562,7 +322,7 @@ export default class Ger1DuellePlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 1 - Duelle / Row 85/86</Text>
+            <Text style={styles.text}>GER 1 - Duelle / Row 48</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>
@@ -591,26 +351,6 @@ export default class Ger1DuellePlantsRow1 extends Component {
             <View style={styles.marginSmallDimensionTop}></View>
 
             {this.renderElement5()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement6()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement7()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement8()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement9()}
-
-            <View style={styles.marginSmallDimensionTop}></View>
-
-            {this.renderElement10()}
           </View>
         </ScrollView>
       </View>

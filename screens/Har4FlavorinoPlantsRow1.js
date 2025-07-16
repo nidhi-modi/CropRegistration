@@ -316,7 +316,9 @@ export default class Har4FlavorinoPlantsRow1 extends Component {
           }}>
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Har4FlavorinoRow')}>
+              onPress={() =>
+                this.props.navigation.navigate('Har4FlavorinoRow')
+              }>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>
           </View>

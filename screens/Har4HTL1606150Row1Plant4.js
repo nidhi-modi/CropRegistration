@@ -498,7 +498,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
       AsyncStorage.getItem('floweringTrussHeightHar4HTL1606150Row1Plant4')
         .then(text5Value => {
           this.setState({
-            floweringTrussHeightHar4HTL1606150Row1Plant4: JSON.parse(text5Value),
+            floweringTrussHeightHar4HTL1606150Row1Plant4: JSON.parse(
+              text5Value,
+            ),
           });
         })
         .done();
@@ -561,48 +563,57 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
 
             this.setState({
               trussNumber1Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                1,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 1,
             });
             this.setState({
               trussNumber2Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                2,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 2,
             });
             this.setState({
               trussNumber3Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                3,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 3,
             });
             this.setState({
               trussNumber4Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                4,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 4,
             });
             this.setState({
               trussNumber5Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                5,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 5,
             });
             this.setState({
               trussNumber6Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                6,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 6,
             });
             this.setState({
               trussNumber7Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                7,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 7,
             });
             this.setState({
               trussNumber8Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                8,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 8,
             });
             this.setState({
               trussNumber9Har4HTL1606150Row1Plant4:
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                9,
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 9,
             });
           }
         })
@@ -1106,7 +1117,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
         .then(text51Value => {
           if (text51Value !== null) {
             this.setState({
-              settingTrussNumberHar4HTL1606150Row1Plant4: JSON.parse(text51Value),
+              settingTrussNumberHar4HTL1606150Row1Plant4: JSON.parse(
+                text51Value,
+              ),
             });
           }
         })
@@ -1491,7 +1504,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
     var prunNum = 0;
 
     if (this.state.setFlowersHar4HTL1606150Row1Plant4 === '') {
-      prunNum = Number.parseInt(this.state.pruningNumberHar4HTL1606150Row1Plant4);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberHar4HTL1606150Row1Plant4,
+      );
 
       div =
         Number.parseInt(
@@ -1516,7 +1531,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
       });
       this.setItem('pruningHarHar4HTL1606150Row1Plant4', prunNum);
     } else {
-      prunNum = Number.parseInt(this.state.pruningNumberHar4HTL1606150Row1Plant4);
+      prunNum = Number.parseInt(
+        this.state.pruningNumberHar4HTL1606150Row1Plant4,
+      );
       var num = this.state.trussNumberHar4HTL1606150Row1Plant4;
 
       this.setState({
@@ -1679,7 +1696,10 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                     'settingTrussNumberHar4HTL1606150Row1Plant4',
                     settingTruss,
                   );
-                  this.setItem('prunSettingHar4HTL1606150Row1Plant4', pruningSet);
+                  this.setItem(
+                    'prunSettingHar4HTL1606150Row1Plant4',
+                    pruningSet,
+                  );
                 }
               } else {
                 var number4 =
@@ -1712,8 +1732,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
               }
             } else {
               var number5 =
-                Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
-                5;
+                Number.parseInt(
+                  this.state.trussNumberHar4HTL1606150Row1Plant4,
+                ) + 5;
 
               pruningSet = Number.parseInt(
                 this.state.pruningNumber5Har4HTL1606150Row1Plant4,
@@ -1738,7 +1759,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
             }
           } else {
             var number6 =
-              Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) + 6;
+              Number.parseInt(this.state.trussNumberHar4HTL1606150Row1Plant4) +
+              6;
 
             pruningSet = Number.parseInt(
               this.state.pruningNumber6Har4HTL1606150Row1Plant4,
@@ -1805,7 +1827,10 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
           prunSettingHar4HTL1606150Row1Plant4: pruningSet,
         });
 
-        this.setItem('settingTrussNumberHar4HTL1606150Row1Plant4', settingTruss);
+        this.setItem(
+          'settingTrussNumberHar4HTL1606150Row1Plant4',
+          settingTruss,
+        );
         this.setItem('prunSettingHar4HTL1606150Row1Plant4', pruningSet);
       }
     } else {
@@ -1855,7 +1880,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                 if (this.state.setFlowers3Har4HTL1606150Row1Plant4 === '') {
                   if (this.state.setFlowers2Har4HTL1606150Row1Plant4 === '') {
                     if (this.state.setFlowers1Har4HTL1606150Row1Plant4 === '') {
-                      if (this.state.setFlowersHar4HTL1606150Row1Plant4 === '') {
+                      if (
+                        this.state.setFlowersHar4HTL1606150Row1Plant4 === ''
+                      ) {
                       } else {
                         var number01 = this.state
                           .trussNumberHar4HTL1606150Row1Plant4;
@@ -2035,7 +2062,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                 );
               }
             } else {
-              var number51 = +this.state.trussNumberHar4HTL1606150Row1Plant4 + 5;
+              var number51 =
+                +this.state.trussNumberHar4HTL1606150Row1Plant4 + 5;
 
               flowerPruningNumner = Number.parseInt(
                 this.state.pruningNumber5Har4HTL1606150Row1Plant4,
@@ -2160,7 +2188,10 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
           pruneFloweringHar4HTL1606150Row1Plant4: flowerPruningNumner,
         });
 
-        this.setItem('floweringTrussssHar4HTL1606150Row1Plant4', floweringTruss);
+        this.setItem(
+          'floweringTrussssHar4HTL1606150Row1Plant4',
+          floweringTruss,
+        );
         this.setItem(
           'pruneFloweringHar4HTL1606150Row1Plant4',
           flowerPruningNumner,
@@ -2172,7 +2203,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
       flowerPruningNumner = Number.parseInt(
         this.state.pruningNumber9Har4HTL1606150Row1Plant4,
       );
-      flowering = Number.parseInt(this.state.setFlowers9Har4HTL1606150Row1Plant4);
+      flowering = Number.parseInt(
+        this.state.setFlowers9Har4HTL1606150Row1Plant4,
+      );
       flowerSetFruits = Number.parseInt(
         this.state.setFruits9Har4HTL1606150Row1Plant4,
       );
@@ -2189,7 +2222,10 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
       });
 
       this.setItem('floweringTrussssHar4HTL1606150Row1Plant4', floweringTruss);
-      this.setItem('pruneFloweringHar4HTL1606150Row1Plant4', flowerPruningNumner);
+      this.setItem(
+        'pruneFloweringHar4HTL1606150Row1Plant4',
+        flowerPruningNumner,
+      );
     }
   };
   //
@@ -3010,7 +3046,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                 if (+!isNaN(+leafLengthHar4HTL1606150Row1Plant4)) {
                   if (+!isNaN(+leafWidthHar4HTL1606150Row1Plant4)) {
                     if (+!isNaN(+stmDiameterHar4HTL1606150Row1Plant4)) {
-                      if (+!isNaN(+lastWeekStmDiameterHar4HTL1606150Row1Plant4)) {
+                      if (
+                        +!isNaN(+lastWeekStmDiameterHar4HTL1606150Row1Plant4)
+                      ) {
                         this.setState({checkboxStatus: 'CHECKED'});
 
                         this.changeCheckbox();
@@ -3519,7 +3557,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3692,7 +3732,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                             'leavesPerPlantHar4HTL1606150Row1Plant4',
                           )
                         }
-                        value={this.state.leavesPerPlantHar4HTL1606150Row1Plant4}
+                        value={
+                          this.state.leavesPerPlantHar4HTL1606150Row1Plant4
+                        }
                         onSubmitEditing={() => {
                           this.fullySetTrussTextInput.focus();
                         }}
@@ -3778,7 +3820,9 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                             'setTrussLengthHar4HTL1606150Row1Plant4',
                           )
                         }
-                        value={this.state.setTrussLengthHar4HTL1606150Row1Plant4}
+                        value={
+                          this.state.setTrussLengthHar4HTL1606150Row1Plant4
+                        }
                         ref={input => {
                           this.fullySetTrussLengthTextInput = input;
                         }}
@@ -3869,7 +3913,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                           )
                         }
                         value={
-                          this.state.floweringTrussHeightHar4HTL1606150Row1Plant4
+                          this.state
+                            .floweringTrussHeightHar4HTL1606150Row1Plant4
                         }
                         ref={input => {
                           this.FlowerTrussHeightTextInput = input;
@@ -5684,7 +5729,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
 
                   <View
                     style={[
-                      this.state.floweringTrussssHar4HTL1606150Row1Plant4 <= 0 ||
+                      this.state.floweringTrussssHar4HTL1606150Row1Plant4 <=
+                        0 ||
                       this.state.floweringTrussssHar4HTL1606150Row1Plant4 >= 45
                         ? styles.borderErrorColor
                         : null,
@@ -5707,7 +5753,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
                     style={[
                       this.state.settingTrussNumberHar4HTL1606150Row1Plant4 <=
                         1 ||
-                      this.state.settingTrussNumberHar4HTL1606150Row1Plant4 >= 45
+                      this.state.settingTrussNumberHar4HTL1606150Row1Plant4 >=
+                        45
                         ? styles.borderErrorColor
                         : null,
                     ]}>
@@ -5726,7 +5773,8 @@ export default class Har4HTL1606150Row1Plant4 extends Component {
 
                   <View
                     style={[
-                      this.state.floweringTrussssHar4HTL1606150Row1Plant4 <= 0 ||
+                      this.state.floweringTrussssHar4HTL1606150Row1Plant4 <=
+                        0 ||
                       this.state.floweringTrussssHar4HTL1606150Row1Plant4 >= 45
                         ? styles.borderErrorColor
                         : null,

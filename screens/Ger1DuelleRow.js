@@ -63,7 +63,7 @@ export default class Ger1DuelleRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Ger1DuellePlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 85/86</Text>
+              <Text style={styles.buttonText}>Row 48</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -73,7 +73,17 @@ export default class Ger1DuelleRow extends Component {
               onPress={() =>
                 this.props.navigation.navigate('Ger1DuellePlantsRow2')
               }>
-              <Text style={styles.buttonText}>Row 55/56</Text>
+              <Text style={styles.buttonText}>Row 95</Text>
+            </TouchableOpacity>
+
+            <View style={styles.marginSmallDimensionTop}></View>
+
+            <TouchableOpacity
+              style={styles.buttonContainer}
+              onPress={() =>
+                this.props.navigation.navigate('Ger1DuellePlantsRow3')
+              }>
+              <Text style={styles.buttonText}>Row 96</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>

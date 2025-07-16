@@ -324,7 +324,7 @@ export default class Oha2NMonalisaPlantsNewRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>OHA 2N - Mona Lisa / Row 94</Text>
+            <Text style={styles.text}>OHA 2N - Mona Lisa / Row 103</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

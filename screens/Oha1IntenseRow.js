@@ -66,9 +66,9 @@ export default class Oha1IntenseRow extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Oha1IntensePlantsRow2')
+                this.props.navigation.navigate('Oha1Intense9399PlantsRow1')
               }>
-              <Text style={styles.buttonText}>Row 53</Text>
+              <Text style={styles.buttonText}>Row 39</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>

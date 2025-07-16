@@ -236,7 +236,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
           const weekRowPlant = d =>
             d.plantName === 'OHA 2N - Dunistar' &&
             d.plantNumber === 3 &&
-            d.plantRow === '81' &&
+            d.plantRow === '83' &&
             d.plantWeek === filteredPlantWeek;
 
           const filteredweekRowPlant = allPlant.plant_details.filter(
@@ -261,7 +261,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
           const weekRowTruss = d =>
             d.plantName === 'OHA 2N - Dunistar' &&
             d.plantNumber === 3 &&
-            d.plantRow === '81' &&
+            d.plantRow === '83' &&
             d.plantWeek === filteredTrussWeek;
 
           const filteredweekRowTruss = allTruss.truss_details.filter(
@@ -2147,7 +2147,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
           );
         }
       } else {
-        var number81 = +this.state.trussNumberOha2NDunistarRow1Plant3 + 8;
+        var number83 = +this.state.trussNumberOha2NDunistarRow1Plant3 + 8;
 
         flowerPruningNumner = Number.parseInt(
           this.state.pruningNumber8Oha2NDunistarRow1Plant3,
@@ -2161,7 +2161,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         summ =
           (flowering ? flowering : 0) + (flowerSetFruits ? flowerSetFruits : 0);
         floweringTruss = (
-          Number.parseInt(number81) +
+          Number.parseInt(number83) +
           summ / flowerPruningNumner
         ).toFixed(2);
         console.log('Flowering Truss Value : ' + floweringTruss);
@@ -3000,7 +3000,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
       const {lastWeekStmDiameterOha2NDunistarRow1Plant3} = this.state;
 
       let data = {
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3086,7 +3086,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruitsOha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowersOha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumberOha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3133,7 +3133,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits1Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers1Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber1Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3180,7 +3180,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits2Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers2Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber2Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3227,7 +3227,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits3Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers3Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber3Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3274,7 +3274,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits4Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers4Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber4Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3319,7 +3319,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits5Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers5Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber5Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3370,7 +3370,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits6Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers6Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber6Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3417,7 +3417,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits7Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers7Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber7Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3464,7 +3464,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits8Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers8Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber8Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3511,7 +3511,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         setFruits: this.state.setFruits9Oha2NDunistarRow1Plant3,
         setFlowers: this.state.setFlowers9Oha2NDunistarRow1Plant3,
         pruningNumber: this.state.pruningNumber9Oha2NDunistarRow1Plant3,
-        plantRow: '81',
+        plantRow: '83',
         plantName: 'OHA 2N - Dunistar',
         plantWeek: this.state.weekNumber,
         plantNumber: 3,
@@ -3536,7 +3536,9 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
   };
 
   onAccessoryPress() {
-    this.setState(({secureTextEntry}) => ({secureTextEntry: !secureTextEntry}));
+    this.setState(({secureTextEntry}) => ({
+      secureTextEntry: !secureTextEntry,
+    }));
   }
 
   onSubmitFullysetTruss() {
@@ -3663,7 +3665,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 81/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 3</Text>/ Row No. 83/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 
@@ -5842,7 +5844,7 @@ export default class Oha2NDunistarRow1Plant3 extends Component {
                   onPress={() =>
                     this.props.navigation.navigate('OhaDataChecker', {
                       name: 'Oha2NDunistarRow1Plant3',
-                      row: '81',
+                      row: '83',
                       plant: 3,
                       type: 'OHA 2N - Dunistar',
                     })

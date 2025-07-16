@@ -151,9 +151,9 @@ export default class OhaHome extends Component {
             <TouchableOpacity
               style={styles.buttonContainer}
               onPress={() =>
-                this.props.navigation.navigate('Oha2NAvalantinoRow')
+                this.props.navigation.navigate('Oha2NTGR100Row')
               }>
-              <Text style={styles.buttonText}>OHA 2N - Avalantino</Text>
+              <Text style={styles.buttonText}>OHA 2N - TGR100</Text>
             </TouchableOpacity>
 
             <View style={styles.marginSmallDimensionTop}></View>
@@ -170,8 +170,10 @@ export default class OhaHome extends Component {
 
             <TouchableOpacity
               style={styles.buttonContainer}
-              onPress={() => this.props.navigation.navigate('Oha2SMerliceRow')}>
-              <Text style={styles.buttonText}>OHA 2S - Merlice</Text>
+              onPress={() =>
+                this.props.navigation.navigate('Oha2SGrandiceRow')
+              }>
+              <Text style={styles.buttonText}>OHA 2S - Grandice</Text>
             </TouchableOpacity>
 
             <View style={styles.marginDimensionTop}></View>
