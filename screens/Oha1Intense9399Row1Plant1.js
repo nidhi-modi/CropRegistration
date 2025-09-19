@@ -3011,11 +3011,11 @@ export default class Oha1Intense9399Row1Plant1 extends Component {
     if (vart == null) {
       this.setItem('Oha1Intense9399Row1Plant1Selected', vart2);
 
-      EventRegister.emit('oha1IntenseRow2EventPlant1', vart2);
+      EventRegister.emit('oha1Intense9399Row1EventPlant1', vart2);
     } else {
       this.setItem('Oha1Intense9399Row1Plant1Selected', vart);
 
-      EventRegister.emit('oha1IntenseRow2EventPlant1', vart);
+      EventRegister.emit('oha1Intense9399Row1EventPlant1', vart);
     }
   };
 
@@ -3683,7 +3683,7 @@ export default class Oha1Intense9399Row1Plant1 extends Component {
           <View style={styles.headerImage1}>
             <TouchableOpacity
               onPress={() =>
-                this.props.navigation.push('Oha1IntensePlantsRow2')
+                this.props.navigation.push('Oha1Intense9399PlantsRow1')
               }>
               <Image source={require('../assets/back.png')} />
             </TouchableOpacity>

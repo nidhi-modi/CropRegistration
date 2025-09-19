@@ -86,6 +86,28 @@ This seems to be an error with new WebKit releases
 'xcrun bitcode_strip -r "/Users/nidhimodi/Desktop/CropRegistration/ios/Pods/OpenSSL-Universal/Frameworks/OpenSSL.xcframework/ios-arm64_arm64e_armv7_armv7s/OpenSSL.framework/OpenSSL" -o "/Users/nidhimodi/Desktop/CropRegistration/ios/Pods/OpenSSL-Universal/Frameworks/OpenSSL.xcframework/ios-arm64_arm64e_armv7_armv7s/OpenSSL.framework/OpenSSL'
  -Updated Podfile (check below)
 
+-Added the following script immediately after [CD] Embed Pods Frameworks:
+
+set -e
+
+BITCODE_STRIP="$(xcrun --find bitcode_strip)"
+FRAMEWORKS_DIR="${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+
+echo "Stripping bitcode from embedded frameworks in ${FRAMEWORKS_DIR}"
+
+for FRAMEWORK in \
+  OpenSSL.framework \
+  ReactNativeSafeAreaContext.framework \
+  RNSplashScreen.framework
+do
+  BIN="$FRAMEWORKS_DIR/$FRAMEWORK/$FRAMEWORK"
+  if [ -f "$BIN" ]; then
+    echo " → Stripping $BIN"
+    "$BITCODE_STRIP" -r "$BIN" -o "$BIN"
+  fi
+done
+
+
 9. TestFlight stage: Missing Compliance > Added to Targets/Info: 'App Uses Non-Exempt Encryption: string, no'
 
 Added to Podfile lines 22 to 57 to fix:

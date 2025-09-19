@@ -54,11 +54,11 @@ export default class Ger3DuellePlantsRow1 extends Component {
   componentWillUnmount() {
     //this.focusListener();
 
-    EventRegister.removeEventListener(this.Ger3DuelleRow1EventPlant1);
-    EventRegister.removeEventListener(this.Ger3DuelleRow1EventPlant2);
-    EventRegister.removeEventListener(this.Ger3DuelleRow1EventPlant3);
-    EventRegister.removeEventListener(this.Ger3DuelleRow1EventPlant4);
-    EventRegister.removeEventListener(this.Ger3DuelleRow1EventPlant5);
+    EventRegister.removeEventListener(this.Ger3DuelleRow2EventPlant1);
+    EventRegister.removeEventListener(this.Ger3DuelleRow2EventPlant2);
+    EventRegister.removeEventListener(this.Ger3DuelleRow2EventPlant3);
+    EventRegister.removeEventListener(this.Ger3DuelleRow2EventPlant4);
+    EventRegister.removeEventListener(this.Ger3DuelleRow2EventPlant5);
   }
 
   componentDidUpdate() {
@@ -73,8 +73,8 @@ export default class Ger3DuellePlantsRow1 extends Component {
 
   UNSAFE_componentWillMount() {
     //PLANT 1
-    this.Ger3DuelleRow1EventPlant1 = EventRegister.addEventListener(
-      'Ger3DuelleRow1EventPlant1',
+    this.Ger3DuelleRow2EventPlant1 = EventRegister.addEventListener(
+      'Ger3DuelleRow2EventPlant1',
       data1 => {
         plant1Selected = data1;
 
@@ -87,8 +87,8 @@ export default class Ger3DuellePlantsRow1 extends Component {
     );
 
     //PLANT 2
-    this.Ger3DuelleRow1EventPlant2 = EventRegister.addEventListener(
-      'Ger3DuelleRow1EventPlant2',
+    this.Ger3DuelleRow2EventPlant2 = EventRegister.addEventListener(
+      'Ger3DuelleRow2EventPlant2',
       data2 => {
         plant2Selected = data2;
 
@@ -101,8 +101,8 @@ export default class Ger3DuellePlantsRow1 extends Component {
     );
 
     //PLANT 3
-    this.Ger3DuelleRow1EventPlant3 = EventRegister.addEventListener(
-      'Ger3DuelleRow1EventPlant3',
+    this.Ger3DuelleRow2EventPlant3 = EventRegister.addEventListener(
+      'Ger3DuelleRow2EventPlant3',
       data3 => {
         plant3Selected = data3;
 
@@ -115,8 +115,8 @@ export default class Ger3DuellePlantsRow1 extends Component {
     );
 
     //PLANT 4
-    this.Ger3DuelleRow1EventPlant4 = EventRegister.addEventListener(
-      'Ger3DuelleRow1EventPlant4',
+    this.Ger3DuelleRow2EventPlant4 = EventRegister.addEventListener(
+      'Ger3DuelleRow2EventPlant4',
       data4 => {
         plant4Selected = data4;
 
@@ -129,8 +129,8 @@ export default class Ger3DuellePlantsRow1 extends Component {
     );
 
     //PLANT 5
-    this.Ger3DuelleRow1EventPlant5 = EventRegister.addEventListener(
-      'Ger3DuelleRow1EventPlant5',
+    this.Ger3DuelleRow2EventPlant5 = EventRegister.addEventListener(
+      'Ger3DuelleRow2EventPlant5',
       data5 => {
         plant5Selected = data5;
 
@@ -149,7 +149,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant1')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -161,7 +161,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant1')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant1')
           }>
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
@@ -181,7 +181,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant2')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -193,7 +193,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant2')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant2')
           }>
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
@@ -213,7 +213,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant3')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -225,7 +225,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant3')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant3')
           }>
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
@@ -245,7 +245,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant4')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -257,7 +257,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant4')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant4')
           }>
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
@@ -277,7 +277,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant5')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -289,7 +289,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3DuelleRow1Plant5')
+            this.props.navigation.navigate('Ger3DuelleRow2Plant5')
           }>
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
@@ -322,7 +322,7 @@ export default class Ger3DuellePlantsRow1 extends Component {
           </View>
 
           <View style={styles.headerImage2}>
-            <Text style={styles.text}>GER 3 - Duelle / Row 35</Text>
+            <Text style={styles.text}>GER 3 - Duelle / Row 36</Text>
           </View>
 
           <View style={{height: 20, width: 20}}>

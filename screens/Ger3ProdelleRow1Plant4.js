@@ -3648,7 +3648,7 @@ export default class Ger3ProdelleRow1Plant4 extends Component {
         </View>
 
         <Text style={styles.text2}>
-          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 36/ Week No.{' '}
+          <Text style={styles.textPlants}>Plant 4</Text>/ Row No. 123/ Week No.{' '}
           {this.state.weekNumber}
         </Text>
 

@@ -99,6 +99,7 @@ import Ger1DuelleRow from '../screens/Ger1DuelleRow';
 import Ger2ClobogoRow from '../screens/Ger2ClobogoRow';
 import Ger3GustelleRow from '../screens/Ger3GustelleRow';
 import Ger3DuelleRow from '../screens/Ger3DuelleRow';
+import Ger3DuelleDoubleDuoRow from '../screens/Ger3DuelleDoubleDuoRow';
 import Ger3ProdelleRow from '../screens/Ger3ProdelleRow';
 import Ger4PatzcuaroRow from '../screens/Ger4PatzcuaroRow';
 import Ger4XaveriusRow from '../screens/Ger4XaveriusRow';
@@ -141,9 +142,11 @@ import Ger5AngellePlantsRow1 from '../screens/Ger5AngellePlantsRow1';
 import Ger5DuellePlantsRow1 from '../screens/Ger5DuellePlantsRow1';
 import Ger5BambelloPlantsRow1 from '../screens/Ger5BambelloPlantsRow1';
 import Ger3DuellePlantsRow1 from '../screens/Ger3DuellePlantsRow1';
-import Ger3DuelleDoubleDuoPlantsRow2 from '../screens/Ger3DuelleDoubleDuoPlantsRow2';
+import Ger3DuellePlantsRow2 from '../screens/Ger3DuellePlantsRow2';
+import Ger3DuelleDoubleDuoPlantsRow1 from '../screens/Ger3DuelleDoubleDuoPlantsRow1';
 import Ger3IcariaPlantsRow1 from '../screens/Ger3IcariaPlantsRow1';
 import Ger5IcariaPlantsRow1 from '../screens/Ger5IcariaPlantsRow1';
+import Ger3ProdellePlantsRow1 from '../screens/Ger3ProdellePlantsRow1';
 import Ger5ProdellePlantsRow1 from '../screens/Ger5ProdellePlantsRow1';
 import Ger5DormaPlumPlantsRow1 from '../screens/Ger5DormaPlumPlantsRow1';
 import Ger5TattooPlantsRow1 from '../screens/Ger5TattooPlantsRow1';
@@ -480,17 +483,23 @@ import Ger3GustelleRow1Plant3 from '../screens/Ger3GustelleRow1Plant3';
 import Ger3GustelleRow1Plant4 from '../screens/Ger3GustelleRow1Plant4';
 import Ger3GustelleRow1Plant5 from '../screens/Ger3GustelleRow1Plant5';
 
-import Ger3DuelleDoubleDuoRow2Plant1 from '../screens/Ger3DuelleDoubleDuoRow2Plant1';
-import Ger3DuelleDoubleDuoRow2Plant2 from '../screens/Ger3DuelleDoubleDuoRow2Plant2';
-import Ger3DuelleDoubleDuoRow2Plant3 from '../screens/Ger3DuelleDoubleDuoRow2Plant3';
-import Ger3DuelleDoubleDuoRow2Plant4 from '../screens/Ger3DuelleDoubleDuoRow2Plant4';
-import Ger3DuelleDoubleDuoRow2Plant5 from '../screens/Ger3DuelleDoubleDuoRow2Plant5';
+import Ger3DuelleDoubleDuoRow1Plant1 from '../screens/Ger3DuelleDoubleDuoRow1Plant1';
+import Ger3DuelleDoubleDuoRow1Plant2 from '../screens/Ger3DuelleDoubleDuoRow1Plant2';
+import Ger3DuelleDoubleDuoRow1Plant3 from '../screens/Ger3DuelleDoubleDuoRow1Plant3';
+import Ger3DuelleDoubleDuoRow1Plant4 from '../screens/Ger3DuelleDoubleDuoRow1Plant4';
+import Ger3DuelleDoubleDuoRow1Plant5 from '../screens/Ger3DuelleDoubleDuoRow1Plant5';
 
 import Ger3DuelleRow1Plant1 from '../screens/Ger3DuelleRow1Plant1';
 import Ger3DuelleRow1Plant2 from '../screens/Ger3DuelleRow1Plant2';
 import Ger3DuelleRow1Plant3 from '../screens/Ger3DuelleRow1Plant3';
 import Ger3DuelleRow1Plant4 from '../screens/Ger3DuelleRow1Plant4';
 import Ger3DuelleRow1Plant5 from '../screens/Ger3DuelleRow1Plant5';
+
+import Ger3DuelleRow2Plant1 from '../screens/Ger3DuelleRow2Plant1';
+import Ger3DuelleRow2Plant2 from '../screens/Ger3DuelleRow2Plant2';
+import Ger3DuelleRow2Plant3 from '../screens/Ger3DuelleRow2Plant3';
+import Ger3DuelleRow2Plant4 from '../screens/Ger3DuelleRow2Plant4';
+import Ger3DuelleRow2Plant5 from '../screens/Ger3DuelleRow2Plant5';
 
 import Ger3IcariaRow1Plant1 from '../screens/Ger3IcariaRow1Plant1';
 import Ger3IcariaRow1Plant2 from '../screens/Ger3IcariaRow1Plant2';
@@ -1498,8 +1507,20 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow"
+          component={Ger3DuelleDoubleDuoRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
           name="Ger3IcariaRow"
           component={Ger3IcariaRow}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3ProdelleRow"
+          component={Ger3ProdelleRow}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -1642,14 +1663,26 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen
-          name="Ger3DuelleDoubleDuoPlantsRow2"
-          component={Ger3DuelleDoubleDuoPlantsRow2}
+          name="Ger3DuellePlantsRow2"
+          component={Ger3DuellePlantsRow2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoPlantsRow1"
+          component={Ger3DuelleDoubleDuoPlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
         <Stack.Screen
           name="Ger3IcariaPlantsRow1"
           component={Ger3IcariaPlantsRow1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3ProdellePlantsRow1"
+          component={Ger3ProdellePlantsRow1}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -2046,6 +2079,126 @@ function MainStackNavigator() {
         <Stack.Screen
           name="Ger3GustelleRow1Plant5"
           component={Ger3GustelleRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow1Plant1"
+          component={Ger3DuelleRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow1Plant2"
+          component={Ger3DuelleRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow1Plant3"
+          component={Ger3DuelleRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow1Plant4"
+          component={Ger3DuelleRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow1Plant5"
+          component={Ger3DuelleRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow2Plant1"
+          component={Ger3DuelleRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow2Plant2"
+          component={Ger3DuelleRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow2Plant3"
+          component={Ger3DuelleRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow2Plant4"
+          component={Ger3DuelleRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleRow2Plant5"
+          component={Ger3DuelleRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow1Plant1"
+          component={Ger3DuelleDoubleDuoRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow1Plant2"
+          component={Ger3DuelleDoubleDuoRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow1Plant3"
+          component={Ger3DuelleDoubleDuoRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow1Plant4"
+          component={Ger3DuelleDoubleDuoRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3DuelleDoubleDuoRow1Plant5"
+          component={Ger3DuelleDoubleDuoRow1Plant5}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3IcariaRow1Plant1"
+          component={Ger3IcariaRow1Plant1}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3IcariaRow1Plant2"
+          component={Ger3IcariaRow1Plant2}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3IcariaRow1Plant3"
+          component={Ger3IcariaRow1Plant3}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3IcariaRow1Plant4"
+          component={Ger3IcariaRow1Plant4}
+          options={{headerShown: false, title: 'T&G Global'}}
+        />
+
+        <Stack.Screen
+          name="Ger3IcariaRow1Plant5"
+          component={Ger3IcariaRow1Plant5}
           options={{headerShown: false, title: 'T&G Global'}}
         />
 
@@ -3633,102 +3786,6 @@ function MainStackNavigator() {
         />
 
         <Stack.Screen name="OhaDataChecker" component={OhaDataChecker} />
-
-        <Stack.Screen
-          name="Ger3ProdelleRow"
-          component={Ger3ProdelleRow}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleRow1Plant1"
-          component={Ger3DuelleRow1Plant1}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleRow1Plant2"
-          component={Ger3DuelleRow1Plant2}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleRow1Plant3"
-          component={Ger3DuelleRow1Plant3}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleRow1Plant4"
-          component={Ger3DuelleRow1Plant4}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleRow1Plant5"
-          component={Ger3DuelleRow1Plant5}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleDoubleDuoRow2Plant1"
-          component={Ger3DuelleDoubleDuoRow2Plant1}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleDoubleDuoRow2Plant2"
-          component={Ger3DuelleDoubleDuoRow2Plant2}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleDoubleDuoRow2Plant3"
-          component={Ger3DuelleDoubleDuoRow2Plant3}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleDoubleDuoRow2Plant4"
-          component={Ger3DuelleDoubleDuoRow2Plant4}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3DuelleDoubleDuoRow2Plant5"
-          component={Ger3DuelleDoubleDuoRow2Plant5}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3IcariaRow1Plant1"
-          component={Ger3IcariaRow1Plant1}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3IcariaRow1Plant2"
-          component={Ger3IcariaRow1Plant2}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3IcariaRow1Plant3"
-          component={Ger3IcariaRow1Plant3}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3IcariaRow1Plant4"
-          component={Ger3IcariaRow1Plant4}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
-
-        <Stack.Screen
-          name="Ger3IcariaRow1Plant5"
-          component={Ger3IcariaRow1Plant5}
-          options={{headerShown: false, title: 'T&G Global'}}
-        />
       </Stack.Navigator>
     </NavigationContainer>
   );

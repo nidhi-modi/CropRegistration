@@ -1,4 +1,4 @@
-import React, {Component, useEffect} from 'react';
+import React, { Component, useEffect } from "react";
 import {
   StyleSheet,
   Text,
@@ -8,30 +8,25 @@ import {
   BackHandler,
   Platform,
   Dimensions,
-} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import moment from 'moment';
-import AsyncStorage from '@react-native-community/async-storage';
-import {EventRegister} from 'react-native-event-listeners';
+} from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
+import moment from "moment";
+import AsyncStorage from "@react-native-community/async-storage";
+import { EventRegister } from "react-native-event-listeners";
 
-var screenWidth = Dimensions.get('window').width / 1.6;
+var screenWidth = Dimensions.get("window").width / 1.6;
 
 var plant1Selected;
 var plant2Selected;
 var plant3Selected;
 var plant4Selected;
 var plant5Selected;
-var plant6Selected;
-var plant7Selected;
-var plant8Selected;
-var plant9Selected;
-var plant10Selected;
 
 export default class Ger3GustellePlantsRow1 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      weekNumber: '',
+      weekNumber: "",
     };
   }
 
@@ -41,11 +36,11 @@ export default class Ger3GustellePlantsRow1 extends Component {
     var toText = yearNumber.toString(); //convert to string
     var lastChar = toText.slice(-2); //gets last character
     var lastDigit = +lastChar; //convert last character to number
-    var weekNumberText = lastDigit + '00';
+    var weekNumberText = lastDigit + "00";
     var convertWeekNumber = +weekNumberText;
     var completeWeekNumber = convertWeekNumber + weekNumber;
 
-    this.setState({weekNumber: completeWeekNumber});
+    this.setState({ weekNumber: completeWeekNumber });
 
     /*this.loadData();
 
@@ -79,72 +74,72 @@ export default class Ger3GustellePlantsRow1 extends Component {
   UNSAFE_componentWillMount() {
     //PLANT 1
     this.ger3GustelleRow1EventPlant1 = EventRegister.addEventListener(
-      'ger3GustelleRow1EventPlant1',
-      data1 => {
+      "ger3GustelleRow1EventPlant1",
+      (data1) => {
         plant1Selected = data1;
 
         if (data1 == null || data1 == true || data1 != false) {
-          console.log('Plant not done');
+          console.log("Plant not done");
         } else {
-          console.log('Plant completed');
+          console.log("Plant completed");
         }
-      },
+      }
     );
 
     //PLANT 2
     this.ger3GustelleRow1EventPlant2 = EventRegister.addEventListener(
-      'ger3GustelleRow1EventPlant2',
-      data2 => {
+      "ger3GustelleRow1EventPlant2",
+      (data2) => {
         plant2Selected = data2;
 
         if (data2 == null || data2 == true || data2 != false) {
-          console.log('Plant not done');
+          console.log("Plant not done");
         } else {
-          console.log('Plant completed');
+          console.log("Plant completed");
         }
-      },
+      }
     );
 
     //PLANT 3
     this.ger3GustelleRow1EventPlant3 = EventRegister.addEventListener(
-      'ger3GustelleRow1EventPlant3',
-      data3 => {
+      "ger3GustelleRow1EventPlant3",
+      (data3) => {
         plant3Selected = data3;
 
         if (data3 == null || data3 == true || data3 != false) {
-          console.log('Plant not done');
+          console.log("Plant not done");
         } else {
-          console.log('Plant completed');
+          console.log("Plant completed");
         }
-      },
+      }
     );
 
     //PLANT 4
     this.ger3GustelleRow1EventPlant4 = EventRegister.addEventListener(
-      'ger3GustelleRow1EventPlant4',
-      data4 => {
+      "ger3GustelleRow1EventPlant4",
+      (data4) => {
         plant4Selected = data4;
 
         if (data4 == null || data4 == true || data4 != false) {
-          console.log('Plant not done');
+          console.log("Plant not done");
         } else {
-          console.log('Plant completed');
+          console.log("Plant completed");
         }
-      },
+      }
     );
 
     //PLANT 5
     this.ger3GustelleRow1EventPlant5 = EventRegister.addEventListener(
-      'ger3GustelleRow1EventPlant5',
-      data5 => {
+      "ger3GustelleRow1EventPlant5",
+      (data5) => {
         plant5Selected = data5;
 
         if (data5 == null || data5 == true || data5 != false) {
-          console.log('Plant not done');
+          console.log("Plant not done");
         } else {
-          console.log('Plant completed');
+          console.log("Plant completed");
         }
-      },
+      }
     );
   }
 
@@ -154,8 +149,9 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant1')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant1")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
           </Text>
@@ -166,13 +162,14 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant1')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant1")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 1 - Week {this.state.weekNumber}
           </Text>
           <Image
-            source={require('../assets/tick.png')}
+            source={require("../assets/tick.png")}
             style={styles.FloatingButtonStyle2}
           />
         </TouchableOpacity>
@@ -186,8 +183,9 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant2')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant2")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
           </Text>
@@ -198,13 +196,14 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant2')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant2")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 2 - Week {this.state.weekNumber}
           </Text>
           <Image
-            source={require('../assets/tick.png')}
+            source={require("../assets/tick.png")}
             style={styles.FloatingButtonStyle2}
           />
         </TouchableOpacity>
@@ -218,8 +217,9 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant3')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant3")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
           </Text>
@@ -230,13 +230,14 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant3')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant3")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 3 - Week {this.state.weekNumber}
           </Text>
           <Image
-            source={require('../assets/tick.png')}
+            source={require("../assets/tick.png")}
             style={styles.FloatingButtonStyle2}
           />
         </TouchableOpacity>
@@ -250,8 +251,9 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant4')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant4")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
           </Text>
@@ -262,13 +264,14 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant4')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant4")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 4 - Week {this.state.weekNumber}
           </Text>
           <Image
-            source={require('../assets/tick.png')}
+            source={require("../assets/tick.png")}
             style={styles.FloatingButtonStyle2}
           />
         </TouchableOpacity>
@@ -282,8 +285,9 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainer}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant5')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant5")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
           </Text>
@@ -294,13 +298,14 @@ export default class Ger3GustellePlantsRow1 extends Component {
         <TouchableOpacity
           style={styles.buttonContainerImage}
           onPress={() =>
-            this.props.navigation.navigate('Ger3GustelleRow1Plant5')
-          }>
+            this.props.navigation.navigate("Ger3GustelleRow1Plant5")
+          }
+        >
           <Text style={styles.buttonText}>
             Plant 5 - Week {this.state.weekNumber}
           </Text>
           <Image
-            source={require('../assets/tick.png')}
+            source={require("../assets/tick.png")}
             style={styles.FloatingButtonStyle2}
           />
         </TouchableOpacity>
@@ -311,18 +316,20 @@ export default class Ger3GustellePlantsRow1 extends Component {
   render() {
     return (
       <View style={styles.container}>
-        {Platform.OS === 'ios' ? <View style={{marginTop: 15}}></View> : null}
+        {Platform.OS === "ios" ? <View style={{ marginTop: 15 }}></View> : null}
 
         <View
           style={{
-            flexDirection: 'row',
-            justifyContent: 'space-between',
+            flexDirection: "row",
+            justifyContent: "space-between",
             marginLeft: 20,
-          }}>
+          }}
+        >
           <View style={styles.headerImage1}>
             <TouchableOpacity
-              onPress={() => this.props.navigation.navigate('Ger3GustelleRow')}>
-              <Image source={require('../assets/back.png')} />
+              onPress={() => this.props.navigation.navigate("Ger3GustelleRow")}
+            >
+              <Image source={require("../assets/back.png")} />
             </TouchableOpacity>
           </View>
 
@@ -330,8 +337,8 @@ export default class Ger3GustellePlantsRow1 extends Component {
             <Text style={styles.text}>GER 3 - Gustelle / Row 175</Text>
           </View>
 
-          <View style={{height: 20, width: 20}}>
-            <Text style={{alignSelf: 'center'}}></Text>
+          <View style={{ height: 20, width: 20 }}>
+            <Text style={{ alignSelf: "center" }}></Text>
           </View>
         </View>
 
@@ -366,23 +373,23 @@ export default class Ger3GustellePlantsRow1 extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F3F9FF',
+    backgroundColor: "#F3F9FF",
   },
 
   headerImage1: {
-    resizeMode: 'cover',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
     marginTop: 5,
   },
 
   headerImage2: {
-    resizeMode: 'cover',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignItems: 'center',
-    textAlign: 'center',
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
+    textAlign: "center",
     marginTop: 5,
   },
 
@@ -398,10 +405,10 @@ const styles = StyleSheet.create({
     margin: 6,
     margin: 20,
     fontSize: 32,
-    color: '#ff0000',
-    fontWeight: 'bold',
-    alignSelf: 'center',
-    textDecorationLine: 'underline',
+    color: "#ff0000",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textDecorationLine: "underline",
   },
 
   marginSmallDimensionTop: {
@@ -411,55 +418,55 @@ const styles = StyleSheet.create({
   containerView: {
     marginLeft: 100,
     marginRight: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
   },
 
   buttonContainer: {
-    backgroundColor: '#2C3E50',
+    backgroundColor: "#2C3E50",
     borderRadius: 8,
     padding: 10,
     marginBottom: 20,
     height: 50,
     width: screenWidth,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 
   buttonContainerImage: {
-    backgroundColor: '#2C3E50',
+    backgroundColor: "#2C3E50",
     borderRadius: 8,
     padding: 10,
     marginBottom: 20,
     height: 50,
     width: screenWidth,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "row",
   },
 
   text: {
     margin: 6,
     margin: 20,
     fontSize: 23,
-    color: '#58B332',
-    fontWeight: 'bold',
-    alignSelf: 'center',
-    textDecorationLine: 'underline',
+    color: "#58B332",
+    fontWeight: "bold",
+    alignSelf: "center",
+    textDecorationLine: "underline",
     flexShrink: 1,
-    textAlign: 'center',
+    textAlign: "center",
   },
 
   FloatingButtonStyle2: {
-    resizeMode: 'contain',
+    resizeMode: "contain",
     marginLeft: 15,
   },
 
   buttonText: {
     fontSize: 18,
-    color: '#ffffff',
-    fontWeight: 'bold',
+    color: "#ffffff",
+    fontWeight: "bold",
     //fontStyle: 'italic'
   },
 });
