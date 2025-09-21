@@ -3055,7 +3055,7 @@ export default class Ger5IcariaRow1Plant4 extends Component {
           //-------------------------------------------------------
 
           if (
-            JSON.stringify(filteredweekRowTruss2[0].fruitDiameter) === 'null'
+            JSON.stringify(filteredweekRowTruss10[0].fruitDiameter) === 'null'
           ) {
             this.setState({
               fruitDiameter9Ger5IcariaRow1Plant4: '',
@@ -3063,7 +3063,7 @@ export default class Ger5IcariaRow1Plant4 extends Component {
           } else {
             this.setState({
               fruitDiameter9Ger5IcariaRow1Plant4: JSON.stringify(
-                filteredweekRowTruss2[0].fruitDiameter,
+                filteredweekRowTruss10[0].fruitDiameter,
               ),
             });
           }

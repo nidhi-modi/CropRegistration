@@ -3099,7 +3099,7 @@ export default class Ger5CrystelleRow1Plant5 extends Component {
           //-------------------------------------------------------
 
           if (
-            JSON.stringify(filteredweekRowTruss2[0].fruitDiameter) === 'null'
+            JSON.stringify(filteredweekRowTruss10[0].fruitDiameter) === 'null'
           ) {
             this.setState({
               fruitDiameter9Ger5CrystelleRow1Plant5: '',
@@ -3107,7 +3107,7 @@ export default class Ger5CrystelleRow1Plant5 extends Component {
           } else {
             this.setState({
               fruitDiameter9Ger5CrystelleRow1Plant5: JSON.stringify(
-                filteredweekRowTruss2[0].fruitDiameter,
+                filteredweekRowTruss10[0].fruitDiameter,
               ),
             });
           }

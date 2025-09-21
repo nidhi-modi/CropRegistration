@@ -3092,7 +3092,7 @@ export default class Ger5BambelloRow1Plant4 extends Component {
           } else {
             this.setState({
               fruitDiameter9Ger5BambelloRow1Plant4: JSON.stringify(
-                filteredweekRowTruss2[0].fruitDiameter,
+                filteredweekRowTruss10[0].fruitDiameter,
               ),
             });
           }
