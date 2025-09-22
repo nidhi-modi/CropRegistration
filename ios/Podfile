@@ -38,25 +38,32 @@ post_install do |installer|
   end
 
   # 3) Strip bitcode from legacy .xcframework slices
-  bitcode_strip = `xcrun --find bitcode_strip`.strip
-  frameworks_to_strip = [
-    'Pods/OpenSSL-Universal/Frameworks/OpenSSL.xcframework/ios-arm64_arm64e_armv7_armv7s/OpenSSL.framework',
-    'Pods/react-native-safe-area-context/ios-arm64_armv7/ReactNativeSafeAreaContext.framework/ReactNativeSafeAreaContext',
-    'Pods/react-native-splash-screen/ios-arm64_armv7/RNSplashScreen.framework/RNSplashScreen'
-    # …add any other slices here…
-  ]
-  frameworks_to_strip.each do |rel_path|
-    full_path = File.join(installer.sandbox.root, '..', rel_path)
-    puts "Stripping bitcode from #{full_path}"
-    system("#{bitcode_strip} -r \"#{full_path}\" -o \"#{full_path}\"")
+   # Strip bitcode from problematic frameworks
+  bitcode_strip_path = `xcrun --find bitcode_strip`.chop!
+  
+  def strip_bitcode_from_framework(bitcode_strip_path, framework_relative_path)
+    framework_path = File.join(Dir.pwd, framework_relative_path)
+    if File.exist?(framework_path)
+      puts "Stripping bitcode from #{framework_relative_path}"
+      system("#{bitcode_strip_path} -r '#{framework_path}' -o '#{framework_path}'")
+    end
   end
-
-  # 4) (Optional) Disable bitcode entirely for all pods
-  installer.generated_projects.each do |project|
-    project.targets.each do |target|
-      target.build_configurations.each do |config|
-        config.build_settings['ENABLE_BITCODE'] = 'NO'
-      end
+  
+  # List of frameworks that need bitcode stripped
+  frameworks_to_strip = [
+    'Pods/OpenSSL-Universal/Frameworks/OpenSSL.xcframework/ios-arm64_armv7/OpenSSL.framework/OpenSSL',
+    'Pods/Flipper-DoubleConversion/Frameworks/double-conversion.xcframework/ios-arm64_armv7/double-conversion.framework/double-conversion',
+    'Pods/Flipper-Glog/Frameworks/glog.xcframework/ios-arm64_armv7/glog.framework/glog'
+  ]
+  
+  frameworks_to_strip.each do |framework|
+    strip_bitcode_from_framework(bitcode_strip_path, framework)
+  end
+  
+  # Also ensure bitcode is disabled in build settings
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
     end
   end
 end
