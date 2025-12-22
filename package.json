@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+     "start": "NODE_OPTIONS=--openssl-legacy-provider react-native start",
+    "ios": "NODE_OPTIONS=--openssl-legacy-provider react-native run-ios",
+    "android": "NODE_OPTIONS=--openssl-legacy-provider react-native run-android",
     "test": "jest",
     "lint": "eslint .",
     "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'"
