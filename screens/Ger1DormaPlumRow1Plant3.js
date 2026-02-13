@@ -189,14 +189,10 @@ export default class Ger1DormaPlumRow1Plant3 extends Component {
   }
 
   componentDidMount() {
-    var weekNumber = moment().week() - 1;
-    var yearNumber = moment().year();
-    var toText = yearNumber.toString(); //convert to string
-    var lastChar = toText.slice(-2); //gets last character
-    var lastDigit = +lastChar; //convert last character to number
-    var weekNumberText = lastDigit + '00';
-    var convertWeekNumber = +weekNumberText;
-    var completeWeekNumber = convertWeekNumber + weekNumber;
+    const year = moment().isoWeekYear() % 100; // last 2 digits of ISO week year
+    const week = moment().isoWeek();           // ISO week number (01–53)
+    
+    const completeWeekNumber = year * 100 + week;
 
     this.setState({weekNumber: completeWeekNumber});
 
